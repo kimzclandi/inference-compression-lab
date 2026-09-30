@@ -34,12 +34,13 @@ def metrics(total):
             'cosine': total['dot']/max(np.sqrt(total['reference_energy']*total['candidate_energy']), 1e-30)}
 
 
-def debug_session(path):
+def debug_session(path, optimization):
     options = ort.SessionOptions()
     options.intra_op_num_threads = 4
     options.inter_op_num_threads = 1
     options.execution_mode = ort.ExecutionMode.ORT_SEQUENTIAL
-    options.graph_optimization_level = ort.GraphOptimizationLevel.ORT_DISABLE_ALL
+    options.graph_optimization_level = (ort.GraphOptimizationLevel.ORT_ENABLE_ALL if optimization == 'all'
+                                        else ort.GraphOptimizationLevel.ORT_DISABLE_ALL)
     return ort.InferenceSession(str(path), sess_options=options, providers=['CPUExecutionProvider'])
 
 
@@ -77,7 +78,7 @@ def main(args):
               'dataset_sha256': sha256('data/stsb-validation.parquet'),
               'probe_rows': list(range(64)), 'probe_sentences': 128, 'batch': 16, 'max_length': 256,
               'text_order': 'sentence1 rows 0:64 followed by sentence2 rows 0:64',
-              'mask': 'non-padding tokens only', 'optimization': 'disabled for all debug graphs',
+              'mask': 'non-padding tokens only', 'optimization': args.optimization,
               'provider': 'CPUExecutionProvider', 'local': 'same FP32 input; isolated real dynamic U8S8 MatMul, per-channel weights',
               'cumulative': 'matching full-network MatMul and transformer block outputs',
               'selection_rule': 'exclude exactly one MatMul with largest aggregate local per-channel NMSE; tie by node name',
@@ -88,7 +89,7 @@ def main(args):
     for variant, path in paths.items():
         debug_path = work/(variant+'-debug.onnx')
         instrument(path, debug_path, targets + (inputs if variant == 'fp32' else []))
-        sessions[variant] = debug_session(debug_path)
+        sessions[variant] = debug_session(debug_path, args.optimization)
     production = {}
     for variant, path in paths.items():
         options = ort.SessionOptions()
@@ -109,7 +110,7 @@ def main(args):
         quantize_dynamic(str(src), str(dst), op_types_to_quantize=['MatMul'],
                          per_channel=True, reduce_range=False, weight_type=QuantType.QInt8,
                          extra_options={'MatMulConstBOnly': True})
-        local_sessions.append(debug_session(dst))
+        local_sessions.append(debug_session(dst, args.optimization))
     rows = pq.read_table('data/stsb-validation.parquet').to_pylist()[:64]
     texts = [r['sentence1'] for r in rows] + [r['sentence2'] for r in rows]
     tok = Tokenizer.from_file('models/minilm/tokenizer.json')
@@ -158,6 +159,7 @@ def main(args):
 
 if __name__ == '__main__':
     p = argparse.ArgumentParser()
+    p.add_argument('--optimization', choices=['all', 'disabled'], default='all')
     p.add_argument('--output-dir',type=Path,required=True)
     p.add_argument('--work-dir',type=Path,required=True)
     p.add_argument('--baseline-work',type=Path,required=True)
