@@ -14,6 +14,14 @@
 
 已提供：标准库计时器、数值模拟量化示例、测量配置模板、验收规范和测试。模拟示例不是 Transformer 实验，也不执行 INT8 内核。
 
+## 新增可交付成果：CPU 运行配置优化
+
+[完整成果报告](results/minilm-runtime-study-v1/REPORT.md) · [复跑说明](docs/runtime-study-reproduction.md) · [模拟校招审查](docs/campus-project-review.md) · [简历候选条目](docs/resume-runtime-project.md)
+
+固定按通道INT8模型，4→8线程在B=1、S=64下将推理延迟2.261 ms降至1.933 ms（约14.5%）。冻结配置后首次评测STS-B test 1,379对，Spearman相对FP32下降0.00155。公平调优后，INT8在长度64及更大形状仍慢于FP32；长度16的追加确认中延迟降低约9.0%，匹配短句子集质量下降0.00260。文件压缩约35%不等于内存或功耗同幅下降。
+
+提供可复用的CPU句向量模块、部署配置与CLI；学习和实验均保留AI辅助实现归属。短句筛选的分词器padding故障及修复记录完整保留，不把无效NaN质量输出当成果。
+
 ## 本地运行
 
 Python 3.10+；核心工具及测试不需要 GPU 或第三方库。

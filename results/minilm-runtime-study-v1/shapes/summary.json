@@ -1,0 +1,742 @@
+[
+  {
+    "name": "fp32-original",
+    "variant": "fp32",
+    "threads": 4,
+    "shape": [
+      1,
+      16
+    ],
+    "scope": "session",
+    "round_medians_ms": [
+      0.9198120000000001,
+      0.9006670000000001,
+      0.9079165
+    ],
+    "median_ms": 0.9079165,
+    "round_p95_ms": [
+      0.9910833500000001,
+      0.9731518,
+      0.98123335
+    ],
+    "median_round_p95_ms": 0.98123335,
+    "round_mean_cpu_cores": [
+      3.9393798670690146,
+      3.917599172713605,
+      3.9524917157752895
+    ],
+    "rss_after_warmup_and_measurement_bytes": [
+      335462400,
+      335200256,
+      337543168
+    ],
+    "lifetime_peak_rss_bytes": [
+      335462400,
+      335200256,
+      337543168
+    ]
+  },
+  {
+    "name": "quantized-original",
+    "variant": "int8_per_channel",
+    "threads": 4,
+    "shape": [
+      1,
+      16
+    ],
+    "scope": "session",
+    "round_medians_ms": [
+      0.817896,
+      0.819458,
+      0.823667
+    ],
+    "median_ms": 0.819458,
+    "round_p95_ms": [
+      0.8762910500000001,
+      0.8666583,
+      0.8736753
+    ],
+    "median_round_p95_ms": 0.8736753,
+    "round_mean_cpu_cores": [
+      3.913463260858547,
+      3.891373073346447,
+      3.8948079550455956
+    ],
+    "rss_after_warmup_and_measurement_bytes": [
+      310493184,
+      308854784,
+      317276160
+    ],
+    "lifetime_peak_rss_bytes": [
+      310493184,
+      308854784,
+      317276160
+    ]
+  },
+  {
+    "name": "fp32-tuned",
+    "variant": "fp32",
+    "threads": 8,
+    "shape": [
+      1,
+      16
+    ],
+    "scope": "session",
+    "round_medians_ms": [
+      0.818604,
+      0.820354,
+      0.822292
+    ],
+    "median_ms": 0.820354,
+    "round_p95_ms": [
+      0.8724857,
+      0.89085385,
+      0.8828201999999999
+    ],
+    "median_round_p95_ms": 0.8828201999999999,
+    "round_mean_cpu_cores": [
+      7.910827522777998,
+      7.896593375168589,
+      7.903589727388143
+    ],
+    "rss_after_warmup_and_measurement_bytes": [
+      335331328,
+      352043008,
+      335511552
+    ],
+    "lifetime_peak_rss_bytes": [
+      335331328,
+      352043008,
+      335511552
+    ]
+  },
+  {
+    "name": "quantized-tuned",
+    "variant": "int8_per_channel",
+    "threads": 8,
+    "shape": [
+      1,
+      16
+    ],
+    "scope": "session",
+    "round_medians_ms": [
+      0.7517705,
+      0.750167,
+      0.7460205
+    ],
+    "median_ms": 0.750167,
+    "round_p95_ms": [
+      0.7948792,
+      0.7983937499999999,
+      0.7940774
+    ],
+    "median_round_p95_ms": 0.7948792,
+    "round_mean_cpu_cores": [
+      7.867155100100828,
+      7.874071566439631,
+      7.887798093453847
+    ],
+    "rss_after_warmup_and_measurement_bytes": [
+      317865984,
+      309772288,
+      309592064
+    ],
+    "lifetime_peak_rss_bytes": [
+      317865984,
+      309772288,
+      309592064
+    ]
+  },
+  {
+    "name": "fp32-original",
+    "variant": "fp32",
+    "threads": 4,
+    "shape": [
+      1,
+      128
+    ],
+    "scope": "session",
+    "round_medians_ms": [
+      3.3698955,
+      3.3819169999999996,
+      3.389958
+    ],
+    "median_ms": 3.3819169999999996,
+    "round_p95_ms": [
+      3.47629345,
+      3.7552521000000003,
+      3.8338941
+    ],
+    "median_round_p95_ms": 3.7552521000000003,
+    "round_mean_cpu_cores": [
+      3.9866367635756865,
+      3.9895865738160845,
+      3.9899369056223497
+    ],
+    "rss_after_warmup_and_measurement_bytes": [
+      339312640,
+      340475904,
+      339116032
+    ],
+    "lifetime_peak_rss_bytes": [
+      339312640,
+      340475904,
+      339116032
+    ]
+  },
+  {
+    "name": "quantized-original",
+    "variant": "int8_per_channel",
+    "threads": 4,
+    "shape": [
+      1,
+      128
+    ],
+    "scope": "session",
+    "round_medians_ms": [
+      4.148125,
+      4.177645500000001,
+      4.103187999999999
+    ],
+    "median_ms": 4.148125,
+    "round_p95_ms": [
+      4.33660865,
+      4.3494268,
+      4.3310795
+    ],
+    "median_round_p95_ms": 4.33660865,
+    "round_mean_cpu_cores": [
+      3.986537214266625,
+      3.9876676004980256,
+      3.9830592014749597
+    ],
+    "rss_after_warmup_and_measurement_bytes": [
+      313049088,
+      312803328,
+      312819712
+    ],
+    "lifetime_peak_rss_bytes": [
+      313049088,
+      312803328,
+      312819712
+    ]
+  },
+  {
+    "name": "fp32-tuned",
+    "variant": "fp32",
+    "threads": 8,
+    "shape": [
+      1,
+      128
+    ],
+    "scope": "session",
+    "round_medians_ms": [
+      2.772354,
+      2.7586455,
+      2.7550205
+    ],
+    "median_ms": 2.7586455,
+    "round_p95_ms": [
+      2.8674684,
+      2.8640816,
+      2.8522747
+    ],
+    "median_round_p95_ms": 2.8640816,
+    "round_mean_cpu_cores": [
+      7.960009919725632,
+      7.947833407445137,
+      7.968961158642101
+    ],
+    "rss_after_warmup_and_measurement_bytes": [
+      339427328,
+      339525632,
+      355385344
+    ],
+    "lifetime_peak_rss_bytes": [
+      339427328,
+      339525632,
+      355385344
+    ]
+  },
+  {
+    "name": "quantized-tuned",
+    "variant": "int8_per_channel",
+    "threads": 8,
+    "shape": [
+      1,
+      128
+    ],
+    "scope": "session",
+    "round_medians_ms": [
+      3.286812,
+      3.2865830000000003,
+      3.279687
+    ],
+    "median_ms": 3.2865830000000003,
+    "round_p95_ms": [
+      3.3625083499999997,
+      3.3587771,
+      3.34879965
+    ],
+    "median_round_p95_ms": 3.3587771,
+    "round_mean_cpu_cores": [
+      7.95715474319376,
+      7.95215835950452,
+      7.955907832127909
+    ],
+    "rss_after_warmup_and_measurement_bytes": [
+      313081856,
+      324239360,
+      312950784
+    ],
+    "lifetime_peak_rss_bytes": [
+      313081856,
+      324239360,
+      312950784
+    ]
+  },
+  {
+    "name": "fp32-original",
+    "variant": "fp32",
+    "threads": 4,
+    "shape": [
+      1,
+      256
+    ],
+    "scope": "session",
+    "round_medians_ms": [
+      6.0377915,
+      5.980104000000001,
+      6.0700415
+    ],
+    "median_ms": 6.0377915,
+    "round_p95_ms": [
+      6.1603976000000005,
+      6.06321075,
+      6.18861075
+    ],
+    "median_round_p95_ms": 6.1603976000000005,
+    "round_mean_cpu_cores": [
+      3.990551371151364,
+      3.988883032925329,
+      3.995170287113233
+    ],
+    "rss_after_warmup_and_measurement_bytes": [
+      356728832,
+      354697216,
+      356515840
+    ],
+    "lifetime_peak_rss_bytes": [
+      356728832,
+      354697216,
+      356515840
+    ]
+  },
+  {
+    "name": "quantized-original",
+    "variant": "int8_per_channel",
+    "threads": 4,
+    "shape": [
+      1,
+      256
+    ],
+    "scope": "session",
+    "round_medians_ms": [
+      8.034625,
+      8.2416455,
+      8.0751455
+    ],
+    "median_ms": 8.0751455,
+    "round_p95_ms": [
+      8.5303348,
+      8.5542181,
+      8.5024226
+    ],
+    "median_round_p95_ms": 8.5303348,
+    "round_mean_cpu_cores": [
+      3.9928784158193604,
+      3.9897447832781956,
+      3.9901262166270692
+    ],
+    "rss_after_warmup_and_measurement_bytes": [
+      328220672,
+      328105984,
+      340033536
+    ],
+    "lifetime_peak_rss_bytes": [
+      328220672,
+      328105984,
+      340033536
+    ]
+  },
+  {
+    "name": "fp32-tuned",
+    "variant": "fp32",
+    "threads": 8,
+    "shape": [
+      1,
+      256
+    ],
+    "scope": "session",
+    "round_medians_ms": [
+      4.807042,
+      4.7661465,
+      4.7969995
+    ],
+    "median_ms": 4.7969995,
+    "round_p95_ms": [
+      4.9392521,
+      4.9057476,
+      4.9051041500000006
+    ],
+    "median_round_p95_ms": 4.9057476,
+    "round_mean_cpu_cores": [
+      7.98278077647743,
+      7.985056874485353,
+      7.980192362291326
+    ],
+    "rss_after_warmup_and_measurement_bytes": [
+      356220928,
+      354893824,
+      356220928
+    ],
+    "lifetime_peak_rss_bytes": [
+      356220928,
+      354893824,
+      356220928
+    ]
+  },
+  {
+    "name": "quantized-tuned",
+    "variant": "int8_per_channel",
+    "threads": 8,
+    "shape": [
+      1,
+      256
+    ],
+    "scope": "session",
+    "round_medians_ms": [
+      6.0850625,
+      6.090438000000001,
+      6.090396
+    ],
+    "median_ms": 6.090396,
+    "round_p95_ms": [
+      6.1580104,
+      6.1570375,
+      6.1758729500000005
+    ],
+    "median_round_p95_ms": 6.1580104,
+    "round_mean_cpu_cores": [
+      7.96966326351441,
+      7.9716855706834835,
+      7.980619153019132
+    ],
+    "rss_after_warmup_and_measurement_bytes": [
+      340590592,
+      329023488,
+      329187328
+    ],
+    "lifetime_peak_rss_bytes": [
+      340590592,
+      329023488,
+      329187328
+    ]
+  },
+  {
+    "name": "fp32-original",
+    "variant": "fp32",
+    "threads": 4,
+    "shape": [
+      4,
+      64
+    ],
+    "scope": "session",
+    "round_medians_ms": [
+      5.502896,
+      5.527438,
+      5.469188
+    ],
+    "median_ms": 5.502896,
+    "round_p95_ms": [
+      5.60234615,
+      5.61538335,
+      5.6259816
+    ],
+    "median_round_p95_ms": 5.61538335,
+    "round_mean_cpu_cores": [
+      3.9926817725735098,
+      3.9910126225706146,
+      3.991021148739278
+    ],
+    "rss_after_warmup_and_measurement_bytes": [
+      346636288,
+      346488832,
+      348897280
+    ],
+    "lifetime_peak_rss_bytes": [
+      346636288,
+      346488832,
+      348897280
+    ]
+  },
+  {
+    "name": "quantized-original",
+    "variant": "int8_per_channel",
+    "threads": 4,
+    "shape": [
+      4,
+      64
+    ],
+    "scope": "session",
+    "round_medians_ms": [
+      7.2965415,
+      7.234875000000001,
+      7.360146
+    ],
+    "median_ms": 7.2965415,
+    "round_p95_ms": [
+      7.618649700000001,
+      7.641058,
+      7.63240355
+    ],
+    "median_round_p95_ms": 7.63240355,
+    "round_mean_cpu_cores": [
+      3.994000761618575,
+      3.9870521389756264,
+      3.9925053180877073
+    ],
+    "rss_after_warmup_and_measurement_bytes": [
+      319438848,
+      319209472,
+      318537728
+    ],
+    "lifetime_peak_rss_bytes": [
+      319438848,
+      319209472,
+      318537728
+    ]
+  },
+  {
+    "name": "fp32-tuned",
+    "variant": "fp32",
+    "threads": 8,
+    "shape": [
+      4,
+      64
+    ],
+    "scope": "session",
+    "round_medians_ms": [
+      4.4011665,
+      4.405104,
+      4.4093125
+    ],
+    "median_ms": 4.405104,
+    "round_p95_ms": [
+      4.51962885,
+      4.51068155,
+      4.53742085
+    ],
+    "median_round_p95_ms": 4.51962885,
+    "round_mean_cpu_cores": [
+      7.964895862970813,
+      7.975026597358083,
+      7.9708188796196255
+    ],
+    "rss_after_warmup_and_measurement_bytes": [
+      347750400,
+      361906176,
+      346734592
+    ],
+    "lifetime_peak_rss_bytes": [
+      347750400,
+      361906176,
+      346734592
+    ]
+  },
+  {
+    "name": "quantized-tuned",
+    "variant": "int8_per_channel",
+    "threads": 8,
+    "shape": [
+      4,
+      64
+    ],
+    "scope": "session",
+    "round_medians_ms": [
+      5.6322085,
+      5.641249500000001,
+      5.6211255
+    ],
+    "median_ms": 5.6322085,
+    "round_p95_ms": [
+      5.72023095,
+      5.7151708,
+      5.7068497
+    ],
+    "median_round_p95_ms": 5.7151708,
+    "round_mean_cpu_cores": [
+      7.983453766510205,
+      7.961010435898977,
+      7.98488478758538
+    ],
+    "rss_after_warmup_and_measurement_bytes": [
+      329072640,
+      319291392,
+      318980096
+    ],
+    "lifetime_peak_rss_bytes": [
+      329072640,
+      319291392,
+      318980096
+    ]
+  },
+  {
+    "name": "fp32-original",
+    "variant": "fp32",
+    "threads": 4,
+    "shape": [
+      16,
+      64
+    ],
+    "scope": "session",
+    "round_medians_ms": [
+      23.385625,
+      23.411604,
+      23.480083
+    ],
+    "median_ms": 23.411604,
+    "round_p95_ms": [
+      23.68763895,
+      23.598118749999998,
+      23.7531083
+    ],
+    "median_round_p95_ms": 23.68763895,
+    "round_mean_cpu_cores": [
+      3.991427164319018,
+      3.9954095556929974,
+      3.9945127823322544
+    ],
+    "rss_after_warmup_and_measurement_bytes": [
+      374882304,
+      375144448,
+      375078912
+    ],
+    "lifetime_peak_rss_bytes": [
+      374915072,
+      375177216,
+      375111680
+    ]
+  },
+  {
+    "name": "quantized-original",
+    "variant": "int8_per_channel",
+    "threads": 4,
+    "shape": [
+      16,
+      64
+    ],
+    "scope": "session",
+    "round_medians_ms": [
+      26.8285005,
+      26.92,
+      26.94025
+    ],
+    "median_ms": 26.92,
+    "round_p95_ms": [
+      28.47725415,
+      28.40898335,
+      28.545583
+    ],
+    "median_round_p95_ms": 28.47725415,
+    "round_mean_cpu_cores": [
+      3.9928692490006883,
+      3.9935697181963326,
+      3.9927422400361463
+    ],
+    "rss_after_warmup_and_measurement_bytes": [
+      334659584,
+      336494592,
+      334544896
+    ],
+    "lifetime_peak_rss_bytes": [
+      334692352,
+      336527360,
+      334577664
+    ]
+  },
+  {
+    "name": "fp32-tuned",
+    "variant": "fp32",
+    "threads": 8,
+    "shape": [
+      16,
+      64
+    ],
+    "scope": "session",
+    "round_medians_ms": [
+      16.955146,
+      16.9793335,
+      16.7561455
+    ],
+    "median_ms": 16.955146,
+    "round_p95_ms": [
+      17.3761184,
+      17.47679405,
+      17.437552399999998
+    ],
+    "median_round_p95_ms": 17.437552399999998,
+    "round_mean_cpu_cores": [
+      7.9840104681555495,
+      7.980834564442494,
+      7.983466573205359
+    ],
+    "rss_after_warmup_and_measurement_bytes": [
+      375373824,
+      375341056,
+      389775360
+    ],
+    "lifetime_peak_rss_bytes": [
+      375373824,
+      375341056,
+      389775360
+    ]
+  },
+  {
+    "name": "quantized-tuned",
+    "variant": "int8_per_channel",
+    "threads": 8,
+    "shape": [
+      16,
+      64
+    ],
+    "scope": "session",
+    "round_medians_ms": [
+      20.014125,
+      20.131417,
+      20.129917
+    ],
+    "median_ms": 20.129917,
+    "round_p95_ms": [
+      20.1884167,
+      20.39175865,
+      20.3865375
+    ],
+    "median_round_p95_ms": 20.3865375,
+    "round_mean_cpu_cores": [
+      7.985587985314037,
+      7.987580184324142,
+      7.979915176480044
+    ],
+    "rss_after_warmup_and_measurement_bytes": [
+      335101952,
+      336625664,
+      335167488
+    ],
+    "lifetime_peak_rss_bytes": [
+      335134720,
+      336658432,
+      335200256
+    ]
+  }
+]

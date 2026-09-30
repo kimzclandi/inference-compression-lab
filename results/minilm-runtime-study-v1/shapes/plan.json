@@ -1,0 +1,722 @@
+{
+  "environment": {
+    "timestamp_utc": "2026-09-30T12:00:08.048285+00:00",
+    "source": {
+      "git_head": "245788e67a2f01a4106c32e9f61fe4ab70e0af00",
+      "git_status": "?? results/minilm-runtime-study-v1/\n",
+      "argv": [
+        "/Users/yukaiyan/Documents/Codex/2026-09-30/nus-2027-ai-infra-yolov8-tensorrt/work/inference-compression-lab/.venv/bin/python",
+        "/Users/yukaiyan/Documents/Codex/2026-09-30/nus-2027-ai-infra-yolov8-tensorrt/work/inference-compression-lab/experiments/minilm_runtime_study.py",
+        "shapes",
+        "--output-dir",
+        "results/minilm-runtime-study-v1",
+        "--assets-dir",
+        "runs/minilm-runtime-assets-v1"
+      ],
+      "source_sha256": {
+        "experiments/__init__.py": "7c54e0db53064338fa4534e5e27fadb47c6632b81ba3b249f2d251bc0c0321ba",
+        "experiments/benchmark_smoke.py": "2fee02c3d3a2cc23e07e9f361fb116123d290a7df0f1f55f4cdf4461114aff59",
+        "experiments/jetson_inventory.py": "c6e7ddba4e0740e8eac64cea900dcc13579bcc98dd5b312ed4bcd445ce808ec1",
+        "experiments/minilm_encode.py": "da53f3eac9c2b16f5f78a3d5b3168be17cb9b4b414d03b120d14f47fd176b572",
+        "experiments/minilm_latency_crossover.py": "ab66b48af0aeb3899703085e87542d26948eadbfe23f547d4d25d7a765eaa994",
+        "experiments/minilm_layer_errors.py": "96b8982faaa65e0de2bdc8df8e6cfe3a4ff07a061f85a0600d2324ac4be58ed6",
+        "experiments/minilm_ptq.py": "a67aae2b954732714aec771fbe5defabebf00b0cd78574bbd6346c088c9277f8",
+        "experiments/minilm_quality_audit.py": "3f459d5c0920979ece36e84e5c8aa78e9176dc3a11437c43d0b12d4b12247049",
+        "experiments/minilm_runtime_report.py": "8edb78ac6ac14a4a2a6fb672fa7e735dbc592087a94b5e988231e97ae6dc72a4",
+        "experiments/minilm_runtime_study.py": "13a2b4305c3f4a478129bf5b263e401fb2913f5f30e96e29b5a4d92289c941d6",
+        "experiments/prepare_minilm.py": "2b85d18536ad3546e857dc999149db58ecea3a2004a5262f472076e18f182ad0",
+        "experiments/quantization_demo.py": "d73a385c59b88224df64187a00c632ef61e5b1749a06487d79fa3d4fdb43dd4e",
+        "experiments/quantization_learning.py": "eb609b2042a166507907c20fbf94841e65262c68283f8ad3206ef5e406b8cb69",
+        "experiments/verify_local_weights.py": "8a104341851954e31ce33581f31c25e6caa689a0dc3097a79b745762c176355b",
+        "lab/__init__.py": "0925f6ce613cb6c7f7eb3feba5cea6f47b47f653ea5b4de1d358915d43ea9a79",
+        "lab/benchmark.py": "58c207d0f8d15f1244b8c96154d70294ebc8ce883ada3d8e26fc227338774a9c",
+        "lab/evidence.py": "314c7a009fb2b740db1cb3925d538f7abcd8a8eb719c0d05efd0be71c0abb91d",
+        "lab/minilm_runtime.py": "d69ce0784e65acc0fee66a5d3fb28f422dee22d55493968c6e4f6ae0f510e0b5",
+        "lab/quantization.py": "f95d68d84328a85883dca133ad6f05a27d9cbbd224e8005f095537be539c6601",
+        "requirements-experiment.txt": "c8abab7fa773fc1664bed0a1e1fd740929542ccb544b9c895f655675e573c55b",
+        "requirements-macos-py312.txt": "76d44bccc6e7d6bc9512fa630acee9cff1d3e5f43cc7d78fffaf722da6a187ec"
+      }
+    },
+    "platform": "macOS-27.0-arm64-arm-64bit",
+    "architecture": "arm64",
+    "python": "3.12.13 (main, Aug  7 2026, 02:15:23) [Clang 22.1.3 ]",
+    "memory_bytes": 51539607552,
+    "logical_cpus": 16,
+    "versions": {
+      "onnxruntime": "1.30.0",
+      "onnx": "1.23.1",
+      "numpy": "2.5.3",
+      "scipy": "1.18.1",
+      "tokenizers": "0.23.2",
+      "pyarrow": "18.1.0",
+      "psutil": "7.2.2"
+    },
+    "cpu": "Apple M4 Max"
+  },
+  "spec_sha256": "04cb1f2595d5e1fb70784b5fcc82de91f46631193a3f79c3737f81022ac0b616",
+  "phase": "shapes",
+  "jobs": [
+    {
+      "name": "fp32-original",
+      "variant": "fp32",
+      "threads": 4,
+      "shape": [
+        1,
+        16
+      ],
+      "scope": "session",
+      "round": 0
+    },
+    {
+      "name": "fp32-tuned",
+      "variant": "fp32",
+      "threads": 8,
+      "shape": [
+        1,
+        16
+      ],
+      "scope": "session",
+      "round": 0
+    },
+    {
+      "name": "quantized-original",
+      "variant": "int8_per_channel",
+      "threads": 4,
+      "shape": [
+        1,
+        16
+      ],
+      "scope": "session",
+      "round": 0
+    },
+    {
+      "name": "quantized-tuned",
+      "variant": "int8_per_channel",
+      "threads": 8,
+      "shape": [
+        1,
+        16
+      ],
+      "scope": "session",
+      "round": 0
+    },
+    {
+      "name": "quantized-tuned",
+      "variant": "int8_per_channel",
+      "threads": 8,
+      "shape": [
+        1,
+        16
+      ],
+      "scope": "session",
+      "round": 1
+    },
+    {
+      "name": "fp32-tuned",
+      "variant": "fp32",
+      "threads": 8,
+      "shape": [
+        1,
+        16
+      ],
+      "scope": "session",
+      "round": 1
+    },
+    {
+      "name": "fp32-original",
+      "variant": "fp32",
+      "threads": 4,
+      "shape": [
+        1,
+        16
+      ],
+      "scope": "session",
+      "round": 1
+    },
+    {
+      "name": "quantized-original",
+      "variant": "int8_per_channel",
+      "threads": 4,
+      "shape": [
+        1,
+        16
+      ],
+      "scope": "session",
+      "round": 1
+    },
+    {
+      "name": "fp32-tuned",
+      "variant": "fp32",
+      "threads": 8,
+      "shape": [
+        1,
+        16
+      ],
+      "scope": "session",
+      "round": 2
+    },
+    {
+      "name": "fp32-original",
+      "variant": "fp32",
+      "threads": 4,
+      "shape": [
+        1,
+        16
+      ],
+      "scope": "session",
+      "round": 2
+    },
+    {
+      "name": "quantized-original",
+      "variant": "int8_per_channel",
+      "threads": 4,
+      "shape": [
+        1,
+        16
+      ],
+      "scope": "session",
+      "round": 2
+    },
+    {
+      "name": "quantized-tuned",
+      "variant": "int8_per_channel",
+      "threads": 8,
+      "shape": [
+        1,
+        16
+      ],
+      "scope": "session",
+      "round": 2
+    },
+    {
+      "name": "fp32-tuned",
+      "variant": "fp32",
+      "threads": 8,
+      "shape": [
+        1,
+        128
+      ],
+      "scope": "session",
+      "round": 0
+    },
+    {
+      "name": "quantized-tuned",
+      "variant": "int8_per_channel",
+      "threads": 8,
+      "shape": [
+        1,
+        128
+      ],
+      "scope": "session",
+      "round": 0
+    },
+    {
+      "name": "fp32-original",
+      "variant": "fp32",
+      "threads": 4,
+      "shape": [
+        1,
+        128
+      ],
+      "scope": "session",
+      "round": 0
+    },
+    {
+      "name": "quantized-original",
+      "variant": "int8_per_channel",
+      "threads": 4,
+      "shape": [
+        1,
+        128
+      ],
+      "scope": "session",
+      "round": 0
+    },
+    {
+      "name": "quantized-original",
+      "variant": "int8_per_channel",
+      "threads": 4,
+      "shape": [
+        1,
+        128
+      ],
+      "scope": "session",
+      "round": 1
+    },
+    {
+      "name": "fp32-original",
+      "variant": "fp32",
+      "threads": 4,
+      "shape": [
+        1,
+        128
+      ],
+      "scope": "session",
+      "round": 1
+    },
+    {
+      "name": "fp32-tuned",
+      "variant": "fp32",
+      "threads": 8,
+      "shape": [
+        1,
+        128
+      ],
+      "scope": "session",
+      "round": 1
+    },
+    {
+      "name": "quantized-tuned",
+      "variant": "int8_per_channel",
+      "threads": 8,
+      "shape": [
+        1,
+        128
+      ],
+      "scope": "session",
+      "round": 1
+    },
+    {
+      "name": "fp32-tuned",
+      "variant": "fp32",
+      "threads": 8,
+      "shape": [
+        1,
+        128
+      ],
+      "scope": "session",
+      "round": 2
+    },
+    {
+      "name": "quantized-tuned",
+      "variant": "int8_per_channel",
+      "threads": 8,
+      "shape": [
+        1,
+        128
+      ],
+      "scope": "session",
+      "round": 2
+    },
+    {
+      "name": "quantized-original",
+      "variant": "int8_per_channel",
+      "threads": 4,
+      "shape": [
+        1,
+        128
+      ],
+      "scope": "session",
+      "round": 2
+    },
+    {
+      "name": "fp32-original",
+      "variant": "fp32",
+      "threads": 4,
+      "shape": [
+        1,
+        128
+      ],
+      "scope": "session",
+      "round": 2
+    },
+    {
+      "name": "fp32-tuned",
+      "variant": "fp32",
+      "threads": 8,
+      "shape": [
+        1,
+        256
+      ],
+      "scope": "session",
+      "round": 0
+    },
+    {
+      "name": "quantized-tuned",
+      "variant": "int8_per_channel",
+      "threads": 8,
+      "shape": [
+        1,
+        256
+      ],
+      "scope": "session",
+      "round": 0
+    },
+    {
+      "name": "fp32-original",
+      "variant": "fp32",
+      "threads": 4,
+      "shape": [
+        1,
+        256
+      ],
+      "scope": "session",
+      "round": 0
+    },
+    {
+      "name": "quantized-original",
+      "variant": "int8_per_channel",
+      "threads": 4,
+      "shape": [
+        1,
+        256
+      ],
+      "scope": "session",
+      "round": 0
+    },
+    {
+      "name": "fp32-original",
+      "variant": "fp32",
+      "threads": 4,
+      "shape": [
+        1,
+        256
+      ],
+      "scope": "session",
+      "round": 1
+    },
+    {
+      "name": "fp32-tuned",
+      "variant": "fp32",
+      "threads": 8,
+      "shape": [
+        1,
+        256
+      ],
+      "scope": "session",
+      "round": 1
+    },
+    {
+      "name": "quantized-original",
+      "variant": "int8_per_channel",
+      "threads": 4,
+      "shape": [
+        1,
+        256
+      ],
+      "scope": "session",
+      "round": 1
+    },
+    {
+      "name": "quantized-tuned",
+      "variant": "int8_per_channel",
+      "threads": 8,
+      "shape": [
+        1,
+        256
+      ],
+      "scope": "session",
+      "round": 1
+    },
+    {
+      "name": "fp32-original",
+      "variant": "fp32",
+      "threads": 4,
+      "shape": [
+        1,
+        256
+      ],
+      "scope": "session",
+      "round": 2
+    },
+    {
+      "name": "quantized-original",
+      "variant": "int8_per_channel",
+      "threads": 4,
+      "shape": [
+        1,
+        256
+      ],
+      "scope": "session",
+      "round": 2
+    },
+    {
+      "name": "quantized-tuned",
+      "variant": "int8_per_channel",
+      "threads": 8,
+      "shape": [
+        1,
+        256
+      ],
+      "scope": "session",
+      "round": 2
+    },
+    {
+      "name": "fp32-tuned",
+      "variant": "fp32",
+      "threads": 8,
+      "shape": [
+        1,
+        256
+      ],
+      "scope": "session",
+      "round": 2
+    },
+    {
+      "name": "fp32-original",
+      "variant": "fp32",
+      "threads": 4,
+      "shape": [
+        4,
+        64
+      ],
+      "scope": "session",
+      "round": 0
+    },
+    {
+      "name": "fp32-tuned",
+      "variant": "fp32",
+      "threads": 8,
+      "shape": [
+        4,
+        64
+      ],
+      "scope": "session",
+      "round": 0
+    },
+    {
+      "name": "quantized-original",
+      "variant": "int8_per_channel",
+      "threads": 4,
+      "shape": [
+        4,
+        64
+      ],
+      "scope": "session",
+      "round": 0
+    },
+    {
+      "name": "quantized-tuned",
+      "variant": "int8_per_channel",
+      "threads": 8,
+      "shape": [
+        4,
+        64
+      ],
+      "scope": "session",
+      "round": 0
+    },
+    {
+      "name": "quantized-tuned",
+      "variant": "int8_per_channel",
+      "threads": 8,
+      "shape": [
+        4,
+        64
+      ],
+      "scope": "session",
+      "round": 1
+    },
+    {
+      "name": "fp32-original",
+      "variant": "fp32",
+      "threads": 4,
+      "shape": [
+        4,
+        64
+      ],
+      "scope": "session",
+      "round": 1
+    },
+    {
+      "name": "fp32-tuned",
+      "variant": "fp32",
+      "threads": 8,
+      "shape": [
+        4,
+        64
+      ],
+      "scope": "session",
+      "round": 1
+    },
+    {
+      "name": "quantized-original",
+      "variant": "int8_per_channel",
+      "threads": 4,
+      "shape": [
+        4,
+        64
+      ],
+      "scope": "session",
+      "round": 1
+    },
+    {
+      "name": "quantized-original",
+      "variant": "int8_per_channel",
+      "threads": 4,
+      "shape": [
+        4,
+        64
+      ],
+      "scope": "session",
+      "round": 2
+    },
+    {
+      "name": "fp32-original",
+      "variant": "fp32",
+      "threads": 4,
+      "shape": [
+        4,
+        64
+      ],
+      "scope": "session",
+      "round": 2
+    },
+    {
+      "name": "quantized-tuned",
+      "variant": "int8_per_channel",
+      "threads": 8,
+      "shape": [
+        4,
+        64
+      ],
+      "scope": "session",
+      "round": 2
+    },
+    {
+      "name": "fp32-tuned",
+      "variant": "fp32",
+      "threads": 8,
+      "shape": [
+        4,
+        64
+      ],
+      "scope": "session",
+      "round": 2
+    },
+    {
+      "name": "quantized-tuned",
+      "variant": "int8_per_channel",
+      "threads": 8,
+      "shape": [
+        16,
+        64
+      ],
+      "scope": "session",
+      "round": 0
+    },
+    {
+      "name": "fp32-tuned",
+      "variant": "fp32",
+      "threads": 8,
+      "shape": [
+        16,
+        64
+      ],
+      "scope": "session",
+      "round": 0
+    },
+    {
+      "name": "quantized-original",
+      "variant": "int8_per_channel",
+      "threads": 4,
+      "shape": [
+        16,
+        64
+      ],
+      "scope": "session",
+      "round": 0
+    },
+    {
+      "name": "fp32-original",
+      "variant": "fp32",
+      "threads": 4,
+      "shape": [
+        16,
+        64
+      ],
+      "scope": "session",
+      "round": 0
+    },
+    {
+      "name": "quantized-original",
+      "variant": "int8_per_channel",
+      "threads": 4,
+      "shape": [
+        16,
+        64
+      ],
+      "scope": "session",
+      "round": 1
+    },
+    {
+      "name": "fp32-tuned",
+      "variant": "fp32",
+      "threads": 8,
+      "shape": [
+        16,
+        64
+      ],
+      "scope": "session",
+      "round": 1
+    },
+    {
+      "name": "fp32-original",
+      "variant": "fp32",
+      "threads": 4,
+      "shape": [
+        16,
+        64
+      ],
+      "scope": "session",
+      "round": 1
+    },
+    {
+      "name": "quantized-tuned",
+      "variant": "int8_per_channel",
+      "threads": 8,
+      "shape": [
+        16,
+        64
+      ],
+      "scope": "session",
+      "round": 1
+    },
+    {
+      "name": "fp32-tuned",
+      "variant": "fp32",
+      "threads": 8,
+      "shape": [
+        16,
+        64
+      ],
+      "scope": "session",
+      "round": 2
+    },
+    {
+      "name": "quantized-original",
+      "variant": "int8_per_channel",
+      "threads": 4,
+      "shape": [
+        16,
+        64
+      ],
+      "scope": "session",
+      "round": 2
+    },
+    {
+      "name": "fp32-original",
+      "variant": "fp32",
+      "threads": 4,
+      "shape": [
+        16,
+        64
+      ],
+      "scope": "session",
+      "round": 2
+    },
+    {
+      "name": "quantized-tuned",
+      "variant": "int8_per_channel",
+      "threads": 8,
+      "shape": [
+        16,
+        64
+      ],
+      "scope": "session",
+      "round": 2
+    }
+  ],
+  "order": "seed 20260930 permutation each round; serial execution; new worker per cell",
+  "manifest_sha256": "263a4fd3d40171924e767045e2b4655cf7fca378b88ea7d9dd8a38173c9c4b3c"
+}

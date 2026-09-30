@@ -1,0 +1,8 @@
+{
+  "status": "INVALID_QUALITY_OUTPUTS_DO_NOT_USE",
+  "reason": "Embedded tokenizer padding made every encoded length 128; zero selected pairs led to NaN quality. Timing measurements are valid and reused byte-identically in v2.",
+  "original_code_commit": "f77dcbd",
+  "fix_commit": "f24e67b",
+  "superseded_quality_directory": "results/minilm-short-request-check-v2/quality",
+  "raw_nonstandard_NaN_json_retained_for_audit": true
+}

@@ -1,0 +1,161 @@
+tune completed 12 / 36
+tune completed 24 / 36
+tune completed 36 / 36
+{
+  "timestamp_utc": "2026-09-30T11:56:36.059579+00:00",
+  "spec_sha256": "04cb1f2595d5e1fb70784b5fcc82de91f46631193a3f79c3737f81022ac0b616",
+  "tune_summary_sha256": "4905da56fd19f71c49e14a92c8c618d43958fc7972fa94bbde3f5af3e709551a",
+  "per_variant": {
+    "fp32": {
+      "name": "fp32-t8",
+      "variant": "fp32",
+      "threads": 8,
+      "shape": [
+        1,
+        64
+      ],
+      "scope": "session",
+      "round_medians_ms": [
+        1.737688,
+        1.7041245,
+        1.7199995000000001
+      ],
+      "median_ms": 1.7199995000000001,
+      "round_p95_ms": [
+        1.8350583500000002,
+        1.83442465,
+        1.8304131499999998
+      ],
+      "median_round_p95_ms": 1.83442465,
+      "round_mean_cpu_cores": [
+        7.944594503489025,
+        7.963633021647173,
+        7.97303346448368
+      ],
+      "rss_after_warmup_and_measurement_bytes": [
+        336281600,
+        336150528,
+        336871424
+      ],
+      "lifetime_peak_rss_bytes": [
+        336281600,
+        336150528,
+        336871424
+      ]
+    },
+    "int8_per_channel": {
+      "name": "int8_per_channel-t8",
+      "variant": "int8_per_channel",
+      "threads": 8,
+      "shape": [
+        1,
+        64
+      ],
+      "scope": "session",
+      "round_medians_ms": [
+        1.927792,
+        1.9260000000000002,
+        1.9325005
+      ],
+      "median_ms": 1.927792,
+      "round_p95_ms": [
+        2.01302325,
+        2.0082982,
+        2.02082225
+      ],
+      "median_round_p95_ms": 2.01302325,
+      "round_mean_cpu_cores": [
+        7.936636251321221,
+        7.955190454064823,
+        7.931238797306253
+      ],
+      "rss_after_warmup_and_measurement_bytes": [
+        320274432,
+        309837824,
+        309690368
+      ],
+      "lifetime_peak_rss_bytes": [
+        320274432,
+        309837824,
+        309690368
+      ]
+    },
+    "int8_per_channel_excluded": {
+      "name": "int8_per_channel_excluded-t8",
+      "variant": "int8_per_channel_excluded",
+      "threads": 8,
+      "shape": [
+        1,
+        64
+      ],
+      "scope": "session",
+      "round_medians_ms": [
+        1.927875,
+        1.9388955,
+        1.9244379999999999
+      ],
+      "median_ms": 1.927875,
+      "round_p95_ms": [
+        2.00344315,
+        2.0083104,
+        1.9867604
+      ],
+      "median_round_p95_ms": 2.00344315,
+      "round_mean_cpu_cores": [
+        7.965351774038355,
+        7.955486074430201,
+        7.909428991987921
+      ],
+      "rss_after_warmup_and_measurement_bytes": [
+        323289088,
+        310722560,
+        323600384
+      ],
+      "lifetime_peak_rss_bytes": [
+        323289088,
+        310722560,
+        323600384
+      ]
+    }
+  },
+  "selected_quantized": {
+    "name": "int8_per_channel-t8",
+    "variant": "int8_per_channel",
+    "threads": 8,
+    "shape": [
+      1,
+      64
+    ],
+    "scope": "session",
+    "round_medians_ms": [
+      1.927792,
+      1.9260000000000002,
+      1.9325005
+    ],
+    "median_ms": 1.927792,
+    "round_p95_ms": [
+      2.01302325,
+      2.0082982,
+      2.02082225
+    ],
+    "median_round_p95_ms": 2.01302325,
+    "round_mean_cpu_cores": [
+      7.936636251321221,
+      7.955190454064823,
+      7.931238797306253
+    ],
+    "rss_after_warmup_and_measurement_bytes": [
+      320274432,
+      309837824,
+      309690368
+    ],
+    "lifetime_peak_rss_bytes": [
+      320274432,
+      309837824,
+      309690368
+    ]
+  },
+  "test_split_accessed_by_this_study": false,
+  "rule": "Fastest per-variant median of round medians, tie by smaller thread count. Quantized candidate is faster of per-channel and one-node-excluded variants, both already within 0.005 validation Spearman of FP32. No tuning on test split or confirmation measurements.",
+  "frozen_before_confirmation": true
+}
