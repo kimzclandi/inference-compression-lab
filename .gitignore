@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.venv/
+runs/
+data/
+models/
+*.pt
+*.pth
+*.onnx
+*.engine
+*.plan
+.env
+.env.*
