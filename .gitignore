@@ -11,3 +11,6 @@ models/
 *.plan
 .env
 .env.*
+
+# Local runtime session files
+*.ses

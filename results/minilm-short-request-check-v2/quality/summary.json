@@ -1,0 +1,16 @@
+[
+  {
+    "name": "fp32-tuned",
+    "variant": "fp32",
+    "threads": 8,
+    "pairs": 973,
+    "spearman": 0.8478504603665309
+  },
+  {
+    "name": "quantized-tuned",
+    "variant": "int8_per_channel",
+    "threads": 8,
+    "pairs": 973,
+    "spearman": 0.8452466102387564
+  }
+]

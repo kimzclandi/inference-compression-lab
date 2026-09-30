@@ -1,0 +1,153 @@
+{
+  "environment": {
+    "timestamp_utc": "2026-09-30T11:55:49.636779+00:00",
+    "source": {
+      "git_head": "70b337d2bfee46db573ec7abbaac5698826ccba4",
+      "git_status": "",
+      "argv": [
+        "/Users/yukaiyan/Documents/Codex/2026-09-30/nus-2027-ai-infra-yolov8-tensorrt/work/inference-compression-lab/.venv/bin/python",
+        "/Users/yukaiyan/Documents/Codex/2026-09-30/nus-2027-ai-infra-yolov8-tensorrt/work/inference-compression-lab/experiments/minilm_runtime_study.py",
+        "prepare",
+        "--output-dir",
+        "results/minilm-runtime-study-v1",
+        "--assets-dir",
+        "runs/minilm-runtime-assets-v1"
+      ],
+      "source_sha256": {
+        "experiments/__init__.py": "7c54e0db53064338fa4534e5e27fadb47c6632b81ba3b249f2d251bc0c0321ba",
+        "experiments/benchmark_smoke.py": "2fee02c3d3a2cc23e07e9f361fb116123d290a7df0f1f55f4cdf4461114aff59",
+        "experiments/jetson_inventory.py": "c6e7ddba4e0740e8eac64cea900dcc13579bcc98dd5b312ed4bcd445ce808ec1",
+        "experiments/minilm_latency_crossover.py": "ab66b48af0aeb3899703085e87542d26948eadbfe23f547d4d25d7a765eaa994",
+        "experiments/minilm_layer_errors.py": "96b8982faaa65e0de2bdc8df8e6cfe3a4ff07a061f85a0600d2324ac4be58ed6",
+        "experiments/minilm_ptq.py": "a67aae2b954732714aec771fbe5defabebf00b0cd78574bbd6346c088c9277f8",
+        "experiments/minilm_quality_audit.py": "3f459d5c0920979ece36e84e5c8aa78e9176dc3a11437c43d0b12d4b12247049",
+        "experiments/minilm_runtime_study.py": "13a2b4305c3f4a478129bf5b263e401fb2913f5f30e96e29b5a4d92289c941d6",
+        "experiments/prepare_minilm.py": "2b85d18536ad3546e857dc999149db58ecea3a2004a5262f472076e18f182ad0",
+        "experiments/quantization_demo.py": "d73a385c59b88224df64187a00c632ef61e5b1749a06487d79fa3d4fdb43dd4e",
+        "experiments/quantization_learning.py": "eb609b2042a166507907c20fbf94841e65262c68283f8ad3206ef5e406b8cb69",
+        "experiments/verify_local_weights.py": "8a104341851954e31ce33581f31c25e6caa689a0dc3097a79b745762c176355b",
+        "lab/__init__.py": "0925f6ce613cb6c7f7eb3feba5cea6f47b47f653ea5b4de1d358915d43ea9a79",
+        "lab/benchmark.py": "58c207d0f8d15f1244b8c96154d70294ebc8ce883ada3d8e26fc227338774a9c",
+        "lab/evidence.py": "314c7a009fb2b740db1cb3925d538f7abcd8a8eb719c0d05efd0be71c0abb91d",
+        "lab/minilm_runtime.py": "d69ce0784e65acc0fee66a5d3fb28f422dee22d55493968c6e4f6ae0f510e0b5",
+        "lab/quantization.py": "f95d68d84328a85883dca133ad6f05a27d9cbbd224e8005f095537be539c6601",
+        "requirements-experiment.txt": "c8abab7fa773fc1664bed0a1e1fd740929542ccb544b9c895f655675e573c55b",
+        "requirements-macos-py312.txt": "76d44bccc6e7d6bc9512fa630acee9cff1d3e5f43cc7d78fffaf722da6a187ec"
+      }
+    },
+    "platform": "macOS-27.0-arm64-arm-64bit",
+    "architecture": "arm64",
+    "python": "3.12.13 (main, Aug  7 2026, 02:15:23) [Clang 22.1.3 ]",
+    "memory_bytes": 51539607552,
+    "logical_cpus": 16,
+    "versions": {
+      "onnxruntime": "1.30.0",
+      "onnx": "1.23.1",
+      "numpy": "2.5.3",
+      "scipy": "1.18.1",
+      "tokenizers": "0.23.2",
+      "pyarrow": "18.1.0",
+      "psutil": "7.2.2"
+    },
+    "cpu": "Apple M4 Max"
+  },
+  "spec": {
+    "purpose": "Select CPU thread count on validation requests; freeze selection before confirmation and first test-split quality evaluation",
+    "hypothesis": "Default four intra-op threads are not necessarily optimal for small MiniLM CPU requests; tuning thread count can improve latency without changing precision policy",
+    "threads": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "variants": [
+      "fp32",
+      "int8_per_channel",
+      "int8_per_channel_excluded"
+    ],
+    "tune_rows": [
+      0,
+      16
+    ],
+    "confirm_rows": [
+      128,
+      144
+    ],
+    "requests": 16,
+    "primary_shape": [
+      1,
+      64
+    ],
+    "generalization_shapes": [
+      [
+        1,
+        16
+      ],
+      [
+        1,
+        128
+      ],
+      [
+        1,
+        256
+      ],
+      [
+        4,
+        64
+      ],
+      [
+        16,
+        64
+      ]
+    ],
+    "tune_rounds": 3,
+    "confirm_rounds": 8,
+    "shape_rounds": 3,
+    "warmup": 50,
+    "samples": 200,
+    "selection": "Fastest per-variant median of round medians, tie by smaller thread count. Quantized candidate is faster of per-channel and one-node-excluded variants, both already within 0.005 validation Spearman of FP32. No tuning on test split or confirmation measurements.",
+    "quality_acceptance_max_absolute_spearman_drop": 0.005,
+    "primary_latency_improvement_target": 0.1,
+    "file_reduction_target": 0.25,
+    "limits": "Thresholds are project engineering targets, not industry certification. One host, no CPU affinity/thermal control, no production traffic, no power claim. STS-B public test is new to this project iteration, not newly created blind data; pretraining overlap not audited."
+  },
+  "spec_sha256": "04cb1f2595d5e1fb70784b5fcc82de91f46631193a3f79c3737f81022ac0b616",
+  "upstream": {
+    "model": "sentence-transformers/all-MiniLM-L6-v2",
+    "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "files": {
+      "onnx/model.onnx": {
+        "url": "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/onnx/model.onnx",
+        "sha256": "6fd5d72fe4589f189f8ebc006442dbb529bb7ce38f8082112682524616046452"
+      },
+      "tokenizer.json": {
+        "url": "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer.json",
+        "sha256": "be50c3628f2bf5bb5e3a7f17b1f74611b2561a3a27eeab05e5aa30f411572037"
+      },
+      "config.json": {
+        "url": "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json",
+        "sha256": "953f9c0d463486b10a6871cc2fd59f223b2c70184f49815e7efbcab5d8908b41"
+      }
+    },
+    "dataset": {
+      "url": "https://huggingface.co/datasets/sentence-transformers/stsb/resolve/ab7a5ac0e35aa22088bdcf23e7fd99b220e53308/data/validation-00000-of-00001.parquet",
+      "revision": "ab7a5ac0e35aa22088bdcf23e7fd99b220e53308",
+      "split": "validation",
+      "sha256": "9c6e0e9881f1b398abe3e439a482f4686305c3784568c462f6bba58bdff03b0a"
+    }
+  },
+  "assets_dir": "runs/minilm-runtime-assets-v1",
+  "excluded_nodes": [
+    "/encoder/layer.4/intermediate/dense/MatMul"
+  ],
+  "model_sha256": {
+    "fp32": "6fd5d72fe4589f189f8ebc006442dbb529bb7ce38f8082112682524616046452",
+    "int8_per_channel": "30265b36c31727ec2cfed302692feccd14a4272bb24c5af3e87a551b628bdabf",
+    "int8_per_channel_excluded": "56d0e38f0c7c045a928a211f6fc584957b3b6a365fb06c1fab8e2e654b0a9d02"
+  },
+  "prior_validation_spearman": {
+    "fp32": 0.8670977757172951,
+    "int8_per_channel": 0.8657138992220098,
+    "int8_per_channel_excluded": 0.8657463318867518
+  }
+}

@@ -1,0 +1,4 @@
+test quality fp32-original 0.8203013947512559
+test quality quantized-original 0.8187532234983723
+test quality fp32-tuned 0.8203013947512559
+test quality quantized-tuned 0.8187532234983723

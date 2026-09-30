@@ -1,0 +1,21 @@
+{
+  "purpose": "Select CPU thread count on validation requests; freeze selection before confirmation and first test-split quality evaluation",
+  "hypothesis": "Default four intra-op threads are not necessarily optimal for small MiniLM CPU requests; tuning thread count can improve latency without changing precision policy",
+  "threads": [1, 2, 4, 8],
+  "variants": ["fp32", "int8_per_channel", "int8_per_channel_excluded"],
+  "tune_rows": [0, 16],
+  "confirm_rows": [128, 144],
+  "requests": 16,
+  "primary_shape": [1, 64],
+  "generalization_shapes": [[1,16],[1,128],[1,256],[4,64],[16,64]],
+  "tune_rounds": 3,
+  "confirm_rounds": 8,
+  "shape_rounds": 3,
+  "warmup": 50,
+  "samples": 200,
+  "selection": "Fastest per-variant median of round medians, tie by smaller thread count. Quantized candidate is faster of per-channel and one-node-excluded variants, both already within 0.005 validation Spearman of FP32. No tuning on test split or confirmation measurements.",
+  "quality_acceptance_max_absolute_spearman_drop": 0.005,
+  "primary_latency_improvement_target": 0.10,
+  "file_reduction_target": 0.25,
+  "limits": "Thresholds are project engineering targets, not industry certification. One host, no CPU affinity/thermal control, no production traffic, no power claim. STS-B public test is new to this project iteration, not newly created blind data; pretraining overlap not audited."
+}

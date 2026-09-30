@@ -1,0 +1,21 @@
+test_predictions_measurements_and_integer_execution (test_evidence.EvidenceTests.test_predictions_measurements_and_integer_execution) ... ok
+test_in_range_error_bound (test_lab.QuantizationTests.test_in_range_error_bound) ... ok
+test_invalid_data (test_lab.QuantizationTests.test_invalid_data) ... ok
+test_zero_and_saturation (test_lab.QuantizationTests.test_zero_and_saturation) ... ok
+test_gpu_requires_sync (test_lab.TimingTests.test_gpu_requires_sync) ... ok
+test_percentile (test_lab.TimingTests.test_percentile) ... ok
+test_sample_count_and_sync (test_lab.TimingTests.test_sample_count_and_sync) ... ok
+test_aggregate_uses_element_counts_not_mean_of_batch_means (test_layer_metrics.LayerMetricsTests.test_aggregate_uses_element_counts_not_mean_of_batch_means) ... 2026-09-30 18:15:55.380 python[13058:930117] 2026-09-30 18:15:55.380137 [W:onnxruntime:Default, telemetry.cc:800 operator()] Failed to persist telemetry device ID; using an in-memory identifier
+ok
+test_padding_is_excluded_and_nmse_is_energy_normalized (test_layer_metrics.LayerMetricsTests.test_padding_is_excluded_and_nmse_is_energy_normalized) ... ok
+test_crossover_positions_and_raw_samples (test_mac_evidence.MacEvidenceTests.test_crossover_positions_and_raw_samples) ... ok
+test_layer_sums_and_debug_fidelity (test_mac_evidence.MacEvidenceTests.test_layer_sums_and_debug_fidelity) ... ok
+test_predictions_protocol_and_execution (test_mac_evidence.MacEvidenceTests.test_predictions_protocol_and_execution) ... ok
+test_windows_history_is_byte_identical (test_mac_evidence.MacEvidenceTests.test_windows_history_is_byte_identical) ... ok
+test_empty_existing_directory_is_also_protected (test_run_safety.RunSafetyTests.test_empty_existing_directory_is_also_protected) ... ok
+test_existing_evidence_is_never_overwritten (test_run_safety.RunSafetyTests.test_existing_evidence_is_never_overwritten) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.469s
+
+OK

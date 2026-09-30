@@ -1,0 +1,16 @@
+{
+  "status": "accepted_for_local_demo",
+  "target_hardware": "Apple M4 Max",
+  "architecture": "arm64",
+  "provider": "CPUExecutionProvider",
+  "model_path": "runs/minilm-runtime-assets-v1/int8_per_channel.onnx",
+  "model_sha256": "30265b36c31727ec2cfed302692feccd14a4272bb24c5af3e87a551b628bdabf",
+  "tokenizer_path": "models/minilm/tokenizer.json",
+  "tokenizer_sha256": "be50c3628f2bf5bb5e3a7f17b1f74611b2561a3a27eeab05e5aa30f411572037",
+  "threads": 8,
+  "eval_max_length": 256,
+  "fixed_padding": false,
+  "selection_sha256": "ff8d06dd234f98af0d2323bf5f7e345c471944007ecbafa2cf16e9acb7a5788d",
+  "quality_result_sha256": "d938df2b7522389d60882ce6848abe4b5f5e1fbca05b44e4e3acd1b82a9c0cd1",
+  "note": "Local CPU demo; not a production service or portable recommendation for other CPUs/shapes"
+}
