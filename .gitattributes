@@ -1,0 +1,2 @@
+# Preserve upstream tool stdout/stderr verbatim, including trailing spaces.
+results/**/*.log -whitespace
