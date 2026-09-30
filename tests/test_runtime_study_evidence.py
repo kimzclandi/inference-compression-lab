@@ -81,3 +81,42 @@ class RuntimeStudyEvidenceTests(unittest.TestCase):
         self.assertEqual(sum(x['events'] for x in profile['summary'] if 'Integer' in x['op'] or x['op']=='DynamicQuantizeMatMul'),expected)
         self.assertTrue(all(x['provider']=='CPUExecutionProvider' for x in profile['summary']))
         self.assertEqual(audit['all_engineering_targets_pass'],all(audit['engineering_acceptance'].values()))
+
+
+SHORT=ROOT/'results/minilm-short-request-check-v2'
+
+
+@unittest.skipUnless((SHORT/'audit.json').exists(),'short request confirmation not finalized')
+class ShortRequestEvidenceTests(unittest.TestCase):
+    def test_parent_selection_unchanged_and_inputs_changed(self):
+        manifest=read(SHORT/'manifest.json')
+        self.assertEqual(manifest['parent_selection_sha256'],hashlib.sha256((STUDY/'selection.json').read_bytes()).hexdigest())
+        self.assertEqual((SHORT/'selection.json').read_bytes(),(STUDY/'selection.json').read_bytes())
+        self.assertEqual(manifest['spec']['primary_shape'],[1,16])
+        self.assertTrue(set(range(*manifest['spec']['confirm_rows'])).isdisjoint(range(*read(STUDY/'manifest.json')['spec']['confirm_rows'])))
+
+    def test_latency_scope_and_quality_subset_match(self):
+        protocol=read(SHORT/'quality/protocol.json')
+        self.assertEqual(protocol['batch'],1)
+        self.assertEqual(protocol['sequence'],16)
+        self.assertEqual(protocol['selected_rows'],sorted(set(protocol['selected_rows'])))
+        self.assertGreater(protocol['pairs'],100)
+        for row in read(SHORT/'confirm/summary.json'):
+            self.assertEqual(row['shape'],[1,16])
+            self.assertEqual(len(row['round_medians_ms']),8)
+        for row in read(SHORT/'quality/summary.json'):
+            pred=read(SHORT/'quality'/(row['name']+'-predictions.json'))
+            self.assertEqual([p['row'] for p in pred],protocol['selected_rows'])
+            if importlib.util.find_spec('scipy'):
+                from scipy.stats import spearmanr
+                self.assertAlmostEqual(row['spearman'],spearmanr([p['gold'] for p in pred],[p['cosine'] for p in pred]).statistic,places=13)
+
+    @unittest.skipUnless(Path('data/stsb-test.parquet').exists() and importlib.util.find_spec('tokenizers'),'local data/dependencies unavailable')
+    def test_short_pair_selection_has_no_truncation(self):
+        import pyarrow.parquet as pq
+        from tokenizers import Tokenizer
+        tok=Tokenizer.from_file('models/minilm/tokenizer.json')
+        tok.no_padding();tok.no_truncation()
+        rows=pq.read_table('data/stsb-test.parquet').to_pylist()
+        expected=[i for i,r in enumerate(rows) if max(len(tok.encode(r['sentence1']).ids),len(tok.encode(r['sentence2']).ids))<=16]
+        self.assertEqual(expected,read(SHORT/'quality/protocol.json')['selected_rows'])

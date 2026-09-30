@@ -28,7 +28,7 @@ REVISION='ab7a5ac0e35aa22088bdcf23e7fd99b220e53308'
 
 
 def save(path,value):
-    Path(path).write_text(json.dumps(value,indent=2,ensure_ascii=False)+'\n')
+    Path(path).write_text(json.dumps(value,indent=2,ensure_ascii=False,allow_nan=False)+'\n')
 
 
 def read(path):

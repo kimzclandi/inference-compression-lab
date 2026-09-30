@@ -13,6 +13,14 @@ from experiments import minilm_runtime_study as study
 from experiments.minilm_runtime_report import ratio_interval
 
 
+def short_pair_indices(rows,tokenizer,limit):
+    """Count real tokens; serialized tokenizer padding/truncation must not bias selection."""
+    tokenizer.no_padding()
+    tokenizer.no_truncation()
+    return [i for i,r in enumerate(rows) if max(len(tokenizer.encode(r['sentence1']).ids),
+            len(tokenizer.encode(r['sentence2']).ids))<=limit]
+
+
 def main(args):
     root=reserve_directory(args.output_dir)
     prior=study.read(args.prior/'manifest.json');selection=study.read(args.prior/'selection.json')
@@ -24,15 +32,29 @@ def main(args):
       'parent_study':str(args.prior),'parent_selection_sha256':sha256(args.prior/'selection.json'),
       'model_sha256':prior['model_sha256'],'note':'After exploratory shape discovery; frozen variants and threads; no retuning'})
     shutil.copyfile(args.prior/'selection.json',root/'selection.json')
-    study.execute(args,'confirm',study.confirmation_configs(selection),[spec['primary_shape']],spec['confirm_rounds'],['session','pipeline'])
+    if args.reuse_confirmation_from:
+        old=study.read(args.reuse_confirmation_from/'manifest.json')
+        if old['spec_sha256']!=sha256(study.SPEC) or old['model_sha256']!=prior['model_sha256']:
+            raise ValueError('Cannot reuse measurements from a different protocol/model')
+        if (args.reuse_confirmation_from/'selection.json').read_bytes()!=(root/'selection.json').read_bytes():
+            raise ValueError('Cannot reuse measurements from different frozen selection')
+        shutil.copytree(args.reuse_confirmation_from/'confirm',root/'confirm')
+        study.save(root/'latency-reuse.json',{'from':str(args.reuse_confirmation_from),
+            'reason':'Only quality-length filtering was corrected; timing code, inputs and models unchanged',
+            'sha256':{str(p.relative_to(args.reuse_confirmation_from)):sha256(p)
+                      for p in sorted((args.reuse_confirmation_from/'confirm').rglob('*.json'))}})
+    else:
+        study.execute(args,'confirm',study.confirmation_configs(selection),[spec['primary_shape']],spec['confirm_rounds'],['session','pipeline'])
     # Freeze the label-independent length selection before model evaluation.
     tok=Tokenizer.from_file('models/minilm/tokenizer.json')
     rows=pq.read_table('data/stsb-test.parquet').to_pylist()
-    indices=[i for i,r in enumerate(rows) if max(len(tok.encode(r['sentence1']).ids),len(tok.encode(r['sentence2']).ids))<=16]
+    indices=short_pair_indices(rows,tok,16)
+    if len(indices)<3:raise ValueError('Insufficient untruncated short pairs; refusing to report NaN quality')
     qdir=reserve_directory(root/'quality')
     study.save(qdir/'protocol.json',{'source':source_record(),'timestamp_utc':datetime.now(timezone.utc).isoformat(),
         'selected_rows':indices,'pairs':len(indices),'rule':spec['short_quality_rule'],
-        'dataset_sha256':sha256('data/stsb-test.parquet'),'batch':1,'sequence':16})
+        'dataset_sha256':sha256('data/stsb-test.parquet'),'batch':1,'sequence':16,
+        'length_filter':'padding and truncation explicitly disabled before counting tokens'})
     gold=np.array([rows[i]['score'] for i in indices]);predictions={};quality=[]
     for conf in study.confirmation_configs(selection)[2:]:
         rt=MiniLMRuntime(study.model_path(args.assets_dir,conf['variant']),threads=conf['threads'],max_length=16,fixed_padding=True)
@@ -68,4 +90,5 @@ if __name__=='__main__':
     p.add_argument('--output-dir',type=Path,required=True)
     p.add_argument('--assets-dir',type=Path,required=True)
     p.add_argument('--prior',type=Path,required=True)
+    p.add_argument('--reuse-confirmation-from',type=Path)
     main(p.parse_args())
