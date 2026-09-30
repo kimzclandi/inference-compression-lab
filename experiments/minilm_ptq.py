@@ -20,9 +20,12 @@ import pyarrow.parquet as pq
 from scipy.stats import spearmanr
 from tokenizers import Tokenizer
 from lab.benchmark import measure
+from lab.evidence import reserve_directory, source_record
 
 ROOT = Path('models/minilm')
-OUT = Path('results/minilm-cpu-dynamic-int8')
+OUT = None
+WORK = None
+EXCLUDED = []
 VARIANTS = ['fp32', 'int8_per_tensor', 'int8_per_channel']
 
 
@@ -31,7 +34,7 @@ def save(path, value):
 
 
 def model_path(variant):
-    return ROOT / ('onnx/model.onnx' if variant == 'fp32' else variant + '.onnx')
+    return ROOT / 'onnx/model.onnx' if variant == 'fp32' else WORK / (variant + '.onnx')
 
 
 def feeds(tokenizer, texts):
@@ -49,7 +52,7 @@ def session(path, profile=False):
     options.graph_optimization_level = ort.GraphOptimizationLevel.ORT_ENABLE_ALL
     options.enable_profiling = profile
     if profile:
-        options.profile_file_prefix = str(Path('runs') / path.stem)
+        options.profile_file_prefix = str(WORK / path.stem)
     return ort.InferenceSession(str(path), sess_options=options,
                                 providers=['CPUExecutionProvider'])
 
@@ -73,7 +76,7 @@ def worker(variant):
     n = len(rows)
     similarities = (embeddings[:n] * embeddings[n:]).sum(1)
     scores = [float(r['score']) for r in rows]
-    np.save(Path('runs') / (variant + '-embeddings.npy'), embeddings)
+    np.save(WORK / (variant + '-embeddings.npy'), embeddings)
     predictions = [{'row': i, 'gold': scores[i], 'cosine': float(similarities[i])}
                    for i in range(n)]
     save(OUT / (variant + '-predictions.json'), predictions)
@@ -107,14 +110,18 @@ def worker(variant):
               'latency': timing, 'rss_after_evaluation_and_timing_bytes': memory.rss,
               'process_lifetime_peak_working_set_bytes': getattr(memory, 'peak_wset', None),
               'memory_scope': 'Isolated worker process; includes Python, dataset, tokenizer, model loading and inference. Not tensor-only memory.',
-              'execution_summary': evidence}
+              'execution_summary': evidence, 'actual_providers': prof.get_providers()}
+    if sys.platform == 'darwin':
+        import resource
+        result['process_lifetime_peak_rss_bytes'] = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
+        result['peak_memory_scope'] = 'macOS ru_maxrss in bytes; entire worker lifetime through graph inspection and profiling, not inference-only'
     save(OUT / (variant + '.json'), result)
     print(variant, 'finished', result['spearman'], flush=True)
 
 
 def main():
-    OUT.mkdir(parents=True, exist_ok=True)
-    Path('runs').mkdir(exist_ok=True)
+    reserve_directory(OUT)
+    reserve_directory(WORK)
     manifest = json.loads((ROOT / 'manifest.json').read_text())
     for name, info in manifest['files'].items():
         assert hashlib.sha256((ROOT / name).read_bytes()).hexdigest() == info['sha256']
@@ -122,7 +129,9 @@ def main():
     save(OUT / 'provenance.json', manifest)
     environment = {'timestamp_utc': datetime.now(timezone.utc).isoformat(),
         'python': sys.version, 'os': platform.system(), 'os_release': platform.release(),
-        'processor': platform.processor(), 'logical_cpus': os.cpu_count(),
+        'processor': platform.processor(), 'architecture': platform.machine(),
+        'physical_memory_bytes': psutil.virtual_memory().total, 'macos_version': platform.mac_ver()[0],
+        'source': source_record(), 'logical_cpus': os.cpu_count(),
         'cpu_model': None, 'ort_providers': ort.get_available_providers(),
         'versions': {p: importlib.metadata.version(p) for p in ['onnxruntime','onnx','tokenizers','numpy','scipy','pyarrow','psutil']},
         'protocol': {'provider':'CPUExecutionProvider','threads':4,'inter_op_threads':1,
@@ -130,26 +139,31 @@ def main():
           'order':VARIANTS,'warmup':50,'samples':200,'rounds':3,
           'quantization':'dynamic U8 activations / signed INT8 weights, constant-weight MatMul only',
           'calibration':'none; activation ranges computed dynamically',
-          'weight_reduce_range':False, 'tuning':'none; granularity comparison predefined',
+          'weight_reduce_range':False, 'excluded_nodes': EXCLUDED,
+          'tuning':'predefined baseline; exclusions, when supplied, are exploratory data-driven tuning',
           'data':'full STS-B validation split; not a new held-out test; pretrained data overlap not audited'}}
     if sys.platform == 'win32':
         import winreg
         with winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, r'HARDWARE\DESCRIPTION\System\CentralProcessor\0') as key:
             environment['cpu_model'] = winreg.QueryValueEx(key, 'ProcessorNameString')[0]
+    if sys.platform == 'darwin':
+        environment['cpu_model'] = subprocess.check_output(['sysctl', '-n', 'machdep.cpu.brand_string'], text=True).strip()
     save(OUT / 'environment.json', environment)
-    for variant in VARIANTS[1:]:
+    for variant in [v for v in VARIANTS if v != 'fp32']:
         quantize_dynamic(str(model_path('fp32')), str(model_path(variant)),
-            op_types_to_quantize=['MatMul'], per_channel=variant.endswith('channel'),
+            op_types_to_quantize=['MatMul'], per_channel=variant != 'int8_per_tensor',
+            nodes_to_exclude=EXCLUDED if variant == 'int8_per_channel_excluded' else [],
             reduce_range=False, weight_type=QuantType.QInt8,
             extra_options={'MatMulConstBOnly':True})
         onnx.checker.check_model(str(model_path(variant)))
     for variant in VARIANTS:
-        subprocess.run([sys.executable, '-m', 'experiments.minilm_ptq', '--worker', variant], check=True)
-    baseline = np.load('runs/fp32-embeddings.npy')
+        subprocess.run([sys.executable, '-m', 'experiments.minilm_ptq', '--worker', variant,
+                        '--output-dir', str(OUT), '--work-dir', str(WORK)], check=True)
+    baseline = np.load(WORK / 'fp32-embeddings.npy')
     summaries = []
     for variant in VARIANTS:
         result = json.loads((OUT / (variant + '.json')).read_text())
-        candidate = np.load('runs/' + variant + '-embeddings.npy')
+        candidate = np.load(WORK / (variant + '-embeddings.npy'))
         result['embedding_mse_vs_fp32'] = float(np.mean((candidate-baseline)**2))
         result['embedding_cosine_vs_fp32_mean'] = float(np.mean((candidate*baseline).sum(1)))
         result['latency_median_of_round_medians_ms'] = float(np.median([r['median_ms'] for r in result['latency']['repeats']]))
@@ -161,6 +175,18 @@ def main():
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--worker', choices=VARIANTS)
+    choices = VARIANTS + ['int8_per_channel_excluded']
+    parser.add_argument('--worker', choices=choices)
+    parser.add_argument('--output-dir', type=Path, required=True)
+    parser.add_argument('--work-dir', type=Path, required=True)
+    parser.add_argument('--variants', nargs='+', choices=choices, default=VARIANTS)
+    parser.add_argument('--exclude-nodes-json', type=Path)
     args = parser.parse_args()
+    OUT, WORK, VARIANTS = args.output_dir, args.work_dir, args.variants
+    if args.exclude_nodes_json:
+        EXCLUDED = json.loads(args.exclude_nodes_json.read_text())['nodes_to_exclude']
+    if not args.worker and ('fp32' not in VARIANTS or len(set(VARIANTS)) != len(VARIANTS)):
+        parser.error('variants must be unique and include fp32')
+    if not args.worker and 'int8_per_channel_excluded' in VARIANTS and not EXCLUDED:
+        parser.error('excluded variant requires a nonempty exclusion manifest')
     worker(args.worker) if args.worker else main()
