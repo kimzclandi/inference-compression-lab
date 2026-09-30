@@ -1,0 +1,6 @@
+{
+  "experiments/minilm_ptq.py": "5bafa6cafbe989096701d51126f55cd8cf16b24f19c564e1c22a1b87efbbb9c4",
+  "experiments/prepare_minilm.py": "2b85d18536ad3546e857dc999149db58ecea3a2004a5262f472076e18f182ad0",
+  "lab/benchmark.py": "58c207d0f8d15f1244b8c96154d70294ebc8ce883ada3d8e26fc227338774a9c",
+  "requirements-experiment.txt": "c8abab7fa773fc1664bed0a1e1fd740929542ccb544b9c895f655675e573c55b"
+}

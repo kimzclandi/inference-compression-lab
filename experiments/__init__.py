@@ -1,1 +1,1 @@
-"""Synthetic smoke examples, not model experiments."""
+"""Synthetic examples and explicitly separated real-model experiments."""

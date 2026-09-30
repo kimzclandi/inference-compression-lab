@@ -1,0 +1,387 @@
+[
+  {
+    "variant": "fp32",
+    "pairs": 1500,
+    "spearman": 0.8670977757172951,
+    "model_bytes": 90405214,
+    "model_sha256": "6fd5d72fe4589f189f8ebc006442dbb529bb7ce38f8082112682524616046452",
+    "rss_after_evaluation_and_timing_bytes": 321712128,
+    "process_lifetime_peak_working_set_bytes": 327159808,
+    "memory_scope": "Isolated worker process; includes Python, dataset, tokenizer, model loading and inference. Not tensor-only memory.",
+    "execution_summary": [
+      {
+        "op": "Add",
+        "provider": "CPUExecutionProvider",
+        "events": 50
+      },
+      {
+        "op": "BiasGelu",
+        "provider": "CPUExecutionProvider",
+        "events": 6
+      },
+      {
+        "op": "Cast",
+        "provider": "CPUExecutionProvider",
+        "events": 8
+      },
+      {
+        "op": "Concat",
+        "provider": "CPUExecutionProvider",
+        "events": 7
+      },
+      {
+        "op": "Div",
+        "provider": "CPUExecutionProvider",
+        "events": 6
+      },
+      {
+        "op": "Equal",
+        "provider": "CPUExecutionProvider",
+        "events": 1
+      },
+      {
+        "op": "Expand",
+        "provider": "CPUExecutionProvider",
+        "events": 1
+      },
+      {
+        "op": "Gather",
+        "provider": "CPUExecutionProvider",
+        "events": 24
+      },
+      {
+        "op": "LayerNormalization",
+        "provider": "CPUExecutionProvider",
+        "events": 13
+      },
+      {
+        "op": "MatMul",
+        "provider": "CPUExecutionProvider",
+        "events": 48
+      },
+      {
+        "op": "Mul",
+        "provider": "CPUExecutionProvider",
+        "events": 12
+      },
+      {
+        "op": "Reshape",
+        "provider": "CPUExecutionProvider",
+        "events": 25
+      },
+      {
+        "op": "Shape",
+        "provider": "CPUExecutionProvider",
+        "events": 14
+      },
+      {
+        "op": "Slice",
+        "provider": "CPUExecutionProvider",
+        "events": 7
+      },
+      {
+        "op": "Softmax",
+        "provider": "CPUExecutionProvider",
+        "events": 6
+      },
+      {
+        "op": "Sqrt",
+        "provider": "CPUExecutionProvider",
+        "events": 12
+      },
+      {
+        "op": "Sub",
+        "provider": "CPUExecutionProvider",
+        "events": 1
+      },
+      {
+        "op": "Transpose",
+        "provider": "CPUExecutionProvider",
+        "events": 24
+      },
+      {
+        "op": "Unsqueeze",
+        "provider": "CPUExecutionProvider",
+        "events": 17
+      },
+      {
+        "op": "Where",
+        "provider": "CPUExecutionProvider",
+        "events": 2
+      }
+    ],
+    "embedding_mse_vs_fp32": 0.0,
+    "embedding_cosine_vs_fp32_mean": 1.0,
+    "latency_median_of_round_medians_ms": 9.17285
+  },
+  {
+    "variant": "int8_per_tensor",
+    "pairs": 1500,
+    "spearman": 0.8641625744219484,
+    "model_bytes": 58655930,
+    "model_sha256": "3674e9fb6a45f8d7bfd1bf6b78b5d78e5b0f060e282c214394c350abea617fb5",
+    "rss_after_evaluation_and_timing_bytes": 293203968,
+    "process_lifetime_peak_working_set_bytes": 299393024,
+    "memory_scope": "Isolated worker process; includes Python, dataset, tokenizer, model loading and inference. Not tensor-only memory.",
+    "execution_summary": [
+      {
+        "op": "Add",
+        "provider": "CPUExecutionProvider",
+        "events": 14
+      },
+      {
+        "op": "Cast",
+        "provider": "CPUExecutionProvider",
+        "events": 8
+      },
+      {
+        "op": "Concat",
+        "provider": "CPUExecutionProvider",
+        "events": 7
+      },
+      {
+        "op": "Div",
+        "provider": "CPUExecutionProvider",
+        "events": 6
+      },
+      {
+        "op": "DynamicQuantizeLinear",
+        "provider": "CPUExecutionProvider",
+        "events": 6
+      },
+      {
+        "op": "DynamicQuantizeMatMul",
+        "provider": "CPUExecutionProvider",
+        "events": 18
+      },
+      {
+        "op": "Equal",
+        "provider": "CPUExecutionProvider",
+        "events": 1
+      },
+      {
+        "op": "Expand",
+        "provider": "CPUExecutionProvider",
+        "events": 1
+      },
+      {
+        "op": "Gather",
+        "provider": "CPUExecutionProvider",
+        "events": 24
+      },
+      {
+        "op": "Gelu",
+        "provider": "CPUExecutionProvider",
+        "events": 6
+      },
+      {
+        "op": "LayerNormalization",
+        "provider": "CPUExecutionProvider",
+        "events": 7
+      },
+      {
+        "op": "MatMul",
+        "provider": "CPUExecutionProvider",
+        "events": 12
+      },
+      {
+        "op": "MatMulIntegerToFloat",
+        "provider": "CPUExecutionProvider",
+        "events": 18
+      },
+      {
+        "op": "Mul",
+        "provider": "CPUExecutionProvider",
+        "events": 12
+      },
+      {
+        "op": "Reshape",
+        "provider": "CPUExecutionProvider",
+        "events": 25
+      },
+      {
+        "op": "Shape",
+        "provider": "CPUExecutionProvider",
+        "events": 14
+      },
+      {
+        "op": "SkipLayerNormalization",
+        "provider": "CPUExecutionProvider",
+        "events": 6
+      },
+      {
+        "op": "Slice",
+        "provider": "CPUExecutionProvider",
+        "events": 7
+      },
+      {
+        "op": "Softmax",
+        "provider": "CPUExecutionProvider",
+        "events": 6
+      },
+      {
+        "op": "Sqrt",
+        "provider": "CPUExecutionProvider",
+        "events": 12
+      },
+      {
+        "op": "Sub",
+        "provider": "CPUExecutionProvider",
+        "events": 1
+      },
+      {
+        "op": "Transpose",
+        "provider": "CPUExecutionProvider",
+        "events": 24
+      },
+      {
+        "op": "Unsqueeze",
+        "provider": "CPUExecutionProvider",
+        "events": 17
+      },
+      {
+        "op": "Where",
+        "provider": "CPUExecutionProvider",
+        "events": 2
+      }
+    ],
+    "embedding_mse_vs_fp32": 0.00018735030958870707,
+    "embedding_cosine_vs_fp32_mean": 0.9640287405589683,
+    "latency_median_of_round_medians_ms": 5.84955
+  },
+  {
+    "variant": "int8_per_channel",
+    "pairs": 1500,
+    "spearman": 0.8656553542318663,
+    "model_bytes": 58759790,
+    "model_sha256": "30265b36c31727ec2cfed302692feccd14a4272bb24c5af3e87a551b628bdabf",
+    "rss_after_evaluation_and_timing_bytes": 293068800,
+    "process_lifetime_peak_working_set_bytes": 298233856,
+    "memory_scope": "Isolated worker process; includes Python, dataset, tokenizer, model loading and inference. Not tensor-only memory.",
+    "execution_summary": [
+      {
+        "op": "Add",
+        "provider": "CPUExecutionProvider",
+        "events": 14
+      },
+      {
+        "op": "Cast",
+        "provider": "CPUExecutionProvider",
+        "events": 8
+      },
+      {
+        "op": "Concat",
+        "provider": "CPUExecutionProvider",
+        "events": 7
+      },
+      {
+        "op": "Div",
+        "provider": "CPUExecutionProvider",
+        "events": 6
+      },
+      {
+        "op": "DynamicQuantizeLinear",
+        "provider": "CPUExecutionProvider",
+        "events": 6
+      },
+      {
+        "op": "DynamicQuantizeMatMul",
+        "provider": "CPUExecutionProvider",
+        "events": 18
+      },
+      {
+        "op": "Equal",
+        "provider": "CPUExecutionProvider",
+        "events": 1
+      },
+      {
+        "op": "Expand",
+        "provider": "CPUExecutionProvider",
+        "events": 1
+      },
+      {
+        "op": "Gather",
+        "provider": "CPUExecutionProvider",
+        "events": 24
+      },
+      {
+        "op": "Gelu",
+        "provider": "CPUExecutionProvider",
+        "events": 6
+      },
+      {
+        "op": "LayerNormalization",
+        "provider": "CPUExecutionProvider",
+        "events": 7
+      },
+      {
+        "op": "MatMul",
+        "provider": "CPUExecutionProvider",
+        "events": 12
+      },
+      {
+        "op": "MatMulIntegerToFloat",
+        "provider": "CPUExecutionProvider",
+        "events": 18
+      },
+      {
+        "op": "Mul",
+        "provider": "CPUExecutionProvider",
+        "events": 12
+      },
+      {
+        "op": "Reshape",
+        "provider": "CPUExecutionProvider",
+        "events": 25
+      },
+      {
+        "op": "Shape",
+        "provider": "CPUExecutionProvider",
+        "events": 14
+      },
+      {
+        "op": "SkipLayerNormalization",
+        "provider": "CPUExecutionProvider",
+        "events": 6
+      },
+      {
+        "op": "Slice",
+        "provider": "CPUExecutionProvider",
+        "events": 7
+      },
+      {
+        "op": "Softmax",
+        "provider": "CPUExecutionProvider",
+        "events": 6
+      },
+      {
+        "op": "Sqrt",
+        "provider": "CPUExecutionProvider",
+        "events": 12
+      },
+      {
+        "op": "Sub",
+        "provider": "CPUExecutionProvider",
+        "events": 1
+      },
+      {
+        "op": "Transpose",
+        "provider": "CPUExecutionProvider",
+        "events": 24
+      },
+      {
+        "op": "Unsqueeze",
+        "provider": "CPUExecutionProvider",
+        "events": 17
+      },
+      {
+        "op": "Where",
+        "provider": "CPUExecutionProvider",
+        "events": 2
+      }
+    ],
+    "embedding_mse_vs_fp32": 4.0012857337828086e-05,
+    "embedding_cosine_vs_fp32_mean": 0.992317531391137,
+    "latency_median_of_round_medians_ms": 6.1434999999999995
+  }
+]

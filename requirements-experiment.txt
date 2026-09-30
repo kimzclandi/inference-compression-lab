@@ -1,0 +1,7 @@
+numpy==2.5.3
+onnx==1.23.1
+onnxruntime==1.30.0
+tokenizers==0.23.2
+psutil==7.2.2
+pyarrow==18.1.0
+scipy==1.18.1

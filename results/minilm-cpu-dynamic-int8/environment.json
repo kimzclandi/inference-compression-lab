@@ -1,0 +1,44 @@
+{
+  "timestamp_utc": "2026-09-30T09:40:38.436692+00:00",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "os": "Windows",
+  "os_release": "11",
+  "processor": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+  "logical_cpus": 16,
+  "cpu_model": "AMD Ryzen 7 5800H with Radeon Graphics         ",
+  "ort_providers": [
+    "AzureExecutionProvider",
+    "CPUExecutionProvider"
+  ],
+  "versions": {
+    "onnxruntime": "1.30.0",
+    "onnx": "1.23.1",
+    "tokenizers": "0.23.2",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "pyarrow": "18.1.0",
+    "psutil": "7.2.2"
+  },
+  "protocol": {
+    "provider": "CPUExecutionProvider",
+    "threads": 4,
+    "inter_op_threads": 1,
+    "eval_max_length": 256,
+    "eval_batch": 16,
+    "benchmark_batch": 1,
+    "benchmark_sequence": 64,
+    "order": [
+      "fp32",
+      "int8_per_tensor",
+      "int8_per_channel"
+    ],
+    "warmup": 50,
+    "samples": 200,
+    "rounds": 3,
+    "quantization": "dynamic U8 activations / signed INT8 weights, constant-weight MatMul only",
+    "calibration": "none; activation ranges computed dynamically",
+    "weight_reduce_range": false,
+    "tuning": "none; granularity comparison predefined",
+    "data": "full STS-B validation split; not a new held-out test; pretrained data overlap not audited"
+  }
+}
