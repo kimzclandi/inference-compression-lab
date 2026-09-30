@@ -132,7 +132,7 @@ def execute(args,phase,configs,shapes,rounds,scopes):
     for i,job in enumerate(jobs):
         subprocess.run([sys.executable,'-m','experiments.minilm_runtime_study','worker',
             '--output-dir',str(args.output_dir),'--assets-dir',str(args.assets_dir),
-            '--plan',str(out/'plan.json'),'--job',str(i)],check=True)
+            '--spec',str(SPEC),'--plan',str(out/'plan.json'),'--job',str(i)],check=True)
         if (i+1)%max(len(configs),1)==0:print(phase,'completed',i+1,'/',len(jobs),flush=True)
     summary=[]
     for shape in shapes:
@@ -231,6 +231,8 @@ def profile(args):
 
 
 def main(args):
+    global SPEC
+    SPEC=args.spec
     if args.phase not in ['prepare','worker']:
         manifest=read(args.output_dir/'manifest.json')
         if sha256(SPEC)!=manifest['spec_sha256']:raise ValueError('Frozen specification changed')
@@ -245,6 +247,7 @@ if __name__=='__main__':
     p.add_argument('phase',choices=['prepare','tune','confirm','shapes','quality','profile','worker'])
     p.add_argument('--output-dir',type=Path,required=True)
     p.add_argument('--assets-dir',type=Path,required=True)
+    p.add_argument('--spec',type=Path,default=SPEC)
     p.add_argument('--plan',type=Path)
     p.add_argument('--job',type=int)
     main(p.parse_args())
