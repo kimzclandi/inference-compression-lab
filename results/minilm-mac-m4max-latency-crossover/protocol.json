@@ -1,0 +1,75 @@
+{
+  "source": {
+    "git_head": "8ecce31be74602d5aff36649bdaf9f35fe864cdf",
+    "git_status": "?? :memory:.ses\n?? results/minilm-mac-m4max-ablation/\n?? results/minilm-mac-m4max-baseline/\n?? results/minilm-mac-m4max-layer-errors-optimized/\n?? results/minilm-mac-m4max-layer-errors/\n",
+    "argv": [
+      "/Users/yukaiyan/Documents/Codex/2026-09-30/nus-2027-ai-infra-yolov8-tensorrt/work/inference-compression-lab/.venv/bin/python",
+      "/Users/yukaiyan/Documents/Codex/2026-09-30/nus-2027-ai-infra-yolov8-tensorrt/work/inference-compression-lab/experiments/minilm_latency_crossover.py",
+      "--output-dir",
+      "results/minilm-mac-m4max-latency-crossover",
+      "--baseline-work",
+      "runs/minilm-mac-m4max-baseline",
+      "--ablation-work",
+      "runs/minilm-mac-m4max-ablation"
+    ],
+    "source_sha256": {
+      "experiments/__init__.py": "7c54e0db53064338fa4534e5e27fadb47c6632b81ba3b249f2d251bc0c0321ba",
+      "experiments/benchmark_smoke.py": "2fee02c3d3a2cc23e07e9f361fb116123d290a7df0f1f55f4cdf4461114aff59",
+      "experiments/minilm_latency_crossover.py": "ab66b48af0aeb3899703085e87542d26948eadbfe23f547d4d25d7a765eaa994",
+      "experiments/minilm_layer_errors.py": "96b8982faaa65e0de2bdc8df8e6cfe3a4ff07a061f85a0600d2324ac4be58ed6",
+      "experiments/minilm_ptq.py": "a67aae2b954732714aec771fbe5defabebf00b0cd78574bbd6346c088c9277f8",
+      "experiments/prepare_minilm.py": "2b85d18536ad3546e857dc999149db58ecea3a2004a5262f472076e18f182ad0",
+      "experiments/quantization_demo.py": "d73a385c59b88224df64187a00c632ef61e5b1749a06487d79fa3d4fdb43dd4e",
+      "lab/__init__.py": "0925f6ce613cb6c7f7eb3feba5cea6f47b47f653ea5b4de1d358915d43ea9a79",
+      "lab/benchmark.py": "58c207d0f8d15f1244b8c96154d70294ebc8ce883ada3d8e26fc227338774a9c",
+      "lab/evidence.py": "314c7a009fb2b740db1cb3925d538f7abcd8a8eb719c0d05efd0be71c0abb91d",
+      "lab/quantization.py": "f95d68d84328a85883dca133ad6f05a27d9cbbd224e8005f095537be539c6601",
+      "requirements-experiment.txt": "c8abab7fa773fc1664bed0a1e1fd740929542ccb544b9c895f655675e573c55b",
+      "requirements-macos-py312.txt": "76d44bccc6e7d6bc9512fa630acee9cff1d3e5f43cc7d78fffaf722da6a187ec"
+    }
+  },
+  "timestamp_utc": "2026-09-30T10:09:09.408510+00:00",
+  "order": [
+    [
+      "fp32",
+      "int8_per_tensor",
+      "int8_per_channel",
+      "int8_per_channel_excluded"
+    ],
+    [
+      "int8_per_tensor",
+      "int8_per_channel",
+      "int8_per_channel_excluded",
+      "fp32"
+    ],
+    [
+      "int8_per_channel",
+      "int8_per_channel_excluded",
+      "fp32",
+      "int8_per_tensor"
+    ],
+    [
+      "int8_per_channel_excluded",
+      "fp32",
+      "int8_per_tensor",
+      "int8_per_channel"
+    ]
+  ],
+  "model_sha256": {
+    "fp32": "6fd5d72fe4589f189f8ebc006442dbb529bb7ce38f8082112682524616046452",
+    "int8_per_tensor": "3674e9fb6a45f8d7bfd1bf6b78b5d78e5b0f060e282c214394c350abea617fb5",
+    "int8_per_channel": "30265b36c31727ec2cfed302692feccd14a4272bb24c5af3e87a551b628bdabf",
+    "int8_per_channel_excluded": "56d0e38f0c7c045a928a211f6fc584957b3b6a365fb06c1fab8e2e654b0a9d02"
+  },
+  "threads": 4,
+  "inter_op_threads": 1,
+  "provider": "CPUExecutionProvider",
+  "warmup": 50,
+  "samples": 200,
+  "rounds": 4,
+  "batch": 1,
+  "sequence": 64,
+  "process": "fresh worker each measurement; session creation excluded; one model resident",
+  "design": "deterministic cyclic Latin square, each variant occupies each position once; not randomized",
+  "limitations": "one device, uncontrolled background/thermals/frequency; samples are not independent machines"
+}

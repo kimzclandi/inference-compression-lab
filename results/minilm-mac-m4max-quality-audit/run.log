@@ -1,0 +1,57 @@
+2026-09-30 18:10:37.153 python[12882:927488] 2026-09-30 18:10:37.153822 [W:onnxruntime:Default, telemetry.cc:800 operator()] Failed to persist telemetry device ID; using an in-memory identifier
+{
+  "source": {
+    "git_head": "a80a1077d58e5919e76def5647541efefe153266",
+    "git_status": "?? :memory:.ses\n?? results/minilm-mac-m4max-ablation/\n?? results/minilm-mac-m4max-baseline/\n?? results/minilm-mac-m4max-latency-crossover/\n?? results/minilm-mac-m4max-layer-errors-optimized/\n?? results/minilm-mac-m4max-layer-errors/\n",
+    "argv": [
+      "/Users/yukaiyan/Documents/Codex/2026-09-30/nus-2027-ai-infra-yolov8-tensorrt/work/inference-compression-lab/.venv/bin/python",
+      "/Users/yukaiyan/Documents/Codex/2026-09-30/nus-2027-ai-infra-yolov8-tensorrt/work/inference-compression-lab/experiments/minilm_quality_audit.py",
+      "--output-dir",
+      "results/minilm-mac-m4max-quality-audit",
+      "--ablation-results",
+      "results/minilm-mac-m4max-ablation"
+    ],
+    "source_sha256": {
+      "experiments/__init__.py": "7c54e0db53064338fa4534e5e27fadb47c6632b81ba3b249f2d251bc0c0321ba",
+      "experiments/benchmark_smoke.py": "2fee02c3d3a2cc23e07e9f361fb116123d290a7df0f1f55f4cdf4461114aff59",
+      "experiments/minilm_latency_crossover.py": "ab66b48af0aeb3899703085e87542d26948eadbfe23f547d4d25d7a765eaa994",
+      "experiments/minilm_layer_errors.py": "96b8982faaa65e0de2bdc8df8e6cfe3a4ff07a061f85a0600d2324ac4be58ed6",
+      "experiments/minilm_ptq.py": "a67aae2b954732714aec771fbe5defabebf00b0cd78574bbd6346c088c9277f8",
+      "experiments/minilm_quality_audit.py": "3f459d5c0920979ece36e84e5c8aa78e9176dc3a11437c43d0b12d4b12247049",
+      "experiments/prepare_minilm.py": "2b85d18536ad3546e857dc999149db58ecea3a2004a5262f472076e18f182ad0",
+      "experiments/quantization_demo.py": "d73a385c59b88224df64187a00c632ef61e5b1749a06487d79fa3d4fdb43dd4e",
+      "lab/__init__.py": "0925f6ce613cb6c7f7eb3feba5cea6f47b47f653ea5b4de1d358915d43ea9a79",
+      "lab/benchmark.py": "58c207d0f8d15f1244b8c96154d70294ebc8ce883ada3d8e26fc227338774a9c",
+      "lab/evidence.py": "314c7a009fb2b740db1cb3925d538f7abcd8a8eb719c0d05efd0be71c0abb91d",
+      "lab/quantization.py": "f95d68d84328a85883dca133ad6f05a27d9cbbd224e8005f095537be539c6601",
+      "requirements-experiment.txt": "c8abab7fa773fc1664bed0a1e1fd740929542ccb544b9c895f655675e573c55b",
+      "requirements-macos-py312.txt": "76d44bccc6e7d6bc9512fa630acee9cff1d3e5f43cc7d78fffaf722da6a187ec"
+    }
+  },
+  "prediction_sha256": {
+    "fp32": "4e8adcfbe1820a13390a528c0367e6f59be20e66f901145a74ce41ffa4a221b3",
+    "int8_per_channel": "08ee2cf258c73c061d9a91a8f9956dc1eafc9c87732152164defac7a1f905158",
+    "int8_per_channel_excluded": "b00c84037c0cda831d0e528f5da6531037c3024200770d073995327d60e05859"
+  },
+  "seed": 20260930,
+  "bootstrap_replicates": 1000,
+  "bootstrap_unit": "paired validation rows with replacement; no training/selection rerun",
+  "delta_spearman_excluded_minus_channel": 3.243266474195483e-05,
+  "percentile_95_interval": [
+    -0.0003011337307263745,
+    0.00036502028986592485
+  ],
+  "limitations": "conditional exploratory interval; ignores repeated-sentence dependence and selection uncertainty; not evidence of generalization",
+  "subsets": {
+    "probe_rows_0_63": {
+      "fp32": 0.9490774427017048,
+      "int8_per_channel": 0.95296060667257,
+      "int8_per_channel_excluded": 0.9530754931805836
+    },
+    "remaining_rows_64_1499": {
+      "fp32": 0.861626365982014,
+      "int8_per_channel": 0.8601323774227051,
+      "int8_per_channel_excluded": 0.8601809857528996
+    }
+  }
+}

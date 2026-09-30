@@ -1,0 +1,42 @@
+[
+  {
+    "variant": "fp32",
+    "round_medians_ms": [
+      2.0018124999999998,
+      1.9824995,
+      1.97525,
+      1.9963125000000002
+    ],
+    "median_of_round_medians_ms": 1.9894060000000002
+  },
+  {
+    "variant": "int8_per_tensor",
+    "round_medians_ms": [
+      2.277125,
+      2.2664375000000003,
+      2.275625,
+      2.282312
+    ],
+    "median_of_round_medians_ms": 2.276375
+  },
+  {
+    "variant": "int8_per_channel",
+    "round_medians_ms": [
+      2.2732085,
+      2.2896045000000003,
+      2.2809790000000003,
+      2.2709585
+    ],
+    "median_of_round_medians_ms": 2.27709375
+  },
+  {
+    "variant": "int8_per_channel_excluded",
+    "round_medians_ms": [
+      2.2676665,
+      2.2716874999999996,
+      2.2726465,
+      2.286104
+    ],
+    "median_of_round_medians_ms": 2.2721669999999996
+  }
+]

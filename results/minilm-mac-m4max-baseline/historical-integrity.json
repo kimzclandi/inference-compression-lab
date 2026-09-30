@@ -1,0 +1,19 @@
+{
+  "baseline_commit": "eefd28ac66d202477ad0e157b3d400c5a24952bd",
+  "sha256": {
+    "results/minilm-cpu-dynamic-int8/REPORT.md": "16a6376b4d627e7cc40c117c53e19b4e865aedefb264cf1c0293c78305ece987",
+    "results/minilm-cpu-dynamic-int8/environment.json": "0550e3bb85ecb5151cc8084bfd4dc47282f04ba132757131437319dfdfad3b00",
+    "results/minilm-cpu-dynamic-int8/fp32-execution.json": "d136d8e9e33254ab91ed8e33750df82faa1680f7b90115c1b66f0b648f64d11f",
+    "results/minilm-cpu-dynamic-int8/fp32-predictions.json": "1502dd03bd7c445388090fa275e18cd72a954d51c96e1446377a04a8656a4427",
+    "results/minilm-cpu-dynamic-int8/fp32.json": "65b015fd608942f77a17494d90c6f43c9e80877e3e43f46f1286880738895520",
+    "results/minilm-cpu-dynamic-int8/int8_per_channel-execution.json": "230e54149684c01081532557e46dd3fa1f5639200d238a734412e1482b45949a",
+    "results/minilm-cpu-dynamic-int8/int8_per_channel-predictions.json": "47fb9594fddcf7ddad846f32419a67432e6a2a88d9706d16a50566366f78455e",
+    "results/minilm-cpu-dynamic-int8/int8_per_channel.json": "cd7a501ab681fb37148291e57c36404e2558e77398b60b5f66c5c356ef6d1104",
+    "results/minilm-cpu-dynamic-int8/int8_per_tensor-execution.json": "886d0295a53f9061edc39e06cac6673058686a428ea1eeb078d1abcc85ae6f39",
+    "results/minilm-cpu-dynamic-int8/int8_per_tensor-predictions.json": "f246511f10c3cbf0d9473dce22be3f71d0e2a90d5203f3dc5536d47d3b160fd7",
+    "results/minilm-cpu-dynamic-int8/int8_per_tensor.json": "e94fd0611744d2c307bf527205400c84c539161bfe2318d6c5b56ae56c3c9e4f",
+    "results/minilm-cpu-dynamic-int8/provenance.json": "f11e0f7ba61c31a08524233fe70e99e1c14ae7d646922f3371242846600637f2",
+    "results/minilm-cpu-dynamic-int8/source-hashes.json": "b6d6805967f5ecf95f09eaafca2784eabdc346a0b1c92c887ed6deb12198831a",
+    "results/minilm-cpu-dynamic-int8/summary.json": "14833ea0c11fe66cdd8523ceccd09e1ed08ed610f42dd2a6649cb45496a381f0"
+  }
+}

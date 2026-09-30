@@ -1,0 +1,9 @@
+{
+  "nodes_to_exclude": [
+    "/encoder/layer.4/intermediate/dense/MatMul"
+  ],
+  "selection_rule": "exclude exactly one MatMul with largest aggregate local per-channel NMSE; tie by node name",
+  "hypothesis": "Keeping the largest local-NMSE MatMul in FP32 reduces embedding MSE versus full per-channel INT8; task Spearman and latency may improve or worsen",
+  "selected_local_nmse": 0.00037537509037169705,
+  "protocol_sha256": "03d4d2816220805acba7279437e468bbd60a26f5492f1765fcc32484be71ec65"
+}

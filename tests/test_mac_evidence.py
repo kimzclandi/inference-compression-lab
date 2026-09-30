@@ -1,6 +1,7 @@
 """Validate real Mac artifacts; optional numerical dependencies for quality checks."""
 from collections import defaultdict
 import importlib.util
+import hashlib
 import json
 from pathlib import Path
 import statistics
@@ -11,6 +12,12 @@ ROOT=Path(__file__).resolve().parents[1]/'results'
 
 @unittest.skipUnless((ROOT/'minilm-mac-m4max-ablation/summary.json').exists(),'Mac experiment not run')
 class MacEvidenceTests(unittest.TestCase):
+    def test_windows_history_is_byte_identical(self):
+        manifest=json.loads((ROOT/'minilm-mac-m4max-baseline/historical-integrity.json').read_text())
+        self.assertEqual(len(manifest['sha256']),14)
+        for name,expected in manifest['sha256'].items():
+            self.assertEqual(hashlib.sha256((ROOT.parent/name).read_bytes()).hexdigest(),expected)
+
     def test_predictions_protocol_and_execution(self):
         old=json.loads((ROOT/'minilm-cpu-dynamic-int8/provenance.json').read_text())
         for directory in ['minilm-mac-m4max-baseline','minilm-mac-m4max-ablation']:

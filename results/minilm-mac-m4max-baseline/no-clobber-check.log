@@ -1,0 +1,14 @@
+2026-09-30 18:15:56.524 python[13151:930325] 2026-09-30 18:15:56.524688 [W:onnxruntime:Default, telemetry.cc:800 operator()] Failed to persist telemetry device ID; using an in-memory identifier
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/yukaiyan/Documents/Codex/2026-09-30/nus-2027-ai-infra-yolov8-tensorrt/work/inference-compression-lab/experiments/minilm_ptq.py", line 192, in <module>
+    worker(args.worker) if args.worker else main()
+                                            ^^^^^^
+  File "/Users/yukaiyan/Documents/Codex/2026-09-30/nus-2027-ai-infra-yolov8-tensorrt/work/inference-compression-lab/experiments/minilm_ptq.py", line 123, in main
+    reserve_directory(OUT)
+  File "/Users/yukaiyan/Documents/Codex/2026-09-30/nus-2027-ai-infra-yolov8-tensorrt/work/inference-compression-lab/lab/evidence.py", line 15, in reserve_directory
+    path.mkdir(parents=True, exist_ok=False)
+  File "/Users/yukaiyan/.local/share/uv/python/cpython-3.12.13-macos-aarch64-none/lib/python3.12/pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileExistsError: [Errno 17] File exists: 'results/minilm-cpu-dynamic-int8'
