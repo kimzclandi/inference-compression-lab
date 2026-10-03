@@ -1,0 +1,183 @@
+{
+  "scope": "Synthetic 5-feature runtime regression; no QA calibration or evaluation results used.",
+  "python": "3.12.11",
+  "platform": "macOS-27.0-arm64-arm-64bit",
+  "numpy": "2.2.6",
+  "before_sha256": "ab1090978a538708d7afda7fc185192cac038840973956f91fa8e71e906442be",
+  "after_sha256": "182138f513c311a5e14dece7afc60ca28c1cbf22b1dbbf56a6db0cf3513b3bbd",
+  "unchanged_fit_config": true,
+  "fit_config": {
+    "objective": "sum_binary_logistic_loss_plus_half_l2_weight_squared",
+    "l2": 1.0,
+    "regularize_intercept": false,
+    "standard_deviation_ddof": 0,
+    "zero_variance_scale": 1.0,
+    "max_iterations": 100,
+    "gradient_max_abs_tolerance": 1e-08,
+    "armijo": 0.0001,
+    "backtracking_factor": 0.5,
+    "max_backtracking_steps": 40
+  },
+  "cases": [
+    {
+      "n": 32,
+      "before": {
+        "status": "complete",
+        "n": 32,
+        "convergence": {
+          "converged": true,
+          "iterations": 4,
+          "gradient_max_abs": 2.2668533716796446e-12
+        },
+        "objective": 19.12858437257041,
+        "independent_stdlib_objective": 19.128584372570405,
+        "objective_absolute_difference": 3.552713678800501e-15,
+        "synthetic_model_sha256": "93bb191c1133526cc4269b6606d795c7c5d422dc071f1b4bf9203294e9d7ed0e"
+      },
+      "after": {
+        "status": "complete",
+        "n": 32,
+        "convergence": {
+          "converged": true,
+          "iterations": 4,
+          "gradient_max_abs": 2.2674084831919572e-12
+        },
+        "objective": 19.1285843725704,
+        "independent_stdlib_objective": 19.128584372570405,
+        "objective_absolute_difference": 3.552713678800501e-15,
+        "synthetic_model_sha256": "63c915746109a8658e37884dd8c5d415a1a6af5ae5143394bbe2afdbea11f8aa"
+      },
+      "after_repeat_exact_match": true,
+      "score_max_absolute_difference": 2.220446049250313e-16
+    },
+    {
+      "n": 128,
+      "before": {
+        "status": "complete",
+        "n": 128,
+        "convergence": {
+          "converged": true,
+          "iterations": 4,
+          "gradient_max_abs": 9.721601301748706e-11
+        },
+        "objective": 75.59308700571553,
+        "independent_stdlib_objective": 75.59308700571553,
+        "objective_absolute_difference": 0.0,
+        "synthetic_model_sha256": "2bc2bbf6c4ae78e191ca869aa1aa9ba50551a453f2692f08249c408955a8f78b"
+      },
+      "after": {
+        "status": "complete",
+        "n": 128,
+        "convergence": {
+          "converged": true,
+          "iterations": 4,
+          "gradient_max_abs": 9.72167901736043e-11
+        },
+        "objective": 75.59308700571553,
+        "independent_stdlib_objective": 75.59308700571553,
+        "objective_absolute_difference": 0.0,
+        "synthetic_model_sha256": "4d4dc3bfc3175404eef0e79bb8ba2c93fb4e0d9156ebe1fa0a359e080f642b6f"
+      },
+      "after_repeat_exact_match": true,
+      "score_max_absolute_difference": 2.220446049250313e-16
+    },
+    {
+      "n": 256,
+      "before": {
+        "status": "failed",
+        "n": 256,
+        "error_chain": [
+          {
+            "type": "ValueError",
+            "message": "Non-finite or singular logistic fit."
+          },
+          {
+            "type": "FloatingPointError",
+            "message": "divide by zero encountered in matmul"
+          }
+        ]
+      },
+      "after": {
+        "status": "complete",
+        "n": 256,
+        "convergence": {
+          "converged": true,
+          "iterations": 4,
+          "gradient_max_abs": 3.9884096025843974e-10
+        },
+        "objective": 150.7378195783145,
+        "independent_stdlib_objective": 150.73781957831451,
+        "objective_absolute_difference": 2.842170943040401e-14,
+        "synthetic_model_sha256": "9e35716b4ebb11f31fd338211b638e6af125e97e71fad555532f6e10102eb45f"
+      },
+      "after_repeat_exact_match": true,
+      "score_max_absolute_difference": null
+    },
+    {
+      "n": 512,
+      "before": {
+        "status": "failed",
+        "n": 512,
+        "error_chain": [
+          {
+            "type": "ValueError",
+            "message": "Non-finite or singular logistic fit."
+          },
+          {
+            "type": "FloatingPointError",
+            "message": "divide by zero encountered in matmul"
+          }
+        ]
+      },
+      "after": {
+        "status": "complete",
+        "n": 512,
+        "convergence": {
+          "converged": true,
+          "iterations": 4,
+          "gradient_max_abs": 1.1883580786076209e-09
+        },
+        "objective": 300.9803406071056,
+        "independent_stdlib_objective": 300.9803406071055,
+        "objective_absolute_difference": 5.684341886080802e-14,
+        "synthetic_model_sha256": "fcc1c43c195a910838a1c086a42c863538855f225d25c3016ae5e88cee6ababf"
+      },
+      "after_repeat_exact_match": true,
+      "score_max_absolute_difference": null
+    },
+    {
+      "n": 1024,
+      "before": {
+        "status": "failed",
+        "n": 1024,
+        "error_chain": [
+          {
+            "type": "ValueError",
+            "message": "Non-finite or singular logistic fit."
+          },
+          {
+            "type": "FloatingPointError",
+            "message": "divide by zero encountered in matmul"
+          }
+        ]
+      },
+      "after": {
+        "status": "complete",
+        "n": 1024,
+        "convergence": {
+          "converged": true,
+          "iterations": 4,
+          "gradient_max_abs": 2.8921769423817523e-09
+        },
+        "objective": 601.4677510437037,
+        "independent_stdlib_objective": 601.4677510437039,
+        "objective_absolute_difference": 1.1368683772161603e-13,
+        "synthetic_model_sha256": "17cbcb86263aa7545d341c85011755c198e74ce235161be2272fe81817792d7c"
+      },
+      "after_repeat_exact_match": true,
+      "score_max_absolute_difference": null
+    }
+  ],
+  "corrected_all_pass": true,
+  "interpretation": "The recorded BLAS backend is identified in numpy-build.txt. A before-failure and after-success on finite synthetic inputs supports an implementation/runtime workaround, not a definitive upstream-library root-cause diagnosis or a quality improvement claim."
+}
