@@ -107,11 +107,16 @@ def block_bytes(model, index):
 
 
 def assert_model_layout(model, restored=None, bits=None):
+    import mlx.core as mx
     import mlx.nn as nn
     from mlx.utils import tree_flatten
+    if len(model.model.layers) != 24 or not model.args.tie_word_embeddings:
+        raise ValueError('Only this tied-embedding 24-block Qwen2 model is covered')
+    if isinstance(model.model.embed_tokens, nn.QuantizedEmbedding) != (bits is not None):
+        raise ValueError('Unexpected embedding precision')
     counts = {}
     for i, block in enumerate(model.model.layers):
-        leaves = [(p, m) for p, m in tree_flatten(block.leaf_modules())
+        leaves = [(p, m) for p, m in tree_flatten(block.leaf_modules(), is_leaf=nn.Module.is_module)
                   if isinstance(m, (nn.Linear, nn.QuantizedLinear))]
         if len(leaves) != 7:
             raise ValueError('Expected 7 projections per Qwen2 block')
@@ -121,6 +126,8 @@ def assert_model_layout(model, restored=None, bits=None):
                 raise ValueError('Unexpected fallback layout')
             if expected_quantized and (m.bits != bits or m.group_size != 64):
                 raise ValueError('Unexpected quantizer')
+            if not expected_quantized and m.weight.dtype != mx.float16:
+                raise ValueError('Restored/full precision projection is not FP16')
         counts[str(i)] = {'quantized': 7 if expected_quantized else 0,
                           'fp16': 0 if expected_quantized else 7,
                           'tensor_bytes': block_bytes(model, i)}
