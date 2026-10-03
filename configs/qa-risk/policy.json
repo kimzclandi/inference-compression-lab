@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "enabled": true,
+  "variant": "int8",
+  "study_sha256": "365a1ff260d9f887558bc5ce5421e4028702ad435717aefc8f17787cea08081b",
+  "selection_sha256": "b2999477ee82318a98266ef0674c22a526cddea1eec541c591a7bec7e354b74a",
+  "asset_manifest_sha256": "c7709c2098b46dc59223b451c076974e1035f591c1e03ca3c2af2747d1f5c7ed",
+  "threshold": 0.7,
+  "scope": "english_supplied_passage_bounded_local_prototype",
+  "evidence_scope": "public_benchmark_point_gates_not_general_deployment",
+  "input_limits": {
+    "max_question_characters": 1000,
+    "max_question_tokens": 64,
+    "max_context_characters": 12000,
+    "max_sequence_tokens": 384,
+    "stride": 128,
+    "max_windows": 8,
+    "max_answer_tokens": 30
+  },
+  "minimum_training_rows": 256
+}
