@@ -1,0 +1,22 @@
+{
+  "rounds": 5,
+  "warmup_per_mode": 2,
+  "generated_tokens": 32,
+  "prefix_lengths": [64, 2048],
+  "requests": 4,
+  "seed": 20261004,
+  "max_entries": 2,
+  "max_bytes": 67108864,
+  "modes": ["full", "legacy_segmented", "direct_segmented", "cached_workload", "warm_hit"],
+  "datasets": ["historical", "confirmation"],
+  "profile": [false, true],
+  "hypotheses_before_execution": [
+    "Legacy segmented rebuilding performs two avoidable copies: storing a snapshot and cloning it into a request cache. Direct segmented prefill needs neither.",
+    "Direct segmented may reduce baseline cost, shrinking reuse benefit. Direction and magnitude must be measured; allocation shape and lazy graph differences prevent assigning the entire delta to copies.",
+    "Cached workload has one miss and three hits; warm-hit preparation is excluded from its four-request timer and saved separately.",
+    "Decode has the same work and is not expected to materially benefit from avoiding repeated prefix prefill.",
+    "All five paths must produce identical greedy tokens for every request; phase times must reconcile to each request total. No positive speedup threshold is required."
+  ],
+  "timing": "Serial batch 1; pretokenized; 32 forced greedy tokens. Model load, tokenization, warmup and hot preparation excluded. Four-request wall time includes runtime call overhead. Instrumented runs add synchronization and are diagnostic only. No tail-latency or concurrency claim.",
+  "confirmation": "Same fixed protocol on another deterministic token workload, executed after historical workload without tuning. Neither is business traffic or an unseen QA test."
+}

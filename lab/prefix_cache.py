@@ -2,6 +2,7 @@
 from collections import OrderedDict
 import hashlib
 import json
+import time
 
 
 def token_key(model_id, tokens):
@@ -27,30 +28,35 @@ class PrefixCache:
         self.bytes = 0
         self.hits = self.misses = self.evictions = self.bypasses = 0
 
-    def acquire(self, tokens, builder):
+    def acquire(self, tokens, builder, *, clone=None, profile=None):
+        clone = self.clone if clone is None else clone
+        started = time.perf_counter() if profile is not None else None
         tokens = tuple(tokens)
         key = token_key(self.model_id, tokens)
-        if key in self.entries:
+        found = key in self.entries
+        if profile is not None:
+            profile['lookup_seconds'] = time.perf_counter() - started
+        if found:
             stored_tokens, snapshot, size = self.entries[key]
             if stored_tokens != tokens:
                 raise RuntimeError('Cache-key collision')
             self.entries.move_to_end(key)
             self.hits += 1
-            return self.clone(snapshot), 'hit'
+            return clone(snapshot), 'hit'
         self.misses += 1
         snapshot, size = builder(tokens)
         if type(size) is not int or size < 0:
             raise ValueError('Invalid snapshot byte count')
         if size > self.max_bytes:
             self.bypasses += 1
-            return self.clone(snapshot), 'bypass'
+            return clone(snapshot), 'bypass'
         while self.entries and (len(self.entries) >= self.max_entries or self.bytes + size > self.max_bytes):
             _, (_, _, removed) = self.entries.popitem(last=False)
             self.bytes -= removed
             self.evictions += 1
         self.entries[key] = (tokens, snapshot, size)
         self.bytes += size
-        return self.clone(snapshot), 'miss'
+        return clone(snapshot), 'miss'
 
     def clear(self):
         self.entries.clear()
