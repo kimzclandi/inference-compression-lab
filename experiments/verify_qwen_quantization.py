@@ -3,6 +3,7 @@ import argparse
 import math
 from pathlib import Path
 import statistics
+from lab.artifact_integrity import verify_hashes
 from lab.qa_metrics import evaluate
 from lab.quantization_diagnostics import (read, rows, sha, write, index_by_id,
                                           paired, rank_blocks, performance, gate, aggregates_equal)
@@ -18,8 +19,7 @@ def verify(folder):
     spec = read(folder / 'protocol.json'); run = read(folder / 'run.json')
     require(run['status'] == 'complete', 'Incomplete/failed experiment')
     checksums = read(folder / 'checksums.json')
-    for name, expected in checksums.items():
-        require(sha(folder / name) == expected, 'Artifact hash mismatch: ' + name)
+    verify_hashes(folder, checksums)
     require(sha(folder / 'protocol.json') == run['protocol_sha256'], 'Protocol hash mismatch')
     for name, expected in run['source_sha256'].items():
         require(sha(folder / 'source' / name) == expected, 'Source snapshot mismatch')

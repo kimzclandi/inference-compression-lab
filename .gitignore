@@ -6,6 +6,9 @@ runs/
 /models
 *.pt
 *.pth
+*.safetensors
+*.bin
+.venv-*/
 *.onnx
 *.engine
 *.plan

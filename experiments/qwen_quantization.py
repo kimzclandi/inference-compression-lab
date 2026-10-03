@@ -19,6 +19,7 @@ import threading
 import time
 
 from lab.evidence import reserve_directory
+from lab.artifact_integrity import git_identity
 from lab.qa_metrics import evaluate
 from lab.quantization_diagnostics import (read, rows, write, sha, index_by_id,
                                           rank_blocks, performance)
@@ -114,6 +115,8 @@ def assert_model_layout(model, restored=None, bits=None):
         raise ValueError('Only this tied-embedding 24-block Qwen2 model is covered')
     if isinstance(model.model.embed_tokens, nn.QuantizedEmbedding) != (bits is not None):
         raise ValueError('Unexpected embedding precision')
+    if bits is not None and (model.model.embed_tokens.bits != bits or model.model.embed_tokens.group_size != 64):
+        raise ValueError('Unexpected embedding quantizer')
     counts = {}
     for i, block in enumerate(model.model.layers):
         leaves = [(p, m) for p, m in tree_flatten(block.leaf_modules(), is_leaf=nn.Module.is_module)
@@ -272,15 +275,14 @@ def run_study(args):
     out = reserve_directory(args.output_dir); local = reserve_directory(args.work_dir)
     spec = read(args.spec); write(out / 'protocol.json', spec)
     source_files = [Path(__file__).relative_to(Path.cwd()), Path('lab/qa_metrics.py'),
-                    Path('lab/quantization_diagnostics.py'), Path('lab/evidence.py')]
+                    Path('lab/quantization_diagnostics.py'), Path('lab/evidence.py'), Path('lab/artifact_integrity.py')]
     for p in source_files:
         dest = out / 'source' / p; dest.parent.mkdir(parents=True, exist_ok=True); shutil.copy2(p, dest)
     for label, path in [('data.jsonl', spec['data']), ('prompt.json', spec['prompt']),
                         ('bench-inputs.json', spec['bench_inputs']), ('model-identities.json', spec['identities'])]:
         shutil.copy2(path, out / label)
     status = {'status': 'running', 'started': utc(),
-              'git_head': subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip(),
-              'git_status': subprocess.check_output(['git', 'status', '--porcelain'], text=True),
+              **git_identity(Path.cwd()),
               'source_sha256': {str(p): sha(p) for p in source_files},
               'protocol_sha256': sha(args.spec), 'argv': sys.argv,
               'packages': {n: importlib.metadata.version(n) for n in ['mlx', 'mlx-lm', 'numpy', 'transformers', 'psutil']},
@@ -354,7 +356,7 @@ def main():
     parser.add_argument('--work-dir', type=Path)
     parser.add_argument('--output-dir', type=Path, required=True)
     parser.add_argument('--model', type=Path)
-    parser.add_argument('--variant')
+    parser.add_argument('--variant', choices=['fp16', 'q4', 'q8', 'selected', 'control'])
     parser.add_argument('--restored', type=int)
     args = parser.parse_args()
     os.environ.update(HF_HUB_OFFLINE='1', TRANSFORMERS_OFFLINE='1', TOKENIZERS_PARALLELISM='false')
@@ -363,6 +365,10 @@ def main():
             parser.error('study requires --model-root and --work-dir')
         run_study(args)
     else:
+        if args.model is None or not args.model.is_dir() or args.variant is None:
+            parser.error('bench requires an existing local --model and --variant')
+        if (args.variant in ['selected', 'control']) != (args.restored is not None):
+            parser.error('exactly the mixed variants require --restored')
         benchmark(args.model, args.variant, args.output_dir, read(args.spec), args.restored)
 
 
