@@ -38,6 +38,10 @@
 
 [主报告、复跑与简历候选](docs/qwen-prefix-study.md) · [主实验](results/qwen-prefix-v2/summary.json) · [失效场景](results/qwen-prefix-locality-v1/summary.json) · [数据归属](configs/qwen-prefix/ATTRIBUTION.md)
 
+## KV 生命周期修复与容量验证（2026-10-04）
+
+修复 clone 失败仍提交淘汰/条目与成功计数的问题；三前缀循环访问中，两条目零命中，三条目且字节足够为 9/12 命中，字节只容两条时仍零命中。[报告与复跑](docs/qwen-cache-lifecycle-study.md) · [原始证据](results/qwen-cache-lifecycle-gpu-v1/summary.json) · [学习单元](docs/qwen-cache-lifecycle-learning.md)。
+
 ## 本地运行
 
 Python 3.10+；核心工具及测试不需要 GPU 或第三方库。

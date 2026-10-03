@@ -1,0 +1,12 @@
+test_failed_build_never_inserts (test_prefix_cache.PrefixCacheTests.test_failed_build_never_inserts) ... ok
+test_hit_isolation_and_changed_prefix_miss (test_prefix_cache.PrefixCacheTests.test_hit_isolation_and_changed_prefix_miss) ... ok
+test_lru_byte_budget_and_bypass (test_prefix_cache.PrefixCacheTests.test_lru_byte_budget_and_bypass) ... ok
+test_model_and_token_boundaries (test_prefix_cache.PrefixCacheTests.test_model_and_token_boundaries) ... ok
+test_byte_limit_overrides_entry_capacity (test_prefix_cache_transactions.Transactions.test_byte_limit_overrides_entry_capacity) ... ok
+test_failure_preserves_residents_lru_and_success_counters (test_prefix_cache_transactions.Transactions.test_failure_preserves_residents_lru_and_success_counters) ... ok
+test_identity_and_limit_validation (test_prefix_cache_transactions.Transactions.test_identity_and_limit_validation) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.001s
+
+OK

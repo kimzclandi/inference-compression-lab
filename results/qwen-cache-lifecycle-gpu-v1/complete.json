@@ -1,0 +1,9 @@
+{
+  "sha256": {
+    "contracts.json": "6118dc1e9b2fb7673300830f1ddfb5c2ba92d061cb737badd90be0c701f9ca3d",
+    "manifest.json": "d7a713562b7a9ac74770a0868e6e1dc1ebf1863ad6d0d52b0bdb32162c61fadd",
+    "summary.json": "0f3f7e88a3c90f1839501d48290ee817dc4a873b61bd4119fcab7fde2b59620c",
+    "timings.json": "6377467419864b6b59ff38a997e1165eb106cd59ad56fc40c304635e8d6d632d",
+    "workloads.json": "fb9b5ec3eaec2b851d1f427bf67ce42461e6a3737c9fd67f22e66c1e2a36f462"
+  }
+}

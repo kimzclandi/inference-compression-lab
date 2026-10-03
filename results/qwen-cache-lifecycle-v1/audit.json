@@ -1,0 +1,16 @@
+{
+  "qwen-cache-lifecycle-gpu-v1": {
+    "recorded_source_matches_commit": true,
+    "source_commit": "0454e1d5e1fca2971549abb33d54b5e3ed400a03",
+    "checksums_verified": true
+  },
+  "qwen-cache-contracts-final-v1": {
+    "recorded_source_matches_commit": true,
+    "source_commit": "dff490cb34195140f9e53468c2f77f42ddfdf8f5",
+    "checksums_verified": true
+  },
+  "history": {
+    "parent": "c661a1e",
+    "files_preserved": 510
+  }
+}
