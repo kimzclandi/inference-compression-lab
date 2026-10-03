@@ -22,6 +22,12 @@
 
 提供可复用的CPU句向量模块、部署配置与CLI；学习和实验均保留AI辅助实现归属。短句筛选的分词器padding故障及修复记录完整保留，不把无效NaN质量输出当成果。
 
+## 新增：离线长度分桶与批处理（2026-10-03）
+
+固定8线程、batch=8、64请求窗口，在2758句完整语料的7轮对照中，FP32总耗时1.252→1.044秒（下降16.6%），INT8下降18.6%；FP32分桶仍更快。FP32 Spearman保持一致，INT8分桶相对同精度顺序批处理下降0.000102。只验证离线吞吐，不代表线上排队延迟。
+
+[实现、复现、质量边界与简历候选](docs/length-bucketing-study.md) · [完整语料原始结果](results/minilm-bucketing-confirm-v1/summary.json) · [先导结果](results/minilm-bucketing-v2/summary.json)
+
 ## 本地运行
 
 Python 3.10+；核心工具及测试不需要 GPU 或第三方库。

@@ -1,0 +1,45 @@
+test_invalid_limits (test_bucketing.PlanningTests.test_invalid_limits) ... ok
+test_tail_duplicates_and_bounded_reordering (test_bucketing.PlanningTests.test_tail_duplicates_and_bounded_reordering) ... ok
+test_order_truncation_padding_and_call_isolation (test_bucketing.RealModelTests.test_order_truncation_padding_and_call_isolation) ... 2026-10-03 17:13:43.542 python[25903:1453734] 2026-10-03 17:13:43.541984 [W:onnxruntime:Default, telemetry.cc:800 operator()] Failed to persist telemetry device ID; using an in-memory identifier
+ok
+test_evidence_hashes_predictions_and_timing_denominators (test_bucketing_evidence.BucketingEvidenceTests.test_evidence_hashes_predictions_and_timing_denominators) ... ok
+test_historical_results_remain_unchanged (test_bucketing_evidence.BucketingEvidenceTests.test_historical_results_remain_unchanged) ... ok
+test_predictions_measurements_and_integer_execution (test_evidence.EvidenceTests.test_predictions_measurements_and_integer_execution) ... ok
+test_in_range_error_bound (test_lab.QuantizationTests.test_in_range_error_bound) ... ok
+test_invalid_data (test_lab.QuantizationTests.test_invalid_data) ... ok
+test_zero_and_saturation (test_lab.QuantizationTests.test_zero_and_saturation) ... ok
+test_gpu_requires_sync (test_lab.TimingTests.test_gpu_requires_sync) ... ok
+test_percentile (test_lab.TimingTests.test_percentile) ... ok
+test_sample_count_and_sync (test_lab.TimingTests.test_sample_count_and_sync) ... ok
+test_aggregate_uses_element_counts_not_mean_of_batch_means (test_layer_metrics.LayerMetricsTests.test_aggregate_uses_element_counts_not_mean_of_batch_means) ... ok
+test_padding_is_excluded_and_nmse_is_energy_normalized (test_layer_metrics.LayerMetricsTests.test_padding_is_excluded_and_nmse_is_energy_normalized) ... ok
+test_no_clipping_weight_rounding_bound (test_learning_quantization.TeachingQuantizationTests.test_no_clipping_weight_rounding_bound) ... ok
+test_output_channel_scale_does_not_change_other_channel (test_learning_quantization.TeachingQuantizationTests.test_output_channel_scale_does_not_change_other_channel) ... ok
+test_zero_channels_and_zeros_are_representable (test_learning_quantization.TeachingQuantizationTests.test_zero_channels_and_zeros_are_representable) ... ok
+test_crossover_positions_and_raw_samples (test_mac_evidence.MacEvidenceTests.test_crossover_positions_and_raw_samples) ... ok
+test_layer_sums_and_debug_fidelity (test_mac_evidence.MacEvidenceTests.test_layer_sums_and_debug_fidelity) ... ok
+test_predictions_protocol_and_execution (test_mac_evidence.MacEvidenceTests.test_predictions_protocol_and_execution) ... ok
+test_windows_history_is_byte_identical (test_mac_evidence.MacEvidenceTests.test_windows_history_is_byte_identical) ... ok
+test_hash_and_real_encode_contract (test_minilm_runtime.RuntimeTests.test_hash_and_real_encode_contract) ... ok
+test_invalid_threads_fail_before_loading (test_minilm_runtime.RuntimeTests.test_invalid_threads_fail_before_loading) ... ok
+test_pool_ignores_padding_and_normalizes (test_minilm_runtime.RuntimeTests.test_pool_ignores_padding_and_normalizes) ... ok
+test_empty_existing_directory_is_also_protected (test_run_safety.RunSafetyTests.test_empty_existing_directory_is_also_protected) ... ok
+test_existing_evidence_is_never_overwritten (test_run_safety.RunSafetyTests.test_existing_evidence_is_never_overwritten) ... ok
+test_frozen_selection_and_dataset_boundary (test_runtime_study_evidence.RuntimeStudyEvidenceTests.test_frozen_selection_and_dataset_boundary) ... ok
+test_integer_execution_and_acceptance_arithmetic (test_runtime_study_evidence.RuntimeStudyEvidenceTests.test_integer_execution_and_acceptance_arithmetic) ... ok
+test_quality_and_deployment_hashes (test_runtime_study_evidence.RuntimeStudyEvidenceTests.test_quality_and_deployment_hashes) ... ok
+test_raw_timings_match_summaries (test_runtime_study_evidence.RuntimeStudyEvidenceTests.test_raw_timings_match_summaries) ... ok
+test_latency_scope_and_quality_subset_match (test_runtime_study_evidence.ShortRequestEvidenceTests.test_latency_scope_and_quality_subset_match) ... ok
+test_parent_selection_unchanged_and_inputs_changed (test_runtime_study_evidence.ShortRequestEvidenceTests.test_parent_selection_unchanged_and_inputs_changed) ... ok
+test_short_pair_selection_has_no_truncation (test_runtime_study_evidence.ShortRequestEvidenceTests.test_short_pair_selection_has_no_truncation) ... /Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.l1dcachesize'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.l2cachesize'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.l3cachesize'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:239: IOError: sysctlbyname failed for 'hw.optional.neon'. Detail: [errno 1] Operation not permitted
+ok
+test_embedded_padding_and_truncation_do_not_change_eligibility (test_short_request_selection.ShortRequestSelectionTests.test_embedded_padding_and_truncation_do_not_change_eligibility) ... ok
+test_nonfinite_results_are_rejected_before_file_creation (test_short_request_selection.ShortRequestSelectionTests.test_nonfinite_results_are_rejected_before_file_creation) ... ok
+
+----------------------------------------------------------------------
+Ran 35 tests in 0.750s
+
+OK

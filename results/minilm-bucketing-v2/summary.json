@@ -1,0 +1,166 @@
+[
+  {
+    "precision": "fp32",
+    "bucket": false,
+    "pairs": 1379,
+    "spearman": 0.8203013947512559,
+    "spearman_drop_vs_same_precision_consecutive": 0.0,
+    "passes_quality_gate": true,
+    "max_embedding_cosine_distance_vs_consecutive": 4.440892098500626e-16,
+    "round_seconds": [
+      0.09451308399729896,
+      0.09451887499017175,
+      0.09586345800198615,
+      0.09442354200291447,
+      0.09516650000296067,
+      0.09568512499390636,
+      0.09471983301045839
+    ],
+    "median_seconds": 0.09471983301045839,
+    "sentences_per_second": 2702.707467524083,
+    "benchmark_stats": {
+      "requests": 256,
+      "batches": 32,
+      "valid_tokens": 2544,
+      "padded_tokens": 3296,
+      "attention_cells": 44096
+    },
+    "quality_stats": {
+      "requests": 2758,
+      "batches": 345,
+      "valid_tokens": 39028,
+      "padded_tokens": 54416,
+      "attention_cells": 1284216
+    }
+  },
+  {
+    "precision": "fp32",
+    "bucket": true,
+    "pairs": 1379,
+    "spearman": 0.8203013947512559,
+    "spearman_drop_vs_same_precision_consecutive": 0.0,
+    "passes_quality_gate": true,
+    "max_embedding_cosine_distance_vs_consecutive": 7.482903185973555e-13,
+    "round_seconds": [
+      0.08557708300941158,
+      0.08631916699232534,
+      0.08537908300058916,
+      0.08495591599785257,
+      0.08527966700785328,
+      0.08442604199808557,
+      0.08595995799987577
+    ],
+    "median_seconds": 0.08537908300058916,
+    "sentences_per_second": 2998.392475101114,
+    "benchmark_stats": {
+      "requests": 256,
+      "batches": 32,
+      "valid_tokens": 2544,
+      "padded_tokens": 2720,
+      "attention_cells": 30944
+    },
+    "quality_stats": {
+      "requests": 2758,
+      "batches": 345,
+      "valid_tokens": 39028,
+      "padded_tokens": 42072,
+      "attention_cells": 812016
+    },
+    "paired_round_time_reduction": [
+      0.09454776640388496,
+      0.08675206934804336,
+      0.10936779477723158,
+      0.10026764304996816,
+      0.10388984563685555,
+      0.11766805965439053,
+      0.09248195158468453
+    ],
+    "median_time_reduction": 0.09861451095292662,
+    "paired_mean_reduction_bootstrap_95_interval": [
+      0.09365812908541707,
+      0.10820786089203206
+    ]
+  },
+  {
+    "precision": "int8_per_channel",
+    "bucket": false,
+    "pairs": 1379,
+    "spearman": 0.8188255026307341,
+    "spearman_drop_vs_same_precision_consecutive": 0.0,
+    "passes_quality_gate": true,
+    "max_embedding_cosine_distance_vs_consecutive": 4.440892098500626e-16,
+    "round_seconds": [
+      0.10537833299895283,
+      0.105251542001497,
+      0.10470087500289083,
+      0.10547595800017007,
+      0.10579829099879134,
+      0.1072211669961689,
+      0.1070916250027949
+    ],
+    "median_seconds": 0.10547595800017007,
+    "sentences_per_second": 2427.093385580695,
+    "benchmark_stats": {
+      "requests": 256,
+      "batches": 32,
+      "valid_tokens": 2544,
+      "padded_tokens": 3296,
+      "attention_cells": 44096
+    },
+    "quality_stats": {
+      "requests": 2758,
+      "batches": 345,
+      "valid_tokens": 39028,
+      "padded_tokens": 54416,
+      "attention_cells": 1284216
+    }
+  },
+  {
+    "precision": "int8_per_channel",
+    "bucket": true,
+    "pairs": 1379,
+    "spearman": 0.8187232182753672,
+    "spearman_drop_vs_same_precision_consecutive": 0.0001022843553668551,
+    "passes_quality_gate": true,
+    "max_embedding_cosine_distance_vs_consecutive": 0.01263732511844129,
+    "round_seconds": [
+      0.09442416700767353,
+      0.09414920800190885,
+      0.09192499998607673,
+      0.09199158300179988,
+      0.09196179200080223,
+      0.09258487499027979,
+      0.09116737500880845
+    ],
+    "median_seconds": 0.09199158300179988,
+    "sentences_per_second": 2782.8632973409226,
+    "benchmark_stats": {
+      "requests": 256,
+      "batches": 32,
+      "valid_tokens": 2544,
+      "padded_tokens": 2720,
+      "attention_cells": 30944
+    },
+    "quality_stats": {
+      "requests": 2758,
+      "batches": 345,
+      "valid_tokens": 39028,
+      "padded_tokens": 42072,
+      "attention_cells": 812016
+    },
+    "paired_round_time_reduction": [
+      0.1039508377057754,
+      0.10548381323886202,
+      0.12202261935691894,
+      0.1278431147157577,
+      0.13078187622281323,
+      0.13650562119336085,
+      0.14869743543036962
+    ],
+    "median_time_reduction": 0.1278431147157577,
+    "paired_mean_reduction_bootstrap_95_interval": [
+      0.11390704396775565,
+      0.13628464072142948
+    ]
+  }
+]

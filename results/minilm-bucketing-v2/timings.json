@@ -1,0 +1,366 @@
+[
+  {
+    "round": 0,
+    "precision": "int8_per_channel",
+    "bucket": true,
+    "seconds": 0.09442416700767353,
+    "stats": {
+      "requests": 256,
+      "batches": 32,
+      "valid_tokens": 2544,
+      "padded_tokens": 2720,
+      "attention_cells": 30944
+    }
+  },
+  {
+    "round": 0,
+    "precision": "fp32",
+    "bucket": true,
+    "seconds": 0.08557708300941158,
+    "stats": {
+      "requests": 256,
+      "batches": 32,
+      "valid_tokens": 2544,
+      "padded_tokens": 2720,
+      "attention_cells": 30944
+    }
+  },
+  {
+    "round": 0,
+    "precision": "fp32",
+    "bucket": false,
+    "seconds": 0.09451308399729896,
+    "stats": {
+      "requests": 256,
+      "batches": 32,
+      "valid_tokens": 2544,
+      "padded_tokens": 3296,
+      "attention_cells": 44096
+    }
+  },
+  {
+    "round": 0,
+    "precision": "int8_per_channel",
+    "bucket": false,
+    "seconds": 0.10537833299895283,
+    "stats": {
+      "requests": 256,
+      "batches": 32,
+      "valid_tokens": 2544,
+      "padded_tokens": 3296,
+      "attention_cells": 44096
+    }
+  },
+  {
+    "round": 1,
+    "precision": "int8_per_channel",
+    "bucket": true,
+    "seconds": 0.09414920800190885,
+    "stats": {
+      "requests": 256,
+      "batches": 32,
+      "valid_tokens": 2544,
+      "padded_tokens": 2720,
+      "attention_cells": 30944
+    }
+  },
+  {
+    "round": 1,
+    "precision": "fp32",
+    "bucket": true,
+    "seconds": 0.08631916699232534,
+    "stats": {
+      "requests": 256,
+      "batches": 32,
+      "valid_tokens": 2544,
+      "padded_tokens": 2720,
+      "attention_cells": 30944
+    }
+  },
+  {
+    "round": 1,
+    "precision": "int8_per_channel",
+    "bucket": false,
+    "seconds": 0.105251542001497,
+    "stats": {
+      "requests": 256,
+      "batches": 32,
+      "valid_tokens": 2544,
+      "padded_tokens": 3296,
+      "attention_cells": 44096
+    }
+  },
+  {
+    "round": 1,
+    "precision": "fp32",
+    "bucket": false,
+    "seconds": 0.09451887499017175,
+    "stats": {
+      "requests": 256,
+      "batches": 32,
+      "valid_tokens": 2544,
+      "padded_tokens": 3296,
+      "attention_cells": 44096
+    }
+  },
+  {
+    "round": 2,
+    "precision": "int8_per_channel",
+    "bucket": false,
+    "seconds": 0.10470087500289083,
+    "stats": {
+      "requests": 256,
+      "batches": 32,
+      "valid_tokens": 2544,
+      "padded_tokens": 3296,
+      "attention_cells": 44096
+    }
+  },
+  {
+    "round": 2,
+    "precision": "fp32",
+    "bucket": false,
+    "seconds": 0.09586345800198615,
+    "stats": {
+      "requests": 256,
+      "batches": 32,
+      "valid_tokens": 2544,
+      "padded_tokens": 3296,
+      "attention_cells": 44096
+    }
+  },
+  {
+    "round": 2,
+    "precision": "fp32",
+    "bucket": true,
+    "seconds": 0.08537908300058916,
+    "stats": {
+      "requests": 256,
+      "batches": 32,
+      "valid_tokens": 2544,
+      "padded_tokens": 2720,
+      "attention_cells": 30944
+    }
+  },
+  {
+    "round": 2,
+    "precision": "int8_per_channel",
+    "bucket": true,
+    "seconds": 0.09192499998607673,
+    "stats": {
+      "requests": 256,
+      "batches": 32,
+      "valid_tokens": 2544,
+      "padded_tokens": 2720,
+      "attention_cells": 30944
+    }
+  },
+  {
+    "round": 3,
+    "precision": "fp32",
+    "bucket": false,
+    "seconds": 0.09442354200291447,
+    "stats": {
+      "requests": 256,
+      "batches": 32,
+      "valid_tokens": 2544,
+      "padded_tokens": 3296,
+      "attention_cells": 44096
+    }
+  },
+  {
+    "round": 3,
+    "precision": "int8_per_channel",
+    "bucket": true,
+    "seconds": 0.09199158300179988,
+    "stats": {
+      "requests": 256,
+      "batches": 32,
+      "valid_tokens": 2544,
+      "padded_tokens": 2720,
+      "attention_cells": 30944
+    }
+  },
+  {
+    "round": 3,
+    "precision": "fp32",
+    "bucket": true,
+    "seconds": 0.08495591599785257,
+    "stats": {
+      "requests": 256,
+      "batches": 32,
+      "valid_tokens": 2544,
+      "padded_tokens": 2720,
+      "attention_cells": 30944
+    }
+  },
+  {
+    "round": 3,
+    "precision": "int8_per_channel",
+    "bucket": false,
+    "seconds": 0.10547595800017007,
+    "stats": {
+      "requests": 256,
+      "batches": 32,
+      "valid_tokens": 2544,
+      "padded_tokens": 3296,
+      "attention_cells": 44096
+    }
+  },
+  {
+    "round": 4,
+    "precision": "fp32",
+    "bucket": true,
+    "seconds": 0.08527966700785328,
+    "stats": {
+      "requests": 256,
+      "batches": 32,
+      "valid_tokens": 2544,
+      "padded_tokens": 2720,
+      "attention_cells": 30944
+    }
+  },
+  {
+    "round": 4,
+    "precision": "int8_per_channel",
+    "bucket": true,
+    "seconds": 0.09196179200080223,
+    "stats": {
+      "requests": 256,
+      "batches": 32,
+      "valid_tokens": 2544,
+      "padded_tokens": 2720,
+      "attention_cells": 30944
+    }
+  },
+  {
+    "round": 4,
+    "precision": "int8_per_channel",
+    "bucket": false,
+    "seconds": 0.10579829099879134,
+    "stats": {
+      "requests": 256,
+      "batches": 32,
+      "valid_tokens": 2544,
+      "padded_tokens": 3296,
+      "attention_cells": 44096
+    }
+  },
+  {
+    "round": 4,
+    "precision": "fp32",
+    "bucket": false,
+    "seconds": 0.09516650000296067,
+    "stats": {
+      "requests": 256,
+      "batches": 32,
+      "valid_tokens": 2544,
+      "padded_tokens": 3296,
+      "attention_cells": 44096
+    }
+  },
+  {
+    "round": 5,
+    "precision": "int8_per_channel",
+    "bucket": true,
+    "seconds": 0.09258487499027979,
+    "stats": {
+      "requests": 256,
+      "batches": 32,
+      "valid_tokens": 2544,
+      "padded_tokens": 2720,
+      "attention_cells": 30944
+    }
+  },
+  {
+    "round": 5,
+    "precision": "int8_per_channel",
+    "bucket": false,
+    "seconds": 0.1072211669961689,
+    "stats": {
+      "requests": 256,
+      "batches": 32,
+      "valid_tokens": 2544,
+      "padded_tokens": 3296,
+      "attention_cells": 44096
+    }
+  },
+  {
+    "round": 5,
+    "precision": "fp32",
+    "bucket": false,
+    "seconds": 0.09568512499390636,
+    "stats": {
+      "requests": 256,
+      "batches": 32,
+      "valid_tokens": 2544,
+      "padded_tokens": 3296,
+      "attention_cells": 44096
+    }
+  },
+  {
+    "round": 5,
+    "precision": "fp32",
+    "bucket": true,
+    "seconds": 0.08442604199808557,
+    "stats": {
+      "requests": 256,
+      "batches": 32,
+      "valid_tokens": 2544,
+      "padded_tokens": 2720,
+      "attention_cells": 30944
+    }
+  },
+  {
+    "round": 6,
+    "precision": "int8_per_channel",
+    "bucket": true,
+    "seconds": 0.09116737500880845,
+    "stats": {
+      "requests": 256,
+      "batches": 32,
+      "valid_tokens": 2544,
+      "padded_tokens": 2720,
+      "attention_cells": 30944
+    }
+  },
+  {
+    "round": 6,
+    "precision": "int8_per_channel",
+    "bucket": false,
+    "seconds": 0.1070916250027949,
+    "stats": {
+      "requests": 256,
+      "batches": 32,
+      "valid_tokens": 2544,
+      "padded_tokens": 3296,
+      "attention_cells": 44096
+    }
+  },
+  {
+    "round": 6,
+    "precision": "fp32",
+    "bucket": true,
+    "seconds": 0.08595995799987577,
+    "stats": {
+      "requests": 256,
+      "batches": 32,
+      "valid_tokens": 2544,
+      "padded_tokens": 2720,
+      "attention_cells": 30944
+    }
+  },
+  {
+    "round": 6,
+    "precision": "fp32",
+    "bucket": false,
+    "seconds": 0.09471983301045839,
+    "stats": {
+      "requests": 256,
+      "batches": 32,
+      "valid_tokens": 2544,
+      "padded_tokens": 3296,
+      "attention_cells": 44096
+    }
+  }
+]
