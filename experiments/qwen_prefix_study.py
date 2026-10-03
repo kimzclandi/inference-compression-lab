@@ -55,14 +55,15 @@ def benchmark(rt, tok, spec, out):
     rng = random.Random(spec['seed'])
     for work in workloads:
         prefix = work['prefix']
-        for mode in ['cold', 'cached_workload', 'warm_hit']:
+        for mode in ['cold', 'segmented_no_reuse', 'cached_workload', 'warm_hit']:
             for _ in range(spec['warmup_per_mode']):
                 rt.store.clear()
                 if mode == 'warm_hit': rt.prepare(prefix)
                 rt.generate(work['requests'][0], prefix=prefix if mode != 'cold' else (),
-                            max_new_tokens=spec['generated_tokens'], stop_at_eos=False)
+                            max_new_tokens=spec['generated_tokens'], stop_at_eos=False,
+                            reuse_prefix=mode != 'segmented_no_reuse')
         for round_id in range(spec['rounds']):
-            order = ['cold', 'cached_workload', 'warm_hit']
+            order = ['cold', 'segmented_no_reuse', 'cached_workload', 'warm_hit']
             rng.shuffle(order)
             for mode in order:
                 rt.store.clear()
@@ -73,7 +74,8 @@ def benchmark(rt, tok, spec, out):
                 start = time.perf_counter()
                 for index, tokens in enumerate(work['requests']):
                     result = rt.generate(tokens, prefix=prefix if mode != 'cold' else (),
-                                         max_new_tokens=spec['generated_tokens'], stop_at_eos=False)
+                                         max_new_tokens=spec['generated_tokens'], stop_at_eos=False,
+                                         reuse_prefix=mode != 'segmented_no_reuse')
                     outputs.append({'request': index, **result})
                 rt.mx.synchronize()
                 records.append({'prefix_tokens': len(prefix), 'round': round_id, 'mode': mode,
@@ -165,11 +167,13 @@ def summarize(records, builds, predictions, native, contracts):
     performance = []
     for length in sorted({r['prefix_tokens'] for r in records}):
         cells = {mode: [r for r in records if r['prefix_tokens'] == length and r['mode'] == mode]
-                 for mode in ['cold', 'cached_workload', 'warm_hit']}
+                 for mode in ['cold', 'segmented_no_reuse', 'cached_workload', 'warm_hit']}
         med = lambda mode, key: statistics.median(o[key] for r in cells[mode] for o in r['outputs'])
         cold_ttft, hit_ttft = med('cold', 'ttft_seconds'), med('warm_hit', 'ttft_seconds')
         cold_group = statistics.median(r['workload_seconds'] for r in cells['cold'])
         cached_group = statistics.median(r['workload_seconds'] for r in cells['cached_workload'])
+        segmented_group = statistics.median(r['workload_seconds'] for r in cells['segmented_no_reuse'])
+        segmented_ttft = med('segmented_no_reuse', 'ttft_seconds')
         miss_ttft = statistics.median(r['outputs'][0]['ttft_seconds'] for r in cells['cached_workload'])
         pair_ratios = []
         parity = []
@@ -185,6 +189,10 @@ def summarize(records, builds, predictions, native, contracts):
                             'cold_four_request_seconds': cold_group,
                             'cached_four_request_seconds': cached_group,
                             'four_request_reduction_including_miss': 1-cached_group/cold_group,
+                            'segmented_no_reuse_ttft_seconds': segmented_ttft,
+                            'segmented_no_reuse_four_request_seconds': segmented_group,
+                            'hit_ttft_reduction_vs_segmented': 1-hit_ttft/segmented_ttft,
+                            'four_request_reduction_vs_segmented': 1-cached_group/segmented_group,
                             'round_hit_ttft_reductions': pair_ratios,
                             'cache_build_median_seconds': statistics.median(b['seconds'] for b in builds if b['prefix_tokens']==length),
                             'stored_tensor_bytes': cells['warm_hit'][0]['outputs'][0]['cache']['stored_tensor_bytes'],

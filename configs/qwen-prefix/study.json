@@ -1,5 +1,10 @@
 {
-  "prefix_lengths": [64, 256, 1024, 2048],
+  "prefix_lengths": [
+    64,
+    256,
+    1024,
+    2048
+  ],
   "generated_tokens": 32,
   "questions_per_prefix": 4,
   "rounds": 5,
@@ -12,5 +17,6 @@
   "acceptance": "Report token-by-token cold/cached parity and reference-answer accuracy for every QA request. Do not hide divergent outputs or claim quality improvement from cache reuse.",
   "timing": "Synchronized serial batch1, starts after prompt tokenization and ends at evaluated token. Includes cache lookup, cache build on miss, isolated KV snapshot copy, suffix prefill and decode. Excludes model load, tokenizer, network and queue wait. Both cold and cached modes warm model kernels before measurement.",
   "cache_scope": "Exact token prefix, model/tokenizer/weight/config identity, floating KV snapshots, two-entry LRU with logical tensor byte limit. No approximate matching, KV quantization, continuous batching or concurrent server.",
-  "qa_scope": "Previously used 74-question local SQuAD2 dev subset, grouped by context for a controlled repeated-document workload. Not a new blind benchmark or production hit-rate estimate."
+  "qa_scope": "Previously used 74-question local SQuAD2 dev subset, grouped by context for a controlled repeated-document workload. Not a new blind benchmark or production hit-rate estimate.",
+  "attribution_control": "Additionally rebuild the prefix for every request with the same segmented path and snapshot-copy overhead, without reuse; compare the four-request cached workload to this control."
 }

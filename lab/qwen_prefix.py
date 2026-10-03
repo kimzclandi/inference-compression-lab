@@ -43,7 +43,8 @@ class QwenPrefixRuntime:
         return {'seconds': time.perf_counter()-start, 'status': status,
                 'prefix_tokens': len(prefix), 'cache': self.store.stats()}
 
-    def generate(self, tokens, *, prefix=(), max_new_tokens=32, eos_ids=(), stop_at_eos=True):
+    def generate(self, tokens, *, prefix=(), max_new_tokens=32, eos_ids=(), stop_at_eos=True,
+                 reuse_prefix=True):
         if not tokens or max_new_tokens < 1:
             raise ValueError('Require nonempty prompt and positive output limit')
         if len(prefix) >= len(tokens) or list(tokens[:len(prefix)]) != list(prefix):
@@ -51,7 +52,10 @@ class QwenPrefixRuntime:
         mx = self.mx
         mx.synchronize()
         start = time.perf_counter()
-        if prefix:
+        if prefix and not reuse_prefix:
+            snapshot, _ = self.build(tuple(prefix))
+            cache, status = self.clone(snapshot), 'rebuilt'
+        elif prefix:
             cache, status = self.store.acquire(prefix, self.build)
         else:
             cache, status = self.make_cache(), 'disabled'
