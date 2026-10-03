@@ -1,0 +1,682 @@
+[
+  {
+    "dataset": "historical",
+    "prefix_tokens": 64,
+    "profile": false,
+    "round": 0,
+    "mode": "warm_hit",
+    "seconds": 0.008068249997450039,
+    "status": "miss",
+    "cache": {
+      "hits": 5,
+      "misses": 6,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 786432
+    }
+  },
+  {
+    "dataset": "historical",
+    "prefix_tokens": 64,
+    "profile": false,
+    "round": 1,
+    "mode": "warm_hit",
+    "seconds": 0.007956499990541488,
+    "status": "miss",
+    "cache": {
+      "hits": 12,
+      "misses": 8,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 786432
+    }
+  },
+  {
+    "dataset": "historical",
+    "prefix_tokens": 64,
+    "profile": false,
+    "round": 2,
+    "mode": "warm_hit",
+    "seconds": 0.008190333988750353,
+    "status": "miss",
+    "cache": {
+      "hits": 16,
+      "misses": 9,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 786432
+    }
+  },
+  {
+    "dataset": "historical",
+    "prefix_tokens": 64,
+    "profile": false,
+    "round": 3,
+    "mode": "warm_hit",
+    "seconds": 0.00806054097483866,
+    "status": "miss",
+    "cache": {
+      "hits": 26,
+      "misses": 12,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 786432
+    }
+  },
+  {
+    "dataset": "historical",
+    "prefix_tokens": 64,
+    "profile": false,
+    "round": 4,
+    "mode": "warm_hit",
+    "seconds": 0.008068833005381748,
+    "status": "miss",
+    "cache": {
+      "hits": 33,
+      "misses": 14,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 786432
+    }
+  },
+  {
+    "dataset": "historical",
+    "prefix_tokens": 64,
+    "profile": true,
+    "round": 0,
+    "mode": "warm_hit",
+    "seconds": 0.00812333298381418,
+    "status": "miss",
+    "cache": {
+      "hits": 42,
+      "misses": 20,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 786432
+    }
+  },
+  {
+    "dataset": "historical",
+    "prefix_tokens": 64,
+    "profile": true,
+    "round": 1,
+    "mode": "warm_hit",
+    "seconds": 0.00853158300742507,
+    "status": "miss",
+    "cache": {
+      "hits": 46,
+      "misses": 21,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 786432
+    }
+  },
+  {
+    "dataset": "historical",
+    "prefix_tokens": 64,
+    "profile": true,
+    "round": 2,
+    "mode": "warm_hit",
+    "seconds": 0.007996915985131636,
+    "status": "miss",
+    "cache": {
+      "hits": 53,
+      "misses": 23,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 786432
+    }
+  },
+  {
+    "dataset": "historical",
+    "prefix_tokens": 64,
+    "profile": true,
+    "round": 3,
+    "mode": "warm_hit",
+    "seconds": 0.008052916004089639,
+    "status": "miss",
+    "cache": {
+      "hits": 60,
+      "misses": 25,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 786432
+    }
+  },
+  {
+    "dataset": "historical",
+    "prefix_tokens": 64,
+    "profile": true,
+    "round": 4,
+    "mode": "warm_hit",
+    "seconds": 0.008116874989354983,
+    "status": "miss",
+    "cache": {
+      "hits": 70,
+      "misses": 28,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 786432
+    }
+  },
+  {
+    "dataset": "historical",
+    "prefix_tokens": 2048,
+    "profile": false,
+    "round": 0,
+    "mode": "warm_hit",
+    "seconds": 0.12402862499584444,
+    "status": "miss",
+    "cache": {
+      "hits": 79,
+      "misses": 34,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 25165824
+    }
+  },
+  {
+    "dataset": "historical",
+    "prefix_tokens": 2048,
+    "profile": false,
+    "round": 1,
+    "mode": "warm_hit",
+    "seconds": 0.12423200000193901,
+    "status": "miss",
+    "cache": {
+      "hits": 86,
+      "misses": 36,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 25165824
+    }
+  },
+  {
+    "dataset": "historical",
+    "prefix_tokens": 2048,
+    "profile": false,
+    "round": 2,
+    "mode": "warm_hit",
+    "seconds": 0.12476445798529312,
+    "status": "miss",
+    "cache": {
+      "hits": 93,
+      "misses": 38,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 25165824
+    }
+  },
+  {
+    "dataset": "historical",
+    "prefix_tokens": 2048,
+    "profile": false,
+    "round": 3,
+    "mode": "warm_hit",
+    "seconds": 0.12742312499904074,
+    "status": "miss",
+    "cache": {
+      "hits": 97,
+      "misses": 39,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 25165824
+    }
+  },
+  {
+    "dataset": "historical",
+    "prefix_tokens": 2048,
+    "profile": false,
+    "round": 4,
+    "mode": "warm_hit",
+    "seconds": 0.1303060420032125,
+    "status": "miss",
+    "cache": {
+      "hits": 104,
+      "misses": 41,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 25165824
+    }
+  },
+  {
+    "dataset": "historical",
+    "prefix_tokens": 2048,
+    "profile": true,
+    "round": 0,
+    "mode": "warm_hit",
+    "seconds": 0.13386937498580664,
+    "status": "miss",
+    "cache": {
+      "hits": 116,
+      "misses": 48,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 25165824
+    }
+  },
+  {
+    "dataset": "historical",
+    "prefix_tokens": 2048,
+    "profile": true,
+    "round": 1,
+    "mode": "warm_hit",
+    "seconds": 0.13804125000024214,
+    "status": "miss",
+    "cache": {
+      "hits": 123,
+      "misses": 50,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 25165824
+    }
+  },
+  {
+    "dataset": "historical",
+    "prefix_tokens": 2048,
+    "profile": true,
+    "round": 2,
+    "mode": "warm_hit",
+    "seconds": 0.13405383299686946,
+    "status": "miss",
+    "cache": {
+      "hits": 130,
+      "misses": 52,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 25165824
+    }
+  },
+  {
+    "dataset": "historical",
+    "prefix_tokens": 2048,
+    "profile": true,
+    "round": 3,
+    "mode": "warm_hit",
+    "seconds": 0.13451954099582508,
+    "status": "miss",
+    "cache": {
+      "hits": 137,
+      "misses": 54,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 25165824
+    }
+  },
+  {
+    "dataset": "historical",
+    "prefix_tokens": 2048,
+    "profile": true,
+    "round": 4,
+    "mode": "warm_hit",
+    "seconds": 0.13389895801083185,
+    "status": "miss",
+    "cache": {
+      "hits": 144,
+      "misses": 56,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 25165824
+    }
+  },
+  {
+    "dataset": "confirmation",
+    "prefix_tokens": 64,
+    "profile": false,
+    "round": 0,
+    "mode": "warm_hit",
+    "seconds": 0.008257709007011726,
+    "status": "miss",
+    "cache": {
+      "hits": 153,
+      "misses": 62,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 786432
+    }
+  },
+  {
+    "dataset": "confirmation",
+    "prefix_tokens": 64,
+    "profile": false,
+    "round": 1,
+    "mode": "warm_hit",
+    "seconds": 0.00818070801324211,
+    "status": "miss",
+    "cache": {
+      "hits": 160,
+      "misses": 64,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 786432
+    }
+  },
+  {
+    "dataset": "confirmation",
+    "prefix_tokens": 64,
+    "profile": false,
+    "round": 2,
+    "mode": "warm_hit",
+    "seconds": 0.008263875002739951,
+    "status": "miss",
+    "cache": {
+      "hits": 167,
+      "misses": 66,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 786432
+    }
+  },
+  {
+    "dataset": "confirmation",
+    "prefix_tokens": 64,
+    "profile": false,
+    "round": 3,
+    "mode": "warm_hit",
+    "seconds": 0.008194124995497987,
+    "status": "miss",
+    "cache": {
+      "hits": 174,
+      "misses": 68,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 786432
+    }
+  },
+  {
+    "dataset": "confirmation",
+    "prefix_tokens": 64,
+    "profile": false,
+    "round": 4,
+    "mode": "warm_hit",
+    "seconds": 0.008379750011954457,
+    "status": "miss",
+    "cache": {
+      "hits": 181,
+      "misses": 70,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 786432
+    }
+  },
+  {
+    "dataset": "confirmation",
+    "prefix_tokens": 64,
+    "profile": true,
+    "round": 0,
+    "mode": "warm_hit",
+    "seconds": 0.008194791007554159,
+    "status": "miss",
+    "cache": {
+      "hits": 190,
+      "misses": 76,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 786432
+    }
+  },
+  {
+    "dataset": "confirmation",
+    "prefix_tokens": 64,
+    "profile": true,
+    "round": 1,
+    "mode": "warm_hit",
+    "seconds": 0.008215707988711074,
+    "status": "miss",
+    "cache": {
+      "hits": 194,
+      "misses": 77,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 786432
+    }
+  },
+  {
+    "dataset": "confirmation",
+    "prefix_tokens": 64,
+    "profile": true,
+    "round": 2,
+    "mode": "warm_hit",
+    "seconds": 0.008223999990150332,
+    "status": "miss",
+    "cache": {
+      "hits": 204,
+      "misses": 80,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 786432
+    }
+  },
+  {
+    "dataset": "confirmation",
+    "prefix_tokens": 64,
+    "profile": true,
+    "round": 3,
+    "mode": "warm_hit",
+    "seconds": 0.00870054098777473,
+    "status": "miss",
+    "cache": {
+      "hits": 208,
+      "misses": 81,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 786432
+    }
+  },
+  {
+    "dataset": "confirmation",
+    "prefix_tokens": 64,
+    "profile": true,
+    "round": 4,
+    "mode": "warm_hit",
+    "seconds": 0.008277791988803074,
+    "status": "miss",
+    "cache": {
+      "hits": 218,
+      "misses": 84,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 786432
+    }
+  },
+  {
+    "dataset": "confirmation",
+    "prefix_tokens": 2048,
+    "profile": false,
+    "round": 0,
+    "mode": "warm_hit",
+    "seconds": 0.12498137500369921,
+    "status": "miss",
+    "cache": {
+      "hits": 227,
+      "misses": 90,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 25165824
+    }
+  },
+  {
+    "dataset": "confirmation",
+    "prefix_tokens": 2048,
+    "profile": false,
+    "round": 1,
+    "mode": "warm_hit",
+    "seconds": 0.12978729198221117,
+    "status": "miss",
+    "cache": {
+      "hits": 231,
+      "misses": 91,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 25165824
+    }
+  },
+  {
+    "dataset": "confirmation",
+    "prefix_tokens": 2048,
+    "profile": false,
+    "round": 2,
+    "mode": "warm_hit",
+    "seconds": 0.1395552920002956,
+    "status": "miss",
+    "cache": {
+      "hits": 238,
+      "misses": 93,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 25165824
+    }
+  },
+  {
+    "dataset": "confirmation",
+    "prefix_tokens": 2048,
+    "profile": false,
+    "round": 3,
+    "mode": "warm_hit",
+    "seconds": 0.13737362500978634,
+    "status": "miss",
+    "cache": {
+      "hits": 248,
+      "misses": 96,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 25165824
+    }
+  },
+  {
+    "dataset": "confirmation",
+    "prefix_tokens": 2048,
+    "profile": false,
+    "round": 4,
+    "mode": "warm_hit",
+    "seconds": 0.13907916698371992,
+    "status": "miss",
+    "cache": {
+      "hits": 252,
+      "misses": 97,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 25165824
+    }
+  },
+  {
+    "dataset": "confirmation",
+    "prefix_tokens": 2048,
+    "profile": true,
+    "round": 0,
+    "mode": "warm_hit",
+    "seconds": 0.13632745898212306,
+    "status": "miss",
+    "cache": {
+      "hits": 264,
+      "misses": 104,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 25165824
+    }
+  },
+  {
+    "dataset": "confirmation",
+    "prefix_tokens": 2048,
+    "profile": true,
+    "round": 1,
+    "mode": "warm_hit",
+    "seconds": 0.1353486250154674,
+    "status": "miss",
+    "cache": {
+      "hits": 268,
+      "misses": 105,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 25165824
+    }
+  },
+  {
+    "dataset": "confirmation",
+    "prefix_tokens": 2048,
+    "profile": true,
+    "round": 2,
+    "mode": "warm_hit",
+    "seconds": 0.13358420800068416,
+    "status": "miss",
+    "cache": {
+      "hits": 275,
+      "misses": 107,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 25165824
+    }
+  },
+  {
+    "dataset": "confirmation",
+    "prefix_tokens": 2048,
+    "profile": true,
+    "round": 3,
+    "mode": "warm_hit",
+    "seconds": 0.13022341602481902,
+    "status": "miss",
+    "cache": {
+      "hits": 285,
+      "misses": 110,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 25165824
+    }
+  },
+  {
+    "dataset": "confirmation",
+    "prefix_tokens": 2048,
+    "profile": true,
+    "round": 4,
+    "mode": "warm_hit",
+    "seconds": 0.1270214170217514,
+    "status": "miss",
+    "cache": {
+      "hits": 292,
+      "misses": 112,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 25165824
+    }
+  }
+]

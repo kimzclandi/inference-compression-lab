@@ -34,6 +34,8 @@
 
 新增真实Qwen2.5-0.5B/MLX Q8前缀缓存、LRU容量管理、请求隔离与完整成本对照。2048-token前缀下，计入首次miss的4请求总耗时较分段重算下降约38%；74题缓存前后token完全一致。零命中的淘汰trace未获收益，问答严格匹配仅18/74，不能把运行时正确性称为问答系统质量合格。
 
+新增公平基线复验：保留旧快照分段路径，增加请求私有 KV 直接续算。2048-token 历史负载相对新基线下降 37.17%，第二固定负载为 39.24%；去掉快照未稳定加速基线。[新报告与限制](docs/qwen-fair-baseline-study.md) · [原始证据](results/qwen-prefix-fair-v1/summary.json) · [学习单元](docs/qwen-fair-baseline-learning.md)。旧 38% 是历史实验结果，不能混用分母。
+
 [主报告、复跑与简历候选](docs/qwen-prefix-study.md) · [主实验](results/qwen-prefix-v2/summary.json) · [失效场景](results/qwen-prefix-locality-v1/summary.json) · [数据归属](configs/qwen-prefix/ATTRIBUTION.md)
 
 ## 本地运行

@@ -1,0 +1,9 @@
+{
+  "sha256": {
+    "hot-preparations.json": "10518eb2477f3271c70b5f536813d62f3b9975d9d01cf46dd6a0a8604580ff81",
+    "manifest.json": "7c5e7c41660fefff9cd7f719756cfb505c01c2d8eb596b3ed34173df3a5959e3",
+    "summary.json": "24602d43fc9743427ea287ddf10cec1933bda5fd482e54a45170038f21a0a723",
+    "timings.json": "2a43bbfe6cf101b6690f8736487579049c3123e8ef2fd519484196c6f4cb1145",
+    "workloads.json": "69a006d6f4836dcad3e4a598e98543b1b6c238bd7f5e3d2f81cf098587092d0a"
+  }
+}
