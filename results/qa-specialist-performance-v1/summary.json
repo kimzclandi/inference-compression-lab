@@ -1,0 +1,48 @@
+{
+  "process_median_seconds": {
+    "fp32": [
+      0.07138312501774635,
+      0.07205193751724437,
+      0.07227943750331178
+    ],
+    "int8": [
+      0.05388174999097828,
+      0.05418756201106589,
+      0.05466174997854978
+    ]
+  },
+  "median_of_process_medians_seconds": {
+    "fp32": 0.07205193751724437,
+    "int8": 0.05418756201106589
+  },
+  "fp32_over_int8_speedup": 1.3296766793555006,
+  "speedup_point_gate_passed": true,
+  "process_peak_rss_bytes": {
+    "fp32": [
+      1390460928,
+      1408745472,
+      1405943808
+    ],
+    "int8": [
+      976928768,
+      937639936,
+      935559168
+    ]
+  },
+  "initialization_seconds": {
+    "fp32": [
+      1.6336766660097055,
+      1.6449224159878213,
+      1.7077477910206653
+    ],
+    "int8": [
+      1.5541875839990098,
+      1.5672264589811675,
+      1.6300453750009183
+    ]
+  },
+  "samples_per_process": 40,
+  "processes": 6,
+  "scope": "End-to-end per request: tokenizer, all windows ORT CPU synchronous inference, exhaustive decoding. Excludes model load, JSON evidence serialization and quality artifact verification. Report load separately. Single caller, no TTFT/decode-token claims.",
+  "limit": "Three processes per precision on one machine; no concurrency, tail-latency SLO, energy, or cross-device claim."
+}

@@ -1,0 +1,19 @@
+{
+  "status": "complete",
+  "variant": "int8",
+  "git_head": "c0e28ffdacc1c7bd5a6910020b3771195f4317f3",
+  "git_status": "M DATA_LICENSE.md\n M THIRD_PARTY.md\n M experiments/release_archive.py\n?? docs/qa-specialist-study.md\n?? experiments/verify_qa_risk.py\n?? results/qa-risk-review-v1/independent-feature-audit-synthetic.json\n?? results/qa-risk-review-v1/independent-feature-audit.json\n?? results/qa-risk-review-v1/independent-feature-audit.py\n?? results/qa-risk-review-v1/numerical-fault/\n?? results/qa-specialist-performance-v1/\n?? tests/test_release_head_exclusion.py\n?? tests/test_verify_qa_risk.py",
+  "python": "3.12.11",
+  "protocol_sha256": "365a1ff260d9f887558bc5ce5421e4028702ad435717aefc8f17787cea08081b",
+  "selection_sha256": "b2999477ee82318a98266ef0674c22a526cddea1eec541c591a7bec7e354b74a",
+  "head_sha256": "71802effa89735bdeac32fd88a7bcfa1cd19d4aa0fbe841c0e1d120dd7aab79f",
+  "completed_predictions": 128,
+  "dataset_sha256": "d5d1c2e80291bf203179a2151ae71276c00f966e00aa86bee9a054a707f3afef",
+  "packages": {
+    "onnxruntime": "1.22.1",
+    "numpy": "2.2.6",
+    "transformers": "4.56.2",
+    "tokenizers": "0.22.0"
+  },
+  "model_load_seconds": 1.6075779999955557
+}

@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "locked": true,
+  "study": "task-trained extractive QA and ONNX dynamic INT8",
+  "model_id": "deepset/roberta-base-squad2",
+  "revision": "adc3b06f79f797d1c575d5479d6f5efe54a9e3b4",
+  "asset_manifest_sha256": "c7709c2098b46dc59223b451c076974e1035f591c1e03ca3c2af2747d1f5c7ed",
+  "source_sha256": {
+    "experiments/qa_specialist.py": "47ccb951b8e54c18b71738360900adeb819ed7f7008f0eb4b07ea2e5f744506c",
+    "lab/qa_specialist_runtime.py": "40e8a0482b3ddb7d1aca5424c090571e27182c363f15e6b3da0ea72c537b1e54",
+    "lab/extractive_qa.py": "d859b363f2cfcca578f0358595a11bdfdcc9b31d0dda19dcbc9def3e9104de8f",
+    "lab/selective_qa.py": "d4e4c5cf1a6951316a6b5589236e8198113bc2adcab93dce25754dd8e4d16ffd",
+    "lab/qa_metrics.py": "78c4af7f06ba49b3acddd2610586336ecf585c06d8ad89b46ff9fb6358aaaa1f",
+    "lab/qa_gate.py": "ae1d91829e9c0039f903bc8306fb5a72256998433ef551f09fd3c6c42db5512a"
+  },
+  "data_sha256": {
+    "calibration": "0e48a12509048b171c34d801661c8fe94d03fb8f578c399fabf4031a1d1f2eb5",
+    "evaluation": "6961529e99940e253562196ab1e775893354b2b8c6bd7fb3616b30a0a1c0daa0"
+  },
+  "dataset_sizes": {
+    "calibration": 128,
+    "evaluation": 256
+  },
+  "input_limits": {
+    "max_sequence_tokens": 384,
+    "stride": 128,
+    "max_question_tokens": 64,
+    "max_context_characters": 12000,
+    "max_windows": 8,
+    "max_answer_tokens": 30
+  },
+  "threshold_margins": [
+    -10,
+    -5,
+    0,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    16
+  ],
+  "threshold_grid": [
+    4.5397868702434395e-05,
+    0.0066928509242848554,
+    0.5,
+    0.8807970779778823,
+    0.9820137900379085,
+    0.9975273768433653,
+    0.9996646498695336,
+    0.9999546021312976,
+    0.9999938558253978,
+    0.9999998874648379
+  ],
+  "quality_constraints": {
+    "min_accepted_precision": 0.9,
+    "min_answerable_answer_coverage": 0.4,
+    "min_correct_answerable_coverage": 0.35,
+    "max_unanswerable_false_accept_rate": 0.1,
+    "max_invalid_rate": 0.05
+  },
+  "decoding": "Exhaustive <=30-token context spans. Question/special/pad excluded. Zero-character context tokens cannot be endpoints, may be interior and count toward length. Each window best start+end score minus its own CLS null score; highest margin across windows. Stable ties prefer lower window/start/end. Sigmoid margin is an uncalibrated ranking score, not correctness probability.",
+  "upstream_difference": "This fixed within-window margin strategy is not the official Transformers global-best-span minus minimum-null aggregation.",
+  "selection_rule": "For each precision choose the smallest predeclared threshold satisfying all five calibration point gates. Require BOTH variants to pass before evaluation. No best-EM fallback. Commit selection before evaluation.",
+  "failure_rule": "No model, decoding, threshold-grid or score changes based on calibration/evaluation outputs. If calibration fails, stop evaluation and retain failure. If evaluation fails, keep answer entry disabled. Historical Qwen failures remain immutable.",
+  "evaluation_rule": "Run each fixed variant once on the fixed evaluation partition at its own selected threshold. This is local public-benchmark assessment, not model-unseen confirmation; the upstream model already used SQuAD dev for evaluation.",
+  "compression_gate": {
+    "replicates": 5000,
+    "seed": 2026100406,
+    "confidence": 0.95,
+    "minimum_ci_lower_bound": -0.02,
+    "maximum_model_file_bytes_ratio": 0.6,
+    "scope": "Q8-style claim is not used: this is dynamic ORT INT8. Candidate INT8 minus FP32 paired EM/F1 with fixed policy per variant, article-stratified context-family bootstrap, fixed articles."
+  },
+  "performance": {
+    "provider": "CPUExecutionProvider",
+    "graph_optimization": "ORT_ENABLE_ALL",
+    "intra_op_threads": 4,
+    "inter_op_threads": 1,
+    "precision_order": [
+      "fp32",
+      "int8",
+      "int8",
+      "fp32",
+      "fp32",
+      "int8"
+    ],
+    "sample_rule": "Eight calibration IDs with smallest sha256(seed=2026100407 + id), independent of labels and outputs",
+    "warmup_requests": 8,
+    "repetitions_per_sample": 5,
+    "timing": "End-to-end per request: tokenizer, all windows ORT CPU synchronous inference, exhaustive decoding. Excludes model load, JSON evidence serialization and quality artifact verification. Report load separately. Single caller, no TTFT/decode-token claims.",
+    "memory": "Per-process resource.ru_maxrss with platform byte conversion; peak includes loading/session initialization/inference. Not file bytes or isolated model allocations.",
+    "minimum_median_speedup_for_claim": 1.05
+  },
+  "scope": "English supplied-passage extractive QA, <=64 question tokens, <=12000 context characters, <=8 overlapping 384-token windows. Fixed public SQuAD2 local benchmark. No training performed in this project; no proof of general business deployment, adversarial security, cross-device speedup, original quantizer, or user mastery."
+}
