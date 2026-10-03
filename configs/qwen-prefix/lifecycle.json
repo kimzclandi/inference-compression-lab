@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-04",
+  "rounds": 5,
+  "prefix_lengths": [64, 1024],
+  "generated_tokens": 8,
+  "trace": [0,1,2,0,1,2,0,1,2,0,1,2],
+  "seed": 20261004,
+  "modes": ["direct", "entries2", "entries3", "entries3_bytes2"],
+  "predictions_before_execution": {
+    "direct": {"hits":0,"misses":0,"evictions":0,"bypasses":0,"failures":0},
+    "entries2": {"hits":0,"misses":12,"evictions":10,"bypasses":0,"failures":0},
+    "entries3": {"hits":9,"misses":3,"evictions":0,"bypasses":0,"failures":0},
+    "entries3_bytes2": {"hits":0,"misses":12,"evictions":10,"bypasses":0,"failures":0}
+  },
+  "hypotheses": [
+    "Three entries fit three prefixes only if the byte budget also fits. A byte limit fitting two prefixes should restore thrashing despite max_entries=3.",
+    "No positive speedup is required. Nine hits should remove repeated prefix work, not accelerate decode kernels.",
+    "Injected builder/clone/invalid-size failures must preserve residents, LRU and success counters; only failures increases. Callback mutation/reentrancy and concurrent callers are outside contract."
+  ],
+  "timing": "Pretokenized serial batch1; 8 forced greedy tokens. Two warmups per prefix per mode. Randomized mode order per round. Total includes first misses. No model load, tokenization, network, queueing or tail-latency claim."
+}
