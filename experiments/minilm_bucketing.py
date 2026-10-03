@@ -32,8 +32,12 @@ def main():
                          ['stsb-validation.parquet', 'stsb-test.parquet']}})
     runtimes = {k: MiniLMRuntime(v, threads=spec['threads'], max_length=spec['max_length'])
                 for k, v in paths.items()}
-    benchmark = flattened(pq.read_table('data/stsb-validation.parquet').to_pylist()
-                          [:spec['benchmark_validation_pairs']])
+    benchmark_split = spec.get('benchmark_split', 'validation')
+    if benchmark_split not in ('validation', 'test'):
+        raise ValueError('Unsupported benchmark split')
+    benchmark_pairs = spec.get('benchmark_pairs', spec.get('benchmark_validation_pairs'))
+    benchmark = flattened(pq.read_table(f'data/stsb-{benchmark_split}.parquet').to_pylist()
+                          [:benchmark_pairs])
     kwargs = dict(batch_size=spec['batch_size'], window_size=spec['window_size'])
     cells = [(precision, bucket) for precision in paths for bucket in [False, True]]
     for precision, bucket in cells:
