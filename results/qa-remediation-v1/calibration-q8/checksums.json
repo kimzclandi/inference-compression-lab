@@ -1,0 +1,14 @@
+{
+  "data.jsonl": "46f40da0963b2ee05b6ab14511ba1812cab7f4567370b5ddd7e416be423034c4",
+  "predictions.jsonl": "3f27d20ce11b5b6fdc8aaae15b55925736a5f25334b23030fece4c86948950d3",
+  "protocol.json": "5f5906b86eb7ce6ea9b9c9e8bc299c2931280dc9b70852b67b0072ed5a5cdc5e",
+  "run.json": "3d5c55c76d8826053cb1e3a27a0d8d7cf4419d86e853a083ac4d088492689340",
+  "source/experiments/qa_remediation.py": "07669158f8b327935a05c9948ef84175d092febbdf6728998ee93620bbf83377",
+  "source/experiments/qwen_quantization.py": "7e15fe4e5af77d737c098928c3979b16f337fffa0a38f628924a1d2a05fb2136",
+  "source/lab/artifact_integrity.py": "8f10b1899e83258baf3a39a8c0d2652c20cab8708d576fc3485cff7654278187",
+  "source/lab/evidence.py": "314c7a009fb2b740db1cb3925d538f7abcd8a8eb719c0d05efd0be71c0abb91d",
+  "source/lab/grounded_qa.py": "1b6f248cd6efb4ffeaa4f6b15e73f33d45c7d2bb3246e889f4ce236dbe0e868f",
+  "source/lab/qa_metrics.py": "78c4af7f06ba49b3acddd2610586336ecf585c06d8ad89b46ff9fb6358aaaa1f",
+  "source/lab/quantization_diagnostics.py": "947d5bf29b9c238c7330b75c1719044122e1f75c5fc8ad36cf5df1a05d95075f",
+  "started.json": "3c9f9d4a52aa35ff5d8b6f7c557df86f40ce7fdbdb9186a1c44d6ef55516f280"
+}

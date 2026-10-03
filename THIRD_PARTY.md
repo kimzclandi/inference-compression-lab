@@ -4,6 +4,8 @@
 |---|---|---|
 |Domain QA Lab|`lab/qa_metrics.py` 复用评分函数；移除原 CLI。保留原 MIT 声明于 NOTICE-Domain-QA-Lab.txt。旧预测只读复用|https://github.com/kimzclandi/domain-qa-lab |
 |Qwen2.5-0.5B-Instruct|原始预训练/指令模型，Apache-2.0，revision `7ae557604adf67be50417f59c2c2f167def9a775`；无训练 adapter|https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct/tree/7ae557604adf67be50417f59c2c2f167def9a775 |
+|Qwen2.5-1.5B-Instruct|QA 整改本地 FP16/Q8 对照，Apache-2.0，revision `989aa7980e4cf806f80c7fef2b1adb7bc71aa306`；无训练 adapter|https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct/blob/989aa7980e4cf806f80c7fef2b1adb7bc71aa306/README.md |
+|Qwen2.5-3B-Instruct|一次本地非商业研究容量对照，Qwen Research License，revision `aa8e72537993ba99e69dfaafa59ed015b17504d1`；不是默认部署候选，不随包分发模型|https://huggingface.co/Qwen/Qwen2.5-3B-Instruct/blob/aa8e72537993ba99e69dfaafa59ed015b17504d1/LICENSE |
 |MLX / MLX-LM|框架提供 affine group weight-only Q4/Q8、Metal kernels、Qwen 层和 KVCache，MIT|https://github.com/ml-explore/mlx / https://github.com/ml-explore/mlx-lm |
 |all-MiniLM-L6-v2|编码器模型，Apache-2.0，固定 revision 见原报告|https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/blob/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/README.md |
 |ONNX Runtime|CPU 推理与动态 INT8，MIT|https://github.com/microsoft/onnxruntime |

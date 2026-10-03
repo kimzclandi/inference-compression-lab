@@ -1,0 +1,42 @@
+{
+  "frozen_commit": "cbdaad7b83b00db589524a69b8ccf2f1be78ce91",
+  "all_sources_match": true,
+  "files": {
+    "experiments/qa_remediation.py": {
+      "commit_sha256": "07669158f8b327935a05c9948ef84175d092febbdf6728998ee93620bbf83377",
+      "run_sha256": "07669158f8b327935a05c9948ef84175d092febbdf6728998ee93620bbf83377",
+      "match": true
+    },
+    "lab/grounded_qa.py": {
+      "commit_sha256": "1b6f248cd6efb4ffeaa4f6b15e73f33d45c7d2bb3246e889f4ce236dbe0e868f",
+      "run_sha256": "1b6f248cd6efb4ffeaa4f6b15e73f33d45c7d2bb3246e889f4ce236dbe0e868f",
+      "match": true
+    },
+    "lab/qa_metrics.py": {
+      "commit_sha256": "78c4af7f06ba49b3acddd2610586336ecf585c06d8ad89b46ff9fb6358aaaa1f",
+      "run_sha256": "78c4af7f06ba49b3acddd2610586336ecf585c06d8ad89b46ff9fb6358aaaa1f",
+      "match": true
+    },
+    "experiments/qwen_quantization.py": {
+      "commit_sha256": "7e15fe4e5af77d737c098928c3979b16f337fffa0a38f628924a1d2a05fb2136",
+      "run_sha256": "7e15fe4e5af77d737c098928c3979b16f337fffa0a38f628924a1d2a05fb2136",
+      "match": true
+    },
+    "lab/evidence.py": {
+      "commit_sha256": "314c7a009fb2b740db1cb3925d538f7abcd8a8eb719c0d05efd0be71c0abb91d",
+      "run_sha256": "314c7a009fb2b740db1cb3925d538f7abcd8a8eb719c0d05efd0be71c0abb91d",
+      "match": true
+    },
+    "lab/artifact_integrity.py": {
+      "commit_sha256": "8f10b1899e83258baf3a39a8c0d2652c20cab8708d576fc3485cff7654278187",
+      "run_sha256": "8f10b1899e83258baf3a39a8c0d2652c20cab8708d576fc3485cff7654278187",
+      "match": true
+    },
+    "lab/quantization_diagnostics.py": {
+      "commit_sha256": "947d5bf29b9c238c7330b75c1719044122e1f75c5fc8ad36cf5df1a05d95075f",
+      "run_sha256": "947d5bf29b9c238c7330b75c1719044122e1f75c5fc8ad36cf5df1a05d95075f",
+      "match": true
+    }
+  },
+  "note": "Runtime checkout had untracked new evidence/verification work; every inference source file matches the pre-inference protocol commit. This is a local Git record, not an external preregistration signature."
+}

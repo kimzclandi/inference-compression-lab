@@ -2,7 +2,15 @@
 
 面向量化诊断与推理性能分析的个人研究实验。保留原始记录、负结果和明确的硬件/质量边界；模型权重不上传。
 
-## 当前主线：Qwen 低比特诊断与受控回退
+## 当前状态：QA 质量整改与明确停止条件
+
+新增原文片段合同、证据偏移、拒答校准、模型/数据身份锁定和失败后关闭的本地入口。历史 block-10 回退确认仍失败，已退出部署候选。新增有限的模型/提示对照后，固定 1.5B FP16/Q8 在新校准集上各运行 128 题；原始 EM 为 74/128 与 76/128，但**均无满足预设精度、覆盖率、错误作答率和格式门槛的阈值**。按运行前提交的规则停止，不消费预留的 256 题确认集。默认入口返回 `unavailable_quality`，不能把这一保护措施写成 QA 质量已达标。
+
+[整改报告与命令](docs/qa-remediation-study.md) · [冻结协议](configs/qa-remediation/study.json) · [校准原始记录](results/qa-remediation-v1) · [独立重算](results/qa-remediation-review-v1/independent) · [数据归属](configs/qa-remediation/ATTRIBUTION.md)
+
+The QA remediation adds exact-span output validation, explicit abstention, fixed calibration gates, identity locking, and a fail-closed local entry point. Both 1.5B FP16 and Q8 failed the preregistered calibration requirements, so the reserved confirmation set was not evaluated. The entry point reports `unavailable_quality`; this is a reproducible negative research result and a release guard, **not deployment-quality QA**. The earlier block-restoration failure is unchanged.
+
+## 历史主线：Qwen 低比特诊断与受控回退
 
 从真实 Q4 退化样本出发，完成首 token logits 分析、24 个 decoder block 干预、等成本 FP16 回退对照和五轮性能复验。随后固定模块，在预先选定的 128 个新文章问题上完成一次确认：回退 EM 29/128，Q4 26/128，**未通过预设确认门槛**。保留负结果，不宣称质量已达标或原创量化算法。
 
@@ -26,7 +34,7 @@ A personal research artifact for low-bit inference diagnostics and controlled pe
 |缓存生命周期与容量失效|[报告](docs/qwen-cache-lifecycle-study.md) / [学习](docs/qwen-cache-lifecycle-learning.md)|单调用者、受控故障注入；逻辑 KV 字节不是进程内存上限|
 |Jetson Orin Nano 原项目|[只读盘点脚本](experiments/jetson_inventory.py)|待原代码和硬件接入；无本仓库 TensorRT/手机/昇腾实测|
 
-本分支包含 PR #1–#6 的叠加成果及独立审查修复。审查时必须查看分支/PR，不能假定默认 main 已包含全部成果。不自动合并，不更改仓库可见性。
+本分支包含 PR #1–#6 的叠加成果、PR #7 独立审查修复及后续 QA 整改。审查时必须查看分支/PR，不能假定默认 main 已包含全部成果。不自动合并，不更改仓库可见性。
 
 ## 最短离线检查
 
@@ -35,6 +43,7 @@ A personal research artifact for low-bit inference diagnostics and controlled pe
 ```bash
 python3 -m experiments.verify_qwen_quantization results/qwen-quantization-v1
 python3 -m experiments.verify_release
+python3 -m experiments.verify_qa_remediation --root results/qa-remediation-v1
 python3 -m experiments.qwen_quantization_demo
 python3 -m unittest discover -s tests -v
 ```

@@ -1,0 +1,1 @@
+{"status": "unavailable_quality", "reason": "quality_gate_not_passed", "detail": "FP16 and Q8 both failed all predeclared calibration threshold choices. No answer serving is authorized by this evidence.", "scope": "local_research_cli_not_production"}

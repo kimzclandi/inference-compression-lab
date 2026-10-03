@@ -1,0 +1,13 @@
+{
+  "technical_acceptance": "pass",
+  "historical_files_preserved": 628,
+  "rebuilt_variants": 5,
+  "confirmation_samples": 128,
+  "confirmation_gate_passed": false,
+  "qa_remediation_evidence_valid": true,
+  "qa_remediation_quality_passed": false,
+  "qa_answer_entrypoint": "unavailable_quality",
+  "source_archive_inference_verified": true,
+  "root_code_license_present": false,
+  "scope": "Reproducible personal research artifact; not a deployable QA system or confirmed quantization algorithm."
+}

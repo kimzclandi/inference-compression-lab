@@ -1,0 +1,29 @@
+{
+  "evidence_valid": true,
+  "calibration_feasible": false,
+  "protocol_sha256": "5f5906b86eb7ce6ea9b9c9e8bc299c2931280dc9b70852b67b0072ed5a5cdc5e",
+  "selection_sha256": "010e2a4ad87673972a56fc33ec64bd3f179dd902fd5e1073fc63ff6653feeac1",
+  "physical_tensor_comparison": {
+    "fp16_tensor_bytes": 3087428608,
+    "q8_tensor_bytes": 1640332288,
+    "q8_to_fp16_ratio": 0.5312939977784905,
+    "reduction_fraction": 0.4687060022215095,
+    "scope": "Physical parameter tensor storage including quantization metadata; not weight-file bytes, RSS, runtime peak memory, or logical KV bytes."
+  },
+  "scope": "English supplied-passage extractive QA local research prototype. Point-estimate quality gates on SQuAD public dev, not an application deployment certificate; same-model audit is correlated and confidence is uncalibrated. No production security, service load, business distribution or latency SLO validation.",
+  "status": "calibration_failed",
+  "overall_success": false,
+  "confirmation_evaluated": false,
+  "answer_entrypoint": "unavailable_quality",
+  "variants": {
+    "fp16": {
+      "threshold": null,
+      "calibration_feasible": false
+    },
+    "q8": {
+      "threshold": null,
+      "calibration_feasible": false
+    }
+  },
+  "compression_confirmed": false
+}

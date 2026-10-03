@@ -1,0 +1,9 @@
+{
+  "platform": "macOS-27.0-arm64-arm-64bit-Mach-O",
+  "machine": "arm64",
+  "cpu": "Apple M4 Max",
+  "memory_bytes": 51539607552,
+  "audit_base_commit": "0e7fb9f8ced0356e12742786ffe4b7a2b00c3e7a",
+  "protocol_commit": "cbdaad7b83b00db589524a69b8ccf2f1be78ce91",
+  "scope": "existing pinned Python environment reused; no fresh install and no cross-device replication this round"
+}

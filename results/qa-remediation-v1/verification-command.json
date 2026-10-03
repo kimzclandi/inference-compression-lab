@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "-B",
+    "-m",
+    "experiments.verify_qa_remediation",
+    "--root",
+    "results/qa-remediation-v1"
+  ],
+  "returncode": 0,
+  "stdout": "{\n  \"evidence_valid\": true,\n  \"calibration_feasible\": false,\n  \"protocol_sha256\": \"5f5906b86eb7ce6ea9b9c9e8bc299c2931280dc9b70852b67b0072ed5a5cdc5e\",\n  \"selection_sha256\": \"010e2a4ad87673972a56fc33ec64bd3f179dd902fd5e1073fc63ff6653feeac1\",\n  \"physical_tensor_comparison\": {\n    \"fp16_tensor_bytes\": 3087428608,\n    \"q8_tensor_bytes\": 1640332288,\n    \"q8_to_fp16_ratio\": 0.5312939977784905,\n    \"reduction_fraction\": 0.4687060022215095,\n    \"scope\": \"Physical parameter tensor storage including quantization metadata; not weight-file bytes, RSS, runtime peak memory, or logical KV bytes.\"\n  },\n  \"scope\": \"English supplied-passage extractive QA local research prototype. Point-estimate quality gates on SQuAD public dev, not an application deployment certificate; same-model audit is correlated and confidence is uncalibrated. No production security, service load, business distribution or latency SLO validation.\",\n  \"status\": \"calibration_failed\",\n  \"overall_success\": false,\n  \"confirmation_evaluated\": false,\n  \"answer_entrypoint\": \"unavailable_quality\",\n  \"variants\": {\n    \"fp16\": {\n      \"threshold\": null,\n      \"calibration_feasible\": false\n    },\n    \"q8\": {\n      \"threshold\": null,\n      \"calibration_feasible\": false\n    }\n  },\n  \"compression_confirmed\": false\n}\n",
+  "stderr": ""
+}

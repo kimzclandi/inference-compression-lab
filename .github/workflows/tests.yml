@@ -19,3 +19,7 @@ jobs:
         run: |
           python results/independent-review-v1/statistics/audit_statistics.py --output "$RUNNER_TEMP/independent-statistics"
           python results/independent-review-v1/performance/recompute.py > "$RUNNER_TEMP/independent-performance.json"
+      - name: Selective QA evidence (expected calibration failure)
+        run: |
+          python -m experiments.verify_qa_remediation --root results/qa-remediation-v1
+          python results/qa-remediation-review-v1/independent/audit.py --run fp16=results/qa-remediation-v1/calibration-fp16 --run q8=results/qa-remediation-v1/calibration-q8 --output "$RUNNER_TEMP/independent-qa-calibration.json"
