@@ -50,7 +50,8 @@ def run(a):
         for row in data:
             pred=predict(model,tok,row['context'],row['question'],a.mode,spec['max_new_tokens'],spec['max_input_tokens'])
             pred['id']=row['id'];state['predictions'].append(pred)
-            write(out/'run.json',state)
+            with (out/'predictions.jsonl').open('a') as log:
+                log.write(json.dumps(pred)+'\n')
         state['metrics'],state['scored']=evaluate(data,state['predictions'])
         state['status']='complete'
         print(json.dumps({'label':a.label,'mode':a.mode,'n':len(data),'raw_metrics':state['metrics']},indent=2))
