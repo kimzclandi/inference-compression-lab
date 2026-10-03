@@ -1,0 +1,215 @@
+{
+  "performance": [
+    {
+      "prefix_tokens": 64,
+      "cold_ttft_seconds": 0.012255083507625386,
+      "hit_ttft_seconds": 0.007255457996507175,
+      "miss_ttft_seconds": 0.015205957985017449,
+      "hit_ttft_reduction": 0.40796339804680504,
+      "cold_decode_tps": 325.26029549751695,
+      "hit_decode_tps": 326.1433051047568,
+      "cold_four_request_seconds": 0.43043308399501257,
+      "cached_four_request_seconds": 0.4170777499966789,
+      "four_request_reduction_including_miss": 0.031027666076170912,
+      "segmented_no_reuse_ttft_seconds": 0.015173478983342648,
+      "segmented_no_reuse_four_request_seconds": 0.4422265829925891,
+      "hit_ttft_reduction_vs_segmented": 0.5218329293847395,
+      "four_request_reduction_vs_segmented": 0.05686865955846809,
+      "round_hit_ttft_reductions": [
+        0.40607225629905563,
+        0.403988222093999,
+        0.40673420891430645,
+        0.4078137381390171,
+        0.41179391355915407
+      ],
+      "cache_build_median_seconds": 0.008022167021408677,
+      "stored_tensor_bytes": 786432,
+      "fixed_token_parity_count": 20,
+      "fixed_token_comparisons": 20
+    },
+    {
+      "prefix_tokens": 256,
+      "cold_ttft_seconds": 0.025176603987347335,
+      "hit_ttft_seconds": 0.007517082995036617,
+      "miss_ttft_seconds": 0.02409029199043289,
+      "hit_ttft_reduction": 0.7014258555755027,
+      "cold_decode_tps": 318.1033488208227,
+      "hit_decode_tps": 317.5502932282331,
+      "cold_four_request_seconds": 0.4910007920116186,
+      "cached_four_request_seconds": 0.43635562498820946,
+      "four_request_reduction_including_miss": 0.11129343966947425,
+      "segmented_no_reuse_ttft_seconds": 0.024077541500446387,
+      "segmented_no_reuse_four_request_seconds": 0.4870646249910351,
+      "hit_ttft_reduction_vs_segmented": 0.6877969042272338,
+      "four_request_reduction_vs_segmented": 0.10411144107162162,
+      "round_hit_ttft_reductions": [
+        0.7018483066070309,
+        0.7012608557227991,
+        0.7020952480727891,
+        0.7010373239755471,
+        0.7024325525214731
+      ],
+      "cache_build_median_seconds": 0.016737750003812835,
+      "stored_tensor_bytes": 3145728,
+      "fixed_token_parity_count": 20,
+      "fixed_token_comparisons": 20
+    },
+    {
+      "prefix_tokens": 1024,
+      "cold_ttft_seconds": 0.08559362501546275,
+      "hit_ttft_seconds": 0.008717229007743299,
+      "miss_ttft_seconds": 0.06860970798879862,
+      "hit_ttft_reduction": 0.8981556277565239,
+      "cold_decode_tps": 290.7903299663652,
+      "hit_decode_tps": 290.8519157527363,
+      "cold_four_request_seconds": 0.7688410420087166,
+      "cached_four_request_seconds": 0.5215942920185626,
+      "four_request_reduction_including_miss": 0.32158370388784596,
+      "segmented_no_reuse_ttft_seconds": 0.06861481201485731,
+      "segmented_no_reuse_four_request_seconds": 0.7017823749920353,
+      "hit_ttft_reduction_vs_segmented": 0.8729541224152048,
+      "four_request_reduction_vs_segmented": 0.2567577776166262,
+      "round_hit_ttft_reductions": [
+        0.8980903653555703,
+        0.8982361471575955,
+        0.8979761831210507,
+        0.8982584174777042,
+        0.8982347490716528
+      ],
+      "cache_build_median_seconds": 0.06018491700524464,
+      "stored_tensor_bytes": 12582912,
+      "fixed_token_parity_count": 20,
+      "fixed_token_comparisons": 20
+    },
+    {
+      "prefix_tokens": 2048,
+      "cold_ttft_seconds": 0.1829678955109557,
+      "hit_ttft_seconds": 0.010235666995868087,
+      "miss_ttft_seconds": 0.1388399580027908,
+      "hit_ttft_reduction": 0.9440575792420632,
+      "cold_decode_tps": 268.93366101450795,
+      "hit_decode_tps": 270.1350943795657,
+      "cold_four_request_seconds": 1.1981838749779854,
+      "cached_four_request_seconds": 0.6287872089887969,
+      "four_request_reduction_including_miss": 0.47521643203523345,
+      "segmented_no_reuse_ttft_seconds": 0.13861147899297066,
+      "segmented_no_reuse_four_request_seconds": 1.013866416993551,
+      "hit_ttft_reduction_vs_segmented": 0.9261557046340501,
+      "four_request_reduction_vs_segmented": 0.3798125685498501,
+      "round_hit_ttft_reductions": [
+        0.9422137010409583,
+        0.9434349619062485,
+        0.9443693562441681,
+        0.9450266791269996,
+        0.9455375407886364
+      ],
+      "cache_build_median_seconds": 0.12889616598840803,
+      "stored_tensor_bytes": 25165824,
+      "fixed_token_parity_count": 20,
+      "fixed_token_comparisons": 20
+    }
+  ],
+  "quality": {
+    "questions": 74,
+    "contexts": 9,
+    "token_parity_count": 74,
+    "cold_strict_correct": 18,
+    "cached_strict_correct": 18,
+    "always_abstain_correct": 41,
+    "divergent_ids": [],
+    "cache_hits": 65,
+    "native_greedy_parity": true
+  },
+  "contracts": {
+    "interleaved": [
+      {
+        "prefix_index": 0,
+        "status": "miss",
+        "cache": {
+          "hits": 213,
+          "misses": 66,
+          "evictions": 7,
+          "bypasses": 0,
+          "entries": 1,
+          "stored_tensor_bytes": 786432
+        },
+        "matches_cold_a": true
+      },
+      {
+        "prefix_index": 1,
+        "status": "miss",
+        "cache": {
+          "hits": 213,
+          "misses": 67,
+          "evictions": 7,
+          "bypasses": 0,
+          "entries": 2,
+          "stored_tensor_bytes": 1572864
+        },
+        "matches_cold_a": null
+      },
+      {
+        "prefix_index": 0,
+        "status": "hit",
+        "cache": {
+          "hits": 214,
+          "misses": 67,
+          "evictions": 7,
+          "bypasses": 0,
+          "entries": 2,
+          "stored_tensor_bytes": 1572864
+        },
+        "matches_cold_a": true
+      },
+      {
+        "prefix_index": 2,
+        "status": "miss",
+        "cache": {
+          "hits": 214,
+          "misses": 68,
+          "evictions": 8,
+          "bypasses": 0,
+          "entries": 2,
+          "stored_tensor_bytes": 1572864
+        },
+        "matches_cold_a": null
+      },
+      {
+        "prefix_index": 1,
+        "status": "miss",
+        "cache": {
+          "hits": 214,
+          "misses": 69,
+          "evictions": 9,
+          "bypasses": 0,
+          "entries": 2,
+          "stored_tensor_bytes": 1572864
+        },
+        "matches_cold_a": null
+      },
+      {
+        "prefix_index": 0,
+        "status": "miss",
+        "cache": {
+          "hits": 214,
+          "misses": 70,
+          "evictions": 10,
+          "bypasses": 0,
+          "entries": 2,
+          "stored_tensor_bytes": 1572864
+        },
+        "matches_cold_a": true
+      }
+    ],
+    "mismatched_prefix_rejected": true,
+    "oversized_bypassed": true,
+    "oversized_output_matches_cold": true
+  },
+  "acceptance": {
+    "qa_token_parity": true,
+    "native_parity": true,
+    "prefix_mismatch_rejected": true,
+    "bounded_cache": true,
+    "eviction_replay_parity": true
+  }
+}

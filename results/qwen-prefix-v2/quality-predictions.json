@@ -1,0 +1,4748 @@
+[
+  {
+    "id": "56e17a7ccd28a01900c679a1",
+    "context_id": "81e7e049d2dcb1c0",
+    "is_impossible": false,
+    "references": [
+      "problem instance",
+      "a problem instance"
+    ],
+    "prefix_tokens": 226,
+    "cold": {
+      "token_ids": [
+        34586,
+        2867,
+        151645
+      ],
+      "input_tokens": 245,
+      "prefix_tokens": 0,
+      "suffix_tokens": 245,
+      "status": "disabled",
+      "ttft_seconds": 0.023199040995677933,
+      "total_seconds": 0.02973891599685885,
+      "decode_seconds": 0.006539875001180917,
+      "decode_tokens_per_second": 305.81624260996676,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 148,
+        "misses": 56,
+        "evictions": 0,
+        "bypasses": 0,
+        "entries": 0,
+        "stored_tensor_bytes": 0
+      },
+      "text": "problem instance",
+      "strict_correct": true
+    },
+    "cached": {
+      "token_ids": [
+        34586,
+        2867,
+        151645
+      ],
+      "input_tokens": 245,
+      "prefix_tokens": 226,
+      "suffix_tokens": 19,
+      "status": "miss",
+      "ttft_seconds": 0.02635320898843929,
+      "total_seconds": 0.0329269589856267,
+      "decode_seconds": 0.006573749997187406,
+      "decode_tokens_per_second": 304.24035000657227,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 148,
+        "misses": 57,
+        "evictions": 0,
+        "bypasses": 0,
+        "entries": 1,
+        "stored_tensor_bytes": 2777088
+      },
+      "text": "problem instance",
+      "strict_correct": true
+    },
+    "token_parity": true
+  },
+  {
+    "id": "56e17a7ccd28a01900c679a2",
+    "context_id": "81e7e049d2dcb1c0",
+    "is_impossible": false,
+    "references": [
+      "the problem",
+      "a problem",
+      "problem"
+    ],
+    "prefix_tokens": 226,
+    "cold": {
+      "token_ids": [
+        64947,
+        1663,
+        3491,
+        151645
+      ],
+      "input_tokens": 253,
+      "prefix_tokens": 0,
+      "suffix_tokens": 253,
+      "status": "disabled",
+      "ttft_seconds": 0.02362970801186748,
+      "total_seconds": 0.03353641601279378,
+      "decode_seconds": 0.009906708000926301,
+      "decode_tokens_per_second": 302.82511604455215,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 148,
+        "misses": 57,
+        "evictions": 0,
+        "bypasses": 0,
+        "entries": 1,
+        "stored_tensor_bytes": 2777088
+      },
+      "text": "computational problem",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        64947,
+        1663,
+        3491,
+        151645
+      ],
+      "input_tokens": 253,
+      "prefix_tokens": 226,
+      "suffix_tokens": 27,
+      "status": "hit",
+      "ttft_seconds": 0.008684833999723196,
+      "total_seconds": 0.01820991700515151,
+      "decode_seconds": 0.009525083005428314,
+      "decode_tokens_per_second": 314.9578852268594,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 149,
+        "misses": 57,
+        "evictions": 0,
+        "bypasses": 0,
+        "entries": 1,
+        "stored_tensor_bytes": 2777088
+      },
+      "text": "computational problem",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "56e17a7ccd28a01900c679a3",
+    "context_id": "81e7e049d2dcb1c0",
+    "is_impossible": false,
+    "references": [
+      "concrete",
+      "abstract"
+    ],
+    "prefix_tokens": 226,
+    "cold": {
+      "token_ids": [
+        16249,
+        151645
+      ],
+      "input_tokens": 242,
+      "prefix_tokens": 0,
+      "suffix_tokens": 242,
+      "status": "disabled",
+      "ttft_seconds": 0.023493582993978634,
+      "total_seconds": 0.026862708007683977,
+      "decode_seconds": 0.003369125013705343,
+      "decode_tokens_per_second": 296.8129695194083,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 149,
+        "misses": 57,
+        "evictions": 0,
+        "bypasses": 0,
+        "entries": 1,
+        "stored_tensor_bytes": 2777088
+      },
+      "text": "abstract",
+      "strict_correct": true
+    },
+    "cached": {
+      "token_ids": [
+        16249,
+        151645
+      ],
+      "input_tokens": 242,
+      "prefix_tokens": 226,
+      "suffix_tokens": 16,
+      "status": "hit",
+      "ttft_seconds": 0.007863500009989366,
+      "total_seconds": 0.01111929101170972,
+      "decode_seconds": 0.003255791001720354,
+      "decode_tokens_per_second": 307.145022352971,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 150,
+        "misses": 57,
+        "evictions": 0,
+        "bypasses": 0,
+        "entries": 1,
+        "stored_tensor_bytes": 2777088
+      },
+      "text": "abstract",
+      "strict_correct": true
+    },
+    "token_parity": true
+  },
+  {
+    "id": "56e17a7ccd28a01900c679a4",
+    "context_id": "81e7e049d2dcb1c0",
+    "is_impossible": false,
+    "references": [
+      "instances",
+      "the instance",
+      "instance"
+    ],
+    "prefix_tokens": 226,
+    "cold": {
+      "token_ids": [
+        49460,
+        151645
+      ],
+      "input_tokens": 246,
+      "prefix_tokens": 0,
+      "suffix_tokens": 246,
+      "status": "disabled",
+      "ttft_seconds": 0.02302087499992922,
+      "total_seconds": 0.02622033402440138,
+      "decode_seconds": 0.003199459024472162,
+      "decode_tokens_per_second": 312.55283857400775,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 150,
+        "misses": 57,
+        "evictions": 0,
+        "bypasses": 0,
+        "entries": 1,
+        "stored_tensor_bytes": 2777088
+      },
+      "text": "solution",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        49460,
+        151645
+      ],
+      "input_tokens": 246,
+      "prefix_tokens": 226,
+      "suffix_tokens": 20,
+      "status": "hit",
+      "ttft_seconds": 0.008540667011402547,
+      "total_seconds": 0.011724874988431111,
+      "decode_seconds": 0.0031842079770285636,
+      "decode_tokens_per_second": 314.04983820597647,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 151,
+        "misses": 57,
+        "evictions": 0,
+        "bypasses": 0,
+        "entries": 1,
+        "stored_tensor_bytes": 2777088
+      },
+      "text": "solution",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "56e17a7ccd28a01900c679a5",
+    "context_id": "81e7e049d2dcb1c0",
+    "is_impossible": false,
+    "references": [
+      "solution",
+      "the solution"
+    ],
+    "prefix_tokens": 226,
+    "cold": {
+      "token_ids": [
+        49460,
+        151645
+      ],
+      "input_tokens": 250,
+      "prefix_tokens": 0,
+      "suffix_tokens": 250,
+      "status": "disabled",
+      "ttft_seconds": 0.023409540997818112,
+      "total_seconds": 0.026760457985801622,
+      "decode_seconds": 0.00335091698798351,
+      "decode_tokens_per_second": 298.4257752686892,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 151,
+        "misses": 57,
+        "evictions": 0,
+        "bypasses": 0,
+        "entries": 1,
+        "stored_tensor_bytes": 2777088
+      },
+      "text": "solution",
+      "strict_correct": true
+    },
+    "cached": {
+      "token_ids": [
+        49460,
+        151645
+      ],
+      "input_tokens": 250,
+      "prefix_tokens": 226,
+      "suffix_tokens": 24,
+      "status": "hit",
+      "ttft_seconds": 0.008454666996840388,
+      "total_seconds": 0.01159279199782759,
+      "decode_seconds": 0.003138125000987202,
+      "decode_tokens_per_second": 318.6616210907522,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 152,
+        "misses": 57,
+        "evictions": 0,
+        "bypasses": 0,
+        "entries": 1,
+        "stored_tensor_bytes": 2777088
+      },
+      "text": "solution",
+      "strict_correct": true
+    },
+    "token_parity": true
+  },
+  {
+    "id": "5ad5364c5b96ef001a10ab90",
+    "context_id": "81e7e049d2dcb1c0",
+    "is_impossible": true,
+    "references": [],
+    "prefix_tokens": 226,
+    "cold": {
+      "token_ids": [
+        34586,
+        2867,
+        151645
+      ],
+      "input_tokens": 249,
+      "prefix_tokens": 0,
+      "suffix_tokens": 249,
+      "status": "disabled",
+      "ttft_seconds": 0.022840707999421284,
+      "total_seconds": 0.02931408301810734,
+      "decode_seconds": 0.006473375018686056,
+      "decode_tokens_per_second": 308.95784567197114,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 152,
+        "misses": 57,
+        "evictions": 0,
+        "bypasses": 0,
+        "entries": 1,
+        "stored_tensor_bytes": 2777088
+      },
+      "text": "problem instance",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        34586,
+        2867,
+        151645
+      ],
+      "input_tokens": 249,
+      "prefix_tokens": 226,
+      "suffix_tokens": 23,
+      "status": "hit",
+      "ttft_seconds": 0.008524624980054796,
+      "total_seconds": 0.014880540984449908,
+      "decode_seconds": 0.006355916004395112,
+      "decode_tokens_per_second": 314.66746864134154,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 153,
+        "misses": 57,
+        "evictions": 0,
+        "bypasses": 0,
+        "entries": 1,
+        "stored_tensor_bytes": 2777088
+      },
+      "text": "problem instance",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "5ad5364c5b96ef001a10ab91",
+    "context_id": "81e7e049d2dcb1c0",
+    "is_impossible": true,
+    "references": [],
+    "prefix_tokens": 226,
+    "cold": {
+      "token_ids": [
+        34586,
+        2867,
+        151645
+      ],
+      "input_tokens": 245,
+      "prefix_tokens": 0,
+      "suffix_tokens": 245,
+      "status": "disabled",
+      "ttft_seconds": 0.022904541983734816,
+      "total_seconds": 0.02945483397343196,
+      "decode_seconds": 0.0065502919896971434,
+      "decode_tokens_per_second": 305.32990027708234,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 153,
+        "misses": 57,
+        "evictions": 0,
+        "bypasses": 0,
+        "entries": 1,
+        "stored_tensor_bytes": 2777088
+      },
+      "text": "problem instance",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        34586,
+        2867,
+        151645
+      ],
+      "input_tokens": 245,
+      "prefix_tokens": 226,
+      "suffix_tokens": 19,
+      "status": "hit",
+      "ttft_seconds": 0.008437666983809322,
+      "total_seconds": 0.014780041994526982,
+      "decode_seconds": 0.00634237501071766,
+      "decode_tokens_per_second": 315.33928482946857,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 154,
+        "misses": 57,
+        "evictions": 0,
+        "bypasses": 0,
+        "entries": 1,
+        "stored_tensor_bytes": 2777088
+      },
+      "text": "problem instance",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "5ad5364c5b96ef001a10ab92",
+    "context_id": "81e7e049d2dcb1c0",
+    "is_impossible": true,
+    "references": [],
+    "prefix_tokens": 226,
+    "cold": {
+      "token_ids": [
+        4851,
+        151645
+      ],
+      "input_tokens": 242,
+      "prefix_tokens": 0,
+      "suffix_tokens": 242,
+      "status": "disabled",
+      "ttft_seconds": 0.022989000019151717,
+      "total_seconds": 0.026176500017754734,
+      "decode_seconds": 0.003187499998603016,
+      "decode_tokens_per_second": 313.7254903335747,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 154,
+        "misses": 57,
+        "evictions": 0,
+        "bypasses": 0,
+        "entries": 1,
+        "stored_tensor_bytes": 2777088
+      },
+      "text": "instance",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        4851,
+        151645
+      ],
+      "input_tokens": 242,
+      "prefix_tokens": 226,
+      "suffix_tokens": 16,
+      "status": "hit",
+      "ttft_seconds": 0.007717625005170703,
+      "total_seconds": 0.010911124991253018,
+      "decode_seconds": 0.0031934999860823154,
+      "decode_tokens_per_second": 313.1360589817219,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 155,
+        "misses": 57,
+        "evictions": 0,
+        "bypasses": 0,
+        "entries": 1,
+        "stored_tensor_bytes": 2777088
+      },
+      "text": "instance",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "5ad5364c5b96ef001a10ab93",
+    "context_id": "81e7e049d2dcb1c0",
+    "is_impossible": true,
+    "references": [],
+    "prefix_tokens": 226,
+    "cold": {
+      "token_ids": [
+        2152,
+        28534,
+        151645
+      ],
+      "input_tokens": 241,
+      "prefix_tokens": 0,
+      "suffix_tokens": 241,
+      "status": "disabled",
+      "ttft_seconds": 0.022859666991280392,
+      "total_seconds": 0.029361082997638732,
+      "decode_seconds": 0.00650141600635834,
+      "decode_tokens_per_second": 307.6252924046106,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 155,
+        "misses": 57,
+        "evictions": 0,
+        "bypasses": 0,
+        "entries": 1,
+        "stored_tensor_bytes": 2777088
+      },
+      "text": "no_answer",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        2152,
+        28534,
+        151645
+      ],
+      "input_tokens": 241,
+      "prefix_tokens": 226,
+      "suffix_tokens": 15,
+      "status": "hit",
+      "ttft_seconds": 0.007658458984224126,
+      "total_seconds": 0.014015541994012892,
+      "decode_seconds": 0.0063570830097887665,
+      "decode_tokens_per_second": 314.6097033687242,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 156,
+        "misses": 57,
+        "evictions": 0,
+        "bypasses": 0,
+        "entries": 1,
+        "stored_tensor_bytes": 2777088
+      },
+      "text": "no_answer",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "5ad5364c5b96ef001a10ab94",
+    "context_id": "81e7e049d2dcb1c0",
+    "is_impossible": true,
+    "references": [],
+    "prefix_tokens": 226,
+    "cold": {
+      "token_ids": [
+        4851,
+        151645
+      ],
+      "input_tokens": 243,
+      "prefix_tokens": 0,
+      "suffix_tokens": 243,
+      "status": "disabled",
+      "ttft_seconds": 0.02308670899947174,
+      "total_seconds": 0.026375041983556002,
+      "decode_seconds": 0.0032883329840842634,
+      "decode_tokens_per_second": 304.10545551197595,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 156,
+        "misses": 57,
+        "evictions": 0,
+        "bypasses": 0,
+        "entries": 1,
+        "stored_tensor_bytes": 2777088
+      },
+      "text": "instance",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        4851,
+        151645
+      ],
+      "input_tokens": 243,
+      "prefix_tokens": 226,
+      "suffix_tokens": 17,
+      "status": "hit",
+      "ttft_seconds": 0.007879832992330194,
+      "total_seconds": 0.011063208017731085,
+      "decode_seconds": 0.003183375025400892,
+      "decode_tokens_per_second": 314.132011472342,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 157,
+        "misses": 57,
+        "evictions": 0,
+        "bypasses": 0,
+        "entries": 1,
+        "stored_tensor_bytes": 2777088
+      },
+      "text": "instance",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "56e1a0dccd28a01900c67a2e",
+    "context_id": "87233781b98f5ce1",
+    "is_impossible": false,
+    "references": [
+      "decision problems",
+      "as decision problems"
+    ],
+    "prefix_tokens": 161,
+    "cold": {
+      "token_ids": [
+        32981,
+        642,
+        320,
+        64,
+        11,
+        293,
+        11,
+        272,
+        8,
+        1741,
+        429,
+        279,
+        12687,
+        264,
+        24768,
+        293,
+        284,
+        272,
+        9982,
+        151645
+      ],
+      "input_tokens": 175,
+      "prefix_tokens": 0,
+      "suffix_tokens": 175,
+      "status": "disabled",
+      "ttft_seconds": 0.020381417009048164,
+      "total_seconds": 0.08033420800347812,
+      "decode_seconds": 0.05995279099442996,
+      "decode_tokens_per_second": 316.91602150374007,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 157,
+        "misses": 57,
+        "evictions": 0,
+        "bypasses": 0,
+        "entries": 1,
+        "stored_tensor_bytes": 2777088
+      },
+      "text": "triples (a, b, c) such that the relation a × b = c holds",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        32981,
+        642,
+        320,
+        64,
+        11,
+        293,
+        11,
+        272,
+        8,
+        1741,
+        429,
+        279,
+        12687,
+        264,
+        24768,
+        293,
+        284,
+        272,
+        9982,
+        151645
+      ],
+      "input_tokens": 175,
+      "prefix_tokens": 161,
+      "suffix_tokens": 14,
+      "status": "miss",
+      "ttft_seconds": 0.023616582999238744,
+      "total_seconds": 0.08379358300589956,
+      "decode_seconds": 0.06017700000666082,
+      "decode_tokens_per_second": 315.73524765104514,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 157,
+        "misses": 58,
+        "evictions": 0,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 4755456
+      },
+      "text": "triples (a, b, c) such that the relation a × b = c holds",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "56e1a0dccd28a01900c67a2f",
+    "context_id": "87233781b98f5ce1",
+    "is_impossible": false,
+    "references": [
+      "set of triples",
+      "triple",
+      "the set of triples (a, b, c) such that the relation a × b = c holds"
+    ],
+    "prefix_tokens": 161,
+    "cold": {
+      "token_ids": [
+        32981,
+        642,
+        151645
+      ],
+      "input_tokens": 183,
+      "prefix_tokens": 0,
+      "suffix_tokens": 183,
+      "status": "disabled",
+      "ttft_seconds": 0.020210167014738545,
+      "total_seconds": 0.0265574170043692,
+      "decode_seconds": 0.0063472499896306545,
+      "decode_tokens_per_second": 315.097089805404,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 157,
+        "misses": 58,
+        "evictions": 0,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 4755456
+      },
+      "text": "triples",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        32981,
+        642,
+        151645
+      ],
+      "input_tokens": 183,
+      "prefix_tokens": 161,
+      "suffix_tokens": 22,
+      "status": "hit",
+      "ttft_seconds": 0.008348292001755908,
+      "total_seconds": 0.014791417022934183,
+      "decode_seconds": 0.006443125021178275,
+      "decode_tokens_per_second": 310.4083800059887,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 158,
+        "misses": 58,
+        "evictions": 0,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 4755456
+      },
+      "text": "triples",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "5ad53f815b96ef001a10abe4",
+    "context_id": "87233781b98f5ce1",
+    "is_impossible": true,
+    "references": [],
+    "prefix_tokens": 161,
+    "cold": {
+      "token_ids": [
+        1688,
+        5322,
+        151645
+      ],
+      "input_tokens": 176,
+      "prefix_tokens": 0,
+      "suffix_tokens": 176,
+      "status": "disabled",
+      "ttft_seconds": 0.019889249990228564,
+      "total_seconds": 0.026324458012823015,
+      "decode_seconds": 0.006435208022594452,
+      "decode_tokens_per_second": 310.79026396316397,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 158,
+        "misses": 58,
+        "evictions": 0,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 4755456
+      },
+      "text": "function problems",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        1688,
+        5322,
+        151645
+      ],
+      "input_tokens": 176,
+      "prefix_tokens": 161,
+      "suffix_tokens": 15,
+      "status": "hit",
+      "ttft_seconds": 0.007687166013056412,
+      "total_seconds": 0.014109583018580452,
+      "decode_seconds": 0.006422417005524039,
+      "decode_tokens_per_second": 311.4092402096848,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 159,
+        "misses": 58,
+        "evictions": 0,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 4755456
+      },
+      "text": "function problems",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "5ad53f815b96ef001a10abe5",
+    "context_id": "87233781b98f5ce1",
+    "is_impossible": true,
+    "references": [],
+    "prefix_tokens": 161,
+    "cold": {
+      "token_ids": [
+        32981,
+        642,
+        151645
+      ],
+      "input_tokens": 178,
+      "prefix_tokens": 0,
+      "suffix_tokens": 178,
+      "status": "disabled",
+      "ttft_seconds": 0.020110040990402922,
+      "total_seconds": 0.026396707980893552,
+      "decode_seconds": 0.00628666699049063,
+      "decode_tokens_per_second": 318.13359973182133,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 159,
+        "misses": 58,
+        "evictions": 0,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 4755456
+      },
+      "text": "triples",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        32981,
+        642,
+        151645
+      ],
+      "input_tokens": 178,
+      "prefix_tokens": 161,
+      "suffix_tokens": 17,
+      "status": "hit",
+      "ttft_seconds": 0.007787250011460856,
+      "total_seconds": 0.014172333001624793,
+      "decode_seconds": 0.006385082990163937,
+      "decode_tokens_per_second": 313.23007125842383,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 160,
+        "misses": 58,
+        "evictions": 0,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 4755456
+      },
+      "text": "triples",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "5ad53f815b96ef001a10abe6",
+    "context_id": "87233781b98f5ce1",
+    "is_impossible": true,
+    "references": [],
+    "prefix_tokens": 161,
+    "cold": {
+      "token_ids": [
+        32981,
+        642,
+        151645
+      ],
+      "input_tokens": 177,
+      "prefix_tokens": 0,
+      "suffix_tokens": 177,
+      "status": "disabled",
+      "ttft_seconds": 0.019948917004512623,
+      "total_seconds": 0.026323625002987683,
+      "decode_seconds": 0.00637470799847506,
+      "decode_tokens_per_second": 313.73986078710345,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 160,
+        "misses": 58,
+        "evictions": 0,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 4755456
+      },
+      "text": "triples",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        32981,
+        642,
+        151645
+      ],
+      "input_tokens": 177,
+      "prefix_tokens": 161,
+      "suffix_tokens": 16,
+      "status": "hit",
+      "ttft_seconds": 0.007714250008575618,
+      "total_seconds": 0.014121665997663513,
+      "decode_seconds": 0.0064074159890878946,
+      "decode_tokens_per_second": 312.1383102651812,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 161,
+        "misses": 58,
+        "evictions": 0,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 4755456
+      },
+      "text": "triples",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "56e1ec83cd28a01900c67c0a",
+    "context_id": "963784841b5a9754",
+    "is_impossible": false,
+    "references": [
+      "The integer factorization problem",
+      "integer factorization",
+      "integer factorization problem"
+    ],
+    "prefix_tokens": 286,
+    "cold": {
+      "token_ids": [
+        11662,
+        8168,
+        2022,
+        151645
+      ],
+      "input_tokens": 302,
+      "prefix_tokens": 0,
+      "suffix_tokens": 302,
+      "status": "disabled",
+      "ttft_seconds": 0.028717750014038756,
+      "total_seconds": 0.03838016701047309,
+      "decode_seconds": 0.009662416996434331,
+      "decode_tokens_per_second": 310.4813217135085,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 161,
+        "misses": 58,
+        "evictions": 0,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 4755456
+      },
+      "text": "integer factorization",
+      "strict_correct": true
+    },
+    "cached": {
+      "token_ids": [
+        11662,
+        8168,
+        2022,
+        151645
+      ],
+      "input_tokens": 302,
+      "prefix_tokens": 286,
+      "suffix_tokens": 16,
+      "status": "miss",
+      "ttft_seconds": 0.027475083013996482,
+      "total_seconds": 0.03713716601487249,
+      "decode_seconds": 0.00966208300087601,
+      "decode_tokens_per_second": 310.49205432493244,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 161,
+        "misses": 59,
+        "evictions": 1,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 5492736
+      },
+      "text": "integer factorization",
+      "strict_correct": true
+    },
+    "token_parity": true
+  },
+  {
+    "id": "56e1ec83cd28a01900c67c0b",
+    "context_id": "963784841b5a9754",
+    "is_impossible": false,
+    "references": [
+      "k"
+    ],
+    "prefix_tokens": 286,
+    "cold": {
+      "token_ids": [
+        74,
+        151645
+      ],
+      "input_tokens": 314,
+      "prefix_tokens": 0,
+      "suffix_tokens": 314,
+      "status": "disabled",
+      "ttft_seconds": 0.028908333013532683,
+      "total_seconds": 0.032273624994559214,
+      "decode_seconds": 0.0033652919810265303,
+      "decode_tokens_per_second": 297.1510364146666,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 161,
+        "misses": 59,
+        "evictions": 1,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 5492736
+      },
+      "text": "k",
+      "strict_correct": true
+    },
+    "cached": {
+      "token_ids": [
+        74,
+        151645
+      ],
+      "input_tokens": 314,
+      "prefix_tokens": 286,
+      "suffix_tokens": 28,
+      "status": "hit",
+      "ttft_seconds": 0.00867983399075456,
+      "total_seconds": 0.01194587501231581,
+      "decode_seconds": 0.00326604102156125,
+      "decode_tokens_per_second": 306.18109001030695,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 162,
+        "misses": 59,
+        "evictions": 1,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 5492736
+      },
+      "text": "k",
+      "strict_correct": true
+    },
+    "token_parity": true
+  },
+  {
+    "id": "56e1ec83cd28a01900c67c0c",
+    "context_id": "963784841b5a9754",
+    "is_impossible": false,
+    "references": [
+      "modern cryptographic systems",
+      "RSA algorithm"
+    ],
+    "prefix_tokens": 286,
+    "cold": {
+      "token_ids": [
+        49789,
+        89129,
+        5942,
+        151645
+      ],
+      "input_tokens": 308,
+      "prefix_tokens": 0,
+      "suffix_tokens": 308,
+      "status": "disabled",
+      "ttft_seconds": 0.029025208990788087,
+      "total_seconds": 0.0389558750030119,
+      "decode_seconds": 0.00993066601222381,
+      "decode_tokens_per_second": 302.09454192772705,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 162,
+        "misses": 59,
+        "evictions": 1,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 5492736
+      },
+      "text": "modern cryptographic systems",
+      "strict_correct": true
+    },
+    "cached": {
+      "token_ids": [
+        49789,
+        89129,
+        5942,
+        151645
+      ],
+      "input_tokens": 308,
+      "prefix_tokens": 286,
+      "suffix_tokens": 22,
+      "status": "hit",
+      "ttft_seconds": 0.008585625007981434,
+      "total_seconds": 0.01836429099785164,
+      "decode_seconds": 0.009778665989870206,
+      "decode_tokens_per_second": 306.7903130250816,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 163,
+        "misses": 59,
+        "evictions": 1,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 5492736
+      },
+      "text": "modern cryptographic systems",
+      "strict_correct": true
+    },
+    "token_parity": true
+  },
+  {
+    "id": "56e1ec83cd28a01900c67c0e",
+    "context_id": "963784841b5a9754",
+    "is_impossible": false,
+    "references": [
+      "the general number field sieve",
+      "RSA",
+      "general number field sieve"
+    ],
+    "prefix_tokens": 286,
+    "cold": {
+      "token_ids": [
+        1782,
+        4586,
+        1372,
+        2070,
+        74336,
+        151645
+      ],
+      "input_tokens": 306,
+      "prefix_tokens": 0,
+      "suffix_tokens": 306,
+      "status": "disabled",
+      "ttft_seconds": 0.02845083302236162,
+      "total_seconds": 0.04459354199934751,
+      "decode_seconds": 0.016142708976985887,
+      "decode_tokens_per_second": 309.7373561728908,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 163,
+        "misses": 59,
+        "evictions": 1,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 5492736
+      },
+      "text": "the general number field sieve",
+      "strict_correct": true
+    },
+    "cached": {
+      "token_ids": [
+        1782,
+        4586,
+        1372,
+        2070,
+        74336,
+        151645
+      ],
+      "input_tokens": 306,
+      "prefix_tokens": 286,
+      "suffix_tokens": 20,
+      "status": "hit",
+      "ttft_seconds": 0.008743417012738064,
+      "total_seconds": 0.02479691698681563,
+      "decode_seconds": 0.016053499974077567,
+      "decode_tokens_per_second": 311.4585609414622,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 164,
+        "misses": 59,
+        "evictions": 1,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 5492736
+      },
+      "text": "the general number field sieve",
+      "strict_correct": true
+    },
+    "token_parity": true
+  },
+  {
+    "id": "5ad56aea5b96ef001a10ae48",
+    "context_id": "963784841b5a9754",
+    "is_impossible": true,
+    "references": [],
+    "prefix_tokens": 286,
+    "cold": {
+      "token_ids": [
+        11662,
+        8168,
+        2022,
+        3491,
+        151645
+      ],
+      "input_tokens": 298,
+      "prefix_tokens": 0,
+      "suffix_tokens": 298,
+      "status": "disabled",
+      "ttft_seconds": 0.02864637499442324,
+      "total_seconds": 0.04159962499397807,
+      "decode_seconds": 0.012953249999554828,
+      "decode_tokens_per_second": 308.8028101161848,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 164,
+        "misses": 59,
+        "evictions": 1,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 5492736
+      },
+      "text": "integer factorization problem",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        11662,
+        8168,
+        2022,
+        3491,
+        151645
+      ],
+      "input_tokens": 298,
+      "prefix_tokens": 286,
+      "suffix_tokens": 12,
+      "status": "hit",
+      "ttft_seconds": 0.007697124994592741,
+      "total_seconds": 0.020507415989413857,
+      "decode_seconds": 0.012810290994821116,
+      "decode_tokens_per_second": 312.24895684392345,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 165,
+        "misses": 59,
+        "evictions": 1,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 5492736
+      },
+      "text": "integer factorization problem",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "5ad56aea5b96ef001a10ae49",
+    "context_id": "963784841b5a9754",
+    "is_impossible": true,
+    "references": [],
+    "prefix_tokens": 286,
+    "cold": {
+      "token_ids": [
+        2753,
+        28534,
+        151645
+      ],
+      "input_tokens": 303,
+      "prefix_tokens": 0,
+      "suffix_tokens": 303,
+      "status": "disabled",
+      "ttft_seconds": 0.0283489580033347,
+      "total_seconds": 0.03479470801539719,
+      "decode_seconds": 0.00644575001206249,
+      "decode_tokens_per_second": 310.28196815843415,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 165,
+        "misses": 59,
+        "evictions": 1,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 5492736
+      },
+      "text": "No_answer",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        2753,
+        28534,
+        151645
+      ],
+      "input_tokens": 303,
+      "prefix_tokens": 286,
+      "suffix_tokens": 17,
+      "status": "hit",
+      "ttft_seconds": 0.007937624992337078,
+      "total_seconds": 0.01436345899128355,
+      "decode_seconds": 0.006425833998946473,
+      "decode_tokens_per_second": 311.24364562295005,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 166,
+        "misses": 59,
+        "evictions": 1,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 5492736
+      },
+      "text": "No_answer",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "5ad56aea5b96ef001a10ae4a",
+    "context_id": "963784841b5a9754",
+    "is_impossible": true,
+    "references": [],
+    "prefix_tokens": 286,
+    "cold": {
+      "token_ids": [
+        2753,
+        73040,
+        36664,
+        51613,
+        4698,
+        151645
+      ],
+      "input_tokens": 309,
+      "prefix_tokens": 0,
+      "suffix_tokens": 309,
+      "status": "disabled",
+      "ttft_seconds": 0.028803208988392726,
+      "total_seconds": 0.04488966698409058,
+      "decode_seconds": 0.016086457995697856,
+      "decode_tokens_per_second": 310.8204429674447,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 166,
+        "misses": 59,
+        "evictions": 1,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 5492736
+      },
+      "text": "No_factors_more_than_k",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        2753,
+        73040,
+        36664,
+        51613,
+        4698,
+        151645
+      ],
+      "input_tokens": 309,
+      "prefix_tokens": 286,
+      "suffix_tokens": 23,
+      "status": "hit",
+      "ttft_seconds": 0.008741375000681728,
+      "total_seconds": 0.02497229099390097,
+      "decode_seconds": 0.01623091599321924,
+      "decode_tokens_per_second": 308.05408654008437,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 167,
+        "misses": 59,
+        "evictions": 1,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 5492736
+      },
+      "text": "No_factors_more_than_k",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "5ad56aea5b96ef001a10ae4b",
+    "context_id": "963784841b5a9754",
+    "is_impossible": true,
+    "references": [],
+    "prefix_tokens": 286,
+    "cold": {
+      "token_ids": [
+        11662,
+        8168,
+        2022,
+        151645
+      ],
+      "input_tokens": 306,
+      "prefix_tokens": 0,
+      "suffix_tokens": 306,
+      "status": "disabled",
+      "ttft_seconds": 0.028600457997526973,
+      "total_seconds": 0.03842174998135306,
+      "decode_seconds": 0.009821291983826086,
+      "decode_tokens_per_second": 305.4587935009431,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 167,
+        "misses": 59,
+        "evictions": 1,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 5492736
+      },
+      "text": "integer factorization",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        11662,
+        8168,
+        2022,
+        151645
+      ],
+      "input_tokens": 306,
+      "prefix_tokens": 286,
+      "suffix_tokens": 20,
+      "status": "hit",
+      "ttft_seconds": 0.00855045797652565,
+      "total_seconds": 0.018146291986340657,
+      "decode_seconds": 0.009595834009815007,
+      "decode_tokens_per_second": 312.6356705348882,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 168,
+        "misses": 59,
+        "evictions": 1,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 5492736
+      },
+      "text": "integer factorization",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "5ad56aea5b96ef001a10ae4c",
+    "context_id": "963784841b5a9754",
+    "is_impossible": true,
+    "references": [],
+    "prefix_tokens": 286,
+    "cold": {
+      "token_ids": [
+        24595,
+        1372,
+        2070,
+        74336,
+        151645
+      ],
+      "input_tokens": 307,
+      "prefix_tokens": 0,
+      "suffix_tokens": 307,
+      "status": "disabled",
+      "ttft_seconds": 0.028466165997087955,
+      "total_seconds": 0.041344208002556115,
+      "decode_seconds": 0.01287804200546816,
+      "decode_tokens_per_second": 310.60622401305693,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 168,
+        "misses": 59,
+        "evictions": 1,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 5492736
+      },
+      "text": "general number field sieve",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        24595,
+        1372,
+        2070,
+        74336,
+        151645
+      ],
+      "input_tokens": 307,
+      "prefix_tokens": 286,
+      "suffix_tokens": 21,
+      "status": "hit",
+      "ttft_seconds": 0.008533874992281199,
+      "total_seconds": 0.02127695898525417,
+      "decode_seconds": 0.01274308399297297,
+      "decode_tokens_per_second": 313.8957572755351,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 169,
+        "misses": 59,
+        "evictions": 1,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 5492736
+      },
+      "text": "general number field sieve",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "56e2042ecd28a01900c67c1e",
+    "context_id": "af9fe5f7b4eb7c9b",
+    "is_impossible": false,
+    "references": [
+      "John Myhill"
+    ],
+    "prefix_tokens": 169,
+    "cold": {
+      "token_ids": [
+        13079,
+        3017,
+        27507,
+        151645
+      ],
+      "input_tokens": 190,
+      "prefix_tokens": 0,
+      "suffix_tokens": 190,
+      "status": "disabled",
+      "ttft_seconds": 0.02040754200424999,
+      "total_seconds": 0.030034708004677668,
+      "decode_seconds": 0.009627166000427678,
+      "decode_tokens_per_second": 311.61818544177254,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 169,
+        "misses": 59,
+        "evictions": 1,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 5492736
+      },
+      "text": "John Myhill",
+      "strict_correct": true
+    },
+    "cached": {
+      "token_ids": [
+        13079,
+        3017,
+        27507,
+        151645
+      ],
+      "input_tokens": 190,
+      "prefix_tokens": 169,
+      "suffix_tokens": 21,
+      "status": "miss",
+      "ttft_seconds": 0.024276667012600228,
+      "total_seconds": 0.033964208007091656,
+      "decode_seconds": 0.009687540994491428,
+      "decode_tokens_per_second": 309.67610890171954,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 169,
+        "misses": 60,
+        "evictions": 2,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 5591040
+      },
+      "text": "John Myhill",
+      "strict_correct": true
+    },
+    "token_parity": true
+  },
+  {
+    "id": "56e2042ecd28a01900c67c1f",
+    "context_id": "af9fe5f7b4eb7c9b",
+    "is_impossible": false,
+    "references": [
+      "1961"
+    ],
+    "prefix_tokens": 169,
+    "cold": {
+      "token_ids": [
+        16,
+        24,
+        21,
+        16,
+        151645
+      ],
+      "input_tokens": 188,
+      "prefix_tokens": 0,
+      "suffix_tokens": 188,
+      "status": "disabled",
+      "ttft_seconds": 0.019991750014014542,
+      "total_seconds": 0.03274429100565612,
+      "decode_seconds": 0.012752540991641581,
+      "decode_tokens_per_second": 313.66297921502286,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 169,
+        "misses": 60,
+        "evictions": 2,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 5591040
+      },
+      "text": "1961",
+      "strict_correct": true
+    },
+    "cached": {
+      "token_ids": [
+        16,
+        24,
+        21,
+        16,
+        151645
+      ],
+      "input_tokens": 188,
+      "prefix_tokens": 169,
+      "suffix_tokens": 19,
+      "status": "hit",
+      "ttft_seconds": 0.008469041000353172,
+      "total_seconds": 0.02124104101676494,
+      "decode_seconds": 0.012772000016411766,
+      "decode_tokens_per_second": 313.1850919871656,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 170,
+        "misses": 60,
+        "evictions": 2,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 5591040
+      },
+      "text": "1961",
+      "strict_correct": true
+    },
+    "token_parity": true
+  },
+  {
+    "id": "56e2042ecd28a01900c67c20",
+    "context_id": "af9fe5f7b4eb7c9b",
+    "is_impossible": false,
+    "references": [
+      "Hisao Yamada"
+    ],
+    "prefix_tokens": 169,
+    "cold": {
+      "token_ids": [
+        56,
+        309,
+        2584,
+        151645
+      ],
+      "input_tokens": 199,
+      "prefix_tokens": 0,
+      "suffix_tokens": 199,
+      "status": "disabled",
+      "ttft_seconds": 0.021987999993143603,
+      "total_seconds": 0.031537125003524125,
+      "decode_seconds": 0.009549125010380521,
+      "decode_tokens_per_second": 314.1649100560318,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 170,
+        "misses": 60,
+        "evictions": 2,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 5591040
+      },
+      "text": "Yamada",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        56,
+        309,
+        2584,
+        151645
+      ],
+      "input_tokens": 199,
+      "prefix_tokens": 169,
+      "suffix_tokens": 30,
+      "status": "hit",
+      "ttft_seconds": 0.008662916981847957,
+      "total_seconds": 0.018241124984342605,
+      "decode_seconds": 0.009578208002494648,
+      "decode_tokens_per_second": 313.210988863329,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 171,
+        "misses": 60,
+        "evictions": 2,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 5591040
+      },
+      "text": "Yamada",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "5ad5719f5b96ef001a10aeec",
+    "context_id": "af9fe5f7b4eb7c9b",
+    "is_impossible": true,
+    "references": [],
+    "prefix_tokens": 169,
+    "cold": {
+      "token_ids": [
+        13079,
+        3017,
+        27507,
+        151645
+      ],
+      "input_tokens": 186,
+      "prefix_tokens": 0,
+      "suffix_tokens": 186,
+      "status": "disabled",
+      "ttft_seconds": 0.02014566698926501,
+      "total_seconds": 0.029619457985972986,
+      "decode_seconds": 0.009473790996707976,
+      "decode_tokens_per_second": 316.6630972799023,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 171,
+        "misses": 60,
+        "evictions": 2,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 5591040
+      },
+      "text": "John Myhill",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        13079,
+        3017,
+        27507,
+        151645
+      ],
+      "input_tokens": 186,
+      "prefix_tokens": 169,
+      "suffix_tokens": 17,
+      "status": "hit",
+      "ttft_seconds": 0.007854416995542124,
+      "total_seconds": 0.017470457998570055,
+      "decode_seconds": 0.00961604100302793,
+      "decode_tokens_per_second": 311.9787029875757,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 172,
+        "misses": 60,
+        "evictions": 2,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 5591040
+      },
+      "text": "John Myhill",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "5ad5719f5b96ef001a10aeed",
+    "context_id": "af9fe5f7b4eb7c9b",
+    "is_impossible": true,
+    "references": [],
+    "prefix_tokens": 169,
+    "cold": {
+      "token_ids": [
+        13079,
+        3017,
+        27507,
+        151645
+      ],
+      "input_tokens": 190,
+      "prefix_tokens": 0,
+      "suffix_tokens": 190,
+      "status": "disabled",
+      "ttft_seconds": 0.020129416981944814,
+      "total_seconds": 0.029512125009205192,
+      "decode_seconds": 0.009382708027260378,
+      "decode_tokens_per_second": 319.73711547709314,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 172,
+        "misses": 60,
+        "evictions": 2,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 5591040
+      },
+      "text": "John Myhill",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        13079,
+        3017,
+        27507,
+        151645
+      ],
+      "input_tokens": 190,
+      "prefix_tokens": 169,
+      "suffix_tokens": 21,
+      "status": "hit",
+      "ttft_seconds": 0.008330957993166521,
+      "total_seconds": 0.017835707985796034,
+      "decode_seconds": 0.009504749992629513,
+      "decode_tokens_per_second": 315.6316581000404,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 173,
+        "misses": 60,
+        "evictions": 2,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 5591040
+      },
+      "text": "John Myhill",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "5ad5719f5b96ef001a10aeee",
+    "context_id": "af9fe5f7b4eb7c9b",
+    "is_impossible": true,
+    "references": [],
+    "prefix_tokens": 169,
+    "cold": {
+      "token_ids": [
+        16,
+        24,
+        21,
+        16,
+        151645
+      ],
+      "input_tokens": 187,
+      "prefix_tokens": 0,
+      "suffix_tokens": 187,
+      "status": "disabled",
+      "ttft_seconds": 0.020027999999001622,
+      "total_seconds": 0.032679708005161956,
+      "decode_seconds": 0.012651708006160334,
+      "decode_tokens_per_second": 316.16284521049107,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 173,
+        "misses": 60,
+        "evictions": 2,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 5591040
+      },
+      "text": "1961",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        16,
+        24,
+        21,
+        16,
+        151645
+      ],
+      "input_tokens": 187,
+      "prefix_tokens": 169,
+      "suffix_tokens": 18,
+      "status": "hit",
+      "ttft_seconds": 0.008465624996460974,
+      "total_seconds": 0.021265874995151535,
+      "decode_seconds": 0.01280024999869056,
+      "decode_tokens_per_second": 312.49389663554945,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 174,
+        "misses": 60,
+        "evictions": 2,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 5591040
+      },
+      "text": "1961",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "5ad5719f5b96ef001a10aeef",
+    "context_id": "af9fe5f7b4eb7c9b",
+    "is_impossible": true,
+    "references": [],
+    "prefix_tokens": 169,
+    "cold": {
+      "token_ids": [
+        15986,
+        3441,
+        33554,
+        2584,
+        151645
+      ],
+      "input_tokens": 189,
+      "prefix_tokens": 0,
+      "suffix_tokens": 189,
+      "status": "disabled",
+      "ttft_seconds": 0.020102291979128495,
+      "total_seconds": 0.032876624987693503,
+      "decode_seconds": 0.012774333008565009,
+      "decode_tokens_per_second": 313.12789460851354,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 174,
+        "misses": 60,
+        "evictions": 2,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 5591040
+      },
+      "text": "Hisao Yamada",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        15986,
+        3441,
+        33554,
+        2584,
+        151645
+      ],
+      "input_tokens": 189,
+      "prefix_tokens": 169,
+      "suffix_tokens": 20,
+      "status": "hit",
+      "ttft_seconds": 0.008435083000222221,
+      "total_seconds": 0.021272500016493723,
+      "decode_seconds": 0.012837417016271502,
+      "decode_tokens_per_second": 311.5891611941854,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 175,
+        "misses": 60,
+        "evictions": 2,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 5591040
+      },
+      "text": "Hisao Yamada",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "5ad5719f5b96ef001a10aef0",
+    "context_id": "af9fe5f7b4eb7c9b",
+    "is_impossible": true,
+    "references": [],
+    "prefix_tokens": 169,
+    "cold": {
+      "token_ids": [
+        33,
+        50280,
+        1163,
+        585,
+        426,
+        268,
+        65,
+        4640,
+        151645
+      ],
+      "input_tokens": 189,
+      "prefix_tokens": 0,
+      "suffix_tokens": 189,
+      "status": "disabled",
+      "ttft_seconds": 0.02025104101630859,
+      "total_seconds": 0.045763750007608905,
+      "decode_seconds": 0.025512708991300315,
+      "decode_tokens_per_second": 313.569209868225,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 175,
+        "misses": 60,
+        "evictions": 2,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 5591040
+      },
+      "text": "Boris Trakhtenbrot",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        33,
+        50280,
+        1163,
+        585,
+        426,
+        268,
+        65,
+        4640,
+        151645
+      ],
+      "input_tokens": 189,
+      "prefix_tokens": 169,
+      "suffix_tokens": 20,
+      "status": "hit",
+      "ttft_seconds": 0.008406749984715134,
+      "total_seconds": 0.03401391700026579,
+      "decode_seconds": 0.025607167015550658,
+      "decode_tokens_per_second": 312.41253650361944,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 176,
+        "misses": 60,
+        "evictions": 2,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 5591040
+      },
+      "text": "Boris Trakhtenbrot",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "56e1fc57e3433e140042322c",
+    "context_id": "c8ae47af8e74eda8",
+    "is_impossible": false,
+    "references": [
+      "intractable problems",
+      "intractable"
+    ],
+    "prefix_tokens": 365,
+    "cold": {
+      "token_ids": [
+        258,
+        2144,
+        480,
+        5322,
+        151645
+      ],
+      "input_tokens": 387,
+      "prefix_tokens": 0,
+      "suffix_tokens": 387,
+      "status": "disabled",
+      "ttft_seconds": 0.03595620801206678,
+      "total_seconds": 0.048819541989360005,
+      "decode_seconds": 0.012863333977293223,
+      "decode_tokens_per_second": 310.96137339362645,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 176,
+        "misses": 60,
+        "evictions": 2,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 5591040
+      },
+      "text": "intractable problems",
+      "strict_correct": true
+    },
+    "cached": {
+      "token_ids": [
+        258,
+        2144,
+        480,
+        5322,
+        151645
+      ],
+      "input_tokens": 387,
+      "prefix_tokens": 365,
+      "suffix_tokens": 22,
+      "status": "miss",
+      "ttft_seconds": 0.03406145900953561,
+      "total_seconds": 0.046888875018339604,
+      "decode_seconds": 0.012827416008803993,
+      "decode_tokens_per_second": 311.832094418286,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 176,
+        "misses": 61,
+        "evictions": 3,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 6561792
+      },
+      "text": "intractable problems",
+      "strict_correct": true
+    },
+    "token_parity": true
+  },
+  {
+    "id": "56e1fc57e3433e140042322f",
+    "context_id": "c8ae47af8e74eda8",
+    "is_impossible": false,
+    "references": [
+      "exponential-time algorithms",
+      "exponential-time"
+    ],
+    "prefix_tokens": 365,
+    "cold": {
+      "token_ids": [
+        258,
+        2144,
+        480,
+        5322,
+        151645
+      ],
+      "input_tokens": 389,
+      "prefix_tokens": 0,
+      "suffix_tokens": 389,
+      "status": "disabled",
+      "ttft_seconds": 0.03617225002381019,
+      "total_seconds": 0.04922658400028013,
+      "decode_seconds": 0.013054333976469934,
+      "decode_tokens_per_second": 306.4116489749601,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 176,
+        "misses": 61,
+        "evictions": 3,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 6561792
+      },
+      "text": "intractable problems",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        258,
+        2144,
+        480,
+        5322,
+        151645
+      ],
+      "input_tokens": 389,
+      "prefix_tokens": 365,
+      "suffix_tokens": 24,
+      "status": "hit",
+      "ttft_seconds": 0.00876183301443234,
+      "total_seconds": 0.021715167007641867,
+      "decode_seconds": 0.012953333993209526,
+      "decode_tokens_per_second": 308.80080773775336,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 177,
+        "misses": 61,
+        "evictions": 3,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 6561792
+      },
+      "text": "intractable problems",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "56e1fc57e3433e1400423230",
+    "context_id": "c8ae47af8e74eda8",
+    "is_impossible": false,
+    "references": [
+      "NP-complete problems",
+      "NP-complete"
+    ],
+    "prefix_tokens": 365,
+    "cold": {
+      "token_ids": [
+        258,
+        2144,
+        480,
+        5322,
+        151645
+      ],
+      "input_tokens": 395,
+      "prefix_tokens": 0,
+      "suffix_tokens": 395,
+      "status": "disabled",
+      "ttft_seconds": 0.03644158400129527,
+      "total_seconds": 0.049564374989131466,
+      "decode_seconds": 0.013122790987836197,
+      "decode_tokens_per_second": 304.8132065585505,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 177,
+        "misses": 61,
+        "evictions": 3,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 6561792
+      },
+      "text": "intractable problems",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        258,
+        2144,
+        480,
+        5322,
+        151645
+      ],
+      "input_tokens": 395,
+      "prefix_tokens": 365,
+      "suffix_tokens": 30,
+      "status": "hit",
+      "ttft_seconds": 0.008849250007187948,
+      "total_seconds": 0.021683416998712346,
+      "decode_seconds": 0.012834166991524398,
+      "decode_tokens_per_second": 311.6680656127955,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 178,
+        "misses": 61,
+        "evictions": 3,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 6561792
+      },
+      "text": "intractable problems",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "5ad56e5c5b96ef001a10ae9e",
+    "context_id": "c8ae47af8e74eda8",
+    "is_impossible": true,
+    "references": [],
+    "prefix_tokens": 365,
+    "cold": {
+      "token_ids": [
+        258,
+        2144,
+        480,
+        5322,
+        151645
+      ],
+      "input_tokens": 394,
+      "prefix_tokens": 0,
+      "suffix_tokens": 394,
+      "status": "disabled",
+      "ttft_seconds": 0.03598479201900773,
+      "total_seconds": 0.04902600002242252,
+      "decode_seconds": 0.013041208003414795,
+      "decode_tokens_per_second": 306.72005223385855,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 178,
+        "misses": 61,
+        "evictions": 3,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 6561792
+      },
+      "text": "intractable problems",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        258,
+        2144,
+        480,
+        5322,
+        151645
+      ],
+      "input_tokens": 394,
+      "prefix_tokens": 365,
+      "suffix_tokens": 29,
+      "status": "hit",
+      "ttft_seconds": 0.008696667006006464,
+      "total_seconds": 0.02141966699855402,
+      "decode_seconds": 0.012722999992547557,
+      "decode_tokens_per_second": 314.3912601071275,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 179,
+        "misses": 61,
+        "evictions": 3,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 6561792
+      },
+      "text": "intractable problems",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "5ad56e5c5b96ef001a10ae9f",
+    "context_id": "c8ae47af8e74eda8",
+    "is_impossible": true,
+    "references": [],
+    "prefix_tokens": 365,
+    "cold": {
+      "token_ids": [
+        9896,
+        25358,
+        7246,
+        9904,
+        151645
+      ],
+      "input_tokens": 383,
+      "prefix_tokens": 0,
+      "suffix_tokens": 383,
+      "status": "disabled",
+      "ttft_seconds": 0.03358904100605287,
+      "total_seconds": 0.04658891601138748,
+      "decode_seconds": 0.012999875005334616,
+      "decode_tokens_per_second": 307.69526617437197,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 179,
+        "misses": 61,
+        "evictions": 3,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 6561792
+      },
+      "text": "polynomial-time solutions",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        9896,
+        25358,
+        7246,
+        9904,
+        151645
+      ],
+      "input_tokens": 383,
+      "prefix_tokens": 365,
+      "suffix_tokens": 18,
+      "status": "hit",
+      "ttft_seconds": 0.008613208978204057,
+      "total_seconds": 0.021580833999905735,
+      "decode_seconds": 0.012967625021701679,
+      "decode_tokens_per_second": 308.46049244220814,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 180,
+        "misses": 61,
+        "evictions": 3,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 6561792
+      },
+      "text": "polynomial-time solutions",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "5ad56e5c5b96ef001a10aea0",
+    "context_id": "c8ae47af8e74eda8",
+    "is_impossible": true,
+    "references": [],
+    "prefix_tokens": 365,
+    "cold": {
+      "token_ids": [
+        34,
+        674,
+        5604,
+        4142,
+        2715,
+        54620,
+        17394,
+        151645
+      ],
+      "input_tokens": 392,
+      "prefix_tokens": 0,
+      "suffix_tokens": 392,
+      "status": "disabled",
+      "ttft_seconds": 0.035952167003415525,
+      "total_seconds": 0.058493708027526736,
+      "decode_seconds": 0.02254154102411121,
+      "decode_tokens_per_second": 310.5377752351784,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 180,
+        "misses": 61,
+        "evictions": 3,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 6561792
+      },
+      "text": "Cobham–Edmonds thesis",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        34,
+        674,
+        5604,
+        4142,
+        2715,
+        54620,
+        17394,
+        151645
+      ],
+      "input_tokens": 392,
+      "prefix_tokens": 365,
+      "suffix_tokens": 27,
+      "status": "hit",
+      "ttft_seconds": 0.008861917012836784,
+      "total_seconds": 0.03154587501194328,
+      "decode_seconds": 0.022683957999106497,
+      "decode_tokens_per_second": 308.58812206739776,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 181,
+        "misses": 61,
+        "evictions": 3,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 6561792
+      },
+      "text": "Cobham–Edmonds thesis",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "5ad56e5c5b96ef001a10aea1",
+    "context_id": "c8ae47af8e74eda8",
+    "is_impossible": true,
+    "references": [],
+    "prefix_tokens": 365,
+    "cold": {
+      "token_ids": [
+        1204,
+        2613,
+        13121,
+        151645
+      ],
+      "input_tokens": 399,
+      "prefix_tokens": 0,
+      "suffix_tokens": 399,
+      "status": "disabled",
+      "ttft_seconds": 0.036201832990627736,
+      "total_seconds": 0.046045833005337045,
+      "decode_seconds": 0.009844000014709309,
+      "decode_tokens_per_second": 304.7541645182118,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 181,
+        "misses": 61,
+        "evictions": 3,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 6561792
+      },
+      "text": "very small instances",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        1204,
+        2613,
+        13121,
+        151645
+      ],
+      "input_tokens": 399,
+      "prefix_tokens": 365,
+      "suffix_tokens": 34,
+      "status": "hit",
+      "ttft_seconds": 0.010282125003868714,
+      "total_seconds": 0.020274542010156438,
+      "decode_seconds": 0.009992417006287724,
+      "decode_tokens_per_second": 300.2276624476592,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 182,
+        "misses": 61,
+        "evictions": 3,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 6561792
+      },
+      "text": "very small instances",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "5ad56e5c5b96ef001a10aea2",
+    "context_id": "c8ae47af8e74eda8",
+    "is_impossible": true,
+    "references": [],
+    "prefix_tokens": 365,
+    "cold": {
+      "token_ids": [
+        9896,
+        25358,
+        882,
+        12111,
+        151645
+      ],
+      "input_tokens": 376,
+      "prefix_tokens": 0,
+      "suffix_tokens": 376,
+      "status": "disabled",
+      "ttft_seconds": 0.03377779200673103,
+      "total_seconds": 0.046725124993827194,
+      "decode_seconds": 0.01294733298709616,
+      "decode_tokens_per_second": 308.9439349390769,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 182,
+        "misses": 61,
+        "evictions": 3,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 6561792
+      },
+      "text": "polynomial time algorithm",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        9896,
+        25358,
+        882,
+        12111,
+        151645
+      ],
+      "input_tokens": 376,
+      "prefix_tokens": 365,
+      "suffix_tokens": 11,
+      "status": "hit",
+      "ttft_seconds": 0.007695082982536405,
+      "total_seconds": 0.02069258299889043,
+      "decode_seconds": 0.012997500016354024,
+      "decode_tokens_per_second": 307.7514902840565,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 183,
+        "misses": 61,
+        "evictions": 3,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 6561792
+      },
+      "text": "polynomial time algorithm",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "56e1b754cd28a01900c67abc",
+    "context_id": "cd42b52ace393333",
+    "is_impossible": false,
+    "references": [
+      "complexity resources",
+      "complexity"
+    ],
+    "prefix_tokens": 131,
+    "cold": {
+      "token_ids": [
+        23247,
+        487,
+        4963,
+        151645
+      ],
+      "input_tokens": 148,
+      "prefix_tokens": 0,
+      "suffix_tokens": 148,
+      "status": "disabled",
+      "ttft_seconds": 0.017887166992295533,
+      "total_seconds": 0.027296791988192126,
+      "decode_seconds": 0.009409624995896593,
+      "decode_tokens_per_second": 318.82248243774416,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 183,
+        "misses": 61,
+        "evictions": 3,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 6561792
+      },
+      "text": "complexity resources",
+      "strict_correct": true
+    },
+    "cached": {
+      "token_ids": [
+        23247,
+        487,
+        4963,
+        151645
+      ],
+      "input_tokens": 148,
+      "prefix_tokens": 131,
+      "suffix_tokens": 17,
+      "status": "miss",
+      "ttft_seconds": 0.022006874991348013,
+      "total_seconds": 0.031483041995670646,
+      "decode_seconds": 0.009476167004322633,
+      "decode_tokens_per_second": 316.5836987287713,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 183,
+        "misses": 62,
+        "evictions": 4,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 6094848
+      },
+      "text": "complexity resources",
+      "strict_correct": true
+    },
+    "token_parity": true
+  },
+  {
+    "id": "56e1b754cd28a01900c67abd",
+    "context_id": "cd42b52ace393333",
+    "is_impossible": false,
+    "references": [
+      "computational resource",
+      "computational"
+    ],
+    "prefix_tokens": 131,
+    "cold": {
+      "token_ids": [
+        50171,
+        23094,
+        151645
+      ],
+      "input_tokens": 150,
+      "prefix_tokens": 0,
+      "suffix_tokens": 150,
+      "status": "disabled",
+      "ttft_seconds": 0.017703582998365164,
+      "total_seconds": 0.02405429200734943,
+      "decode_seconds": 0.006350709008984268,
+      "decode_tokens_per_second": 314.9254669314285,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 183,
+        "misses": 62,
+        "evictions": 4,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 6094848
+      },
+      "text": "communication complexity",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        50171,
+        23094,
+        151645
+      ],
+      "input_tokens": 150,
+      "prefix_tokens": 131,
+      "suffix_tokens": 19,
+      "status": "hit",
+      "ttft_seconds": 0.008324249996803701,
+      "total_seconds": 0.01463266700739041,
+      "decode_seconds": 0.006308417010586709,
+      "decode_tokens_per_second": 317.03674577055136,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 184,
+        "misses": 62,
+        "evictions": 4,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 6094848
+      },
+      "text": "communication complexity",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "56e1b754cd28a01900c67abe",
+    "context_id": "cd42b52ace393333",
+    "is_impossible": false,
+    "references": [
+      "Blum complexity axioms",
+      "the Blum complexity axioms"
+    ],
+    "prefix_tokens": 131,
+    "cold": {
+      "token_ids": [
+        4923,
+        372,
+        23094,
+        3859,
+        90169,
+        151645
+      ],
+      "input_tokens": 146,
+      "prefix_tokens": 0,
+      "suffix_tokens": 146,
+      "status": "disabled",
+      "ttft_seconds": 0.017443290998926386,
+      "total_seconds": 0.033268916013184935,
+      "decode_seconds": 0.01582562501425855,
+      "decode_tokens_per_second": 315.9432878951136,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 184,
+        "misses": 62,
+        "evictions": 4,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 6094848
+      },
+      "text": "Blum complexity axioms",
+      "strict_correct": true
+    },
+    "cached": {
+      "token_ids": [
+        4923,
+        372,
+        23094,
+        3859,
+        90169,
+        151645
+      ],
+      "input_tokens": 146,
+      "prefix_tokens": 131,
+      "suffix_tokens": 15,
+      "status": "hit",
+      "ttft_seconds": 0.007655624998733401,
+      "total_seconds": 0.023458333016606048,
+      "decode_seconds": 0.015802708017872646,
+      "decode_tokens_per_second": 316.4014670362237,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 185,
+        "misses": 62,
+        "evictions": 4,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 6094848
+      },
+      "text": "Blum complexity axioms",
+      "strict_correct": true
+    },
+    "token_parity": true
+  },
+  {
+    "id": "56e1b754cd28a01900c67abf",
+    "context_id": "cd42b52ace393333",
+    "is_impossible": false,
+    "references": [
+      "Complexity measures",
+      "complexity measures",
+      "complexity"
+    ],
+    "prefix_tokens": 131,
+    "cold": {
+      "token_ids": [
+        50171,
+        23094,
+        151645
+      ],
+      "input_tokens": 147,
+      "prefix_tokens": 0,
+      "suffix_tokens": 147,
+      "status": "disabled",
+      "ttft_seconds": 0.017775541986338794,
+      "total_seconds": 0.024214791978010908,
+      "decode_seconds": 0.0064392499916721135,
+      "decode_tokens_per_second": 310.59517841155434,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 185,
+        "misses": 62,
+        "evictions": 4,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 6094848
+      },
+      "text": "communication complexity",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        50171,
+        23094,
+        151645
+      ],
+      "input_tokens": 147,
+      "prefix_tokens": 131,
+      "suffix_tokens": 16,
+      "status": "hit",
+      "ttft_seconds": 0.0076752919994760305,
+      "total_seconds": 0.013911666988860816,
+      "decode_seconds": 0.006236374989384785,
+      "decode_tokens_per_second": 320.6991246363938,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 186,
+        "misses": 62,
+        "evictions": 4,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 6094848
+      },
+      "text": "communication complexity",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "56e1b754cd28a01900c67ac0",
+    "context_id": "cd42b52ace393333",
+    "is_impossible": false,
+    "references": [
+      "Complexity measures",
+      "complexity measures",
+      "complexity"
+    ],
+    "prefix_tokens": 131,
+    "cold": {
+      "token_ids": [
+        63938,
+        4916,
+        23094,
+        151645
+      ],
+      "input_tokens": 147,
+      "prefix_tokens": 0,
+      "suffix_tokens": 147,
+      "status": "disabled",
+      "ttft_seconds": 0.017542124987812713,
+      "total_seconds": 0.02702524999040179,
+      "decode_seconds": 0.009483125002589077,
+      "decode_tokens_per_second": 316.3514136090099,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 186,
+        "misses": 62,
+        "evictions": 4,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 6094848
+      },
+      "text": "decision tree complexity",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        63938,
+        4916,
+        23094,
+        151645
+      ],
+      "input_tokens": 147,
+      "prefix_tokens": 131,
+      "suffix_tokens": 16,
+      "status": "hit",
+      "ttft_seconds": 0.007676290988456458,
+      "total_seconds": 0.017338540987111628,
+      "decode_seconds": 0.00966224999865517,
+      "decode_tokens_per_second": 310.48668792647175,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 187,
+        "misses": 62,
+        "evictions": 4,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 6094848
+      },
+      "text": "decision tree complexity",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "5ad54b035b96ef001a10ac52",
+    "context_id": "cd42b52ace393333",
+    "is_impossible": true,
+    "references": [],
+    "prefix_tokens": 131,
+    "cold": {
+      "token_ids": [
+        1678,
+        151645
+      ],
+      "input_tokens": 145,
+      "prefix_tokens": 0,
+      "suffix_tokens": 145,
+      "status": "disabled",
+      "ttft_seconds": 0.017622917017433792,
+      "total_seconds": 0.02085833399905823,
+      "decode_seconds": 0.0032354169816244394,
+      "decode_tokens_per_second": 309.07917145749775,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 187,
+        "misses": 62,
+        "evictions": 4,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 6094848
+      },
+      "text": "time",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        1678,
+        151645
+      ],
+      "input_tokens": 145,
+      "prefix_tokens": 131,
+      "suffix_tokens": 14,
+      "status": "hit",
+      "ttft_seconds": 0.007528707996243611,
+      "total_seconds": 0.010675875004380941,
+      "decode_seconds": 0.0031471670081373304,
+      "decode_tokens_per_second": 317.74608637367993,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 188,
+        "misses": 62,
+        "evictions": 4,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 6094848
+      },
+      "text": "time",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "5ad54b035b96ef001a10ac53",
+    "context_id": "cd42b52ace393333",
+    "is_impossible": true,
+    "references": [],
+    "prefix_tokens": 131,
+    "cold": {
+      "token_ids": [
+        50171,
+        23094,
+        151645
+      ],
+      "input_tokens": 145,
+      "prefix_tokens": 0,
+      "suffix_tokens": 145,
+      "status": "disabled",
+      "ttft_seconds": 0.017809375014621764,
+      "total_seconds": 0.024156375002348796,
+      "decode_seconds": 0.006346999987727031,
+      "decode_tokens_per_second": 315.1095011607577,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 188,
+        "misses": 62,
+        "evictions": 4,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 6094848
+      },
+      "text": "communication complexity",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        50171,
+        23094,
+        151645
+      ],
+      "input_tokens": 145,
+      "prefix_tokens": 131,
+      "suffix_tokens": 14,
+      "status": "hit",
+      "ttft_seconds": 0.007486584014259279,
+      "total_seconds": 0.013987125013954937,
+      "decode_seconds": 0.006500540999695659,
+      "decode_tokens_per_second": 307.66670037057463,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 189,
+        "misses": 62,
+        "evictions": 4,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 6094848
+      },
+      "text": "communication complexity",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "5ad54b035b96ef001a10ac54",
+    "context_id": "cd42b52ace393333",
+    "is_impossible": true,
+    "references": [],
+    "prefix_tokens": 131,
+    "cold": {
+      "token_ids": [
+        50171,
+        23094,
+        151645
+      ],
+      "input_tokens": 144,
+      "prefix_tokens": 0,
+      "suffix_tokens": 144,
+      "status": "disabled",
+      "ttft_seconds": 0.017502709000837058,
+      "total_seconds": 0.023874958977103233,
+      "decode_seconds": 0.0063722499762661755,
+      "decode_tokens_per_second": 313.8608823334174,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 189,
+        "misses": 62,
+        "evictions": 4,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 6094848
+      },
+      "text": "communication complexity",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        50171,
+        23094,
+        151645
+      ],
+      "input_tokens": 144,
+      "prefix_tokens": 131,
+      "suffix_tokens": 13,
+      "status": "hit",
+      "ttft_seconds": 0.007401209004456177,
+      "total_seconds": 0.013664124999195337,
+      "decode_seconds": 0.00626291599473916,
+      "decode_tokens_per_second": 319.34006486435345,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 190,
+        "misses": 62,
+        "evictions": 4,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 6094848
+      },
+      "text": "communication complexity",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "5ad54b035b96ef001a10ac55",
+    "context_id": "cd42b52ace393333",
+    "is_impossible": true,
+    "references": [],
+    "prefix_tokens": 131,
+    "cold": {
+      "token_ids": [
+        50171,
+        23094,
+        151645
+      ],
+      "input_tokens": 147,
+      "prefix_tokens": 0,
+      "suffix_tokens": 147,
+      "status": "disabled",
+      "ttft_seconds": 0.01774320800905116,
+      "total_seconds": 0.024078583024675027,
+      "decode_seconds": 0.0063353750156238675,
+      "decode_tokens_per_second": 315.68770515837457,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 190,
+        "misses": 62,
+        "evictions": 4,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 6094848
+      },
+      "text": "communication complexity",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        50171,
+        23094,
+        151645
+      ],
+      "input_tokens": 147,
+      "prefix_tokens": 131,
+      "suffix_tokens": 16,
+      "status": "hit",
+      "ttft_seconds": 0.007593207992613316,
+      "total_seconds": 0.013961082993773744,
+      "decode_seconds": 0.006367875001160428,
+      "decode_tokens_per_second": 314.076516834193,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 191,
+        "misses": 62,
+        "evictions": 4,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 6094848
+      },
+      "text": "communication complexity",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "5ad54b035b96ef001a10ac56",
+    "context_id": "cd42b52ace393333",
+    "is_impossible": true,
+    "references": [],
+    "prefix_tokens": 131,
+    "cold": {
+      "token_ids": [
+        50171,
+        23094,
+        151645
+      ],
+      "input_tokens": 148,
+      "prefix_tokens": 0,
+      "suffix_tokens": 148,
+      "status": "disabled",
+      "ttft_seconds": 0.017697832983685657,
+      "total_seconds": 0.024096042005112395,
+      "decode_seconds": 0.006398209021426737,
+      "decode_tokens_per_second": 312.58747460457613,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 191,
+        "misses": 62,
+        "evictions": 4,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 6094848
+      },
+      "text": "communication complexity",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        50171,
+        23094,
+        151645
+      ],
+      "input_tokens": 148,
+      "prefix_tokens": 131,
+      "suffix_tokens": 17,
+      "status": "hit",
+      "ttft_seconds": 0.007753124984446913,
+      "total_seconds": 0.014223749982193112,
+      "decode_seconds": 0.006470624997746199,
+      "decode_tokens_per_second": 309.0891530102,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 192,
+        "misses": 62,
+        "evictions": 4,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 6094848
+      },
+      "text": "communication complexity",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "56e1ded7cd28a01900c67bd4",
+    "context_id": "d978f3b66e7f46e2",
+    "is_impossible": false,
+    "references": [
+      "Ladner"
+    ],
+    "prefix_tokens": 149,
+    "cold": {
+      "token_ids": [
+        43,
+        329,
+        1194,
+        151645
+      ],
+      "input_tokens": 170,
+      "prefix_tokens": 0,
+      "suffix_tokens": 170,
+      "status": "disabled",
+      "ttft_seconds": 0.020133791986154392,
+      "total_seconds": 0.02969870899687521,
+      "decode_seconds": 0.00956491701072082,
+      "decode_tokens_per_second": 313.64621320158403,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 192,
+        "misses": 62,
+        "evictions": 4,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 6094848
+      },
+      "text": "Ladner",
+      "strict_correct": true
+    },
+    "cached": {
+      "token_ids": [
+        43,
+        329,
+        1194,
+        151645
+      ],
+      "input_tokens": 170,
+      "prefix_tokens": 149,
+      "suffix_tokens": 21,
+      "status": "miss",
+      "ttft_seconds": 0.02246312500210479,
+      "total_seconds": 0.03203704199404456,
+      "decode_seconds": 0.009573916991939768,
+      "decode_tokens_per_second": 313.3513694056137,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 192,
+        "misses": 63,
+        "evictions": 5,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 3440640
+      },
+      "text": "Ladner",
+      "strict_correct": true
+    },
+    "token_parity": true
+  },
+  {
+    "id": "56e1ded7cd28a01900c67bd5",
+    "context_id": "d978f3b66e7f46e2",
+    "is_impossible": false,
+    "references": [
+      "NP-intermediate problems",
+      "NP-intermediate"
+    ],
+    "prefix_tokens": 149,
+    "cold": {
+      "token_ids": [
+        4439,
+        374,
+        316,
+        52807,
+        3491,
+        151645
+      ],
+      "input_tokens": 168,
+      "prefix_tokens": 0,
+      "suffix_tokens": 168,
+      "status": "disabled",
+      "ttft_seconds": 0.01994925001054071,
+      "total_seconds": 0.03594370899372734,
+      "decode_seconds": 0.015994458983186632,
+      "decode_tokens_per_second": 312.60826047670616,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 192,
+        "misses": 63,
+        "evictions": 5,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 3440640
+      },
+      "text": "graph isomorphism problem",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        4439,
+        374,
+        316,
+        52807,
+        3491,
+        151645
+      ],
+      "input_tokens": 168,
+      "prefix_tokens": 149,
+      "suffix_tokens": 19,
+      "status": "hit",
+      "ttft_seconds": 0.008510958985425532,
+      "total_seconds": 0.024583208985859528,
+      "decode_seconds": 0.016072250000433996,
+      "decode_tokens_per_second": 311.095210680831,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 193,
+        "misses": 63,
+        "evictions": 5,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 3440640
+      },
+      "text": "graph isomorphism problem",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "56e1ded7cd28a01900c67bd6",
+    "context_id": "d978f3b66e7f46e2",
+    "is_impossible": false,
+    "references": [
+      "graph isomorphism problem",
+      "the discrete logarithm problem",
+      "graph isomorphism problem, the discrete logarithm problem and the integer factorization problem"
+    ],
+    "prefix_tokens": 149,
+    "cold": {
+      "token_ids": [
+        11662,
+        8168,
+        2022,
+        3491,
+        151645
+      ],
+      "input_tokens": 175,
+      "prefix_tokens": 0,
+      "suffix_tokens": 175,
+      "status": "disabled",
+      "ttft_seconds": 0.02024137499392964,
+      "total_seconds": 0.03295254099066369,
+      "decode_seconds": 0.012711165996734053,
+      "decode_tokens_per_second": 314.6839559036316,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 193,
+        "misses": 63,
+        "evictions": 5,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 3440640
+      },
+      "text": "integer factorization problem",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        11662,
+        8168,
+        2022,
+        3491,
+        151645
+      ],
+      "input_tokens": 175,
+      "prefix_tokens": 149,
+      "suffix_tokens": 26,
+      "status": "hit",
+      "ttft_seconds": 0.00846987499971874,
+      "total_seconds": 0.02121504201204516,
+      "decode_seconds": 0.01274516701232642,
+      "decode_tokens_per_second": 313.84445540269667,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 194,
+        "misses": 63,
+        "evictions": 5,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 3440640
+      },
+      "text": "integer factorization problem",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "5ad568d35b96ef001a10ae1a",
+    "context_id": "d978f3b66e7f46e2",
+    "is_impossible": true,
+    "references": [],
+    "prefix_tokens": 149,
+    "cold": {
+      "token_ids": [
+        43,
+        329,
+        1194,
+        151645
+      ],
+      "input_tokens": 177,
+      "prefix_tokens": 0,
+      "suffix_tokens": 177,
+      "status": "disabled",
+      "ttft_seconds": 0.019956332980655134,
+      "total_seconds": 0.029469208006048575,
+      "decode_seconds": 0.009512875025393441,
+      "decode_tokens_per_second": 315.36207424063406,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 194,
+        "misses": 63,
+        "evictions": 5,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 3440640
+      },
+      "text": "Ladner",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        43,
+        329,
+        1194,
+        151645
+      ],
+      "input_tokens": 177,
+      "prefix_tokens": 149,
+      "suffix_tokens": 28,
+      "status": "hit",
+      "ttft_seconds": 0.008511874999385327,
+      "total_seconds": 0.01806349999969825,
+      "decode_seconds": 0.009551625000312924,
+      "decode_tokens_per_second": 314.0826822558168,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 195,
+        "misses": 63,
+        "evictions": 5,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 3440640
+      },
+      "text": "Ladner",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "5ad568d35b96ef001a10ae1b",
+    "context_id": "d978f3b66e7f46e2",
+    "is_impossible": true,
+    "references": [],
+    "prefix_tokens": 149,
+    "cold": {
+      "token_ids": [
+        4439,
+        374,
+        316,
+        52807,
+        3491,
+        151645
+      ],
+      "input_tokens": 168,
+      "prefix_tokens": 0,
+      "suffix_tokens": 168,
+      "status": "disabled",
+      "ttft_seconds": 0.019843957998091355,
+      "total_seconds": 0.03578549998928793,
+      "decode_seconds": 0.015941541991196573,
+      "decode_tokens_per_second": 313.6459448377804,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 195,
+        "misses": 63,
+        "evictions": 5,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 3440640
+      },
+      "text": "graph isomorphism problem",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        4439,
+        374,
+        316,
+        52807,
+        3491,
+        151645
+      ],
+      "input_tokens": 168,
+      "prefix_tokens": 149,
+      "suffix_tokens": 19,
+      "status": "hit",
+      "ttft_seconds": 0.008411916991462931,
+      "total_seconds": 0.024230874987551942,
+      "decode_seconds": 0.01581895799608901,
+      "decode_tokens_per_second": 316.0764445569785,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 196,
+        "misses": 63,
+        "evictions": 5,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 3440640
+      },
+      "text": "graph isomorphism problem",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "5ad568d35b96ef001a10ae1c",
+    "context_id": "d978f3b66e7f46e2",
+    "is_impossible": true,
+    "references": [],
+    "prefix_tokens": 149,
+    "cold": {
+      "token_ids": [
+        11662,
+        8168,
+        2022,
+        3491,
+        151645
+      ],
+      "input_tokens": 174,
+      "prefix_tokens": 0,
+      "suffix_tokens": 174,
+      "status": "disabled",
+      "ttft_seconds": 0.019798791996436194,
+      "total_seconds": 0.03245166697888635,
+      "decode_seconds": 0.012652874982450157,
+      "decode_tokens_per_second": 316.13368547054296,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 196,
+        "misses": 63,
+        "evictions": 5,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 3440640
+      },
+      "text": "integer factorization problem",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        11662,
+        8168,
+        2022,
+        3491,
+        151645
+      ],
+      "input_tokens": 174,
+      "prefix_tokens": 149,
+      "suffix_tokens": 25,
+      "status": "hit",
+      "ttft_seconds": 0.008443124999757856,
+      "total_seconds": 0.021205583005212247,
+      "decode_seconds": 0.012762458005454391,
+      "decode_tokens_per_second": 313.4192487286139,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 197,
+        "misses": 63,
+        "evictions": 5,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 3440640
+      },
+      "text": "integer factorization problem",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "5ad568d35b96ef001a10ae1d",
+    "context_id": "d978f3b66e7f46e2",
+    "is_impossible": true,
+    "references": [],
+    "prefix_tokens": 149,
+    "cold": {
+      "token_ids": [
+        26227,
+        44894,
+        14636,
+        5322,
+        151645
+      ],
+      "input_tokens": 168,
+      "prefix_tokens": 0,
+      "suffix_tokens": 168,
+      "status": "disabled",
+      "ttft_seconds": 0.019941499980632216,
+      "total_seconds": 0.03258345799986273,
+      "decode_seconds": 0.012641958019230515,
+      "decode_tokens_per_second": 316.40668272393697,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 197,
+        "misses": 63,
+        "evictions": 5,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 3440640
+      },
+      "text": "NP-intermediate problems",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        26227,
+        44894,
+        14636,
+        5322,
+        151645
+      ],
+      "input_tokens": 168,
+      "prefix_tokens": 149,
+      "suffix_tokens": 19,
+      "status": "hit",
+      "ttft_seconds": 0.008437832992058247,
+      "total_seconds": 0.021420708013465628,
+      "decode_seconds": 0.01298287502140738,
+      "decode_tokens_per_second": 308.0981672706874,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 198,
+        "misses": 63,
+        "evictions": 5,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 3440640
+      },
+      "text": "NP-intermediate problems",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "56e1cbe2cd28a01900c67bac",
+    "context_id": "ecb7cded634b4d0a",
+    "is_impossible": false,
+    "references": [
+      "polynomial-time reduction",
+      "polynomial-time"
+    ],
+    "prefix_tokens": 163,
+    "cold": {
+      "token_ids": [
+        9896,
+        25358,
+        7246,
+        13951,
+        151645
+      ],
+      "input_tokens": 178,
+      "prefix_tokens": 0,
+      "suffix_tokens": 178,
+      "status": "disabled",
+      "ttft_seconds": 0.02052816702052951,
+      "total_seconds": 0.03332737501477823,
+      "decode_seconds": 0.012799207994248718,
+      "decode_tokens_per_second": 312.5193372744147,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 198,
+        "misses": 63,
+        "evictions": 5,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 3440640
+      },
+      "text": "polynomial-time reduction",
+      "strict_correct": true
+    },
+    "cached": {
+      "token_ids": [
+        9896,
+        25358,
+        7246,
+        13951,
+        151645
+      ],
+      "input_tokens": 178,
+      "prefix_tokens": 163,
+      "suffix_tokens": 15,
+      "status": "miss",
+      "ttft_seconds": 0.02351904200622812,
+      "total_seconds": 0.03620287499506958,
+      "decode_seconds": 0.01268383298884146,
+      "decode_tokens_per_second": 315.3620836476624,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 198,
+        "misses": 64,
+        "evictions": 6,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 3833856
+      },
+      "text": "polynomial-time reduction",
+      "strict_correct": true
+    },
+    "token_parity": true
+  },
+  {
+    "id": "56e1cbe2cd28a01900c67bad",
+    "context_id": "ecb7cded634b4d0a",
+    "is_impossible": false,
+    "references": [
+      "multiplying two integers"
+    ],
+    "prefix_tokens": 163,
+    "cold": {
+      "token_ids": [
+        77976,
+        6711,
+        1378,
+        25780,
+        151645
+      ],
+      "input_tokens": 181,
+      "prefix_tokens": 0,
+      "suffix_tokens": 181,
+      "status": "disabled",
+      "ttft_seconds": 0.02006937499390915,
+      "total_seconds": 0.03273829197860323,
+      "decode_seconds": 0.012668916984694079,
+      "decode_tokens_per_second": 315.73338153786864,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 198,
+        "misses": 64,
+        "evictions": 6,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 3833856
+      },
+      "text": "multiplying two integers",
+      "strict_correct": true
+    },
+    "cached": {
+      "token_ids": [
+        77976,
+        6711,
+        1378,
+        25780,
+        151645
+      ],
+      "input_tokens": 181,
+      "prefix_tokens": 163,
+      "suffix_tokens": 18,
+      "status": "hit",
+      "ttft_seconds": 0.008382542000617832,
+      "total_seconds": 0.021083166997414082,
+      "decode_seconds": 0.01270062499679625,
+      "decode_tokens_per_second": 314.94513073246435,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 199,
+        "misses": 64,
+        "evictions": 6,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 3833856
+      },
+      "text": "multiplying two integers",
+      "strict_correct": true
+    },
+    "token_parity": true
+  },
+  {
+    "id": "56e1cbe2cd28a01900c67bae",
+    "context_id": "ecb7cded634b4d0a",
+    "is_impossible": false,
+    "references": [
+      "polynomial time",
+      "polynomial"
+    ],
+    "prefix_tokens": 163,
+    "cold": {
+      "token_ids": [
+        9896,
+        25358,
+        151645
+      ],
+      "input_tokens": 179,
+      "prefix_tokens": 0,
+      "suffix_tokens": 179,
+      "status": "disabled",
+      "ttft_seconds": 0.019738082977710292,
+      "total_seconds": 0.026112957973964512,
+      "decode_seconds": 0.006374874996254221,
+      "decode_tokens_per_second": 313.7316419812419,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 199,
+        "misses": 64,
+        "evictions": 6,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 3833856
+      },
+      "text": "polynomial",
+      "strict_correct": true
+    },
+    "cached": {
+      "token_ids": [
+        9896,
+        25358,
+        151645
+      ],
+      "input_tokens": 179,
+      "prefix_tokens": 163,
+      "suffix_tokens": 16,
+      "status": "hit",
+      "ttft_seconds": 0.007693499996094033,
+      "total_seconds": 0.01414866599952802,
+      "decode_seconds": 0.0064551660034339875,
+      "decode_tokens_per_second": 309.8293675075203,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 200,
+        "misses": 64,
+        "evictions": 6,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 3833856
+      },
+      "text": "polynomial",
+      "strict_correct": true
+    },
+    "token_parity": true
+  },
+  {
+    "id": "56e1cbe2cd28a01900c67baf",
+    "context_id": "ecb7cded634b4d0a",
+    "is_impossible": false,
+    "references": [
+      "input"
+    ],
+    "prefix_tokens": 163,
+    "cold": {
+      "token_ids": [
+        77976,
+        1693,
+        12111,
+        151645
+      ],
+      "input_tokens": 192,
+      "prefix_tokens": 0,
+      "suffix_tokens": 192,
+      "status": "disabled",
+      "ttft_seconds": 0.019889832998160273,
+      "total_seconds": 0.029538749979110435,
+      "decode_seconds": 0.009648916980950162,
+      "decode_tokens_per_second": 310.9157230726406,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 200,
+        "misses": 64,
+        "evictions": 6,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 3833856
+      },
+      "text": "multiplication algorithm",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        77976,
+        1693,
+        12111,
+        151645
+      ],
+      "input_tokens": 192,
+      "prefix_tokens": 163,
+      "suffix_tokens": 29,
+      "status": "hit",
+      "ttft_seconds": 0.008658917009597644,
+      "total_seconds": 0.01813512502121739,
+      "decode_seconds": 0.009476208011619747,
+      "decode_tokens_per_second": 316.5823287459914,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 201,
+        "misses": 64,
+        "evictions": 6,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 3833856
+      },
+      "text": "multiplication algorithm",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "56e1cbe2cd28a01900c67bb0",
+    "context_id": "ecb7cded634b4d0a",
+    "is_impossible": false,
+    "references": [
+      "multiplication"
+    ],
+    "prefix_tokens": 163,
+    "cold": {
+      "token_ids": [
+        77976,
+        1693,
+        151645
+      ],
+      "input_tokens": 183,
+      "prefix_tokens": 0,
+      "suffix_tokens": 183,
+      "status": "disabled",
+      "ttft_seconds": 0.020109499979298562,
+      "total_seconds": 0.026458041975274682,
+      "decode_seconds": 0.00634854199597612,
+      "decode_tokens_per_second": 315.03296367380966,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 201,
+        "misses": 64,
+        "evictions": 6,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 3833856
+      },
+      "text": "multiplication",
+      "strict_correct": true
+    },
+    "cached": {
+      "token_ids": [
+        77976,
+        1693,
+        151645
+      ],
+      "input_tokens": 183,
+      "prefix_tokens": 163,
+      "suffix_tokens": 20,
+      "status": "hit",
+      "ttft_seconds": 0.008268625009804964,
+      "total_seconds": 0.014692625001771376,
+      "decode_seconds": 0.0064239999919664115,
+      "decode_tokens_per_second": 311.33250350266457,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 202,
+        "misses": 64,
+        "evictions": 6,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 3833856
+      },
+      "text": "multiplication",
+      "strict_correct": true
+    },
+    "token_parity": true
+  },
+  {
+    "id": "5ad5648b5b96ef001a10ad94",
+    "context_id": "ecb7cded634b4d0a",
+    "is_impossible": true,
+    "references": [],
+    "prefix_tokens": 163,
+    "cold": {
+      "token_ids": [
+        9896,
+        25358,
+        7246,
+        13951,
+        151645
+      ],
+      "input_tokens": 177,
+      "prefix_tokens": 0,
+      "suffix_tokens": 177,
+      "status": "disabled",
+      "ttft_seconds": 0.02008845898672007,
+      "total_seconds": 0.032891124981688336,
+      "decode_seconds": 0.012802665994968265,
+      "decode_tokens_per_second": 312.43492578593316,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 202,
+        "misses": 64,
+        "evictions": 6,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 3833856
+      },
+      "text": "polynomial-time reduction",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        9896,
+        25358,
+        7246,
+        13951,
+        151645
+      ],
+      "input_tokens": 177,
+      "prefix_tokens": 163,
+      "suffix_tokens": 14,
+      "status": "hit",
+      "ttft_seconds": 0.007541166007285938,
+      "total_seconds": 0.02024566600448452,
+      "decode_seconds": 0.012704499997198582,
+      "decode_tokens_per_second": 314.8490692968652,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 203,
+        "misses": 64,
+        "evictions": 6,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 3833856
+      },
+      "text": "polynomial-time reduction",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "5ad5648b5b96ef001a10ad95",
+    "context_id": "ecb7cded634b4d0a",
+    "is_impossible": true,
+    "references": [],
+    "prefix_tokens": 163,
+    "cold": {
+      "token_ids": [
+        9896,
+        25358,
+        7246,
+        13951,
+        151645
+      ],
+      "input_tokens": 177,
+      "prefix_tokens": 0,
+      "suffix_tokens": 177,
+      "status": "disabled",
+      "ttft_seconds": 0.020108333992538974,
+      "total_seconds": 0.032689791987650096,
+      "decode_seconds": 0.012581457995111123,
+      "decode_tokens_per_second": 317.92817665125233,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 203,
+        "misses": 64,
+        "evictions": 6,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 3833856
+      },
+      "text": "polynomial-time reduction",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        9896,
+        25358,
+        7246,
+        13951,
+        151645
+      ],
+      "input_tokens": 177,
+      "prefix_tokens": 163,
+      "suffix_tokens": 14,
+      "status": "hit",
+      "ttft_seconds": 0.007590166002046317,
+      "total_seconds": 0.020262958016246557,
+      "decode_seconds": 0.01267279201420024,
+      "decode_tokens_per_second": 315.63683800048807,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 204,
+        "misses": 64,
+        "evictions": 6,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 3833856
+      },
+      "text": "polynomial-time reduction",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "5ad5648b5b96ef001a10ad96",
+    "context_id": "ecb7cded634b4d0a",
+    "is_impossible": true,
+    "references": [],
+    "prefix_tokens": 163,
+    "cold": {
+      "token_ids": [
+        611,
+        6577,
+        458,
+        7546,
+        151645
+      ],
+      "input_tokens": 180,
+      "prefix_tokens": 0,
+      "suffix_tokens": 180,
+      "status": "disabled",
+      "ttft_seconds": 0.020242084021447226,
+      "total_seconds": 0.03275875002145767,
+      "decode_seconds": 0.012516666000010446,
+      "decode_tokens_per_second": 319.5739184856943,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 204,
+        "misses": 64,
+        "evictions": 6,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 3833856
+      },
+      "text": "dividing an integer",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        611,
+        6577,
+        458,
+        7546,
+        151645
+      ],
+      "input_tokens": 180,
+      "prefix_tokens": 163,
+      "suffix_tokens": 17,
+      "status": "hit",
+      "ttft_seconds": 0.007719500019447878,
+      "total_seconds": 0.02042554199579172,
+      "decode_seconds": 0.01270604197634384,
+      "decode_tokens_per_second": 314.81085986078244,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 205,
+        "misses": 64,
+        "evictions": 6,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 3833856
+      },
+      "text": "dividing an integer",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "5ad5648b5b96ef001a10ad97",
+    "context_id": "ecb7cded634b4d0a",
+    "is_impossible": true,
+    "references": [],
+    "prefix_tokens": 163,
+    "cold": {
+      "token_ids": [
+        77976,
+        1693,
+        151645
+      ],
+      "input_tokens": 193,
+      "prefix_tokens": 0,
+      "suffix_tokens": 193,
+      "status": "disabled",
+      "ttft_seconds": 0.021841750014573336,
+      "total_seconds": 0.028325999999651685,
+      "decode_seconds": 0.00648424998507835,
+      "decode_tokens_per_second": 308.4396814747163,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 205,
+        "misses": 64,
+        "evictions": 6,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 3833856
+      },
+      "text": "multiplication",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        77976,
+        1693,
+        151645
+      ],
+      "input_tokens": 193,
+      "prefix_tokens": 163,
+      "suffix_tokens": 30,
+      "status": "hit",
+      "ttft_seconds": 0.008569833007641137,
+      "total_seconds": 0.014843750017462298,
+      "decode_seconds": 0.006273917009821162,
+      "decode_tokens_per_second": 318.78011724879514,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 206,
+        "misses": 64,
+        "evictions": 6,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 3833856
+      },
+      "text": "multiplication",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "5ad5648b5b96ef001a10ad98",
+    "context_id": "ecb7cded634b4d0a",
+    "is_impossible": true,
+    "references": [],
+    "prefix_tokens": 163,
+    "cold": {
+      "token_ids": [
+        77976,
+        1693,
+        151645
+      ],
+      "input_tokens": 175,
+      "prefix_tokens": 0,
+      "suffix_tokens": 175,
+      "status": "disabled",
+      "ttft_seconds": 0.019954874995164573,
+      "total_seconds": 0.026354000001447275,
+      "decode_seconds": 0.006399125006282702,
+      "decode_tokens_per_second": 312.54273014457243,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 206,
+        "misses": 64,
+        "evictions": 6,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 3833856
+      },
+      "text": "multiplication",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        77976,
+        1693,
+        151645
+      ],
+      "input_tokens": 175,
+      "prefix_tokens": 163,
+      "suffix_tokens": 12,
+      "status": "hit",
+      "ttft_seconds": 0.007313790993066505,
+      "total_seconds": 0.01411412499146536,
+      "decode_seconds": 0.006800333998398855,
+      "decode_tokens_per_second": 294.10320147082507,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 207,
+        "misses": 64,
+        "evictions": 6,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 3833856
+      },
+      "text": "multiplication",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "56e1c0f6cd28a01900c67b2c",
+    "context_id": "ee44c84fa7efcfbe",
+    "is_impossible": false,
+    "references": [
+      "complexity classes",
+      "some complexity classes"
+    ],
+    "prefix_tokens": 94,
+    "cold": {
+      "token_ids": [
+        23247,
+        487,
+        6846,
+        151645
+      ],
+      "input_tokens": 110,
+      "prefix_tokens": 0,
+      "suffix_tokens": 110,
+      "status": "disabled",
+      "ttft_seconds": 0.016075000021373853,
+      "total_seconds": 0.025898167019477114,
+      "decode_seconds": 0.009823166998103261,
+      "decode_tokens_per_second": 305.4004885165105,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 207,
+        "misses": 64,
+        "evictions": 6,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 3833856
+      },
+      "text": "complexity classes",
+      "strict_correct": true
+    },
+    "cached": {
+      "token_ids": [
+        23247,
+        487,
+        6846,
+        151645
+      ],
+      "input_tokens": 110,
+      "prefix_tokens": 94,
+      "suffix_tokens": 16,
+      "status": "miss",
+      "ttft_seconds": 0.018265165999764577,
+      "total_seconds": 0.02795704099116847,
+      "decode_seconds": 0.009691874991403893,
+      "decode_tokens_per_second": 309.53762844246535,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 207,
+        "misses": 65,
+        "evictions": 7,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 3158016
+      },
+      "text": "complexity classes",
+      "strict_correct": true
+    },
+    "token_parity": true
+  },
+  {
+    "id": "56e1c0f6cd28a01900c67b2d",
+    "context_id": "ee44c84fa7efcfbe",
+    "is_impossible": false,
+    "references": [
+      "framework"
+    ],
+    "prefix_tokens": 94,
+    "cold": {
+      "token_ids": [
+        23247,
+        487,
+        6846,
+        151645
+      ],
+      "input_tokens": 107,
+      "prefix_tokens": 0,
+      "suffix_tokens": 107,
+      "status": "disabled",
+      "ttft_seconds": 0.01583791701705195,
+      "total_seconds": 0.02539904200239107,
+      "decode_seconds": 0.00956112498533912,
+      "decode_tokens_per_second": 313.7706080194698,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 207,
+        "misses": 65,
+        "evictions": 7,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 3158016
+      },
+      "text": "complexity classes",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        23247,
+        487,
+        6846,
+        151645
+      ],
+      "input_tokens": 107,
+      "prefix_tokens": 94,
+      "suffix_tokens": 13,
+      "status": "hit",
+      "ttft_seconds": 0.007426916999975219,
+      "total_seconds": 0.017088916996726766,
+      "decode_seconds": 0.009661999996751547,
+      "decode_tokens_per_second": 310.49472169412417,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 208,
+        "misses": 65,
+        "evictions": 7,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 3158016
+      },
+      "text": "complexity classes",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "56e1c0f6cd28a01900c67b2e",
+    "context_id": "ee44c84fa7efcfbe",
+    "is_impossible": false,
+    "references": [
+      "complicated definitions",
+      "definitions"
+    ],
+    "prefix_tokens": 94,
+    "cold": {
+      "token_ids": [
+        23247,
+        487,
+        6846,
+        151645
+      ],
+      "input_tokens": 114,
+      "prefix_tokens": 0,
+      "suffix_tokens": 114,
+      "status": "disabled",
+      "ttft_seconds": 0.01560016701114364,
+      "total_seconds": 0.025443874998018146,
+      "decode_seconds": 0.009843707986874506,
+      "decode_tokens_per_second": 304.7632054912811,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 208,
+        "misses": 65,
+        "evictions": 7,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 3158016
+      },
+      "text": "complexity classes",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        23247,
+        487,
+        6846,
+        151645
+      ],
+      "input_tokens": 114,
+      "prefix_tokens": 94,
+      "suffix_tokens": 20,
+      "status": "hit",
+      "ttft_seconds": 0.0083616659976542,
+      "total_seconds": 0.017904375010402873,
+      "decode_seconds": 0.009542709012748674,
+      "decode_tokens_per_second": 314.3761374251401,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 209,
+        "misses": 65,
+        "evictions": 7,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 3158016
+      },
+      "text": "complexity classes",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "5ad5501f5b96ef001a10ac90",
+    "context_id": "ee44c84fa7efcfbe",
+    "is_impossible": true,
+    "references": [],
+    "prefix_tokens": 94,
+    "cold": {
+      "token_ids": [
+        23247,
+        487,
+        6846,
+        151645
+      ],
+      "input_tokens": 107,
+      "prefix_tokens": 0,
+      "suffix_tokens": 107,
+      "status": "disabled",
+      "ttft_seconds": 0.01533900000504218,
+      "total_seconds": 0.025002250011311844,
+      "decode_seconds": 0.009663250006269664,
+      "decode_tokens_per_second": 310.4545570127601,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 209,
+        "misses": 65,
+        "evictions": 7,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 3158016
+      },
+      "text": "complexity classes",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        23247,
+        487,
+        6846,
+        151645
+      ],
+      "input_tokens": 107,
+      "prefix_tokens": 94,
+      "suffix_tokens": 13,
+      "status": "hit",
+      "ttft_seconds": 0.007420332985930145,
+      "total_seconds": 0.01720299999578856,
+      "decode_seconds": 0.009782667009858415,
+      "decode_tokens_per_second": 306.6648386351872,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 210,
+        "misses": 65,
+        "evictions": 7,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 3158016
+      },
+      "text": "complexity classes",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "5ad5501f5b96ef001a10ac91",
+    "context_id": "ee44c84fa7efcfbe",
+    "is_impossible": true,
+    "references": [],
+    "prefix_tokens": 94,
+    "cold": {
+      "token_ids": [
+        23247,
+        487,
+        6846,
+        151645
+      ],
+      "input_tokens": 111,
+      "prefix_tokens": 0,
+      "suffix_tokens": 111,
+      "status": "disabled",
+      "ttft_seconds": 0.015524458984145895,
+      "total_seconds": 0.025230917002772912,
+      "decode_seconds": 0.009706458018627018,
+      "decode_tokens_per_second": 309.0725776841459,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 210,
+        "misses": 65,
+        "evictions": 7,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 3158016
+      },
+      "text": "complexity classes",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        23247,
+        487,
+        6846,
+        151645
+      ],
+      "input_tokens": 111,
+      "prefix_tokens": 94,
+      "suffix_tokens": 17,
+      "status": "hit",
+      "ttft_seconds": 0.007672500010812655,
+      "total_seconds": 0.017304959008470178,
+      "decode_seconds": 0.009632458997657523,
+      "decode_tokens_per_second": 311.4469525102113,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 211,
+        "misses": 65,
+        "evictions": 7,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 3158016
+      },
+      "text": "complexity classes",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "5ad5501f5b96ef001a10ac92",
+    "context_id": "ee44c84fa7efcfbe",
+    "is_impossible": true,
+    "references": [],
+    "prefix_tokens": 94,
+    "cold": {
+      "token_ids": [
+        23247,
+        487,
+        6846,
+        614,
+        16965,
+        17473,
+        429,
+        653,
+        537,
+        4946,
+        1119,
+        419,
+        12626,
+        13,
+        151645
+      ],
+      "input_tokens": 108,
+      "prefix_tokens": 0,
+      "suffix_tokens": 108,
+      "status": "disabled",
+      "ttft_seconds": 0.01561920900712721,
+      "total_seconds": 0.06012320899753831,
+      "decode_seconds": 0.0445039999904111,
+      "decode_tokens_per_second": 314.578464924871,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 211,
+        "misses": 65,
+        "evictions": 7,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 3158016
+      },
+      "text": "complexity classes have complicated definitions that do not fit into this framework.",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        23247,
+        487,
+        6846,
+        614,
+        16965,
+        17473,
+        429,
+        653,
+        537,
+        4946,
+        1119,
+        419,
+        12626,
+        13,
+        151645
+      ],
+      "input_tokens": 108,
+      "prefix_tokens": 94,
+      "suffix_tokens": 14,
+      "status": "hit",
+      "ttft_seconds": 0.007627332990523428,
+      "total_seconds": 0.05470812498242594,
+      "decode_seconds": 0.047080791991902515,
+      "decode_tokens_per_second": 297.3611829301401,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 212,
+        "misses": 65,
+        "evictions": 7,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 3158016
+      },
+      "text": "complexity classes have complicated definitions that do not fit into this framework.",
+      "strict_correct": false
+    },
+    "token_parity": true
+  },
+  {
+    "id": "5ad5501f5b96ef001a10ac93",
+    "context_id": "ee44c84fa7efcfbe",
+    "is_impossible": true,
+    "references": [],
+    "prefix_tokens": 94,
+    "cold": {
+      "token_ids": [
+        18375,
+        151645
+      ],
+      "input_tokens": 112,
+      "prefix_tokens": 0,
+      "suffix_tokens": 112,
+      "status": "disabled",
+      "ttft_seconds": 0.01578487502411008,
+      "total_seconds": 0.01913970900932327,
+      "decode_seconds": 0.0033548339852131903,
+      "decode_tokens_per_second": 298.07734284546206,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 212,
+        "misses": 65,
+        "evictions": 7,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 3158016
+      },
+      "text": "definition",
+      "strict_correct": false
+    },
+    "cached": {
+      "token_ids": [
+        18375,
+        151645
+      ],
+      "input_tokens": 112,
+      "prefix_tokens": 94,
+      "suffix_tokens": 18,
+      "status": "hit",
+      "ttft_seconds": 0.008192667010007426,
+      "total_seconds": 0.01144345902139321,
+      "decode_seconds": 0.0032507920113857836,
+      "decode_tokens_per_second": 307.61734263451353,
+      "stop_reason": "eos",
+      "cache": {
+        "hits": 213,
+        "misses": 65,
+        "evictions": 7,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 3158016
+      },
+      "text": "definition",
+      "strict_correct": false
+    },
+    "token_parity": true
+  }
+]

@@ -4,6 +4,8 @@
 
 ## 当前状态
 
+当前包含两条可复跑主线：[MiniLM CPU量化与离线批处理](docs/length-bucketing-study.md)，以及[Qwen生成式推理与共享前缀KV缓存](docs/qwen-prefix-study.md)。前者验证编码器吞吐，后者分开首token延迟、解码速度、缓存构建成本与容量失效边界；均保留负结果。
+
 已分别完成 Windows 和 Mac 的真实 MiniLM / ORT CPU 动态 INT8 实验。历史 [Windows 报告](results/minilm-cpu-dynamic-int8/REPORT.md) 保持不变；新增 [Mac 报告与原始证据](results/minilm-mac-m4max-baseline/REPORT.md)。Mac 上 INT8 文件缩小约 35%，但指定负载推理较 FP32 慢约 14%；逐层误差分析指导的单节点 FP32 回退让句向量 MSE 降低约 6.8%，没有显著任务质量提升证据。本仓库不包含历史 Jetson 项目代码、公司材料或模型权重。
 
 | 工作包 | 状态 | 目标 |
@@ -27,6 +29,12 @@
 固定8线程、batch=8、64请求窗口，在2758句完整语料的7轮对照中，FP32总耗时1.252→1.044秒（下降16.6%），INT8下降18.6%；FP32分桶仍更快。FP32 Spearman保持一致，INT8分桶相对同精度顺序批处理下降0.000102。只验证离线吞吐，不代表线上排队延迟。
 
 [实现、复现、质量边界与简历候选](docs/length-bucketing-study.md) · [完整语料原始结果](results/minilm-bucketing-confirm-v1/summary.json) · [先导结果](results/minilm-bucketing-v2/summary.json)
+
+## 新增：Qwen生成式推理与前缀KV缓存（2026-10-03）
+
+新增真实Qwen2.5-0.5B/MLX Q8前缀缓存、LRU容量管理、请求隔离与完整成本对照。2048-token前缀下，计入首次miss的4请求总耗时较分段重算下降约38%；74题缓存前后token完全一致。零命中的淘汰trace未获收益，问答严格匹配仅18/74，不能把运行时正确性称为问答系统质量合格。
+
+[主报告、复跑与简历候选](docs/qwen-prefix-study.md) · [主实验](results/qwen-prefix-v2/summary.json) · [失效场景](results/qwen-prefix-locality-v1/summary.json) · [数据归属](configs/qwen-prefix/ATTRIBUTION.md)
 
 ## 本地运行
 

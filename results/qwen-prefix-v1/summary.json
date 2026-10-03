@@ -1,0 +1,199 @@
+{
+  "performance": [
+    {
+      "prefix_tokens": 64,
+      "cold_ttft_seconds": 0.012234062494826503,
+      "hit_ttft_seconds": 0.007248041496495716,
+      "miss_ttft_seconds": 0.01510870800120756,
+      "hit_ttft_reduction": 0.4075523564179321,
+      "cold_decode_tps": 326.424278918961,
+      "hit_decode_tps": 325.8921224411555,
+      "cold_four_request_seconds": 0.42866383300861344,
+      "cached_four_request_seconds": 0.41646791697712615,
+      "four_request_reduction_including_miss": 0.028451003075975034,
+      "round_hit_ttft_reductions": [
+        0.4118636614046013,
+        0.40773509022302723,
+        0.4056187226083442,
+        0.3992533591136074,
+        0.40648869715317715
+      ],
+      "cache_build_median_seconds": 0.007997415988938883,
+      "stored_tensor_bytes": 786432,
+      "fixed_token_parity_count": 20,
+      "fixed_token_comparisons": 20
+    },
+    {
+      "prefix_tokens": 256,
+      "cold_ttft_seconds": 0.025161437486531213,
+      "hit_ttft_seconds": 0.00750089599750936,
+      "miss_ttft_seconds": 0.024386667006183416,
+      "hit_ttft_reduction": 0.7018892103630983,
+      "cold_decode_tps": 320.2337683267526,
+      "hit_decode_tps": 320.5974149884282,
+      "cold_four_request_seconds": 0.4865139169851318,
+      "cached_four_request_seconds": 0.4350608339882456,
+      "four_request_reduction_including_miss": 0.10575870740910098,
+      "round_hit_ttft_reductions": [
+        0.7030564660385852,
+        0.7019731861182901,
+        0.7023764026808588,
+        0.701000787460011,
+        0.7020659814937291
+      ],
+      "cache_build_median_seconds": 0.01668299999437295,
+      "stored_tensor_bytes": 3145728,
+      "fixed_token_parity_count": 20,
+      "fixed_token_comparisons": 20
+    },
+    {
+      "prefix_tokens": 1024,
+      "cold_ttft_seconds": 0.0856260625005234,
+      "hit_ttft_seconds": 0.008623541492852382,
+      "miss_ttft_seconds": 0.06853066699113697,
+      "hit_ttft_reduction": 0.8992883563599614,
+      "cold_decode_tps": 296.054717465458,
+      "hit_decode_tps": 295.9196504311942,
+      "cold_four_request_seconds": 0.7619247499969788,
+      "cached_four_request_seconds": 0.5136278749851044,
+      "four_request_reduction_including_miss": 0.32588109916741637,
+      "round_hit_ttft_reductions": [
+        0.8989926606394284,
+        0.899170430724794,
+        0.8997770585993967,
+        0.8994509962156629,
+        0.899098099363564
+      ],
+      "cache_build_median_seconds": 0.060037082992494106,
+      "stored_tensor_bytes": 12582912,
+      "fixed_token_parity_count": 20,
+      "fixed_token_comparisons": 20
+    },
+    {
+      "prefix_tokens": 2048,
+      "cold_ttft_seconds": 0.17221379150578286,
+      "hit_ttft_seconds": 0.010167813001316972,
+      "miss_ttft_seconds": 0.13430112501373515,
+      "hit_ttft_reduction": 0.9409581955520935,
+      "cold_decode_tps": 272.08496173505534,
+      "hit_decode_tps": 271.4211489152004,
+      "cold_four_request_seconds": 1.1446010830113664,
+      "cached_four_request_seconds": 0.6208754580002278,
+      "four_request_reduction_including_miss": 0.45756170668059537,
+      "round_hit_ttft_reductions": [
+        0.9413093424928122,
+        0.941166520669402,
+        0.9408325837989204,
+        0.9409085977644084,
+        0.9407690056818913
+      ],
+      "cache_build_median_seconds": 0.12393616599729285,
+      "stored_tensor_bytes": 25165824,
+      "fixed_token_parity_count": 20,
+      "fixed_token_comparisons": 20
+    }
+  ],
+  "quality": {
+    "questions": 74,
+    "contexts": 9,
+    "token_parity_count": 74,
+    "cold_strict_correct": 18,
+    "cached_strict_correct": 18,
+    "always_abstain_correct": 41,
+    "divergent_ids": [],
+    "cache_hits": 65,
+    "native_greedy_parity": true
+  },
+  "contracts": {
+    "interleaved": [
+      {
+        "prefix_index": 0,
+        "status": "miss",
+        "cache": {
+          "hits": 213,
+          "misses": 66,
+          "evictions": 7,
+          "bypasses": 0,
+          "entries": 1,
+          "stored_tensor_bytes": 786432
+        },
+        "matches_cold_a": true
+      },
+      {
+        "prefix_index": 1,
+        "status": "miss",
+        "cache": {
+          "hits": 213,
+          "misses": 67,
+          "evictions": 7,
+          "bypasses": 0,
+          "entries": 2,
+          "stored_tensor_bytes": 1572864
+        },
+        "matches_cold_a": null
+      },
+      {
+        "prefix_index": 0,
+        "status": "hit",
+        "cache": {
+          "hits": 214,
+          "misses": 67,
+          "evictions": 7,
+          "bypasses": 0,
+          "entries": 2,
+          "stored_tensor_bytes": 1572864
+        },
+        "matches_cold_a": true
+      },
+      {
+        "prefix_index": 2,
+        "status": "miss",
+        "cache": {
+          "hits": 214,
+          "misses": 68,
+          "evictions": 8,
+          "bypasses": 0,
+          "entries": 2,
+          "stored_tensor_bytes": 1572864
+        },
+        "matches_cold_a": null
+      },
+      {
+        "prefix_index": 1,
+        "status": "miss",
+        "cache": {
+          "hits": 214,
+          "misses": 69,
+          "evictions": 9,
+          "bypasses": 0,
+          "entries": 2,
+          "stored_tensor_bytes": 1572864
+        },
+        "matches_cold_a": null
+      },
+      {
+        "prefix_index": 0,
+        "status": "miss",
+        "cache": {
+          "hits": 214,
+          "misses": 70,
+          "evictions": 10,
+          "bypasses": 0,
+          "entries": 2,
+          "stored_tensor_bytes": 1572864
+        },
+        "matches_cold_a": true
+      }
+    ],
+    "mismatched_prefix_rejected": true,
+    "oversized_bypassed": true,
+    "oversized_output_matches_cold": true
+  },
+  "acceptance": {
+    "qa_token_parity": true,
+    "native_parity": true,
+    "prefix_mismatch_rejected": true,
+    "bounded_cache": true,
+    "eviction_replay_parity": true
+  }
+}

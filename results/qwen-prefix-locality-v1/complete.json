@@ -1,0 +1,8 @@
+{
+  "sha256": {
+    "manifest.json": "a6398bf8c76df8aa3de4e3e699b2bce5efc7d0969f342225ffabbdf08a989445",
+    "summary.json": "2e534f40ff7b740c541a6ca088013d4e4a6fdeaab7cc4a8148ae8668fa574d21",
+    "timings.json": "982d86b2b29303753800f95fc093b0fd85288bf4276db91d1a51af7db0779b53",
+    "workloads.json": "4cb3e2bc9b93d11a48daf304f9ef532b88d32ff880cd2ab5d87209ac938bd078"
+  }
+}

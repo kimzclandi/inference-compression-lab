@@ -1,0 +1,12 @@
+{
+  "sha256": {
+    "cache-builds.json": "ff31b8af2f953f37a98dfcd450e7aa41338b201135f9ee16b353172dfbdd5841",
+    "manifest.json": "8aa48d1b6dc535fed2e2e062e7174332c5feb94334496d0cf7473c659ba8963a",
+    "native-decoder-parity.json": "3ce6cd7697530e4aecdb7b8bfd12cd6b1e2d10a7c8e7f14f8be7197f14f6c202",
+    "quality-predictions.json": "00e463e302ccfa8d1decee73c484593608a2108afbc0441ede13ff2a37863950",
+    "real-cache-contracts.json": "9849c78b0075f773b525f6eb6cd5ffaa6e7547e1ddf9f899421048a676062086",
+    "summary.json": "c7e19b2cd71329d70620a82fbf96e0f604f000adcde7f9e8a2d00e6cc0111635",
+    "timings.json": "e15779be1bd1c860578b0cc338cc032e41fd022737f131058f489fc352141811",
+    "workloads.json": "93720cdc5c1f5c12a667479b6597d9fdc8b760a37702f438e35b1dbefa756954"
+  }
+}

@@ -1,0 +1,90 @@
+[
+  {
+    "prefix_tokens": 64,
+    "scenario": "hot",
+    "segmented_median_seconds": 0.4113615420064889,
+    "cached_median_seconds": 0.32435624999925494,
+    "time_reduction": 0.2115056540843614,
+    "hits_per_round": [
+      11,
+      11,
+      11,
+      11,
+      11
+    ],
+    "evictions_per_round": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "token_parity": true
+  },
+  {
+    "prefix_tokens": 64,
+    "scenario": "cyclic_three",
+    "segmented_median_seconds": 0.4112372910021804,
+    "cached_median_seconds": 0.4112642089894507,
+    "time_reduction": -6.545609520158813e-05,
+    "hits_per_round": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "evictions_per_round": [
+      10,
+      10,
+      10,
+      10,
+      10
+    ],
+    "token_parity": true
+  },
+  {
+    "prefix_tokens": 1024,
+    "scenario": "hot",
+    "segmented_median_seconds": 1.064619250013493,
+    "cached_median_seconds": 0.406345458002761,
+    "time_reduction": 0.6183185134050404,
+    "hits_per_round": [
+      11,
+      11,
+      11,
+      11,
+      11
+    ],
+    "evictions_per_round": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "token_parity": true
+  },
+  {
+    "prefix_tokens": 1024,
+    "scenario": "cyclic_three",
+    "segmented_median_seconds": 1.0743173329974525,
+    "cached_median_seconds": 1.0806079159956425,
+    "time_reduction": -0.005855423537325599,
+    "hits_per_round": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "evictions_per_round": [
+      10,
+      10,
+      10,
+      10,
+      10
+    ],
+    "token_parity": true
+  }
+]
