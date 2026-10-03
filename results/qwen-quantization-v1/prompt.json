@@ -1,0 +1,15 @@
+{
+  "model_id": "Qwen/Qwen2.5-0.5B-Instruct",
+  "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "seed": 20260918,
+  "device": "mps",
+  "dtype": "float32",
+  "max_input_tokens": 2048,
+  "max_new_tokens": 48,
+  "do_sample": false,
+  "batch_size": 1,
+  "attention_implementation": "eager",
+  "prompt_version": "extract-or-abstain-v1",
+  "system_prompt": "Answer the question using only the supplied passage. If the passage contains the answer, output only the shortest exact span from the passage that answers the question. If the passage does not contain the answer, output exactly NO_ANSWER. Do not explain your answer.",
+  "warmup": "synthetic passage and question, 2 generations, excluded from measurements"
+}

@@ -1,0 +1,443 @@
+[
+  {
+    "variant": "fp16",
+    "id": "56e1c0f6cd28a01900c67b2c",
+    "diagnostic": {
+      "vocab_size": 151936,
+      "top1": 23247,
+      "top2": 31137,
+      "margin": 2.609375,
+      "top10": [
+        {
+          "token": 23247,
+          "text": "complex",
+          "logit": 22.03125
+        },
+        {
+          "token": 31137,
+          "text": "Complex",
+          "logit": 19.421875
+        },
+        {
+          "token": 874,
+          "text": "com",
+          "logit": 18.78125
+        },
+        {
+          "token": 1055,
+          "text": "of",
+          "logit": 18.34375
+        },
+        {
+          "token": 1040,
+          "text": "class",
+          "logit": 18.015625
+        },
+        {
+          "token": 2124,
+          "text": "Of",
+          "logit": 17.59375
+        },
+        {
+          "token": 3794,
+          "text": "framework",
+          "logit": 16.921875
+        },
+        {
+          "token": 64,
+          "text": "a",
+          "logit": 16.8125
+        },
+        {
+          "token": 32,
+          "text": "A",
+          "logit": 16.765625
+        },
+        {
+          "token": 5689,
+          "text": "comp",
+          "logit": 16.46875
+        }
+      ],
+      "reference_top1": 23247,
+      "reference_top2": 31137,
+      "reference_top1_rank": 1,
+      "reference_pair_logits": [
+        22.03125,
+        19.421875
+      ],
+      "reference_pair_margin": 2.609375,
+      "fp16_margin": 2.609375
+    },
+    "prediction": {
+      "prediction": "complexity classes",
+      "token_ids": [
+        23247,
+        487,
+        6846,
+        151645
+      ],
+      "input_tokens": 110,
+      "generated_tokens": 4,
+      "input_token_ids_sha256": "ffb3f64634e5163ac963f6b578df476d8007eeb859be8ffab976f849359d10d0",
+      "ttft_seconds": 0.01770933298394084,
+      "decode_seconds": 0.012622459005797282,
+      "total_seconds": 0.03033179198973812,
+      "stop_reason": "eos"
+    }
+  },
+  {
+    "variant": "q4",
+    "id": "56e1c0f6cd28a01900c67b2c",
+    "diagnostic": {
+      "vocab_size": 151936,
+      "top1": 785,
+      "top2": 10398,
+      "margin": 1.671875,
+      "top10": [
+        {
+          "token": 785,
+          "text": "The",
+          "logit": 19.140625
+        },
+        {
+          "token": 10398,
+          "text": "Definition",
+          "logit": 17.46875
+        },
+        {
+          "token": 2124,
+          "text": "Of",
+          "logit": 16.890625
+        },
+        {
+          "token": 18375,
+          "text": "definition",
+          "logit": 16.875
+        },
+        {
+          "token": 1055,
+          "text": "of",
+          "logit": 16.84375
+        },
+        {
+          "token": 1782,
+          "text": "the",
+          "logit": 16.75
+        },
+        {
+          "token": 32,
+          "text": "A",
+          "logit": 16.484375
+        },
+        {
+          "token": 3838,
+          "text": "What",
+          "logit": 16.359375
+        },
+        {
+          "token": 23247,
+          "text": "complex",
+          "logit": 16.109375
+        },
+        {
+          "token": 31137,
+          "text": "Complex",
+          "logit": 16.078125
+        }
+      ],
+      "reference_top1": 23247,
+      "reference_top2": 31137,
+      "reference_top1_rank": 9,
+      "reference_pair_logits": [
+        16.109375,
+        16.078125
+      ],
+      "reference_pair_margin": 0.03125,
+      "fp16_margin": 2.609375
+    },
+    "prediction": {
+      "prediction": "The passage contains the answer.",
+      "token_ids": [
+        785,
+        21085,
+        5610,
+        279,
+        4226,
+        13,
+        151645
+      ],
+      "input_tokens": 110,
+      "generated_tokens": 7,
+      "input_token_ids_sha256": "ffb3f64634e5163ac963f6b578df476d8007eeb859be8ffab976f849359d10d0",
+      "ttft_seconds": 0.016398374980781227,
+      "decode_seconds": 0.015996875008568168,
+      "total_seconds": 0.032395249989349395,
+      "stop_reason": "eos"
+    }
+  },
+  {
+    "variant": "q8",
+    "id": "56e1c0f6cd28a01900c67b2c",
+    "diagnostic": {
+      "vocab_size": 151936,
+      "top1": 23247,
+      "top2": 31137,
+      "margin": 2.484375,
+      "top10": [
+        {
+          "token": 23247,
+          "text": "complex",
+          "logit": 22.0
+        },
+        {
+          "token": 31137,
+          "text": "Complex",
+          "logit": 19.515625
+        },
+        {
+          "token": 874,
+          "text": "com",
+          "logit": 18.796875
+        },
+        {
+          "token": 1055,
+          "text": "of",
+          "logit": 18.28125
+        },
+        {
+          "token": 1040,
+          "text": "class",
+          "logit": 17.90625
+        },
+        {
+          "token": 2124,
+          "text": "Of",
+          "logit": 17.734375
+        },
+        {
+          "token": 32,
+          "text": "A",
+          "logit": 16.96875
+        },
+        {
+          "token": 64,
+          "text": "a",
+          "logit": 16.859375
+        },
+        {
+          "token": 3794,
+          "text": "framework",
+          "logit": 16.578125
+        },
+        {
+          "token": 5689,
+          "text": "comp",
+          "logit": 16.578125
+        }
+      ],
+      "reference_top1": 23247,
+      "reference_top2": 31137,
+      "reference_top1_rank": 1,
+      "reference_pair_logits": [
+        22.0,
+        19.515625
+      ],
+      "reference_pair_margin": 2.484375,
+      "fp16_margin": 2.609375
+    },
+    "prediction": {
+      "prediction": "complexity classes",
+      "token_ids": [
+        23247,
+        487,
+        6846,
+        151645
+      ],
+      "input_tokens": 110,
+      "generated_tokens": 4,
+      "input_token_ids_sha256": "ffb3f64634e5163ac963f6b578df476d8007eeb859be8ffab976f849359d10d0",
+      "ttft_seconds": 0.01672220800537616,
+      "decode_seconds": 0.009956333989975974,
+      "total_seconds": 0.026678541995352134,
+      "stop_reason": "eos"
+    }
+  },
+  {
+    "variant": "selected",
+    "id": "56e1c0f6cd28a01900c67b2c",
+    "diagnostic": {
+      "vocab_size": 151936,
+      "top1": 23247,
+      "top2": 3794,
+      "margin": 0.0625,
+      "top10": [
+        {
+          "token": 23247,
+          "text": "complex",
+          "logit": 18.828125
+        },
+        {
+          "token": 3794,
+          "text": "framework",
+          "logit": 18.765625
+        },
+        {
+          "token": 32,
+          "text": "A",
+          "logit": 18.3125
+        },
+        {
+          "token": 785,
+          "text": "The",
+          "logit": 18.1875
+        },
+        {
+          "token": 31137,
+          "text": "Complex",
+          "logit": 17.875
+        },
+        {
+          "token": 1055,
+          "text": "of",
+          "logit": 17.203125
+        },
+        {
+          "token": 14837,
+          "text": "Framework",
+          "logit": 17.078125
+        },
+        {
+          "token": 64,
+          "text": "a",
+          "logit": 16.953125
+        },
+        {
+          "token": 3838,
+          "text": "What",
+          "logit": 16.921875
+        },
+        {
+          "token": 2124,
+          "text": "Of",
+          "logit": 16.8125
+        }
+      ],
+      "reference_top1": 23247,
+      "reference_top2": 31137,
+      "reference_top1_rank": 1,
+      "reference_pair_logits": [
+        18.828125,
+        17.875
+      ],
+      "reference_pair_margin": 0.953125,
+      "fp16_margin": 2.609375
+    },
+    "prediction": {
+      "prediction": "complexity classes",
+      "token_ids": [
+        23247,
+        487,
+        6846,
+        151645
+      ],
+      "input_tokens": 110,
+      "generated_tokens": 4,
+      "input_token_ids_sha256": "ffb3f64634e5163ac963f6b578df476d8007eeb859be8ffab976f849359d10d0",
+      "ttft_seconds": 0.016451792005682364,
+      "decode_seconds": 0.0081695000117179,
+      "total_seconds": 0.024621292017400265,
+      "stop_reason": "eos"
+    }
+  },
+  {
+    "variant": "control",
+    "id": "56e1c0f6cd28a01900c67b2c",
+    "diagnostic": {
+      "vocab_size": 151936,
+      "top1": 785,
+      "top2": 10398,
+      "margin": 1.5,
+      "top10": [
+        {
+          "token": 785,
+          "text": "The",
+          "logit": 19.296875
+        },
+        {
+          "token": 10398,
+          "text": "Definition",
+          "logit": 17.796875
+        },
+        {
+          "token": 1055,
+          "text": "of",
+          "logit": 17.203125
+        },
+        {
+          "token": 18375,
+          "text": "definition",
+          "logit": 17.1875
+        },
+        {
+          "token": 1782,
+          "text": "the",
+          "logit": 17.171875
+        },
+        {
+          "token": 2124,
+          "text": "Of",
+          "logit": 16.921875
+        },
+        {
+          "token": 23247,
+          "text": "complex",
+          "logit": 16.875
+        },
+        {
+          "token": 31137,
+          "text": "Complex",
+          "logit": 16.859375
+        },
+        {
+          "token": 32,
+          "text": "A",
+          "logit": 16.609375
+        },
+        {
+          "token": 3794,
+          "text": "framework",
+          "logit": 16.140625
+        }
+      ],
+      "reference_top1": 23247,
+      "reference_top2": 31137,
+      "reference_top1_rank": 7,
+      "reference_pair_logits": [
+        16.875,
+        16.859375
+      ],
+      "reference_pair_margin": 0.015625,
+      "fp16_margin": 2.609375
+    },
+    "prediction": {
+      "prediction": "The passage contains the answer.",
+      "token_ids": [
+        785,
+        21085,
+        5610,
+        279,
+        4226,
+        13,
+        151645
+      ],
+      "input_tokens": 110,
+      "generated_tokens": 7,
+      "input_token_ids_sha256": "ffb3f64634e5163ac963f6b578df476d8007eeb859be8ffab976f849359d10d0",
+      "ttft_seconds": 0.01597529201535508,
+      "decode_seconds": 0.01606799999717623,
+      "total_seconds": 0.03204329201253131,
+      "stop_reason": "eos"
+    }
+  }
+]

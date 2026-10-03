@@ -1,0 +1,41 @@
+{
+  "status": "complete",
+  "started": "2026-10-03T18:24:18.442043+00:00",
+  "git_head": "c0453f2870e5cb9aa09001e9e8c689f7917d62e9",
+  "git_status": "?? results/qwen-quantization-v1/\n",
+  "source_sha256": {
+    "experiments/qwen_quantization.py": "26e2fac498d0bcea7ca5961f185eef11da2ae1a7dc698c02a2a4e57acf3055ef",
+    "lab/qa_metrics.py": "78c4af7f06ba49b3acddd2610586336ecf585c06d8ad89b46ff9fb6358aaaa1f",
+    "lab/quantization_diagnostics.py": "30ffa0c47a736c8a9facab2021b55e883e3092b0fff516634d3ce8128da6b2db",
+    "lab/evidence.py": "314c7a009fb2b740db1cb3925d538f7abcd8a8eb719c0d05efd0be71c0abb91d"
+  },
+  "protocol_sha256": "3d844bdeb797bfdc1988f5f3cbea6650c4e224f82b2d52a7e352f56761d75ac4",
+  "argv": [
+    "/Users/yukaiyan/Documents/Codex/2026-10-04/github-readme-2027-ai-infra-1/work/inference-compression-lab/experiments/qwen_quantization.py",
+    "study",
+    "--model-root",
+    "/Users/yukaiyan/Documents/Codex/2026-09-18/github-gpu-api-cuda-api-1/outputs/domain-qa-lab/.cache/mlx",
+    "--work-dir",
+    "runs/qwen-quantization-v1",
+    "--output-dir",
+    "results/qwen-quantization-v1"
+  ],
+  "packages": {
+    "mlx": "0.29.3",
+    "mlx-lm": "0.26.3",
+    "numpy": "2.5.3",
+    "transformers": "4.56.2",
+    "psutil": "7.0.0"
+  },
+  "python": "3.12.11",
+  "os": "macOS-27.0-arm64-arm-64bit",
+  "device": {
+    "resource_limit": 499000,
+    "max_buffer_length": 30150672384,
+    "architecture": "applegpu_g16s",
+    "memory_size": 51539607552,
+    "max_recommended_working_set_size": 40200896512,
+    "device_name": "Apple M4 Max"
+  },
+  "finished": "2026-10-03T18:25:51.963202+00:00"
+}

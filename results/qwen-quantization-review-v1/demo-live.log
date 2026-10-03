@@ -1,0 +1,10 @@
+Case: 56e1c0f6cd28a01900c67b2c
+Question: What has complicated definitions that prevent classification into a framework?
+Gold: ['complexity classes', 'some complexity classes']
+Source: NEW local inference
+fp16     top1='complex'      margin=2.609375 reference_pair_margin=2.609375 FP16_top1_rank= 1 answer='complexity classes'
+q4       top1='The'          margin=1.671875 reference_pair_margin=0.031250 FP16_top1_rank= 9 answer='The passage contains the answer.'
+q8       top1='complex'      margin=2.484375 reference_pair_margin=2.484375 FP16_top1_rank= 1 answer='complexity classes'
+selected top1='complex'      margin=0.062500 reference_pair_margin=0.953125 FP16_top1_rank= 1 answer='complexity classes'
+control  top1='The'          margin=1.500000 reference_pair_margin=0.015625 FP16_top1_rank= 7 answer='The passage contains the answer.'
+Live tokens and top10 match frozen evidence; diagnostics are not a performance benchmark.

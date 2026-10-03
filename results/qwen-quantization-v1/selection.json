@@ -1,0 +1,250 @@
+{
+  "selected": 10,
+  "control": 22,
+  "ranking": [
+    {
+      "block": 10,
+      "restored_top1": 2,
+      "mean_abs_pair_margin_change": 2.0052083333333335
+    },
+    {
+      "block": 9,
+      "restored_top1": 1,
+      "mean_abs_pair_margin_change": 1.4583333333333333
+    },
+    {
+      "block": 6,
+      "restored_top1": 1,
+      "mean_abs_pair_margin_change": 1.5416666666666667
+    },
+    {
+      "block": 8,
+      "restored_top1": 1,
+      "mean_abs_pair_margin_change": 1.56640625
+    },
+    {
+      "block": 23,
+      "restored_top1": 1,
+      "mean_abs_pair_margin_change": 1.6640625
+    },
+    {
+      "block": 0,
+      "restored_top1": 1,
+      "mean_abs_pair_margin_change": 1.8723958333333333
+    },
+    {
+      "block": 15,
+      "restored_top1": 1,
+      "mean_abs_pair_margin_change": 1.875
+    },
+    {
+      "block": 16,
+      "restored_top1": 1,
+      "mean_abs_pair_margin_change": 1.9348958333333333
+    },
+    {
+      "block": 14,
+      "restored_top1": 1,
+      "mean_abs_pair_margin_change": 1.953125
+    },
+    {
+      "block": 20,
+      "restored_top1": 1,
+      "mean_abs_pair_margin_change": 1.9557291666666667
+    },
+    {
+      "block": 19,
+      "restored_top1": 1,
+      "mean_abs_pair_margin_change": 1.96484375
+    },
+    {
+      "block": 7,
+      "restored_top1": 1,
+      "mean_abs_pair_margin_change": 1.9973958333333333
+    },
+    {
+      "block": 17,
+      "restored_top1": 1,
+      "mean_abs_pair_margin_change": 2.0130208333333335
+    },
+    {
+      "block": 22,
+      "restored_top1": 1,
+      "mean_abs_pair_margin_change": 2.1276041666666665
+    },
+    {
+      "block": 3,
+      "restored_top1": 1,
+      "mean_abs_pair_margin_change": 2.12890625
+    },
+    {
+      "block": 18,
+      "restored_top1": 1,
+      "mean_abs_pair_margin_change": 2.1705729166666665
+    },
+    {
+      "block": 1,
+      "restored_top1": 1,
+      "mean_abs_pair_margin_change": 2.2369791666666665
+    },
+    {
+      "block": 2,
+      "restored_top1": 1,
+      "mean_abs_pair_margin_change": 2.3541666666666665
+    },
+    {
+      "block": 21,
+      "restored_top1": 0,
+      "mean_abs_pair_margin_change": 1.9114583333333333
+    },
+    {
+      "block": 12,
+      "restored_top1": 0,
+      "mean_abs_pair_margin_change": 2.0338541666666665
+    },
+    {
+      "block": 13,
+      "restored_top1": 0,
+      "mean_abs_pair_margin_change": 2.2669270833333335
+    },
+    {
+      "block": 4,
+      "restored_top1": 0,
+      "mean_abs_pair_margin_change": 2.3072916666666665
+    },
+    {
+      "block": 5,
+      "restored_top1": 0,
+      "mean_abs_pair_margin_change": 2.4440104166666665
+    },
+    {
+      "block": 11,
+      "restored_top1": 0,
+      "mean_abs_pair_margin_change": 2.6380208333333335
+    }
+  ],
+  "costs": [
+    {
+      "block": 0,
+      "q4_tensor_bytes": 8392448,
+      "fp16_tensor_bytes": 29824768
+    },
+    {
+      "block": 1,
+      "q4_tensor_bytes": 8392448,
+      "fp16_tensor_bytes": 29824768
+    },
+    {
+      "block": 2,
+      "q4_tensor_bytes": 8392448,
+      "fp16_tensor_bytes": 29824768
+    },
+    {
+      "block": 3,
+      "q4_tensor_bytes": 8392448,
+      "fp16_tensor_bytes": 29824768
+    },
+    {
+      "block": 4,
+      "q4_tensor_bytes": 8392448,
+      "fp16_tensor_bytes": 29824768
+    },
+    {
+      "block": 5,
+      "q4_tensor_bytes": 8392448,
+      "fp16_tensor_bytes": 29824768
+    },
+    {
+      "block": 6,
+      "q4_tensor_bytes": 8392448,
+      "fp16_tensor_bytes": 29824768
+    },
+    {
+      "block": 7,
+      "q4_tensor_bytes": 8392448,
+      "fp16_tensor_bytes": 29824768
+    },
+    {
+      "block": 8,
+      "q4_tensor_bytes": 8392448,
+      "fp16_tensor_bytes": 29824768
+    },
+    {
+      "block": 9,
+      "q4_tensor_bytes": 8392448,
+      "fp16_tensor_bytes": 29824768
+    },
+    {
+      "block": 10,
+      "q4_tensor_bytes": 8392448,
+      "fp16_tensor_bytes": 29824768
+    },
+    {
+      "block": 11,
+      "q4_tensor_bytes": 8392448,
+      "fp16_tensor_bytes": 29824768
+    },
+    {
+      "block": 12,
+      "q4_tensor_bytes": 8392448,
+      "fp16_tensor_bytes": 29824768
+    },
+    {
+      "block": 13,
+      "q4_tensor_bytes": 8392448,
+      "fp16_tensor_bytes": 29824768
+    },
+    {
+      "block": 14,
+      "q4_tensor_bytes": 8392448,
+      "fp16_tensor_bytes": 29824768
+    },
+    {
+      "block": 15,
+      "q4_tensor_bytes": 8392448,
+      "fp16_tensor_bytes": 29824768
+    },
+    {
+      "block": 16,
+      "q4_tensor_bytes": 8392448,
+      "fp16_tensor_bytes": 29824768
+    },
+    {
+      "block": 17,
+      "q4_tensor_bytes": 8392448,
+      "fp16_tensor_bytes": 29824768
+    },
+    {
+      "block": 18,
+      "q4_tensor_bytes": 8392448,
+      "fp16_tensor_bytes": 29824768
+    },
+    {
+      "block": 19,
+      "q4_tensor_bytes": 8392448,
+      "fp16_tensor_bytes": 29824768
+    },
+    {
+      "block": 20,
+      "q4_tensor_bytes": 8392448,
+      "fp16_tensor_bytes": 29824768
+    },
+    {
+      "block": 21,
+      "q4_tensor_bytes": 8392448,
+      "fp16_tensor_bytes": 29824768
+    },
+    {
+      "block": 22,
+      "q4_tensor_bytes": 8392448,
+      "fp16_tensor_bytes": 29824768
+    },
+    {
+      "block": 23,
+      "q4_tensor_bytes": 8392448,
+      "fp16_tensor_bytes": 29824768
+    }
+  ],
+  "rule": "Maximize restored FP16 top1 count on six fixed losses, then minimize mean absolute change from FP16 top1-vs-top2 pair margin, then lowest block index.",
+  "scope": "Repeatedly used development set. All selection and quality conclusions exploratory, no independent test/confirmation claim. No test inference."
+}

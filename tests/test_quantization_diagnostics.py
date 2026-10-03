@@ -1,6 +1,11 @@
 """Guard evidence coverage, selection without quality fishing, and unchanged scoring."""
 import unittest
 from pathlib import Path
+import tempfile
+import shutil
+import json
+from lab.quantization_diagnostics import sha
+from experiments.verify_qwen_quantization import verify
 from lab.quantization_diagnostics import read, rows, rank_blocks, paired, performance
 from lab.qa_metrics import evaluate
 
@@ -44,6 +49,35 @@ class DiagnosticTests(unittest.TestCase):
         self.assertEqual(performance([r])['decode_tokens_per_second'], 100.)
         with self.assertRaises(ValueError):
             performance([dict(r, token_ids=[1])])
+
+
+@unittest.skipUnless((ROOT / 'results/qwen-quantization-v1/run.json').exists(), 'GPU evidence not archived')
+class FrozenEvidenceTests(unittest.TestCase):
+    def test_recompute_and_preserve_parent_evidence(self):
+        result = verify(ROOT / 'results/qwen-quantization-v1')
+        self.assertEqual(result, read(ROOT / 'results/qwen-quantization-v1/summary.json'))
+        for name, expected in read(ROOT / 'configs/qwen-quantization/parent-evidence.json').items():
+            self.assertEqual(sha(ROOT / name), expected)
+
+    def test_resigned_missing_screen_cell_is_rejected(self):
+        self.reject_changed_file('screen.json', lambda x: x[:-1], 'Missing/duplicate screen cell')
+
+    def test_resigned_changed_control_is_rejected(self):
+        self.reject_changed_file('selection.json', lambda x: dict(x, control=x['selected']), 'Control changed')
+
+    def test_resigned_shortened_benchmark_is_rejected(self):
+        self.reject_changed_file('bench-0-q4/run.json', lambda x: dict(x, timings=x['timings'][:-1]),
+                                 'Benchmark request coverage')
+
+    def reject_changed_file(self, name, change, reason):
+        with tempfile.TemporaryDirectory() as td:
+            copy = Path(td) / 'evidence'
+            shutil.copytree(ROOT / 'results/qwen-quantization-v1', copy)
+            (copy / name).write_text(json.dumps(change(read(copy / name))))
+            checksums = read(copy / 'checksums.json'); checksums[name] = sha(copy / name)
+            (copy / 'checksums.json').write_text(json.dumps(checksums))
+            with self.assertRaisesRegex(ValueError, reason):
+                verify(copy)
 
 
 if __name__ == '__main__':

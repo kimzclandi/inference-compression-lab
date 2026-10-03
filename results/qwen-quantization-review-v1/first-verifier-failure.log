@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/yukaiyan/Documents/Codex/2026-10-04/github-readme-2027-ai-infra-1/work/inference-compression-lab/experiments/verify_qwen_quantization.py", line 152, in <module>
+    main()
+    ~~~~^^
+  File "/Users/yukaiyan/Documents/Codex/2026-10-04/github-readme-2027-ai-infra-1/work/inference-compression-lab/experiments/verify_qwen_quantization.py", line 139, in main
+    result = verify(a.folder)
+  File "/Users/yukaiyan/Documents/Codex/2026-10-04/github-readme-2027-ai-infra-1/work/inference-compression-lab/experiments/verify_qwen_quantization.py", line 87, in verify
+    require(result['selected']['weight_bytes'] == result['control']['weight_bytes'], 'Unequal export file cost')
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yukaiyan/Documents/Codex/2026-10-04/github-readme-2027-ai-infra-1/work/inference-compression-lab/experiments/verify_qwen_quantization.py", line 13, in require
+    raise ValueError(message)
+ValueError: Unequal export file cost

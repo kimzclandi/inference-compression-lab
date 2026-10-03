@@ -1,0 +1,31 @@
+QUALITY fp16: EM=19.0/74
+QUALITY q4: EM=16.0/74
+QUALITY q8: EM=18.0/74
+SELECTED block 10, CONTROL block 22
+QUALITY selected: EM=18.0/74
+QUALITY control: EM=16.0/74
+bench-0-fp16 complete
+bench-0-q4 complete
+bench-0-q8 complete
+bench-0-selected complete
+bench-0-control complete
+bench-1-q4 complete
+bench-1-q8 complete
+bench-1-selected complete
+bench-1-control complete
+bench-1-fp16 complete
+bench-2-q8 complete
+bench-2-selected complete
+bench-2-control complete
+bench-2-fp16 complete
+bench-2-q4 complete
+bench-3-selected complete
+bench-3-control complete
+bench-3-fp16 complete
+bench-3-q4 complete
+bench-3-q8 complete
+bench-4-control complete
+bench-4-fp16 complete
+bench-4-q4 complete
+bench-4-q8 complete
+bench-4-selected complete
