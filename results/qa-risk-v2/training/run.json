@@ -1,0 +1,12 @@
+{
+  "status": "complete",
+  "git_head": "97c54e82bb5e1f168afad2b0fb69341e805dde71",
+  "git_status": "M DATA_LICENSE.md\n M THIRD_PARTY.md\n M experiments/release_archive.py\n?? docs/qa-specialist-study.md\n?? experiments/verify_qa_risk.py\n?? results/qa-specialist-performance-v1/\n?? tests/test_release_head_exclusion.py",
+  "python": "3.12.11",
+  "numpy": "2.2.6",
+  "protocol_sha256": "365a1ff260d9f887558bc5ce5421e4028702ad435717aefc8f17787cea08081b",
+  "variants": [
+    "fp32",
+    "int8"
+  ]
+}
