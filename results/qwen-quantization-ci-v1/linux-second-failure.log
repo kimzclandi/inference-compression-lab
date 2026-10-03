@@ -1,0 +1,96 @@
+test	Run python -m unittest discover -s tests -v	﻿2026-10-03T18:47:46.9694723Z ##[group]Run python -m unittest discover -s tests -v
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:46.9696411Z ^[[36;1mpython -m unittest discover -s tests -v^[[0m
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.0049762Z shell: /usr/bin/bash -e {0}
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.0050709Z env:
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.0051560Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.16/x64
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.0052790Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.16/x64/lib/pkgconfig
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.0053945Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.16/x64
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.0055006Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.16/x64
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.0056064Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.16/x64
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.0057137Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.16/x64/lib
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.0058211Z ##[endgroup]
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.2644810Z test_invalid_limits (test_bucketing.PlanningTests.test_invalid_limits) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.2673241Z test_tail_duplicates_and_bounded_reordering (test_bucketing.PlanningTests.test_tail_duplicates_and_bounded_reordering) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.2690511Z test_order_truncation_padding_and_call_isolation (test_bucketing.RealModelTests.test_order_truncation_padding_and_call_isolation) ... skipped 'local model unavailable'
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.2800865Z test_evidence_hashes_predictions_and_timing_denominators (test_bucketing_evidence.BucketingEvidenceTests.test_evidence_hashes_predictions_and_timing_denominators) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.3197729Z test_historical_results_remain_unchanged (test_bucketing_evidence.BucketingEvidenceTests.test_historical_results_remain_unchanged) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.3254281Z test_predictions_measurements_and_integer_execution (test_evidence.EvidenceTests.test_predictions_measurements_and_integer_execution) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.3257804Z test_in_range_error_bound (test_lab.QuantizationTests.test_in_range_error_bound) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.3262713Z test_invalid_data (test_lab.QuantizationTests.test_invalid_data) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.3265000Z test_zero_and_saturation (test_lab.QuantizationTests.test_zero_and_saturation) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.3267231Z test_gpu_requires_sync (test_lab.TimingTests.test_gpu_requires_sync) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.3269415Z test_percentile (test_lab.TimingTests.test_percentile) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.3271467Z test_sample_count_and_sync (test_lab.TimingTests.test_sample_count_and_sync) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.3275717Z test_aggregate_uses_element_counts_not_mean_of_batch_means (test_layer_metrics.LayerMetricsTests.test_aggregate_uses_element_counts_not_mean_of_batch_means) ... skipped 'experiment dependencies unavailable'
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.3280821Z test_padding_is_excluded_and_nmse_is_energy_normalized (test_layer_metrics.LayerMetricsTests.test_padding_is_excluded_and_nmse_is_energy_normalized) ... skipped 'experiment dependencies unavailable'
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.3285523Z test_no_clipping_weight_rounding_bound (test_learning_quantization.TeachingQuantizationTests.test_no_clipping_weight_rounding_bound) ... skipped 'numpy unavailable'
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.3290422Z test_output_channel_scale_does_not_change_other_channel (test_learning_quantization.TeachingQuantizationTests.test_output_channel_scale_does_not_change_other_channel) ... skipped 'numpy unavailable'
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.3295220Z test_zero_channels_and_zeros_are_representable (test_learning_quantization.TeachingQuantizationTests.test_zero_channels_and_zeros_are_representable) ... skipped 'numpy unavailable'
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.3300529Z test_crossover_positions_and_raw_samples (test_mac_evidence.MacEvidenceTests.test_crossover_positions_and_raw_samples) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.3330515Z test_layer_sums_and_debug_fidelity (test_mac_evidence.MacEvidenceTests.test_layer_sums_and_debug_fidelity) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.3614985Z test_predictions_protocol_and_execution (test_mac_evidence.MacEvidenceTests.test_predictions_protocol_and_execution) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.3619094Z test_windows_history_is_byte_identical (test_mac_evidence.MacEvidenceTests.test_windows_history_is_byte_identical) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.3623476Z test_hash_and_real_encode_contract (test_minilm_runtime.RuntimeTests.test_hash_and_real_encode_contract) ... skipped 'experiment dependencies unavailable'
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.3628911Z test_invalid_threads_fail_before_loading (test_minilm_runtime.RuntimeTests.test_invalid_threads_fail_before_loading) ... skipped 'experiment dependencies unavailable'
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.3633885Z test_pool_ignores_padding_and_normalizes (test_minilm_runtime.RuntimeTests.test_pool_ignores_padding_and_normalizes) ... skipped 'experiment dependencies unavailable'
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.3638513Z test_failed_build_never_inserts (test_prefix_cache.PrefixCacheTests.test_failed_build_never_inserts) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.3642763Z test_hit_isolation_and_changed_prefix_miss (test_prefix_cache.PrefixCacheTests.test_hit_isolation_and_changed_prefix_miss) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.3646731Z test_lru_byte_budget_and_bypass (test_prefix_cache.PrefixCacheTests.test_lru_byte_budget_and_bypass) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.3650059Z test_model_and_token_boundaries (test_prefix_cache.PrefixCacheTests.test_model_and_token_boundaries) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.3653544Z test_byte_limit_overrides_entry_capacity (test_prefix_cache_transactions.Transactions.test_byte_limit_overrides_entry_capacity) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.3671454Z test_failure_preserves_residents_lru_and_success_counters (test_prefix_cache_transactions.Transactions.test_failure_preserves_residents_lru_and_success_counters) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.3675821Z test_identity_and_limit_validation (test_prefix_cache_transactions.Transactions.test_identity_and_limit_validation) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.3682293Z test_aggregate_tolerance_never_masks_quality_or_coverage_changes (test_quantization_diagnostics.DiagnosticTests.test_aggregate_tolerance_never_masks_quality_or_coverage_changes) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.3686882Z test_decode_denominator_excludes_prefill_and_first_token (test_quantization_diagnostics.DiagnosticTests.test_decode_denominator_excludes_prefill_and_first_token) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.3690957Z test_format_flag_is_not_an_em_gate (test_quantization_diagnostics.DiagnosticTests.test_format_flag_is_not_an_em_gate) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.3706376Z test_historical_scores_are_identical_without_rescoring_rules (test_quantization_diagnostics.DiagnosticTests.test_historical_scores_are_identical_without_rescoring_rules) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.3711864Z test_selection_coverage_and_tie_break_are_frozen (test_quantization_diagnostics.DiagnosticTests.test_selection_coverage_and_tie_break_are_frozen) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.4012669Z test_recompute_and_preserve_parent_evidence (test_quantization_diagnostics.FrozenEvidenceTests.test_recompute_and_preserve_parent_evidence) ... ERROR
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.4205423Z test_resigned_changed_control_is_rejected (test_quantization_diagnostics.FrozenEvidenceTests.test_resigned_changed_control_is_rejected) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.4464073Z test_resigned_missing_screen_cell_is_rejected (test_quantization_diagnostics.FrozenEvidenceTests.test_resigned_missing_screen_cell_is_rejected) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.4971065Z test_resigned_shortened_benchmark_is_rejected (test_quantization_diagnostics.FrozenEvidenceTests.test_resigned_shortened_benchmark_is_rejected) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.5031830Z test_recompute (test_qwen_cache_lifecycle_evidence.LifecycleEvidence.test_recompute) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.5210260Z test_reject_false_success_counter (test_qwen_cache_lifecycle_evidence.LifecycleEvidence.test_reject_false_success_counter) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.5370003Z test_reject_lru_change (test_qwen_cache_lifecycle_evidence.LifecycleEvidence.test_reject_lru_change) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.5471421Z test_reject_trace_omission (test_qwen_cache_lifecycle_evidence.LifecycleEvidence.test_reject_trace_omission) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.5497293Z test_cache_failure_boundaries (test_qwen_prefix_evidence.QwenEvidenceTests.test_cache_failure_boundaries) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.5522278Z test_checksums_and_identity (test_qwen_prefix_evidence.QwenEvidenceTests.test_checksums_and_identity) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.5556263Z test_quality_exact_coverage_and_unchanged_outputs (test_qwen_prefix_evidence.QwenEvidenceTests.test_quality_exact_coverage_and_unchanged_outputs) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.5587186Z test_timing_denominators_modes_and_causal_control (test_qwen_prefix_evidence.QwenEvidenceTests.test_timing_denominators_modes_and_causal_control) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.5591517Z test_profile_clone_override_preserves_isolation (test_qwen_prefix_fair.FairEvidenceTests.test_profile_clone_override_preserves_isolation) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.5872448Z test_rejects_hidden_copy_in_direct_path (test_qwen_prefix_fair.FairEvidenceTests.test_rejects_hidden_copy_in_direct_path) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.6113103Z test_rejects_missing_cells (test_qwen_prefix_fair.FairEvidenceTests.test_rejects_missing_cells) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.6381090Z test_rejects_token_mismatch (test_qwen_prefix_fair.FairEvidenceTests.test_rejects_token_mismatch) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.6590790Z test_saved_run_recomputes (test_qwen_prefix_fair.FairEvidenceTests.test_saved_run_recomputes) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.6594332Z test_empty_existing_directory_is_also_protected (test_run_safety.RunSafetyTests.test_empty_existing_directory_is_also_protected) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.6598422Z test_existing_evidence_is_never_overwritten (test_run_safety.RunSafetyTests.test_existing_evidence_is_never_overwritten) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.6603575Z test_frozen_selection_and_dataset_boundary (test_runtime_study_evidence.RuntimeStudyEvidenceTests.test_frozen_selection_and_dataset_boundary) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.7044437Z test_integer_execution_and_acceptance_arithmetic (test_runtime_study_evidence.RuntimeStudyEvidenceTests.test_integer_execution_and_acceptance_arithmetic) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.7096481Z test_quality_and_deployment_hashes (test_runtime_study_evidence.RuntimeStudyEvidenceTests.test_quality_and_deployment_hashes) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.7257431Z test_raw_timings_match_summaries (test_runtime_study_evidence.RuntimeStudyEvidenceTests.test_raw_timings_match_summaries) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.7281023Z test_latency_scope_and_quality_subset_match (test_runtime_study_evidence.ShortRequestEvidenceTests.test_latency_scope_and_quality_subset_match) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.7286317Z test_parent_selection_unchanged_and_inputs_changed (test_runtime_study_evidence.ShortRequestEvidenceTests.test_parent_selection_unchanged_and_inputs_changed) ... ok
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.7290870Z test_short_pair_selection_has_no_truncation (test_runtime_study_evidence.ShortRequestEvidenceTests.test_short_pair_selection_has_no_truncation) ... skipped 'local data/dependencies unavailable'
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.7295680Z test_embedded_padding_and_truncation_do_not_change_eligibility (test_short_request_selection.ShortRequestSelectionTests.test_embedded_padding_and_truncation_do_not_change_eligibility) ... skipped 'experiment dependencies unavailable'
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.7300951Z test_nonfinite_results_are_rejected_before_file_creation (test_short_request_selection.ShortRequestSelectionTests.test_nonfinite_results_are_rejected_before_file_creation) ... skipped 'experiment dependencies unavailable'
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.7303703Z 
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.7304432Z ======================================================================
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.7307215Z ERROR: test_recompute_and_preserve_parent_evidence (test_quantization_diagnostics.FrozenEvidenceTests.test_recompute_and_preserve_parent_evidence)
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.7310246Z ----------------------------------------------------------------------
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.7312049Z Traceback (most recent call last):
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.7323784Z   File "/home/runner/work/inference-compression-lab/inference-compression-lab/tests/test_quantization_diagnostics.py", line 66, in test_recompute_and_preserve_parent_evidence
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.7327565Z     self.assertEqual(sha(ROOT / name), expected)
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.7329761Z                      ^^^^^^^^^^^^^^^^
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.7332179Z   File "/home/runner/work/inference-compression-lab/inference-compression-lab/lab/quantization_diagnostics.py", line 48, in sha
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.7334608Z     with Path(path).open('rb') as f:
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.7336097Z          ^^^^^^^^^^^^^^^^^^^^^
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.7338404Z   File "/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/pathlib.py", line 1044, in open
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.7340634Z     return io.open(self, mode, buffering, encoding, errors, newline)
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.7342378Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.7345591Z FileNotFoundError: [Errno 2] No such file or directory: '/Users/yukaiyan/Documents/Codex/2026-10-04/github-readme-2027-ai-infra-1/work/inference-compression-lab/results/qwen-cache-contracts-final-v1/contracts.json'
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.7348428Z 
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.7349301Z ----------------------------------------------------------------------
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.7350941Z Ran 64 tests in 0.466s
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.7351881Z 
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.7352612Z FAILED (errors=1, skipped=12)
+test	Run python -m unittest discover -s tests -v	2026-10-03T18:47:47.7430792Z ##[error]Process completed with exit code 1.

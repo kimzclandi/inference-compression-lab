@@ -63,6 +63,7 @@ class FrozenEvidenceTests(unittest.TestCase):
         result = verify(ROOT / 'results/qwen-quantization-v1')
         self.assertTrue(aggregates_equal(result, read(ROOT / 'results/qwen-quantization-v1/summary.json')))
         for name, expected in read(ROOT / 'configs/qwen-quantization/parent-evidence.json').items():
+            self.assertFalse(Path(name).is_absolute(), 'Evidence manifest must work outside the author checkout')
             self.assertEqual(sha(ROOT / name), expected)
 
     def test_resigned_missing_screen_cell_is_rejected(self):
