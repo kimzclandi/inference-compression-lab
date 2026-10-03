@@ -1,6 +1,6 @@
 # Inference Compression Lab
 
-面向量化、推理性能分析和端侧部署的可复现实验。保留原始记录、负结果和明确的硬件/质量边界；模型权重不上传。
+面向量化诊断与推理性能分析的个人研究实验。保留原始记录、负结果和明确的硬件/质量边界；模型权重不上传。
 
 ## 当前主线：Qwen 低比特诊断与受控回退
 
@@ -9,6 +9,12 @@
 [报告与复跑](docs/qwen-quantization-study.md) · [冻结协议](configs/qwen-quantization/study.json) · [原始结果](results/qwen-quantization-v1) · [离线重算代码](experiments/verify_qwen_quantization.py) · [学习单元](docs/qwen-quantization-learning.md) · [JD/简历证据表](docs/qwen-quantization-resume.md)
 
 [新样本确认报告](docs/qwen-confirmation-study.md) · [发布验收与独立复跑](docs/release-reproduction.md) · [原始确认记录](results/qwen-confirmation-v1) · [数据许可](DATA_LICENSE.md) · [第三方归属](THIRD_PARTY.md)
+
+## 独立审查与英文介绍
+
+[独立技术审查与招聘判断](docs/independent-release-review.md)：从原始预测独立重算、修复完整性漏检，并以另一份推理循环复现 40 条已公布样本。原始 FP16 来源和两个回退模型的全部张量已独立核对。研究材料可复现不等于优化已确认、QA 可部署或作者已独立掌握。
+
+A personal research artifact for low-bit inference diagnostics and controlled performance experiments. A fixed 128-question confirmation did **not** pass its quality gates: block-10 restoration scored 29/128 EM versus 26/128 for Q4, with a zero lower confidence bound and an excessive F1 drop from FP16. The review independently recomputed saved outputs and reproduced 40 published generations on the same M4 Max. MLX/ONNX Runtime provide the kernels and quantizers; this project contributes controlled experiments, cache lifecycle handling, diagnostic code, and verifiable evidence. No deployment-quality QA, novel quantization algorithm, or cross-device speedup is claimed.
 
 ## 已有实验入口
 
@@ -20,7 +26,7 @@
 |缓存生命周期与容量失效|[报告](docs/qwen-cache-lifecycle-study.md) / [学习](docs/qwen-cache-lifecycle-learning.md)|单调用者、受控故障注入；逻辑 KV 字节不是进程内存上限|
 |Jetson Orin Nano 原项目|[只读盘点脚本](experiments/jetson_inventory.py)|待原代码和硬件接入；无本仓库 TensorRT/手机/昇腾实测|
 
-本分支由 PR #1–#5 逐层叠加而来。审查时必须查看分支/PR，不能假定默认 main 已包含全部成果。不自动合并，不更改仓库可见性。
+本分支包含 PR #1–#6 的叠加成果及独立审查修复。审查时必须查看分支/PR，不能假定默认 main 已包含全部成果。不自动合并，不更改仓库可见性。
 
 ## 最短离线检查
 

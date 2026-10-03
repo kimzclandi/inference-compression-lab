@@ -1,0 +1,6 @@
+{
+  "command_context": "zsh wrapper after unittest completed",
+  "wrapper_exit": 1,
+  "error": "zsh read-only variable status used for exit code",
+  "resolution": "Repeat once with subprocess.run and an explicit recorded returncode; no test changes"
+}

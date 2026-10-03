@@ -15,3 +15,7 @@ jobs:
           python-version: ${{ matrix.python }}
       - run: python -m unittest discover -s tests -v
       - run: python -m experiments.verify_release
+      - name: Independent raw-record arithmetic
+        run: |
+          python results/independent-review-v1/statistics/audit_statistics.py --output "$RUNNER_TEMP/independent-statistics"
+          python results/independent-review-v1/performance/recompute.py > "$RUNNER_TEMP/independent-performance.json"

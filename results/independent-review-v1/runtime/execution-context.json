@@ -1,0 +1,8 @@
+{
+  "working_directory_form": "Fresh git archive of 0670643 plus the reviewer replay script and fixed plan",
+  "git_metadata_present": false,
+  "network_policy": "HF_HUB_OFFLINE=1 and TRANSFORMERS_OFFLINE=1 before importing loaders",
+  "external_inputs": "Explicit --upstream and --model-root paths; existing pinned Python environment. No imported author-repository code.",
+  "replay_scope": "40 new generations of published prompts; no new accuracy or performance claim",
+  "required_packages": "requirements-mlx-prefix.txt"
+}

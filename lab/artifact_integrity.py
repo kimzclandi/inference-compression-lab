@@ -6,7 +6,7 @@ from lab.quantization_diagnostics import sha
 
 def safe_path(root, name):
     p = PurePosixPath(name)
-    if not name or p.is_absolute() or '..' in p.parts or str(p) != name or '\\' in name:
+    if not name or name == '.' or p.is_absolute() or '..' in p.parts or str(p) != name or '\\' in name:
         raise ValueError('Noncanonical relative artifact path: ' + name)
     result = Path(root) / name
     part = Path(root)

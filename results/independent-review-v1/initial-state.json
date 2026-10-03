@@ -1,0 +1,23 @@
+{
+  "review_base_commit": "0670643e9e0b7c4e58418718ce001119f0de7d03",
+  "review_branch": "codex/independent-release-review",
+  "base_dirty": false,
+  "upstream_rc1_sha256": "6a098cfea881c97445cb285366c1759b2d4781c8fb8ef99b836a6e47d146ebf8",
+  "machine": {
+    "model": "Mac16,5",
+    "chip": "Apple M4 Max",
+    "cpu_cores": 16,
+    "gpu_cores": 40,
+    "memory_bytes": 51539607552,
+    "os": "macOS-27.0-arm64-arm-64bit-Mach-O"
+  },
+  "applicable_instructions": "User-supplied AGENTS.md in conversation; no on-disk ancestor/repository AGENTS.md found",
+  "environment_scope": "Existing prior clean pinned Python 3.12 environment reused; this review does not claim another clean install",
+  "remote_initial": {
+    "visibility": "PRIVATE",
+    "default_branch": "main",
+    "pr_1_to_6": "OPEN/DRAFT, unchanged dependency chain",
+    "pr6_head": "0670643e9e0b7c4e58418718ce001119f0de7d03"
+  },
+  "authorization": "Commit/push/draft PR authorized; no merge; license and visibility undecided"
+}

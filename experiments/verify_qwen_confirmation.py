@@ -1,7 +1,8 @@
 """Offline recomputation; a negative confirmation is valid research evidence."""
 import argparse
 from pathlib import Path
-from lab.artifact_integrity import verify_hashes, safe_path
+from lab.artifact_integrity import verify_hashes
+from lab.model_identity import TOKENIZER_FILES, verify_inference_files
 from lab.confirmation import summarize
 from lab.qa_metrics import evaluate
 from lab.quantization_diagnostics import read, write, sha, rows, aggregates_equal, index_by_id
@@ -20,8 +21,7 @@ def verify(folder):
     require(sha(folder / 'data.jsonl') == spec['data_sha256'], 'Frozen data identity')
     require(sha(folder / 'prompt.json') == spec['prompt_sha256'], 'Frozen prompt identity')
     require(sha(folder / 'source/lab/qa_metrics.py') == spec['scorer_sha256'], 'Unchanged scorer')
-    for name, expected in run['source_sha256'].items():
-        require(sha(safe_path(folder / 'source', name)) == expected, 'Source snapshot changed')
+    verify_hashes(folder / 'source', run['source_sha256'], exclude=())
     require(spec['blocks'] == {'selected': 10, 'control': 22}, 'Fixed blocks changed')
     data = rows(folder / 'data.jsonl'); denied = read(folder / 'exclusions.json')
     manifest = read(folder / 'dataset-manifest.json'); selection = read(folder / 'selection.json')
@@ -38,9 +38,17 @@ def verify(folder):
         for impossible in [False, True]:
             group = [r for r in data if r['source_title'] == title and r['is_impossible'] == impossible]
             require(len(group) == selection['per_class_per_article'] == len({r['family_id'] for r in group}), 'Article/class balance')
-    metrics, scored = {}, {}; reference = None
+    identities = read(folder / 'tensor-identities.json')
+    require(set(identities) == set(spec['variants']), 'Tensor identity variant coverage')
+    metrics, scored = {}, {}; reference = None; reference_files = None
     for v in spec['variants']:
         result = read(folder / f'{v}-quality.json'); predictions = result['predictions']
+        model_files = result['model_files']
+        if reference_files is None: reference_files = model_files
+        verify_inference_files(model_files, reference_files)
+        for name in TOKENIZER_FILES:
+            require(model_files[name]['sha256'] == identities[v]['tokenizer_files'][name],
+                    'Recorded tokenizer identity mismatch: ' + v + '/' + name)
         metrics[v], scored[v] = evaluate(data, predictions)
         require(aggregates_equal(metrics[v], result['metrics']) and scored[v] == result['scored'], 'Score arithmetic drift')
         sig = [(p['id'],p['prompt_sha256'],p['input_token_ids_sha256'],p['input_tokens']) for p in predictions]

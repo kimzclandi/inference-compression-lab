@@ -1,0 +1,7 @@
+{
+  "scope": "All locally fetched reachable refs at review base, including history. New working tree checked by release builder. Scoped pattern scan plus reviewed artifact content, not proof of absence of all secrets.",
+  "blobs": 719,
+  "total_blob_bytes": 38365742,
+  "forbidden_model_objects": [],
+  "scoped_secret_matches": []
+}

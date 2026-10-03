@@ -1,0 +1,3242 @@
+{
+  "status": "complete",
+  "started": "2026-10-03T19:32:14.514633+00:00",
+  "scope": "Published-sample reproduction, existing pinned environment, same M4 Max",
+  "plan": {
+    "scope": "Already published sample reproduction; no fresh confirmation or speed claim",
+    "selection_rule": "Lexicographically first ID in each of four articles and each answerability class; independent of model output",
+    "ids": [
+      "5727c94bff5b5019007d954d",
+      "5a1c539bb4fb5d00187145fd",
+      "572f59b4a23a5019007fc587",
+      "5ad25e17d7d075001a428f12",
+      "57094b4f9928a814004714f9",
+      "5a2c08aebfd06b001a5ae989",
+      "570d2417fed7b91900d45c3e",
+      "5a63772268151a001a9222f4"
+    ],
+    "variants": [
+      "fp16",
+      "q4",
+      "q8",
+      "selected",
+      "control"
+    ],
+    "max_new_tokens": 48,
+    "seed": 2026100402,
+    "acceptance": "All five model tensor inventories and original-source restoration match; all 40 prompt hashes, token sequences, text, and top10 match frozen records. Save failure and stop on drift."
+  },
+  "plan_sha256": "cb60be6dc82e9654d58d2ac8d9b1db71a588c50b92de753c6f16c45a8e8f5b8a",
+  "script_sha256": "dbc7431e7b595bfd1dbda6f2ccd29df64712c7960392c5189d4182e1e86376a3",
+  "python": "3.12.11",
+  "platform": "macOS-27.0-arm64-arm-64bit",
+  "packages": {
+    "mlx": "0.29.3",
+    "mlx-lm": "0.26.3",
+    "numpy": "2.5.3",
+    "transformers": "4.56.2"
+  },
+  "identity": {
+    "fp16": {
+      "tensors": 290,
+      "tensor_bytes": 988065536,
+      "all_tensor_hashes_match": true,
+      "all_files_match": true,
+      "non_quantization_config_matches_fp16": true
+    },
+    "q4": {
+      "tensors": 628,
+      "tensor_bytes": 277996288,
+      "all_tensor_hashes_match": true,
+      "all_files_match": true,
+      "non_quantization_config_matches_fp16": true
+    },
+    "q8": {
+      "tensors": 628,
+      "tensor_bytes": 524976896,
+      "all_tensor_hashes_match": true,
+      "all_files_match": true,
+      "non_quantization_config_matches_fp16": true
+    },
+    "selected": {
+      "tensors": 614,
+      "tensor_bytes": 299428608,
+      "all_tensor_hashes_match": true,
+      "all_files_match": true,
+      "non_quantization_config_matches_fp16": true,
+      "original_fp16_restored_tensors": 12,
+      "other_tensors_identical_to_q4": true
+    },
+    "control": {
+      "tensors": 614,
+      "tensor_bytes": 299428608,
+      "all_tensor_hashes_match": true,
+      "all_files_match": true,
+      "non_quantization_config_matches_fp16": true,
+      "original_fp16_restored_tensors": 12,
+      "other_tensors_identical_to_q4": true
+    }
+  },
+  "records": [
+    {
+      "variant": "fp16",
+      "id": "5727c94bff5b5019007d954d",
+      "input_shape": [
+        1,
+        225
+      ],
+      "token_ids": [
+        42074,
+        831,
+        6272,
+        151645
+      ],
+      "prediction": "Duval County",
+      "prompt_sha256": "ba61c253e9bdf3ca984b7132e0071de337f2cf0948f0b1fa8e4350ad34359246",
+      "input_token_ids_sha256": "ca9654ce7a2ef3db8f9144e614ac9f7b23f42a9c3fd49cce6053d47683007ee3",
+      "top10": [
+        {
+          "token": 42074,
+          "text": "Du",
+          "logit": 25.84375
+        },
+        {
+          "token": 35,
+          "text": "D",
+          "logit": 22.375
+        },
+        {
+          "token": 73194,
+          "text": "Dub",
+          "logit": 18.390625
+        },
+        {
+          "token": 53033,
+          "text": "Dur",
+          "logit": 18.15625
+        },
+        {
+          "token": 15687,
+          "text": " Du",
+          "logit": 17.734375
+        },
+        {
+          "token": 61282,
+          "text": "Jackson",
+          "logit": 17.046875
+        },
+        {
+          "token": 1912,
+          "text": "De",
+          "logit": 16.96875
+        },
+        {
+          "token": 21685,
+          "text": "Di",
+          "logit": 16.34375
+        },
+        {
+          "token": 91641,
+          "text": "Dou",
+          "logit": 15.9921875
+        },
+        {
+          "token": 1054,
+          "text": "du",
+          "logit": 15.5703125
+        }
+      ],
+      "matches": {
+        "tokens": true,
+        "text": true,
+        "prompt": true,
+        "input_tokens": true,
+        "top10": true
+      }
+    },
+    {
+      "variant": "fp16",
+      "id": "5a1c539bb4fb5d00187145fd",
+      "input_shape": [
+        1,
+        230
+      ],
+      "token_ids": [
+        57027,
+        323,
+        279,
+        35564,
+        151645
+      ],
+      "prediction": "Florida and the Southeast",
+      "prompt_sha256": "1c91c94680c43c93a8882f62cdbc6cd5ea3d20c079fe5ad0047377b3fd4f1d78",
+      "input_token_ids_sha256": "bc2f3fb7f77b74a603f9ed00a127199fae1f6a5afb817ffe6a1d2e123e890464",
+      "top10": [
+        {
+          "token": 57027,
+          "text": "Florida",
+          "logit": 17.1875
+        },
+        {
+          "token": 772,
+          "text": "cont",
+          "logit": 16.140625
+        },
+        {
+          "token": 61282,
+          "text": "Jackson",
+          "logit": 15.9609375
+        },
+        {
+          "token": 1782,
+          "text": "the",
+          "logit": 15.828125
+        },
+        {
+          "token": 3882,
+          "text": "Fl",
+          "logit": 15.7109375
+        },
+        {
+          "token": 26897,
+          "text": "larg",
+          "logit": 15.5078125
+        },
+        {
+          "token": 42074,
+          "text": "Du",
+          "logit": 15.15625
+        },
+        {
+          "token": 41,
+          "text": "J",
+          "logit": 15.1015625
+        },
+        {
+          "token": 1489,
+          "text": "fl",
+          "logit": 14.9921875
+        },
+        {
+          "token": 47946,
+          "text": " Jacksonville",
+          "logit": 14.5625
+        }
+      ],
+      "matches": {
+        "tokens": true,
+        "text": true,
+        "prompt": true,
+        "input_tokens": true,
+        "top10": true
+      }
+    },
+    {
+      "variant": "fp16",
+      "id": "572f59b4a23a5019007fc587",
+      "input_shape": [
+        1,
+        268
+      ],
+      "token_ids": [
+        785,
+        17968,
+        482,
+        3015,
+        17066,
+        1119,
+        279,
+        42857,
+        518,
+        279,
+        70536,
+        258,
+        20512,
+        331,
+        1576,
+        315,
+        279,
+        7046,
+        17457,
+        315,
+        9255,
+        3015,
+        13,
+        151645
+      ],
+      "prediction": "The Rhine water falls into the depths at the Rheinbrech because of the greater density of cold water.",
+      "prompt_sha256": "a31e6164066e4cb92dd4b66f807e140a839e4e9e1f9cb40e9c74525a29087700",
+      "input_token_ids_sha256": "b575a40da414323aaf9bd12a84c6917ace38133e756c7021d140d3e508c45942",
+      "top10": [
+        {
+          "token": 785,
+          "text": "The",
+          "logit": 22.125
+        },
+        {
+          "token": 49,
+          "text": "R",
+          "logit": 21.828125
+        },
+        {
+          "token": 1782,
+          "text": "the",
+          "logit": 18.0
+        },
+        {
+          "token": 1655,
+          "text": "At",
+          "logit": 17.71875
+        },
+        {
+          "token": 266,
+          "text": "at",
+          "logit": 16.9375
+        },
+        {
+          "token": 72162,
+          "text": "Rh",
+          "logit": 15.7109375
+        },
+        {
+          "token": 39,
+          "text": "H",
+          "logit": 15.546875
+        },
+        {
+          "token": 10022,
+          "text": "\"The",
+          "logit": 15.5390625
+        },
+        {
+          "token": 81,
+          "text": "r",
+          "logit": 14.796875
+        },
+        {
+          "token": 5338,
+          "text": "First",
+          "logit": 14.4609375
+        }
+      ],
+      "matches": {
+        "tokens": true,
+        "text": true,
+        "prompt": true,
+        "input_tokens": true,
+        "top10": true
+      }
+    },
+    {
+      "variant": "fp16",
+      "id": "5ad25e17d7d075001a428f12",
+      "input_shape": [
+        1,
+        274
+      ],
+      "token_ids": [
+        13218,
+        26423,
+        151645
+      ],
+      "prediction": "Switzerland",
+      "prompt_sha256": "723d1626b14eccf24fa4b6822fc51f3a8ded9b070777eef695360c1191ba0af8",
+      "input_token_ids_sha256": "8ce8891f00c2e358f524a5f2e114a31a7a7b1d88b7a05360fb7c29e50231d4b4",
+      "top10": [
+        {
+          "token": 13218,
+          "text": "Sw",
+          "logit": 20.421875
+        },
+        {
+          "token": 45,
+          "text": "N",
+          "logit": 18.109375
+        },
+        {
+          "token": 50170,
+          "text": "Germany",
+          "logit": 18.03125
+        },
+        {
+          "token": 785,
+          "text": "The",
+          "logit": 17.671875
+        },
+        {
+          "token": 32079,
+          "text": "German",
+          "logit": 17.21875
+        },
+        {
+          "token": 30124,
+          "text": "Sch",
+          "logit": 16.8125
+        },
+        {
+          "token": 1782,
+          "text": "the",
+          "logit": 16.765625
+        },
+        {
+          "token": 2753,
+          "text": "No",
+          "logit": 16.109375
+        },
+        {
+          "token": 77,
+          "text": "n",
+          "logit": 16.0625
+        },
+        {
+          "token": 72162,
+          "text": "Rh",
+          "logit": 15.984375
+        }
+      ],
+      "matches": {
+        "tokens": true,
+        "text": true,
+        "prompt": true,
+        "input_tokens": true,
+        "top10": true
+      }
+    },
+    {
+      "variant": "fp16",
+      "id": "57094b4f9928a814004714f9",
+      "input_shape": [
+        1,
+        219
+      ],
+      "token_ids": [
+        45948,
+        14513,
+        151645
+      ],
+      "prediction": "Sky Three",
+      "prompt_sha256": "eb7f9bd989c6455798e508f3f15ea3b7686c5cba3a788aaca5d244b573c7c66f",
+      "input_token_ids_sha256": "bb31621d0ad35b05b293d5bf7db94e6c7df3ee34f0685f9496ff0b455225a9c9",
+      "top10": [
+        {
+          "token": 45948,
+          "text": "Sky",
+          "logit": 23.671875
+        },
+        {
+          "token": 36953,
+          "text": "Pick",
+          "logit": 20.078125
+        },
+        {
+          "token": 10940,
+          "text": "Free",
+          "logit": 18.171875
+        },
+        {
+          "token": 19290,
+          "text": "Sk",
+          "logit": 16.4375
+        },
+        {
+          "token": 10331,
+          "text": "Blue",
+          "logit": 15.6640625
+        },
+        {
+          "token": 12699,
+          "text": "Star",
+          "logit": 15.234375
+        },
+        {
+          "token": 14722,
+          "text": " Sky",
+          "logit": 15.078125
+        },
+        {
+          "token": 26684,
+          "text": "sky",
+          "logit": 14.921875
+        },
+        {
+          "token": 3379,
+          "text": "Select",
+          "logit": 14.109375
+        },
+        {
+          "token": 50,
+          "text": "S",
+          "logit": 13.90625
+        }
+      ],
+      "matches": {
+        "tokens": true,
+        "text": true,
+        "prompt": true,
+        "input_tokens": true,
+        "top10": true
+      }
+    },
+    {
+      "variant": "fp16",
+      "id": "5a2c08aebfd06b001a5ae989",
+      "input_shape": [
+        1,
+        193
+      ],
+      "token_ids": [
+        45948,
+        40345,
+        151645
+      ],
+      "prediction": "Sky Television",
+      "prompt_sha256": "6e8bd83eca6f3154b39f6fb78250cc556910cdbd3adef56fea9a7ebc6e679741",
+      "input_token_ids_sha256": "ac248d39c25331f9fbe6a5324e6990d822dcc58426ecea58174145e32177201a",
+      "top10": [
+        {
+          "token": 45948,
+          "text": "Sky",
+          "logit": 22.171875
+        },
+        {
+          "token": 51861,
+          "text": "British",
+          "logit": 21.109375
+        },
+        {
+          "token": 7347,
+          "text": "BS",
+          "logit": 19.28125
+        },
+        {
+          "token": 785,
+          "text": "The",
+          "logit": 15.8671875
+        },
+        {
+          "token": 90738,
+          "text": "Britain",
+          "logit": 15.765625
+        },
+        {
+          "token": 35228,
+          "text": "Brit",
+          "logit": 15.671875
+        },
+        {
+          "token": 24537,
+          "text": "UK",
+          "logit": 14.9609375
+        },
+        {
+          "token": 28418,
+          "text": "American",
+          "logit": 14.8671875
+        },
+        {
+          "token": 66755,
+          "text": "BBC",
+          "logit": 14.5078125
+        },
+        {
+          "token": 12699,
+          "text": "Star",
+          "logit": 14.140625
+        }
+      ],
+      "matches": {
+        "tokens": true,
+        "text": true,
+        "prompt": true,
+        "input_tokens": true,
+        "top10": true
+      }
+    },
+    {
+      "variant": "fp16",
+      "id": "570d2417fed7b91900d45c3e",
+      "input_shape": [
+        1,
+        287
+      ],
+      "token_ids": [
+        80956,
+        594,
+        2790,
+        19952,
+        1584,
+        1985,
+        320,
+        38,
+        4592,
+        8,
+        374,
+        21006,
+        2086,
+        304,
+        8330,
+        13,
+        151645
+      ],
+      "prediction": "Victoria's total gross state product (GSP) is ranked second in Australia.",
+      "prompt_sha256": "df8a90808d5e806d5409c2dbceb752847e9783cffd821cbeaa63f9b721c07295",
+      "input_token_ids_sha256": "d71632d20d559603427880a4b1084db2419ab902692af171f74d0057c4b3fcb0",
+      "top10": [
+        {
+          "token": 80956,
+          "text": "Victoria",
+          "logit": 19.625
+        },
+        {
+          "token": 48037,
+          "text": "Australia",
+          "logit": 18.234375
+        },
+        {
+          "token": 38,
+          "text": "G",
+          "logit": 17.359375
+        },
+        {
+          "token": 5569,
+          "text": "second",
+          "logit": 16.84375
+        },
+        {
+          "token": 53,
+          "text": "V",
+          "logit": 15.609375
+        },
+        {
+          "token": 5035,
+          "text": "total",
+          "logit": 15.5546875
+        },
+        {
+          "token": 1782,
+          "text": "the",
+          "logit": 15.3984375
+        },
+        {
+          "token": 22417,
+          "text": " Victoria",
+          "logit": 15.390625
+        },
+        {
+          "token": 36125,
+          "text": "Vict",
+          "logit": 15.328125
+        },
+        {
+          "token": 74241,
+          "text": "Australian",
+          "logit": 14.9453125
+        }
+      ],
+      "matches": {
+        "tokens": true,
+        "text": true,
+        "prompt": true,
+        "input_tokens": true,
+        "top10": true
+      }
+    },
+    {
+      "variant": "fp16",
+      "id": "5a63772268151a001a9222f4",
+      "input_shape": [
+        1,
+        271
+      ],
+      "token_ids": [
+        3564,
+        37815,
+        151645
+      ],
+      "prediction": "New Holland",
+      "prompt_sha256": "051eb49efefc01be6afa302d2c6aa896a87699ba41cb0e0142ff9f03f7cd0b12",
+      "input_token_ids_sha256": "19364c5dfe69bdbfde8a87c827f67291bdf394a76db76d98e24373661f5e3849",
+      "top10": [
+        {
+          "token": 3564,
+          "text": "New",
+          "logit": 20.890625
+        },
+        {
+          "token": 22286,
+          "text": "David",
+          "logit": 19.4375
+        },
+        {
+          "token": 39,
+          "text": "H",
+          "logit": 18.515625
+        },
+        {
+          "token": 785,
+          "text": "The",
+          "logit": 17.265625
+        },
+        {
+          "token": 76491,
+          "text": "Lie",
+          "logit": 16.140625
+        },
+        {
+          "token": 2620,
+          "text": "Def",
+          "logit": 15.65625
+        },
+        {
+          "token": 1782,
+          "text": "the",
+          "logit": 14.8359375
+        },
+        {
+          "token": 35,
+          "text": "D",
+          "logit": 14.6953125
+        },
+        {
+          "token": 61058,
+          "text": "Captain",
+          "logit": 14.671875
+        },
+        {
+          "token": 48037,
+          "text": "Australia",
+          "logit": 14.5234375
+        }
+      ],
+      "matches": {
+        "tokens": true,
+        "text": true,
+        "prompt": true,
+        "input_tokens": true,
+        "top10": true
+      }
+    },
+    {
+      "variant": "q4",
+      "id": "5727c94bff5b5019007d954d",
+      "input_shape": [
+        1,
+        225
+      ],
+      "token_ids": [
+        42074,
+        831,
+        6272,
+        151645
+      ],
+      "prediction": "Duval County",
+      "prompt_sha256": "ba61c253e9bdf3ca984b7132e0071de337f2cf0948f0b1fa8e4350ad34359246",
+      "input_token_ids_sha256": "ca9654ce7a2ef3db8f9144e614ac9f7b23f42a9c3fd49cce6053d47683007ee3",
+      "top10": [
+        {
+          "token": 42074,
+          "text": "Du",
+          "logit": 22.921875
+        },
+        {
+          "token": 35,
+          "text": "D",
+          "logit": 18.484375
+        },
+        {
+          "token": 61282,
+          "text": "Jackson",
+          "logit": 18.28125
+        },
+        {
+          "token": 53033,
+          "text": "Dur",
+          "logit": 17.234375
+        },
+        {
+          "token": 73194,
+          "text": "Dub",
+          "logit": 16.359375
+        },
+        {
+          "token": 1912,
+          "text": "De",
+          "logit": 15.875
+        },
+        {
+          "token": 785,
+          "text": "The",
+          "logit": 15.75
+        },
+        {
+          "token": 47946,
+          "text": " Jacksonville",
+          "logit": 14.96875
+        },
+        {
+          "token": 16532,
+          "text": "Del",
+          "logit": 14.9296875
+        },
+        {
+          "token": 4900,
+          "text": "Dec",
+          "logit": 14.640625
+        }
+      ],
+      "matches": {
+        "tokens": true,
+        "text": true,
+        "prompt": true,
+        "input_tokens": true,
+        "top10": true
+      }
+    },
+    {
+      "variant": "q4",
+      "id": "5a1c539bb4fb5d00187145fd",
+      "input_shape": [
+        1,
+        230
+      ],
+      "token_ids": [
+        785,
+        7772,
+        57406,
+        3082,
+        304,
+        9589,
+        323,
+        279,
+        35564,
+        374,
+        279,
+        47946,
+        57406,
+        3082,
+        13,
+        151645
+      ],
+      "prediction": "The largest metropolitan area in Florida and the Southeast is the Jacksonville metropolitan area.",
+      "prompt_sha256": "1c91c94680c43c93a8882f62cdbc6cd5ea3d20c079fe5ad0047377b3fd4f1d78",
+      "input_token_ids_sha256": "bc2f3fb7f77b74a603f9ed00a127199fae1f6a5afb817ffe6a1d2e123e890464",
+      "top10": [
+        {
+          "token": 785,
+          "text": "The",
+          "logit": 16.640625
+        },
+        {
+          "token": 42074,
+          "text": "Du",
+          "logit": 16.46875
+        },
+        {
+          "token": 57027,
+          "text": "Florida",
+          "logit": 15.8828125
+        },
+        {
+          "token": 1782,
+          "text": "the",
+          "logit": 15.640625
+        },
+        {
+          "token": 61282,
+          "text": "Jackson",
+          "logit": 15.0390625
+        },
+        {
+          "token": 16,
+          "text": "1",
+          "logit": 14.8984375
+        },
+        {
+          "token": 37,
+          "text": "F",
+          "logit": 14.6171875
+        },
+        {
+          "token": 3882,
+          "text": "Fl",
+          "logit": 14.59375
+        },
+        {
+          "token": 47946,
+          "text": " Jacksonville",
+          "logit": 14.578125
+        },
+        {
+          "token": 33280,
+          "text": "Fort",
+          "logit": 14.1015625
+        }
+      ],
+      "matches": {
+        "tokens": true,
+        "text": true,
+        "prompt": true,
+        "input_tokens": true,
+        "top10": true
+      }
+    },
+    {
+      "variant": "q4",
+      "id": "572f59b4a23a5019007fc587",
+      "input_shape": [
+        1,
+        268
+      ],
+      "token_ids": [
+        17949,
+        279,
+        7046,
+        17457,
+        315,
+        9255,
+        3015,
+        13,
+        151645
+      ],
+      "prediction": "Because the greater density of cold water.",
+      "prompt_sha256": "a31e6164066e4cb92dd4b66f807e140a839e4e9e1f9cb40e9c74525a29087700",
+      "input_token_ids_sha256": "b575a40da414323aaf9bd12a84c6917ace38133e756c7021d140d3e508c45942",
+      "top10": [
+        {
+          "token": 17949,
+          "text": "Because",
+          "logit": 22.609375
+        },
+        {
+          "token": 785,
+          "text": "The",
+          "logit": 22.0
+        },
+        {
+          "token": 1655,
+          "text": "At",
+          "logit": 19.765625
+        },
+        {
+          "token": 27653,
+          "text": "because",
+          "logit": 18.8125
+        },
+        {
+          "token": 2132,
+          "text": "It",
+          "logit": 18.53125
+        },
+        {
+          "token": 49,
+          "text": "R",
+          "logit": 17.890625
+        },
+        {
+          "token": 1782,
+          "text": "the",
+          "logit": 17.75
+        },
+        {
+          "token": 2121,
+          "text": "As",
+          "logit": 16.8125
+        },
+        {
+          "token": 12549,
+          "text": "Since",
+          "logit": 16.640625
+        },
+        {
+          "token": 1249,
+          "text": "To",
+          "logit": 16.578125
+        }
+      ],
+      "matches": {
+        "tokens": true,
+        "text": true,
+        "prompt": true,
+        "input_tokens": true,
+        "top10": true
+      }
+    },
+    {
+      "variant": "q4",
+      "id": "5ad25e17d7d075001a428f12",
+      "input_shape": [
+        1,
+        274
+      ],
+      "token_ids": [
+        32079,
+        151645
+      ],
+      "prediction": "German",
+      "prompt_sha256": "723d1626b14eccf24fa4b6822fc51f3a8ded9b070777eef695360c1191ba0af8",
+      "input_token_ids_sha256": "8ce8891f00c2e358f524a5f2e114a31a7a7b1d88b7a05360fb7c29e50231d4b4",
+      "top10": [
+        {
+          "token": 32079,
+          "text": "German",
+          "logit": 18.703125
+        },
+        {
+          "token": 785,
+          "text": "The",
+          "logit": 18.484375
+        },
+        {
+          "token": 13218,
+          "text": "Sw",
+          "logit": 17.234375
+        },
+        {
+          "token": 38,
+          "text": "G",
+          "logit": 17.203125
+        },
+        {
+          "token": 35,
+          "text": "D",
+          "logit": 16.953125
+        },
+        {
+          "token": 50170,
+          "text": "Germany",
+          "logit": 16.875
+        },
+        {
+          "token": 43197,
+          "text": "French",
+          "logit": 16.46875
+        },
+        {
+          "token": 1782,
+          "text": "the",
+          "logit": 16.296875
+        },
+        {
+          "token": 49,
+          "text": "R",
+          "logit": 16.25
+        },
+        {
+          "token": 72162,
+          "text": "Rh",
+          "logit": 16.140625
+        }
+      ],
+      "matches": {
+        "tokens": true,
+        "text": true,
+        "prompt": true,
+        "input_tokens": true,
+        "top10": true
+      }
+    },
+    {
+      "variant": "q4",
+      "id": "57094b4f9928a814004714f9",
+      "input_shape": [
+        1,
+        219
+      ],
+      "token_ids": [
+        45948,
+        14513,
+        151645
+      ],
+      "prediction": "Sky Three",
+      "prompt_sha256": "eb7f9bd989c6455798e508f3f15ea3b7686c5cba3a788aaca5d244b573c7c66f",
+      "input_token_ids_sha256": "bb31621d0ad35b05b293d5bf7db94e6c7df3ee34f0685f9496ff0b455225a9c9",
+      "top10": [
+        {
+          "token": 45948,
+          "text": "Sky",
+          "logit": 20.390625
+        },
+        {
+          "token": 7347,
+          "text": "BS",
+          "logit": 17.21875
+        },
+        {
+          "token": 10940,
+          "text": "Free",
+          "logit": 16.65625
+        },
+        {
+          "token": 6025,
+          "text": "After",
+          "logit": 15.8828125
+        },
+        {
+          "token": 18,
+          "text": "3",
+          "logit": 15.7265625
+        },
+        {
+          "token": 10331,
+          "text": "Blue",
+          "logit": 15.5078125
+        },
+        {
+          "token": 785,
+          "text": "The",
+          "logit": 15.0078125
+        },
+        {
+          "token": 10227,
+          "text": "Before",
+          "logit": 14.625
+        },
+        {
+          "token": 19290,
+          "text": "Sk",
+          "logit": 14.171875
+        },
+        {
+          "token": 36953,
+          "text": "Pick",
+          "logit": 14.109375
+        }
+      ],
+      "matches": {
+        "tokens": true,
+        "text": true,
+        "prompt": true,
+        "input_tokens": true,
+        "top10": true
+      }
+    },
+    {
+      "variant": "q4",
+      "id": "5a2c08aebfd06b001a5ae989",
+      "input_shape": [
+        1,
+        193
+      ],
+      "token_ids": [
+        51861,
+        60557,
+        63460,
+        151645
+      ],
+      "prediction": "British Satellite Broadcasting",
+      "prompt_sha256": "6e8bd83eca6f3154b39f6fb78250cc556910cdbd3adef56fea9a7ebc6e679741",
+      "input_token_ids_sha256": "ac248d39c25331f9fbe6a5324e6990d822dcc58426ecea58174145e32177201a",
+      "top10": [
+        {
+          "token": 51861,
+          "text": "British",
+          "logit": 21.5
+        },
+        {
+          "token": 45948,
+          "text": "Sky",
+          "logit": 21.328125
+        },
+        {
+          "token": 7347,
+          "text": "BS",
+          "logit": 20.140625
+        },
+        {
+          "token": 35228,
+          "text": "Brit",
+          "logit": 16.9375
+        },
+        {
+          "token": 785,
+          "text": "The",
+          "logit": 16.3125
+        },
+        {
+          "token": 90738,
+          "text": "Britain",
+          "logit": 16.28125
+        },
+        {
+          "token": 14722,
+          "text": " Sky",
+          "logit": 14.921875
+        },
+        {
+          "token": 66755,
+          "text": "BBC",
+          "logit": 14.8671875
+        },
+        {
+          "token": 33,
+          "text": "B",
+          "logit": 14.8125
+        },
+        {
+          "token": 19290,
+          "text": "Sk",
+          "logit": 14.5703125
+        }
+      ],
+      "matches": {
+        "tokens": true,
+        "text": true,
+        "prompt": true,
+        "input_tokens": true,
+        "top10": true
+      }
+    },
+    {
+      "variant": "q4",
+      "id": "570d2417fed7b91900d45c3e",
+      "input_shape": [
+        1,
+        287
+      ],
+      "token_ids": [
+        80956,
+        594,
+        19952,
+        1584,
+        1985,
+        374,
+        21006,
+        2086,
+        304,
+        8330,
+        13,
+        151645
+      ],
+      "prediction": "Victoria's gross state product is ranked second in Australia.",
+      "prompt_sha256": "df8a90808d5e806d5409c2dbceb752847e9783cffd821cbeaa63f9b721c07295",
+      "input_token_ids_sha256": "d71632d20d559603427880a4b1084db2419ab902692af171f74d0057c4b3fcb0",
+      "top10": [
+        {
+          "token": 80956,
+          "text": "Victoria",
+          "logit": 19.625
+        },
+        {
+          "token": 38,
+          "text": "G",
+          "logit": 18.65625
+        },
+        {
+          "token": 48037,
+          "text": "Australia",
+          "logit": 17.859375
+        },
+        {
+          "token": 785,
+          "text": "The",
+          "logit": 17.25
+        },
+        {
+          "token": 15666,
+          "text": "Second",
+          "logit": 16.890625
+        },
+        {
+          "token": 36125,
+          "text": "Vict",
+          "logit": 16.5625
+        },
+        {
+          "token": 53,
+          "text": "V",
+          "logit": 16.109375
+        },
+        {
+          "token": 5569,
+          "text": "second",
+          "logit": 15.671875
+        },
+        {
+          "token": 22417,
+          "text": " Victoria",
+          "logit": 14.7734375
+        },
+        {
+          "token": 74241,
+          "text": "Australian",
+          "logit": 14.5703125
+        }
+      ],
+      "matches": {
+        "tokens": true,
+        "text": true,
+        "prompt": true,
+        "input_tokens": true,
+        "top10": true
+      }
+    },
+    {
+      "variant": "q4",
+      "id": "5a63772268151a001a9222f4",
+      "input_shape": [
+        1,
+        271
+      ],
+      "token_ids": [
+        22286,
+        28670,
+        151645
+      ],
+      "prediction": "David Collins",
+      "prompt_sha256": "051eb49efefc01be6afa302d2c6aa896a87699ba41cb0e0142ff9f03f7cd0b12",
+      "input_token_ids_sha256": "19364c5dfe69bdbfde8a87c827f67291bdf394a76db76d98e24373661f5e3849",
+      "top10": [
+        {
+          "token": 22286,
+          "text": "David",
+          "logit": 19.625
+        },
+        {
+          "token": 3564,
+          "text": "New",
+          "logit": 18.625
+        },
+        {
+          "token": 39,
+          "text": "H",
+          "logit": 17.625
+        },
+        {
+          "token": 785,
+          "text": "The",
+          "logit": 17.171875
+        },
+        {
+          "token": 76491,
+          "text": "Lie",
+          "logit": 15.703125
+        },
+        {
+          "token": 40586,
+          "text": "Daniel",
+          "logit": 15.015625
+        },
+        {
+          "token": 1782,
+          "text": "the",
+          "logit": 14.4140625
+        },
+        {
+          "token": 51861,
+          "text": "British",
+          "logit": 14.3359375
+        },
+        {
+          "token": 2620,
+          "text": "Def",
+          "logit": 14.2109375
+        },
+        {
+          "token": 66208,
+          "text": "England",
+          "logit": 14.046875
+        }
+      ],
+      "matches": {
+        "tokens": true,
+        "text": true,
+        "prompt": true,
+        "input_tokens": true,
+        "top10": true
+      }
+    },
+    {
+      "variant": "q8",
+      "id": "5727c94bff5b5019007d954d",
+      "input_shape": [
+        1,
+        225
+      ],
+      "token_ids": [
+        42074,
+        831,
+        6272,
+        151645
+      ],
+      "prediction": "Duval County",
+      "prompt_sha256": "ba61c253e9bdf3ca984b7132e0071de337f2cf0948f0b1fa8e4350ad34359246",
+      "input_token_ids_sha256": "ca9654ce7a2ef3db8f9144e614ac9f7b23f42a9c3fd49cce6053d47683007ee3",
+      "top10": [
+        {
+          "token": 42074,
+          "text": "Du",
+          "logit": 25.875
+        },
+        {
+          "token": 35,
+          "text": "D",
+          "logit": 22.34375
+        },
+        {
+          "token": 73194,
+          "text": "Dub",
+          "logit": 18.484375
+        },
+        {
+          "token": 53033,
+          "text": "Dur",
+          "logit": 18.140625
+        },
+        {
+          "token": 15687,
+          "text": " Du",
+          "logit": 17.78125
+        },
+        {
+          "token": 1912,
+          "text": "De",
+          "logit": 16.96875
+        },
+        {
+          "token": 61282,
+          "text": "Jackson",
+          "logit": 16.9375
+        },
+        {
+          "token": 21685,
+          "text": "Di",
+          "logit": 16.375
+        },
+        {
+          "token": 91641,
+          "text": "Dou",
+          "logit": 15.9375
+        },
+        {
+          "token": 16532,
+          "text": "Del",
+          "logit": 15.4921875
+        }
+      ],
+      "matches": {
+        "tokens": true,
+        "text": true,
+        "prompt": true,
+        "input_tokens": true,
+        "top10": true
+      }
+    },
+    {
+      "variant": "q8",
+      "id": "5a1c539bb4fb5d00187145fd",
+      "input_shape": [
+        1,
+        230
+      ],
+      "token_ids": [
+        57027,
+        323,
+        279,
+        35564,
+        151645
+      ],
+      "prediction": "Florida and the Southeast",
+      "prompt_sha256": "1c91c94680c43c93a8882f62cdbc6cd5ea3d20c079fe5ad0047377b3fd4f1d78",
+      "input_token_ids_sha256": "bc2f3fb7f77b74a603f9ed00a127199fae1f6a5afb817ffe6a1d2e123e890464",
+      "top10": [
+        {
+          "token": 57027,
+          "text": "Florida",
+          "logit": 17.28125
+        },
+        {
+          "token": 61282,
+          "text": "Jackson",
+          "logit": 16.078125
+        },
+        {
+          "token": 772,
+          "text": "cont",
+          "logit": 16.0
+        },
+        {
+          "token": 1782,
+          "text": "the",
+          "logit": 15.84375
+        },
+        {
+          "token": 3882,
+          "text": "Fl",
+          "logit": 15.640625
+        },
+        {
+          "token": 26897,
+          "text": "larg",
+          "logit": 15.453125
+        },
+        {
+          "token": 41,
+          "text": "J",
+          "logit": 15.3125
+        },
+        {
+          "token": 42074,
+          "text": "Du",
+          "logit": 15.15625
+        },
+        {
+          "token": 1489,
+          "text": "fl",
+          "logit": 14.8828125
+        },
+        {
+          "token": 47946,
+          "text": " Jacksonville",
+          "logit": 14.71875
+        }
+      ],
+      "matches": {
+        "tokens": true,
+        "text": true,
+        "prompt": true,
+        "input_tokens": true,
+        "top10": true
+      }
+    },
+    {
+      "variant": "q8",
+      "id": "572f59b4a23a5019007fc587",
+      "input_shape": [
+        1,
+        268
+      ],
+      "token_ids": [
+        785,
+        17968,
+        482,
+        3015,
+        17066,
+        1119,
+        279,
+        42857,
+        518,
+        279,
+        70536,
+        258,
+        20512,
+        331,
+        1576,
+        315,
+        279,
+        7046,
+        17457,
+        315,
+        9255,
+        3015,
+        13,
+        151645
+      ],
+      "prediction": "The Rhine water falls into the depths at the Rheinbrech because of the greater density of cold water.",
+      "prompt_sha256": "a31e6164066e4cb92dd4b66f807e140a839e4e9e1f9cb40e9c74525a29087700",
+      "input_token_ids_sha256": "b575a40da414323aaf9bd12a84c6917ace38133e756c7021d140d3e508c45942",
+      "top10": [
+        {
+          "token": 785,
+          "text": "The",
+          "logit": 22.3125
+        },
+        {
+          "token": 49,
+          "text": "R",
+          "logit": 21.765625
+        },
+        {
+          "token": 1782,
+          "text": "the",
+          "logit": 18.25
+        },
+        {
+          "token": 1655,
+          "text": "At",
+          "logit": 17.953125
+        },
+        {
+          "token": 266,
+          "text": "at",
+          "logit": 17.1875
+        },
+        {
+          "token": 72162,
+          "text": "Rh",
+          "logit": 15.859375
+        },
+        {
+          "token": 39,
+          "text": "H",
+          "logit": 15.4609375
+        },
+        {
+          "token": 10022,
+          "text": "\"The",
+          "logit": 15.265625
+        },
+        {
+          "token": 81,
+          "text": "r",
+          "logit": 15.203125
+        },
+        {
+          "token": 17949,
+          "text": "Because",
+          "logit": 15.1640625
+        }
+      ],
+      "matches": {
+        "tokens": true,
+        "text": true,
+        "prompt": true,
+        "input_tokens": true,
+        "top10": true
+      }
+    },
+    {
+      "variant": "q8",
+      "id": "5ad25e17d7d075001a428f12",
+      "input_shape": [
+        1,
+        274
+      ],
+      "token_ids": [
+        13218,
+        26423,
+        151645
+      ],
+      "prediction": "Switzerland",
+      "prompt_sha256": "723d1626b14eccf24fa4b6822fc51f3a8ded9b070777eef695360c1191ba0af8",
+      "input_token_ids_sha256": "8ce8891f00c2e358f524a5f2e114a31a7a7b1d88b7a05360fb7c29e50231d4b4",
+      "top10": [
+        {
+          "token": 13218,
+          "text": "Sw",
+          "logit": 20.359375
+        },
+        {
+          "token": 45,
+          "text": "N",
+          "logit": 18.203125
+        },
+        {
+          "token": 50170,
+          "text": "Germany",
+          "logit": 18.109375
+        },
+        {
+          "token": 785,
+          "text": "The",
+          "logit": 17.75
+        },
+        {
+          "token": 32079,
+          "text": "German",
+          "logit": 17.25
+        },
+        {
+          "token": 1782,
+          "text": "the",
+          "logit": 16.828125
+        },
+        {
+          "token": 30124,
+          "text": "Sch",
+          "logit": 16.8125
+        },
+        {
+          "token": 2753,
+          "text": "No",
+          "logit": 16.234375
+        },
+        {
+          "token": 72162,
+          "text": "Rh",
+          "logit": 16.046875
+        },
+        {
+          "token": 77,
+          "text": "n",
+          "logit": 16.03125
+        }
+      ],
+      "matches": {
+        "tokens": true,
+        "text": true,
+        "prompt": true,
+        "input_tokens": true,
+        "top10": true
+      }
+    },
+    {
+      "variant": "q8",
+      "id": "57094b4f9928a814004714f9",
+      "input_shape": [
+        1,
+        219
+      ],
+      "token_ids": [
+        45948,
+        14513,
+        151645
+      ],
+      "prediction": "Sky Three",
+      "prompt_sha256": "eb7f9bd989c6455798e508f3f15ea3b7686c5cba3a788aaca5d244b573c7c66f",
+      "input_token_ids_sha256": "bb31621d0ad35b05b293d5bf7db94e6c7df3ee34f0685f9496ff0b455225a9c9",
+      "top10": [
+        {
+          "token": 45948,
+          "text": "Sky",
+          "logit": 23.796875
+        },
+        {
+          "token": 36953,
+          "text": "Pick",
+          "logit": 20.265625
+        },
+        {
+          "token": 10940,
+          "text": "Free",
+          "logit": 18.171875
+        },
+        {
+          "token": 19290,
+          "text": "Sk",
+          "logit": 16.421875
+        },
+        {
+          "token": 10331,
+          "text": "Blue",
+          "logit": 15.7109375
+        },
+        {
+          "token": 12699,
+          "text": "Star",
+          "logit": 15.328125
+        },
+        {
+          "token": 14722,
+          "text": " Sky",
+          "logit": 15.1953125
+        },
+        {
+          "token": 26684,
+          "text": "sky",
+          "logit": 15.0625
+        },
+        {
+          "token": 3379,
+          "text": "Select",
+          "logit": 14.2109375
+        },
+        {
+          "token": 50,
+          "text": "S",
+          "logit": 13.8359375
+        }
+      ],
+      "matches": {
+        "tokens": true,
+        "text": true,
+        "prompt": true,
+        "input_tokens": true,
+        "top10": true
+      }
+    },
+    {
+      "variant": "q8",
+      "id": "5a2c08aebfd06b001a5ae989",
+      "input_shape": [
+        1,
+        193
+      ],
+      "token_ids": [
+        45948,
+        40345,
+        151645
+      ],
+      "prediction": "Sky Television",
+      "prompt_sha256": "6e8bd83eca6f3154b39f6fb78250cc556910cdbd3adef56fea9a7ebc6e679741",
+      "input_token_ids_sha256": "ac248d39c25331f9fbe6a5324e6990d822dcc58426ecea58174145e32177201a",
+      "top10": [
+        {
+          "token": 45948,
+          "text": "Sky",
+          "logit": 22.265625
+        },
+        {
+          "token": 51861,
+          "text": "British",
+          "logit": 21.140625
+        },
+        {
+          "token": 7347,
+          "text": "BS",
+          "logit": 19.328125
+        },
+        {
+          "token": 785,
+          "text": "The",
+          "logit": 15.8984375
+        },
+        {
+          "token": 90738,
+          "text": "Britain",
+          "logit": 15.7734375
+        },
+        {
+          "token": 35228,
+          "text": "Brit",
+          "logit": 15.734375
+        },
+        {
+          "token": 24537,
+          "text": "UK",
+          "logit": 14.9609375
+        },
+        {
+          "token": 28418,
+          "text": "American",
+          "logit": 14.9609375
+        },
+        {
+          "token": 66755,
+          "text": "BBC",
+          "logit": 14.484375
+        },
+        {
+          "token": 12699,
+          "text": "Star",
+          "logit": 14.2109375
+        }
+      ],
+      "matches": {
+        "tokens": true,
+        "text": true,
+        "prompt": true,
+        "input_tokens": true,
+        "top10": true
+      }
+    },
+    {
+      "variant": "q8",
+      "id": "570d2417fed7b91900d45c3e",
+      "input_shape": [
+        1,
+        287
+      ],
+      "token_ids": [
+        80956,
+        594,
+        2790,
+        19952,
+        1584,
+        1985,
+        320,
+        38,
+        4592,
+        8,
+        374,
+        21006,
+        2086,
+        304,
+        8330,
+        13,
+        151645
+      ],
+      "prediction": "Victoria's total gross state product (GSP) is ranked second in Australia.",
+      "prompt_sha256": "df8a90808d5e806d5409c2dbceb752847e9783cffd821cbeaa63f9b721c07295",
+      "input_token_ids_sha256": "d71632d20d559603427880a4b1084db2419ab902692af171f74d0057c4b3fcb0",
+      "top10": [
+        {
+          "token": 80956,
+          "text": "Victoria",
+          "logit": 19.46875
+        },
+        {
+          "token": 48037,
+          "text": "Australia",
+          "logit": 18.28125
+        },
+        {
+          "token": 38,
+          "text": "G",
+          "logit": 17.34375
+        },
+        {
+          "token": 5569,
+          "text": "second",
+          "logit": 16.921875
+        },
+        {
+          "token": 1782,
+          "text": "the",
+          "logit": 15.46875
+        },
+        {
+          "token": 5035,
+          "text": "total",
+          "logit": 15.4296875
+        },
+        {
+          "token": 53,
+          "text": "V",
+          "logit": 15.3828125
+        },
+        {
+          "token": 22417,
+          "text": " Victoria",
+          "logit": 15.3203125
+        },
+        {
+          "token": 36125,
+          "text": "Vict",
+          "logit": 15.140625
+        },
+        {
+          "token": 74241,
+          "text": "Australian",
+          "logit": 14.9921875
+        }
+      ],
+      "matches": {
+        "tokens": true,
+        "text": true,
+        "prompt": true,
+        "input_tokens": true,
+        "top10": true
+      }
+    },
+    {
+      "variant": "q8",
+      "id": "5a63772268151a001a9222f4",
+      "input_shape": [
+        1,
+        271
+      ],
+      "token_ids": [
+        3564,
+        37815,
+        151645
+      ],
+      "prediction": "New Holland",
+      "prompt_sha256": "051eb49efefc01be6afa302d2c6aa896a87699ba41cb0e0142ff9f03f7cd0b12",
+      "input_token_ids_sha256": "19364c5dfe69bdbfde8a87c827f67291bdf394a76db76d98e24373661f5e3849",
+      "top10": [
+        {
+          "token": 3564,
+          "text": "New",
+          "logit": 20.875
+        },
+        {
+          "token": 22286,
+          "text": "David",
+          "logit": 19.5
+        },
+        {
+          "token": 39,
+          "text": "H",
+          "logit": 18.53125
+        },
+        {
+          "token": 785,
+          "text": "The",
+          "logit": 17.421875
+        },
+        {
+          "token": 76491,
+          "text": "Lie",
+          "logit": 16.171875
+        },
+        {
+          "token": 2620,
+          "text": "Def",
+          "logit": 15.65625
+        },
+        {
+          "token": 1782,
+          "text": "the",
+          "logit": 15.015625
+        },
+        {
+          "token": 61058,
+          "text": "Captain",
+          "logit": 14.8125
+        },
+        {
+          "token": 35,
+          "text": "D",
+          "logit": 14.765625
+        },
+        {
+          "token": 48037,
+          "text": "Australia",
+          "logit": 14.390625
+        }
+      ],
+      "matches": {
+        "tokens": true,
+        "text": true,
+        "prompt": true,
+        "input_tokens": true,
+        "top10": true
+      }
+    },
+    {
+      "variant": "selected",
+      "id": "5727c94bff5b5019007d954d",
+      "input_shape": [
+        1,
+        225
+      ],
+      "token_ids": [
+        42074,
+        831,
+        6272,
+        151645
+      ],
+      "prediction": "Duval County",
+      "prompt_sha256": "ba61c253e9bdf3ca984b7132e0071de337f2cf0948f0b1fa8e4350ad34359246",
+      "input_token_ids_sha256": "ca9654ce7a2ef3db8f9144e614ac9f7b23f42a9c3fd49cce6053d47683007ee3",
+      "top10": [
+        {
+          "token": 42074,
+          "text": "Du",
+          "logit": 23.34375
+        },
+        {
+          "token": 35,
+          "text": "D",
+          "logit": 18.9375
+        },
+        {
+          "token": 61282,
+          "text": "Jackson",
+          "logit": 17.9375
+        },
+        {
+          "token": 53033,
+          "text": "Dur",
+          "logit": 17.5625
+        },
+        {
+          "token": 73194,
+          "text": "Dub",
+          "logit": 16.546875
+        },
+        {
+          "token": 1912,
+          "text": "De",
+          "logit": 16.171875
+        },
+        {
+          "token": 15687,
+          "text": " Du",
+          "logit": 15.1875
+        },
+        {
+          "token": 16532,
+          "text": "Del",
+          "logit": 15.1171875
+        },
+        {
+          "token": 4900,
+          "text": "Dec",
+          "logit": 14.9453125
+        },
+        {
+          "token": 47946,
+          "text": " Jacksonville",
+          "logit": 14.84375
+        }
+      ],
+      "matches": {
+        "tokens": true,
+        "text": true,
+        "prompt": true,
+        "input_tokens": true,
+        "top10": true
+      }
+    },
+    {
+      "variant": "selected",
+      "id": "5a1c539bb4fb5d00187145fd",
+      "input_shape": [
+        1,
+        230
+      ],
+      "token_ids": [
+        57027,
+        151645
+      ],
+      "prediction": "Florida",
+      "prompt_sha256": "1c91c94680c43c93a8882f62cdbc6cd5ea3d20c079fe5ad0047377b3fd4f1d78",
+      "input_token_ids_sha256": "bc2f3fb7f77b74a603f9ed00a127199fae1f6a5afb817ffe6a1d2e123e890464",
+      "top10": [
+        {
+          "token": 57027,
+          "text": "Florida",
+          "logit": 16.125
+        },
+        {
+          "token": 42074,
+          "text": "Du",
+          "logit": 15.9296875
+        },
+        {
+          "token": 785,
+          "text": "The",
+          "logit": 15.921875
+        },
+        {
+          "token": 1782,
+          "text": "the",
+          "logit": 15.3671875
+        },
+        {
+          "token": 16,
+          "text": "1",
+          "logit": 15.359375
+        },
+        {
+          "token": 61282,
+          "text": "Jackson",
+          "logit": 15.203125
+        },
+        {
+          "token": 47946,
+          "text": " Jacksonville",
+          "logit": 14.8515625
+        },
+        {
+          "token": 3882,
+          "text": "Fl",
+          "logit": 14.4609375
+        },
+        {
+          "token": 37,
+          "text": "F",
+          "logit": 14.40625
+        },
+        {
+          "token": 17,
+          "text": "2",
+          "logit": 14.2265625
+        }
+      ],
+      "matches": {
+        "tokens": true,
+        "text": true,
+        "prompt": true,
+        "input_tokens": true,
+        "top10": true
+      }
+    },
+    {
+      "variant": "selected",
+      "id": "572f59b4a23a5019007fc587",
+      "input_shape": [
+        1,
+        268
+      ],
+      "token_ids": [
+        17949,
+        279,
+        7046,
+        17457,
+        315,
+        9255,
+        3015,
+        13,
+        151645
+      ],
+      "prediction": "Because the greater density of cold water.",
+      "prompt_sha256": "a31e6164066e4cb92dd4b66f807e140a839e4e9e1f9cb40e9c74525a29087700",
+      "input_token_ids_sha256": "b575a40da414323aaf9bd12a84c6917ace38133e756c7021d140d3e508c45942",
+      "top10": [
+        {
+          "token": 17949,
+          "text": "Because",
+          "logit": 22.0625
+        },
+        {
+          "token": 785,
+          "text": "The",
+          "logit": 21.984375
+        },
+        {
+          "token": 1655,
+          "text": "At",
+          "logit": 20.34375
+        },
+        {
+          "token": 27653,
+          "text": "because",
+          "logit": 18.734375
+        },
+        {
+          "token": 49,
+          "text": "R",
+          "logit": 18.453125
+        },
+        {
+          "token": 1782,
+          "text": "the",
+          "logit": 18.203125
+        },
+        {
+          "token": 2132,
+          "text": "It",
+          "logit": 18.0625
+        },
+        {
+          "token": 266,
+          "text": "at",
+          "logit": 17.78125
+        },
+        {
+          "token": 23646,
+          "text": "due",
+          "logit": 16.40625
+        },
+        {
+          "token": 6025,
+          "text": "After",
+          "logit": 16.34375
+        }
+      ],
+      "matches": {
+        "tokens": true,
+        "text": true,
+        "prompt": true,
+        "input_tokens": true,
+        "top10": true
+      }
+    },
+    {
+      "variant": "selected",
+      "id": "5ad25e17d7d075001a428f12",
+      "input_shape": [
+        1,
+        274
+      ],
+      "token_ids": [
+        32079,
+        151645
+      ],
+      "prediction": "German",
+      "prompt_sha256": "723d1626b14eccf24fa4b6822fc51f3a8ded9b070777eef695360c1191ba0af8",
+      "input_token_ids_sha256": "8ce8891f00c2e358f524a5f2e114a31a7a7b1d88b7a05360fb7c29e50231d4b4",
+      "top10": [
+        {
+          "token": 32079,
+          "text": "German",
+          "logit": 18.515625
+        },
+        {
+          "token": 13218,
+          "text": "Sw",
+          "logit": 17.890625
+        },
+        {
+          "token": 785,
+          "text": "The",
+          "logit": 17.609375
+        },
+        {
+          "token": 38,
+          "text": "G",
+          "logit": 17.25
+        },
+        {
+          "token": 35,
+          "text": "D",
+          "logit": 16.515625
+        },
+        {
+          "token": 50170,
+          "text": "Germany",
+          "logit": 16.46875
+        },
+        {
+          "token": 43197,
+          "text": "French",
+          "logit": 16.359375
+        },
+        {
+          "token": 30124,
+          "text": "Sch",
+          "logit": 16.265625
+        },
+        {
+          "token": 49,
+          "text": "R",
+          "logit": 16.1875
+        },
+        {
+          "token": 72162,
+          "text": "Rh",
+          "logit": 16.03125
+        }
+      ],
+      "matches": {
+        "tokens": true,
+        "text": true,
+        "prompt": true,
+        "input_tokens": true,
+        "top10": true
+      }
+    },
+    {
+      "variant": "selected",
+      "id": "57094b4f9928a814004714f9",
+      "input_shape": [
+        1,
+        219
+      ],
+      "token_ids": [
+        45948,
+        14513,
+        151645
+      ],
+      "prediction": "Sky Three",
+      "prompt_sha256": "eb7f9bd989c6455798e508f3f15ea3b7686c5cba3a788aaca5d244b573c7c66f",
+      "input_token_ids_sha256": "bb31621d0ad35b05b293d5bf7db94e6c7df3ee34f0685f9496ff0b455225a9c9",
+      "top10": [
+        {
+          "token": 45948,
+          "text": "Sky",
+          "logit": 21.359375
+        },
+        {
+          "token": 10940,
+          "text": "Free",
+          "logit": 16.671875
+        },
+        {
+          "token": 7347,
+          "text": "BS",
+          "logit": 16.546875
+        },
+        {
+          "token": 10331,
+          "text": "Blue",
+          "logit": 15.671875
+        },
+        {
+          "token": 6025,
+          "text": "After",
+          "logit": 15.40625
+        },
+        {
+          "token": 18,
+          "text": "3",
+          "logit": 15.3671875
+        },
+        {
+          "token": 36953,
+          "text": "Pick",
+          "logit": 14.8984375
+        },
+        {
+          "token": 19290,
+          "text": "Sk",
+          "logit": 14.75
+        },
+        {
+          "token": 26684,
+          "text": "sky",
+          "logit": 14.6875
+        },
+        {
+          "token": 14722,
+          "text": " Sky",
+          "logit": 14.6796875
+        }
+      ],
+      "matches": {
+        "tokens": true,
+        "text": true,
+        "prompt": true,
+        "input_tokens": true,
+        "top10": true
+      }
+    },
+    {
+      "variant": "selected",
+      "id": "5a2c08aebfd06b001a5ae989",
+      "input_shape": [
+        1,
+        193
+      ],
+      "token_ids": [
+        51861,
+        60557,
+        63460,
+        151645
+      ],
+      "prediction": "British Satellite Broadcasting",
+      "prompt_sha256": "6e8bd83eca6f3154b39f6fb78250cc556910cdbd3adef56fea9a7ebc6e679741",
+      "input_token_ids_sha256": "ac248d39c25331f9fbe6a5324e6990d822dcc58426ecea58174145e32177201a",
+      "top10": [
+        {
+          "token": 51861,
+          "text": "British",
+          "logit": 21.984375
+        },
+        {
+          "token": 45948,
+          "text": "Sky",
+          "logit": 21.859375
+        },
+        {
+          "token": 7347,
+          "text": "BS",
+          "logit": 20.09375
+        },
+        {
+          "token": 35228,
+          "text": "Brit",
+          "logit": 17.390625
+        },
+        {
+          "token": 90738,
+          "text": "Britain",
+          "logit": 16.453125
+        },
+        {
+          "token": 785,
+          "text": "The",
+          "logit": 15.7578125
+        },
+        {
+          "token": 14722,
+          "text": " Sky",
+          "logit": 15.1953125
+        },
+        {
+          "token": 66755,
+          "text": "BBC",
+          "logit": 14.8828125
+        },
+        {
+          "token": 33,
+          "text": "B",
+          "logit": 14.859375
+        },
+        {
+          "token": 19290,
+          "text": "Sk",
+          "logit": 14.828125
+        }
+      ],
+      "matches": {
+        "tokens": true,
+        "text": true,
+        "prompt": true,
+        "input_tokens": true,
+        "top10": true
+      }
+    },
+    {
+      "variant": "selected",
+      "id": "570d2417fed7b91900d45c3e",
+      "input_shape": [
+        1,
+        287
+      ],
+      "token_ids": [
+        80956,
+        594,
+        19952,
+        1584,
+        1985,
+        374,
+        21006,
+        2086,
+        304,
+        8330,
+        13,
+        151645
+      ],
+      "prediction": "Victoria's gross state product is ranked second in Australia.",
+      "prompt_sha256": "df8a90808d5e806d5409c2dbceb752847e9783cffd821cbeaa63f9b721c07295",
+      "input_token_ids_sha256": "d71632d20d559603427880a4b1084db2419ab902692af171f74d0057c4b3fcb0",
+      "top10": [
+        {
+          "token": 80956,
+          "text": "Victoria",
+          "logit": 19.046875
+        },
+        {
+          "token": 38,
+          "text": "G",
+          "logit": 18.171875
+        },
+        {
+          "token": 48037,
+          "text": "Australia",
+          "logit": 17.890625
+        },
+        {
+          "token": 15666,
+          "text": "Second",
+          "logit": 17.09375
+        },
+        {
+          "token": 5569,
+          "text": "second",
+          "logit": 17.0
+        },
+        {
+          "token": 785,
+          "text": "The",
+          "logit": 16.359375
+        },
+        {
+          "token": 36125,
+          "text": "Vict",
+          "logit": 15.9765625
+        },
+        {
+          "token": 53,
+          "text": "V",
+          "logit": 15.546875
+        },
+        {
+          "token": 36975,
+          "text": "Third",
+          "logit": 14.6796875
+        },
+        {
+          "token": 74241,
+          "text": "Australian",
+          "logit": 14.6640625
+        }
+      ],
+      "matches": {
+        "tokens": true,
+        "text": true,
+        "prompt": true,
+        "input_tokens": true,
+        "top10": true
+      }
+    },
+    {
+      "variant": "selected",
+      "id": "5a63772268151a001a9222f4",
+      "input_shape": [
+        1,
+        271
+      ],
+      "token_ids": [
+        3564,
+        4882,
+        22931,
+        151645
+      ],
+      "prediction": "New South Wales",
+      "prompt_sha256": "051eb49efefc01be6afa302d2c6aa896a87699ba41cb0e0142ff9f03f7cd0b12",
+      "input_token_ids_sha256": "19364c5dfe69bdbfde8a87c827f67291bdf394a76db76d98e24373661f5e3849",
+      "top10": [
+        {
+          "token": 3564,
+          "text": "New",
+          "logit": 20.625
+        },
+        {
+          "token": 22286,
+          "text": "David",
+          "logit": 19.96875
+        },
+        {
+          "token": 39,
+          "text": "H",
+          "logit": 18.59375
+        },
+        {
+          "token": 785,
+          "text": "The",
+          "logit": 17.4375
+        },
+        {
+          "token": 40586,
+          "text": "Daniel",
+          "logit": 15.484375
+        },
+        {
+          "token": 76491,
+          "text": "Lie",
+          "logit": 14.9609375
+        },
+        {
+          "token": 48037,
+          "text": "Australia",
+          "logit": 14.7578125
+        },
+        {
+          "token": 45,
+          "text": "N",
+          "logit": 14.7421875
+        },
+        {
+          "token": 2620,
+          "text": "Def",
+          "logit": 14.640625
+        },
+        {
+          "token": 1782,
+          "text": "the",
+          "logit": 14.5234375
+        }
+      ],
+      "matches": {
+        "tokens": true,
+        "text": true,
+        "prompt": true,
+        "input_tokens": true,
+        "top10": true
+      }
+    },
+    {
+      "variant": "control",
+      "id": "5727c94bff5b5019007d954d",
+      "input_shape": [
+        1,
+        225
+      ],
+      "token_ids": [
+        42074,
+        831,
+        6272,
+        151645
+      ],
+      "prediction": "Duval County",
+      "prompt_sha256": "ba61c253e9bdf3ca984b7132e0071de337f2cf0948f0b1fa8e4350ad34359246",
+      "input_token_ids_sha256": "ca9654ce7a2ef3db8f9144e614ac9f7b23f42a9c3fd49cce6053d47683007ee3",
+      "top10": [
+        {
+          "token": 42074,
+          "text": "Du",
+          "logit": 23.515625
+        },
+        {
+          "token": 35,
+          "text": "D",
+          "logit": 19.171875
+        },
+        {
+          "token": 61282,
+          "text": "Jackson",
+          "logit": 18.171875
+        },
+        {
+          "token": 53033,
+          "text": "Dur",
+          "logit": 17.390625
+        },
+        {
+          "token": 73194,
+          "text": "Dub",
+          "logit": 16.609375
+        },
+        {
+          "token": 1912,
+          "text": "De",
+          "logit": 16.203125
+        },
+        {
+          "token": 785,
+          "text": "The",
+          "logit": 15.6796875
+        },
+        {
+          "token": 15687,
+          "text": " Du",
+          "logit": 15.296875
+        },
+        {
+          "token": 47946,
+          "text": " Jacksonville",
+          "logit": 15.0859375
+        },
+        {
+          "token": 16532,
+          "text": "Del",
+          "logit": 14.9921875
+        }
+      ],
+      "matches": {
+        "tokens": true,
+        "text": true,
+        "prompt": true,
+        "input_tokens": true,
+        "top10": true
+      }
+    },
+    {
+      "variant": "control",
+      "id": "5a1c539bb4fb5d00187145fd",
+      "input_shape": [
+        1,
+        230
+      ],
+      "token_ids": [
+        785,
+        7772,
+        57406,
+        3082,
+        304,
+        9589,
+        323,
+        279,
+        35564,
+        374,
+        279,
+        47946,
+        57406,
+        3082,
+        13,
+        151645
+      ],
+      "prediction": "The largest metropolitan area in Florida and the Southeast is the Jacksonville metropolitan area.",
+      "prompt_sha256": "1c91c94680c43c93a8882f62cdbc6cd5ea3d20c079fe5ad0047377b3fd4f1d78",
+      "input_token_ids_sha256": "bc2f3fb7f77b74a603f9ed00a127199fae1f6a5afb817ffe6a1d2e123e890464",
+      "top10": [
+        {
+          "token": 785,
+          "text": "The",
+          "logit": 16.484375
+        },
+        {
+          "token": 42074,
+          "text": "Du",
+          "logit": 16.109375
+        },
+        {
+          "token": 57027,
+          "text": "Florida",
+          "logit": 16.09375
+        },
+        {
+          "token": 1782,
+          "text": "the",
+          "logit": 15.71875
+        },
+        {
+          "token": 61282,
+          "text": "Jackson",
+          "logit": 15.03125
+        },
+        {
+          "token": 37,
+          "text": "F",
+          "logit": 14.9609375
+        },
+        {
+          "token": 16,
+          "text": "1",
+          "logit": 14.8125
+        },
+        {
+          "token": 3882,
+          "text": "Fl",
+          "logit": 14.734375
+        },
+        {
+          "token": 47946,
+          "text": " Jacksonville",
+          "logit": 14.7109375
+        },
+        {
+          "token": 22372,
+          "text": "United",
+          "logit": 14.265625
+        }
+      ],
+      "matches": {
+        "tokens": true,
+        "text": true,
+        "prompt": true,
+        "input_tokens": true,
+        "top10": true
+      }
+    },
+    {
+      "variant": "control",
+      "id": "572f59b4a23a5019007fc587",
+      "input_shape": [
+        1,
+        268
+      ],
+      "token_ids": [
+        17949,
+        279,
+        7046,
+        17457,
+        315,
+        9255,
+        3015,
+        13,
+        151645
+      ],
+      "prediction": "Because the greater density of cold water.",
+      "prompt_sha256": "a31e6164066e4cb92dd4b66f807e140a839e4e9e1f9cb40e9c74525a29087700",
+      "input_token_ids_sha256": "b575a40da414323aaf9bd12a84c6917ace38133e756c7021d140d3e508c45942",
+      "top10": [
+        {
+          "token": 17949,
+          "text": "Because",
+          "logit": 22.796875
+        },
+        {
+          "token": 785,
+          "text": "The",
+          "logit": 22.171875
+        },
+        {
+          "token": 1655,
+          "text": "At",
+          "logit": 19.9375
+        },
+        {
+          "token": 27653,
+          "text": "because",
+          "logit": 18.953125
+        },
+        {
+          "token": 2132,
+          "text": "It",
+          "logit": 18.453125
+        },
+        {
+          "token": 49,
+          "text": "R",
+          "logit": 17.953125
+        },
+        {
+          "token": 1782,
+          "text": "the",
+          "logit": 17.796875
+        },
+        {
+          "token": 12549,
+          "text": "Since",
+          "logit": 16.78125
+        },
+        {
+          "token": 2121,
+          "text": "As",
+          "logit": 16.765625
+        },
+        {
+          "token": 1249,
+          "text": "To",
+          "logit": 16.515625
+        }
+      ],
+      "matches": {
+        "tokens": true,
+        "text": true,
+        "prompt": true,
+        "input_tokens": true,
+        "top10": true
+      }
+    },
+    {
+      "variant": "control",
+      "id": "5ad25e17d7d075001a428f12",
+      "input_shape": [
+        1,
+        274
+      ],
+      "token_ids": [
+        32079,
+        151645
+      ],
+      "prediction": "German",
+      "prompt_sha256": "723d1626b14eccf24fa4b6822fc51f3a8ded9b070777eef695360c1191ba0af8",
+      "input_token_ids_sha256": "8ce8891f00c2e358f524a5f2e114a31a7a7b1d88b7a05360fb7c29e50231d4b4",
+      "top10": [
+        {
+          "token": 32079,
+          "text": "German",
+          "logit": 18.90625
+        },
+        {
+          "token": 785,
+          "text": "The",
+          "logit": 18.8125
+        },
+        {
+          "token": 38,
+          "text": "G",
+          "logit": 17.453125
+        },
+        {
+          "token": 13218,
+          "text": "Sw",
+          "logit": 17.109375
+        },
+        {
+          "token": 50170,
+          "text": "Germany",
+          "logit": 17.03125
+        },
+        {
+          "token": 35,
+          "text": "D",
+          "logit": 16.78125
+        },
+        {
+          "token": 43197,
+          "text": "French",
+          "logit": 16.484375
+        },
+        {
+          "token": 1782,
+          "text": "the",
+          "logit": 16.390625
+        },
+        {
+          "token": 49,
+          "text": "R",
+          "logit": 16.046875
+        },
+        {
+          "token": 72162,
+          "text": "Rh",
+          "logit": 15.984375
+        }
+      ],
+      "matches": {
+        "tokens": true,
+        "text": true,
+        "prompt": true,
+        "input_tokens": true,
+        "top10": true
+      }
+    },
+    {
+      "variant": "control",
+      "id": "57094b4f9928a814004714f9",
+      "input_shape": [
+        1,
+        219
+      ],
+      "token_ids": [
+        45948,
+        14513,
+        151645
+      ],
+      "prediction": "Sky Three",
+      "prompt_sha256": "eb7f9bd989c6455798e508f3f15ea3b7686c5cba3a788aaca5d244b573c7c66f",
+      "input_token_ids_sha256": "bb31621d0ad35b05b293d5bf7db94e6c7df3ee34f0685f9496ff0b455225a9c9",
+      "top10": [
+        {
+          "token": 45948,
+          "text": "Sky",
+          "logit": 20.515625
+        },
+        {
+          "token": 10940,
+          "text": "Free",
+          "logit": 17.5
+        },
+        {
+          "token": 7347,
+          "text": "BS",
+          "logit": 17.0
+        },
+        {
+          "token": 6025,
+          "text": "After",
+          "logit": 15.875
+        },
+        {
+          "token": 10331,
+          "text": "Blue",
+          "logit": 15.40625
+        },
+        {
+          "token": 785,
+          "text": "The",
+          "logit": 15.2421875
+        },
+        {
+          "token": 18,
+          "text": "3",
+          "logit": 15.140625
+        },
+        {
+          "token": 10227,
+          "text": "Before",
+          "logit": 14.6484375
+        },
+        {
+          "token": 19290,
+          "text": "Sk",
+          "logit": 14.390625
+        },
+        {
+          "token": 26684,
+          "text": "sky",
+          "logit": 14.2109375
+        }
+      ],
+      "matches": {
+        "tokens": true,
+        "text": true,
+        "prompt": true,
+        "input_tokens": true,
+        "top10": true
+      }
+    },
+    {
+      "variant": "control",
+      "id": "5a2c08aebfd06b001a5ae989",
+      "input_shape": [
+        1,
+        193
+      ],
+      "token_ids": [
+        51861,
+        60557,
+        63460,
+        151645
+      ],
+      "prediction": "British Satellite Broadcasting",
+      "prompt_sha256": "6e8bd83eca6f3154b39f6fb78250cc556910cdbd3adef56fea9a7ebc6e679741",
+      "input_token_ids_sha256": "ac248d39c25331f9fbe6a5324e6990d822dcc58426ecea58174145e32177201a",
+      "top10": [
+        {
+          "token": 51861,
+          "text": "British",
+          "logit": 21.75
+        },
+        {
+          "token": 45948,
+          "text": "Sky",
+          "logit": 21.390625
+        },
+        {
+          "token": 7347,
+          "text": "BS",
+          "logit": 19.578125
+        },
+        {
+          "token": 35228,
+          "text": "Brit",
+          "logit": 16.984375
+        },
+        {
+          "token": 785,
+          "text": "The",
+          "logit": 16.421875
+        },
+        {
+          "token": 90738,
+          "text": "Britain",
+          "logit": 16.21875
+        },
+        {
+          "token": 14722,
+          "text": " Sky",
+          "logit": 14.9453125
+        },
+        {
+          "token": 66755,
+          "text": "BBC",
+          "logit": 14.828125
+        },
+        {
+          "token": 19290,
+          "text": "Sk",
+          "logit": 14.6953125
+        },
+        {
+          "token": 50,
+          "text": "S",
+          "logit": 14.5390625
+        }
+      ],
+      "matches": {
+        "tokens": true,
+        "text": true,
+        "prompt": true,
+        "input_tokens": true,
+        "top10": true
+      }
+    },
+    {
+      "variant": "control",
+      "id": "570d2417fed7b91900d45c3e",
+      "input_shape": [
+        1,
+        287
+      ],
+      "token_ids": [
+        80956,
+        594,
+        19952,
+        1584,
+        1985,
+        374,
+        21006,
+        2086,
+        304,
+        8330,
+        13,
+        151645
+      ],
+      "prediction": "Victoria's gross state product is ranked second in Australia.",
+      "prompt_sha256": "df8a90808d5e806d5409c2dbceb752847e9783cffd821cbeaa63f9b721c07295",
+      "input_token_ids_sha256": "d71632d20d559603427880a4b1084db2419ab902692af171f74d0057c4b3fcb0",
+      "top10": [
+        {
+          "token": 80956,
+          "text": "Victoria",
+          "logit": 19.65625
+        },
+        {
+          "token": 38,
+          "text": "G",
+          "logit": 18.953125
+        },
+        {
+          "token": 48037,
+          "text": "Australia",
+          "logit": 17.953125
+        },
+        {
+          "token": 785,
+          "text": "The",
+          "logit": 17.390625
+        },
+        {
+          "token": 15666,
+          "text": "Second",
+          "logit": 16.984375
+        },
+        {
+          "token": 36125,
+          "text": "Vict",
+          "logit": 16.75
+        },
+        {
+          "token": 53,
+          "text": "V",
+          "logit": 16.140625
+        },
+        {
+          "token": 5569,
+          "text": "second",
+          "logit": 15.5703125
+        },
+        {
+          "token": 22417,
+          "text": " Victoria",
+          "logit": 14.9296875
+        },
+        {
+          "token": 74241,
+          "text": "Australian",
+          "logit": 14.7890625
+        }
+      ],
+      "matches": {
+        "tokens": true,
+        "text": true,
+        "prompt": true,
+        "input_tokens": true,
+        "top10": true
+      }
+    },
+    {
+      "variant": "control",
+      "id": "5a63772268151a001a9222f4",
+      "input_shape": [
+        1,
+        271
+      ],
+      "token_ids": [
+        22286,
+        28670,
+        151645
+      ],
+      "prediction": "David Collins",
+      "prompt_sha256": "051eb49efefc01be6afa302d2c6aa896a87699ba41cb0e0142ff9f03f7cd0b12",
+      "input_token_ids_sha256": "19364c5dfe69bdbfde8a87c827f67291bdf394a76db76d98e24373661f5e3849",
+      "top10": [
+        {
+          "token": 22286,
+          "text": "David",
+          "logit": 19.5
+        },
+        {
+          "token": 3564,
+          "text": "New",
+          "logit": 18.671875
+        },
+        {
+          "token": 39,
+          "text": "H",
+          "logit": 17.984375
+        },
+        {
+          "token": 785,
+          "text": "The",
+          "logit": 17.4375
+        },
+        {
+          "token": 76491,
+          "text": "Lie",
+          "logit": 15.6875
+        },
+        {
+          "token": 1782,
+          "text": "the",
+          "logit": 14.453125
+        },
+        {
+          "token": 51861,
+          "text": "British",
+          "logit": 14.3671875
+        },
+        {
+          "token": 2620,
+          "text": "Def",
+          "logit": 14.203125
+        },
+        {
+          "token": 74241,
+          "text": "Australian",
+          "logit": 14.15625
+        },
+        {
+          "token": 48037,
+          "text": "Australia",
+          "logit": 14.1484375
+        }
+      ],
+      "matches": {
+        "tokens": true,
+        "text": true,
+        "prompt": true,
+        "input_tokens": true,
+        "top10": true
+      }
+    }
+  ],
+  "upstream_tensors_converted_independently": 290,
+  "device": {
+    "resource_limit": 499000,
+    "max_buffer_length": 30150672384,
+    "architecture": "applegpu_g16s",
+    "memory_size": 51539607552,
+    "max_recommended_working_set_size": 40200896512,
+    "device_name": "Apple M4 Max"
+  },
+  "finished": "2026-10-03T19:32:21.798480+00:00"
+}

@@ -1,0 +1,70 @@
+{
+  "reviewed_at_utc": "2026-10-03T19:33:24.275434+00:00",
+  "baseline_commit": "0670643e9e0b7c4e58418718ce001119f0de7d03",
+  "python": "3.14.6",
+  "scope": "Independent offline release/evidence validator audit; mutation copies only. No model execution claimed by this sub-review.",
+  "issue_method": "Problem -> invalid-input hypothesis -> reject invalid/preserve valid acceptance -> patch -> actual probes and unit tests -> frozen logs.",
+  "findings": [
+    {
+      "issue": "Protected historical ledger could be emptied or narrowed while technical_acceptance stayed pass",
+      "fix": "Pin the frozen 628-file historical ledger digest in reviewed verifier code. The ledger is never rewritten.",
+      "before": "2/2 invalid accepted",
+      "after": "2/2 rejected"
+    },
+    {
+      "issue": "Source manifests could be empty/incomplete; exploration allowed source/../protocol.json",
+      "fix": "Use exact directory coverage and canonical safe paths for all three source snapshots: exploration, confirmation, rebuild.",
+      "before": "3/3 invalid accepted",
+      "after": "3/3 rejected"
+    },
+    {
+      "issue": "Standalone confirmation accepted a re-signed q4 tokenizer SHA256 mismatch",
+      "fix": "Cross-check all inference sidecars across variants and the four tokenizer hashes against frozen tensor identities.",
+      "before": "1/1 invalid accepted",
+      "after": "1/1 rejected"
+    },
+    {
+      "issue": "Self-consistent ZIP allowed a symlink entry and dot path",
+      "fix": "Reject non-regular entries and dot paths before reading members.",
+      "before": "2/2 invalid accepted",
+      "after": "2/2 rejected"
+    }
+  ],
+  "already_correct": [
+    "Wrong score after re-signing rejected",
+    "Missing data rejected",
+    "Empty evidence checksums rejected",
+    "Archive missing manifest coverage rejected by existing test"
+  ],
+  "acceptance": {
+    "mutation_probes_rejected_after": 11,
+    "mutation_probes_total": 11,
+    "targeted_tests": 12,
+    "targeted_tests_pass": true,
+    "historical_release_verification": "pass; confirmation quality gate remains false; license absent",
+    "old_rc1_archive": "821 files; original hash matches; validates under hardened parser"
+  },
+  "fair_verifier_boundary": "verify_qwen_prefix_fair intentionally supports runner validation before complete.json exists. Release verification separately requires all six frozen fair-study files through the protected ledger; missing/empty complete.json probes reject. No runner changes.",
+  "limits": [
+    "Checksums are integrity checks, not digital signatures, proof of authorship, or proof that a claimed GPU execution happened. A malicious publisher can replace code and all records coherently.",
+    "Archive verify checks the self-contained manifest, not completeness against an external Git tree. A newly re-signed subset is a different artifact; anchor the reviewed commit and final package SHA256 externally and run verify_release after extraction.",
+    "Offline model identity verification checks recorded identities and tokenizer consistency. Weights are intentionally absent. Independently loading/re-hashing actual local models is a separate runtime check.",
+    "Frozen historical source snapshots remain unchanged; current hardened verifiers validate those old records."
+  ],
+  "commands": [
+    "python3 -B -m results.independent-review-v1.verifier.mutation_checks --output results/independent-review-v1/verifier/after.json",
+    "python3 -B -m unittest tests.test_release_integrity -v",
+    "python3 -B -m experiments.verify_release",
+    "python3 -B -m experiments.release_archive verify <RC1 ZIP>"
+  ],
+  "changed_files_sha256": {
+    "experiments/release_archive.py": "18073af2566c0ef1b087d9556c0880d21c77afd5ca8a92d7182cf4f1483960ab",
+    "experiments/verify_qwen_confirmation.py": "12cf5dabc0b00c1fddc0a73e1266e260fc43c5ccae1bf7dbb0201503d703f046",
+    "experiments/verify_qwen_quantization.py": "b224ad26ad35854ac7462731f6dadae36e6168140424ddded8099c81e6bf7ddd",
+    "experiments/verify_release.py": "6b5da77acb5af44039a4a49f115d6e44804da70550855c30e1151d03b67d0304",
+    "lab/artifact_integrity.py": "8f10b1899e83258baf3a39a8c0d2652c20cab8708d576fc3485cff7654278187",
+    "tests/test_release_integrity.py": "a8879f86364f715406d094c362b7691bb012e6e7b99c7bd4eab8cc11cd688c1f"
+  },
+  "historical_files_modified": false,
+  "committed_or_pushed_by_this_reviewer": false
+}
