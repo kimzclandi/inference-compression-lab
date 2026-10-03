@@ -45,7 +45,12 @@ def environment():
             'memory_bytes':psutil.virtual_memory().total,'logical_cpus':os.cpu_count(),
             'versions':{p:importlib.metadata.version(p) for p in ['onnxruntime','onnx','numpy','scipy','tokenizers','pyarrow','psutil']}}
     if sys.platform=='darwin':
-        result['cpu']=subprocess.check_output(['sysctl','-n','machdep.cpu.brand_string'],text=True).strip()
+        try:
+            result['cpu']=subprocess.check_output(['sysctl','-n','machdep.cpu.brand_string'],
+                                                  text=True,stderr=subprocess.PIPE).strip()
+        except (OSError, subprocess.CalledProcessError) as exc:
+            result['cpu']=None
+            result['cpu_probe_error']=str(exc)
     return result
 
 
