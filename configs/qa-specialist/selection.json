@@ -1,0 +1,27 @@
+{
+  "source_url": "https://rajpurkar.github.io/SQuAD-explorer/dataset/dev-v2.0.json",
+  "source_sha256": "80a5225e94905956a6446d296ca1093975c4d3b3260f1d6c8f68bc2ab77182d8",
+  "seed": 2026100405,
+  "splits": [
+    {
+      "name": "calibration",
+      "articles": 4
+    },
+    {
+      "name": "evaluation",
+      "articles": 8
+    }
+  ],
+  "per_class_per_article": 16,
+  "max_context_chars": 4000,
+  "policy": "Select calibration first, then evaluation. Exclude inventoried old titles/IDs/normalized exact contexts/questions; additionally exclude all calibration titles/IDs/normalized exact contexts/questions from evaluation. Use SHA256(str(seed)+title) for eligible article ranking and SHA256(str(seed)+id) for question ranking. Require sixteen unique contexts per answerability class per article. Permit shared contexts between classes within an article. Reject cross-article duplicate questions and context families; fail without fallback when fixed quotas cannot be met. Do not read model outputs or replace samples after outcomes.",
+  "exclusions": "configs/qa-specialist/exclusions.json",
+  "exclusions_sha256": "176fba5ad90f9e78bf488fbe8a3e2e40c859119552639497585a9a151c9e4eae",
+  "license": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+    "attribution": "SQuAD 2.0: Pranav Rajpurkar, Robin Jia, Percy Liang; passages by Wikipedia contributors.",
+    "source_project": "https://rajpurkar.github.io/SQuAD-explorer/"
+  },
+  "scope": "Fixed local assessment using public SQuAD 2.0 development data, never an official hidden test or a model-unseen confirmation. The selected specialist deepset/roberta-base-squad2 was supervised on SQuAD 2.0 and its upstream model card reports performance on public dev. Project-local title/ID/exact-context/question exclusions do not undo upstream benchmark exposure, pretraining contamination, possible model selection on dev, or semantic near-duplicates. Calibration may select only the predeclared threshold; evaluation is one frozen-policy public-benchmark assessment. Results do not establish business deployment quality or independent algorithm confirmation. Once published/evaluated, future runs are reproductions."
+}

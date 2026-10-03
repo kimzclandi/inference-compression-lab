@@ -1,0 +1,29 @@
+{
+  "split": "calibration",
+  "selection_sha256": "6943bf9efef5406f1f744d7d154009ab6aca0425f642592e7676317fe08b6e41",
+  "exclusions_sha256": "176fba5ad90f9e78bf488fbe8a3e2e40c859119552639497585a9a151c9e4eae",
+  "data_sha256": "0e48a12509048b171c34d801661c8fe94d03fb8f578c399fabf4031a1d1f2eb5",
+  "titles": [
+    "Fresno,_California",
+    "Huguenot",
+    "Steam_engine",
+    "Normans"
+  ],
+  "n": 128,
+  "families": 103,
+  "unanswerable": 64,
+  "eligible_articles": 16,
+  "effective_exclusion_counts": {
+    "ids": 1090,
+    "titles": 115,
+    "context_hashes": 560,
+    "question_hashes": 1090
+  },
+  "license": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+    "attribution": "SQuAD 2.0: Pranav Rajpurkar, Robin Jia, Percy Liang; passages by Wikipedia contributors.",
+    "source_project": "https://rajpurkar.github.io/SQuAD-explorer/"
+  },
+  "scope": "Fixed local assessment using public SQuAD 2.0 development data, never an official hidden test or a model-unseen confirmation. The selected specialist deepset/roberta-base-squad2 was supervised on SQuAD 2.0 and its upstream model card reports performance on public dev. Project-local title/ID/exact-context/question exclusions do not undo upstream benchmark exposure, pretraining contamination, possible model selection on dev, or semantic near-duplicates. Calibration may select only the predeclared threshold; evaluation is one frozen-policy public-benchmark assessment. Results do not establish business deployment quality or independent algorithm confirmation. Once published/evaluated, future runs are reproductions."
+}
