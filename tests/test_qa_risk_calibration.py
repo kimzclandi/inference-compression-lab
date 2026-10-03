@@ -59,7 +59,7 @@ class RiskFeatureTests(unittest.TestCase):
         self.assertEqual(result['features'][0], 7.)
         self.assertEqual(result['features'][2], 1.)
         self.assertEqual(result['diagnostics']['alternative']['window_index'], 1)
-        self.assertEqual(result['features'][4], math.log(3))
+        self.assertAlmostEqual(result['features'][4], math.log(3), places=14)
 
     def test_same_normalized_answer_is_excluded_even_at_different_offsets(self):
         context = 'Cat cat dog'

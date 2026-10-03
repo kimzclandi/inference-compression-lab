@@ -1,0 +1,11 @@
+{
+  "problem": "Exact equality between math.log1p(2) and math.log(3) differed by one ULP on Linux Python 3.12.",
+  "observed": [
+    1.0986122886681096,
+    1.0986122886681098
+  ],
+  "fixed_acceptance": "assertAlmostEqual to fourteen decimal places; still independently compares equivalent mathematical expressions",
+  "change": "Test assertion only. No frozen model, data, feature implementation, threshold, metric or gate changed.",
+  "initial_head": "385c9adb10763aef4576a874aa3e79b77084434b",
+  "failed_ci_run": 37155909863
+}
