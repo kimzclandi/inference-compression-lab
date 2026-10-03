@@ -6,7 +6,7 @@ import shutil
 import json
 from lab.quantization_diagnostics import sha
 from experiments.verify_qwen_quantization import verify
-from lab.quantization_diagnostics import read, rows, rank_blocks, paired, performance
+from lab.quantization_diagnostics import read, rows, rank_blocks, paired, performance, aggregates_equal
 from lab.qa_metrics import evaluate
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -19,7 +19,7 @@ class DiagnosticTests(unittest.TestCase):
         for variant, expected in [('fp16', 19), ('q4', 16), ('q8', 18)]:
             base = ROOT / 'results/qwen-quantization-history'
             metrics, scored[variant] = evaluate(data, rows(base / f'{variant}-dev.predictions.jsonl'))
-            self.assertEqual(metrics, read(base / f'{variant}-dev.metrics.json'))
+            self.assertTrue(aggregates_equal(metrics, read(base / f'{variant}-dev.metrics.json')))
             self.assertEqual(sum(r['em'] for r in scored[variant]), expected)
         changes = paired(scored['fp16'], scored['q4'])
         self.assertEqual(len(changes['lost']), 6)
@@ -50,12 +50,18 @@ class DiagnosticTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             performance([dict(r, token_ids=[1])])
 
+    def test_aggregate_tolerance_never_masks_quality_or_coverage_changes(self):
+        self.assertTrue(aggregates_equal({'macro': 0.23668430335096996}, {'macro': 0.23668430335097002}))
+        for a, b in [(16, 17), (True, 1), ([1], [1, 2]), ({'em': 16/74}, {'em': 17/74}),
+                     (float('nan'), float('nan')), (0.3, 0.300000001)]:
+            self.assertFalse(aggregates_equal(a, b))
+
 
 @unittest.skipUnless((ROOT / 'results/qwen-quantization-v1/run.json').exists(), 'GPU evidence not archived')
 class FrozenEvidenceTests(unittest.TestCase):
     def test_recompute_and_preserve_parent_evidence(self):
         result = verify(ROOT / 'results/qwen-quantization-v1')
-        self.assertEqual(result, read(ROOT / 'results/qwen-quantization-v1/summary.json'))
+        self.assertTrue(aggregates_equal(result, read(ROOT / 'results/qwen-quantization-v1/summary.json')))
         for name, expected in read(ROOT / 'configs/qwen-quantization/parent-evidence.json').items():
             self.assertEqual(sha(ROOT / name), expected)
 

@@ -1,0 +1,11 @@
+{
+  "cause": "Exact equality on aggregate floats from historical scorer; set iteration and version-specific summation give 5.6e-17 drift.",
+  "fix": "Absolute tolerance <= 1e-12 only in recomputed aggregate comparison; identical types, counts, IDs, coverage and finite values required.",
+  "unchanged": [
+    "QA scoring rules and per-item scores",
+    "model outputs and frozen experimental files",
+    "protocol and candidate gate"
+  ],
+  "local_validation": "Python 3.14 full suite 64 checks: 52 pass, 12 optional skips; Python 3.12 targeted checks with PYTHONHASHSEED 0,1,2 passed.",
+  "system_python_attempt": "Blocked by unaccepted Xcode license; no license acceptance or system changes performed."
+}

@@ -1,8 +1,31 @@
 """Dependency-free analysis of first-token interventions and paired QA outcomes."""
 import hashlib
 import json
+import math
 from pathlib import Path
 import statistics
+
+
+def aggregates_equal(actual, expected):
+    """Allow only 1e-12 absolute float rounding in recomputed aggregate records.
+
+    Python versions differ in sum(), and historical family macro EM iterates a
+    set. Do not rewrite the scorer or archived values to force bitwise agreement.
+    IDs, counts, booleans, keys and list coverage still require exact equality.
+    Raw artifacts remain SHA256-checked; this is not a raw-evidence tolerance.
+    """
+    if type(actual) is not type(expected):
+        return False
+    if isinstance(actual, dict):
+        return actual.keys() == expected.keys() and all(
+            aggregates_equal(actual[k], expected[k]) for k in actual)
+    if isinstance(actual, list):
+        return len(actual) == len(expected) and all(
+            aggregates_equal(a, b) for a, b in zip(actual, expected))
+    if isinstance(actual, float):
+        return math.isfinite(actual) and math.isfinite(expected) and math.isclose(
+            actual, expected, rel_tol=0, abs_tol=1e-12)
+    return actual == expected
 
 
 def read(path):

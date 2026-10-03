@@ -5,7 +5,7 @@ from pathlib import Path
 import statistics
 from lab.qa_metrics import evaluate
 from lab.quantization_diagnostics import (read, rows, sha, write, index_by_id,
-                                          paired, rank_blocks, performance, gate)
+                                          paired, rank_blocks, performance, gate, aggregates_equal)
 
 
 def require(condition, message):
@@ -38,7 +38,7 @@ def verify(folder):
         quality[variant] = read(folder / f'{variant}-quality.json')
         predictions = quality[variant]['predictions']
         metrics, scored[variant] = evaluate(data, predictions)
-        require(metrics == quality[variant]['metrics'], 'Quality arithmetic drift: ' + variant)
+        require(aggregates_equal(metrics, quality[variant]['metrics']), 'Quality arithmetic drift: ' + variant)
         require(scored[variant] == quality[variant]['scored'], 'Per-item score drift')
         logits[variant] = index_by_id(read(folder / f'{variant}-logits.json'))
         require(set(logits[variant]) == set(index_by_id(data)), 'Diagnostic sample coverage')
@@ -116,7 +116,7 @@ def verify(folder):
         if variant in token_reference:
             require(tokens == token_reference[variant], 'Within-variant greedy drift')
         token_reference[variant] = tokens
-        perf = performance(timing); require(perf == cell['performance'], 'Performance arithmetic drift')
+        perf = performance(timing); require(aggregates_equal(perf, cell['performance']), 'Performance arithmetic drift')
         require(all(value > 0 for value in cell['memory'].values()), 'Invalid memory counter')
         perfs[variant].append(dict(perf, **cell['memory']))
     comparisons = {}
@@ -148,7 +148,7 @@ def main():
     if a.write_summary:
         write(a.folder / 'summary.json', result)
     elif (a.folder / 'summary.json').exists():
-        require(read(a.folder / 'summary.json') == result, 'Frozen summary drift')
+        require(aggregates_equal(read(a.folder / 'summary.json'), result), 'Frozen summary drift')
     print('Verified:', result['acceptance']['screen_interventions'], 'interventions,',
           result['acceptance']['balanced_benchmarks'], 'balanced fresh-process benchmarks.')
     for v, r in result['variants'].items():
