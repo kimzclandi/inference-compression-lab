@@ -1,0 +1,33 @@
+{
+  "variants": [
+    "fp16",
+    "q4",
+    "q8"
+  ],
+  "model": "Original Qwen2.5-0.5B-Instruct, no trained adapter",
+  "quantization": "Affine grouped weight-only, group_size64; Q4 and Q8 derived from same cached FP16 export, KV remains floating. Q8 is NOT FP8.",
+  "quality": "One complete DEV evaluation (74 rows) per variant, same decoder/config/hardware. No old test or cross-article holdout inference. Repeated dev use means exploratory candidate selection, not independent quality confirmation.",
+  "benchmark_order": [
+    "fp16",
+    "q4",
+    "q8",
+    "q4",
+    "q8",
+    "fp16",
+    "q8",
+    "fp16",
+    "q4"
+  ],
+  "workload": "Same first 8 frozen TRAIN pilot prompts, forced32 tokens regardlessEOS, batch1, 2 synthetic warmups per fresh process. 3 runs/variant, serial. Compare same-round medians, retain every run.",
+  "gate": {
+    "max_overall_em_drop": 0.013513513513513514,
+    "max_answerable_em_drop": 0.030303030303030304,
+    "max_f1_drop": 0.02,
+    "max_weight_ratio": 0.6,
+    "max_median_rss_ratio": 0.8,
+    "min_median_decode_ratio": 0.95,
+    "max_median_ttft_ratio": 1.1
+  },
+  "decision": "All gates must pass relative to same-round FP16 to qualify as a local dev-only compression candidate. Passing does not make the underlying QA model deployable or prove independent test quality. No automatic adoption/publication.",
+  "budget": "One Q8 conversion, Q8 decoder parity check on2train rows, 3dev runs,9bench processes. No hyperparameter retry, no paid API, no network/download."
+}
