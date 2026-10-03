@@ -36,13 +36,19 @@ FP32 Spearman不变；INT8分桶相对自身顺序批处理的Spearman下降0.00
 
 ## 复现
 
-先按仓库既有 `docs/mac-reproduction.md` 和 `docs/runtime-study-reproduction.md` 准备环境、固定revision模型、两份STS-B数据，以及 `runs/minilm-runtime-assets-v1/int8_per_channel.onnx`。模型和数据不随本轮提交分发。可复用历史prepare产生的相同哈希资产；本轮只读它们。
+干净源码目录建议使用Python 3.12；安装依赖及下载模型需要网络，不需要GPU或付费API。下面的准备脚本校验FP32模型、tokenizer及数据哈希，在新目录重新生成INT8资产；无需先运行旧线程调优实验。`prepare_minilm`只在尚未准备模型的新目录运行，已有模型可直接进入第二条准备命令。
 
 ```bash
-python -m unittest discover -s tests -v
-python -m experiments.minilm_bucketing --output-dir results/my-bucketing-pilot
-python -m experiments.minilm_bucketing --spec configs/minilm-bucketing-confirm.json --output-dir results/my-bucketing-confirm
+python3.12 -m venv .venv
+.venv/bin/python -m pip install -r requirements-macos-py312.txt
+.venv/bin/python -m experiments.prepare_minilm
+.venv/bin/python -m experiments.prepare_bucketing_assets --assets-dir runs/my-bucketing-assets
+.venv/bin/python -m experiments.minilm_bucketing --assets-dir runs/my-bucketing-assets --output-dir results/my-bucketing-pilot
+.venv/bin/python -m experiments.minilm_bucketing --assets-dir runs/my-bucketing-assets --spec configs/minilm-bucketing-confirm.json --output-dir results/my-bucketing-confirm
+.venv/bin/python -m unittest discover -s tests -v
 ```
+
+无模型、无第三方依赖时也能运行最后的标准库检查，模型与数值计算相关检查会跳过。CI不重跑性能实验，不能把绿色CI理解为云端复现了16.6%的收益。
 
 API示例（离线文本列表，保持输出顺序）：
 
@@ -70,8 +76,10 @@ v1启动时因sysctl CPU信息查询被沙箱拒绝而在任何模型实验前�
 
 ## 发布状态
 
-本轮基于既有PR分支的c6012d6，独立分支codex/minilm-length-bucketing；代码和结果目前仅本地，未推送、未合并、未改变私有仓库可见性。
+本轮基于既有PR分支的c6012d6，独立分支codex/minilm-length-bucketing；代码和结果已获用户授权推送，草稿PR待审查；未合并、未改变私有仓库可见性。
 
 ## 本轮验证
 
 `python -m unittest discover -s tests -v`：35项通过，含真实模型与历史证据检查；`git diff --check`通过。日志保存在`results/minilm-bucketing-confirm-v1/tests.log`。测试通过证明代码合约与保存证据一致，不代替模型质量与实际工作负载测量。
+
+审查准备补充：证据检查以430个历史文件的SHA256清单替代Git历史依赖，支持浅克隆和源码下载包；新增可指定资产目录的准备/运行入口。本机重新量化得到的INT8文件与历史文件哈希一致；没有宣称已完成另一台机器上的性能复现。

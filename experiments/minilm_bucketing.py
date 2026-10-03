@@ -19,11 +19,13 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--output-dir', type=Path, required=True)
     parser.add_argument('--spec', type=Path, default=Path('configs/minilm-bucketing.json'))
+    parser.add_argument('--assets-dir', type=Path, default=Path('runs/minilm-runtime-assets-v1'),
+                        help='Directory containing the prepared int8_per_channel.onnx')
     args = parser.parse_args()
     spec = read(args.spec)
     out = reserve_directory(args.output_dir)
     paths = {'fp32': Path('models/minilm/onnx/model.onnx'),
-             'int8_per_channel': Path('runs/minilm-runtime-assets-v1/int8_per_channel.onnx')}
+             'int8_per_channel': args.assets_dir / 'int8_per_channel.onnx'}
     save(out / 'manifest.json', {'environment': environment(), 'spec': spec,
          'spec_sha256': sha256(args.spec),
          'models': {k: {'path': str(v), 'sha256': sha256(v)} for k, v in paths.items()},

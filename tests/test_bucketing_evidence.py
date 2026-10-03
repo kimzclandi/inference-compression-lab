@@ -45,8 +45,7 @@ class BucketingEvidenceTests(unittest.TestCase):
                     self.assertAlmostEqual(base['spearman']-item['spearman'], item['spearman_drop_vs_same_precision_consecutive'])
 
     def test_historical_results_remain_unchanged(self):
-        import subprocess
-        changed = subprocess.check_output(['git', 'diff', '--name-only', 'c6012d6', '--', 'results'],
-                                          cwd=ROOT, text=True).splitlines()
-        self.assertTrue(all(p.startswith(('results/minilm-bucketing-v2/',
-                                         'results/minilm-bucketing-confirm-v1/')) for p in changed))
+        manifest = json.loads((ROOT / 'docs/bucketing-parent-evidence.json').read_text())
+        self.assertEqual(len(manifest['files_sha256']), 430)
+        for name, expected in manifest['files_sha256'].items():
+            self.assertEqual(hashlib.sha256((ROOT / name).read_bytes()).hexdigest(), expected)
