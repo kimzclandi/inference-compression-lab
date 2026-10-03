@@ -221,6 +221,27 @@ class RiskTrainingTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'Non-finite'):
             fit([[-1e308] * 5, [1e308] * 5], [0, 1])
 
+    def test_256_row_finite_newton_fit_avoids_large_matmul_flag_failure(self):
+        # NumPy 2.2.6 on the recorded macOS runtime raised a false
+        # divide-by-zero in BLAS matmul for this shape at zero initialization.
+        # Explicit contractions must fit the same fixed mathematical model.
+        features = [[float(i % 17), float((i % 17)**2), float(i % 3),
+                     float(i % 4), float(i % 5)] for i in range(256)]
+        labels = [i % 2 for i in range(256)]
+        fitted = fit(features, labels)
+        self.assertTrue(fitted['convergence']['converged'])
+        self.assertLessEqual(fitted['convergence']['gradient_max_abs'], 1e-8)
+        self.assertEqual(fitted, fit(features, labels))
+        # Recompute the regularized objective without NumPy/BLAS.
+        weights, intercept = fitted['weights'], fitted['intercept']
+        mean, scale = fitted['scaler']['mean'], fitted['scaler']['scale']
+        logits = [intercept + math.fsum(w * (value - m) / s
+                   for w, value, m, s in zip(weights, row, mean, scale)) for row in features]
+        loss_terms = [max(z, 0) + math.log1p(math.exp(-abs(z)))
+                      for z in ((-logit if label else logit) for logit, label in zip(logits, labels))]
+        expected = math.fsum(loss_terms) + .5 * math.fsum(w * w for w in weights)
+        self.assertAlmostEqual(fitted['trace'][-1]['objective'], expected, places=10)
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -171,21 +171,14 @@ def fit(features, labels):
             regularization = np.diag([0.0] + [FIT_CONFIG['l2']] * len(FEATURE_NAMES))
 
             def evaluate(parameters):
-                # Small, fixed-width reductions deliberately avoid BLAS
-                # matmul. On the recorded macOS NumPy/Accelerate runtime,
-                # finite 256x6 matrices times zero vectors spuriously raise
-                # divide-by-zero under np.errstate. Explicit contractions
-                # preserve the same objective without suppressing checks.
-                logits = np.einsum('ij,j->i', design, parameters, optimize=False)
+                logits = design @ parameters
                 # logaddexp prevents exp overflow; select the sign by the
                 # binary label to avoid subtracting two enormous numbers.
                 loss = np.logaddexp(0.0, np.where(y == 1, -logits, logits)).sum()
-                loss += 0.5 * FIT_CONFIG['l2'] * np.einsum('i,i->', parameters[1:], parameters[1:], optimize=False)
+                loss += 0.5 * FIT_CONFIG['l2'] * (parameters[1:] @ parameters[1:])
                 probability = np.exp(-np.logaddexp(0.0, -logits))
-                gradient = np.einsum('ij,i->j', design, probability - y, optimize=False)
-                gradient += np.einsum('ij,j->i', regularization, parameters, optimize=False)
-                weighted = (probability * (1 - probability))[:, None] * design
-                hessian = np.einsum('ni,nj->ij', design, weighted, optimize=False)
+                gradient = design.T @ (probability - y) + regularization @ parameters
+                hessian = design.T @ ((probability * (1 - probability))[:, None] * design)
                 hessian += regularization
                 if not (np.isfinite(loss) and np.isfinite(gradient).all() and np.isfinite(hessian).all()):
                     raise ValueError('Non-finite logistic objective or derivatives.')
@@ -204,7 +197,7 @@ def fit(features, labels):
                 if iteration == FIT_CONFIG['max_iterations']:
                     break
                 direction = np.linalg.solve(hessian, gradient)
-                decrement = float(np.einsum('i,i->', gradient, direction, optimize=False))
+                decrement = float(gradient @ direction)
                 if not np.isfinite(direction).all() or not math.isfinite(decrement) or decrement <= 0:
                     raise ValueError('Newton direction is not finite and strictly descending.')
                 step = 1.0

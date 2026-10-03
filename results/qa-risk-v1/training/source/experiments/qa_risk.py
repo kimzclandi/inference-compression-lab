@@ -23,12 +23,7 @@ VARIANTS=('fp32','int8')
 
 
 def model_digest(model):
-    # Portable parameter identity, with a fixed 1e-10 serialization resolution.
-    # Iteration traces are evidence, not inference parameters; verify them numerically.
-    identity={k:model[k] for k in ('schema','feature_names','config')}
-    identity.update(weights=[round(x,10) for x in model['weights']],intercept=round(model['intercept'],10),
-                    scaler={k:[round(x,10) for x in v] for k,v in model['scaler'].items()})
-    return hashlib.sha256(json.dumps(identity,sort_keys=True,separators=(',',':'),allow_nan=False).encode()).hexdigest()
+    return hashlib.sha256(json.dumps(model,sort_keys=True,separators=(',',':'),allow_nan=False).encode()).hexdigest()
 
 
 def preflight(spec_path):
@@ -71,7 +66,7 @@ def select_variant(data,records,model,spec):
     predictions=[dict(id=r['id'],prediction=r['prediction'],confidence=predict_probability(model,r['features'])) for r in records]
     candidates=[]
     for threshold in spec['threshold_grid']:
-        summary,_=evaluate_selective(data,predictions,threshold)
+        summary=evaluate_selective(data,predictions,threshold)
         gate=evaluate_quality_gate(summary['selective'],spec['quality_constraints'])
         candidates.append(dict(threshold=threshold,gate=gate,summary=summary))
     passing=[c for c in candidates if c['gate']['all_pass']]
@@ -154,7 +149,7 @@ def evaluate(args):
             prediction['pipeline_seconds']=time.perf_counter()-start
             with (out/'predictions.jsonl').open('a') as f:f.write(json.dumps(prediction,allow_nan=False)+'\n')
             predictions.append(prediction);state['completed_predictions']+=1
-        summary,_=evaluate_selective(data,predictions,selection['variants'][args.variant]['threshold'])
+        summary=evaluate_selective(data,predictions,selection['variants'][args.variant]['threshold'])
         gate=evaluate_quality_gate(summary['selective'],spec['quality_constraints'])
         write(out/'summary.json',dict(summary=summary,gate=gate))
         state['status']='complete'

@@ -1,0 +1,25 @@
+Traceback (most recent call last):
+  File "/Users/yukaiyan/Documents/Codex/2026-10-04/ai-infra-1-2-2027-ai/work/qa-extractive-specialist/lab/qa_risk_calibration.py", line 190, in fit
+    objective, gradient, hessian = evaluate(beta)
+                                   ^^^^^^^^^^^^^^
+  File "/Users/yukaiyan/Documents/Codex/2026-10-04/ai-infra-1-2-2027-ai/work/qa-extractive-specialist/lab/qa_risk_calibration.py", line 174, in evaluate
+    logits = design @ parameters
+             ~~~~~~~^~~~~~~~~~~~
+FloatingPointError: divide by zero encountered in matmul
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/yukaiyan/Documents/Codex/2026-10-04/ai-infra-1-2-2027-ai/work/qa-extractive-specialist/experiments/qa_risk.py", line 179, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/Users/yukaiyan/Documents/Codex/2026-10-04/ai-infra-1-2-2027-ai/work/qa-extractive-specialist/experiments/qa_risk.py", line 176, in main
+    train(args)
+  File "/Users/yukaiyan/Documents/Codex/2026-10-04/ai-infra-1-2-2027-ai/work/qa-extractive-specialist/experiments/qa_risk.py", line 91, in train
+    model=fit([r['features'] for r in matrix],[r['target'] for r in matrix])
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yukaiyan/Documents/Codex/2026-10-04/ai-infra-1-2-2027-ai/work/qa-extractive-specialist/lab/qa_risk_calibration.py", line 219, in fit
+    raise ValueError('Non-finite or singular logistic fit.') from error
+ValueError: Non-finite or singular logistic fit.

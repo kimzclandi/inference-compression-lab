@@ -4,8 +4,8 @@
   "study": "One fixed supervised EM-correctness ranking head",
   "asset_manifest_sha256": "c7709c2098b46dc59223b451c076974e1035f591c1e03ca3c2af2747d1f5c7ed",
   "source_sha256": {
-    "experiments/qa_risk.py": "b384e54e4e396b06ca80394187e6798633eb542acb86edf213a815aff65d7457",
-    "lab/qa_risk_calibration.py": "182138f513c311a5e14dece7afc60ca28c1cbf22b1dbbf56a6db0cf3513b3bbd",
+    "experiments/qa_risk.py": "aaef5c42f7f4ac7a2455793b67772a81d742d3ff5d60560d4f611352284065de",
+    "lab/qa_risk_calibration.py": "ab1090978a538708d7afda7fc185192cac038840973956f91fa8e71e906442be",
     "lab/qa_specialist_runtime.py": "40e8a0482b3ddb7d1aca5424c090571e27182c363f15e6b3da0ea72c537b1e54",
     "lab/extractive_qa.py": "d859b363f2cfcca578f0358595a11bdfdcc9b31d0dda19dcbc9def3e9104de8f",
     "lab/selective_qa.py": "d4e4c5cf1a6951316a6b5589236e8198113bc2adcab93dce25754dd8e4d16ffd",
@@ -107,7 +107,5 @@
     "maximum_model_file_bytes_ratio": 0.6,
     "scope": "Q8-style claim is not used: this is dynamic ORT INT8. Candidate INT8 minus FP32 paired EM/F1 with fixed policy per variant, article-stratified context-family bootstrap, fixed articles."
   },
-  "scope": "Frozen task-trained QA backbone; per-precision five-feature logistic heads fitted only to 256 previously observed development examples. Calibration 128 previously observed development examples. New evaluation 128 examples from four remaining public SQuAD2 articles; upstream benchmark exposure and prior project hypothesis decisions prevent model-unseen/general deployment claims. Only task-specific bounded prototype eligibility if all five fixed point gates pass; uncertainty intervals are descriptive. Separate heads mean pipeline, not pure-quantizer, comparison.",
-  "parameter_identity": "SHA256 over schema/features/config and inference coefficients/scaler rounded to ten decimal places. Trace checked numerically, not included in inference identity. No claim of arbitrary-platform bit identity.",
-  "implementation_correction": "Before any calibration threshold result: metric tuple unpack fixed; Apple NumPy2.2.6 BLAS false floating exception replaced by deterministic einsum optimize=False without changing mathematical objective or training settings. Failed run retained at results/qa-risk-v1/training."
+  "scope": "Frozen task-trained QA backbone; per-precision five-feature logistic heads fitted only to 256 previously observed development examples. Calibration 128 previously observed development examples. New evaluation 128 examples from four remaining public SQuAD2 articles; upstream benchmark exposure and prior project hypothesis decisions prevent model-unseen/general deployment claims. Only task-specific bounded prototype eligibility if all five fixed point gates pass; uncertainty intervals are descriptive. Separate heads mean pipeline, not pure-quantizer, comparison."
 }
