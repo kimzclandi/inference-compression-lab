@@ -1,0 +1,19 @@
+{
+  "source_archive_commit": "0e4c7fd",
+  "fresh_review_repository": true,
+  "reused_installed_environment": true,
+  "reused_local_model": true,
+  "fresh_dependency_install_verified": false,
+  "historical_and_new_source_checks": {
+    "qwen-prefix-fair-v1": {
+      "matches_historical_model_fingerprint": true,
+      "source_hashes_match_recorded_commit": true,
+      "source_commit": "15c0c49d47163c47fc56aebc967b63c887e4909a"
+    },
+    "qwen-direct-contract-v1": {
+      "matches_historical_model_fingerprint": true,
+      "source_hashes_match_recorded_commit": true,
+      "source_commit": "dde22bba32d26c10802d94084ad7799924030a57"
+    }
+  }
+}
