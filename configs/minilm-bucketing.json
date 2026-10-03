@@ -1,0 +1,14 @@
+{
+  "batch_size": 8,
+  "window_size": 64,
+  "max_length": 256,
+  "threads": 8,
+  "benchmark_validation_pairs": 128,
+  "rounds": 7,
+  "warmup_passes": 2,
+  "seed": 20261003,
+  "quality_max_spearman_drop": 0.005,
+  "hypothesis": "Within a fixed 64-request offline window, length sorting reduces padding and may improve throughput compared with consecutive dynamic-padded batches of the same size.",
+  "selection": "One prespecified batch size and window size. No parameter search; report all outcomes. Quality uses the previously evaluated public STS-B test, not a fresh blind set.",
+  "scope": "Tokenizer cloning, tokenization, sorting, input allocation, ORT inference, pooling, normalization and order restoration. Excludes model/session loading, file IO, network and online queue waiting."
+}
