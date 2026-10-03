@@ -1,0 +1,85 @@
+{
+  "interleaved": [
+    {
+      "prefix_index": 0,
+      "status": "miss",
+      "cache": {
+        "hits": 213,
+        "misses": 66,
+        "evictions": 7,
+        "bypasses": 0,
+        "entries": 1,
+        "stored_tensor_bytes": 786432
+      },
+      "matches_cold_a": true
+    },
+    {
+      "prefix_index": 1,
+      "status": "miss",
+      "cache": {
+        "hits": 213,
+        "misses": 67,
+        "evictions": 7,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 1572864
+      },
+      "matches_cold_a": null
+    },
+    {
+      "prefix_index": 0,
+      "status": "hit",
+      "cache": {
+        "hits": 214,
+        "misses": 67,
+        "evictions": 7,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 1572864
+      },
+      "matches_cold_a": true
+    },
+    {
+      "prefix_index": 2,
+      "status": "miss",
+      "cache": {
+        "hits": 214,
+        "misses": 68,
+        "evictions": 8,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 1572864
+      },
+      "matches_cold_a": null
+    },
+    {
+      "prefix_index": 1,
+      "status": "miss",
+      "cache": {
+        "hits": 214,
+        "misses": 69,
+        "evictions": 9,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 1572864
+      },
+      "matches_cold_a": null
+    },
+    {
+      "prefix_index": 0,
+      "status": "miss",
+      "cache": {
+        "hits": 214,
+        "misses": 70,
+        "evictions": 10,
+        "bypasses": 0,
+        "entries": 2,
+        "stored_tensor_bytes": 1572864
+      },
+      "matches_cold_a": true
+    }
+  ],
+  "mismatched_prefix_rejected": true,
+  "oversized_bypassed": true,
+  "oversized_output_matches_cold": true
+}

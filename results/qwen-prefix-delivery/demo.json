@@ -1,0 +1,174 @@
+{
+  "model_fingerprint": "13fcd446ef61979dc514ba7cf0c7c59f51e9cab5499970f5088c09062084713d",
+  "results": [
+    {
+      "question": "Which room does the red robot work in?",
+      "answer": "room 17",
+      "cache_status": "miss",
+      "same_tokens": true,
+      "cold": {
+        "token_ids": [
+          2966,
+          220,
+          16,
+          22,
+          151645
+        ],
+        "input_tokens": 122,
+        "prefix_tokens": 0,
+        "suffix_tokens": 122,
+        "status": "disabled",
+        "ttft_seconds": 0.03328712499933317,
+        "total_seconds": 0.046693667012732476,
+        "decode_seconds": 0.013406542013399303,
+        "decode_tokens_per_second": 298.3617994858152,
+        "stop_reason": "eos",
+        "cache": {
+          "hits": 0,
+          "misses": 0,
+          "evictions": 0,
+          "bypasses": 0,
+          "entries": 0,
+          "stored_tensor_bytes": 0
+        }
+      },
+      "cached": {
+        "token_ids": [
+          2966,
+          220,
+          16,
+          22,
+          151645
+        ],
+        "input_tokens": 122,
+        "prefix_tokens": 108,
+        "suffix_tokens": 14,
+        "status": "miss",
+        "ttft_seconds": 0.020448209019377828,
+        "total_seconds": 0.03287629201076925,
+        "decode_seconds": 0.01242808299139142,
+        "decode_tokens_per_second": 321.85172908570746,
+        "stop_reason": "eos",
+        "cache": {
+          "hits": 0,
+          "misses": 1,
+          "evictions": 0,
+          "bypasses": 0,
+          "entries": 1,
+          "stored_tensor_bytes": 1327104
+        }
+      }
+    },
+    {
+      "question": "What does the blue robot inspect?",
+      "answer": "packages",
+      "cache_status": "hit",
+      "same_tokens": true,
+      "cold": {
+        "token_ids": [
+          43141,
+          151645
+        ],
+        "input_tokens": 120,
+        "prefix_tokens": 0,
+        "suffix_tokens": 120,
+        "status": "disabled",
+        "ttft_seconds": 0.015589124988764524,
+        "total_seconds": 0.01867458299966529,
+        "decode_seconds": 0.0030854580109007657,
+        "decode_tokens_per_second": 324.10099131702685,
+        "stop_reason": "eos",
+        "cache": {
+          "hits": 0,
+          "misses": 1,
+          "evictions": 0,
+          "bypasses": 0,
+          "entries": 1,
+          "stored_tensor_bytes": 1327104
+        }
+      },
+      "cached": {
+        "token_ids": [
+          43141,
+          151645
+        ],
+        "input_tokens": 120,
+        "prefix_tokens": 108,
+        "suffix_tokens": 12,
+        "status": "hit",
+        "ttft_seconds": 0.007210415991721675,
+        "total_seconds": 0.010287415992934257,
+        "decode_seconds": 0.003077000001212582,
+        "decode_tokens_per_second": 324.99187507504735,
+        "stop_reason": "eos",
+        "cache": {
+          "hits": 1,
+          "misses": 1,
+          "evictions": 0,
+          "bypasses": 0,
+          "entries": 1,
+          "stored_tensor_bytes": 1327104
+        }
+      }
+    },
+    {
+      "question": "Where do the robots return after their tasks?",
+      "answer": "room 17",
+      "cache_status": "hit",
+      "same_tokens": true,
+      "cold": {
+        "token_ids": [
+          2966,
+          220,
+          16,
+          22,
+          151645
+        ],
+        "input_tokens": 122,
+        "prefix_tokens": 0,
+        "suffix_tokens": 122,
+        "status": "disabled",
+        "ttft_seconds": 0.015671542001655325,
+        "total_seconds": 0.02819516698946245,
+        "decode_seconds": 0.012523624987807125,
+        "decode_tokens_per_second": 319.39634122663045,
+        "stop_reason": "eos",
+        "cache": {
+          "hits": 1,
+          "misses": 1,
+          "evictions": 0,
+          "bypasses": 0,
+          "entries": 1,
+          "stored_tensor_bytes": 1327104
+        }
+      },
+      "cached": {
+        "token_ids": [
+          2966,
+          220,
+          16,
+          22,
+          151645
+        ],
+        "input_tokens": 122,
+        "prefix_tokens": 108,
+        "suffix_tokens": 14,
+        "status": "hit",
+        "ttft_seconds": 0.007346041995333508,
+        "total_seconds": 0.01970699999947101,
+        "decode_seconds": 0.012360958004137501,
+        "decode_tokens_per_second": 323.5995137804939,
+        "stop_reason": "eos",
+        "cache": {
+          "hits": 2,
+          "misses": 1,
+          "evictions": 0,
+          "bypasses": 0,
+          "entries": 1,
+          "stored_tensor_bytes": 1327104
+        }
+      }
+    }
+  ],
+  "note": "Functional demonstration. Not warmed performance evidence or general answer-quality validation."
+}

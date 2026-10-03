@@ -1,0 +1,282 @@
+[
+  {
+    "prefix_tokens": 64,
+    "round": 0,
+    "seconds": 0.00799566600471735,
+    "status": "miss",
+    "cache": {
+      "hits": 2,
+      "misses": 5,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 786432
+    }
+  },
+  {
+    "prefix_tokens": 64,
+    "round": 1,
+    "seconds": 0.009147917007794604,
+    "status": "miss",
+    "cache": {
+      "hits": 9,
+      "misses": 7,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 786432
+    }
+  },
+  {
+    "prefix_tokens": 64,
+    "round": 2,
+    "seconds": 0.00802391697652638,
+    "status": "miss",
+    "cache": {
+      "hits": 16,
+      "misses": 9,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 786432
+    }
+  },
+  {
+    "prefix_tokens": 64,
+    "round": 3,
+    "seconds": 0.007961791998241097,
+    "status": "miss",
+    "cache": {
+      "hits": 26,
+      "misses": 12,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 786432
+    }
+  },
+  {
+    "prefix_tokens": 64,
+    "round": 4,
+    "seconds": 0.008022167021408677,
+    "status": "miss",
+    "cache": {
+      "hits": 33,
+      "misses": 14,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 786432
+    }
+  },
+  {
+    "prefix_tokens": 256,
+    "round": 0,
+    "seconds": 0.016737750003812835,
+    "status": "miss",
+    "cache": {
+      "hits": 42,
+      "misses": 20,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 3145728
+    }
+  },
+  {
+    "prefix_tokens": 256,
+    "round": 1,
+    "seconds": 0.016601875016931444,
+    "status": "miss",
+    "cache": {
+      "hits": 46,
+      "misses": 21,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 3145728
+    }
+  },
+  {
+    "prefix_tokens": 256,
+    "round": 2,
+    "seconds": 0.016770250018453225,
+    "status": "miss",
+    "cache": {
+      "hits": 56,
+      "misses": 24,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 3145728
+    }
+  },
+  {
+    "prefix_tokens": 256,
+    "round": 3,
+    "seconds": 0.01676291599869728,
+    "status": "miss",
+    "cache": {
+      "hits": 60,
+      "misses": 25,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 3145728
+    }
+  },
+  {
+    "prefix_tokens": 256,
+    "round": 4,
+    "seconds": 0.016672124998876825,
+    "status": "miss",
+    "cache": {
+      "hits": 70,
+      "misses": 28,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 3145728
+    }
+  },
+  {
+    "prefix_tokens": 1024,
+    "round": 0,
+    "seconds": 0.05998658400494605,
+    "status": "miss",
+    "cache": {
+      "hits": 76,
+      "misses": 33,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 12582912
+    }
+  },
+  {
+    "prefix_tokens": 1024,
+    "round": 1,
+    "seconds": 0.06018491700524464,
+    "status": "miss",
+    "cache": {
+      "hits": 83,
+      "misses": 35,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 12582912
+    }
+  },
+  {
+    "prefix_tokens": 1024,
+    "round": 2,
+    "seconds": 0.060619625000981614,
+    "status": "miss",
+    "cache": {
+      "hits": 90,
+      "misses": 37,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 12582912
+    }
+  },
+  {
+    "prefix_tokens": 1024,
+    "round": 3,
+    "seconds": 0.06044875000952743,
+    "status": "miss",
+    "cache": {
+      "hits": 97,
+      "misses": 39,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 12582912
+    }
+  },
+  {
+    "prefix_tokens": 1024,
+    "round": 4,
+    "seconds": 0.06017954199342057,
+    "status": "miss",
+    "cache": {
+      "hits": 107,
+      "misses": 42,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 12582912
+    }
+  },
+  {
+    "prefix_tokens": 2048,
+    "round": 0,
+    "seconds": 0.12439620797522366,
+    "status": "miss",
+    "cache": {
+      "hits": 116,
+      "misses": 48,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 25165824
+    }
+  },
+  {
+    "prefix_tokens": 2048,
+    "round": 1,
+    "seconds": 0.12889616598840803,
+    "status": "miss",
+    "cache": {
+      "hits": 120,
+      "misses": 49,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 25165824
+    }
+  },
+  {
+    "prefix_tokens": 2048,
+    "round": 2,
+    "seconds": 0.12889508399530314,
+    "status": "miss",
+    "cache": {
+      "hits": 127,
+      "misses": 51,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 25165824
+    }
+  },
+  {
+    "prefix_tokens": 2048,
+    "round": 3,
+    "seconds": 0.13092933400184847,
+    "status": "miss",
+    "cache": {
+      "hits": 134,
+      "misses": 53,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 25165824
+    }
+  },
+  {
+    "prefix_tokens": 2048,
+    "round": 4,
+    "seconds": 0.13188245799392462,
+    "status": "miss",
+    "cache": {
+      "hits": 141,
+      "misses": 55,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 25165824
+    }
+  }
+]

@@ -28,6 +28,12 @@
 
 [实现、复现、质量边界与简历候选](docs/length-bucketing-study.md) · [完整语料原始结果](results/minilm-bucketing-confirm-v1/summary.json) · [先导结果](results/minilm-bucketing-v2/summary.json)
 
+## 新增：Qwen生成式推理与前缀KV缓存（2026-10-03）
+
+新增真实Qwen2.5-0.5B/MLX Q8前缀缓存、LRU容量管理、请求隔离与完整成本对照。2048-token前缀下，计入首次miss的4请求总耗时较分段重算下降约38%；74题缓存前后token完全一致。零命中的淘汰trace未获收益，问答严格匹配仅18/74，不能把运行时正确性称为问答系统质量合格。
+
+[主报告、复跑与简历候选](docs/qwen-prefix-study.md) · [主实验](results/qwen-prefix-v2/summary.json) · [失效场景](results/qwen-prefix-locality-v1/summary.json) · [数据归属](configs/qwen-prefix/ATTRIBUTION.md)
+
 ## 本地运行
 
 Python 3.10+；核心工具及测试不需要 GPU 或第三方库。
