@@ -1,0 +1,3 @@
+The red robot works in room 17. The blue robot works in room 24.
+The red robot carries cups. The blue robot inspects packages.
+Both robots return to the charging station after their tasks.
