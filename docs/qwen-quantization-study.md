@@ -1,8 +1,10 @@
 # Qwen Q4 首 token 诊断与等成本 FP16 block 回退
 
-2026-10-04，个人项目，本轮实际执行。目标 JD 为用户提供截图中的“AI Infra 加速算法工程师”；招聘者身份、开放状态及截止日期未核实。学校研究、NUSRI/Jetson、字节实习均不归入本轮成果。
+本文记录 2026-10-04 早期探索阶段。后续固定 128 题确认已完成且未通过门槛，见 [确认报告](qwen-confirmation-study.md) 与 [独立审查](independent-release-review.md)。以下原始探索数字保持不变。
 
-本轮完成了“历史失败 → 固定假设 → 逐块干预 → 原始 FP16 回退 → 质量/成本复验”闭环。0-based block 10 回退使重复使用的 dev 集归一化 EM 从 Q4 的 16/74 到 18/74，等成本 block 22 为 16/74。没有独立确认集结果，不声称找到唯一根因、通用敏感层或新量化算法。
+2026-10-04，个人项目，探索阶段实际执行。目标 JD 为用户提供截图中的“AI Infra 加速算法工程师”；招聘者身份、开放状态及截止日期未核实。学校研究、NUSRI/Jetson、字节实习均不归入本轮成果。
+
+本轮完成了“历史失败 → 固定假设 → 逐块干预 → 原始 FP16 回退 → 质量/成本复验”闭环。0-based block 10 回退使重复使用的 dev 集归一化 EM 从 Q4 的 16/74 到 18/74，等成本 block 22 为 16/74。该探索阶段尚无独立确认结果；后续确认未通过，仍不声称找到唯一根因、通用敏感层或新量化算法。
 
 ## 当前状态与证据层级
 
@@ -79,7 +81,7 @@ Q4 上原 FP16 top1 对 top2 的 margin 仍为正 0.03125，但另一个 token `
 - 没有逐算子拆分、activation outlier 统计、Attention/MLP 消融，因此不定位到某个子模块或异常值原因。
 - block 回退是标准干预/混合精度策略；量化层、Qwen 架构、Metal kernel 和浮点 KV 由 MLX/MLX-LM 提供。[官方 QuantizedLinear 文档](https://ml-explore.github.io/mlx/build/html/python/nn/_autosummary/mlx.nn.QuantizedLinear.html) 是 API 背景；本轮实现依据已安装 0.29.3/0.26.3 源码核验。
 - 24 个候选筛选产生选择偏差；单一等成本对照只支持本轮局部干预效果，不证明 block 10 唯一重要或整体最优。
-- 所有质量来自重复使用的同一个 dev；没有访问 test、没有独立确认集、没有重新训练或修改评分。
+- 本页探索质量来自重复使用的同一个 dev；当时没有访问 test 或独立确认集，没有重新训练或修改评分。后续确认另见链接，不与本页探索合并计分。
 - 所有性能是 batch=1、串行、固定八请求；不覆盖在线并发/P95、长上下文、手机、Jetson、CUDA、昇腾或功耗。
 
 ## 实现、失败记录与验收
@@ -123,4 +125,4 @@ python3 -m experiments.verify_qwen_quantization results/my-qwen-quantization --w
 
 模型和混合权重只保存在本地 `runs/`，不上传。依赖沿用 `requirements-mlx-prefix.txt`；本轮没有重新安装依赖或从网络下载模型，不声称完成全新机器安装验收。
 
-下一步只做一件事：在新增、未看输出的任务样本上预先冻结协议，以当前已选 block 10 与 block 22 原样做一次确认，不再选层。先由用户完成 [本单元个人复跑与主动回忆](qwen-quantization-learning.md)，再决定是否把候选措辞写入简历。
+原计划的固定模块确认已完成并记录负结果，见 [确认报告](qwen-confirmation-study.md)。已公布样本今后只能称复现。用户仍需亲自完成 [学习与复跑](confirmation-learning.md) 后核实个人贡献，再决定简历措辞。

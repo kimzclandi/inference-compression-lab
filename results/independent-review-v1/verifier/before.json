@@ -1,0 +1,71 @@
+{
+  "scope": "semantic consistency and coverage after local manifest update; hashes do not authenticate producer or execution",
+  "probes": [
+    {
+      "target": "release",
+      "mutation": "empty",
+      "status": "ACCEPTED_INVALID",
+      "error": null
+    },
+    {
+      "target": "release",
+      "mutation": "partial",
+      "status": "ACCEPTED_INVALID",
+      "error": null
+    },
+    {
+      "target": "exploration",
+      "mutation": "empty_source",
+      "status": "ACCEPTED_INVALID",
+      "error": null
+    },
+    {
+      "target": "exploration",
+      "mutation": "source_escape",
+      "status": "ACCEPTED_INVALID",
+      "error": null
+    },
+    {
+      "target": "confirmation",
+      "mutation": "partial_source",
+      "status": "ACCEPTED_INVALID",
+      "error": null
+    },
+    {
+      "target": "confirmation",
+      "mutation": "wrong_tokenizer",
+      "status": "ACCEPTED_INVALID",
+      "error": null
+    },
+    {
+      "target": "confirmation",
+      "mutation": "wrong_score",
+      "status": "REJECTED",
+      "error": "ValueError('Score arithmetic drift')"
+    },
+    {
+      "target": "confirmation",
+      "mutation": "missing_data",
+      "status": "REJECTED",
+      "error": "ValueError('Checksum manifest does not cover exact artifact files')"
+    },
+    {
+      "target": "confirmation",
+      "mutation": "empty_checksums",
+      "status": "REJECTED",
+      "error": "ValueError('Empty checksum manifest')"
+    },
+    {
+      "target": "archive",
+      "mutation": "symlink",
+      "status": "ACCEPTED_INVALID",
+      "error": null
+    },
+    {
+      "target": "archive",
+      "mutation": "dot_path",
+      "status": "ACCEPTED_INVALID",
+      "error": null
+    }
+  ]
+}

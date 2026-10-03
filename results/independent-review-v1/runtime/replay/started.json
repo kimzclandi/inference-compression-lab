@@ -1,0 +1,41 @@
+{
+  "status": "running",
+  "started": "2026-10-03T19:32:14.514633+00:00",
+  "scope": "Published-sample reproduction, existing pinned environment, same M4 Max",
+  "plan": {
+    "scope": "Already published sample reproduction; no fresh confirmation or speed claim",
+    "selection_rule": "Lexicographically first ID in each of four articles and each answerability class; independent of model output",
+    "ids": [
+      "5727c94bff5b5019007d954d",
+      "5a1c539bb4fb5d00187145fd",
+      "572f59b4a23a5019007fc587",
+      "5ad25e17d7d075001a428f12",
+      "57094b4f9928a814004714f9",
+      "5a2c08aebfd06b001a5ae989",
+      "570d2417fed7b91900d45c3e",
+      "5a63772268151a001a9222f4"
+    ],
+    "variants": [
+      "fp16",
+      "q4",
+      "q8",
+      "selected",
+      "control"
+    ],
+    "max_new_tokens": 48,
+    "seed": 2026100402,
+    "acceptance": "All five model tensor inventories and original-source restoration match; all 40 prompt hashes, token sequences, text, and top10 match frozen records. Save failure and stop on drift."
+  },
+  "plan_sha256": "cb60be6dc82e9654d58d2ac8d9b1db71a588c50b92de753c6f16c45a8e8f5b8a",
+  "script_sha256": "dbc7431e7b595bfd1dbda6f2ccd29df64712c7960392c5189d4182e1e86376a3",
+  "python": "3.12.11",
+  "platform": "macOS-27.0-arm64-arm-64bit",
+  "packages": {
+    "mlx": "0.29.3",
+    "mlx-lm": "0.26.3",
+    "numpy": "2.5.3",
+    "transformers": "4.56.2"
+  },
+  "identity": {},
+  "records": []
+}

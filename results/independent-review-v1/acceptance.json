@@ -1,0 +1,22 @@
+{
+  "baseline_commit": "0670643e9e0b7c4e58418718ce001119f0de7d03",
+  "technical_review": "pass_after_repairs",
+  "historical_files_preserved": 698,
+  "independent_raw_predictions_scored": 640,
+  "independent_performance_source_files": 188,
+  "published_prompts_replayed": 8,
+  "live_generations": 40,
+  "live_all_prompt_token_top10_match": true,
+  "upstream_tensors_independently_converted": 290,
+  "negative_confirmation_gate_preserved": true,
+  "unit_tests": {
+    "run": 76,
+    "passed": 67,
+    "skipped": 9,
+    "reason": "Optional ORT/data dependencies unavailable in the pinned MLX environment; not counted as passes"
+  },
+  "root_license_decision": "pending",
+  "visibility_decision": "pending; remote currently PRIVATE",
+  "release_created": false,
+  "scope": "Same-device reproducible personal research artifact, not confirmed quantization benefit, deployable QA, complete JD coverage, or author mastery"
+}

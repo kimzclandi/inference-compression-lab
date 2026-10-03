@@ -5,6 +5,7 @@ import io
 import json
 from pathlib import Path, PurePosixPath
 import re
+import stat
 import subprocess
 import tarfile
 import zipfile
@@ -14,7 +15,7 @@ MANIFEST='release-manifest.json'
 
 def validate_name(name):
     p=PurePosixPath(name)
-    if p.is_absolute() or '..' in p.parts or str(p)!=name or '\\' in name:
+    if not name or name == '.' or p.is_absolute() or '..' in p.parts or str(p)!=name or '\\' in name:
         raise ValueError('Unsafe archive path: '+name)
     if any(x in p.parts for x in ['.git','.venv','runs','models']) or p.suffix in ['.safetensors','.onnx','.pt','.pth','.engine','.plan','.bin']:
         raise ValueError('Local asset forbidden in release: '+name)
@@ -24,7 +25,11 @@ def verify(path):
     with zipfile.ZipFile(path) as z:
         names=z.namelist()
         if len(names)!=len(set(names)):raise ValueError('Duplicate archive entries')
-        for name in names:validate_name(name)
+        for info in z.infolist():
+            validate_name(info.filename)
+            kind = stat.S_IFMT(info.external_attr >> 16)
+            if info.is_dir() or kind not in (0, stat.S_IFREG):
+                raise ValueError('Non-regular archive member: ' + info.filename)
         manifest=json.loads(z.read(MANIFEST))
         if set(names)-{MANIFEST}!=set(manifest['sha256']):raise ValueError('Incomplete archive manifest')
         if not manifest['sha256']:raise ValueError('Empty archive')

@@ -1,0 +1,447 @@
+{
+  "schema": 1,
+  "audit": "Independent code path; no project metric/statistics imports; no model inference",
+  "created_utc": "2026-10-03T19:34:11.579104+00:00",
+  "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 17.0.0 (clang-1700.6.4.2)]",
+  "command": [
+    "results/independent-review-v1/statistics/audit_statistics.py",
+    "--raw",
+    "/Users/yukaiyan/Documents/Codex/2026-10-04/github-readme-2027-ai-infra-1/work/release-prep/squad-dev-v2.0.json",
+    "--output",
+    "results/independent-review-v1/statistics/run-20261004"
+  ],
+  "input_sha256": {
+    "results/qwen-confirmation-v1/data.jsonl": "4b352f5923279ead7407a53e160d6d010de9bce2140b70133b4e75cb3fe9a970",
+    "results/qwen-confirmation-v1/protocol.json": "c0b9e65db025055c53c2ee345625d498978485421e9398cf5c242f5af369c553",
+    "results/qwen-confirmation-v1/selection.json": "c00c1ac788364532ec06a0a679374fefd3731a908206a01e83dcc591856c876b",
+    "results/qwen-confirmation-v1/exclusions.json": "d0d59bd7f1c9b012ff5e71c82a651d25000db873256d5369e8f0f55a73321ba9",
+    "results/qwen-confirmation-v1/dataset-manifest.json": "f308e08756c7d7430a68bf082f89190848a5cb4b2e3719e5609e6ae5e94813a7",
+    "results/qwen-confirmation-v1/summary.json": "a39fbcc128e459ff606321ff01557611132be780cbd0cd5693e0a582187e390a",
+    "results/qwen-confirmation-v1/run.json": "a85d057e52ddbb77910dbe61f97cbab004f3e7f4dfa906c120e8de00fc462228",
+    "results/qwen-confirmation-v1/fp16-quality.json": "1bf314685c98dfb71f42d6bcbf6409749945f9e49f15d12f852bbe5552d6eb58",
+    "results/qwen-confirmation-v1/q4-quality.json": "8f6558e040e73dd48df8beb0de9159d80eaf039a199e609b02685a8e8c3518c1",
+    "results/qwen-confirmation-v1/q8-quality.json": "7da4d7051ab391ba8d61efbc70413e1cc4917cb00a7c790af5ab8767d4e1c2de",
+    "results/qwen-confirmation-v1/selected-quality.json": "8c8b23649f29313817c1ef4682af85af8f2e4e03bc23f701ad72ccc6a669c104",
+    "results/qwen-confirmation-v1/control-quality.json": "5464468f3f3e77587d7e4a5fa8c3af6e01dd6553e9e933ce0797e0d296ae5ea1"
+  },
+  "all_checks_passed": true,
+  "checks": {
+    "exact_dataset_identity": true,
+    "unique_ids": true,
+    "rows_128_and_balanced": true,
+    "families_85": true,
+    "correct_families": true,
+    "known_exclusions_disjoint": true,
+    "article_class_unique_contexts": true,
+    "fp16_exact_prediction_coverage": true,
+    "fp16_all_row_scores_match": true,
+    "fp16_all_metrics_match": true,
+    "fp16_summary_metrics_match": true,
+    "q4_exact_prediction_coverage": true,
+    "q4_all_row_scores_match": true,
+    "q4_all_metrics_match": true,
+    "q4_summary_metrics_match": true,
+    "q8_exact_prediction_coverage": true,
+    "q8_all_row_scores_match": true,
+    "q8_all_metrics_match": true,
+    "q8_summary_metrics_match": true,
+    "selected_exact_prediction_coverage": true,
+    "selected_all_row_scores_match": true,
+    "selected_all_metrics_match": true,
+    "selected_summary_metrics_match": true,
+    "control_exact_prediction_coverage": true,
+    "control_all_row_scores_match": true,
+    "control_all_metrics_match": true,
+    "control_summary_metrics_match": true,
+    "identical_recorded_prompt_signatures": true,
+    "q4_paired_and_interval_match": true,
+    "control_paired_and_interval_match": true,
+    "fp16_paired_and_interval_match": true,
+    "gate_matches": true,
+    "f1_drop_matches": true,
+    "pinned_raw_identity": true,
+    "independent_cohort_reconstruction": true,
+    "recorded_freeze_precedes_inference": true,
+    "frozen_protocol_and_runner_match_archive": true
+  },
+  "reconstruction": {
+    "status": "complete",
+    "raw_sha256": "80a5225e94905956a6446d296ca1093975c4d3b3260f1d6c8f68bc2ab77182d8",
+    "rows_identical": true,
+    "title_order_identical": true,
+    "eligible_articles": 32
+  },
+  "n_predictions": 640,
+  "variants": {
+    "fp16": {
+      "em_count": 33,
+      "metrics": {
+        "overall": {
+          "n": 128,
+          "em": 0.2578125,
+          "f1": 0.325181199009324,
+          "format_valid_rate": 0.859375
+        },
+        "answerable": {
+          "n": 64,
+          "em": 0.515625,
+          "f1": 0.650362398018648,
+          "format_valid_rate": 0.890625
+        },
+        "unanswerable": {
+          "n": 64,
+          "em": 0.0,
+          "f1": 0.0,
+          "format_valid_rate": 0.828125
+        },
+        "unsupported_answer_rate": 1.0,
+        "over_abstention_rate": 0.0,
+        "categories": {
+          "wrong_or_partial_span": 24,
+          "unsupported_answer": 53,
+          "format_or_nonextractive": 18,
+          "correct": 33
+        },
+        "family_macro_em": 0.2529411764705882,
+        "always_abstain_em": 0.5
+      }
+    },
+    "q4": {
+      "em_count": 26,
+      "metrics": {
+        "overall": {
+          "n": 128,
+          "em": 0.203125,
+          "f1": 0.2810016760469063,
+          "format_valid_rate": 0.640625
+        },
+        "answerable": {
+          "n": 64,
+          "em": 0.40625,
+          "f1": 0.5620033520938126,
+          "format_valid_rate": 0.59375
+        },
+        "unanswerable": {
+          "n": 64,
+          "em": 0.0,
+          "f1": 0.0,
+          "format_valid_rate": 0.6875
+        },
+        "unsupported_answer_rate": 1.0,
+        "over_abstention_rate": 0.0,
+        "categories": {
+          "wrong_or_partial_span": 14,
+          "unsupported_answer": 44,
+          "format_or_nonextractive": 46,
+          "correct": 24
+        },
+        "family_macro_em": 0.19411764705882353,
+        "always_abstain_em": 0.5
+      }
+    },
+    "q8": {
+      "em_count": 34,
+      "metrics": {
+        "overall": {
+          "n": 128,
+          "em": 0.265625,
+          "f1": 0.329087449009324,
+          "format_valid_rate": 0.8515625
+        },
+        "answerable": {
+          "n": 64,
+          "em": 0.53125,
+          "f1": 0.658174898018648,
+          "format_valid_rate": 0.875
+        },
+        "unanswerable": {
+          "n": 64,
+          "em": 0.0,
+          "f1": 0.0,
+          "format_valid_rate": 0.828125
+        },
+        "unsupported_answer_rate": 1.0,
+        "over_abstention_rate": 0.0,
+        "categories": {
+          "wrong_or_partial_span": 22,
+          "unsupported_answer": 53,
+          "format_or_nonextractive": 19,
+          "correct": 34
+        },
+        "family_macro_em": 0.25882352941176473,
+        "always_abstain_em": 0.5
+      }
+    },
+    "selected": {
+      "em_count": 29,
+      "metrics": {
+        "overall": {
+          "n": 128,
+          "em": 0.2265625,
+          "f1": 0.283478452742433,
+          "format_valid_rate": 0.71875
+        },
+        "answerable": {
+          "n": 64,
+          "em": 0.453125,
+          "f1": 0.566956905484866,
+          "format_valid_rate": 0.71875
+        },
+        "unanswerable": {
+          "n": 64,
+          "em": 0.0,
+          "f1": 0.0,
+          "format_valid_rate": 0.71875
+        },
+        "unsupported_answer_rate": 1.0,
+        "over_abstention_rate": 0.0,
+        "categories": {
+          "wrong_or_partial_span": 19,
+          "unsupported_answer": 46,
+          "format_or_nonextractive": 36,
+          "correct": 27
+        },
+        "family_macro_em": 0.21176470588235294,
+        "always_abstain_em": 0.5
+      }
+    },
+    "control": {
+      "em_count": 25,
+      "metrics": {
+        "overall": {
+          "n": 128,
+          "em": 0.1953125,
+          "f1": 0.27573689772178317,
+          "format_valid_rate": 0.6015625
+        },
+        "answerable": {
+          "n": 64,
+          "em": 0.390625,
+          "f1": 0.5514737954435663,
+          "format_valid_rate": 0.578125
+        },
+        "unanswerable": {
+          "n": 64,
+          "em": 0.0,
+          "f1": 0.0,
+          "format_valid_rate": 0.625
+        },
+        "unsupported_answer_rate": 1.0,
+        "over_abstention_rate": 0.0,
+        "categories": {
+          "wrong_or_partial_span": 14,
+          "unsupported_answer": 40,
+          "format_or_nonextractive": 51,
+          "correct": 23
+        },
+        "family_macro_em": 0.18235294117647058,
+        "always_abstain_em": 0.5
+      }
+    }
+  },
+  "comparisons": {
+    "q4": {
+      "lost": [],
+      "gained": [
+        "570d391fb3d812140066d579",
+        "572820512ca10214002d9e74",
+        "572821274b864d1900164513"
+      ],
+      "em_difference": 0.0234375,
+      "ci95": [
+        0.0,
+        0.050724637681159424
+      ],
+      "families": 85,
+      "articles": 4
+    },
+    "control": {
+      "lost": [],
+      "gained": [
+        "570d391fb3d812140066d579",
+        "572820512ca10214002d9e74",
+        "572821274b864d1900164513",
+        "572ff673b2c2fd1400568669"
+      ],
+      "em_difference": 0.03125,
+      "ci95": [
+        0.007462686567164179,
+        0.06299212598425197
+      ],
+      "families": 85,
+      "articles": 4
+    },
+    "fp16": {
+      "lost": [
+        "570d2556fed7b91900d45c49",
+        "5727cd7dff5b5019007d9590",
+        "57280e1aff5b5019007d9bee",
+        "57281d494b864d19001644c0",
+        "572f60f4947a6a140053c8ea",
+        "572ff4ca04bcaa1900d76f24",
+        "572ffce5a23a5019007fcc18"
+      ],
+      "gained": [
+        "570966e0200fba1400367f53",
+        "57096b66200fba1400367faa",
+        "570d4329fed7b91900d45dd8"
+      ],
+      "em_difference": -0.03125,
+      "ci95": [
+        -0.07874015748031496,
+        0.015384615384615385
+      ],
+      "families": 85,
+      "articles": 4
+    }
+  },
+  "f1_drop_vs_fp16": 0.04170274626689102,
+  "gate": {
+    "criteria": {
+      "em_gain_over_q4": false,
+      "em_gain_over_control": true,
+      "f1_drop_vs_fp16_at_most_0_02": false
+    },
+    "passed": false
+  },
+  "chronology": {
+    "freeze_commit": "5ca4191ec0b25aeece4bbc9736d87175ce98c1cd",
+    "recorded_started": "2026-10-03T19:13:13.151966+00:00",
+    "caveat": "Local Git and run timestamps support ordering; not independent timestamp attestation or proof that no unrecorded run occurred.",
+    "commit_timestamp": "2026-10-04T03:12:37+08:00",
+    "seconds_before_recorded_inference": 36.151966,
+    "freeze_file_matches": {
+      "configs/qwen-confirmation/study.json": true,
+      "configs/qwen-confirmation/selection.json": true,
+      "configs/qwen-confirmation/exclusions.json": true,
+      "configs/qwen-confirmation/dataset/data.jsonl": true,
+      "lab/qa_metrics.py": true,
+      "lab/confirmation.py": true,
+      "experiments/qwen_confirmation.py": true
+    }
+  },
+  "normalized_em_but_nonextractive_ids": {
+    "fp16": [],
+    "q4": [
+      "570d26efb3d812140066d48f",
+      "5728223cff5b5019007d9dc4"
+    ],
+    "q8": [],
+    "selected": [
+      "570d26efb3d812140066d48f",
+      "5728223cff5b5019007d9dc4"
+    ],
+    "control": [
+      "570d26efb3d812140066d48f",
+      "5728223cff5b5019007d9dc4"
+    ]
+  },
+  "gain_examples": [
+    {
+      "id": "570d391fb3d812140066d579",
+      "question": "What is the lowest recorded temperature in Victoria?",
+      "gold": [
+        "−11.7 °C",
+        "−11.7 °C (10.9 °F)"
+      ],
+      "q4": "The lowest recorded temperature in Victoria is −11.7 °C (10.9 °F).",
+      "selected": "−11.7 °C (10.9 °F)",
+      "q4_scores": {
+        "id": "570d391fb3d812140066d579",
+        "em": 0,
+        "f1": 0.5714285714285714,
+        "format_valid": false,
+        "abstain": false,
+        "is_impossible": false,
+        "family_id": "7c68ecac259e8168c924531a7ab199e10e04e49fbcf37bafc98e4a6b345f0e49",
+        "category": "format_or_nonextractive",
+        "root_cause": "unverified"
+      },
+      "selected_scores": {
+        "id": "570d391fb3d812140066d579",
+        "em": 1,
+        "f1": 1.0,
+        "format_valid": true,
+        "abstain": false,
+        "is_impossible": false,
+        "family_id": "7c68ecac259e8168c924531a7ab199e10e04e49fbcf37bafc98e4a6b345f0e49",
+        "category": "correct",
+        "root_cause": null
+      }
+    },
+    {
+      "id": "572820512ca10214002d9e74",
+      "question": "What is the name of the river that is completely contained inside Jacksonville?",
+      "gold": [
+        "The Trout River",
+        "Trout River"
+      ],
+      "q4": "The Trout River is completely contained inside Jacksonville.",
+      "selected": "The Trout River",
+      "q4_scores": {
+        "id": "572820512ca10214002d9e74",
+        "em": 0,
+        "f1": 0.4444444444444444,
+        "format_valid": false,
+        "abstain": false,
+        "is_impossible": false,
+        "family_id": "747a7cd18f859a278717a53f0fa9195d58b25f9e17721dbaecd8d85a5a87e063",
+        "category": "format_or_nonextractive",
+        "root_cause": "unverified"
+      },
+      "selected_scores": {
+        "id": "572820512ca10214002d9e74",
+        "em": 1,
+        "f1": 1.0,
+        "format_valid": true,
+        "abstain": false,
+        "is_impossible": false,
+        "family_id": "747a7cd18f859a278717a53f0fa9195d58b25f9e17721dbaecd8d85a5a87e063",
+        "category": "correct",
+        "root_cause": null
+      }
+    },
+    {
+      "id": "572821274b864d1900164513",
+      "question": "How many floors are there in the building that was completed in 1967?",
+      "gold": [
+        "28",
+        "42"
+      ],
+      "q4": "4",
+      "selected": "42",
+      "q4_scores": {
+        "id": "572821274b864d1900164513",
+        "em": 0,
+        "f1": 0.0,
+        "format_valid": true,
+        "abstain": false,
+        "is_impossible": false,
+        "family_id": "f58b8bbddbfb77ca3876d54556a12ca709701a186accfed0b5a555f1ecf52a7c",
+        "category": "wrong_or_partial_span",
+        "root_cause": "unverified"
+      },
+      "selected_scores": {
+        "id": "572821274b864d1900164513",
+        "em": 1,
+        "f1": 1.0,
+        "format_valid": true,
+        "abstain": false,
+        "is_impossible": false,
+        "family_id": "f58b8bbddbfb77ca3876d54556a12ca709701a186accfed0b5a555f1ecf52a7c",
+        "category": "correct",
+        "root_cause": null
+      }
+    }
+  ],
+  "boundaries": [
+    "All 640 existing predictions rescored; this is reproduction of disclosed data, not a fresh confirmation.",
+    "Seeded family-bootstrap arithmetic matches; interval is conditional on four fixed articles and does not resample articles.",
+    "Exclusion checks are against the recorded known-data inventory; unrecorded project exposure, pretraining contamination and semantic near-duplicates are not excluded.",
+    "All five variants have zero correct abstentions on 64 unanswerable items and underperform the 50% always-abstain EM baseline overall.",
+    "Two of three selected-vs-Q4 EM gains remove explanation text around an answer already present in the Q4 output; this is not three uniformly recovered factual answers.",
+    "Normalized SQuAD-style EM and the exact-substring output contract are distinct; keep both metrics.",
+    "Observed +3/128 and a zero lower confidence bound fail the prespecified gate; failure is not proof of zero benefit.",
+    "Hash and timestamp consistency does not attest source authenticity or user mastery."
+  ]
+}

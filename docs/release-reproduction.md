@@ -2,7 +2,7 @@
 
 发布对象是可复现的个人研究代码和证据，不是已验证可部署的 QA 产品。确认实验未通过质量门槛；这个负结果不阻止研究材料交付，但必须保留在首页和报告。
 
-仓库保持私有；main 尚未合并 PR #1–#6。发布候选在 `codex/qwen-quantization-diagnostics`，不自动合并、不创建公开 Release、不改变可见性。根代码许可证等待维护者选择；第三方原有许可与数据声明已经整理。`--require-license` 会阻止在尚未选择根许可证时宣称开源授权已完备。
+仓库保持私有；main 尚未合并 PR #1–#6。独立审查发布候选在 `codex/independent-release-review`，不自动合并、不创建公开 Release、不改变可见性。根代码许可证等待维护者选择；第三方原有许可与数据声明已经整理。`--require-license` 会阻止在尚未选择根许可证时宣称开源授权已完备。
 
 ## 零模型、零网络验收
 
@@ -73,3 +73,18 @@ python3 -m experiments.release_archive verify /tmp/inference-compression-lab-rc.
 必须满足：历史证据字节保留、原始记录重算一致、五模型独立重建身份一致、无 Git 真实确认执行完成、固定协议与负结果公开可见、源码包转移后可验、相关 CI 通过、许可和数据归属清晰。可复用代码许可证须维护者确认；公开可见性与 PR 合并不在自动执行范围。
 
 不在本次验收内：机器人接入、CUDA/TensorRT/手机/昇腾实测、并发生产服务、GPU OOM 验证、功耗测量、独立多设备重复、质量达标、原创量化算法，以及用户本人已经掌握代码。
+
+## 独立审查的小规模真实复现
+
+独立 runner 不导入本项目的评分、生成或身份函数。它直接解析 safetensors，逐张量核对上游 BF16 到 FP16 转换及回退来源，然后复跑按文章和可回答性确定的 8 个已公布问题 × 5 变体。使用已安装的同版本环境与明确传入的权重路径；不声称本轮重新安装环境或进行了异机复现。
+
+```bash
+.venv/bin/python -B -m experiments.independent_qwen_replay \
+  --upstream runs/upstream-qwen --model-root runs/rebuilt-models \
+  --plan results/independent-review-v1/runtime/plan.json \
+  --output-dir runs/independent-published-replay
+```
+
+预期为 40 条 prompt/token/top10 全部与冻结记录一致。差异会保存并报错，不能重试挑选一致结果。记录位于 `results/independent-review-v1/runtime/`；本轮在无 Git 源码目录完成运行。
+
+ZIP 内部清单只检查自洽性，不是数字签名。转移时先校验交付的外部 SHA256，再检查包内 commit，解压后运行 `verify_release` 和测试。`verify_release` 的固定历史清单锚防止空清单缩小历史保护范围；单独的历史公平基线验证器可在 runner 完成清单前运行，因此发布必须用统一验收入口。

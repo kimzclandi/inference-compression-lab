@@ -9,10 +9,17 @@ from experiments.verify_qwen_confirmation import verify as verify_confirmation
 from experiments.verify_qwen_prefix_fair import verify as verify_fair
 from experiments.verify_qwen_cache_lifecycle import verify as verify_lifecycle
 
+# The historical ledger is frozen, not a caller-supplied selection of files.
+# This reviewed-code anchor detects deleted ledger entries without needing Git.
+# It is an integrity boundary, not a signature against a malicious publisher.
+PROTECTED_RESULTS_SHA256 = '321548d8022738466b8b772d91ea604ecfdb3c003b71a67d34d4fdff0d782abc'
+
 
 def verify(root):
     root = Path(root)
-    protected = read(root/'configs/release/protected-results.json')
+    protected_path = safe_path(root, 'configs/release/protected-results.json')
+    require(sha(protected_path) == PROTECTED_RESULTS_SHA256, 'Historical evidence ledger changed')
+    protected = read(protected_path)
     for name, digest in protected['sha256'].items():
         require(sha(safe_path(root,name)) == digest, 'Historical evidence changed: '+name)
     for folder, fn in [('qwen-quantization-v1',verify_exploration), ('qwen-confirmation-v1',verify_confirmation)]:
@@ -31,8 +38,7 @@ def verify(root):
     expected = read(root/'configs/qwen-quantization/tensor-identities.json')
     require(run['expected_identities_sha256']==sha(root/'configs/qwen-quantization/tensor-identities.json'),'Rebuild reference drift')
     require(set(run['models'])==set(expected),'Rebuild model coverage')
-    for name, digest in run['source_sha256'].items():
-        require(sha(safe_path(rebuild/'source',name))==digest,'Rebuild source changed')
+    verify_hashes(rebuild/'source', run['source_sha256'], exclude=())
     tokenizer = read(root/'configs/qwen-quantization/model-identities.json')['fp16']
     for v, record in run['models'].items():
         require(record['tensor_identity_verified'],'Unverified rebuilt model')

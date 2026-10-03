@@ -21,8 +21,7 @@ def verify(folder):
     checksums = read(folder / 'checksums.json')
     verify_hashes(folder, checksums)
     require(sha(folder / 'protocol.json') == run['protocol_sha256'], 'Protocol hash mismatch')
-    for name, expected in run['source_sha256'].items():
-        require(sha(folder / 'source' / name) == expected, 'Source snapshot mismatch')
+    verify_hashes(folder / 'source', run['source_sha256'], exclude=())
     data = rows(folder / 'data.jsonl')
     require(len(data) == spec['quality']['expected_n'], 'Wrong quality sample count')
     selection = read(folder / 'selection.json'); screen = read(folder / 'screen.json')

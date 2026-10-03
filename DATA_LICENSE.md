@@ -16,6 +16,8 @@
 
 ## STS-B 与其他工作负载
 
-MiniLM 实验使用 sentence-transformers/stsb 固定 revision `ab7a5ac0e35aa22088bdcf23e7fd99b220e53308`；来源和文件哈希在 MiniLM provenance 中。原始 parquet 不随发布包分发，results 保存数值预测、标签和统计。数据取得与再利用须遵循其上游条款，不能套用本项目代码许可。
+MiniLM 实验使用 sentence-transformers/stsb 固定 revision `ab7a5ac0e35aa22088bdcf23e7fd99b220e53308`；来源和文件哈希在 MiniLM provenance 中。原始 parquet 与 STS-B 原句不随发布包分发，results 保存数值预测、标签和统计。STSbenchmark 原始分数保留 CC BY-SA 4.0；本项目不对其重新授予代码许可。归属：Eneko Agirre、Daniel Cer、Mona Diab、Iñigo Lopez-Gazpio、Lucia Specia，SemEval-2017 Task 1。Sentence Transformers 将分数归一化到 0–1；记录保留所用数据 revision、样本索引、筛选与变更规则。
+
+2026-10-04 核验：[Microsoft 官方再分发说明](https://microsoft.github.io/nlp-recipes/DatasetReferences.html) 明确区分分数的 CC BY-SA 4.0 与各来源文本自身条款；[Sentence Transformers 的数据说明](https://github.com/huggingface/sentence-transformers/blob/main/examples/sentence_transformer/training/sts/README.md) 说明分数归一化。原始 STS wiki 本轮无法访问，因此没有把第三方模型卡的许可标签当作整个文本集的统一授权。需要原句的复跑由使用者按上游条款自行取得数据。
 
 前缀缓存固定长度工程输入为合成负载，不是线上业务流量。模型权重、学校或公司材料均不包含在发布包中。

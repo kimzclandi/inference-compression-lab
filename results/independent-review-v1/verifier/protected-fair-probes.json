@@ -1,0 +1,12 @@
+[
+  {
+    "mutation": "empty_sha256",
+    "status": "REJECTED",
+    "error": "ValueError('Historical evidence changed: results/qwen-prefix-fair-v1/complete.json')"
+  },
+  {
+    "mutation": "missing_complete",
+    "status": "REJECTED",
+    "error": "FileNotFoundError(2, 'No such file or directory')"
+  }
+]

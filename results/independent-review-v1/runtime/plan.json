@@ -1,0 +1,24 @@
+{
+  "scope": "Already published sample reproduction; no fresh confirmation or speed claim",
+  "selection_rule": "Lexicographically first ID in each of four articles and each answerability class; independent of model output",
+  "ids": [
+    "5727c94bff5b5019007d954d",
+    "5a1c539bb4fb5d00187145fd",
+    "572f59b4a23a5019007fc587",
+    "5ad25e17d7d075001a428f12",
+    "57094b4f9928a814004714f9",
+    "5a2c08aebfd06b001a5ae989",
+    "570d2417fed7b91900d45c3e",
+    "5a63772268151a001a9222f4"
+  ],
+  "variants": [
+    "fp16",
+    "q4",
+    "q8",
+    "selected",
+    "control"
+  ],
+  "max_new_tokens": 48,
+  "seed": 2026100402,
+  "acceptance": "All five model tensor inventories and original-source restoration match; all 40 prompt hashes, token sequences, text, and top10 match frozen records. Save failure and stop on drift."
+}
