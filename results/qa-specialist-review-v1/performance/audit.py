@@ -64,7 +64,8 @@ def history(repository):
                 method='Independently compute Git blob SHA1 over header plus current bytes and compare RC3 tree; also record current SHA256. New result paths are outside this historical set.')
 
 
-def audit(repository):
+def audit_performance(repository):
+    repository=Path(repository).resolve()
     root=repository/'results/qa-specialist-performance-v1';check_tree(root)
     study=read(root/'protocol.json');execution=read(root/'run.json');summary=read(root/'summary.json')
     need(execution['status']=='complete','benchmark incomplete')
@@ -76,9 +77,7 @@ def audit(repository):
     frozen_sources={**study['source_sha256'],**execution['source_sha256']}
     source_evidence={}
     for name,expected in frozen_sources.items():
-        committed=subprocess.check_output(['git','show',execution['git_head']+':'+name],cwd=repository)
-        committed_sha=hashlib.sha256(committed).hexdigest()
-        need(committed_sha==expected and sha(repository/name)==expected,'runtime source differs from benchmark commit '+name)
+        need(sha(repository/name)==expected,'runtime source differs from frozen protocol '+name)
         source_evidence[name]=expected
     data_path=repository/'configs/qa-specialist/dataset/calibration/data.jsonl'
     need(sha(data_path)==study['data_sha256']['calibration'],'calibration identity')
@@ -132,8 +131,7 @@ def audit(repository):
                     process_peak_rss_bytes=rss,initialization_seconds={v:[r['initialization_seconds'] for r in runs if r['variant']==v] for v in medians},
                     samples_per_process=40,processes=6,scope=study['performance']['timing'])
     same(summary,recomputed,'summary')
-    history_result=history(repository)
-    return dict(all_pass=history_result['all_preserved'],source_hashes_at_benchmark_commit_match=source_evidence,
+    return dict(all_pass=True,source_hashes_verified_current=source_evidence,git_required=False,
                 benchmark_commit=execution['git_head'],protocol_sha256=sha(root/'protocol.json'),
                 processes_checked=6,measurements_checked=sum(r['n'] for r in runs),warmup_requests_per_process=8,
                 order=order,sample_ids=ids,summary_matches=True,recomputed_summary=recomputed,
@@ -146,7 +144,20 @@ def audit(repository):
                             rss='Darwin ru_maxrss is treated as bytes; lifetime peak includes interpreter, tokenizer, ORT initialization and inference. Not model-only allocation, resident steady state, file bytes or logical KV bytes.',
                             provenance_limit='Workers do not individually snapshot runtime sources or OS PIDs. Parent sequential subprocess calls plus saved command order establish intended isolation; recorded clean tracked source state and Git content match protocol. This is not an external process trace.',
                             generalization='Three processes per precision, eight fixed published single-window calibration requests on one Mac; no tail SLO, concurrent throughput, long-window risk, energy or cross-device claim. Speed does not override failed quality evaluation.'),
-                rc3_preservation=history_result)
+                preservation_scope='Historical Git baseline checked separately by audit(); this portable function validates performance only.')
+
+
+def audit(repository):
+    repository=Path(repository).resolve()
+    result=audit_performance(repository)
+    preservation=history(repository)
+    result['rc3_preservation']=preservation
+    result['all_pass']=result['all_pass'] and preservation['all_preserved']
+    for name,expected in result['source_hashes_verified_current'].items():
+        committed=subprocess.check_output(['git','show',result['benchmark_commit']+':'+name],cwd=repository)
+        need(hashlib.sha256(committed).hexdigest()==expected,'source differs from benchmark Git commit '+name)
+    result['source_hashes_at_benchmark_commit_match']=True
+    return result
 
 
 if __name__=='__main__':

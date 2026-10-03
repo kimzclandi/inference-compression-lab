@@ -1,0 +1,129 @@
+{
+  "all_pass": true,
+  "benchmark_commit": "0887cf7b65662289f96581e418a751c6ebac29fb",
+  "protocol_sha256": "6637305e06299f89251a2f61393804618b94d59f935e8dd278b2d12572103fac",
+  "source_hashes_verified_current": {
+    "experiments/benchmark_qa_risk.py": "087e67f496b3bf8652f7bfa03232abebf80544a80d578cc5800379bf31004a41",
+    "experiments/benchmark_qa_specialist.py": "07cd92eee213b6f04131c45cfc8150f4e20577a5629386eb5d2105b0ef8d10e6",
+    "experiments/qa_risk.py": "b384e54e4e396b06ca80394187e6798633eb542acb86edf213a815aff65d7457",
+    "lab/qa_risk_calibration.py": "182138f513c311a5e14dece7afc60ca28c1cbf22b1dbbf56a6db0cf3513b3bbd",
+    "lab/qa_specialist_runtime.py": "40e8a0482b3ddb7d1aca5424c090571e27182c363f15e6b3da0ea72c537b1e54",
+    "lab/extractive_qa.py": "d859b363f2cfcca578f0358595a11bdfdcc9b31d0dda19dcbc9def3e9104de8f",
+    "lab/selective_qa.py": "d4e4c5cf1a6951316a6b5589236e8198113bc2adcab93dce25754dd8e4d16ffd",
+    "lab/qa_metrics.py": "78c4af7f06ba49b3acddd2610586336ecf585c06d8ad89b46ff9fb6358aaaa1f"
+  },
+  "git_required": false,
+  "dataset_sha256": "0e48a12509048b171c34d801661c8fe94d03fb8f578c399fabf4031a1d1f2eb5",
+  "selection_sha256": "b2999477ee82318a98266ef0674c22a526cddea1eec541c591a7bec7e354b74a",
+  "sample_ids": [
+    "56de1645cffd8e1900b4b5d2",
+    "5a7b3f0f21c2de001afe9e02",
+    "5a7b3b3121c2de001afe9dee",
+    "5a7b054521c2de001afe9cd0",
+    "571094b7a58dae1900cd6a6a",
+    "57107d73b654c5140001f91f",
+    "5ad24d2ad7d075001a428c1e",
+    "5ad24a2ad7d075001a428bbc"
+  ],
+  "measurements_checked": 120,
+  "processes_checked": 3,
+  "distinct_pids": true,
+  "all_per_process_checksums_and_parent_coverage_pass": true,
+  "request_order": "Per process: one untimed warmup per selected input, then five repetitions of the same fixed eight-ID order; processes started sequentially 0,1,2.",
+  "summary_matches": true,
+  "recomputed_summary": {
+    "median_of_process_medians_seconds": 0.06960002100095153,
+    "process_medians_seconds": [
+      0.06999179100967012,
+      0.06960002100095153,
+      0.0691923955018865
+    ],
+    "peak_rss_bytes": [
+      1016201216,
+      942833664,
+      1007108096
+    ],
+    "initialization_seconds": [
+      1.6150191249907948,
+      1.6330127500114031,
+      1.6351115830184426
+    ],
+    "processes": 3,
+    "measurements": 120,
+    "scope": "Warm single caller full request: tokenizer, all windows CPU ORT inference, exhaustive decode, all five risk features including exhaustive alternative spans, fitted logistic score, exact-span parse and threshold decision. Excludes model/head load, complete evidence verification at entry startup, JSON I/O. Initialization/head rebuild recorded separately. Same eight published single-window inputs as base benchmark; no tail-latency SLO or concurrent service claim."
+  },
+  "process_details": [
+    {
+      "index": 0,
+      "pid": 52957,
+      "n": 40,
+      "median_seconds": 0.06999179100967012,
+      "min_seconds": 0.055813832994317636,
+      "max_seconds": 0.10694320901529863,
+      "peak_rss_bytes": 1016201216,
+      "initialization_seconds": 1.6150191249907948,
+      "decision_counts": {
+        "answer": 10,
+        "abstain": 30
+      }
+    },
+    {
+      "index": 1,
+      "pid": 52971,
+      "n": 40,
+      "median_seconds": 0.06960002100095153,
+      "min_seconds": 0.055615207995288074,
+      "max_seconds": 0.10719545898609795,
+      "peak_rss_bytes": 942833664,
+      "initialization_seconds": 1.6330127500114031,
+      "decision_counts": {
+        "answer": 10,
+        "abstain": 30
+      }
+    },
+    {
+      "index": 2,
+      "pid": 52976,
+      "n": 40,
+      "median_seconds": 0.0691923955018865,
+      "min_seconds": 0.055964666011277586,
+      "max_seconds": 0.10713595899869688,
+      "peak_rss_bytes": 1007108096,
+      "initialization_seconds": 1.6351115830184426,
+      "decision_counts": {
+        "answer": 10,
+        "abstain": 30
+      }
+    }
+  ],
+  "peak_rss_median_bytes": 1007108096,
+  "decision_hashes": {
+    "56de1645cffd8e1900b4b5d2": "4a49792a4e9b89798d21536385c510202ed117de82bb2e05eda485717da857e1",
+    "5a7b3f0f21c2de001afe9e02": "9f79fb689f9131c47c908387368a74905831533a67d249fa01bc57b6fd6af753",
+    "5a7b3b3121c2de001afe9dee": "2308fb874076af0786bf1b95a43b36b2300fd0858c00ed0a6a820ed5ee6d3cf0",
+    "5a7b054521c2de001afe9cd0": "c8d2c6e8a97ccba7c9c61dbd4ebb66b1c665bbb067a78fbfc5428b5bb135fe4f",
+    "571094b7a58dae1900cd6a6a": "2768df53591f955a8f2e57b2194ba34c401fbb62ab5f64562c8862438d7f3f8a",
+    "57107d73b654c5140001f91f": "95f46cf414246c0c6d353cff633fa5b5d8966866d9cf5944731e90492f5f53d7",
+    "5ad24d2ad7d075001a428c1e": "6f87e5d9ea3a22031b95a203930810d505af5a5f200d628aebc9064860ff5fbd",
+    "5ad24a2ad7d075001a428bbc": "3c77a8adb4c463012b703728a38c73937bd5696e99cca87b96117b7c27b5ebd7"
+  },
+  "decision_statuses": {
+    "56de1645cffd8e1900b4b5d2": "answer",
+    "5a7b3f0f21c2de001afe9e02": "abstain",
+    "5a7b3b3121c2de001afe9dee": "abstain",
+    "5a7b054521c2de001afe9cd0": "abstain",
+    "571094b7a58dae1900cd6a6a": "answer",
+    "57107d73b654c5140001f91f": "abstain",
+    "5ad24d2ad7d075001a428c1e": "abstain",
+    "5ad24a2ad7d075001a428bbc": "abstain"
+  },
+  "observations": {
+    "included": "Tokenizer, synchronous CPU ORT for all windows, logit/offset materialization, exhaustive decoder, all fixed risk features including alternative-span search, fitted logistic arithmetic, exact-span parser and threshold decision.",
+    "excluded": "Model load and head rebuild are separately timed. Full evidence verification at serving startup, CLI JSON-schema/input/output conversion, JSON I/O, HTTP/network, queuing and concurrent service are excluded.",
+    "memory": "Darwin lifetime ru_maxrss bytes includes process initialization and inference, not model-only memory or steady-state RSS.",
+    "comparison": "This is a single INT8-plus-head request path. The earlier 54.19 ms and 1.33x belong to the base extractor benchmark; neither is transferred to this full risk-gated path. No equivalent passing FP32-head baseline exists.",
+    "input_limits": "Eight published original calibration inputs are single-window. This does not characterize maximum-window latency, tail SLOs, concurrent throughput or an entire CLI launch.",
+    "provenance": "Workers verify frozen runtime sources and selection; distinct saved OS PIDs and sequential parent commands support process isolation. Timing evidence records decision digests, not full decisions, so stability is checked but semantic decision correctness relies on the separate QA evidence."
+  },
+  "scope": "Read-only raw timing/RSS arithmetic audit, no model run, no threshold changes, no new quality acceptance."
+}
