@@ -1,0 +1,8 @@
+{
+  "scope": "Three selected already-published evaluation examples, chosen after results. Functional demonstration only; not a fresh or representative test.",
+  "cases": [
+    {"id":"5726400589a1e219009ac5ef","label":"accepted_correct","expected_status":"answer"},
+    {"id":"5a669ee5f038b7001ab0c06b","label":"unanswerable_refusal","expected_status":"abstain"},
+    {"id":"5728eef92ca10214002daab2","label":"answerable_refusal_cost","expected_status":"abstain"}
+  ]
+}
