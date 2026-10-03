@@ -115,4 +115,4 @@ python3 -m unittest discover -s tests -v
 
 ## 发布与范围
 
-使用原私有仓库的独立分支codex/qwen-prefix-cache，叠加于长度分桶分支；拟创建草稿PR，不自动合并前序PR，不改变仓库可见性。所有代码和实验均保留AI辅助归属。
+使用原私有仓库的独立分支codex/qwen-prefix-cache，叠加于长度分桶分支；已创建[草稿PR #3](https://github.com/kimzclandi/inference-compression-lab/pull/3)，不自动合并前序PR，不改变仓库可见性。所有代码和实验均保留AI辅助归属。
