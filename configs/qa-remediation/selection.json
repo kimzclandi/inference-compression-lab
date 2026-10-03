@@ -1,0 +1,27 @@
+{
+  "source_url": "https://rajpurkar.github.io/SQuAD-explorer/dataset/dev-v2.0.json",
+  "source_sha256": "80a5225e94905956a6446d296ca1093975c4d3b3260f1d6c8f68bc2ab77182d8",
+  "seed": 2026100403,
+  "splits": [
+    {
+      "name": "calibration",
+      "articles": 4
+    },
+    {
+      "name": "confirmation",
+      "articles": 8
+    }
+  ],
+  "per_class_per_article": 16,
+  "max_context_chars": 4000,
+  "policy": "Select calibration first, then confirmation. Exclude inventoried old titles/IDs/normalized exact contexts/questions; additionally exclude all calibration titles/IDs/normalized exact contexts/questions from confirmation. Use SHA256(str(seed)+title) for eligible article ranking and SHA256(str(seed)+id) for question ranking. Require sixteen unique contexts per answerability class per article. Permit shared contexts between classes within an article. Reject cross-article duplicate questions and context families; fail without fallback when fixed quotas cannot be met. Do not read model outputs or replace samples after outcomes.",
+  "exclusions": "configs/qa-remediation/exclusions.json",
+  "exclusions_sha256": "a8408a63bab2efcd8019ecee520c3fd8d6b81e7227ebad39caf64814a6914aa7",
+  "license": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+    "attribution": "SQuAD 2.0: Pranav Rajpurkar, Robin Jia, Percy Liang; passages by Wikipedia contributors.",
+    "source_project": "https://rajpurkar.github.io/SQuAD-explorer/"
+  },
+  "scope": "Public SQuAD dev local splits, never an official hidden test. Calibration may select the predeclared threshold only, not the model or prompt. Confirmation is reserved for one final frozen-policy evaluation. These samples are new only to the inventoried project datasets; pretraining contamination and semantic near-duplicates are unknown. Results generalize at most to this selected article distribution. Once published or evaluated, future runs are reproductions, not fresh confirmation."
+}

@@ -1,0 +1,66 @@
+{
+  "status": "running",
+  "started": "2026-10-03T20:02:38.413573+00:00",
+  "git_head": "5217c088fe0fb67d22fecefcdc73e6a4558c4b6a",
+  "git_status": "?? configs/qa-remediation/ATTRIBUTION.md\n?? configs/qa-remediation/dataset/\n?? configs/qa-remediation/exclusions.json\n?? configs/qa-remediation/selection.json\n?? experiments/prepare_qa_remediation.py\n?? lab/selective_qa.py\n?? results/qa-remediation-development-v1/\n?? results/qa-remediation-review-v1/\n?? results/qa-remediation-selection-v1/\n?? tests/test_qa_remediation_selection.py\n?? tests/test_selective_qa.py",
+  "dataset_sha256": "4b352f5923279ead7407a53e160d6d010de9bce2140b70133b4e75cb3fe9a970",
+  "spec_sha256": "68de044312e1cd050bd0e5eefb6ac5fd03ac54d72f616717b73e4b3d12d0c210",
+  "source_sha256": {
+    "experiments/qa_remediation.py": "1f9f37630d8907d984364e50100871cba785a0de06781e7969e80a1dab0a8a3c",
+    "lab/grounded_qa.py": "7acb5d9be8da25f65c93bfbfa69d9d2957bded1648b0a8552cc7c863daccf412",
+    "lab/qa_metrics.py": "78c4af7f06ba49b3acddd2610586336ecf585c06d8ad89b46ff9fb6358aaaa1f",
+    "experiments/qwen_quantization.py": "7e15fe4e5af77d737c098928c3979b16f337fffa0a38f628924a1d2a05fb2136"
+  },
+  "mode": "grounded",
+  "model_label": "3b-fp16-grounded",
+  "bits": null,
+  "source_model_files": {
+    "README.md": {
+      "bytes": 4930,
+      "sha256": "2c74693e6ae36ba878124d465195b4dad0f71035b54ece1c9fd1553cc497ef8c"
+    },
+    "config.json": {
+      "bytes": 661,
+      "sha256": "eed00b17e22553979d090fa492e587e92885e328914c8e0b0b78f0a0d3576b3b"
+    },
+    "generation_config.json": {
+      "bytes": 242,
+      "sha256": "ea35dfb6fc5051b01114f9b995820d55dab01ed33ee490f6378b442af82c09f9"
+    },
+    "merges.txt": {
+      "bytes": 1671839,
+      "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+    },
+    "model-00001-of-00002.safetensors": {
+      "bytes": 3968658944,
+      "sha256": "67347b23fb4165b652eb6611f5e1f2a06dfcddba8e909df1b2b0b1857bee06c2"
+    },
+    "model-00002-of-00002.safetensors": {
+      "bytes": 2203268048,
+      "sha256": "a40d941d0e7e0b966ad8b62bb6d6b7c88cce1299197b599d9d0a4ce59aabfc1d"
+    },
+    "model.safetensors.index.json": {
+      "bytes": 35581,
+      "sha256": "bc8aaa0c87d4335177e01c765f1de0db81661c67c1a72fbfb0d521b09f5ddc56"
+    },
+    "tokenizer.json": {
+      "bytes": 7031645,
+      "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+    },
+    "tokenizer_config.json": {
+      "bytes": 7305,
+      "sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583"
+    },
+    "vocab.json": {
+      "bytes": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    }
+  },
+  "python": "3.12.11",
+  "packages": {
+    "mlx": "0.29.3",
+    "mlx-lm": "0.26.3",
+    "numpy": "2.5.3",
+    "transformers": "4.56.2"
+  }
+}

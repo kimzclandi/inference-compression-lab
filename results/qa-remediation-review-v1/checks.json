@@ -1,0 +1,58 @@
+[
+  {
+    "name": "unittest",
+    "argv": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "passed": true
+  },
+  {
+    "name": "release-verification",
+    "argv": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "-B",
+      "-m",
+      "experiments.verify_release"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "passed": true
+  },
+  {
+    "name": "qa-verification",
+    "argv": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "-B",
+      "-m",
+      "experiments.verify_qa_remediation",
+      "--root",
+      "results/qa-remediation-v1"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "passed": true
+  },
+  {
+    "name": "disabled-entrypoint",
+    "argv": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "-B",
+      "-m",
+      "experiments.serve_grounded_qa",
+      "--policy",
+      "configs/qa-remediation/policy.json"
+    ],
+    "exit_code": 2,
+    "expected_exit_code": 2,
+    "passed": true
+  }
+]

@@ -1,0 +1,106 @@
+{
+  "status": "running",
+  "stage": "preflight",
+  "started": "2026-10-03T20:14:49.935027+00:00",
+  "argv": [
+    "/Users/yukaiyan/Documents/Codex/2026-10-04/github-readme-2027-ai-infra-1/work/release-prep/venv/bin/python",
+    "/Users/yukaiyan/Documents/Codex/2026-10-04/ai-infra-1-2-2027-ai/work/qa-quality-remediation/experiments/qa_remediation.py",
+    "--spec",
+    "configs/qa-remediation/study.json",
+    "--data",
+    "configs/qa-remediation/dataset/calibration/data.jsonl",
+    "--model",
+    "/Users/yukaiyan/Documents/Codex/2026-09-18/github-gpu-api-cuda-api-1/outputs/domain-qa-lab/.cache/huggingface/hub/models--Qwen--Qwen2.5-1.5B-Instruct/snapshots/989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "--label",
+    "calibration-fp16",
+    "--mode",
+    "grounded",
+    "--output-dir",
+    "results/qa-remediation-v1/calibration-fp16"
+  ],
+  "arguments": {
+    "spec": "configs/qa-remediation/study.json",
+    "data": "configs/qa-remediation/dataset/calibration/data.jsonl",
+    "model": "/Users/yukaiyan/Documents/Codex/2026-09-18/github-gpu-api-cuda-api-1/outputs/domain-qa-lab/.cache/huggingface/hub/models--Qwen--Qwen2.5-1.5B-Instruct/snapshots/989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "label": "calibration-fp16",
+    "bits": null,
+    "mode": "grounded",
+    "output_dir": "results/qa-remediation-v1/calibration-fp16"
+  },
+  "mode": "grounded",
+  "model_label": "calibration-fp16",
+  "bits": null,
+  "python": "3.12.11",
+  "git_head": "cbdaad7b83b00db589524a69b8ccf2f1be78ce91",
+  "git_status": "?? experiments/verify_qa_remediation.py\n?? results/qa-remediation-v1/\n?? tests/test_qa_remediation_verifier.py\n?? work/",
+  "dataset_sha256": "46f40da0963b2ee05b6ab14511ba1812cab7f4567370b5ddd7e416be423034c4",
+  "spec_sha256": "5f5906b86eb7ce6ea9b9c9e8bc299c2931280dc9b70852b67b0072ed5a5cdc5e",
+  "source_model_files": {
+    "LICENSE": {
+      "bytes": 11343,
+      "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e"
+    },
+    "README.md": {
+      "bytes": 4917,
+      "sha256": "2e1bcd8bd964728a820be709fa0f7b9dd54817a94fd2254c535df70c5e67fada"
+    },
+    "config.json": {
+      "bytes": 660,
+      "sha256": "98d2ff8cc47488d08a2b0b3acf4eb99ef210779b42bd48605f6b8e36acdbf670"
+    },
+    "generation_config.json": {
+      "bytes": 242,
+      "sha256": "e558847a8b4402616f1273797b015104dc266fe4b520056fca88823ba8f8ebe6"
+    },
+    "merges.txt": {
+      "bytes": 1671839,
+      "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+    },
+    "model.safetensors": {
+      "bytes": 3087467144,
+      "sha256": "dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee"
+    },
+    "tokenizer.json": {
+      "bytes": 7031645,
+      "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+    },
+    "tokenizer_config.json": {
+      "bytes": 7305,
+      "sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583"
+    },
+    "vocab.json": {
+      "bytes": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    }
+  },
+  "locked_spec_validation": {
+    "locked": true,
+    "allowed_run_index": 0,
+    "matched_identity": {
+      "label": "calibration-fp16",
+      "mode": "grounded",
+      "bits": null,
+      "model_files_sha256": {
+        "LICENSE": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+        "README.md": "2e1bcd8bd964728a820be709fa0f7b9dd54817a94fd2254c535df70c5e67fada",
+        "config.json": "98d2ff8cc47488d08a2b0b3acf4eb99ef210779b42bd48605f6b8e36acdbf670",
+        "generation_config.json": "e558847a8b4402616f1273797b015104dc266fe4b520056fca88823ba8f8ebe6",
+        "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+        "model.safetensors": "dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee",
+        "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+        "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+        "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      },
+      "data_sha256": "46f40da0963b2ee05b6ab14511ba1812cab7f4567370b5ddd7e416be423034c4"
+    }
+  },
+  "source_sha256": {
+    "experiments/qa_remediation.py": "07669158f8b327935a05c9948ef84175d092febbdf6728998ee93620bbf83377",
+    "lab/grounded_qa.py": "1b6f248cd6efb4ffeaa4f6b15e73f33d45c7d2bb3246e889f4ce236dbe0e868f",
+    "lab/qa_metrics.py": "78c4af7f06ba49b3acddd2610586336ecf585c06d8ad89b46ff9fb6358aaaa1f",
+    "experiments/qwen_quantization.py": "7e15fe4e5af77d737c098928c3979b16f337fffa0a38f628924a1d2a05fb2136",
+    "lab/evidence.py": "314c7a009fb2b740db1cb3925d538f7abcd8a8eb719c0d05efd0be71c0abb91d",
+    "lab/artifact_integrity.py": "8f10b1899e83258baf3a39a8c0d2652c20cab8708d576fc3485cff7654278187",
+    "lab/quantization_diagnostics.py": "947d5bf29b9c238c7330b75c1719044122e1f75c5fc8ad36cf5df1a05d95075f"
+  }
+}

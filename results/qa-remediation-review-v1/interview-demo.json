@@ -1,0 +1,101 @@
+{
+  "scope": "Offline replay of published calibration evidence; no model inference or new confirmation.",
+  "research_status": "calibration_failed",
+  "quality_passed": false,
+  "example": {
+    "id": "5ad0483977cf76001a686f8a",
+    "context": "Orange County is a rapidly developing business center that includes Downtown Santa Ana, the South Coast Metro and Newport Center districts; as well as the Irvine business centers of The Irvine Spectrum, West Irvine, and international corporations headquartered at the University of California, Irvine. West Irvine includes the Irvine Tech Center and Jamboree Business Parks.",
+    "question": "What county does the rapidly developing downtown Santa Ana include?",
+    "gold_is_impossible": true,
+    "prediction": "Orange County",
+    "raw_span_contract": {
+      "raw_output": "Orange County",
+      "stripped_output": "Orange County",
+      "context_sha256": "3990a188c951ac2ac5a549ad29f598b583da6695cf862bd17be6cdd20e3d149c",
+      "status": "answer",
+      "answer": "Orange County",
+      "start": 0,
+      "end": 13,
+      "reason": "exact_context_span"
+    },
+    "uncalibrated_same_model_audit": {
+      "yes_logit": 30.953125,
+      "no_logit": 26.34375,
+      "confidence": 0.9901401446964613,
+      "yes_token": 9454,
+      "no_token": 2753,
+      "binary_mass": 0.9998912811279297,
+      "top1_token": 9454,
+      "input_tokens": 185,
+      "prompt_sha256": "a81fb6db0a8eaa79094e245a49d2ecec68e12cd335a6044d7449c6c404bdc91c"
+    },
+    "explanation": "An exact substring and a high same-model score do not fix the reversed containment relation."
+  },
+  "calibration_curve": [
+    {
+      "threshold": 0,
+      "feasible": false,
+      "accepted_precision": 0.5428571428571428,
+      "answerable_coverage": 0.734375,
+      "false_accept_rate": 0.359375
+    },
+    {
+      "threshold": 0.5,
+      "feasible": false,
+      "accepted_precision": 0.6065573770491803,
+      "answerable_coverage": 0.671875,
+      "false_accept_rate": 0.28125
+    },
+    {
+      "threshold": 0.8,
+      "feasible": false,
+      "accepted_precision": 0.6363636363636364,
+      "answerable_coverage": 0.640625,
+      "false_accept_rate": 0.21875
+    },
+    {
+      "threshold": 0.9,
+      "feasible": false,
+      "accepted_precision": 0.6666666666666666,
+      "answerable_coverage": 0.609375,
+      "false_accept_rate": 0.1875
+    },
+    {
+      "threshold": 0.95,
+      "feasible": false,
+      "accepted_precision": 0.7380952380952381,
+      "answerable_coverage": 0.53125,
+      "false_accept_rate": 0.125
+    },
+    {
+      "threshold": 0.98,
+      "feasible": false,
+      "accepted_precision": 0.8148148148148148,
+      "answerable_coverage": 0.375,
+      "false_accept_rate": 0.046875
+    },
+    {
+      "threshold": 0.99,
+      "feasible": false,
+      "accepted_precision": 0.8823529411764706,
+      "answerable_coverage": 0.25,
+      "false_accept_rate": 0.015625
+    },
+    {
+      "threshold": 0.995,
+      "feasible": false,
+      "accepted_precision": 0.9230769230769231,
+      "answerable_coverage": 0.203125,
+      "false_accept_rate": 0.0
+    },
+    {
+      "threshold": 0.999,
+      "feasible": false,
+      "accepted_precision": 1.0,
+      "answerable_coverage": 0.03125,
+      "false_accept_rate": 0.0
+    }
+  ],
+  "selected_threshold": null,
+  "answer_entrypoint": "unavailable_quality"
+}

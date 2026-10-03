@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "enabled": false,
+  "status": "unavailable_quality",
+  "reason": "FP16 and Q8 both failed all predeclared calibration threshold choices. No answer serving is authorized by this evidence.",
+  "selection_sha256": "010e2a4ad87673972a56fc33ec64bd3f179dd902fd5e1073fc63ff6653feeac1",
+  "study_sha256": "5f5906b86eb7ce6ea9b9c9e8bc299c2931280dc9b70852b67b0072ed5a5cdc5e",
+  "evidence_root": "results/qa-remediation-v1",
+  "quality_scope": "Local English extractive QA research prototype, not production deployment",
+  "historical_fallback": "block10 failed confirmation; retired as deployment candidate",
+  "confirmation_evaluated": false
+}

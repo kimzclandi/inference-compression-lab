@@ -1,0 +1,36 @@
+{
+  "label": "calibration-fp16",
+  "mode": "grounded",
+  "n": 128,
+  "raw_metrics": {
+    "overall": {
+      "n": 128,
+      "em": 0.578125,
+      "f1": 0.6107762896825397,
+      "format_valid_rate": 0.9375
+    },
+    "answerable": {
+      "n": 64,
+      "em": 0.609375,
+      "f1": 0.6746775793650793,
+      "format_valid_rate": 0.9375
+    },
+    "unanswerable": {
+      "n": 64,
+      "em": 0.546875,
+      "f1": 0.546875,
+      "format_valid_rate": 0.9375
+    },
+    "unsupported_answer_rate": 0.453125,
+    "over_abstention_rate": 0.203125,
+    "categories": {
+      "correct": 73,
+      "over_abstention": 13,
+      "wrong_or_partial_span": 9,
+      "format_or_nonextractive": 8,
+      "unsupported_answer": 25
+    },
+    "family_macro_em": 0.5578947368421052,
+    "always_abstain_em": 0.5
+  }
+}

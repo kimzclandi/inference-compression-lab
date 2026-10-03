@@ -13,6 +13,7 @@ from experiments.verify_qwen_cache_lifecycle import verify as verify_lifecycle
 # This reviewed-code anchor detects deleted ledger entries without needing Git.
 # It is an integrity boundary, not a signature against a malicious publisher.
 PROTECTED_RESULTS_SHA256 = '321548d8022738466b8b772d91ea604ecfdb3c003b71a67d34d4fdff0d782abc'
+QA_REMEDIATION_PROTOCOL_SHA256 = '5f5906b86eb7ce6ea9b9c9e8bc299c2931280dc9b70852b67b0072ed5a5cdc5e'
 
 
 def verify(root):
@@ -49,9 +50,19 @@ def verify(root):
     require(archive_run['git_head'] is None,'Archive run must not rely on Git')
     for name in ['THIRD_PARTY.md','DATA_LICENSE.md','NOTICE-Domain-QA-Lab.txt','docs/release-reproduction.md']:
         require((root/name).is_file(),'Missing release document: '+name)
+    from experiments.verify_qa_remediation import verify as verify_qa
+    qa_study = root/'configs/qa-remediation/study.json'
+    require(sha(qa_study) == QA_REMEDIATION_PROTOCOL_SHA256, 'Frozen QA remediation protocol changed')
+    qa = verify_qa(root/'results/qa-remediation-v1', qa_study)
+    policy = read(root/'configs/qa-remediation/policy.json')
+    require(policy.get('enabled') is False, 'This failed QA study cannot enable answering')
+    require(policy.get('selection_sha256') == qa['selection_sha256'], 'QA policy decision evidence changed')
     return {'technical_acceptance':'pass', 'historical_files_preserved':len(protected['sha256']),
             'rebuilt_variants':len(run['models']), 'confirmation_samples':confirm['n'],
             'confirmation_gate_passed':confirm['gate']['passed'],
+            'qa_remediation_evidence_valid':qa['evidence_valid'],
+            'qa_remediation_quality_passed':qa['overall_success'],
+            'qa_answer_entrypoint':qa['answer_entrypoint'],
             'source_archive_inference_verified':True,
             'root_code_license_present':(root/'LICENSE').is_file(),
             'scope':'Reproducible personal research artifact; not a deployable QA system or confirmed quantization algorithm.'}

@@ -21,3 +21,5 @@ MiniLM 实验使用 sentence-transformers/stsb 固定 revision `ab7a5ac0e35aa220
 2026-10-04 核验：[Microsoft 官方再分发说明](https://microsoft.github.io/nlp-recipes/DatasetReferences.html) 明确区分分数的 CC BY-SA 4.0 与各来源文本自身条款；[Sentence Transformers 的数据说明](https://github.com/huggingface/sentence-transformers/blob/main/examples/sentence_transformer/training/sts/README.md) 说明分数归一化。原始 STS wiki 本轮无法访问，因此没有把第三方模型卡的许可标签当作整个文本集的统一授权。需要原句的复跑由使用者按上游条款自行取得数据。
 
 前缀缓存固定长度工程输入为合成负载，不是线上业务流量。模型权重、学校或公司材料均不包含在发布包中。
+
+QA 整改追加的本地 calibration/confirmation 拆分及变更说明见 [configs/qa-remediation/ATTRIBUTION.md](configs/qa-remediation/ATTRIBUTION.md)，继续遵守 SQuAD/Wikipedia 的原始许可；它们不是官方隐藏测试。

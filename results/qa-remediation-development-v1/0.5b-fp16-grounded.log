@@ -1,0 +1,32 @@
+Traceback (most recent call last):
+  File "/Users/yukaiyan/Documents/Codex/2026-10-04/ai-infra-1-2-2027-ai/work/qa-quality-remediation/experiments/qa_remediation.py", line 53, in run
+    write(out/'run.json',state)
+  File "/Users/yukaiyan/Documents/Codex/2026-10-04/ai-infra-1-2-2027-ai/work/qa-quality-remediation/lab/quantization_diagnostics.py", line 41, in write
+    with Path(path).open('x') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yukaiyan/Documents/Codex/2026-09-18/github-gpu-api-cuda-api-1/work/python/cpython-3.12.11-macos-aarch64-none/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileExistsError: [Errno 17] File exists: 'results/qa-remediation-development-v1/0.5b-fp16-grounded/run.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/yukaiyan/Documents/Codex/2026-10-04/ai-infra-1-2-2027-ai/work/qa-quality-remediation/experiments/qa_remediation.py", line 71, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/Users/yukaiyan/Documents/Codex/2026-10-04/ai-infra-1-2-2027-ai/work/qa-quality-remediation/experiments/qa_remediation.py", line 69, in main
+    p.add_argument('--output-dir',type=Path,required=True);run(p.parse_args())
+                                                           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/yukaiyan/Documents/Codex/2026-10-04/ai-infra-1-2-2027-ai/work/qa-quality-remediation/experiments/qa_remediation.py", line 60, in run
+    state['finished']=datetime.now(timezone.utc).isoformat();write(out/'run.json',state)
+                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yukaiyan/Documents/Codex/2026-10-04/ai-infra-1-2-2027-ai/work/qa-quality-remediation/lab/quantization_diagnostics.py", line 41, in write
+    with Path(path).open('x') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yukaiyan/Documents/Codex/2026-09-18/github-gpu-api-cuda-api-1/work/python/cpython-3.12.11-macos-aarch64-none/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileExistsError: [Errno 17] File exists: 'results/qa-remediation-development-v1/0.5b-fp16-grounded/run.json'

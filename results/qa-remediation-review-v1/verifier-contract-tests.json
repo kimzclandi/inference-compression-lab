@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_qa_remediation_verifier.py",
+    "-v"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "test_complete_negative_evidence_cannot_be_called_success (test_qa_remediation_verifier.FrozenCalibrationTests.test_complete_negative_evidence_cannot_be_called_success) ... ok\ntest_forged_pass_and_consumed_confirmation_are_rejected (test_qa_remediation_verifier.FrozenCalibrationTests.test_forged_pass_and_consumed_confirmation_are_rejected) ... ok\ntest_selection_writer_refuses_existing_record (test_qa_remediation_verifier.FrozenCalibrationTests.test_selection_writer_refuses_existing_record) ... ok\ntest_pairing_ignores_input_order_but_rejects_missing_duplicate_or_nan (test_qa_remediation_verifier.PairedStatisticsTests.test_pairing_ignores_input_order_but_rejects_missing_duplicate_or_nan) ... ok\ntest_questions_in_single_article_family_cannot_be_resampled_apart (test_qa_remediation_verifier.PairedStatisticsTests.test_questions_in_single_article_family_cannot_be_resampled_apart) ... ok\ntest_tensor_ratio_includes_quantization_metadata_not_runtime_memory (test_qa_remediation_verifier.PairedStatisticsTests.test_tensor_ratio_includes_quantization_metadata_not_runtime_memory) ... ok\ntest_zero_and_constant_difference_are_exact (test_qa_remediation_verifier.PairedStatisticsTests.test_zero_and_constant_difference_are_exact) ... ok\ntest_complete_run_recomputes_raw_and_contracted_scores (test_qa_remediation_verifier.RunEvidenceTests.test_complete_run_recomputes_raw_and_contracted_scores) ... ok\ntest_empty_checksums_or_unlisted_file_fail (test_qa_remediation_verifier.RunEvidenceTests.test_empty_checksums_or_unlisted_file_fail) ... ok\ntest_resigned_source_hole_identity_score_or_audit_mutations_fail (test_qa_remediation_verifier.RunEvidenceTests.test_resigned_source_hole_identity_score_or_audit_mutations_fail) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.204s\n\nOK\n",
+  "verifier_sha256": "6c2236ae2debb7c1e4ff5e6e1fae173d84a34887abf15aabed372f677126099d",
+  "tests_sha256": "e56e1bd9a48305c27909317a078d7307de5fa336ca51a6ff4ef0c0d8772df2f0"
+}

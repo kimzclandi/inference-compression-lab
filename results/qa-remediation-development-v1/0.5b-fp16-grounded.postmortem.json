@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "scope": "Postmortem of a preserved failed development attempt; not a rewritten run record.",
+  "effective_status": "failed",
+  "original_record": "results/qa-remediation-development-v1/0.5b-fp16-grounded/run.json",
+  "original_record_sha256": "4ba32205e3f7ddda88bc61bdf509c645588ee1f9f6aa6ed7262d28997d3dea15",
+  "original_record_status": "running",
+  "original_record_prediction_count": 1,
+  "failure_type": "FileExistsError",
+  "failure_log": "results/qa-remediation-development-v1/0.5b-fp16-grounded.log",
+  "failure_log_sha256": "4e7747176a13ca721652472fdb53fd15a8bfd8d3dd9d0ec6a3e9211816912c11",
+  "observed_error": "FileExistsError: [Errno 17] File exists: 'results/qa-remediation-development-v1/0.5b-fp16-grounded/run.json'",
+  "cause": "The original loop attempted to write an already-created run.json with the no-clobber write helper; finalization repeated the collision. The incomplete run.json retained status=running.",
+  "remediation": "The replacement runner writes append-only per-row predictions.jsonl and creates run.json only once in finally; preflight and dependency failures are now inside the failure boundary. New attempts reserve distinct directories.",
+  "scope_boundary": "This interrupted attempt is not valid candidate quality evidence. The complete 0.5b-fp16-grounded-iofix run is a separately recorded development rerun on published samples.",
+  "historical_files_modified": false,
+  "finished_time": "not recovered from original failed run; not invented"
+}

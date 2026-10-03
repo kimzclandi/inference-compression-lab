@@ -88,3 +88,7 @@ python3 -m experiments.release_archive verify /tmp/inference-compression-lab-rc.
 预期为 40 条 prompt/token/top10 全部与冻结记录一致。差异会保存并报错，不能重试挑选一致结果。记录位于 `results/independent-review-v1/runtime/`；本轮在无 Git 源码目录完成运行。
 
 ZIP 内部清单只检查自洽性，不是数字签名。转移时先校验交付的外部 SHA256，再检查包内 commit，解压后运行 `verify_release` 和测试。`verify_release` 的固定历史清单锚防止空清单缩小历史保护范围；单独的历史公平基线验证器可在 runner 完成清单前运行，因此发布必须用统一验收入口。
+
+## RC3 QA 整改补充
+
+后续候选在 `codex/qa-quality-remediation`，追加了[QA整改报告](qa-remediation-study.md)。统一 `verify_release` 已纳入新校准完整性和关闭策略检查；技术验收通过时仍明确 `qa_remediation_quality_passed=false`。发布包必须另外运行新 `verify_qa_remediation`、独立统计脚本与入口关闭演示。新校准使用现有环境1.5B原始模型；未重新安装环境、未运行新确认集。旧0.5B五变体和本轮1.5B数据/指标不得混合。

@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "locked": true,
+  "seed": 2026100403,
+  "max_new_tokens": 48,
+  "max_input_tokens": 2048,
+  "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+  "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "source_dtype": "bfloat16",
+  "runtime_dtype": "float16",
+  "quantization": "MLX affine weight-only group_size=64; norms and KV floating; Q8 is not FP8",
+  "prompt_mode": "grounded",
+  "prompt_source_sha256": "1b6f248cd6efb4ffeaa4f6b15e73f33d45c7d2bb3246e889f4ce236dbe0e868f",
+  "threshold_grid": [
+    0,
+    0.5,
+    0.8,
+    0.9,
+    0.95,
+    0.98,
+    0.99,
+    0.995,
+    0.999
+  ],
+  "quality_constraints": {
+    "min_accepted_precision": 0.9,
+    "min_answerable_answer_coverage": 0.4,
+    "min_correct_answerable_coverage": 0.35,
+    "max_unanswerable_false_accept_rate": 0.1,
+    "max_invalid_rate": 0.05
+  },
+  "threshold_selection": "For each precision, evaluate all fixed thresholds on calibration only. Select smallest threshold passing every quality constraint. No maximum-EM fallback.",
+  "failure_rule": "If either FP16 or Q8 has no feasible calibration threshold, stop before any new confirmation inference. Preserve all failed curves, disable the answer entry point, keep confirmation unconsumed. Do not change the model, prompt, thresholds or quality constraints in this study.",
+  "confirmation_rule": "Only when BOTH calibration runs have a feasible threshold: save selection and its calibration evidence hashes in a Git commit, then run each fixed variant once on confirmation. Both must pass the same five quality gates. No selection on confirmation.",
+  "compression_gate": {
+    "metrics": [
+      "system_em",
+      "system_f1"
+    ],
+    "comparison": "Q8 minus FP16 with each independently frozen calibration threshold",
+    "bootstrap": "5000 paired draws, resample context families with replacement within each article; recompute example-weighted mean; article set fixed",
+    "replicates": 5000,
+    "seed": 2026100404,
+    "confidence": 0.95,
+    "minimum_ci_lower_bound": -0.02,
+    "maximum_parameter_tensor_bytes_ratio": 0.6
+  },
+  "scope": "English supplied-passage extractive QA local research prototype. Point-estimate quality gates on SQuAD public dev, not an application deployment certificate; same-model audit is correlated and confidence is uncalibrated. No production security, service load, business distribution or latency SLO validation.",
+  "old_negative_result": "Original 0.5B block10 fallback confirmation failed and remains unchanged; it is retired as a deployment candidate. This is a separate model-capacity/output-contract/compression study, not confirmation of that method.",
+  "data_hashes": {
+    "calibration": "46f40da0963b2ee05b6ab14511ba1812cab7f4567370b5ddd7e416be423034c4",
+    "confirmation": "c20eb3c58f9486852034e75a9552d4504e5664f8cbe4e3ad990ce76b4dadb02f"
+  },
+  "allowed_runs": [
+    {
+      "label": "calibration-fp16",
+      "mode": "grounded",
+      "bits": null,
+      "model_files_sha256": {
+        "LICENSE": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+        "README.md": "2e1bcd8bd964728a820be709fa0f7b9dd54817a94fd2254c535df70c5e67fada",
+        "config.json": "98d2ff8cc47488d08a2b0b3acf4eb99ef210779b42bd48605f6b8e36acdbf670",
+        "generation_config.json": "e558847a8b4402616f1273797b015104dc266fe4b520056fca88823ba8f8ebe6",
+        "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+        "model.safetensors": "dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee",
+        "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+        "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+        "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      },
+      "data_sha256": "46f40da0963b2ee05b6ab14511ba1812cab7f4567370b5ddd7e416be423034c4"
+    },
+    {
+      "label": "calibration-q8",
+      "mode": "grounded",
+      "bits": 8,
+      "model_files_sha256": {
+        "LICENSE": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+        "README.md": "2e1bcd8bd964728a820be709fa0f7b9dd54817a94fd2254c535df70c5e67fada",
+        "config.json": "98d2ff8cc47488d08a2b0b3acf4eb99ef210779b42bd48605f6b8e36acdbf670",
+        "generation_config.json": "e558847a8b4402616f1273797b015104dc266fe4b520056fca88823ba8f8ebe6",
+        "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+        "model.safetensors": "dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee",
+        "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+        "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+        "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      },
+      "data_sha256": "46f40da0963b2ee05b6ab14511ba1812cab7f4567370b5ddd7e416be423034c4"
+    },
+    {
+      "label": "confirmation-fp16",
+      "mode": "grounded",
+      "bits": null,
+      "model_files_sha256": {
+        "LICENSE": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+        "README.md": "2e1bcd8bd964728a820be709fa0f7b9dd54817a94fd2254c535df70c5e67fada",
+        "config.json": "98d2ff8cc47488d08a2b0b3acf4eb99ef210779b42bd48605f6b8e36acdbf670",
+        "generation_config.json": "e558847a8b4402616f1273797b015104dc266fe4b520056fca88823ba8f8ebe6",
+        "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+        "model.safetensors": "dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee",
+        "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+        "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+        "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      },
+      "data_sha256": "c20eb3c58f9486852034e75a9552d4504e5664f8cbe4e3ad990ce76b4dadb02f"
+    },
+    {
+      "label": "confirmation-q8",
+      "mode": "grounded",
+      "bits": 8,
+      "model_files_sha256": {
+        "LICENSE": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+        "README.md": "2e1bcd8bd964728a820be709fa0f7b9dd54817a94fd2254c535df70c5e67fada",
+        "config.json": "98d2ff8cc47488d08a2b0b3acf4eb99ef210779b42bd48605f6b8e36acdbf670",
+        "generation_config.json": "e558847a8b4402616f1273797b015104dc266fe4b520056fca88823ba8f8ebe6",
+        "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+        "model.safetensors": "dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee",
+        "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+        "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+        "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      },
+      "data_sha256": "c20eb3c58f9486852034e75a9552d4504e5664f8cbe4e3ad990ce76b4dadb02f"
+    }
+  ]
+}

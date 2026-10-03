@@ -1,0 +1,36 @@
+{
+  "label": "1.5b-fp16-grounded",
+  "mode": "grounded",
+  "n": 128,
+  "raw_metrics": {
+    "overall": {
+      "n": 128,
+      "em": 0.6640625,
+      "f1": 0.7024400489861016,
+      "format_valid_rate": 0.9609375
+    },
+    "answerable": {
+      "n": 64,
+      "em": 0.734375,
+      "f1": 0.8111300979722033,
+      "format_valid_rate": 0.9375
+    },
+    "unanswerable": {
+      "n": 64,
+      "em": 0.59375,
+      "f1": 0.59375,
+      "format_valid_rate": 0.984375
+    },
+    "unsupported_answer_rate": 0.40625,
+    "over_abstention_rate": 0.0625,
+    "categories": {
+      "correct": 85,
+      "format_or_nonextractive": 5,
+      "wrong_or_partial_span": 9,
+      "over_abstention": 4,
+      "unsupported_answer": 25
+    },
+    "family_macro_em": 0.6705882352941176,
+    "always_abstain_em": 0.5
+  }
+}

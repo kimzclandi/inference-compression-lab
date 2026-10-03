@@ -1,0 +1,22 @@
+{
+  "source_sha256": "80a5225e94905956a6446d296ca1093975c4d3b3260f1d6c8f68bc2ab77182d8",
+  "checks": {
+    "calibration": {
+      "n": 128,
+      "all_records_match_upstream": true,
+      "data_sha256": "46f40da0963b2ee05b6ab14511ba1812cab7f4567370b5ddd7e416be423034c4",
+      "families": 95
+    },
+    "confirmation": {
+      "n": 256,
+      "all_records_match_upstream": true,
+      "data_sha256": "c20eb3c58f9486852034e75a9552d4504e5664f8cbe4e3ad990ce76b4dadb02f",
+      "families": 190
+    }
+  },
+  "fresh_reselection_byte_identical": true,
+  "no_clobber_rejected": true,
+  "model_outputs_read": false,
+  "source_verification": "Independent direct source ID lookup compared all 384 title/context/question/answerability/answer records and answer offsets; normalized text sets checked cross-split disjointness without importing selector helpers.",
+  "selector_sha256": "ee4323be4a7b0e772c959d67f3b3cdf29d32cc282d1fb7dd93dd49196defc95a"
+}
