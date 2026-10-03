@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "/Users/yukaiyan/Documents/Codex/2026-10-04/ai-infra-1-2-2027-ai/work/qa-quality-remediation/experiments/prepare_qa_remediation.py",
+    "--raw",
+    "/Users/yukaiyan/Documents/Codex/2026-10-04/github-readme-2027-ai-infra-1/work/release-prep/squad-dev-v2.0.json",
+    "--output-dir",
+    "configs/qa-remediation/dataset"
+  ],
+  "source_sha256": "80a5225e94905956a6446d296ca1093975c4d3b3260f1d6c8f68bc2ab77182d8",
+  "selector_sha256": "ee4323be4a7b0e772c959d67f3b3cdf29d32cc282d1fb7dd93dd49196defc95a",
+  "selection_sha256": "234b3a9d0e8c4f17d11ae53cc559a6fbacc819515023e45e235a10eacd2d0b0f",
+  "exclusions_sha256": "a8408a63bab2efcd8019ecee520c3fd8d6b81e7227ebad39caf64814a6914aa7"
+}

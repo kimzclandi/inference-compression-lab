@@ -1,0 +1,33 @@
+{
+  "split": "confirmation",
+  "selection_sha256": "234b3a9d0e8c4f17d11ae53cc559a6fbacc819515023e45e235a10eacd2d0b0f",
+  "exclusions_sha256": "a8408a63bab2efcd8019ecee520c3fd8d6b81e7227ebad39caf64814a6914aa7",
+  "data_sha256": "c20eb3c58f9486852034e75a9552d4504e5664f8cbe4e3ad990ce76b4dadb02f",
+  "titles": [
+    "Construction",
+    "Intergovernmental_Panel_on_Climate_Change",
+    "Scottish_Parliament",
+    "1973_oil_crisis",
+    "University_of_Chicago",
+    "Warsaw",
+    "European_Union_law",
+    "Black_Death"
+  ],
+  "n": 256,
+  "families": 190,
+  "unanswerable": 128,
+  "eligible_articles": 24,
+  "effective_exclusion_counts": {
+    "ids": 834,
+    "titles": 107,
+    "context_hashes": 370,
+    "question_hashes": 834
+  },
+  "license": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+    "attribution": "SQuAD 2.0: Pranav Rajpurkar, Robin Jia, Percy Liang; passages by Wikipedia contributors.",
+    "source_project": "https://rajpurkar.github.io/SQuAD-explorer/"
+  },
+  "scope": "Public SQuAD dev local splits, never an official hidden test. Calibration may select the predeclared threshold only, not the model or prompt. Confirmation is reserved for one final frozen-policy evaluation. These samples are new only to the inventoried project datasets; pretraining contamination and semantic near-duplicates are unknown. Results generalize at most to this selected article distribution. Once published or evaluated, future runs are reproductions, not fresh confirmation."
+}

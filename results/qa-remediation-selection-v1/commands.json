@@ -1,0 +1,50 @@
+[
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "-B",
+      "-m",
+      "experiments.prepare_qa_remediation",
+      "--raw",
+      "/Users/yukaiyan/Documents/Codex/2026-10-04/github-readme-2027-ai-infra-1/work/release-prep/squad-dev-v2.0.json",
+      "--output-dir",
+      "/var/folders/k2/x_hsgl2n4nb4gcc0ss_4h7kc0000gn/T/tmpfuz059fr/cohorts"
+    ],
+    "returncode": 0,
+    "stdout": "{\"calibration\": {\"n\": 128, \"families\": 95, \"titles\": [\"Oxygen\", \"Southern_California\", \"Pharmacy\", \"Economic_inequality\"]}, \"confirmation\": {\"n\": 256, \"families\": 190, \"titles\": [\"Construction\", \"Intergovernmental_Panel_on_Climate_Change\", \"Scottish_Parliament\", \"1973_oil_crisis\", \"University_of_Chicago\", \"Warsaw\", \"European_Union_law\", \"Black_Death\"]}}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "-B",
+      "-m",
+      "experiments.prepare_qa_remediation",
+      "--raw",
+      "/Users/yukaiyan/Documents/Codex/2026-10-04/github-readme-2027-ai-infra-1/work/release-prep/squad-dev-v2.0.json",
+      "--output-dir",
+      "/var/folders/k2/x_hsgl2n4nb4gcc0ss_4h7kc0000gn/T/tmpfuz059fr/cohorts"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 203, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/yukaiyan/Documents/Codex/2026-10-04/ai-infra-1-2-2027-ai/work/qa-quality-remediation/experiments/prepare_qa_remediation.py\", line 218, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/yukaiyan/Documents/Codex/2026-10-04/ai-infra-1-2-2027-ai/work/qa-quality-remediation/experiments/prepare_qa_remediation.py\", line 186, in main\n    out = reserve_directory(args.output_dir)\n  File \"/Users/yukaiyan/Documents/Codex/2026-10-04/ai-infra-1-2-2027-ai/work/qa-quality-remediation/lab/evidence.py\", line 15, in reserve_directory\n    path.mkdir(parents=True, exist_ok=False)\n    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py\", line 1011, in mkdir\n    os.mkdir(self, mode)\n    ~~~~~~~~^^^^^^^^^^^^\nFileExistsError: [Errno 17] File exists: '/var/folders/k2/x_hsgl2n4nb4gcc0ss_4h7kc0000gn/T/tmpfuz059fr/cohorts'\n",
+    "expected_failure": "Existing output directory must not be reused"
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_qa_remediation_selection.py",
+      "-v"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "test_frozen_data_independently_satisfies_balance_and_disjointness (test_qa_remediation_selection.CommittedCohortTests.test_frozen_data_independently_satisfies_balance_and_disjointness) ... ok\ntest_merged_exclusions_preserve_all_inventoried_and_202_old_rows (test_qa_remediation_selection.CommittedCohortTests.test_merged_exclusions_preserve_all_inventoried_and_202_old_rows) ... ok\ntest_calibration_contexts_are_excluded_even_in_other_articles (test_qa_remediation_selection.SelectionContractTests.test_calibration_contexts_are_excluded_even_in_other_articles) ... ok\ntest_calibration_questions_are_excluded_even_in_other_articles (test_qa_remediation_selection.SelectionContractTests.test_calibration_questions_are_excluded_even_in_other_articles) ... ok\ntest_cross_article_question_duplicate_rejected (test_qa_remediation_selection.SelectionContractTests.test_cross_article_question_duplicate_rejected) ... ok\ntest_deterministic_under_upstream_order_and_no_class_fallback (test_qa_remediation_selection.SelectionContractTests.test_deterministic_under_upstream_order_and_no_class_fallback) ... ok\ntest_each_exclusion_axis_filters_an_otherwise_eligible_record (test_qa_remediation_selection.SelectionContractTests.test_each_exclusion_axis_filters_an_otherwise_eligible_record) ... ok\ntest_insufficient_remaining_articles_cannot_shrink_confirmation (test_qa_remediation_selection.SelectionContractTests.test_insufficient_remaining_articles_cannot_shrink_confirmation) ... ok\ntest_insufficient_unique_contexts_fail_even_with_many_questions (test_qa_remediation_selection.SelectionContractTests.test_insufficient_unique_contexts_fail_even_with_many_questions) ... ok\ntest_invalid_answer_offset_and_answerability_fail (test_qa_remediation_selection.SelectionContractTests.test_invalid_answer_offset_and_answerability_fail) ... ok\ntest_removed_or_resigned_family_record_is_rejected (test_qa_remediation_selection.SelectionContractTests.test_removed_or_resigned_family_record_is_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 11 tests in 0.015s\n\nOK\n"
+  }
+]

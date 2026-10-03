@@ -4,6 +4,7 @@ The binary audit score is a ranking score, not a calibrated probability.
 No gold answers, labels, or split metadata are used by inference.
 """
 import hashlib
+import json
 import math
 import time
 
@@ -32,8 +33,6 @@ def messages(context, question, mode):
 
 
 def encode(tok, turns, max_input_tokens=2048):
-    if type(max_input_tokens) is not int or max_input_tokens <= 0:
-        raise ValueError('max_input_tokens must be a positive integer')
     text=tok.apply_chat_template(turns,tokenize=False,add_generation_prompt=True)
     ids=tok.encode(text,add_special_tokens=False)
     if not ids or len(ids)>max_input_tokens:
@@ -41,29 +40,7 @@ def encode(tok, turns, max_input_tokens=2048):
     return ids,hashlib.sha256(text.encode()).hexdigest()
 
 
-def binary_audit_score(yes_logit, no_logit):
-    """Conditional Yes-vs-No ranking score, never a calibrated probability.
-
-    Nonfinite values are errors, not evidence for either answering or refusing.
-    The sign-specific sigmoid avoids overflowing exp for large finite logits.
-    """
-    for value in (yes_logit, no_logit):
-        if isinstance(value, bool) or not isinstance(value, (int, float)) or not math.isfinite(value):
-            raise ValueError('Audit logits must be finite scalar numbers')
-    difference = yes_logit - no_logit
-    if difference >= 0:
-        return 1 / (1 + math.exp(-difference))
-    exponential = math.exp(difference)
-    return exponential / (1 + exponential)
-
-
 def predict(model,tok,context,question,mode='grounded',max_new_tokens=48,max_input_tokens=2048):
-    if not isinstance(context, str) or not context.strip() or not isinstance(question, str) or not question.strip():
-        raise ValueError('context and question must be nonempty strings')
-    if mode not in SYSTEM:
-        raise ValueError('Unknown prompt mode')
-    if type(max_new_tokens) is not int or max_new_tokens <= 0:
-        raise ValueError('max_new_tokens must be a positive integer')
     from experiments.qwen_quantization import generate
     import mlx.core as mx
     from mlx_lm.models.cache import make_prompt_cache
@@ -77,20 +54,14 @@ def predict(model,tok,context,question,mode='grounded',max_new_tokens=48,max_inp
                {'role':'user','content':user_text(context,question)+f'\n\nProposed answer: {raw}\nIs this answer supported and correct? Reply Yes or No.'}]
         audit_ids,ah=encode(tok,turns,max_input_tokens)
         yes,no=tok.encode('Yes',add_special_tokens=False),tok.encode('No',add_special_tokens=False)
-        if len(yes)!=1 or len(no)!=1 or yes[0] == no[0]:
-            raise ValueError('Audit labels must each be one distinct token')
+        if len(yes)!=1 or len(no)!=1:raise ValueError('Audit labels must each be one token')
         logits=model(mx.array([audit_ids]),cache=make_prompt_cache(model))[0,-1,:].astype(mx.float32)
         mx.eval(logits);mx.synchronize()
-        if logits.ndim != 1 or not bool(mx.all(mx.isfinite(logits)).item()):
-            raise ValueError('Audit vocabulary logits must be a finite vector')
         y,n=float(logits[yes[0]].item()),float(logits[no[0]].item())
-        confidence=binary_audit_score(y,n)
-        binary_mass=float(mx.exp(mx.logsumexp(logits[mx.array([yes[0],no[0]])])-mx.logsumexp(logits)).item())
-        if not math.isfinite(binary_mass) or not 0 <= binary_mass <= 1:
-            raise ValueError('Audit label mass must be finite and in [0, 1]')
+        confidence=1/(1+math.exp(max(-700,min(700,n-y))))
         audit={'yes_logit':y,'no_logit':n,'confidence':confidence,
                'yes_token':yes[0],'no_token':no[0],
-               'binary_mass':binary_mass,
+               'binary_mass':float(mx.exp(mx.logsumexp(logits[mx.array([yes[0],no[0]])])-mx.logsumexp(logits)).item()),
                'top1_token':int(mx.argmax(logits).item()),'input_tokens':len(audit_ids),'prompt_sha256':ah}
     return {**answer,'confidence':confidence,'audit':audit,'prompt_sha256':ph,
             'total_pipeline_seconds':time.perf_counter()-start}

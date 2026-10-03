@@ -1,0 +1,14 @@
+{
+  "seed": 2026100403,
+  "max_new_tokens": 48,
+  "max_input_tokens": 2048,
+  "development_data": "Already published 128-question confirmation-v1 cohort, now development only",
+  "candidate_budget": [
+    "0.5B FP16 legacy historical",
+    "0.5B FP16 grounded few-shot",
+    "1.5B FP16 legacy",
+    "1.5B FP16 grounded few-shot"
+  ],
+  "audit": "One separate Yes/No answer-support model call for exact-substring proposed answers. Conditional binary logit score is not a calibrated probability.",
+  "stop_rule": "Run each development candidate once. Select candidate on disclosed dev; fix model/prompt before fresh calibration. No confirmation evaluation before final protocol commit. No rescanning blocks to erase the old negative result."
+}

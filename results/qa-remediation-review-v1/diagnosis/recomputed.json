@@ -1,0 +1,618 @@
+{
+  "scope": "202 published cases, five variants; no model run; scorer unchanged.",
+  "verified_scored_records": 1010,
+  "prompt_and_input_identity_across_variants": true,
+  "by_dataset": {
+    "qwen-quantization-v1": {
+      "n": 74,
+      "answerable_n": 33,
+      "unanswerable_n": 41,
+      "variants": {
+        "fp16": {
+          "all": {
+            "n": 74,
+            "em_count": 19,
+            "em": 0.25675675675675674,
+            "f1": 0.30128205128205127,
+            "abstain_count": 0,
+            "format_valid_count": 71
+          },
+          "answerable": {
+            "n": 33,
+            "em_count": 19,
+            "em": 0.5757575757575758,
+            "f1": 0.6756021756021756,
+            "abstain_count": 0,
+            "format_valid_count": 33
+          },
+          "unanswerable": {
+            "n": 41,
+            "em_count": 0,
+            "em": 0.0,
+            "f1": 0.0,
+            "abstain_count": 0,
+            "format_valid_count": 38
+          },
+          "fp16_em_gained": [],
+          "fp16_em_lost": [],
+          "raw_prediction_changes_vs_fp16": 0,
+          "stop_reasons": {
+            "eos": 74
+          },
+          "invalid_reject_counterfactual": {
+            "scope": "Offline deterministic simulation on published outputs, NOT new model evidence or deployment validation.",
+            "gains": 3,
+            "losses": 0,
+            "all": {
+              "n": 74,
+              "em_count": 22,
+              "em": 0.2972972972972973,
+              "f1": 0.34182259182259184,
+              "abstain_count": 3,
+              "format_valid_count": 74
+            }
+          }
+        },
+        "q4": {
+          "all": {
+            "n": 74,
+            "em_count": 16,
+            "em": 0.21621621621621623,
+            "f1": 0.24441358853123557,
+            "abstain_count": 0,
+            "format_valid_count": 40
+          },
+          "answerable": {
+            "n": 33,
+            "em_count": 16,
+            "em": 0.48484848484848486,
+            "f1": 0.5480789561003464,
+            "abstain_count": 0,
+            "format_valid_count": 20
+          },
+          "unanswerable": {
+            "n": 41,
+            "em_count": 0,
+            "em": 0.0,
+            "f1": 0.0,
+            "abstain_count": 0,
+            "format_valid_count": 20
+          },
+          "fp16_em_gained": [
+            "56e17a7ccd28a01900c679a4",
+            "56e1a0dccd28a01900c67a2f",
+            "56e2042ecd28a01900c67c20"
+          ],
+          "fp16_em_lost": [
+            "56e17a7ccd28a01900c679a1",
+            "56e17a7ccd28a01900c679a5",
+            "56e1b754cd28a01900c67abc",
+            "56e1c0f6cd28a01900c67b2c",
+            "56e1cbe2cd28a01900c67bad",
+            "56e1ec83cd28a01900c67c0e"
+          ],
+          "raw_prediction_changes_vs_fp16": 49,
+          "stop_reasons": {
+            "eos": 72,
+            "max_new_tokens": 2
+          },
+          "invalid_reject_counterfactual": {
+            "scope": "Offline deterministic simulation on published outputs, NOT new model evidence or deployment validation.",
+            "gains": 21,
+            "losses": 2,
+            "all": {
+              "n": 74,
+              "em_count": 35,
+              "em": 0.47297297297297297,
+              "f1": 0.47297297297297297,
+              "abstain_count": 34,
+              "format_valid_count": 74
+            }
+          }
+        },
+        "q8": {
+          "all": {
+            "n": 74,
+            "em_count": 18,
+            "em": 0.24324324324324326,
+            "f1": 0.29677754677754675,
+            "abstain_count": 0,
+            "format_valid_count": 70
+          },
+          "answerable": {
+            "n": 33,
+            "em_count": 18,
+            "em": 0.5454545454545454,
+            "f1": 0.6655011655011654,
+            "abstain_count": 0,
+            "format_valid_count": 33
+          },
+          "unanswerable": {
+            "n": 41,
+            "em_count": 0,
+            "em": 0.0,
+            "f1": 0.0,
+            "abstain_count": 0,
+            "format_valid_count": 37
+          },
+          "fp16_em_gained": [],
+          "fp16_em_lost": [
+            "56e1fc57e3433e140042322f"
+          ],
+          "raw_prediction_changes_vs_fp16": 3,
+          "stop_reasons": {
+            "eos": 74
+          },
+          "invalid_reject_counterfactual": {
+            "scope": "Offline deterministic simulation on published outputs, NOT new model evidence or deployment validation.",
+            "gains": 4,
+            "losses": 0,
+            "all": {
+              "n": 74,
+              "em_count": 22,
+              "em": 0.2972972972972973,
+              "f1": 0.3508316008316008,
+              "abstain_count": 4,
+              "format_valid_count": 74
+            }
+          }
+        },
+        "selected": {
+          "all": {
+            "n": 74,
+            "em_count": 18,
+            "em": 0.24324324324324326,
+            "f1": 0.2887537078713549,
+            "abstain_count": 0,
+            "format_valid_count": 50
+          },
+          "answerable": {
+            "n": 33,
+            "em_count": 18,
+            "em": 0.5454545454545454,
+            "f1": 0.6475083146206141,
+            "abstain_count": 0,
+            "format_valid_count": 25
+          },
+          "unanswerable": {
+            "n": 41,
+            "em_count": 0,
+            "em": 0.0,
+            "f1": 0.0,
+            "abstain_count": 0,
+            "format_valid_count": 25
+          },
+          "fp16_em_gained": [
+            "56e17a7ccd28a01900c679a4",
+            "56e1a0dccd28a01900c67a2f",
+            "56e2042ecd28a01900c67c20"
+          ],
+          "fp16_em_lost": [
+            "56e17a7ccd28a01900c679a1",
+            "56e1b754cd28a01900c67abc",
+            "56e1cbe2cd28a01900c67bad",
+            "56e1ec83cd28a01900c67c0e"
+          ],
+          "raw_prediction_changes_vs_fp16": 44,
+          "stop_reasons": {
+            "eos": 73,
+            "max_new_tokens": 1
+          },
+          "invalid_reject_counterfactual": {
+            "scope": "Offline deterministic simulation on published outputs, NOT new model evidence or deployment validation.",
+            "gains": 16,
+            "losses": 0,
+            "all": {
+              "n": 74,
+              "em_count": 34,
+              "em": 0.4594594594594595,
+              "f1": 0.47583947583947583,
+              "abstain_count": 24,
+              "format_valid_count": 74
+            }
+          }
+        },
+        "control": {
+          "all": {
+            "n": 74,
+            "em_count": 16,
+            "em": 0.21621621621621623,
+            "f1": 0.2538730479906951,
+            "abstain_count": 0,
+            "format_valid_count": 39
+          },
+          "answerable": {
+            "n": 33,
+            "em_count": 16,
+            "em": 0.48484848484848486,
+            "f1": 0.5692910773124678,
+            "abstain_count": 0,
+            "format_valid_count": 20
+          },
+          "unanswerable": {
+            "n": 41,
+            "em_count": 0,
+            "em": 0.0,
+            "f1": 0.0,
+            "abstain_count": 0,
+            "format_valid_count": 19
+          },
+          "fp16_em_gained": [
+            "56e17a7ccd28a01900c679a4",
+            "56e1a0dccd28a01900c67a2f",
+            "56e2042ecd28a01900c67c20"
+          ],
+          "fp16_em_lost": [
+            "56e17a7ccd28a01900c679a1",
+            "56e1b754cd28a01900c67abc",
+            "56e1c0f6cd28a01900c67b2c",
+            "56e1cbe2cd28a01900c67bad",
+            "56e1ec83cd28a01900c67c0a",
+            "56e1ec83cd28a01900c67c0e"
+          ],
+          "raw_prediction_changes_vs_fp16": 48,
+          "stop_reasons": {
+            "eos": 72,
+            "max_new_tokens": 2
+          },
+          "invalid_reject_counterfactual": {
+            "scope": "Offline deterministic simulation on published outputs, NOT new model evidence or deployment validation.",
+            "gains": 22,
+            "losses": 1,
+            "all": {
+              "n": 74,
+              "em_count": 37,
+              "em": 0.5,
+              "f1": 0.5,
+              "abstain_count": 35,
+              "format_valid_count": 74
+            }
+          }
+        }
+      }
+    },
+    "qwen-confirmation-v1": {
+      "n": 128,
+      "answerable_n": 64,
+      "unanswerable_n": 64,
+      "variants": {
+        "fp16": {
+          "all": {
+            "n": 128,
+            "em_count": 33,
+            "em": 0.2578125,
+            "f1": 0.325181199009324,
+            "abstain_count": 0,
+            "format_valid_count": 110
+          },
+          "answerable": {
+            "n": 64,
+            "em_count": 33,
+            "em": 0.515625,
+            "f1": 0.650362398018648,
+            "abstain_count": 0,
+            "format_valid_count": 57
+          },
+          "unanswerable": {
+            "n": 64,
+            "em_count": 0,
+            "em": 0.0,
+            "f1": 0.0,
+            "abstain_count": 0,
+            "format_valid_count": 53
+          },
+          "fp16_em_gained": [],
+          "fp16_em_lost": [],
+          "raw_prediction_changes_vs_fp16": 0,
+          "stop_reasons": {
+            "eos": 127,
+            "max_new_tokens": 1
+          },
+          "invalid_reject_counterfactual": {
+            "scope": "Offline deterministic simulation on published outputs, NOT new model evidence or deployment validation.",
+            "gains": 11,
+            "losses": 0,
+            "all": {
+              "n": 128,
+              "em_count": 44,
+              "em": 0.34375,
+              "f1": 0.38900331439393937,
+              "abstain_count": 18,
+              "format_valid_count": 128
+            }
+          }
+        },
+        "q4": {
+          "all": {
+            "n": 128,
+            "em_count": 26,
+            "em": 0.203125,
+            "f1": 0.2810016760469063,
+            "abstain_count": 0,
+            "format_valid_count": 82
+          },
+          "answerable": {
+            "n": 64,
+            "em_count": 26,
+            "em": 0.40625,
+            "f1": 0.5620033520938126,
+            "abstain_count": 0,
+            "format_valid_count": 38
+          },
+          "unanswerable": {
+            "n": 64,
+            "em_count": 0,
+            "em": 0.0,
+            "f1": 0.0,
+            "abstain_count": 0,
+            "format_valid_count": 44
+          },
+          "fp16_em_gained": [
+            "570966e0200fba1400367f53",
+            "57096b66200fba1400367faa",
+            "570d4329fed7b91900d45dd8"
+          ],
+          "fp16_em_lost": [
+            "570d2556fed7b91900d45c49",
+            "570d391fb3d812140066d579",
+            "5727cd7dff5b5019007d9590",
+            "57280e1aff5b5019007d9bee",
+            "57281d494b864d19001644c0",
+            "572820512ca10214002d9e74",
+            "572821274b864d1900164513",
+            "572f60f4947a6a140053c8ea",
+            "572ff4ca04bcaa1900d76f24",
+            "572ffce5a23a5019007fcc18"
+          ],
+          "raw_prediction_changes_vs_fp16": 78,
+          "stop_reasons": {
+            "eos": 126,
+            "max_new_tokens": 2
+          },
+          "invalid_reject_counterfactual": {
+            "scope": "Offline deterministic simulation on published outputs, NOT new model evidence or deployment validation.",
+            "gains": 20,
+            "losses": 2,
+            "all": {
+              "n": 128,
+              "em_count": 44,
+              "em": 0.34375,
+              "f1": 0.363671875,
+              "abstain_count": 46,
+              "format_valid_count": 128
+            }
+          }
+        },
+        "q8": {
+          "all": {
+            "n": 128,
+            "em_count": 34,
+            "em": 0.265625,
+            "f1": 0.329087449009324,
+            "abstain_count": 0,
+            "format_valid_count": 109
+          },
+          "answerable": {
+            "n": 64,
+            "em_count": 34,
+            "em": 0.53125,
+            "f1": 0.658174898018648,
+            "abstain_count": 0,
+            "format_valid_count": 56
+          },
+          "unanswerable": {
+            "n": 64,
+            "em_count": 0,
+            "em": 0.0,
+            "f1": 0.0,
+            "abstain_count": 0,
+            "format_valid_count": 53
+          },
+          "fp16_em_gained": [
+            "57096b66200fba1400367faa"
+          ],
+          "fp16_em_lost": [],
+          "raw_prediction_changes_vs_fp16": 4,
+          "stop_reasons": {
+            "eos": 127,
+            "max_new_tokens": 1
+          },
+          "invalid_reject_counterfactual": {
+            "scope": "Offline deterministic simulation on published outputs, NOT new model evidence or deployment validation.",
+            "gains": 11,
+            "losses": 0,
+            "all": {
+              "n": 128,
+              "em_count": 45,
+              "em": 0.3515625,
+              "f1": 0.39290956439393937,
+              "abstain_count": 19,
+              "format_valid_count": 128
+            }
+          }
+        },
+        "selected": {
+          "all": {
+            "n": 128,
+            "em_count": 29,
+            "em": 0.2265625,
+            "f1": 0.283478452742433,
+            "abstain_count": 0,
+            "format_valid_count": 92
+          },
+          "answerable": {
+            "n": 64,
+            "em_count": 29,
+            "em": 0.453125,
+            "f1": 0.566956905484866,
+            "abstain_count": 0,
+            "format_valid_count": 46
+          },
+          "unanswerable": {
+            "n": 64,
+            "em_count": 0,
+            "em": 0.0,
+            "f1": 0.0,
+            "abstain_count": 0,
+            "format_valid_count": 46
+          },
+          "fp16_em_gained": [
+            "570966e0200fba1400367f53",
+            "57096b66200fba1400367faa",
+            "570d4329fed7b91900d45dd8"
+          ],
+          "fp16_em_lost": [
+            "570d2556fed7b91900d45c49",
+            "5727cd7dff5b5019007d9590",
+            "57280e1aff5b5019007d9bee",
+            "57281d494b864d19001644c0",
+            "572f60f4947a6a140053c8ea",
+            "572ff4ca04bcaa1900d76f24",
+            "572ffce5a23a5019007fcc18"
+          ],
+          "raw_prediction_changes_vs_fp16": 72,
+          "stop_reasons": {
+            "eos": 126,
+            "max_new_tokens": 2
+          },
+          "invalid_reject_counterfactual": {
+            "scope": "Offline deterministic simulation on published outputs, NOT new model evidence or deployment validation.",
+            "gains": 18,
+            "losses": 2,
+            "all": {
+              "n": 128,
+              "em_count": 45,
+              "em": 0.3515625,
+              "f1": 0.377734375,
+              "abstain_count": 36,
+              "format_valid_count": 128
+            }
+          }
+        },
+        "control": {
+          "all": {
+            "n": 128,
+            "em_count": 25,
+            "em": 0.1953125,
+            "f1": 0.27573689772178317,
+            "abstain_count": 0,
+            "format_valid_count": 77
+          },
+          "answerable": {
+            "n": 64,
+            "em_count": 25,
+            "em": 0.390625,
+            "f1": 0.5514737954435663,
+            "abstain_count": 0,
+            "format_valid_count": 37
+          },
+          "unanswerable": {
+            "n": 64,
+            "em_count": 0,
+            "em": 0.0,
+            "f1": 0.0,
+            "abstain_count": 0,
+            "format_valid_count": 40
+          },
+          "fp16_em_gained": [
+            "570966e0200fba1400367f53",
+            "57096b66200fba1400367faa",
+            "570d4329fed7b91900d45dd8"
+          ],
+          "fp16_em_lost": [
+            "570d2556fed7b91900d45c49",
+            "570d391fb3d812140066d579",
+            "5727cd7dff5b5019007d9590",
+            "57280e1aff5b5019007d9bee",
+            "57281d494b864d19001644c0",
+            "572820512ca10214002d9e74",
+            "572821274b864d1900164513",
+            "572f60f4947a6a140053c8ea",
+            "572ff4ca04bcaa1900d76f24",
+            "572ff673b2c2fd1400568669",
+            "572ffce5a23a5019007fcc18"
+          ],
+          "raw_prediction_changes_vs_fp16": 82,
+          "stop_reasons": {
+            "eos": 125,
+            "max_new_tokens": 3
+          },
+          "invalid_reject_counterfactual": {
+            "scope": "Offline deterministic simulation on published outputs, NOT new model evidence or deployment validation.",
+            "gains": 24,
+            "losses": 2,
+            "all": {
+              "n": 128,
+              "em_count": 47,
+              "em": 0.3671875,
+              "f1": 0.387109375,
+              "abstain_count": 51,
+              "format_valid_count": 128
+            }
+          }
+        }
+      }
+    }
+  },
+  "combined": {
+    "fp16": {
+      "n": 202,
+      "em_count": 52,
+      "em": 0.25742574257425743,
+      "f1": 0.3164260656834914,
+      "abstain_count": 0,
+      "format_valid_count": 181
+    },
+    "q4": {
+      "n": 202,
+      "em_count": 42,
+      "em": 0.2079207920792079,
+      "f1": 0.2675981192342349,
+      "abstain_count": 0,
+      "format_valid_count": 122
+    },
+    "q8": {
+      "n": 202,
+      "em_count": 52,
+      "em": 0.25742574257425743,
+      "f1": 0.31725114819174227,
+      "abstain_count": 0,
+      "format_valid_count": 179
+    },
+    "selected": {
+      "n": 202,
+      "em_count": 47,
+      "em": 0.23267326732673269,
+      "f1": 0.28541097194807763,
+      "abstain_count": 0,
+      "format_valid_count": 142
+    },
+    "control": {
+      "n": 202,
+      "em_count": 41,
+      "em": 0.20297029702970298,
+      "f1": 0.2677273686123746,
+      "abstain_count": 0,
+      "format_valid_count": 116
+    }
+  },
+  "input_sha256": {
+    "results/qwen-quantization-v1/data.jsonl": "8eb033584f81c1e5763c609fc6259678a550329dd9e72cdf89e4c806084c2a68",
+    "results/qwen-quantization-v1/prompt.json": "7f490913d663f40d5248d59c0c09a899bbdbb6546e05c98fbdf7cdd47866aa13",
+    "results/qwen-quantization-v1/protocol.json": "3d844bdeb797bfdc1988f5f3cbea6650c4e224f82b2d52a7e352f56761d75ac4",
+    "results/qwen-quantization-v1/fp16-quality.json": "b754c81d87d866081aa6bbffa3871ccde4e260fadff992b50a00b34e583c2d1f",
+    "results/qwen-quantization-v1/q4-quality.json": "fe5e09ecfdf4b639f42887df047ecb9d0b661e27b027599e03e34113413efecf",
+    "results/qwen-quantization-v1/q8-quality.json": "5a183e5153ec9480c177856f095bea7c62010ed437e7dee138950c057927f115",
+    "results/qwen-quantization-v1/selected-quality.json": "dda0f842a5a97d73b108ce183c4fce12909151a84d2bb50b4ff1ff8433e79223",
+    "results/qwen-quantization-v1/control-quality.json": "b16fe0fe555bcaca63cfef4f9cc3c2cbf4d03482b55c5d4c01ceb10505a90d50",
+    "results/qwen-confirmation-v1/data.jsonl": "4b352f5923279ead7407a53e160d6d010de9bce2140b70133b4e75cb3fe9a970",
+    "results/qwen-confirmation-v1/prompt.json": "7f490913d663f40d5248d59c0c09a899bbdbb6546e05c98fbdf7cdd47866aa13",
+    "results/qwen-confirmation-v1/protocol.json": "c0b9e65db025055c53c2ee345625d498978485421e9398cf5c242f5af369c553",
+    "results/qwen-confirmation-v1/fp16-quality.json": "1bf314685c98dfb71f42d6bcbf6409749945f9e49f15d12f852bbe5552d6eb58",
+    "results/qwen-confirmation-v1/q4-quality.json": "8f6558e040e73dd48df8beb0de9159d80eaf039a199e609b02685a8e8c3518c1",
+    "results/qwen-confirmation-v1/q8-quality.json": "7da4d7051ab391ba8d61efbc70413e1cc4917cb00a7c790af5ab8767d4e1c2de",
+    "results/qwen-confirmation-v1/selected-quality.json": "8c8b23649f29313817c1ef4682af85af8f2e4e03bc23f701ad72ccc6a669c104",
+    "results/qwen-confirmation-v1/control-quality.json": "5464468f3f3e77587d7e4a5fa8c3af6e01dd6553e9e933ce0797e0d296ae5ea1"
+  },
+  "script_sha256": "115afbfff5af3c429990515d90dd11fbd6cf790c9a0d392d3ab47287a0bb3b5e"
+}

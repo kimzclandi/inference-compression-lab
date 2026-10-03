@@ -1,0 +1,11 @@
+{
+  "data.jsonl": "4b352f5923279ead7407a53e160d6d010de9bce2140b70133b4e75cb3fe9a970",
+  "predictions.jsonl": "40c088af75ec9d4280addce1dda2f7cfe34d15f45855a1c7c12ab4c3580b042c",
+  "protocol.json": "7c27dc8f427e7d122cab3f02bf9e84d51b79b22d6ba5fdac13fa1aa3a102496b",
+  "run.json": "31972440abe08ba18675fef047f93aba32b7c4aaa49bfab10b6b2036d22c7555",
+  "source/experiments/qa_remediation.py": "1f9f37630d8907d984364e50100871cba785a0de06781e7969e80a1dab0a8a3c",
+  "source/experiments/qwen_quantization.py": "7e15fe4e5af77d737c098928c3979b16f337fffa0a38f628924a1d2a05fb2136",
+  "source/lab/grounded_qa.py": "7acb5d9be8da25f65c93bfbfa69d9d2957bded1648b0a8552cc7c863daccf412",
+  "source/lab/qa_metrics.py": "78c4af7f06ba49b3acddd2610586336ecf585c06d8ad89b46ff9fb6358aaaa1f",
+  "started.json": "af9a9b0002d3f6abe81fa7573a477223b1b945c32107f390e8d91bde59f86b4c"
+}
