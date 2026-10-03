@@ -1,0 +1,24 @@
+{
+  "split": "calibration",
+  "n": 128,
+  "titles": [
+    "Normans",
+    "Geology",
+    "Private_school",
+    "Amazon_rainforest"
+  ],
+  "families": 86,
+  "unanswerable": 64,
+  "data_sha256": "e98f650dc240ab14e84861e7f7dc3efbeb1da9b49c06079fcaaa1159860ca759",
+  "selection_sha256": "6c6fe2e83fa7c0288e84d17c09b7530af059be7918622e9346722ef40b3dec5a",
+  "exclusions_sha256": "c0cacff222f6760e5e1fb2d3879015ec37276976ad950d5237ec7a9f71923476",
+  "source": "previously_observed_specialist_development",
+  "eligible_articles": null,
+  "license": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+    "attribution": "SQuAD 2.0: Pranav Rajpurkar, Robin Jia, Percy Liang; passages by Wikipedia contributors.",
+    "source_project": "https://rajpurkar.github.io/SQuAD-explorer/"
+  },
+  "scope": "One additional supervised correctness-ranking hypothesis, after the frozen specialist policy failed public-benchmark evaluation. All old specialist 384 rows, including failed evaluation, are explicitly development and cannot support a new holdout claim. The new 128-row evaluation is a fixed local public SQuAD2 benchmark assessment, not model-unseen confirmation or official hidden test: the upstream specialist was trained on SQuAD2 and already publicly evaluated on dev. Article-level disjointness and exact filtering do not remove upstream benchmark exposure, pretraining contamination, semantic near-duplicates, or the sequence of project-level hypothesis decisions. Only four remaining articles limit external validity. If this one fixed hypothesis fails, retain failure and stop further model/feature search in this round."
+}

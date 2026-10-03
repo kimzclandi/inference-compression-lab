@@ -1,0 +1,69 @@
+{
+  "all_pass": true,
+  "reselected_byte_identical": [
+    "manifest.json",
+    "train/data.jsonl",
+    "train/manifest.json",
+    "calibration/data.jsonl",
+    "calibration/manifest.json",
+    "evaluation/data.jsonl",
+    "evaluation/manifest.json"
+  ],
+  "existing_output_rejected": true,
+  "commands": [
+    {
+      "argv": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-B",
+        "-m",
+        "experiments.prepare_qa_risk_data",
+        "--raw",
+        "/Users/yukaiyan/Documents/Codex/2026-10-04/github-readme-2027-ai-infra-1/work/release-prep/squad-dev-v2.0.json",
+        "--output-dir",
+        "/var/folders/k2/x_hsgl2n4nb4gcc0ss_4h7kc0000gn/T/qa-risk-reselection-r_bifgyr/selected"
+      ],
+      "returncode": 0,
+      "stdout": "{\"train\": {\"n\": 256, \"titles\": [\"Imperialism\", \"Islamism\", \"Steam_engine\", \"Force\", \"Fresno,_California\", \"French_and_Indian_War\", \"Huguenot\", \"Immune_system\"], \"families\": 206, \"data_sha256\": \"fdadbc19b5b0d978971ead19e10469d0f92d76187fc923c904d1cf878b81a3a2\", \"eligible_articles\": null}, \"calibration\": {\"n\": 128, \"titles\": [\"Normans\", \"Geology\", \"Private_school\", \"Amazon_rainforest\"], \"families\": 86, \"data_sha256\": \"e98f650dc240ab14e84861e7f7dc3efbeb1da9b49c06079fcaaa1159860ca759\", \"eligible_articles\": null}, \"evaluation\": {\"n\": 128, \"titles\": [\"Ctenophora\", \"Civil_disobedience\", \"Yuan_dynasty\", \"Harvard_University\"], \"families\": 96, \"data_sha256\": \"d5d1c2e80291bf203179a2151ae71276c00f966e00aa86bee9a054a707f3afef\", \"eligible_articles\": 4}}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-B",
+        "-m",
+        "experiments.prepare_qa_risk_data",
+        "--raw",
+        "/Users/yukaiyan/Documents/Codex/2026-10-04/github-readme-2027-ai-infra-1/work/release-prep/squad-dev-v2.0.json",
+        "--output-dir",
+        "/var/folders/k2/x_hsgl2n4nb4gcc0ss_4h7kc0000gn/T/qa-risk-reselection-r_bifgyr/selected"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 203, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/yukaiyan/Documents/Codex/2026-10-04/ai-infra-1-2-2027-ai/work/qa-extractive-specialist/experiments/prepare_qa_risk_data.py\", line 101, in <module>\n    if __name__=='__main__':main()\n                            ~~~~^^\n  File \"/Users/yukaiyan/Documents/Codex/2026-10-04/ai-infra-1-2-2027-ai/work/qa-extractive-specialist/experiments/prepare_qa_risk_data.py\", line 78, in main\n    out = reserve_directory(args.output_dir); manifests = {}\n  File \"/Users/yukaiyan/Documents/Codex/2026-10-04/ai-infra-1-2-2027-ai/work/qa-extractive-specialist/lab/evidence.py\", line 15, in reserve_directory\n    path.mkdir(parents=True, exist_ok=False)\n    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py\", line 1011, in mkdir\n    os.mkdir(self, mode)\n    ~~~~~~~~^^^^^^^^^^^^\nFileExistsError: [Errno 17] File exists: '/var/folders/k2/x_hsgl2n4nb4gcc0ss_4h7kc0000gn/T/qa-risk-reselection-r_bifgyr/selected'\n"
+    },
+    {
+      "argv": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_qa_risk_selection.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "test_all_observed_old_rows_reallocated_deterministically_without_changes (test_qa_risk_selection.RiskSelectionTests.test_all_observed_old_rows_reallocated_deterministically_without_changes) ... ok\ntest_committed_splits_have_exact_balance_disjointness_and_expected_identity (test_qa_risk_selection.RiskSelectionTests.test_committed_splits_have_exact_balance_disjointness_and_expected_identity) ... ok\ntest_incomplete_duplicate_or_missing_article_pool_rejected (test_qa_risk_selection.RiskSelectionTests.test_incomplete_duplicate_or_missing_article_pool_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.027s\n\nOK\n"
+    }
+  ],
+  "model_outputs_read_by_selector": false,
+  "exclusion_counts": {
+    "ids": 1474,
+    "titles": 127,
+    "context_hashes": 852,
+    "question_hashes": 1474
+  }
+}

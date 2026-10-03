@@ -1,0 +1,34 @@
+{
+  "all_pass": true,
+  "source_sha256": "80a5225e94905956a6446d296ca1093975c4d3b3260f1d6c8f68bc2ab77182d8",
+  "splits": {
+    "train": {
+      "n": 256,
+      "articles": 8,
+      "families": 206,
+      "data_sha256": "fdadbc19b5b0d978971ead19e10469d0f92d76187fc923c904d1cf878b81a3a2",
+      "raw_fields_and_offsets_match": true,
+      "cross_split_four_axis_disjointness": true
+    },
+    "calibration": {
+      "n": 128,
+      "articles": 4,
+      "families": 86,
+      "data_sha256": "e98f650dc240ab14e84861e7f7dc3efbeb1da9b49c06079fcaaa1159860ca759",
+      "raw_fields_and_offsets_match": true,
+      "cross_split_four_axis_disjointness": true
+    },
+    "evaluation": {
+      "n": 128,
+      "articles": 4,
+      "families": 96,
+      "data_sha256": "d5d1c2e80291bf203179a2151ae71276c00f966e00aa86bee9a054a707f3afef",
+      "raw_fields_and_offsets_match": true,
+      "cross_split_four_axis_disjointness": true
+    }
+  },
+  "answer_offsets_checked": 891,
+  "old_384_rows_reused_exactly_once_with_only_split_changed": true,
+  "model_outputs_read_by_selector": false,
+  "scope": "Previously observed specialist data is development; the four remaining public-dev articles are not model-unseen confirmation."
+}

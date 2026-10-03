@@ -1,0 +1,35 @@
+{
+  "source_url": "https://rajpurkar.github.io/SQuAD-explorer/dataset/dev-v2.0.json",
+  "source_sha256": "80a5225e94905956a6446d296ca1093975c4d3b3260f1d6c8f68bc2ab77182d8",
+  "seed": 2026100408,
+  "splits": [
+    {
+      "name": "train",
+      "articles": 8
+    },
+    {
+      "name": "calibration",
+      "articles": 4
+    },
+    {
+      "name": "evaluation",
+      "articles": 4
+    }
+  ],
+  "per_class_per_article": 16,
+  "max_context_chars": 4000,
+  "policy": "The entire previously observed specialist calibration/evaluation pool of 384 questions becomes development. Rank its 12 titles by SHA256(str(seed)+title), allocate the first 8 articles (256 questions) to train and the remaining 4 (128 questions) to calibration. Preserve every original field except split. For new evaluation, cumulatively exclude all prior inventoried titles/IDs/normalized exact contexts/questions plus all 384 specialist rows; select four remaining eligible articles with the unchanged hash-rank selector and 4000-character limit. Require 16 unique contexts in each answerability class per article. No quota relaxation, seed search, output-based sample replacement, or new model inference in the selector.",
+  "exclusions": "configs/qa-risk/exclusions.json",
+  "exclusions_sha256": "c0cacff222f6760e5e1fb2d3879015ec37276976ad950d5237ec7a9f71923476",
+  "license": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+    "attribution": "SQuAD 2.0: Pranav Rajpurkar, Robin Jia, Percy Liang; passages by Wikipedia contributors.",
+    "source_project": "https://rajpurkar.github.io/SQuAD-explorer/"
+  },
+  "scope": "One additional supervised correctness-ranking hypothesis, after the frozen specialist policy failed public-benchmark evaluation. All old specialist 384 rows, including failed evaluation, are explicitly development and cannot support a new holdout claim. The new 128-row evaluation is a fixed local public SQuAD2 benchmark assessment, not model-unseen confirmation or official hidden test: the upstream specialist was trained on SQuAD2 and already publicly evaluated on dev. Article-level disjointness and exact filtering do not remove upstream benchmark exposure, pretraining contamination, semantic near-duplicates, or the sequence of project-level hypothesis decisions. Only four remaining articles limit external validity. If this one fixed hypothesis fails, retain failure and stop further model/feature search in this round.",
+  "development_sources": [
+    "configs/qa-specialist/dataset/calibration/data.jsonl",
+    "configs/qa-specialist/dataset/evaluation/data.jsonl"
+  ]
+}
