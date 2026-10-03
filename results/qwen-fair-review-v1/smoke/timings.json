@@ -1,0 +1,1482 @@
+[
+  {
+    "dataset": "historical",
+    "prefix_tokens": 64,
+    "profile": false,
+    "round": 0,
+    "mode": "cached_workload",
+    "seconds": 0.12369750000652857,
+    "outputs": [
+      {
+        "phases": null,
+        "token_ids": [
+          576,
+          25683,
+          1882,
+          374,
+          438,
+          11017,
+          25,
+          220
+        ],
+        "input_tokens": 77,
+        "prefix_tokens": 64,
+        "suffix_tokens": 13,
+        "status": "miss",
+        "ttft_seconds": 0.015276458987500519,
+        "total_seconds": 0.03693274999386631,
+        "decode_seconds": 0.02165629100636579,
+        "decode_tokens_per_second": 323.2317111892509,
+        "stop_reason": "token_limit",
+        "cache": {
+          "hits": 1,
+          "misses": 3,
+          "evictions": 0,
+          "bypasses": 0,
+          "entries": 1,
+          "stored_tensor_bytes": 786432
+        }
+      },
+      {
+        "phases": null,
+        "token_ids": [
+          576,
+          25683,
+          1882,
+          374,
+          438,
+          11017,
+          25,
+          220
+        ],
+        "input_tokens": 77,
+        "prefix_tokens": 64,
+        "suffix_tokens": 13,
+        "status": "hit",
+        "ttft_seconds": 0.007367624988546595,
+        "total_seconds": 0.02916025000740774,
+        "decode_seconds": 0.021792625018861145,
+        "decode_tokens_per_second": 321.20958323935827,
+        "stop_reason": "token_limit",
+        "cache": {
+          "hits": 2,
+          "misses": 3,
+          "evictions": 0,
+          "bypasses": 0,
+          "entries": 1,
+          "stored_tensor_bytes": 786432
+        }
+      },
+      {
+        "phases": null,
+        "token_ids": [
+          576,
+          25683,
+          1882,
+          374,
+          438,
+          11017,
+          25,
+          220
+        ],
+        "input_tokens": 77,
+        "prefix_tokens": 64,
+        "suffix_tokens": 13,
+        "status": "hit",
+        "ttft_seconds": 0.007269374997122213,
+        "total_seconds": 0.02875512500759214,
+        "decode_seconds": 0.02148575001046993,
+        "decode_tokens_per_second": 325.79733063025145,
+        "stop_reason": "token_limit",
+        "cache": {
+          "hits": 3,
+          "misses": 3,
+          "evictions": 0,
+          "bypasses": 0,
+          "entries": 1,
+          "stored_tensor_bytes": 786432
+        }
+      },
+      {
+        "phases": null,
+        "token_ids": [
+          576,
+          25683,
+          1882,
+          374,
+          438,
+          11017,
+          25,
+          220
+        ],
+        "input_tokens": 77,
+        "prefix_tokens": 64,
+        "suffix_tokens": 13,
+        "status": "hit",
+        "ttft_seconds": 0.007192999997641891,
+        "total_seconds": 0.0286996659997385,
+        "decode_seconds": 0.02150666600209661,
+        "decode_tokens_per_second": 325.48048122928935,
+        "stop_reason": "token_limit",
+        "cache": {
+          "hits": 4,
+          "misses": 3,
+          "evictions": 0,
+          "bypasses": 0,
+          "entries": 1,
+          "stored_tensor_bytes": 786432
+        }
+      }
+    ]
+  },
+  {
+    "dataset": "historical",
+    "prefix_tokens": 64,
+    "profile": false,
+    "round": 0,
+    "mode": "direct_segmented",
+    "seconds": 0.14676291699288413,
+    "outputs": [
+      {
+        "phases": null,
+        "token_ids": [
+          576,
+          25683,
+          1882,
+          374,
+          438,
+          11017,
+          25,
+          220
+        ],
+        "input_tokens": 77,
+        "prefix_tokens": 64,
+        "suffix_tokens": 13,
+        "status": "direct",
+        "ttft_seconds": 0.015081874997122213,
+        "total_seconds": 0.03654162501334213,
+        "decode_seconds": 0.021459750016219914,
+        "decode_tokens_per_second": 326.192056976861,
+        "stop_reason": "token_limit",
+        "cache": {
+          "hits": 4,
+          "misses": 3,
+          "evictions": 0,
+          "bypasses": 0,
+          "entries": 0,
+          "stored_tensor_bytes": 0
+        }
+      },
+      {
+        "phases": null,
+        "token_ids": [
+          576,
+          25683,
+          1882,
+          374,
+          438,
+          11017,
+          25,
+          220
+        ],
+        "input_tokens": 77,
+        "prefix_tokens": 64,
+        "suffix_tokens": 13,
+        "status": "direct",
+        "ttft_seconds": 0.015059375000419095,
+        "total_seconds": 0.03660029199090786,
+        "decode_seconds": 0.021540916990488768,
+        "decode_tokens_per_second": 324.96295320625387,
+        "stop_reason": "token_limit",
+        "cache": {
+          "hits": 4,
+          "misses": 3,
+          "evictions": 0,
+          "bypasses": 0,
+          "entries": 0,
+          "stored_tensor_bytes": 0
+        }
+      },
+      {
+        "phases": null,
+        "token_ids": [
+          576,
+          25683,
+          1882,
+          374,
+          438,
+          11017,
+          25,
+          220
+        ],
+        "input_tokens": 77,
+        "prefix_tokens": 64,
+        "suffix_tokens": 13,
+        "status": "direct",
+        "ttft_seconds": 0.015110624983208254,
+        "total_seconds": 0.036792666011024266,
+        "decode_seconds": 0.021682041027816013,
+        "decode_tokens_per_second": 322.8478348057575,
+        "stop_reason": "token_limit",
+        "cache": {
+          "hits": 4,
+          "misses": 3,
+          "evictions": 0,
+          "bypasses": 0,
+          "entries": 0,
+          "stored_tensor_bytes": 0
+        }
+      },
+      {
+        "phases": null,
+        "token_ids": [
+          576,
+          25683,
+          1882,
+          374,
+          438,
+          11017,
+          25,
+          220
+        ],
+        "input_tokens": 77,
+        "prefix_tokens": 64,
+        "suffix_tokens": 13,
+        "status": "direct",
+        "ttft_seconds": 0.015119791991310194,
+        "total_seconds": 0.0366672920063138,
+        "decode_seconds": 0.021547500015003607,
+        "decode_tokens_per_second": 324.86367305375904,
+        "stop_reason": "token_limit",
+        "cache": {
+          "hits": 4,
+          "misses": 3,
+          "evictions": 0,
+          "bypasses": 0,
+          "entries": 0,
+          "stored_tensor_bytes": 0
+        }
+      }
+    ]
+  },
+  {
+    "dataset": "historical",
+    "prefix_tokens": 64,
+    "profile": false,
+    "round": 0,
+    "mode": "warm_hit",
+    "seconds": 0.11548241600394249,
+    "outputs": [
+      {
+        "phases": null,
+        "token_ids": [
+          576,
+          25683,
+          1882,
+          374,
+          438,
+          11017,
+          25,
+          220
+        ],
+        "input_tokens": 77,
+        "prefix_tokens": 64,
+        "suffix_tokens": 13,
+        "status": "hit",
+        "ttft_seconds": 0.007299499993678182,
+        "total_seconds": 0.028843749983934686,
+        "decode_seconds": 0.021544249990256503,
+        "decode_tokens_per_second": 324.91267986426936,
+        "stop_reason": "token_limit",
+        "cache": {
+          "hits": 5,
+          "misses": 4,
+          "evictions": 0,
+          "bypasses": 0,
+          "entries": 1,
+          "stored_tensor_bytes": 786432
+        }
+      },
+      {
+        "phases": null,
+        "token_ids": [
+          576,
+          25683,
+          1882,
+          374,
+          438,
+          11017,
+          25,
+          220
+        ],
+        "input_tokens": 77,
+        "prefix_tokens": 64,
+        "suffix_tokens": 13,
+        "status": "hit",
+        "ttft_seconds": 0.0073412090132478625,
+        "total_seconds": 0.02882754200254567,
+        "decode_seconds": 0.021486332989297807,
+        "decode_tokens_per_second": 325.78849092056106,
+        "stop_reason": "token_limit",
+        "cache": {
+          "hits": 6,
+          "misses": 4,
+          "evictions": 0,
+          "bypasses": 0,
+          "entries": 1,
+          "stored_tensor_bytes": 786432
+        }
+      },
+      {
+        "phases": null,
+        "token_ids": [
+          576,
+          25683,
+          1882,
+          374,
+          438,
+          11017,
+          25,
+          220
+        ],
+        "input_tokens": 77,
+        "prefix_tokens": 64,
+        "suffix_tokens": 13,
+        "status": "hit",
+        "ttft_seconds": 0.00734708399977535,
+        "total_seconds": 0.028933791996678337,
+        "decode_seconds": 0.021586707996902987,
+        "decode_tokens_per_second": 324.2736224997475,
+        "stop_reason": "token_limit",
+        "cache": {
+          "hits": 7,
+          "misses": 4,
+          "evictions": 0,
+          "bypasses": 0,
+          "entries": 1,
+          "stored_tensor_bytes": 786432
+        }
+      },
+      {
+        "phases": null,
+        "token_ids": [
+          576,
+          25683,
+          1882,
+          374,
+          438,
+          11017,
+          25,
+          220
+        ],
+        "input_tokens": 77,
+        "prefix_tokens": 64,
+        "suffix_tokens": 13,
+        "status": "hit",
+        "ttft_seconds": 0.007297542004380375,
+        "total_seconds": 0.02873087499756366,
+        "decode_seconds": 0.021433332993183285,
+        "decode_tokens_per_second": 326.59409538527206,
+        "stop_reason": "token_limit",
+        "cache": {
+          "hits": 8,
+          "misses": 4,
+          "evictions": 0,
+          "bypasses": 0,
+          "entries": 1,
+          "stored_tensor_bytes": 786432
+        }
+      }
+    ]
+  },
+  {
+    "dataset": "historical",
+    "prefix_tokens": 64,
+    "profile": false,
+    "round": 0,
+    "mode": "full",
+    "seconds": 0.13574608298949897,
+    "outputs": [
+      {
+        "phases": null,
+        "token_ids": [
+          576,
+          25683,
+          1882,
+          374,
+          438,
+          11017,
+          25,
+          220
+        ],
+        "input_tokens": 77,
+        "prefix_tokens": 0,
+        "suffix_tokens": 77,
+        "status": "disabled",
+        "ttft_seconds": 0.012378582992823794,
+        "total_seconds": 0.034295457997359335,
+        "decode_seconds": 0.02191687500453554,
+        "decode_tokens_per_second": 319.38859890159523,
+        "stop_reason": "token_limit",
+        "cache": {
+          "hits": 8,
+          "misses": 4,
+          "evictions": 0,
+          "bypasses": 0,
+          "entries": 0,
+          "stored_tensor_bytes": 0
+        }
+      },
+      {
+        "phases": null,
+        "token_ids": [
+          576,
+          25683,
+          1882,
+          374,
+          438,
+          11017,
+          25,
+          220
+        ],
+        "input_tokens": 77,
+        "prefix_tokens": 0,
+        "suffix_tokens": 77,
+        "status": "disabled",
+        "ttft_seconds": 0.01230887498240918,
+        "total_seconds": 0.03348041698336601,
+        "decode_seconds": 0.021171542000956833,
+        "decode_tokens_per_second": 330.63250658282897,
+        "stop_reason": "token_limit",
+        "cache": {
+          "hits": 8,
+          "misses": 4,
+          "evictions": 0,
+          "bypasses": 0,
+          "entries": 0,
+          "stored_tensor_bytes": 0
+        }
+      },
+      {
+        "phases": null,
+        "token_ids": [
+          576,
+          25683,
+          1882,
+          374,
+          438,
+          11017,
+          25,
+          220
+        ],
+        "input_tokens": 77,
+        "prefix_tokens": 0,
+        "suffix_tokens": 77,
+        "status": "disabled",
+        "ttft_seconds": 0.012328249984420836,
+        "total_seconds": 0.03382949999650009,
+        "decode_seconds": 0.021501250012079254,
+        "decode_tokens_per_second": 325.56246711551415,
+        "stop_reason": "token_limit",
+        "cache": {
+          "hits": 8,
+          "misses": 4,
+          "evictions": 0,
+          "bypasses": 0,
+          "entries": 0,
+          "stored_tensor_bytes": 0
+        }
+      },
+      {
+        "phases": null,
+        "token_ids": [
+          576,
+          25683,
+          1882,
+          374,
+          438,
+          11017,
+          25,
+          220
+        ],
+        "input_tokens": 77,
+        "prefix_tokens": 0,
+        "suffix_tokens": 77,
+        "status": "disabled",
+        "ttft_seconds": 0.012378500017803162,
+        "total_seconds": 0.03397812502225861,
+        "decode_seconds": 0.021599625004455447,
+        "decode_tokens_per_second": 324.0797003909133,
+        "stop_reason": "token_limit",
+        "cache": {
+          "hits": 8,
+          "misses": 4,
+          "evictions": 0,
+          "bypasses": 0,
+          "entries": 0,
+          "stored_tensor_bytes": 0
+        }
+      }
+    ]
+  },
+  {
+    "dataset": "historical",
+    "prefix_tokens": 64,
+    "profile": false,
+    "round": 0,
+    "mode": "legacy_segmented",
+    "seconds": 0.1475574579962995,
+    "outputs": [
+      {
+        "phases": null,
+        "token_ids": [
+          576,
+          25683,
+          1882,
+          374,
+          438,
+          11017,
+          25,
+          220
+        ],
+        "input_tokens": 77,
+        "prefix_tokens": 64,
+        "suffix_tokens": 13,
+        "status": "rebuilt",
+        "ttft_seconds": 0.015317417011829093,
+        "total_seconds": 0.036720584001159295,
+        "decode_seconds": 0.021403166989330202,
+        "decode_tokens_per_second": 327.05440290633646,
+        "stop_reason": "token_limit",
+        "cache": {
+          "hits": 8,
+          "misses": 4,
+          "evictions": 0,
+          "bypasses": 0,
+          "entries": 0,
+          "stored_tensor_bytes": 0
+        }
+      },
+      {
+        "phases": null,
+        "token_ids": [
+          576,
+          25683,
+          1882,
+          374,
+          438,
+          11017,
+          25,
+          220
+        ],
+        "input_tokens": 77,
+        "prefix_tokens": 64,
+        "suffix_tokens": 13,
+        "status": "rebuilt",
+        "ttft_seconds": 0.015206416021101177,
+        "total_seconds": 0.03695308300666511,
+        "decode_seconds": 0.021746666985563934,
+        "decode_tokens_per_second": 321.8884072969344,
+        "stop_reason": "token_limit",
+        "cache": {
+          "hits": 8,
+          "misses": 4,
+          "evictions": 0,
+          "bypasses": 0,
+          "entries": 0,
+          "stored_tensor_bytes": 0
+        }
+      },
+      {
+        "phases": null,
+        "token_ids": [
+          576,
+          25683,
+          1882,
+          374,
+          438,
+          11017,
+          25,
+          220
+        ],
+        "input_tokens": 77,
+        "prefix_tokens": 64,
+        "suffix_tokens": 13,
+        "status": "rebuilt",
+        "ttft_seconds": 0.015216166997561231,
+        "total_seconds": 0.03681600000709295,
+        "decode_seconds": 0.02159983300953172,
+        "decode_tokens_per_second": 324.07657952313764,
+        "stop_reason": "token_limit",
+        "cache": {
+          "hits": 8,
+          "misses": 4,
+          "evictions": 0,
+          "bypasses": 0,
+          "entries": 0,
+          "stored_tensor_bytes": 0
+        }
+      },
+      {
+        "phases": null,
+        "token_ids": [
+          576,
+          25683,
+          1882,
+          374,
+          438,
+          11017,
+          25,
+          220
+        ],
+        "input_tokens": 77,
+        "prefix_tokens": 64,
+        "suffix_tokens": 13,
+        "status": "rebuilt",
+        "ttft_seconds": 0.0152267090161331,
+        "total_seconds": 0.03687845901004039,
+        "decode_seconds": 0.021651749993907288,
+        "decode_tokens_per_second": 323.29950244066976,
+        "stop_reason": "token_limit",
+        "cache": {
+          "hits": 8,
+          "misses": 4,
+          "evictions": 0,
+          "bypasses": 0,
+          "entries": 0,
+          "stored_tensor_bytes": 0
+        }
+      }
+    ]
+  },
+  {
+    "dataset": "historical",
+    "prefix_tokens": 64,
+    "profile": true,
+    "round": 0,
+    "mode": "cached_workload",
+    "seconds": 0.12426562499604188,
+    "outputs": [
+      {
+        "phases": {
+          "lookup_seconds": 1.766698551364243e-05,
+          "prefix_prefill_seconds": 0.00793625001097098,
+          "snapshot_copy_seconds": 0.00014908297453075647,
+          "request_clone_seconds": 7.329200161620975e-05,
+          "suffix_prefill_sample_seconds": 0.007209125004010275,
+          "full_prefill_sample_seconds": 0.0,
+          "decode_seconds": 0.02152362500783056,
+          "unattributed_seconds": 5.899902316741645e-05
+        },
+        "token_ids": [
+          576,
+          25683,
+          1882,
+          374,
+          438,
+          11017,
+          25,
+          220
+        ],
+        "input_tokens": 77,
+        "prefix_tokens": 64,
+        "suffix_tokens": 13,
+        "status": "miss",
+        "ttft_seconds": 0.01544441599980928,
+        "total_seconds": 0.03696804100763984,
+        "decode_seconds": 0.02152362500783056,
+        "decode_tokens_per_second": 325.2240269681949,
+        "stop_reason": "token_limit",
+        "cache": {
+          "hits": 9,
+          "misses": 7,
+          "evictions": 0,
+          "bypasses": 0,
+          "entries": 1,
+          "stored_tensor_bytes": 786432
+        }
+      },
+      {
+        "phases": {
+          "lookup_seconds": 1.2208009138703346e-05,
+          "prefix_prefill_seconds": 0.0,
+          "snapshot_copy_seconds": 0.0,
+          "request_clone_seconds": 6.404198938980699e-05,
+          "suffix_prefill_sample_seconds": 0.007312915986403823,
+          "full_prefill_sample_seconds": 0.0,
+          "decode_seconds": 0.02147783400141634,
+          "unattributed_seconds": 1.9166996935382485e-05
+        },
+        "token_ids": [
+          576,
+          25683,
+          1882,
+          374,
+          438,
+          11017,
+          25,
+          220
+        ],
+        "input_tokens": 77,
+        "prefix_tokens": 64,
+        "suffix_tokens": 13,
+        "status": "hit",
+        "ttft_seconds": 0.007408332981867716,
+        "total_seconds": 0.028886166983284056,
+        "decode_seconds": 0.02147783400141634,
+        "decode_tokens_per_second": 325.917408596155,
+        "stop_reason": "token_limit",
+        "cache": {
+          "hits": 10,
+          "misses": 7,
+          "evictions": 0,
+          "bypasses": 0,
+          "entries": 1,
+          "stored_tensor_bytes": 786432
+        }
+      },
+      {
+        "phases": {
+          "lookup_seconds": 1.18750031106174e-05,
+          "prefix_prefill_seconds": 0.0,
+          "snapshot_copy_seconds": 0.0,
+          "request_clone_seconds": 6.395799573510885e-05,
+          "suffix_prefill_sample_seconds": 0.007308333006221801,
+          "full_prefill_sample_seconds": 0.0,
+          "decode_seconds": 0.021859125001356006,
+          "unattributed_seconds": 1.9125989638268948e-05
+        },
+        "token_ids": [
+          576,
+          25683,
+          1882,
+          374,
+          438,
+          11017,
+          25,
+          220
+        ],
+        "input_tokens": 77,
+        "prefix_tokens": 64,
+        "suffix_tokens": 13,
+        "status": "hit",
+        "ttft_seconds": 0.007403291994705796,
+        "total_seconds": 0.029262416996061802,
+        "decode_seconds": 0.021859125001356006,
+        "decode_tokens_per_second": 320.2323972055498,
+        "stop_reason": "token_limit",
+        "cache": {
+          "hits": 11,
+          "misses": 7,
+          "evictions": 0,
+          "bypasses": 0,
+          "entries": 1,
+          "stored_tensor_bytes": 786432
+        }
+      },
+      {
+        "phases": {
+          "lookup_seconds": 8.95900302566588e-06,
+          "prefix_prefill_seconds": 0.0,
+          "snapshot_copy_seconds": 0.0,
+          "request_clone_seconds": 6.216700421646237e-05,
+          "suffix_prefill_sample_seconds": 0.007237374986289069,
+          "full_prefill_sample_seconds": 0.0,
+          "decode_seconds": 0.021673458017176017,
+          "unattributed_seconds": 1.824900391511619e-05
+        },
+        "token_ids": [
+          576,
+          25683,
+          1882,
+          374,
+          438,
+          11017,
+          25,
+          220
+        ],
+        "input_tokens": 77,
+        "prefix_tokens": 64,
+        "suffix_tokens": 13,
+        "status": "hit",
+        "ttft_seconds": 0.0073267499974463135,
+        "total_seconds": 0.02900020801462233,
+        "decode_seconds": 0.021673458017176017,
+        "decode_tokens_per_second": 322.97568733390693,
+        "stop_reason": "token_limit",
+        "cache": {
+          "hits": 12,
+          "misses": 7,
+          "evictions": 0,
+          "bypasses": 0,
+          "entries": 1,
+          "stored_tensor_bytes": 786432
+        }
+      }
+    ]
+  },
+  {
+    "dataset": "historical",
+    "prefix_tokens": 64,
+    "profile": true,
+    "round": 0,
+    "mode": "full",
+    "seconds": 0.13649266699212603,
+    "outputs": [
+      {
+        "phases": {
+          "lookup_seconds": 0.0,
+          "prefix_prefill_seconds": 0.0,
+          "snapshot_copy_seconds": 0.0,
+          "request_clone_seconds": 0.0,
+          "suffix_prefill_sample_seconds": 0.0,
+          "full_prefill_sample_seconds": 0.012374749989248812,
+          "decode_seconds": 0.022052875021472573,
+          "unattributed_seconds": 6.999995093792677e-06
+        },
+        "token_ids": [
+          576,
+          25683,
+          1882,
+          374,
+          438,
+          11017,
+          25,
+          220
+        ],
+        "input_tokens": 77,
+        "prefix_tokens": 0,
+        "suffix_tokens": 77,
+        "status": "disabled",
+        "ttft_seconds": 0.012381749984342605,
+        "total_seconds": 0.03443462500581518,
+        "decode_seconds": 0.022052875021472573,
+        "decode_tokens_per_second": 317.4189303292291,
+        "stop_reason": "token_limit",
+        "cache": {
+          "hits": 12,
+          "misses": 7,
+          "evictions": 0,
+          "bypasses": 0,
+          "entries": 0,
+          "stored_tensor_bytes": 0
+        }
+      },
+      {
+        "phases": {
+          "lookup_seconds": 0.0,
+          "prefix_prefill_seconds": 0.0,
+          "snapshot_copy_seconds": 0.0,
+          "request_clone_seconds": 0.0,
+          "suffix_prefill_sample_seconds": 0.0,
+          "full_prefill_sample_seconds": 0.012290041981032118,
+          "decode_seconds": 0.02188800001749769,
+          "unattributed_seconds": 4.458008334040642e-06
+        },
+        "token_ids": [
+          576,
+          25683,
+          1882,
+          374,
+          438,
+          11017,
+          25,
+          220
+        ],
+        "input_tokens": 77,
+        "prefix_tokens": 0,
+        "suffix_tokens": 77,
+        "status": "disabled",
+        "ttft_seconds": 0.012294499989366159,
+        "total_seconds": 0.03418250000686385,
+        "decode_seconds": 0.02188800001749769,
+        "decode_tokens_per_second": 319.8099412648056,
+        "stop_reason": "token_limit",
+        "cache": {
+          "hits": 12,
+          "misses": 7,
+          "evictions": 0,
+          "bypasses": 0,
+          "entries": 0,
+          "stored_tensor_bytes": 0
+        }
+      },
+      {
+        "phases": {
+          "lookup_seconds": 0.0,
+          "prefix_prefill_seconds": 0.0,
+          "snapshot_copy_seconds": 0.0,
+          "request_clone_seconds": 0.0,
+          "suffix_prefill_sample_seconds": 0.0,
+          "full_prefill_sample_seconds": 0.012321332993451506,
+          "decode_seconds": 0.021564958995440975,
+          "unattributed_seconds": 6.000016583129764e-06
+        },
+        "token_ids": [
+          576,
+          25683,
+          1882,
+          374,
+          438,
+          11017,
+          25,
+          220
+        ],
+        "input_tokens": 77,
+        "prefix_tokens": 0,
+        "suffix_tokens": 77,
+        "status": "disabled",
+        "ttft_seconds": 0.012327333010034636,
+        "total_seconds": 0.03389229200547561,
+        "decode_seconds": 0.021564958995440975,
+        "decode_tokens_per_second": 324.6006635802026,
+        "stop_reason": "token_limit",
+        "cache": {
+          "hits": 12,
+          "misses": 7,
+          "evictions": 0,
+          "bypasses": 0,
+          "entries": 0,
+          "stored_tensor_bytes": 0
+        }
+      },
+      {
+        "phases": {
+          "lookup_seconds": 0.0,
+          "prefix_prefill_seconds": 0.0,
+          "snapshot_copy_seconds": 0.0,
+          "request_clone_seconds": 0.0,
+          "suffix_prefill_sample_seconds": 0.0,
+          "full_prefill_sample_seconds": 0.0123393340036273,
+          "decode_seconds": 0.021489250008016825,
+          "unattributed_seconds": 8.916016668081284e-06
+        },
+        "token_ids": [
+          576,
+          25683,
+          1882,
+          374,
+          438,
+          11017,
+          25,
+          220
+        ],
+        "input_tokens": 77,
+        "prefix_tokens": 0,
+        "suffix_tokens": 77,
+        "status": "disabled",
+        "ttft_seconds": 0.012348250020295382,
+        "total_seconds": 0.033837500028312206,
+        "decode_seconds": 0.021489250008016825,
+        "decode_tokens_per_second": 325.7442673610557,
+        "stop_reason": "token_limit",
+        "cache": {
+          "hits": 12,
+          "misses": 7,
+          "evictions": 0,
+          "bypasses": 0,
+          "entries": 0,
+          "stored_tensor_bytes": 0
+        }
+      }
+    ]
+  },
+  {
+    "dataset": "historical",
+    "prefix_tokens": 64,
+    "profile": true,
+    "round": 0,
+    "mode": "warm_hit",
+    "seconds": 0.11596062500029802,
+    "outputs": [
+      {
+        "phases": {
+          "lookup_seconds": 1.1249998351559043e-05,
+          "prefix_prefill_seconds": 0.0,
+          "snapshot_copy_seconds": 0.0,
+          "request_clone_seconds": 7.624999852851033e-05,
+          "suffix_prefill_sample_seconds": 0.007277374999830499,
+          "full_prefill_sample_seconds": 0.0,
+          "decode_seconds": 0.021625084016704932,
+          "unattributed_seconds": 1.9500002963468432e-05
+        },
+        "token_ids": [
+          576,
+          25683,
+          1882,
+          374,
+          438,
+          11017,
+          25,
+          220
+        ],
+        "input_tokens": 77,
+        "prefix_tokens": 64,
+        "suffix_tokens": 13,
+        "status": "hit",
+        "ttft_seconds": 0.007384374999674037,
+        "total_seconds": 0.02900945901637897,
+        "decode_seconds": 0.021625084016704932,
+        "decode_tokens_per_second": 323.6981643443625,
+        "stop_reason": "token_limit",
+        "cache": {
+          "hits": 13,
+          "misses": 8,
+          "evictions": 0,
+          "bypasses": 0,
+          "entries": 1,
+          "stored_tensor_bytes": 786432
+        }
+      },
+      {
+        "phases": {
+          "lookup_seconds": 1.7709011444821954e-05,
+          "prefix_prefill_seconds": 0.0,
+          "snapshot_copy_seconds": 0.0,
+          "request_clone_seconds": 6.574997678399086e-05,
+          "suffix_prefill_sample_seconds": 0.0072377500182483345,
+          "full_prefill_sample_seconds": 0.0,
+          "decode_seconds": 0.02170083299279213,
+          "unattributed_seconds": 2.1083018509671092e-05
+        },
+        "token_ids": [
+          576,
+          25683,
+          1882,
+          374,
+          438,
+          11017,
+          25,
+          220
+        ],
+        "input_tokens": 77,
+        "prefix_tokens": 64,
+        "suffix_tokens": 13,
+        "status": "hit",
+        "ttft_seconds": 0.007342292024986818,
+        "total_seconds": 0.029043125017778948,
+        "decode_seconds": 0.02170083299279213,
+        "decode_tokens_per_second": 322.5682628093138,
+        "stop_reason": "token_limit",
+        "cache": {
+          "hits": 14,
+          "misses": 8,
+          "evictions": 0,
+          "bypasses": 0,
+          "entries": 1,
+          "stored_tensor_bytes": 786432
+        }
+      },
+      {
+        "phases": {
+          "lookup_seconds": 1.3084005331620574e-05,
+          "prefix_prefill_seconds": 0.0,
+          "snapshot_copy_seconds": 0.0,
+          "request_clone_seconds": 6.516699795611203e-05,
+          "suffix_prefill_sample_seconds": 0.007225292007206008,
+          "full_prefill_sample_seconds": 0.0,
+          "decode_seconds": 0.02163825000752695,
+          "unattributed_seconds": 2.1456973627209663e-05
+        },
+        "token_ids": [
+          576,
+          25683,
+          1882,
+          374,
+          438,
+          11017,
+          25,
+          220
+        ],
+        "input_tokens": 77,
+        "prefix_tokens": 64,
+        "suffix_tokens": 13,
+        "status": "hit",
+        "ttft_seconds": 0.00732499998412095,
+        "total_seconds": 0.0289632499916479,
+        "decode_seconds": 0.02163825000752695,
+        "decode_tokens_per_second": 323.50120724018916,
+        "stop_reason": "token_limit",
+        "cache": {
+          "hits": 15,
+          "misses": 8,
+          "evictions": 0,
+          "bypasses": 0,
+          "entries": 1,
+          "stored_tensor_bytes": 786432
+        }
+      },
+      {
+        "phases": {
+          "lookup_seconds": 1.0625022696331143e-05,
+          "prefix_prefill_seconds": 0.0,
+          "snapshot_copy_seconds": 0.0,
+          "request_clone_seconds": 7.29589955881238e-05,
+          "suffix_prefill_sample_seconds": 0.007252125011291355,
+          "full_prefill_sample_seconds": 0.0,
+          "decode_seconds": 0.02144512499216944,
+          "unattributed_seconds": 1.8373975763097405e-05
+        },
+        "token_ids": [
+          576,
+          25683,
+          1882,
+          374,
+          438,
+          11017,
+          25,
+          220
+        ],
+        "input_tokens": 77,
+        "prefix_tokens": 64,
+        "suffix_tokens": 13,
+        "status": "hit",
+        "ttft_seconds": 0.007354083005338907,
+        "total_seconds": 0.028799207997508347,
+        "decode_seconds": 0.02144512499216944,
+        "decode_tokens_per_second": 326.4145115757548,
+        "stop_reason": "token_limit",
+        "cache": {
+          "hits": 16,
+          "misses": 8,
+          "evictions": 0,
+          "bypasses": 0,
+          "entries": 1,
+          "stored_tensor_bytes": 786432
+        }
+      }
+    ]
+  },
+  {
+    "dataset": "historical",
+    "prefix_tokens": 64,
+    "profile": true,
+    "round": 0,
+    "mode": "legacy_segmented",
+    "seconds": 0.14822274999460205,
+    "outputs": [
+      {
+        "phases": {
+          "lookup_seconds": 0.0,
+          "prefix_prefill_seconds": 0.007890542008681223,
+          "snapshot_copy_seconds": 0.00015787500888109207,
+          "request_clone_seconds": 6.195798050612211e-05,
+          "suffix_prefill_sample_seconds": 0.007260249985847622,
+          "full_prefill_sample_seconds": 0.0,
+          "decode_seconds": 0.021530875004827976,
+          "unattributed_seconds": 5.7209021179005504e-05
+        },
+        "token_ids": [
+          576,
+          25683,
+          1882,
+          374,
+          438,
+          11017,
+          25,
+          220
+        ],
+        "input_tokens": 77,
+        "prefix_tokens": 64,
+        "suffix_tokens": 13,
+        "status": "rebuilt",
+        "ttft_seconds": 0.015427834005095065,
+        "total_seconds": 0.03695870900992304,
+        "decode_seconds": 0.021530875004827976,
+        "decode_tokens_per_second": 325.114515709666,
+        "stop_reason": "token_limit",
+        "cache": {
+          "hits": 16,
+          "misses": 8,
+          "evictions": 0,
+          "bypasses": 0,
+          "entries": 0,
+          "stored_tensor_bytes": 0
+        }
+      },
+      {
+        "phases": {
+          "lookup_seconds": 0.0,
+          "prefix_prefill_seconds": 0.007903791003627703,
+          "snapshot_copy_seconds": 0.0001587910228408873,
+          "request_clone_seconds": 5.9707992477342486e-05,
+          "suffix_prefill_sample_seconds": 0.007259625010192394,
+          "full_prefill_sample_seconds": 0.0,
+          "decode_seconds": 0.021683875005692244,
+          "unattributed_seconds": 5.741798668168485e-05
+        },
+        "token_ids": [
+          576,
+          25683,
+          1882,
+          374,
+          438,
+          11017,
+          25,
+          220
+        ],
+        "input_tokens": 77,
+        "prefix_tokens": 64,
+        "suffix_tokens": 13,
+        "status": "rebuilt",
+        "ttft_seconds": 0.015439333015820011,
+        "total_seconds": 0.037123208021512255,
+        "decode_seconds": 0.021683875005692244,
+        "decode_tokens_per_second": 322.8205289950448,
+        "stop_reason": "token_limit",
+        "cache": {
+          "hits": 16,
+          "misses": 8,
+          "evictions": 0,
+          "bypasses": 0,
+          "entries": 0,
+          "stored_tensor_bytes": 0
+        }
+      },
+      {
+        "phases": {
+          "lookup_seconds": 0.0,
+          "prefix_prefill_seconds": 0.007885541999712586,
+          "snapshot_copy_seconds": 0.0001500000071246177,
+          "request_clone_seconds": 6.187497638165951e-05,
+          "suffix_prefill_sample_seconds": 0.007216166995931417,
+          "full_prefill_sample_seconds": 0.0,
+          "decode_seconds": 0.021480082999914885,
+          "unattributed_seconds": 6.054100231267512e-05
+        },
+        "token_ids": [
+          576,
+          25683,
+          1882,
+          374,
+          438,
+          11017,
+          25,
+          220
+        ],
+        "input_tokens": 77,
+        "prefix_tokens": 64,
+        "suffix_tokens": 13,
+        "status": "rebuilt",
+        "ttft_seconds": 0.015374124981462955,
+        "total_seconds": 0.03685420798137784,
+        "decode_seconds": 0.021480082999914885,
+        "decode_tokens_per_second": 325.88328453049917,
+        "stop_reason": "token_limit",
+        "cache": {
+          "hits": 16,
+          "misses": 8,
+          "evictions": 0,
+          "bypasses": 0,
+          "entries": 0,
+          "stored_tensor_bytes": 0
+        }
+      },
+      {
+        "phases": {
+          "lookup_seconds": 0.0,
+          "prefix_prefill_seconds": 0.007922542019514367,
+          "snapshot_copy_seconds": 0.00014495800132863224,
+          "request_clone_seconds": 5.933298962190747e-05,
+          "suffix_prefill_sample_seconds": 0.007248582987813279,
+          "full_prefill_sample_seconds": 0.0,
+          "decode_seconds": 0.0216769170074258,
+          "unattributed_seconds": 5.76250022277236e-05
+        },
+        "token_ids": [
+          576,
+          25683,
+          1882,
+          374,
+          438,
+          11017,
+          25,
+          220
+        ],
+        "input_tokens": 77,
+        "prefix_tokens": 64,
+        "suffix_tokens": 13,
+        "status": "rebuilt",
+        "ttft_seconds": 0.01543304100050591,
+        "total_seconds": 0.03710995800793171,
+        "decode_seconds": 0.0216769170074258,
+        "decode_tokens_per_second": 322.92415003489793,
+        "stop_reason": "token_limit",
+        "cache": {
+          "hits": 16,
+          "misses": 8,
+          "evictions": 0,
+          "bypasses": 0,
+          "entries": 0,
+          "stored_tensor_bytes": 0
+        }
+      }
+    ]
+  },
+  {
+    "dataset": "historical",
+    "prefix_tokens": 64,
+    "profile": true,
+    "round": 0,
+    "mode": "direct_segmented",
+    "seconds": 0.1469240830047056,
+    "outputs": [
+      {
+        "phases": {
+          "lookup_seconds": 0.0,
+          "prefix_prefill_seconds": 0.00790541700553149,
+          "snapshot_copy_seconds": 0.0,
+          "request_clone_seconds": 0.0,
+          "suffix_prefill_sample_seconds": 0.007151666999561712,
+          "full_prefill_sample_seconds": 0.0,
+          "decode_seconds": 0.02144754200708121,
+          "unattributed_seconds": 1.8624006770551205e-05
+        },
+        "token_ids": [
+          576,
+          25683,
+          1882,
+          374,
+          438,
+          11017,
+          25,
+          220
+        ],
+        "input_tokens": 77,
+        "prefix_tokens": 64,
+        "suffix_tokens": 13,
+        "status": "direct",
+        "ttft_seconds": 0.015075708011863753,
+        "total_seconds": 0.036523250018944964,
+        "decode_seconds": 0.02144754200708121,
+        "decode_tokens_per_second": 326.3777265333645,
+        "stop_reason": "token_limit",
+        "cache": {
+          "hits": 16,
+          "misses": 8,
+          "evictions": 0,
+          "bypasses": 0,
+          "entries": 0,
+          "stored_tensor_bytes": 0
+        }
+      },
+      {
+        "phases": {
+          "lookup_seconds": 0.0,
+          "prefix_prefill_seconds": 0.007921458018245175,
+          "snapshot_copy_seconds": 0.0,
+          "request_clone_seconds": 0.0,
+          "suffix_prefill_sample_seconds": 0.007183833979070187,
+          "full_prefill_sample_seconds": 0.0,
+          "decode_seconds": 0.021737958013545722,
+          "unattributed_seconds": 1.8082995666190982e-05
+        },
+        "token_ids": [
+          576,
+          25683,
+          1882,
+          374,
+          438,
+          11017,
+          25,
+          220
+        ],
+        "input_tokens": 77,
+        "prefix_tokens": 64,
+        "suffix_tokens": 13,
+        "status": "direct",
+        "ttft_seconds": 0.015123374992981553,
+        "total_seconds": 0.036861333006527275,
+        "decode_seconds": 0.021737958013545722,
+        "decode_tokens_per_second": 322.01736683997837,
+        "stop_reason": "token_limit",
+        "cache": {
+          "hits": 16,
+          "misses": 8,
+          "evictions": 0,
+          "bypasses": 0,
+          "entries": 0,
+          "stored_tensor_bytes": 0
+        }
+      },
+      {
+        "phases": {
+          "lookup_seconds": 0.0,
+          "prefix_prefill_seconds": 0.007908583007520065,
+          "snapshot_copy_seconds": 0.0,
+          "request_clone_seconds": 0.0,
+          "suffix_prefill_sample_seconds": 0.007209999981569126,
+          "full_prefill_sample_seconds": 0.0,
+          "decode_seconds": 0.021669917012332007,
+          "unattributed_seconds": 1.883300137706101e-05
+        },
+        "token_ids": [
+          576,
+          25683,
+          1882,
+          374,
+          438,
+          11017,
+          25,
+          220
+        ],
+        "input_tokens": 77,
+        "prefix_tokens": 64,
+        "suffix_tokens": 13,
+        "status": "direct",
+        "ttft_seconds": 0.015137415990466252,
+        "total_seconds": 0.03680733300279826,
+        "decode_seconds": 0.021669917012332007,
+        "decode_tokens_per_second": 323.02846365384835,
+        "stop_reason": "token_limit",
+        "cache": {
+          "hits": 16,
+          "misses": 8,
+          "evictions": 0,
+          "bypasses": 0,
+          "entries": 0,
+          "stored_tensor_bytes": 0
+        }
+      },
+      {
+        "phases": {
+          "lookup_seconds": 0.0,
+          "prefix_prefill_seconds": 0.007902000012109056,
+          "snapshot_copy_seconds": 0.0,
+          "request_clone_seconds": 0.0,
+          "suffix_prefill_sample_seconds": 0.007124540978111327,
+          "full_prefill_sample_seconds": 0.0,
+          "decode_seconds": 0.021514874999411404,
+          "unattributed_seconds": 1.9333994714543223e-05
+        },
+        "token_ids": [
+          576,
+          25683,
+          1882,
+          374,
+          438,
+          11017,
+          25,
+          220
+        ],
+        "input_tokens": 77,
+        "prefix_tokens": 64,
+        "suffix_tokens": 13,
+        "status": "direct",
+        "ttft_seconds": 0.015045874984934926,
+        "total_seconds": 0.03656074998434633,
+        "decode_seconds": 0.021514874999411404,
+        "decode_tokens_per_second": 325.3562942007101,
+        "stop_reason": "token_limit",
+        "cache": {
+          "hits": 16,
+          "misses": 8,
+          "evictions": 0,
+          "bypasses": 0,
+          "entries": 0,
+          "stored_tensor_bytes": 0
+        }
+      }
+    ]
+  }
+]

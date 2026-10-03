@@ -1,0 +1,36 @@
+[
+  {
+    "dataset": "historical",
+    "prefix_tokens": 64,
+    "profile": false,
+    "round": 0,
+    "mode": "warm_hit",
+    "seconds": 0.008017375017516315,
+    "status": "miss",
+    "cache": {
+      "hits": 4,
+      "misses": 4,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 786432
+    }
+  },
+  {
+    "dataset": "historical",
+    "prefix_tokens": 64,
+    "profile": true,
+    "round": 0,
+    "mode": "warm_hit",
+    "seconds": 0.008036000013817102,
+    "status": "miss",
+    "cache": {
+      "hits": 12,
+      "misses": 8,
+      "evictions": 0,
+      "bypasses": 0,
+      "entries": 1,
+      "stored_tensor_bytes": 786432
+    }
+  }
+]

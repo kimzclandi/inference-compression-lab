@@ -1,0 +1,8 @@
+{
+  "rounds": 1, "warmup_per_mode": 1, "generated_tokens": 8,
+  "prefix_lengths": [64], "requests": 4, "seed": 20261004,
+  "max_entries": 2, "max_bytes": 67108864,
+  "modes": ["full", "legacy_segmented", "direct_segmented", "cached_workload", "warm_hit"],
+  "datasets": ["historical"], "profile": [false, true],
+  "purpose": "Real-model smoke and interview demo only. Too few repeats for performance claims."
+}
