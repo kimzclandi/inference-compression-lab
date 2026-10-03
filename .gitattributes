@@ -1,2 +1,5 @@
-# Preserve upstream tool stdout/stderr verbatim, including trailing spaces.
-results/**/*.log -whitespace
+# Keep raw reproducibility records available while focusing PR review on source and summaries.
+results/**/timings.json linguist-generated=true
+results/**/workloads.json linguist-generated=true
+results/**/quality-predictions.json linguist-generated=true
+results/**/predictions-*.json linguist-generated=true

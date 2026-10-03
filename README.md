@@ -4,6 +4,8 @@
 
 ## 当前状态
 
+当前包含两条可复跑主线：[MiniLM CPU量化与离线批处理](docs/length-bucketing-study.md)，以及[Qwen生成式推理与共享前缀KV缓存](docs/qwen-prefix-study.md)。前者验证编码器吞吐，后者分开首token延迟、解码速度、缓存构建成本与容量失效边界；均保留负结果。
+
 已分别完成 Windows 和 Mac 的真实 MiniLM / ORT CPU 动态 INT8 实验。历史 [Windows 报告](results/minilm-cpu-dynamic-int8/REPORT.md) 保持不变；新增 [Mac 报告与原始证据](results/minilm-mac-m4max-baseline/REPORT.md)。Mac 上 INT8 文件缩小约 35%，但指定负载推理较 FP32 慢约 14%；逐层误差分析指导的单节点 FP32 回退让句向量 MSE 降低约 6.8%，没有显著任务质量提升证据。本仓库不包含历史 Jetson 项目代码、公司材料或模型权重。
 
 | 工作包 | 状态 | 目标 |
