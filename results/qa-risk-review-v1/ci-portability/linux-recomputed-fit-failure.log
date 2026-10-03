@@ -1,0 +1,33 @@
+test (3.11)	Complete RC4 research and bounded QA acceptance	﻿2026-10-03T21:45:13.7674398Z ##[group]Run python -m experiments.verify_release_rc4
+test (3.11)	Complete RC4 research and bounded QA acceptance	2026-10-03T21:45:13.7675144Z ^[[36;1mpython -m experiments.verify_release_rc4^[[0m
+test (3.11)	Complete RC4 research and bounded QA acceptance	2026-10-03T21:45:13.7746229Z shell: /usr/bin/bash -e {0}
+test (3.11)	Complete RC4 research and bounded QA acceptance	2026-10-03T21:45:13.7746490Z env:
+test (3.11)	Complete RC4 research and bounded QA acceptance	2026-10-03T21:45:13.7746764Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.16/x64
+test (3.11)	Complete RC4 research and bounded QA acceptance	2026-10-03T21:45:13.7747209Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.16/x64/lib/pkgconfig
+test (3.11)	Complete RC4 research and bounded QA acceptance	2026-10-03T21:45:13.7747651Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.16/x64
+test (3.11)	Complete RC4 research and bounded QA acceptance	2026-10-03T21:45:13.7748039Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.16/x64
+test (3.11)	Complete RC4 research and bounded QA acceptance	2026-10-03T21:45:13.7748432Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.16/x64
+test (3.11)	Complete RC4 research and bounded QA acceptance	2026-10-03T21:45:13.7749173Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.16/x64/lib
+test (3.11)	Complete RC4 research and bounded QA acceptance	2026-10-03T21:45:13.7749525Z ##[endgroup]
+test (3.11)	Complete RC4 research and bounded QA acceptance	2026-10-03T21:45:38.9098787Z Traceback (most recent call last):
+test (3.11)	Complete RC4 research and bounded QA acceptance	2026-10-03T21:45:38.9110976Z   File "<frozen runpy>", line 198, in _run_module_as_main
+test (3.11)	Complete RC4 research and bounded QA acceptance	2026-10-03T21:45:38.9112248Z   File "<frozen runpy>", line 88, in _run_code
+test (3.11)	Complete RC4 research and bounded QA acceptance	2026-10-03T21:45:38.9113581Z   File "/home/runner/work/inference-compression-lab/inference-compression-lab/experiments/verify_release_rc4.py", line 112, in <module>
+test (3.11)	Complete RC4 research and bounded QA acceptance	2026-10-03T21:45:38.9115474Z     if __name__=='__main__':main()
+test (3.11)	Complete RC4 research and bounded QA acceptance	2026-10-03T21:45:38.9116068Z                             ^^^^^^
+test (3.11)	Complete RC4 research and bounded QA acceptance	2026-10-03T21:45:38.9117178Z   File "/home/runner/work/inference-compression-lab/inference-compression-lab/experiments/verify_release_rc4.py", line 107, in main
+test (3.11)	Complete RC4 research and bounded QA acceptance	2026-10-03T21:45:38.9118431Z     args=parser.parse_args();result=verify(args.root)
+test (3.11)	Complete RC4 research and bounded QA acceptance	2026-10-03T21:45:38.9119455Z                                     ^^^^^^^^^^^^^^^^^
+test (3.11)	Complete RC4 research and bounded QA acceptance	2026-10-03T21:45:38.9120971Z   File "/home/runner/work/inference-compression-lab/inference-compression-lab/experiments/verify_release_rc4.py", line 65, in verify
+test (3.11)	Complete RC4 research and bounded QA acceptance	2026-10-03T21:45:38.9122506Z     risk=verify_risk(root/'results/qa-risk-v2',risk_study)
+test (3.11)	Complete RC4 research and bounded QA acceptance	2026-10-03T21:45:38.9123374Z          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+test (3.11)	Complete RC4 research and bounded QA acceptance	2026-10-03T21:45:38.9124833Z   File "/home/runner/work/inference-compression-lab/inference-compression-lab/experiments/verify_qa_risk.py", line 200, in verify
+test (3.11)	Complete RC4 research and bounded QA acceptance	2026-10-03T21:45:38.9126443Z     training=verify_training(training_dir,spec,protocol_sha256)
+test (3.11)	Complete RC4 research and bounded QA acceptance	2026-10-03T21:45:38.9127347Z              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+test (3.11)	Complete RC4 research and bounded QA acceptance	2026-10-03T21:45:38.9129101Z   File "/home/runner/work/inference-compression-lab/inference-compression-lab/experiments/verify_qa_risk.py", line 139, in verify_training
+test (3.11)	Complete RC4 research and bounded QA acceptance	2026-10-03T21:45:38.9130584Z     model=fit([r['features'] for r in matrix],[r['target'] for r in matrix])
+test (3.11)	Complete RC4 research and bounded QA acceptance	2026-10-03T21:45:38.9131426Z           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+test (3.11)	Complete RC4 research and bounded QA acceptance	2026-10-03T21:45:38.9132676Z   File "/home/runner/work/inference-compression-lab/inference-compression-lab/lab/qa_risk_calibration.py", line 224, in fit
+test (3.11)	Complete RC4 research and bounded QA acceptance	2026-10-03T21:45:38.9164343Z ##[error]    raise ValueError('Logistic head did not converge in the fixed 100 iterations.')
+test (3.11)	Complete RC4 research and bounded QA acceptance	2026-10-03T21:45:38.9175399Z ValueError: Logistic head did not converge in the fixed 100 iterations.
+test (3.11)	Complete RC4 research and bounded QA acceptance	2026-10-03T21:45:38.9647101Z ##[error]Process completed with exit code 1.

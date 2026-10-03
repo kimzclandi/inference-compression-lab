@@ -6,6 +6,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         python: ['3.11', '3.12']
     steps:
@@ -25,6 +26,8 @@ jobs:
         run: |
           python -m experiments.verify_qa_remediation --root results/qa-remediation-v1
           python results/qa-remediation-review-v1/independent/audit.py --run fp16=results/qa-remediation-v1/calibration-fp16 --run q8=results/qa-remediation-v1/calibration-q8 --output "$RUNNER_TEMP/independent-qa-calibration.json"
+      - name: Frozen optimizer portability diagnosis (no learned parameters)
+        run: python -m experiments.diagnose_qa_risk_portability
       - name: Complete RC4 research and bounded QA acceptance
         run: python -m experiments.verify_release_rc4
       - name: Independent specialist decoding and supervised feature arithmetic
