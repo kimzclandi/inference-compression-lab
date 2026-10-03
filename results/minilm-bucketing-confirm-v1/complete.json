@@ -1,0 +1,11 @@
+{
+  "files_sha256": {
+    "manifest.json": "4ffca2539120a83765ad98fcabbe8cb265b349423c9935e11266eb6d96b887bb",
+    "predictions-fp32-0.json": "4dd8a5c8f7faace30ddff82c31a6d52ae0f747ade71459f4a9692b5705f3f347",
+    "predictions-fp32-1.json": "0e4311440dde9b6aa42c200cda5a3ec63fae7ba0af040a39e73b56a34af590e3",
+    "predictions-int8_per_channel-0.json": "80b84f4c574b13754a586f44d26081f0ea0af34bc4e450ef515a6da8fc8aa3c2",
+    "predictions-int8_per_channel-1.json": "2dede35fe0ed058edc18a1917a94122546e2ecaa83a30ea0a5c64c6ccc8bbb99",
+    "summary.json": "25379c4f7c0b4348bcf3579e8ef514e9f09da81bde0498fb2ea0210769536b09",
+    "timings.json": "554fc7869bee32bf651125faf118308109280f8837c8028b06b7eac53dfc0854"
+  }
+}
