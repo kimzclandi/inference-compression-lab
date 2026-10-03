@@ -1,0 +1,43 @@
+{
+  "config": {
+    "url": "https://rajpurkar.github.io/SQuAD-explorer/dataset/dev-v2.0.json",
+    "sha256": "80a5225e94905956a6446d296ca1093975c4d3b3260f1d6c8f68bc2ab77182d8",
+    "title": "Computational_complexity_theory",
+    "seed": 20260918,
+    "context_jaccard": 0.7,
+    "question_jaccard": 0.8,
+    "question_sequence_ratio": 0.9,
+    "train_fraction": 0.6,
+    "dev_fraction": 0.2
+  },
+  "audit": {
+    "exact_duplicates_removed": [],
+    "cross_context_edges": [],
+    "family_count": 48,
+    "source_paragraph_count": 48
+  },
+  "note": "Local splits of public SQuAD dev; NOT official SQuAD test. Same-article paragraph-family isolation.",
+  "counts": {
+    "train": {
+      "n": 242,
+      "unanswerable": 126,
+      "families": 28
+    },
+    "dev": {
+      "n": 74,
+      "unanswerable": 41,
+      "families": 9
+    },
+    "test": {
+      "n": 102,
+      "unanswerable": 54,
+      "families": 11
+    }
+  },
+  "files": {
+    "dev.jsonl": "8eb033584f81c1e5763c609fc6259678a550329dd9e72cdf89e4c806084c2a68",
+    "samples.jsonl": "ca0e860f88f996578fac9a0dc2a07bafe637b5c7dd951faec97789aeb5ccfdcd",
+    "test.jsonl": "26f1871ab38d22ccbb36a810a7b456aa09c6b615e63f5b64f0818ab8d024ad69",
+    "train.jsonl": "46cd981f842f905b197db0fda1ed3570377820b909278bc35ac859c175367274"
+  }
+}
