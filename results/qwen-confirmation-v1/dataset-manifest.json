@@ -1,0 +1,24 @@
+{
+  "selection": {
+    "source_url": "https://rajpurkar.github.io/SQuAD-explorer/dataset/dev-v2.0.json",
+    "source_sha256": "80a5225e94905956a6446d296ca1093975c4d3b3260f1d6c8f68bc2ab77182d8",
+    "seed": 2026100402,
+    "articles": 4,
+    "per_class_per_article": 16,
+    "max_context_chars": 4000,
+    "policy": "Exclude known prior titles, IDs, normalized exact contexts/questions. Hash-rank eligible unseen articles; take first four with at least sixteen unique contexts per answerability class. Hash-rank questions, at most one per exact context per class. No model outputs used; do not replace samples after observing results.",
+    "exclusions": "configs/qwen-confirmation/exclusions.json"
+  },
+  "exclusions_sha256": "d0d59bd7f1c9b012ff5e71c82a651d25000db873256d5369e8f0f55a73321ba9",
+  "data_sha256": "4b352f5923279ead7407a53e160d6d010de9bce2140b70133b4e75cb3fe9a970",
+  "titles": [
+    "Rhine",
+    "Victoria_(Australia)",
+    "Jacksonville,_Florida",
+    "Sky_(United_Kingdom)"
+  ],
+  "n": 128,
+  "families": 85,
+  "unanswerable": 64,
+  "scope": "New to known project datasets, selected before inference. Public SQuAD dev subset, not official hidden test. Pretraining exposure unknown."
+}

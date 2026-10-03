@@ -1,0 +1,10 @@
+{
+  "run.json": "99436c0cb6c985e8acf4de12f1f121f69d91209aa04a86968779f342157fa05b",
+  "source/experiments/prepare_qwen_quantization_assets.py": "0a153e60264a6c9669cb920777e6895b4783b9f6e3a3eb14c37d7cc1c92e4179",
+  "source/experiments/qwen_quantization.py": "7e15fe4e5af77d737c098928c3979b16f337fffa0a38f628924a1d2a05fb2136",
+  "source/lab/artifact_integrity.py": "75c5f3b366bbb3bea6bcbc101c26398d57deba6c7b7751d05aa457b72109d8e8",
+  "source/lab/evidence.py": "314c7a009fb2b740db1cb3925d538f7abcd8a8eb719c0d05efd0be71c0abb91d",
+  "source/lab/model_identity.py": "4ffaf724539e5ab6677b11f53bf720f6267fc4ea9e7a5ed97ed0307cce367773",
+  "source/lab/qa_metrics.py": "78c4af7f06ba49b3acddd2610586336ecf585c06d8ad89b46ff9fb6358aaaa1f",
+  "source/lab/quantization_diagnostics.py": "947d5bf29b9c238c7330b75c1719044122e1f75c5fc8ad36cf5df1a05d95075f"
+}

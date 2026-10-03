@@ -1,0 +1,249 @@
+{
+  "n": 128,
+  "variants": {
+    "fp16": {
+      "metrics": {
+        "overall": {
+          "n": 128,
+          "em": 0.2578125,
+          "f1": 0.325181199009324,
+          "format_valid_rate": 0.859375
+        },
+        "answerable": {
+          "n": 64,
+          "em": 0.515625,
+          "f1": 0.650362398018648,
+          "format_valid_rate": 0.890625
+        },
+        "unanswerable": {
+          "n": 64,
+          "em": 0.0,
+          "f1": 0.0,
+          "format_valid_rate": 0.828125
+        },
+        "unsupported_answer_rate": 1.0,
+        "over_abstention_rate": 0.0,
+        "categories": {
+          "correct": 33,
+          "format_or_nonextractive": 18,
+          "wrong_or_partial_span": 24,
+          "unsupported_answer": 53
+        },
+        "family_macro_em": 0.2529411764705882,
+        "always_abstain_em": 0.5
+      },
+      "em_count": 33,
+      "format_valid_count": 110
+    },
+    "q4": {
+      "metrics": {
+        "overall": {
+          "n": 128,
+          "em": 0.203125,
+          "f1": 0.2810016760469063,
+          "format_valid_rate": 0.640625
+        },
+        "answerable": {
+          "n": 64,
+          "em": 0.40625,
+          "f1": 0.5620033520938126,
+          "format_valid_rate": 0.59375
+        },
+        "unanswerable": {
+          "n": 64,
+          "em": 0.0,
+          "f1": 0.0,
+          "format_valid_rate": 0.6875
+        },
+        "unsupported_answer_rate": 1.0,
+        "over_abstention_rate": 0.0,
+        "categories": {
+          "correct": 24,
+          "format_or_nonextractive": 46,
+          "wrong_or_partial_span": 14,
+          "unsupported_answer": 44
+        },
+        "family_macro_em": 0.19411764705882353,
+        "always_abstain_em": 0.5
+      },
+      "em_count": 26,
+      "format_valid_count": 82
+    },
+    "q8": {
+      "metrics": {
+        "overall": {
+          "n": 128,
+          "em": 0.265625,
+          "f1": 0.329087449009324,
+          "format_valid_rate": 0.8515625
+        },
+        "answerable": {
+          "n": 64,
+          "em": 0.53125,
+          "f1": 0.658174898018648,
+          "format_valid_rate": 0.875
+        },
+        "unanswerable": {
+          "n": 64,
+          "em": 0.0,
+          "f1": 0.0,
+          "format_valid_rate": 0.828125
+        },
+        "unsupported_answer_rate": 1.0,
+        "over_abstention_rate": 0.0,
+        "categories": {
+          "correct": 34,
+          "format_or_nonextractive": 19,
+          "wrong_or_partial_span": 22,
+          "unsupported_answer": 53
+        },
+        "family_macro_em": 0.25882352941176473,
+        "always_abstain_em": 0.5
+      },
+      "em_count": 34,
+      "format_valid_count": 109
+    },
+    "selected": {
+      "metrics": {
+        "overall": {
+          "n": 128,
+          "em": 0.2265625,
+          "f1": 0.283478452742433,
+          "format_valid_rate": 0.71875
+        },
+        "answerable": {
+          "n": 64,
+          "em": 0.453125,
+          "f1": 0.566956905484866,
+          "format_valid_rate": 0.71875
+        },
+        "unanswerable": {
+          "n": 64,
+          "em": 0.0,
+          "f1": 0.0,
+          "format_valid_rate": 0.71875
+        },
+        "unsupported_answer_rate": 1.0,
+        "over_abstention_rate": 0.0,
+        "categories": {
+          "correct": 27,
+          "format_or_nonextractive": 36,
+          "wrong_or_partial_span": 19,
+          "unsupported_answer": 46
+        },
+        "family_macro_em": 0.21176470588235294,
+        "always_abstain_em": 0.5
+      },
+      "em_count": 29,
+      "format_valid_count": 92
+    },
+    "control": {
+      "metrics": {
+        "overall": {
+          "n": 128,
+          "em": 0.1953125,
+          "f1": 0.27573689772178317,
+          "format_valid_rate": 0.6015625
+        },
+        "answerable": {
+          "n": 64,
+          "em": 0.390625,
+          "f1": 0.5514737954435663,
+          "format_valid_rate": 0.578125
+        },
+        "unanswerable": {
+          "n": 64,
+          "em": 0.0,
+          "f1": 0.0,
+          "format_valid_rate": 0.625
+        },
+        "unsupported_answer_rate": 1.0,
+        "over_abstention_rate": 0.0,
+        "categories": {
+          "correct": 23,
+          "format_or_nonextractive": 51,
+          "wrong_or_partial_span": 14,
+          "unsupported_answer": 40
+        },
+        "family_macro_em": 0.18235294117647058,
+        "always_abstain_em": 0.5
+      },
+      "em_count": 25,
+      "format_valid_count": 77
+    }
+  },
+  "selected_vs": {
+    "q4": {
+      "lost": [],
+      "gained": [
+        "570d391fb3d812140066d579",
+        "572820512ca10214002d9e74",
+        "572821274b864d1900164513"
+      ],
+      "em_difference": 0.0234375,
+      "ci95": [
+        0.0,
+        0.050724637681159424
+      ],
+      "families": 85,
+      "articles": 4
+    },
+    "control": {
+      "lost": [],
+      "gained": [
+        "570d391fb3d812140066d579",
+        "572820512ca10214002d9e74",
+        "572821274b864d1900164513",
+        "572ff673b2c2fd1400568669"
+      ],
+      "em_difference": 0.03125,
+      "ci95": [
+        0.007462686567164179,
+        0.06299212598425197
+      ],
+      "families": 85,
+      "articles": 4
+    },
+    "fp16": {
+      "lost": [
+        "570d2556fed7b91900d45c49",
+        "5727cd7dff5b5019007d9590",
+        "57280e1aff5b5019007d9bee",
+        "57281d494b864d19001644c0",
+        "572f60f4947a6a140053c8ea",
+        "572ff4ca04bcaa1900d76f24",
+        "572ffce5a23a5019007fcc18"
+      ],
+      "gained": [
+        "570966e0200fba1400367f53",
+        "57096b66200fba1400367faa",
+        "570d4329fed7b91900d45dd8"
+      ],
+      "em_difference": -0.03125,
+      "ci95": [
+        -0.07874015748031496,
+        0.015384615384615385
+      ],
+      "families": 85,
+      "articles": 4
+    }
+  },
+  "f1_drop_vs_fp16": 0.04170274626689102,
+  "gate": {
+    "criteria": {
+      "em_gain_over_q4": false,
+      "em_gain_over_control": true,
+      "f1_drop_vs_fp16_at_most_0_02": false
+    },
+    "passed": false
+  },
+  "scope": "New to known project datasets; public SQuAD dev, not an official hidden test. Possible pretraining contamination; article domain shift relative to old dev.",
+  "bootstrap": {
+    "replicates": 5000,
+    "seed": 2026100402,
+    "unit": "normalized exact context/family",
+    "strata": "source_title",
+    "method": "Within each fixed article resample families with replacement; include all member questions; paired EM count difference divided by resampled row count. Equal-tail percentile interval via sorted indices floor((B-1)*0.025) and floor((B-1)*0.975).",
+    "interpretation": "Conditional on four selected articles. Not a population-wide guarantee."
+  }
+}

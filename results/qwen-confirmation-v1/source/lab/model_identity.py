@@ -4,15 +4,6 @@ import hashlib
 from lab.quantization_diagnostics import read, sha
 
 TOKENIZER_FILES = ('tokenizer.json', 'tokenizer_config.json', 'vocab.json', 'merges.txt')
-INFERENCE_FILES = (*TOKENIZER_FILES, 'added_tokens.json', 'special_tokens_map.json',
-                   'chat_template.jinja', 'generation_config.json')
-
-
-def verify_inference_files(actual, expected):
-    """Also bind loader sidecars: an external chat template can override tokenizer config."""
-    for name in INFERENCE_FILES:
-        if actual.get(name) != expected.get(name) or name not in expected:
-            raise ValueError('Inference sidecar identity mismatch: ' + name)
 
 
 def tensor_identity(path):

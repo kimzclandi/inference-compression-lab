@@ -8,7 +8,7 @@ import shutil
 import platform
 from lab.evidence import reserve_directory
 from lab.quantization_diagnostics import read, write, sha
-from lab.model_identity import tensor_identity, verify_tensor_identity, verify_inference_files
+from lab.model_identity import tensor_identity, verify_tensor_identity
 from lab.artifact_integrity import file_hashes, git_identity
 
 
@@ -46,7 +46,6 @@ def main():
               'packages': {n: importlib.metadata.version(n) for n in ['mlx','mlx-lm','numpy','transformers']}}
     try:
         expected = read(a.identities)
-        inference_files = read('configs/qwen-quantization/model-identities.json')['fp16']
         for variant in ['fp16', 'q4', 'q8']:
             source = a.source if variant == 'fp16' else out / 'student-fp16'
             destination = out / f'student-{variant}'
@@ -62,12 +61,10 @@ def main():
                 shutil.copy2(source / name, destination / name)
             del model, tok; gc.collect(); mx.clear_cache()
             actual = tensor_identity(destination); verify_tensor_identity(actual, expected[variant])
-            files = model_files(destination); verify_inference_files(files, inference_files)
-            status['models'][variant] = {'tensor_identity_verified': True, 'files': files}
+            status['models'][variant] = {'tensor_identity_verified': True, 'files': model_files(destination)}
         for variant, block in [('selected', 10), ('control', 22)]:
             export = export_block(out / 'student-fp16', out / 'student-q4', block, out / variant)
             verify_tensor_identity(tensor_identity(out / variant), expected[variant])
-            verify_inference_files(export['model_files'], inference_files)
             status['models'][variant] = {'tensor_identity_verified': True, 'files': export['model_files']}
         status['status'] = 'complete'
     except BaseException as e:

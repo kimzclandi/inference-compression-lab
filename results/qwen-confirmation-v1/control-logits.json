@@ -1,0 +1,8834 @@
+[
+  {
+    "vocab_size": 151936,
+    "top1": 45948,
+    "top2": 10940,
+    "margin": 3.015625,
+    "top10": [
+      {
+        "token": 45948,
+        "text": "Sky",
+        "logit": 20.515625
+      },
+      {
+        "token": 10940,
+        "text": "Free",
+        "logit": 17.5
+      },
+      {
+        "token": 7347,
+        "text": "BS",
+        "logit": 17.0
+      },
+      {
+        "token": 6025,
+        "text": "After",
+        "logit": 15.875
+      },
+      {
+        "token": 10331,
+        "text": "Blue",
+        "logit": 15.40625
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 15.2421875
+      },
+      {
+        "token": 18,
+        "text": "3",
+        "logit": 15.140625
+      },
+      {
+        "token": 10227,
+        "text": "Before",
+        "logit": 14.6484375
+      },
+      {
+        "token": 19290,
+        "text": "Sk",
+        "logit": 14.390625
+      },
+      {
+        "token": 26684,
+        "text": "sky",
+        "logit": 14.2109375
+      }
+    ],
+    "reference_top1": 45948,
+    "reference_top2": 36953,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      20.515625,
+      14.171875
+    ],
+    "reference_pair_margin": 6.34375,
+    "fp16_margin": 3.59375,
+    "id": "57094b4f9928a814004714f9",
+    "input_token_ids_sha256": "bb31621d0ad35b05b293d5bf7db94e6c7df3ee34f0685f9496ff0b455225a9c9"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 7347,
+    "top2": 35499,
+    "margin": 2.59375,
+    "top10": [
+      {
+        "token": 7347,
+        "text": "BS",
+        "logit": 19.515625
+      },
+      {
+        "token": 35499,
+        "text": "additional",
+        "logit": 16.921875
+      },
+      {
+        "token": 45948,
+        "text": "Sky",
+        "logit": 16.84375
+      },
+      {
+        "token": 9426,
+        "text": "initial",
+        "logit": 16.6875
+      },
+      {
+        "token": 970,
+        "text": "using",
+        "logit": 16.671875
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 16.171875
+      },
+      {
+        "token": 29019,
+        "text": "Additional",
+        "logit": 16.109375
+      },
+      {
+        "token": 64,
+        "text": "a",
+        "logit": 16.0625
+      },
+      {
+        "token": 3136,
+        "text": "Sub",
+        "logit": 15.8984375
+      },
+      {
+        "token": 6865,
+        "text": "They",
+        "logit": 15.7265625
+      }
+    ],
+    "reference_top1": 7347,
+    "reference_top2": 35499,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      19.515625,
+      16.921875
+    ],
+    "reference_pair_margin": 2.59375,
+    "fp16_margin": 0.6875,
+    "id": "57094ca7efce8f15003a7dd6",
+    "input_token_ids_sha256": "7ca58f6e585ff91481b11cef57bfc8e3ac88d659107fbb7471ca8856d4290c14"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 45,
+    "top2": 7347,
+    "margin": 2.71875,
+    "top10": [
+      {
+        "token": 45,
+        "text": "N",
+        "logit": 20.75
+      },
+      {
+        "token": 7347,
+        "text": "BS",
+        "logit": 18.03125
+      },
+      {
+        "token": 2448,
+        "text": "NS",
+        "logit": 17.78125
+      },
+      {
+        "token": 47360,
+        "text": "Ns",
+        "logit": 16.671875
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 16.5
+      },
+      {
+        "token": 8065,
+        "text": "ND",
+        "logit": 16.359375
+      },
+      {
+        "token": 5936,
+        "text": "DS",
+        "logit": 16.328125
+      },
+      {
+        "token": 85979,
+        "text": "Nintendo",
+        "logit": 15.546875
+      },
+      {
+        "token": 30812,
+        "text": "National",
+        "logit": 15.0078125
+      },
+      {
+        "token": 4064,
+        "text": "None",
+        "logit": 14.8984375
+      }
+    ],
+    "reference_top1": 45,
+    "reference_top2": 8065,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      20.75,
+      16.359375
+    ],
+    "reference_pair_margin": 4.390625,
+    "fp16_margin": 3.234375,
+    "id": "57094d489928a8140047150c",
+    "input_token_ids_sha256": "af298996efeb029e16b920adc642f56995da300c1a59a0aa460589349833cd0c"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 23950,
+    "top2": 49,
+    "margin": 4.546875,
+    "top10": [
+      {
+        "token": 23950,
+        "text": "Sam",
+        "logit": 23.171875
+      },
+      {
+        "token": 49,
+        "text": "R",
+        "logit": 18.625
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 17.96875
+      },
+      {
+        "token": 50,
+        "text": "S",
+        "logit": 16.1875
+      },
+      {
+        "token": 38,
+        "text": "G",
+        "logit": 15.3828125
+      },
+      {
+        "token": 86334,
+        "text": "SAM",
+        "logit": 14.96875
+      },
+      {
+        "token": 47,
+        "text": "P",
+        "logit": 14.8046875
+      },
+      {
+        "token": 25300,
+        "text": "Paul",
+        "logit": 14.65625
+      },
+      {
+        "token": 3830,
+        "text": "From",
+        "logit": 14.53125
+      },
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 14.3515625
+      }
+    ],
+    "reference_top1": 23950,
+    "reference_top2": 49,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      23.171875,
+      18.625
+    ],
+    "reference_pair_margin": 4.546875,
+    "fp16_margin": 4.34375,
+    "id": "570961aa200fba1400367f15",
+    "input_token_ids_sha256": "b14abd62d640ea9d3f522688093b54d3ccdca342dbdb125a6a1348b4c95a5546"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 51861,
+    "top2": 7347,
+    "margin": 1.21875,
+    "top10": [
+      {
+        "token": 51861,
+        "text": "British",
+        "logit": 24.25
+      },
+      {
+        "token": 7347,
+        "text": "BS",
+        "logit": 23.03125
+      },
+      {
+        "token": 45948,
+        "text": "Sky",
+        "logit": 17.96875
+      },
+      {
+        "token": 35228,
+        "text": "Brit",
+        "logit": 17.90625
+      },
+      {
+        "token": 90738,
+        "text": "Britain",
+        "logit": 17.796875
+      },
+      {
+        "token": 74207,
+        "text": "Bs",
+        "logit": 15.9609375
+      },
+      {
+        "token": 66755,
+        "text": "BBC",
+        "logit": 15.9375
+      },
+      {
+        "token": 7855,
+        "text": " British",
+        "logit": 15.9296875
+      },
+      {
+        "token": 33,
+        "text": "B",
+        "logit": 15.7734375
+      },
+      {
+        "token": 30845,
+        "text": "Former",
+        "logit": 15.7734375
+      }
+    ],
+    "reference_top1": 51861,
+    "reference_top2": 7347,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      24.25,
+      23.03125
+    ],
+    "reference_pair_margin": 1.21875,
+    "fp16_margin": 4.78125,
+    "id": "570963a5200fba1400367f33",
+    "input_token_ids_sha256": "24928701d32b176f3664bca03e35dfc58caaeb808ebead5e6c70cf8251bf8f01"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 14611,
+    "top2": 785,
+    "margin": 0.375,
+    "top10": [
+      {
+        "token": 14611,
+        "text": "Connect",
+        "logit": 18.1875
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 17.8125
+      },
+      {
+        "token": 62924,
+        "text": "Connecting",
+        "logit": 17.5625
+      },
+      {
+        "token": 6459,
+        "text": "connect",
+        "logit": 17.421875
+      },
+      {
+        "token": 32,
+        "text": "A",
+        "logit": 16.96875
+      },
+      {
+        "token": 1249,
+        "text": "To",
+        "logit": 16.8125
+      },
+      {
+        "token": 12552,
+        "text": "enable",
+        "logit": 16.5625
+      },
+      {
+        "token": 11084,
+        "text": "Enable",
+        "logit": 16.53125
+      },
+      {
+        "token": 37845,
+        "text": "Wire",
+        "logit": 15.84375
+      },
+      {
+        "token": 983,
+        "text": "to",
+        "logit": 15.5078125
+      }
+    ],
+    "reference_top1": 19368,
+    "reference_top2": 83646,
+    "reference_top1_rank": 30,
+    "reference_pair_logits": [
+      13.6953125,
+      14.2421875
+    ],
+    "reference_pair_margin": -0.546875,
+    "fp16_margin": 1.375,
+    "id": "57096505ed30961900e84084",
+    "input_token_ids_sha256": "09246a05a4e5fc5608f58ad0f354ce0d3a2b04bbecdb69b320a6bf5493f2d3b4"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 35,
+    "top2": 19147,
+    "margin": 1.421875,
+    "top10": [
+      {
+        "token": 35,
+        "text": "D",
+        "logit": 21.234375
+      },
+      {
+        "token": 19147,
+        "text": "HD",
+        "logit": 19.8125
+      },
+      {
+        "token": 44,
+        "text": "M",
+        "logit": 18.40625
+      },
+      {
+        "token": 45948,
+        "text": "Sky",
+        "logit": 17.46875
+      },
+      {
+        "token": 5002,
+        "text": "Open",
+        "logit": 15.953125
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 15.703125
+      },
+      {
+        "token": 76,
+        "text": "m",
+        "logit": 15.109375
+      },
+      {
+        "token": 5936,
+        "text": "DS",
+        "logit": 15.03125
+      },
+      {
+        "token": 3562,
+        "text": "most",
+        "logit": 14.9765625
+      },
+      {
+        "token": 67,
+        "text": "d",
+        "logit": 14.9453125
+      }
+    ],
+    "reference_top1": 44,
+    "reference_top2": 35,
+    "reference_top1_rank": 3,
+    "reference_pair_logits": [
+      18.40625,
+      21.234375
+    ],
+    "reference_pair_margin": -2.828125,
+    "fp16_margin": 0.140625,
+    "id": "570966e0200fba1400367f53",
+    "input_token_ids_sha256": "bce51d08455edca55a3c43aa6a2f9e81c3f7a8aba07f601d0a0764f86b648a9e"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 32,
+    "top2": 785,
+    "margin": 3.359375,
+    "top10": [
+      {
+        "token": 32,
+        "text": "A",
+        "logit": 22.109375
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 18.75
+      },
+      {
+        "token": 36,
+        "text": "E",
+        "logit": 18.578125
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 18.21875
+      },
+      {
+        "token": 45948,
+        "text": "Sky",
+        "logit": 17.578125
+      },
+      {
+        "token": 2082,
+        "text": "An",
+        "logit": 16.65625
+      },
+      {
+        "token": 50,
+        "text": "S",
+        "logit": 16.0625
+      },
+      {
+        "token": 34882,
+        "text": "Sat",
+        "logit": 15.7265625
+      },
+      {
+        "token": 4498,
+        "text": "When",
+        "logit": 15.40625
+      },
+      {
+        "token": 97427,
+        "text": "Euro",
+        "logit": 14.9921875
+      }
+    ],
+    "reference_top1": 32,
+    "reference_top2": 36,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      22.109375,
+      18.578125
+    ],
+    "reference_pair_margin": 3.53125,
+    "fp16_margin": 3.328125,
+    "id": "570967c4ed30961900e840bc",
+    "input_token_ids_sha256": "fcbef8d98ac6ec0de29804498d876d67c062035fbba301b0880ab9c06c5b8364"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 1001,
+    "top2": 785,
+    "margin": 5.015625,
+    "top10": [
+      {
+        "token": 1001,
+        "text": "Th",
+        "logit": 23.5625
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 18.546875
+      },
+      {
+        "token": 3617,
+        "text": "TH",
+        "logit": 16.015625
+      },
+      {
+        "token": 1249,
+        "text": "To",
+        "logit": 15.75
+      },
+      {
+        "token": 339,
+        "text": "th",
+        "logit": 15.078125
+      },
+      {
+        "token": 64232,
+        "text": " Thomson",
+        "logit": 15.0703125
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 14.5859375
+      },
+      {
+        "token": 51,
+        "text": "T",
+        "logit": 13.7265625
+      },
+      {
+        "token": 2354,
+        "text": "With",
+        "logit": 13.6484375
+      },
+      {
+        "token": 86970,
+        "text": "Them",
+        "logit": 13.2890625
+      }
+    ],
+    "reference_top1": 1001,
+    "reference_top2": 785,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      23.5625,
+      18.546875
+    ],
+    "reference_pair_margin": 5.015625,
+    "fp16_margin": 5.359375,
+    "id": "5709686c200fba1400367f79",
+    "input_token_ids_sha256": "aa7e5c4263ca73cb30f2c547e00fdc8950f9feff5ead40d9fa4ecc121c88583c"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 63697,
+    "top2": 45,
+    "margin": 2.859375,
+    "top10": [
+      {
+        "token": 63697,
+        "text": "Virgin",
+        "logit": 20.703125
+      },
+      {
+        "token": 45,
+        "text": "N",
+        "logit": 17.84375
+      },
+      {
+        "token": 6408,
+        "text": "NT",
+        "logit": 17.4375
+      },
+      {
+        "token": 9745,
+        "text": "NN",
+        "logit": 16.296875
+      },
+      {
+        "token": 2448,
+        "text": "NS",
+        "logit": 15.8125
+      },
+      {
+        "token": 30042,
+        "text": "NL",
+        "logit": 15.671875
+      },
+      {
+        "token": 11214,
+        "text": " Virgin",
+        "logit": 15.484375
+      },
+      {
+        "token": 47360,
+        "text": "Ns",
+        "logit": 15.3515625
+      },
+      {
+        "token": 30812,
+        "text": "National",
+        "logit": 15.28125
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 14.921875
+      }
+    ],
+    "reference_top1": 6408,
+    "reference_top2": 63697,
+    "reference_top1_rank": 3,
+    "reference_pair_logits": [
+      17.4375,
+      20.703125
+    ],
+    "reference_pair_margin": -3.265625,
+    "fp16_margin": 0.125,
+    "id": "57096b66200fba1400367faa",
+    "input_token_ids_sha256": "582d8ae5b0bda16fdf51c76db4df4efa10f380e1ab060a6e04614339dc38188d"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 32,
+    "top2": 983,
+    "margin": 0.90625,
+    "top10": [
+      {
+        "token": 32,
+        "text": "A",
+        "logit": 18.984375
+      },
+      {
+        "token": 983,
+        "text": "to",
+        "logit": 18.078125
+      },
+      {
+        "token": 3562,
+        "text": "most",
+        "logit": 17.46875
+      },
+      {
+        "token": 541,
+        "text": "all",
+        "logit": 17.421875
+      },
+      {
+        "token": 8373,
+        "text": "Some",
+        "logit": 17.328125
+      },
+      {
+        "token": 1249,
+        "text": "To",
+        "logit": 17.28125
+      },
+      {
+        "token": 359,
+        "text": "un",
+        "logit": 17.078125
+      },
+      {
+        "token": 10724,
+        "text": "Video",
+        "logit": 17.046875
+      },
+      {
+        "token": 64,
+        "text": "a",
+        "logit": 16.78125
+      },
+      {
+        "token": 9986,
+        "text": "video",
+        "logit": 16.640625
+      }
+    ],
+    "reference_top1": 10724,
+    "reference_top2": 359,
+    "reference_top1_rank": 8,
+    "reference_pair_logits": [
+      17.046875,
+      17.078125
+    ],
+    "reference_pair_margin": -0.03125,
+    "fp16_margin": 2.328125,
+    "id": "57096c95200fba1400367fbd",
+    "input_token_ids_sha256": "d9b92b971c8e344567e9b91113692b738eb2d8ae20c024071bb8daf9e28fb328"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 21651,
+    "top2": 49,
+    "margin": 4.5625,
+    "top10": [
+      {
+        "token": 21651,
+        "text": "£",
+        "logit": 22.4375
+      },
+      {
+        "token": 49,
+        "text": "R",
+        "logit": 17.875
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 17.359375
+      },
+      {
+        "token": 6938,
+        "text": " £",
+        "logit": 16.515625
+      },
+      {
+        "token": 6046,
+        "text": "Range",
+        "logit": 16.09375
+      },
+      {
+        "token": 17,
+        "text": "2",
+        "logit": 16.0625
+      },
+      {
+        "token": 42327,
+        "text": "Rs",
+        "logit": 15.5390625
+      },
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 15.4609375
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 15.390625
+      },
+      {
+        "token": 3830,
+        "text": "From",
+        "logit": 15.1015625
+      }
+    ],
+    "reference_top1": 21651,
+    "reference_top2": 16,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      22.4375,
+      15.4609375
+    ],
+    "reference_pair_margin": 6.9765625,
+    "fp16_margin": 5.328125,
+    "id": "57096f37200fba1400367fe6",
+    "input_token_ids_sha256": "e95fd555cde1ee51af642f1c2da7c10c38c59a2b54383208f5243f853f46617f"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 45948,
+    "top2": 7347,
+    "margin": 4.84375,
+    "top10": [
+      {
+        "token": 45948,
+        "text": "Sky",
+        "logit": 21.671875
+      },
+      {
+        "token": 7347,
+        "text": "BS",
+        "logit": 16.828125
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 16.09375
+      },
+      {
+        "token": 50,
+        "text": "S",
+        "logit": 15.8984375
+      },
+      {
+        "token": 14722,
+        "text": " Sky",
+        "logit": 15.0546875
+      },
+      {
+        "token": 12699,
+        "text": "Star",
+        "logit": 15.0078125
+      },
+      {
+        "token": 19290,
+        "text": "Sk",
+        "logit": 14.6875
+      },
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 14.4453125
+      },
+      {
+        "token": 26684,
+        "text": "sky",
+        "logit": 14.4375
+      },
+      {
+        "token": 1592,
+        "text": "Key",
+        "logit": 14.390625
+      }
+    ],
+    "reference_top1": 45948,
+    "reference_top2": 7347,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      21.671875,
+      16.828125
+    ],
+    "reference_pair_margin": 4.84375,
+    "fp16_margin": 4.203125,
+    "id": "57097051ed30961900e84133",
+    "input_token_ids_sha256": "999d007e1864428bf3326828c765250eaca512bd6f071ab4de4cfe16119fd49c"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 6408,
+    "top2": 45,
+    "margin": 0.625,
+    "top10": [
+      {
+        "token": 6408,
+        "text": "NT",
+        "logit": 19.8125
+      },
+      {
+        "token": 45,
+        "text": "N",
+        "logit": 19.1875
+      },
+      {
+        "token": 406,
+        "text": "nt",
+        "logit": 17.40625
+      },
+      {
+        "token": 30042,
+        "text": "NL",
+        "logit": 17.015625
+      },
+      {
+        "token": 30812,
+        "text": "National",
+        "logit": 16.375
+      },
+      {
+        "token": 641,
+        "text": "In",
+        "logit": 15.359375
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 15.015625
+      },
+      {
+        "token": 3564,
+        "text": "New",
+        "logit": 14.8984375
+      },
+      {
+        "token": 37242,
+        "text": "Tel",
+        "logit": 14.84375
+      },
+      {
+        "token": 44456,
+        "text": "ntl",
+        "logit": 14.8046875
+      }
+    ],
+    "reference_top1": 6408,
+    "reference_top2": 45,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      19.8125,
+      19.1875
+    ],
+    "reference_pair_margin": 0.625,
+    "fp16_margin": 4.265625,
+    "id": "57097141200fba1400367ffa",
+    "input_token_ids_sha256": "56ddceded8b942d6af32ab728c23d802248d216ee5569d4161ad84bad3d917d2"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 17,
+    "top2": 16,
+    "margin": 0.59375,
+    "top10": [
+      {
+        "token": 17,
+        "text": "2",
+        "logit": 21.265625
+      },
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 20.671875
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 18.34375
+      },
+      {
+        "token": 6397,
+        "text": "Target",
+        "logit": 18.234375
+      },
+      {
+        "token": 20,
+        "text": "5",
+        "logit": 17.84375
+      },
+      {
+        "token": 18,
+        "text": "3",
+        "logit": 17.03125
+      },
+      {
+        "token": 2132,
+        "text": "It",
+        "logit": 16.578125
+      },
+      {
+        "token": 23,
+        "text": "8",
+        "logit": 16.453125
+      },
+      {
+        "token": 5657,
+        "text": "target",
+        "logit": 16.234375
+      },
+      {
+        "token": 15,
+        "text": "0",
+        "logit": 16.171875
+      }
+    ],
+    "reference_top1": 17,
+    "reference_top2": 18,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      21.265625,
+      17.03125
+    ],
+    "reference_pair_margin": 4.234375,
+    "fp16_margin": 2.203125,
+    "id": "57097b50200fba1400368050",
+    "input_token_ids_sha256": "c95983f81442b5cd26a9481a40b5ef154a8ba844efd2c480bb791e727a220e46"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 21651,
+    "top2": 785,
+    "margin": 6.140625,
+    "top10": [
+      {
+        "token": 21651,
+        "text": "£",
+        "logit": 25.3125
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 19.171875
+      },
+      {
+        "token": 6938,
+        "text": " £",
+        "logit": 18.9375
+      },
+      {
+        "token": 18,
+        "text": "3",
+        "logit": 16.828125
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 16.171875
+      },
+      {
+        "token": 15056,
+        "text": "€",
+        "logit": 15.828125
+      },
+      {
+        "token": 51861,
+        "text": "British",
+        "logit": 15.3359375
+      },
+      {
+        "token": 1143,
+        "text": "Ch",
+        "logit": 15.2109375
+      },
+      {
+        "token": 3,
+        "text": "$",
+        "logit": 15.078125
+      },
+      {
+        "token": 22021,
+        "text": "fixed",
+        "logit": 14.859375
+      }
+    ],
+    "reference_top1": 21651,
+    "reference_top2": 6938,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      25.3125,
+      18.9375
+    ],
+    "reference_pair_margin": 6.375,
+    "fp16_margin": 7.0,
+    "id": "57097d63ed30961900e841fc",
+    "input_token_ids_sha256": "69ffeb14a3b656b15d5ed0c50fcf35acb3daefff8ffa108efc512efc4552f338"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 80956,
+    "top2": 38,
+    "margin": 0.703125,
+    "top10": [
+      {
+        "token": 80956,
+        "text": "Victoria",
+        "logit": 19.65625
+      },
+      {
+        "token": 38,
+        "text": "G",
+        "logit": 18.953125
+      },
+      {
+        "token": 48037,
+        "text": "Australia",
+        "logit": 17.953125
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 17.390625
+      },
+      {
+        "token": 15666,
+        "text": "Second",
+        "logit": 16.984375
+      },
+      {
+        "token": 36125,
+        "text": "Vict",
+        "logit": 16.75
+      },
+      {
+        "token": 53,
+        "text": "V",
+        "logit": 16.140625
+      },
+      {
+        "token": 5569,
+        "text": "second",
+        "logit": 15.5703125
+      },
+      {
+        "token": 22417,
+        "text": " Victoria",
+        "logit": 14.9296875
+      },
+      {
+        "token": 74241,
+        "text": "Australian",
+        "logit": 14.7890625
+      }
+    ],
+    "reference_top1": 80956,
+    "reference_top2": 48037,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      19.65625,
+      17.953125
+    ],
+    "reference_pair_margin": 1.703125,
+    "fp16_margin": 1.390625,
+    "id": "570d2417fed7b91900d45c3e",
+    "input_token_ids_sha256": "d71632d20d559603427880a4b1084db2419ab902692af171f74d0057c4b3fcb0"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 33,
+    "top2": 74676,
+    "margin": 3.765625,
+    "top10": [
+      {
+        "token": 33,
+        "text": "B",
+        "logit": 22.546875
+      },
+      {
+        "token": 74676,
+        "text": "Bright",
+        "logit": 18.78125
+      },
+      {
+        "token": 43,
+        "text": "L",
+        "logit": 14.109375
+      },
+      {
+        "token": 21666,
+        "text": "Bel",
+        "logit": 13.9296875
+      },
+      {
+        "token": 3430,
+        "text": "Be",
+        "logit": 13.8984375
+      },
+      {
+        "token": 34,
+        "text": "C",
+        "logit": 13.8671875
+      },
+      {
+        "token": 35,
+        "text": "D",
+        "logit": 13.8671875
+      },
+      {
+        "token": 61239,
+        "text": "Bur",
+        "logit": 13.546875
+      },
+      {
+        "token": 54,
+        "text": "W",
+        "logit": 13.515625
+      },
+      {
+        "token": 62819,
+        "text": "Bang",
+        "logit": 13.1796875
+      }
+    ],
+    "reference_top1": 33,
+    "reference_top2": 74676,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      22.546875,
+      18.78125
+    ],
+    "reference_pair_margin": 3.765625,
+    "fp16_margin": 0.890625,
+    "id": "570d2556fed7b91900d45c49",
+    "input_token_ids_sha256": "f67cde9f820846b6a398bf876dd56e9a0dea069812e88d5b914d0c63288324a1"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 20358,
+    "top2": 26268,
+    "margin": 0.609375,
+    "top10": [
+      {
+        "token": 20358,
+        "text": "Multi",
+        "logit": 19.109375
+      },
+      {
+        "token": 26268,
+        "text": "multi",
+        "logit": 18.5
+      },
+      {
+        "token": 1336,
+        "text": "Pro",
+        "logit": 17.921875
+      },
+      {
+        "token": 32,
+        "text": "A",
+        "logit": 17.53125
+      },
+      {
+        "token": 776,
+        "text": "pro",
+        "logit": 17.15625
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 16.671875
+      },
+      {
+        "token": 15338,
+        "text": "single",
+        "logit": 16.328125
+      },
+      {
+        "token": 10888,
+        "text": "Single",
+        "logit": 16.171875
+      },
+      {
+        "token": 64,
+        "text": "a",
+        "logit": 16.0625
+      },
+      {
+        "token": 77976,
+        "text": "multip",
+        "logit": 15.7734375
+      }
+    ],
+    "reference_top1": 26268,
+    "reference_top2": 776,
+    "reference_top1_rank": 2,
+    "reference_pair_logits": [
+      18.5,
+      17.15625
+    ],
+    "reference_pair_margin": 1.34375,
+    "fp16_margin": 2.828125,
+    "id": "570d26efb3d812140066d48f",
+    "input_token_ids_sha256": "fcf2f05db1a3726c4b7a4fd996896611b55bca04d76a18585fe5a42634a7fba7"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 16,
+    "top2": 21,
+    "margin": 1.8125,
+    "top10": [
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 21.046875
+      },
+      {
+        "token": 21,
+        "text": "6",
+        "logit": 19.234375
+      },
+      {
+        "token": 20,
+        "text": "5",
+        "logit": 18.96875
+      },
+      {
+        "token": 17,
+        "text": "2",
+        "logit": 18.859375
+      },
+      {
+        "token": 18,
+        "text": "3",
+        "logit": 18.03125
+      },
+      {
+        "token": 19,
+        "text": "4",
+        "logit": 17.78125
+      },
+      {
+        "token": 23,
+        "text": "8",
+        "logit": 16.734375
+      },
+      {
+        "token": 22,
+        "text": "7",
+        "logit": 16.578125
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 16.484375
+      },
+      {
+        "token": 15,
+        "text": "0",
+        "logit": 16.453125
+      }
+    ],
+    "reference_top1": 16,
+    "reference_top2": 21,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      21.046875,
+      19.234375
+    ],
+    "reference_pair_margin": 1.8125,
+    "fp16_margin": 3.21875,
+    "id": "570d29c2b3d812140066d4c1",
+    "input_token_ids_sha256": "66c56bb047dfd417dbd3998b1cd52d2c760265e1f76b07c1a431f433137eeb44"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 16,
+    "top2": 10227,
+    "margin": 4.890625,
+    "top10": [
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 23.78125
+      },
+      {
+        "token": 10227,
+        "text": "Before",
+        "logit": 18.890625
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 16.296875
+      },
+      {
+        "token": 6025,
+        "text": "After",
+        "logit": 16.1875
+      },
+      {
+        "token": 14801,
+        "text": "before",
+        "logit": 16.09375
+      },
+      {
+        "token": 49471,
+        "text": "Prior",
+        "logit": 15.625
+      },
+      {
+        "token": 17,
+        "text": "2",
+        "logit": 15.296875
+      },
+      {
+        "token": 641,
+        "text": "In",
+        "logit": 14.9140625
+      },
+      {
+        "token": 50,
+        "text": "S",
+        "logit": 14.703125
+      },
+      {
+        "token": 2354,
+        "text": "With",
+        "logit": 14.2890625
+      }
+    ],
+    "reference_top1": 16,
+    "reference_top2": 17,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      23.78125,
+      15.296875
+    ],
+    "reference_pair_margin": 8.484375,
+    "fp16_margin": 6.5,
+    "id": "570d2c20fed7b91900d45cab",
+    "input_token_ids_sha256": "1d0207eaa401ac13795b781adef627bb276c8a824462eaf0157e873a3ad2409f"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 16,
+    "top2": 785,
+    "margin": 5.78125,
+    "top10": [
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 23.9375
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 18.15625
+      },
+      {
+        "token": 80956,
+        "text": "Victoria",
+        "logit": 17.609375
+      },
+      {
+        "token": 36125,
+        "text": "Vict",
+        "logit": 16.203125
+      },
+      {
+        "token": 28715,
+        "text": "Based",
+        "logit": 16.140625
+      },
+      {
+        "token": 17,
+        "text": "2",
+        "logit": 15.6953125
+      },
+      {
+        "token": 2132,
+        "text": "It",
+        "logit": 15.328125
+      },
+      {
+        "token": 22372,
+        "text": "United",
+        "logit": 14.9609375
+      },
+      {
+        "token": 641,
+        "text": "In",
+        "logit": 14.7890625
+      },
+      {
+        "token": 6025,
+        "text": "After",
+        "logit": 14.1640625
+      }
+    ],
+    "reference_top1": 16,
+    "reference_top2": 785,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      23.9375,
+      18.15625
+    ],
+    "reference_pair_margin": 5.78125,
+    "fp16_margin": 9.0625,
+    "id": "570d2f5bfed7b91900d45ccf",
+    "input_token_ids_sha256": "af778a58205bfc86703a11ae5512b23045a7aa01182d58aecb82af59af04419b"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 61469,
+    "top2": 86763,
+    "margin": 0.046875,
+    "top10": [
+      {
+        "token": 61469,
+        "text": "Government",
+        "logit": 20.21875
+      },
+      {
+        "token": 86763,
+        "text": "government",
+        "logit": 20.171875
+      },
+      {
+        "token": 80956,
+        "text": "Victoria",
+        "logit": 19.65625
+      },
+      {
+        "token": 2403,
+        "text": "All",
+        "logit": 18.0
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 17.5
+      },
+      {
+        "token": 541,
+        "text": "all",
+        "logit": 16.234375
+      },
+      {
+        "token": 36125,
+        "text": "Vict",
+        "logit": 16.171875
+      },
+      {
+        "token": 12676,
+        "text": "Public",
+        "logit": 15.9609375
+      },
+      {
+        "token": 53,
+        "text": "V",
+        "logit": 15.8046875
+      },
+      {
+        "token": 888,
+        "text": "public",
+        "logit": 15.5390625
+      }
+    ],
+    "reference_top1": 86763,
+    "reference_top2": 80956,
+    "reference_top1_rank": 2,
+    "reference_pair_logits": [
+      20.171875,
+      19.65625
+    ],
+    "reference_pair_margin": 0.515625,
+    "fp16_margin": 1.375,
+    "id": "570d32e4fed7b91900d45d05",
+    "input_token_ids_sha256": "2b31eb702a4038e244f3844ad3234356338279a6183898ee5d865999eca4eb91"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 58563,
+    "top2": 47427,
+    "margin": 3.6875,
+    "top10": [
+      {
+        "token": 58563,
+        "text": "Ford",
+        "logit": 20.578125
+      },
+      {
+        "token": 47427,
+        "text": "Hold",
+        "logit": 16.890625
+      },
+      {
+        "token": 68324,
+        "text": "Broad",
+        "logit": 16.8125
+      },
+      {
+        "token": 53,
+        "text": "V",
+        "logit": 16.46875
+      },
+      {
+        "token": 80956,
+        "text": "Victoria",
+        "logit": 15.7109375
+      },
+      {
+        "token": 1249,
+        "text": "To",
+        "logit": 15.65625
+      },
+      {
+        "token": 96877,
+        "text": "Toyota",
+        "logit": 15.609375
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 15.5703125
+      },
+      {
+        "token": 37,
+        "text": "F",
+        "logit": 15.1953125
+      },
+      {
+        "token": 32887,
+        "text": "Far",
+        "logit": 15.0390625
+      }
+    ],
+    "reference_top1": 58563,
+    "reference_top2": 47427,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      20.578125,
+      16.890625
+    ],
+    "reference_pair_margin": 3.6875,
+    "fp16_margin": 0.328125,
+    "id": "570d3468b3d812140066d547",
+    "input_token_ids_sha256": "3b304cfd471e349a8218ea7de551ce5a36e3756b81de6bfc5ddb2282a067d85b"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 709,
+    "top2": 3481,
+    "margin": 1.46875,
+    "top10": [
+      {
+        "token": 709,
+        "text": "ge",
+        "logit": 21.75
+      },
+      {
+        "token": 3481,
+        "text": "top",
+        "logit": 20.28125
+      },
+      {
+        "token": 9499,
+        "text": "Ge",
+        "logit": 17.90625
+      },
+      {
+        "token": 5366,
+        "text": "Top",
+        "logit": 17.875
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 16.3125
+      },
+      {
+        "token": 564,
+        "text": "cl",
+        "logit": 15.984375
+      },
+      {
+        "token": 16557,
+        "text": "mount",
+        "logit": 15.359375
+      },
+      {
+        "token": 757,
+        "text": "ec",
+        "logit": 15.0390625
+      },
+      {
+        "token": 15206,
+        "text": "weather",
+        "logit": 14.640625
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 14.5546875
+      }
+    ],
+    "reference_top1": 709,
+    "reference_top2": 3481,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      21.75,
+      20.28125
+    ],
+    "reference_pair_margin": 1.46875,
+    "fp16_margin": 0.546875,
+    "id": "570d35b7b3d812140066d550",
+    "input_token_ids_sha256": "d7f2aa7e259732cc1676df379e8eb026f5cfb9b5d4d935f1b53fac812272a430"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 785,
+    "top2": 33263,
+    "margin": 0.515625,
+    "top10": [
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 20.5625
+      },
+      {
+        "token": 33263,
+        "text": "−",
+        "logit": 20.046875
+      },
+      {
+        "token": 26292,
+        "text": "Average",
+        "logit": 19.640625
+      },
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 17.828125
+      },
+      {
+        "token": 18,
+        "text": "3",
+        "logit": 17.5625
+      },
+      {
+        "token": 15,
+        "text": "0",
+        "logit": 17.09375
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 16.75
+      },
+      {
+        "token": 17202,
+        "text": "average",
+        "logit": 16.328125
+      },
+      {
+        "token": 24196,
+        "text": " −",
+        "logit": 15.9453125
+      },
+      {
+        "token": 24,
+        "text": "9",
+        "logit": 15.78125
+      }
+    ],
+    "reference_top1": 33263,
+    "reference_top2": 12,
+    "reference_top1_rank": 2,
+    "reference_pair_logits": [
+      20.046875,
+      15.171875
+    ],
+    "reference_pair_margin": 4.875,
+    "fp16_margin": 4.21875,
+    "id": "570d391fb3d812140066d579",
+    "input_token_ids_sha256": "44e1325f746602cdff0345867fc8cbe35db626c025790710674044929954cfb3"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 16,
+    "top2": 1925,
+    "margin": 3.25,
+    "top10": [
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 23.359375
+      },
+      {
+        "token": 1925,
+        "text": "On",
+        "logit": 20.109375
+      },
+      {
+        "token": 28427,
+        "text": "July",
+        "logit": 20.046875
+      },
+      {
+        "token": 17,
+        "text": "2",
+        "logit": 16.984375
+      },
+      {
+        "token": 18,
+        "text": "3",
+        "logit": 16.203125
+      },
+      {
+        "token": 22,
+        "text": "7",
+        "logit": 16.1875
+      },
+      {
+        "token": 263,
+        "text": "on",
+        "logit": 16.1875
+      },
+      {
+        "token": 27160,
+        "text": "June",
+        "logit": 15.9609375
+      },
+      {
+        "token": 31459,
+        "text": "August",
+        "logit": 15.703125
+      },
+      {
+        "token": 29549,
+        "text": "September",
+        "logit": 15.671875
+      }
+    ],
+    "reference_top1": 16,
+    "reference_top2": 28427,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      23.359375,
+      20.046875
+    ],
+    "reference_pair_margin": 3.3125,
+    "fp16_margin": 5.921875,
+    "id": "570d4329fed7b91900d45dd8",
+    "input_token_ids_sha256": "3645aa169785e92a09e76acc3b17c16d7cf8560d56f4b83ff1228b673a1922eb"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 80956,
+    "top2": 48037,
+    "margin": 3.59375,
+    "top10": [
+      {
+        "token": 80956,
+        "text": "Victoria",
+        "logit": 24.828125
+      },
+      {
+        "token": 48037,
+        "text": "Australia",
+        "logit": 21.234375
+      },
+      {
+        "token": 36125,
+        "text": "Vict",
+        "logit": 20.4375
+      },
+      {
+        "token": 22417,
+        "text": " Victoria",
+        "logit": 18.59375
+      },
+      {
+        "token": 74241,
+        "text": "Australian",
+        "logit": 18.3125
+      },
+      {
+        "token": 53,
+        "text": "V",
+        "logit": 17.921875
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 16.71875
+      },
+      {
+        "token": 86550,
+        "text": "Aus",
+        "logit": 15.984375
+      },
+      {
+        "token": 35544,
+        "text": "Vi",
+        "logit": 15.71875
+      },
+      {
+        "token": 25018,
+        "text": "South",
+        "logit": 15.234375
+      }
+    ],
+    "reference_top1": 80956,
+    "reference_top2": 36125,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      24.828125,
+      20.4375
+    ],
+    "reference_pair_margin": 4.390625,
+    "fp16_margin": 5.5,
+    "id": "570d4606b3d812140066d619",
+    "input_token_ids_sha256": "3f0af0b624c275cdb8f71c74a4c15dc0d8d10c56a50d91a509727dd4e9a30c63"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 7084,
+    "top2": 3564,
+    "margin": 1.5,
+    "top10": [
+      {
+        "token": 7084,
+        "text": "Port",
+        "logit": 20.609375
+      },
+      {
+        "token": 3564,
+        "text": "New",
+        "logit": 19.109375
+      },
+      {
+        "token": 50,
+        "text": "S",
+        "logit": 18.03125
+      },
+      {
+        "token": 34667,
+        "text": "Sy",
+        "logit": 17.265625
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 16.53125
+      },
+      {
+        "token": 403,
+        "text": "port",
+        "logit": 14.8828125
+      },
+      {
+        "token": 82,
+        "text": "s",
+        "logit": 14.625
+      },
+      {
+        "token": 74241,
+        "text": "Australian",
+        "logit": 14.5
+      },
+      {
+        "token": 48037,
+        "text": "Australia",
+        "logit": 14.1015625
+      },
+      {
+        "token": 60501,
+        "text": "east",
+        "logit": 14.0859375
+      }
+    ],
+    "reference_top1": 3564,
+    "reference_top2": 34667,
+    "reference_top1_rank": 2,
+    "reference_pair_logits": [
+      19.109375,
+      17.265625
+    ],
+    "reference_pair_margin": 1.84375,
+    "fp16_margin": 2.53125,
+    "id": "570d4a6bfed7b91900d45e16",
+    "input_token_ids_sha256": "9d63dac804c1f15d9bd07e70be13a88564d3f9e4833101e26a1822dde469b3fb"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 6217,
+    "top2": 1065,
+    "margin": 0.4375,
+    "top10": [
+      {
+        "token": 6217,
+        "text": "Min",
+        "logit": 18.890625
+      },
+      {
+        "token": 1065,
+        "text": "min",
+        "logit": 18.453125
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 17.359375
+      },
+      {
+        "token": 35907,
+        "text": "Ball",
+        "logit": 16.59375
+      },
+      {
+        "token": 42143,
+        "text": " miners",
+        "logit": 16.28125
+      },
+      {
+        "token": 92501,
+        "text": "miner",
+        "logit": 16.03125
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 15.7421875
+      },
+      {
+        "token": 96412,
+        "text": "Mining",
+        "logit": 14.9765625
+      },
+      {
+        "token": 641,
+        "text": "In",
+        "logit": 14.84375
+      },
+      {
+        "token": 3959,
+        "text": "ball",
+        "logit": 14.7578125
+      }
+    ],
+    "reference_top1": 16,
+    "reference_top2": 1065,
+    "reference_top1_rank": 14,
+    "reference_pair_logits": [
+      14.1640625,
+      18.453125
+    ],
+    "reference_pair_margin": -4.2890625,
+    "fp16_margin": 0.140625,
+    "id": "570d4c3bfed7b91900d45e33",
+    "input_token_ids_sha256": "bc875ab36ca6fd087491b8c295da8a5d3a370040fb7239d2a77a3ca951aeb479"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 40586,
+    "top2": 785,
+    "margin": 3.34375,
+    "top10": [
+      {
+        "token": 40586,
+        "text": "Daniel",
+        "logit": 23.984375
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 20.640625
+      },
+      {
+        "token": 38025,
+        "text": "Dan",
+        "logit": 16.859375
+      },
+      {
+        "token": 5405,
+        "text": "Current",
+        "logit": 16.75
+      },
+      {
+        "token": 22286,
+        "text": "David",
+        "logit": 15.40625
+      },
+      {
+        "token": 15118,
+        "text": " Daniel",
+        "logit": 15.015625
+      },
+      {
+        "token": 36125,
+        "text": "Vict",
+        "logit": 14.8515625
+      },
+      {
+        "token": 80956,
+        "text": "Victoria",
+        "logit": 14.78125
+      },
+      {
+        "token": 2132,
+        "text": "It",
+        "logit": 14.1171875
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 13.9921875
+      }
+    ],
+    "reference_top1": 40586,
+    "reference_top2": 785,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      23.984375,
+      20.640625
+    ],
+    "reference_pair_margin": 3.34375,
+    "fp16_margin": 4.984375,
+    "id": "570d4e6cb3d812140066d670",
+    "input_token_ids_sha256": "f4e6447f67cbf6a37edcb5b6e0a54b597854d42323c10277c2783357625ee5b4"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 16,
+    "top2": 17,
+    "margin": 1.203125,
+    "top10": [
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 23.59375
+      },
+      {
+        "token": 17,
+        "text": "2",
+        "logit": 22.390625
+      },
+      {
+        "token": 18,
+        "text": "3",
+        "logit": 18.421875
+      },
+      {
+        "token": 23,
+        "text": "8",
+        "logit": 18.421875
+      },
+      {
+        "token": 20,
+        "text": "5",
+        "logit": 18.40625
+      },
+      {
+        "token": 19,
+        "text": "4",
+        "logit": 18.0
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 17.953125
+      },
+      {
+        "token": 22,
+        "text": "7",
+        "logit": 16.90625
+      },
+      {
+        "token": 15,
+        "text": "0",
+        "logit": 16.671875
+      },
+      {
+        "token": 24,
+        "text": "9",
+        "logit": 16.53125
+      }
+    ],
+    "reference_top1": 16,
+    "reference_top2": 17,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      23.59375,
+      22.390625
+    ],
+    "reference_pair_margin": 1.203125,
+    "fp16_margin": 1.84375,
+    "id": "570d50a5fed7b91900d45e7e",
+    "input_token_ids_sha256": "5297343c732b2cd129a650ea976d5c4fa5c0310b9a0119d6ec3ace8514f8d977"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 42074,
+    "top2": 35,
+    "margin": 4.34375,
+    "top10": [
+      {
+        "token": 42074,
+        "text": "Du",
+        "logit": 23.515625
+      },
+      {
+        "token": 35,
+        "text": "D",
+        "logit": 19.171875
+      },
+      {
+        "token": 61282,
+        "text": "Jackson",
+        "logit": 18.171875
+      },
+      {
+        "token": 53033,
+        "text": "Dur",
+        "logit": 17.390625
+      },
+      {
+        "token": 73194,
+        "text": "Dub",
+        "logit": 16.609375
+      },
+      {
+        "token": 1912,
+        "text": "De",
+        "logit": 16.203125
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 15.6796875
+      },
+      {
+        "token": 15687,
+        "text": " Du",
+        "logit": 15.296875
+      },
+      {
+        "token": 47946,
+        "text": " Jacksonville",
+        "logit": 15.0859375
+      },
+      {
+        "token": 16532,
+        "text": "Del",
+        "logit": 14.9921875
+      }
+    ],
+    "reference_top1": 42074,
+    "reference_top2": 35,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      23.515625,
+      19.171875
+    ],
+    "reference_pair_margin": 4.34375,
+    "fp16_margin": 3.46875,
+    "id": "5727c94bff5b5019007d954d",
+    "input_token_ids_sha256": "ca9654ce7a2ef3db8f9144e614ac9f7b23f42a9c3fd49cce6053d47683007ee3"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 20217,
+    "top2": 785,
+    "margin": 2.046875,
+    "top10": [
+      {
+        "token": 20217,
+        "text": "Tim",
+        "logit": 22.484375
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 20.4375
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 19.09375
+      },
+      {
+        "token": 20091,
+        "text": "tim",
+        "logit": 16.9375
+      },
+      {
+        "token": 51,
+        "text": "T",
+        "logit": 15.390625
+      },
+      {
+        "token": 51861,
+        "text": "British",
+        "logit": 14.9609375
+      },
+      {
+        "token": 5338,
+        "text": "First",
+        "logit": 14.8125
+      },
+      {
+        "token": 6865,
+        "text": "They",
+        "logit": 14.5390625
+      },
+      {
+        "token": 61282,
+        "text": "Jackson",
+        "logit": 14.484375
+      },
+      {
+        "token": 15919,
+        "text": "People",
+        "logit": 14.3125
+      }
+    ],
+    "reference_top1": 20217,
+    "reference_top2": 785,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      22.484375,
+      20.4375
+    ],
+    "reference_pair_margin": 2.046875,
+    "fp16_margin": 5.328125,
+    "id": "5727cb4b2ca10214002d9679",
+    "input_token_ids_sha256": "1d5bc42da36608a878353c07aaf740ed56e34ec0b5c40c49cfeee257b37418ea"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 17,
+    "top2": 18,
+    "margin": 0.34375,
+    "top10": [
+      {
+        "token": 17,
+        "text": "2",
+        "logit": 21.890625
+      },
+      {
+        "token": 18,
+        "text": "3",
+        "logit": 21.546875
+      },
+      {
+        "token": 19789,
+        "text": "two",
+        "logit": 20.515625
+      },
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 20.421875
+      },
+      {
+        "token": 27856,
+        "text": "three",
+        "logit": 20.21875
+      },
+      {
+        "token": 20,
+        "text": "5",
+        "logit": 19.84375
+      },
+      {
+        "token": 19,
+        "text": "4",
+        "logit": 19.828125
+      },
+      {
+        "token": 19641,
+        "text": "Three",
+        "logit": 18.953125
+      },
+      {
+        "token": 34024,
+        "text": "four",
+        "logit": 18.859375
+      },
+      {
+        "token": 603,
+        "text": "one",
+        "logit": 18.78125
+      }
+    ],
+    "reference_top1": 19789,
+    "reference_top2": 17,
+    "reference_top1_rank": 3,
+    "reference_pair_logits": [
+      20.515625,
+      21.890625
+    ],
+    "reference_pair_margin": -1.375,
+    "fp16_margin": 1.25,
+    "id": "5727cd7dff5b5019007d9590",
+    "input_token_ids_sha256": "12fb0ba4caa02446399277b6bb06c0b20b5def92ca907a4b4017683c0253531a"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 785,
+    "top2": 30172,
+    "margin": 0.828125,
+    "top10": [
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 19.921875
+      },
+      {
+        "token": 30172,
+        "text": "University",
+        "logit": 19.09375
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 18.390625
+      },
+      {
+        "token": 88067,
+        "text": "Anc",
+        "logit": 16.140625
+      },
+      {
+        "token": 18284,
+        "text": "Old",
+        "logit": 15.8515625
+      },
+      {
+        "token": 52,
+        "text": "U",
+        "logit": 15.4765625
+      },
+      {
+        "token": 44,
+        "text": "M",
+        "logit": 15.2578125
+      },
+      {
+        "token": 48452,
+        "text": "Modern",
+        "logit": 15.1953125
+      },
+      {
+        "token": 32,
+        "text": "A",
+        "logit": 14.890625
+      },
+      {
+        "token": 20217,
+        "text": "Tim",
+        "logit": 14.8828125
+      }
+    ],
+    "reference_top1": 20217,
+    "reference_top2": 30172,
+    "reference_top1_rank": 10,
+    "reference_pair_logits": [
+      14.8828125,
+      19.09375
+    ],
+    "reference_pair_margin": -4.2109375,
+    "fp16_margin": 1.4375,
+    "id": "57280e1aff5b5019007d9bee",
+    "input_token_ids_sha256": "2220df7f141110bb36d6a5427a80d4d44bcc13904b75ea0165aa6df06a81cd0d"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 33280,
+    "top2": 23729,
+    "margin": 4.125,
+    "top10": [
+      {
+        "token": 33280,
+        "text": "Fort",
+        "logit": 21.75
+      },
+      {
+        "token": 23729,
+        "text": "San",
+        "logit": 17.625
+      },
+      {
+        "token": 623,
+        "text": "St",
+        "logit": 15.484375
+      },
+      {
+        "token": 7084,
+        "text": "Port",
+        "logit": 15.2109375
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 14.8125
+      },
+      {
+        "token": 11002,
+        "text": " Fort",
+        "logit": 14.0625
+      },
+      {
+        "token": 56375,
+        "text": "Saint",
+        "logit": 14.0
+      },
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 13.859375
+      },
+      {
+        "token": 61797,
+        "text": "Spanish",
+        "logit": 13.640625
+      },
+      {
+        "token": 37,
+        "text": "F",
+        "logit": 13.515625
+      }
+    ],
+    "reference_top1": 33280,
+    "reference_top2": 623,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      21.75,
+      15.484375
+    ],
+    "reference_pair_margin": 6.265625,
+    "fp16_margin": 1.828125,
+    "id": "57280fd3ff5b5019007d9c2a",
+    "input_token_ids_sha256": "cae1c320ba3738febc20e7f55f59dd12c37224e96629bef99ce0920402fb06ad"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 785,
+    "top2": 1782,
+    "margin": 1.984375,
+    "top10": [
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 20.671875
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 18.6875
+      },
+      {
+        "token": 51861,
+        "text": "British",
+        "logit": 18.015625
+      },
+      {
+        "token": 22574,
+        "text": "English",
+        "logit": 16.625
+      },
+      {
+        "token": 66096,
+        "text": "Soon",
+        "logit": 16.265625
+      },
+      {
+        "token": 66208,
+        "text": "England",
+        "logit": 15.9921875
+      },
+      {
+        "token": 6025,
+        "text": "After",
+        "logit": 15.75
+      },
+      {
+        "token": 90738,
+        "text": "Britain",
+        "logit": 15.75
+      },
+      {
+        "token": 34,
+        "text": "C",
+        "logit": 15.5390625
+      },
+      {
+        "token": 6865,
+        "text": "They",
+        "logit": 15.4765625
+      }
+    ],
+    "reference_top1": 785,
+    "reference_top2": 66,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      20.671875,
+      14.6796875
+    ],
+    "reference_pair_margin": 5.9921875,
+    "fp16_margin": 0.4375,
+    "id": "572810ec2ca10214002d9d07",
+    "input_token_ids_sha256": "ab2a8ed22fb63c3cbd68c6b0260d59a3118076a67ca98219f4a896dfaea62096"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 16,
+    "top2": 27523,
+    "margin": 4.296875,
+    "top10": [
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 24.046875
+      },
+      {
+        "token": 27523,
+        "text": "March",
+        "logit": 19.75
+      },
+      {
+        "token": 32777,
+        "text": "February",
+        "logit": 19.625
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 18.5625
+      },
+      {
+        "token": 641,
+        "text": "In",
+        "logit": 17.015625
+      },
+      {
+        "token": 17,
+        "text": "2",
+        "logit": 16.734375
+      },
+      {
+        "token": 28046,
+        "text": "April",
+        "logit": 16.6875
+      },
+      {
+        "token": 25150,
+        "text": "Spring",
+        "logit": 16.328125
+      },
+      {
+        "token": 32227,
+        "text": "January",
+        "logit": 16.171875
+      },
+      {
+        "token": 11109,
+        "text": "May",
+        "logit": 16.140625
+      }
+    ],
+    "reference_top1": 16,
+    "reference_top2": 27523,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      24.046875,
+      19.75
+    ],
+    "reference_pair_margin": 4.296875,
+    "fp16_margin": 4.515625,
+    "id": "5728128cff5b5019007d9c7a",
+    "input_token_ids_sha256": "d96b94ed1b61c4c091ba36a5ded85911ba1e0f058047adcfdfca971647a1f8f7"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 77606,
+    "top2": 1925,
+    "margin": 2.09375,
+    "top10": [
+      {
+        "token": 77606,
+        "text": "Govern",
+        "logit": 19.65625
+      },
+      {
+        "token": 1925,
+        "text": "On",
+        "logit": 17.5625
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 17.3125
+      },
+      {
+        "token": 38,
+        "text": "G",
+        "logit": 16.046875
+      },
+      {
+        "token": 66901,
+        "text": "Gov",
+        "logit": 15.9296875
+      },
+      {
+        "token": 263,
+        "text": "on",
+        "logit": 15.734375
+      },
+      {
+        "token": 23358,
+        "text": " Governor",
+        "logit": 15.734375
+      },
+      {
+        "token": 57027,
+        "text": "Florida",
+        "logit": 15.578125
+      },
+      {
+        "token": 61469,
+        "text": "Government",
+        "logit": 14.3984375
+      },
+      {
+        "token": 641,
+        "text": "In",
+        "logit": 14.0390625
+      }
+    ],
+    "reference_top1": 77606,
+    "reference_top2": 57027,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      19.65625,
+      15.578125
+    ],
+    "reference_pair_margin": 4.078125,
+    "fp16_margin": 3.6796875,
+    "id": "5728170d3acd2414000df445",
+    "input_token_ids_sha256": "a2dc465cbe858f8e1be96e848d0ad48ebdacd6b880a2bd740d9b640978c3e42c"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 66188,
+    "top2": 16,
+    "margin": 1.90625,
+    "top10": [
+      {
+        "token": 66188,
+        "text": "Winter",
+        "logit": 20.578125
+      },
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 18.671875
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 17.359375
+      },
+      {
+        "token": 1,
+        "text": "\"",
+        "logit": 15.5
+      },
+      {
+        "token": 82928,
+        "text": "winter",
+        "logit": 15.2734375
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 14.921875
+      },
+      {
+        "token": 3851,
+        "text": "Title",
+        "logit": 14.6640625
+      },
+      {
+        "token": 3564,
+        "text": "New",
+        "logit": 14.421875
+      },
+      {
+        "token": 39,
+        "text": "H",
+        "logit": 14.40625
+      },
+      {
+        "token": 76418,
+        "text": "Cold",
+        "logit": 14.390625
+      }
+    ],
+    "reference_top1": 66188,
+    "reference_top2": 1,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      20.578125,
+      15.5
+    ],
+    "reference_pair_margin": 5.078125,
+    "fp16_margin": 3.25,
+    "id": "57281940ff5b5019007d9d46",
+    "input_token_ids_sha256": "098f460aa2cfe87d3b69c3e29f87acfdf41feae93c1924389866e5a9be6044ab"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 41,
+    "top2": 61282,
+    "margin": 0.828125,
+    "top10": [
+      {
+        "token": 41,
+        "text": "J",
+        "logit": 18.953125
+      },
+      {
+        "token": 61282,
+        "text": "Jackson",
+        "logit": 18.125
+      },
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 17.546875
+      },
+      {
+        "token": 47946,
+        "text": " Jacksonville",
+        "logit": 17.4375
+      },
+      {
+        "token": 42074,
+        "text": "Du",
+        "logit": 16.9375
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 15.75
+      },
+      {
+        "token": 63655,
+        "text": "Jay",
+        "logit": 13.9765625
+      },
+      {
+        "token": 14251,
+        "text": "Upper",
+        "logit": 13.421875
+      },
+      {
+        "token": 32631,
+        "text": "Jack",
+        "logit": 13.3828125
+      },
+      {
+        "token": 52445,
+        "text": "Ja",
+        "logit": 13.3828125
+      }
+    ],
+    "reference_top1": 61282,
+    "reference_top2": 41,
+    "reference_top1_rank": 2,
+    "reference_pair_logits": [
+      18.125,
+      18.953125
+    ],
+    "reference_pair_margin": -0.828125,
+    "fp16_margin": 0.15625,
+    "id": "57281d494b864d19001644c0",
+    "input_token_ids_sha256": "5d0d03936a094d3b362193779455afd073138b78d80b12088b8bb8285ebe6e37"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 33912,
+    "top2": 15220,
+    "margin": 0.765625,
+    "top10": [
+      {
+        "token": 33912,
+        "text": "approved",
+        "logit": 18.0625
+      },
+      {
+        "token": 15220,
+        "text": "Cons",
+        "logit": 17.296875
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 16.984375
+      },
+      {
+        "token": 6254,
+        "text": "cons",
+        "logit": 16.90625
+      },
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 16.578125
+      },
+      {
+        "token": 85,
+        "text": "v",
+        "logit": 15.8671875
+      },
+      {
+        "token": 90107,
+        "text": "Approval",
+        "logit": 15.8046875
+      },
+      {
+        "token": 4498,
+        "text": "When",
+        "logit": 15.703125
+      },
+      {
+        "token": 53,
+        "text": "V",
+        "logit": 14.671875
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 14.6484375
+      }
+    ],
+    "reference_top1": 33912,
+    "reference_top2": 16,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      18.0625,
+      16.578125
+    ],
+    "reference_pair_margin": 1.484375,
+    "fp16_margin": 1.8125,
+    "id": "57281edd3acd2414000df4eb",
+    "input_token_ids_sha256": "e15cdabc9d17e4d58221fa237176dedd8690d9899366336322493158c950f264"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 785,
+    "top2": 1282,
+    "margin": 0.890625,
+    "top10": [
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 20.1875
+      },
+      {
+        "token": 1282,
+        "text": "Tr",
+        "logit": 19.296875
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 18.5
+      },
+      {
+        "token": 21884,
+        "text": "Tri",
+        "logit": 16.171875
+      },
+      {
+        "token": 376,
+        "text": "tr",
+        "logit": 15.6015625
+      },
+      {
+        "token": 87538,
+        "text": " Trout",
+        "logit": 15.1796875
+      },
+      {
+        "token": 32,
+        "text": "A",
+        "logit": 14.7890625
+      },
+      {
+        "token": 623,
+        "text": "St",
+        "logit": 14.625
+      },
+      {
+        "token": 6639,
+        "text": "Te",
+        "logit": 14.203125
+      },
+      {
+        "token": 2580,
+        "text": "Str",
+        "logit": 13.875
+      }
+    ],
+    "reference_top1": 1282,
+    "reference_top2": 785,
+    "reference_top1_rank": 2,
+    "reference_pair_logits": [
+      19.296875,
+      20.1875
+    ],
+    "reference_pair_margin": -0.890625,
+    "fp16_margin": 1.3125,
+    "id": "572820512ca10214002d9e74",
+    "input_token_ids_sha256": "b2ae7fe4575cf343271f539e088fd6d16d0a90daa6d2a6fafa2ced1efbe18aba"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 19,
+    "top2": 16,
+    "margin": 2.359375,
+    "top10": [
+      {
+        "token": 19,
+        "text": "4",
+        "logit": 23.15625
+      },
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 20.796875
+      },
+      {
+        "token": 18,
+        "text": "3",
+        "logit": 20.140625
+      },
+      {
+        "token": 17,
+        "text": "2",
+        "logit": 19.734375
+      },
+      {
+        "token": 20,
+        "text": "5",
+        "logit": 19.671875
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 19.65625
+      },
+      {
+        "token": 34024,
+        "text": "four",
+        "logit": 19.046875
+      },
+      {
+        "token": 26972,
+        "text": "Four",
+        "logit": 18.8125
+      },
+      {
+        "token": 21,
+        "text": "6",
+        "logit": 18.296875
+      },
+      {
+        "token": 23,
+        "text": "8",
+        "logit": 17.21875
+      }
+    ],
+    "reference_top1": 17,
+    "reference_top2": 19,
+    "reference_top1_rank": 4,
+    "reference_pair_logits": [
+      19.734375,
+      23.15625
+    ],
+    "reference_pair_margin": -3.421875,
+    "fp16_margin": 0.421875,
+    "id": "572821274b864d1900164513",
+    "input_token_ids_sha256": "abbd1454bd931bb9ab56fb893f775eced21c44f17645b8869e956606c7bff6c5"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 48519,
+    "top2": 65938,
+    "margin": 0.828125,
+    "top10": [
+      {
+        "token": 48519,
+        "text": "Hum",
+        "logit": 18.671875
+      },
+      {
+        "token": 65938,
+        "text": " humid",
+        "logit": 17.84375
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 16.03125
+      },
+      {
+        "token": 27300,
+        "text": "hum",
+        "logit": 15.921875
+      },
+      {
+        "token": 41,
+        "text": "J",
+        "logit": 15.7578125
+      },
+      {
+        "token": 34,
+        "text": "C",
+        "logit": 15.4921875
+      },
+      {
+        "token": 3136,
+        "text": "Sub",
+        "logit": 15.328125
+      },
+      {
+        "token": 57432,
+        "text": "Sou",
+        "logit": 15.1015625
+      },
+      {
+        "token": 39,
+        "text": "H",
+        "logit": 14.46875
+      },
+      {
+        "token": 35,
+        "text": "D",
+        "logit": 14.296875
+      }
+    ],
+    "reference_top1": 27300,
+    "reference_top2": 65938,
+    "reference_top1_rank": 4,
+    "reference_pair_logits": [
+      15.921875,
+      17.84375
+    ],
+    "reference_pair_margin": -1.921875,
+    "fp16_margin": 2.8125,
+    "id": "5728223cff5b5019007d9dc4",
+    "input_token_ids_sha256": "55c5836a71f6205cfefdfcd4ee69792c6d757a7af5ce5447498a30b0e8c0d9b4"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 50,
+    "top2": 1782,
+    "margin": 1.484375,
+    "top10": [
+      {
+        "token": 50,
+        "text": "S",
+        "logit": 21.34375
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 19.859375
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 19.6875
+      },
+      {
+        "token": 37,
+        "text": "F",
+        "logit": 15.921875
+      },
+      {
+        "token": 1925,
+        "text": "On",
+        "logit": 15.5703125
+      },
+      {
+        "token": 263,
+        "text": "on",
+        "logit": 14.4140625
+      },
+      {
+        "token": 51,
+        "text": "T",
+        "logit": 14.1640625
+      },
+      {
+        "token": 97328,
+        "text": "Hur",
+        "logit": 14.09375
+      },
+      {
+        "token": 6746,
+        "text": "Category",
+        "logit": 14.0859375
+      },
+      {
+        "token": 2016,
+        "text": "Sh",
+        "logit": 13.875
+      }
+    ],
+    "reference_top1": 50,
+    "reference_top2": 1782,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      21.34375,
+      19.859375
+    ],
+    "reference_pair_margin": 1.484375,
+    "fp16_margin": 4.09375,
+    "id": "572824f13acd2414000df592",
+    "input_token_ids_sha256": "2faa7fd61a92d428f0c8943761c496a0705418a2d9b56d791477822f8f346e26"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 16,
+    "top2": 17,
+    "margin": 0.46875,
+    "top10": [
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 23.125
+      },
+      {
+        "token": 17,
+        "text": "2",
+        "logit": 22.65625
+      },
+      {
+        "token": 22,
+        "text": "7",
+        "logit": 21.828125
+      },
+      {
+        "token": 18,
+        "text": "3",
+        "logit": 20.421875
+      },
+      {
+        "token": 20,
+        "text": "5",
+        "logit": 20.046875
+      },
+      {
+        "token": 15,
+        "text": "0",
+        "logit": 19.765625
+      },
+      {
+        "token": 19,
+        "text": "4",
+        "logit": 19.296875
+      },
+      {
+        "token": 21,
+        "text": "6",
+        "logit": 18.59375
+      },
+      {
+        "token": 23,
+        "text": "8",
+        "logit": 18.4375
+      },
+      {
+        "token": 24,
+        "text": "9",
+        "logit": 17.6875
+      }
+    ],
+    "reference_top1": 16,
+    "reference_top2": 17,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      23.125,
+      22.65625
+    ],
+    "reference_pair_margin": 0.46875,
+    "fp16_margin": 0.203125,
+    "id": "572827fc3acd2414000df5be",
+    "input_token_ids_sha256": "720eef2e1298cab3fa9957f3ebeb88e4fe9025c70473135a53ec745bd426df6a"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 17949,
+    "top2": 785,
+    "margin": 0.625,
+    "top10": [
+      {
+        "token": 17949,
+        "text": "Because",
+        "logit": 22.796875
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 22.171875
+      },
+      {
+        "token": 1655,
+        "text": "At",
+        "logit": 19.9375
+      },
+      {
+        "token": 27653,
+        "text": "because",
+        "logit": 18.953125
+      },
+      {
+        "token": 2132,
+        "text": "It",
+        "logit": 18.453125
+      },
+      {
+        "token": 49,
+        "text": "R",
+        "logit": 17.953125
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 17.796875
+      },
+      {
+        "token": 12549,
+        "text": "Since",
+        "logit": 16.78125
+      },
+      {
+        "token": 2121,
+        "text": "As",
+        "logit": 16.765625
+      },
+      {
+        "token": 1249,
+        "text": "To",
+        "logit": 16.515625
+      }
+    ],
+    "reference_top1": 785,
+    "reference_top2": 49,
+    "reference_top1_rank": 2,
+    "reference_pair_logits": [
+      22.171875,
+      17.953125
+    ],
+    "reference_pair_margin": 4.21875,
+    "fp16_margin": 0.296875,
+    "id": "572f59b4a23a5019007fc587",
+    "input_token_ids_sha256": "b575a40da414323aaf9bd12a84c6917ace38133e756c7021d140d3e508c45942"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 785,
+    "top2": 33603,
+    "margin": 1.5625,
+    "top10": [
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 21.359375
+      },
+      {
+        "token": 33603,
+        "text": "Bas",
+        "logit": 19.796875
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 18.078125
+      },
+      {
+        "token": 641,
+        "text": "In",
+        "logit": 17.890625
+      },
+      {
+        "token": 89458,
+        "text": " Basel",
+        "logit": 16.625
+      },
+      {
+        "token": 90950,
+        "text": "Centre",
+        "logit": 16.609375
+      },
+      {
+        "token": 33,
+        "text": "B",
+        "logit": 16.203125
+      },
+      {
+        "token": 1,
+        "text": "\"",
+        "logit": 16.015625
+      },
+      {
+        "token": 5338,
+        "text": "First",
+        "logit": 15.9296875
+      },
+      {
+        "token": 43403,
+        "text": "Central",
+        "logit": 15.53125
+      }
+    ],
+    "reference_top1": 33603,
+    "reference_top2": 785,
+    "reference_top1_rank": 2,
+    "reference_pair_logits": [
+      19.796875,
+      21.359375
+    ],
+    "reference_pair_margin": -1.5625,
+    "fp16_margin": 3.78125,
+    "id": "572f60f4947a6a140053c8ea",
+    "input_token_ids_sha256": "9b7670c6bf692a3e76909e415c4ef5f40a802509148c19aaaf0d59c98e9071b2"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 49,
+    "top2": 35,
+    "margin": 1.453125,
+    "top10": [
+      {
+        "token": 49,
+        "text": "R",
+        "logit": 20.1875
+      },
+      {
+        "token": 35,
+        "text": "D",
+        "logit": 18.734375
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 17.984375
+      },
+      {
+        "token": 12,
+        "text": "-",
+        "logit": 17.84375
+      },
+      {
+        "token": 72162,
+        "text": "Rh",
+        "logit": 17.34375
+      },
+      {
+        "token": 18284,
+        "text": "Old",
+        "logit": 15.6875
+      },
+      {
+        "token": 23234,
+        "text": " Dutch",
+        "logit": 15.25
+      },
+      {
+        "token": 2354,
+        "text": "With",
+        "logit": 14.9921875
+      },
+      {
+        "token": 641,
+        "text": "In",
+        "logit": 14.5390625
+      },
+      {
+        "token": 45,
+        "text": "N",
+        "logit": 14.4296875
+      }
+    ],
+    "reference_top1": 49,
+    "reference_top2": 72162,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      20.1875,
+      17.34375
+    ],
+    "reference_pair_margin": 2.84375,
+    "fp16_margin": 1.875,
+    "id": "572fe288a23a5019007fcada",
+    "input_token_ids_sha256": "97c5118db09de9b51de35d75584070d1f39f2915b8b1eab3f0215c207a2d8570"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 785,
+    "top2": 1782,
+    "margin": 0.359375,
+    "top10": [
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 18.703125
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 18.34375
+      },
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 18.3125
+      },
+      {
+        "token": 17,
+        "text": "2",
+        "logit": 17.359375
+      },
+      {
+        "token": 18,
+        "text": "3",
+        "logit": 17.203125
+      },
+      {
+        "token": 19,
+        "text": "4",
+        "logit": 17.09375
+      },
+      {
+        "token": 20,
+        "text": "5",
+        "logit": 17.046875
+      },
+      {
+        "token": 6384,
+        "text": "more",
+        "logit": 16.5
+      },
+      {
+        "token": 21,
+        "text": "6",
+        "logit": 16.25
+      },
+      {
+        "token": 2132,
+        "text": "It",
+        "logit": 16.046875
+      }
+    ],
+    "reference_top1": 1782,
+    "reference_top2": 16,
+    "reference_top1_rank": 2,
+    "reference_pair_logits": [
+      18.34375,
+      18.3125
+    ],
+    "reference_pair_margin": 0.03125,
+    "fp16_margin": 0.515625,
+    "id": "572fe9b3947a6a140053cde2",
+    "input_token_ids_sha256": "78f136932fe3335fe40411b073f3f2bfb618b4533ab3b876fce9a4dc7f8b8b0e"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 785,
+    "top2": 14251,
+    "margin": 2.046875,
+    "top10": [
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 23.53125
+      },
+      {
+        "token": 14251,
+        "text": "Upper",
+        "logit": 21.484375
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 17.921875
+      },
+      {
+        "token": 49,
+        "text": "R",
+        "logit": 17.375
+      },
+      {
+        "token": 72162,
+        "text": "Rh",
+        "logit": 16.703125
+      },
+      {
+        "token": 9053,
+        "text": "Lower",
+        "logit": 16.328125
+      },
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 15.6484375
+      },
+      {
+        "token": 13574,
+        "text": "upper",
+        "logit": 14.8203125
+      },
+      {
+        "token": 30614,
+        "text": " Upper",
+        "logit": 14.625
+      },
+      {
+        "token": 32,
+        "text": "A",
+        "logit": 14.4609375
+      }
+    ],
+    "reference_top1": 785,
+    "reference_top2": 14251,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      23.53125,
+      21.484375
+    ],
+    "reference_pair_margin": 2.046875,
+    "fp16_margin": 0.4375,
+    "id": "572feddda23a5019007fcb5b",
+    "input_token_ids_sha256": "7b01395acbf631287cfc6c4182ca13f9a29415e7be9263bc21b48564d0f06563"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 50170,
+    "top2": 785,
+    "margin": 4.046875,
+    "top10": [
+      {
+        "token": 50170,
+        "text": "Germany",
+        "logit": 24.359375
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 20.3125
+      },
+      {
+        "token": 32079,
+        "text": "German",
+        "logit": 19.453125
+      },
+      {
+        "token": 1912,
+        "text": "De",
+        "logit": 16.984375
+      },
+      {
+        "token": 82824,
+        "text": " germany",
+        "logit": 16.828125
+      },
+      {
+        "token": 9856,
+        "text": " Germany",
+        "logit": 16.765625
+      },
+      {
+        "token": 30780,
+        "text": "Europe",
+        "logit": 16.453125
+      },
+      {
+        "token": 2132,
+        "text": "It",
+        "logit": 16.265625
+      },
+      {
+        "token": 32,
+        "text": "A",
+        "logit": 16.171875
+      },
+      {
+        "token": 65397,
+        "text": "Ger",
+        "logit": 16.171875
+      }
+    ],
+    "reference_top1": 50170,
+    "reference_top2": 32079,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      24.359375,
+      19.453125
+    ],
+    "reference_pair_margin": 4.90625,
+    "fp16_margin": 5.390625,
+    "id": "572ff07304bcaa1900d76ef5",
+    "input_token_ids_sha256": "450348b8d75b3862f360126e72bb7b10ce0d8e64effe4974ad37fcd09c82fec4"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 35,
+    "top2": 785,
+    "margin": 1.0,
+    "top10": [
+      {
+        "token": 35,
+        "text": "D",
+        "logit": 20.234375
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 19.234375
+      },
+      {
+        "token": 54,
+        "text": "W",
+        "logit": 18.765625
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 17.109375
+      },
+      {
+        "token": 32617,
+        "text": "Das",
+        "logit": 15.671875
+      },
+      {
+        "token": 32079,
+        "text": "German",
+        "logit": 15.421875
+      },
+      {
+        "token": 47957,
+        "text": "Dam",
+        "logit": 14.9296875
+      },
+      {
+        "token": 50170,
+        "text": "Germany",
+        "logit": 14.8203125
+      },
+      {
+        "token": 98227,
+        "text": "Wa",
+        "logit": 14.5078125
+      },
+      {
+        "token": 43,
+        "text": "L",
+        "logit": 14.15625
+      }
+    ],
+    "reference_top1": 54,
+    "reference_top2": 35,
+    "reference_top1_rank": 3,
+    "reference_pair_logits": [
+      18.765625,
+      20.234375
+    ],
+    "reference_pair_margin": -1.46875,
+    "fp16_margin": 0.703125,
+    "id": "572ff430a23a5019007fcbac",
+    "input_token_ids_sha256": "32136db2fc821b467f82e8d1c59c13ee49aac949af057c67e05dad674e822670"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 785,
+    "top2": 11613,
+    "margin": 0.125,
+    "top10": [
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 19.109375
+      },
+      {
+        "token": 11613,
+        "text": "Two",
+        "logit": 18.984375
+      },
+      {
+        "token": 19789,
+        "text": "two",
+        "logit": 18.375
+      },
+      {
+        "token": 3830,
+        "text": "From",
+        "logit": 18.21875
+      },
+      {
+        "token": 1912,
+        "text": "De",
+        "logit": 17.859375
+      },
+      {
+        "token": 25018,
+        "text": "South",
+        "logit": 17.65625
+      },
+      {
+        "token": 1499,
+        "text": "from",
+        "logit": 17.46875
+      },
+      {
+        "token": 23306,
+        "text": "West",
+        "logit": 17.03125
+      },
+      {
+        "token": 411,
+        "text": "out",
+        "logit": 16.8125
+      },
+      {
+        "token": 49,
+        "text": "R",
+        "logit": 16.609375
+      }
+    ],
+    "reference_top1": 11039,
+    "reference_top2": 1499,
+    "reference_top1_rank": 14,
+    "reference_pair_logits": [
+      16.21875,
+      17.46875
+    ],
+    "reference_pair_margin": -1.25,
+    "fp16_margin": 1.453125,
+    "id": "572ff4ca04bcaa1900d76f24",
+    "input_token_ids_sha256": "404296849a1c5257cd7e82e40b67626da4f26348472b1d5a20c9af7ae7ad3454"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 785,
+    "top2": 72162,
+    "margin": 0.125,
+    "top10": [
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 21.0625
+      },
+      {
+        "token": 72162,
+        "text": "Rh",
+        "logit": 20.9375
+      },
+      {
+        "token": 49,
+        "text": "R",
+        "logit": 20.0
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 18.84375
+      },
+      {
+        "token": 45,
+        "text": "N",
+        "logit": 18.046875
+      },
+      {
+        "token": 39,
+        "text": "H",
+        "logit": 15.3125
+      },
+      {
+        "token": 30124,
+        "text": "Sch",
+        "logit": 14.859375
+      },
+      {
+        "token": 35,
+        "text": "D",
+        "logit": 14.78125
+      },
+      {
+        "token": 17968,
+        "text": " Rh",
+        "logit": 14.4140625
+      },
+      {
+        "token": 1001,
+        "text": "Th",
+        "logit": 14.3046875
+      }
+    ],
+    "reference_top1": 72162,
+    "reference_top2": 49,
+    "reference_top1_rank": 2,
+    "reference_pair_logits": [
+      20.9375,
+      20.0
+    ],
+    "reference_pair_margin": 0.9375,
+    "fp16_margin": 2.015625,
+    "id": "572ff673b2c2fd1400568669",
+    "input_token_ids_sha256": "e2f8ee84b65efe9f8359d66ed12960591b87a05cdbfb8b13781244ed85f8d133"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 16,
+    "top2": 10227,
+    "margin": 3.453125,
+    "top10": [
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 24.171875
+      },
+      {
+        "token": 10227,
+        "text": "Before",
+        "logit": 20.71875
+      },
+      {
+        "token": 6025,
+        "text": "After",
+        "logit": 19.96875
+      },
+      {
+        "token": 3830,
+        "text": "From",
+        "logit": 17.8125
+      },
+      {
+        "token": 14801,
+        "text": "before",
+        "logit": 17.71875
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 17.40625
+      },
+      {
+        "token": 38,
+        "text": "G",
+        "logit": 17.21875
+      },
+      {
+        "token": 16014,
+        "text": "During",
+        "logit": 16.078125
+      },
+      {
+        "token": 26716,
+        "text": "Mer",
+        "logit": 16.078125
+      },
+      {
+        "token": 17,
+        "text": "2",
+        "logit": 16.0625
+      }
+    ],
+    "reference_top1": 16,
+    "reference_top2": 1499,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      24.171875,
+      15.34375
+    ],
+    "reference_pair_margin": 8.828125,
+    "fp16_margin": 5.421875,
+    "id": "572ff83ab2c2fd1400568685",
+    "input_token_ids_sha256": "273d945a01585a5bdb3b09ef0228fa7e15899f9083f7c02eef2285d14c18aca3"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 16014,
+    "top2": 785,
+    "margin": 0.125,
+    "top10": [
+      {
+        "token": 16014,
+        "text": "During",
+        "logit": 17.171875
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 17.046875
+      },
+      {
+        "token": 66484,
+        "text": "south",
+        "logit": 16.890625
+      },
+      {
+        "token": 21,
+        "text": "6",
+        "logit": 16.71875
+      },
+      {
+        "token": 19454,
+        "text": "around",
+        "logit": 16.578125
+      },
+      {
+        "token": 43580,
+        "text": "Around",
+        "logit": 16.53125
+      },
+      {
+        "token": 81877,
+        "text": "during",
+        "logit": 16.53125
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 16.078125
+      },
+      {
+        "token": 641,
+        "text": "In",
+        "logit": 15.90625
+      },
+      {
+        "token": 61895,
+        "text": "north",
+        "logit": 15.8046875
+      }
+    ],
+    "reference_top1": 61895,
+    "reference_top2": 44707,
+    "reference_top1_rank": 10,
+    "reference_pair_logits": [
+      15.8046875,
+      12.9140625
+    ],
+    "reference_pair_margin": 2.890625,
+    "fp16_margin": 0.140625,
+    "id": "572ffce5a23a5019007fcc18",
+    "input_token_ids_sha256": "1f44e55b4ea409166804c77029fcd10ff01914ced4ccadd60974a85c045fcc76"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 43935,
+    "top2": 32,
+    "margin": 0.265625,
+    "top10": [
+      {
+        "token": 43935,
+        "text": "Middle",
+        "logit": 21.171875
+      },
+      {
+        "token": 32,
+        "text": "A",
+        "logit": 20.90625
+      },
+      {
+        "token": 19656,
+        "text": "middle",
+        "logit": 19.25
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 18.34375
+      },
+      {
+        "token": 64,
+        "text": "a",
+        "logit": 17.6875
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 16.453125
+      },
+      {
+        "token": 2132,
+        "text": "It",
+        "logit": 16.09375
+      },
+      {
+        "token": 51,
+        "text": "T",
+        "logit": 15.4375
+      },
+      {
+        "token": 3326,
+        "text": "Sc",
+        "logit": 15.3671875
+      },
+      {
+        "token": 51330,
+        "text": "Ice",
+        "logit": 15.328125
+      }
+    ],
+    "reference_top1": 19656,
+    "reference_top2": 43935,
+    "reference_top1_rank": 3,
+    "reference_pair_logits": [
+      19.25,
+      21.171875
+    ],
+    "reference_pair_margin": -1.921875,
+    "fp16_margin": 1.078125,
+    "id": "572fff45947a6a140053cf27",
+    "input_token_ids_sha256": "21666fcba407d2a347843e1cdba385dfaf75fd56ece7ab0569acabd5214f166a"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 54281,
+    "top2": 17949,
+    "margin": 0.53125,
+    "top10": [
+      {
+        "token": 54281,
+        "text": "Natural",
+        "logit": 20.4375
+      },
+      {
+        "token": 17949,
+        "text": "Because",
+        "logit": 19.90625
+      },
+      {
+        "token": 52880,
+        "text": "natural",
+        "logit": 18.875
+      },
+      {
+        "token": 2132,
+        "text": "It",
+        "logit": 17.828125
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 17.78125
+      },
+      {
+        "token": 12549,
+        "text": "Since",
+        "logit": 17.046875
+      },
+      {
+        "token": 33060,
+        "text": "Due",
+        "logit": 16.75
+      },
+      {
+        "token": 45,
+        "text": "N",
+        "logit": 16.265625
+      },
+      {
+        "token": 25139,
+        "text": "Reason",
+        "logit": 16.203125
+      },
+      {
+        "token": 6025,
+        "text": "After",
+        "logit": 16.140625
+      }
+    ],
+    "reference_top1": 11284,
+    "reference_top2": 83,
+    "reference_top1_rank": 21,
+    "reference_pair_logits": [
+      14.859375,
+      10.4296875
+    ],
+    "reference_pair_margin": 4.4296875,
+    "fp16_margin": 0.734375,
+    "id": "573003dd947a6a140053cf43",
+    "input_token_ids_sha256": "c4b2973f6331c5f84c51ac50f0055644300a21f15ddf7176baafc5e975cde1b1"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 32079,
+    "top2": 785,
+    "margin": 0.03125,
+    "top10": [
+      {
+        "token": 32079,
+        "text": "German",
+        "logit": 18.5625
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 18.53125
+      },
+      {
+        "token": 14251,
+        "text": "Upper",
+        "logit": 17.59375
+      },
+      {
+        "token": 9053,
+        "text": "Lower",
+        "logit": 17.34375
+      },
+      {
+        "token": 80328,
+        "text": "Franc",
+        "logit": 16.734375
+      },
+      {
+        "token": 50170,
+        "text": "Germany",
+        "logit": 16.6875
+      },
+      {
+        "token": 38,
+        "text": "G",
+        "logit": 16.53125
+      },
+      {
+        "token": 33,
+        "text": "B",
+        "logit": 16.5
+      },
+      {
+        "token": 22560,
+        "text": "Fr",
+        "logit": 15.515625
+      },
+      {
+        "token": 75331,
+        "text": "Fran",
+        "logit": 15.4375
+      }
+    ],
+    "reference_top1": 9053,
+    "reference_top2": 80328,
+    "reference_top1_rank": 4,
+    "reference_pair_logits": [
+      17.34375,
+      16.734375
+    ],
+    "reference_pair_margin": 0.609375,
+    "fp16_margin": 0.59375,
+    "id": "57300911947a6a140053cfb7",
+    "input_token_ids_sha256": "dc3a54d9c8c19e0b3bf5019fd57e3fa8e143874ab65783384f71e89a03be8fd5"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 16,
+    "top2": 6025,
+    "margin": 1.71875,
+    "top10": [
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 22.59375
+      },
+      {
+        "token": 6025,
+        "text": "After",
+        "logit": 20.875
+      },
+      {
+        "token": 10694,
+        "text": "after",
+        "logit": 19.328125
+      },
+      {
+        "token": 1655,
+        "text": "At",
+        "logit": 18.90625
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 18.203125
+      },
+      {
+        "token": 641,
+        "text": "In",
+        "logit": 17.59375
+      },
+      {
+        "token": 2132,
+        "text": "It",
+        "logit": 16.75
+      },
+      {
+        "token": 10227,
+        "text": "Before",
+        "logit": 15.8671875
+      },
+      {
+        "token": 3830,
+        "text": "From",
+        "logit": 15.7734375
+      },
+      {
+        "token": 16014,
+        "text": "During",
+        "logit": 15.7421875
+      }
+    ],
+    "reference_top1": 16,
+    "reference_top2": 10694,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      22.59375,
+      19.328125
+    ],
+    "reference_pair_margin": 3.265625,
+    "fp16_margin": 4.90625,
+    "id": "57300a9a04bcaa1900d77067",
+    "input_token_ids_sha256": "53677260796bc44f3dbee3f329de14a6fc605538837568f1122ea24fb2d0d66c"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 17949,
+    "top2": 24493,
+    "margin": 0.859375,
+    "top10": [
+      {
+        "token": 17949,
+        "text": "Because",
+        "logit": 20.1875
+      },
+      {
+        "token": 24493,
+        "text": "Until",
+        "logit": 19.328125
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 19.234375
+      },
+      {
+        "token": 1249,
+        "text": "To",
+        "logit": 18.609375
+      },
+      {
+        "token": 6025,
+        "text": "After",
+        "logit": 17.765625
+      },
+      {
+        "token": 641,
+        "text": "In",
+        "logit": 17.203125
+      },
+      {
+        "token": 2132,
+        "text": "It",
+        "logit": 17.09375
+      },
+      {
+        "token": 12549,
+        "text": "Since",
+        "logit": 16.703125
+      },
+      {
+        "token": 38730,
+        "text": "until",
+        "logit": 16.640625
+      },
+      {
+        "token": 3830,
+        "text": "From",
+        "logit": 16.625
+      }
+    ],
+    "reference_top1": 16,
+    "reference_top2": 641,
+    "reference_top1_rank": 17,
+    "reference_pair_logits": [
+      14.9375,
+      17.203125
+    ],
+    "reference_pair_margin": -2.265625,
+    "fp16_margin": 2.40625,
+    "id": "57300c67947a6a140053cff3",
+    "input_token_ids_sha256": "192d3a3751f2916d1c9036b39ac3771c4177dbc0c4e2a89bef76c1824984f469"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 785,
+    "top2": 42074,
+    "margin": 0.375,
+    "top10": [
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 16.484375
+      },
+      {
+        "token": 42074,
+        "text": "Du",
+        "logit": 16.109375
+      },
+      {
+        "token": 57027,
+        "text": "Florida",
+        "logit": 16.09375
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 15.71875
+      },
+      {
+        "token": 61282,
+        "text": "Jackson",
+        "logit": 15.03125
+      },
+      {
+        "token": 37,
+        "text": "F",
+        "logit": 14.9609375
+      },
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 14.8125
+      },
+      {
+        "token": 3882,
+        "text": "Fl",
+        "logit": 14.734375
+      },
+      {
+        "token": 47946,
+        "text": " Jacksonville",
+        "logit": 14.7109375
+      },
+      {
+        "token": 22372,
+        "text": "United",
+        "logit": 14.265625
+      }
+    ],
+    "reference_top1": 57027,
+    "reference_top2": 772,
+    "reference_top1_rank": 3,
+    "reference_pair_logits": [
+      16.09375,
+      13.140625
+    ],
+    "reference_pair_margin": 2.953125,
+    "fp16_margin": 1.046875,
+    "id": "5a1c539bb4fb5d00187145fd",
+    "input_token_ids_sha256": "bc2f3fb7f77b74a603f9ed00a127199fae1f6a5afb817ffe6a1d2e123e890464"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 16,
+    "top2": 785,
+    "margin": 5.828125,
+    "top10": [
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 24.671875
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 18.84375
+      },
+      {
+        "token": 16250,
+        "text": "Under",
+        "logit": 16.328125
+      },
+      {
+        "token": 641,
+        "text": "In",
+        "logit": 16.296875
+      },
+      {
+        "token": 17,
+        "text": "2",
+        "logit": 16.203125
+      },
+      {
+        "token": 61282,
+        "text": "Jackson",
+        "logit": 15.125
+      },
+      {
+        "token": 2132,
+        "text": "It",
+        "logit": 14.9765625
+      },
+      {
+        "token": 5338,
+        "text": "First",
+        "logit": 14.953125
+      },
+      {
+        "token": 11190,
+        "text": "According",
+        "logit": 14.8984375
+      },
+      {
+        "token": 6025,
+        "text": "After",
+        "logit": 14.84375
+      }
+    ],
+    "reference_top1": 16,
+    "reference_top2": 785,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      24.671875,
+      18.84375
+    ],
+    "reference_pair_margin": 5.828125,
+    "fp16_margin": 7.125,
+    "id": "5a1c55b4b4fb5d0018714606",
+    "input_token_ids_sha256": "0bba9daf838056d8fe20d017cffd6ed42cd656b917718a8140b9519d0a0c810f"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 7084,
+    "top2": 785,
+    "margin": 2.96875,
+    "top10": [
+      {
+        "token": 7084,
+        "text": "Port",
+        "logit": 20.921875
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 17.953125
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 17.265625
+      },
+      {
+        "token": 47946,
+        "text": " Jacksonville",
+        "logit": 16.6875
+      },
+      {
+        "token": 61282,
+        "text": "Jackson",
+        "logit": 14.96875
+      },
+      {
+        "token": 2034,
+        "text": "US",
+        "logit": 14.9609375
+      },
+      {
+        "token": 42,
+        "text": "K",
+        "logit": 14.65625
+      },
+      {
+        "token": 76362,
+        "text": "Pu",
+        "logit": 14.625
+      },
+      {
+        "token": 57027,
+        "text": "Florida",
+        "logit": 14.1796875
+      },
+      {
+        "token": 68273,
+        "text": "Ports",
+        "logit": 14.0234375
+      }
+    ],
+    "reference_top1": 7084,
+    "reference_top2": 61282,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      20.921875,
+      14.96875
+    ],
+    "reference_pair_margin": 5.953125,
+    "fp16_margin": 3.046875,
+    "id": "5a1c60f0b4fb5d0018714611",
+    "input_token_ids_sha256": "2ff4db5704b895716dd39f34459f6e1b15e1a0f55ba5975fe010fa2b5d35b3b6"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 785,
+    "top2": 30172,
+    "margin": 0.796875,
+    "top10": [
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 18.375
+      },
+      {
+        "token": 30172,
+        "text": "University",
+        "logit": 17.578125
+      },
+      {
+        "token": 44616,
+        "text": "Pot",
+        "logit": 17.046875
+      },
+      {
+        "token": 6865,
+        "text": "They",
+        "logit": 16.34375
+      },
+      {
+        "token": 32,
+        "text": "A",
+        "logit": 16.078125
+      },
+      {
+        "token": 8373,
+        "text": "Some",
+        "logit": 15.9609375
+      },
+      {
+        "token": 23780,
+        "text": "Nothing",
+        "logit": 15.734375
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 15.71875
+      },
+      {
+        "token": 47,
+        "text": "P",
+        "logit": 15.5
+      },
+      {
+        "token": 4064,
+        "text": "None",
+        "logit": 15.453125
+      }
+    ],
+    "reference_top1": 30172,
+    "reference_top2": 785,
+    "reference_top1_rank": 2,
+    "reference_pair_logits": [
+      17.578125,
+      18.375
+    ],
+    "reference_pair_margin": -0.796875,
+    "fp16_margin": 0.71875,
+    "id": "5a1c6968b4fb5d0018714619",
+    "input_token_ids_sha256": "737ac78022d2f21395e26c7b77738fd77a9f8ba713c0d23b463304c170a7efa7"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 67909,
+    "top2": 43197,
+    "margin": 1.453125,
+    "top10": [
+      {
+        "token": 67909,
+        "text": "Jean",
+        "logit": 19.5
+      },
+      {
+        "token": 43197,
+        "text": "French",
+        "logit": 18.046875
+      },
+      {
+        "token": 98884,
+        "text": "Rib",
+        "logit": 17.84375
+      },
+      {
+        "token": 49000,
+        "text": "France",
+        "logit": 16.65625
+      },
+      {
+        "token": 34625,
+        "text": "Ren",
+        "logit": 15.890625
+      },
+      {
+        "token": 49,
+        "text": "R",
+        "logit": 15.578125
+      },
+      {
+        "token": 78644,
+        "text": "Philip",
+        "logit": 15.4375
+      },
+      {
+        "token": 41,
+        "text": "J",
+        "logit": 15.2265625
+      },
+      {
+        "token": 38,
+        "text": "G",
+        "logit": 15.21875
+      },
+      {
+        "token": 51861,
+        "text": "British",
+        "logit": 15.1796875
+      }
+    ],
+    "reference_top1": 43197,
+    "reference_top2": 67909,
+    "reference_top1_rank": 2,
+    "reference_pair_logits": [
+      18.046875,
+      19.5
+    ],
+    "reference_pair_margin": -1.453125,
+    "fp16_margin": 1.71875,
+    "id": "5a1c6d30b4fb5d0018714622",
+    "input_token_ids_sha256": "8d773e41465e411891150ba4508d35bb947b0da2717fe95571c3f81be6e2f4b2"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 47699,
+    "top2": 27869,
+    "margin": 0.0625,
+    "top10": [
+      {
+        "token": 47699,
+        "text": "Yellow",
+        "logit": 18.1875
+      },
+      {
+        "token": 27869,
+        "text": "yellow",
+        "logit": 18.125
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 17.65625
+      },
+      {
+        "token": 56,
+        "text": "Y",
+        "logit": 15.5859375
+      },
+      {
+        "token": 26137,
+        "text": "President",
+        "logit": 15.515625
+      },
+      {
+        "token": 12427,
+        "text": "extension",
+        "logit": 15.4296875
+      },
+      {
+        "token": 88,
+        "text": "y",
+        "logit": 14.8984375
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 14.84375
+      },
+      {
+        "token": 12049,
+        "text": "Extension",
+        "logit": 14.59375
+      },
+      {
+        "token": 94050,
+        "text": "Rail",
+        "logit": 14.140625
+      }
+    ],
+    "reference_top1": 27869,
+    "reference_top2": 47699,
+    "reference_top1_rank": 2,
+    "reference_pair_logits": [
+      18.125,
+      18.1875
+    ],
+    "reference_pair_margin": -0.0625,
+    "fp16_margin": 2.90625,
+    "id": "5a1c850fb4fb5d001871464c",
+    "input_token_ids_sha256": "93ea0175067a15b90c04a40f2573e71691e683678327fd46cab75485e2fe3a21"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 785,
+    "top2": 23,
+    "margin": 1.6484375,
+    "top10": [
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 17.34375
+      },
+      {
+        "token": 23,
+        "text": "8",
+        "logit": 15.6953125
+      },
+      {
+        "token": 17,
+        "text": "2",
+        "logit": 15.546875
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 15.4765625
+      },
+      {
+        "token": 61797,
+        "text": "Spanish",
+        "logit": 15.4609375
+      },
+      {
+        "token": 1925,
+        "text": "On",
+        "logit": 15.4296875
+      },
+      {
+        "token": 2132,
+        "text": "It",
+        "logit": 15.40625
+      },
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 14.7421875
+      },
+      {
+        "token": 1975,
+        "text": "over",
+        "logit": 14.7421875
+      },
+      {
+        "token": 1918,
+        "text": "Over",
+        "logit": 14.3984375
+      }
+    ],
+    "reference_top1": 17,
+    "reference_top2": 16,
+    "reference_top1_rank": 3,
+    "reference_pair_logits": [
+      15.546875,
+      14.7421875
+    ],
+    "reference_pair_margin": 0.8046875,
+    "fp16_margin": 2.15625,
+    "id": "5a1c861fb4fb5d0018714656",
+    "input_token_ids_sha256": "ac46eb1516b9509cb81b6ecbdf805697d1866da7599abe799354a8ad0c86703a"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 785,
+    "top2": 85574,
+    "margin": 0.875,
+    "top10": [
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 17.328125
+      },
+      {
+        "token": 85574,
+        "text": "Mayor",
+        "logit": 16.453125
+      },
+      {
+        "token": 6025,
+        "text": "After",
+        "logit": 16.390625
+      },
+      {
+        "token": 61282,
+        "text": "Jackson",
+        "logit": 15.6796875
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 15.359375
+      },
+      {
+        "token": 10694,
+        "text": "after",
+        "logit": 14.5625
+      },
+      {
+        "token": 12730,
+        "text": "City",
+        "logit": 14.46875
+      },
+      {
+        "token": 14075,
+        "text": "White",
+        "logit": 14.2421875
+      },
+      {
+        "token": 61469,
+        "text": "Government",
+        "logit": 14.1640625
+      },
+      {
+        "token": 450,
+        "text": "de",
+        "logit": 13.5703125
+      }
+    ],
+    "reference_top1": 10134,
+    "reference_top2": 61282,
+    "reference_top1_rank": 17,
+    "reference_pair_logits": [
+      12.8828125,
+      15.6796875
+    ],
+    "reference_pair_margin": -2.796875,
+    "fp16_margin": 1.921875,
+    "id": "5a1c883cb4fb5d0018714673",
+    "input_token_ids_sha256": "1dc89e7bb327dc689fc51038328d8f192220182c5b2b4dd4f31caab061d08eb9"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 359,
+    "top2": 411,
+    "margin": 1.40625,
+    "top10": [
+      {
+        "token": 359,
+        "text": "un",
+        "logit": 19.453125
+      },
+      {
+        "token": 411,
+        "text": "out",
+        "logit": 18.046875
+      },
+      {
+        "token": 641,
+        "text": "In",
+        "logit": 15.828125
+      },
+      {
+        "token": 1806,
+        "text": "Un",
+        "logit": 15.8046875
+      },
+      {
+        "token": 258,
+        "text": "in",
+        "logit": 15.6328125
+      },
+      {
+        "token": 2662,
+        "text": "Out",
+        "logit": 15.1953125
+      },
+      {
+        "token": 1966,
+        "text": "sub",
+        "logit": 14.9921875
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 14.953125
+      },
+      {
+        "token": 93268,
+        "text": "Urban",
+        "logit": 14.4375
+      },
+      {
+        "token": 76,
+        "text": "m",
+        "logit": 14.234375
+      }
+    ],
+    "reference_top1": 359,
+    "reference_top2": 411,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      19.453125,
+      18.046875
+    ],
+    "reference_pair_margin": 1.40625,
+    "fp16_margin": 5.1875,
+    "id": "5a1c88d2b4fb5d001871467b",
+    "input_token_ids_sha256": "42df032dc28ab3f31bed7af0cce0afb74d04f01206ea4c78e1e63773e254e5a5"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 85,
+    "top2": 53,
+    "margin": 0.703125,
+    "top10": [
+      {
+        "token": 85,
+        "text": "v",
+        "logit": 18.34375
+      },
+      {
+        "token": 53,
+        "text": "V",
+        "logit": 17.640625
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 16.21875
+      },
+      {
+        "token": 15220,
+        "text": "Cons",
+        "logit": 16.203125
+      },
+      {
+        "token": 1925,
+        "text": "On",
+        "logit": 15.7578125
+      },
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 15.5078125
+      },
+      {
+        "token": 6865,
+        "text": "They",
+        "logit": 15.34375
+      },
+      {
+        "token": 82722,
+        "text": " Voters",
+        "logit": 14.953125
+      },
+      {
+        "token": 11707,
+        "text": " voters",
+        "logit": 14.8671875
+      },
+      {
+        "token": 6254,
+        "text": "cons",
+        "logit": 14.6328125
+      }
+    ],
+    "reference_top1": 6254,
+    "reference_top2": 85,
+    "reference_top1_rank": 10,
+    "reference_pair_logits": [
+      14.6328125,
+      18.34375
+    ],
+    "reference_pair_margin": -3.7109375,
+    "fp16_margin": 2.296875,
+    "id": "5a1c8a1eb4fb5d0018714696",
+    "input_token_ids_sha256": "365ecaaf63db43d0590fd0022781d957f144281471b4ca3b450133af04568dbe"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 16,
+    "top2": 22,
+    "margin": 2.890625,
+    "top10": [
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 19.875
+      },
+      {
+        "token": 22,
+        "text": "7",
+        "logit": 16.984375
+      },
+      {
+        "token": 28253,
+        "text": "Water",
+        "logit": 16.96875
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 16.5625
+      },
+      {
+        "token": 41957,
+        "text": "Land",
+        "logit": 16.40625
+      },
+      {
+        "token": 1933,
+        "text": "land",
+        "logit": 15.859375
+      },
+      {
+        "token": 12987,
+        "text": "water",
+        "logit": 15.1640625
+      },
+      {
+        "token": 15,
+        "text": "0",
+        "logit": 14.9609375
+      },
+      {
+        "token": 2132,
+        "text": "It",
+        "logit": 14.484375
+      },
+      {
+        "token": 17,
+        "text": "2",
+        "logit": 14.40625
+      }
+    ],
+    "reference_top1": 16,
+    "reference_top2": 1933,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      19.875,
+      15.859375
+    ],
+    "reference_pair_margin": 4.015625,
+    "fp16_margin": 0.578125,
+    "id": "5a1c8aedb4fb5d00187146a2",
+    "input_token_ids_sha256": "e061e067be3b9f20c59c7e518124408602cb4b828c21cb87fadff4189e09ad0b"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 19,
+    "top2": 20,
+    "margin": 2.921875,
+    "top10": [
+      {
+        "token": 19,
+        "text": "4",
+        "logit": 24.234375
+      },
+      {
+        "token": 20,
+        "text": "5",
+        "logit": 21.3125
+      },
+      {
+        "token": 21,
+        "text": "6",
+        "logit": 21.25
+      },
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 20.78125
+      },
+      {
+        "token": 18,
+        "text": "3",
+        "logit": 20.46875
+      },
+      {
+        "token": 17,
+        "text": "2",
+        "logit": 19.71875
+      },
+      {
+        "token": 34024,
+        "text": "four",
+        "logit": 19.03125
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 18.734375
+      },
+      {
+        "token": 26972,
+        "text": "Four",
+        "logit": 18.140625
+      },
+      {
+        "token": 22,
+        "text": "7",
+        "logit": 17.84375
+      }
+    ],
+    "reference_top1": 21,
+    "reference_top2": 19,
+    "reference_top1_rank": 3,
+    "reference_pair_logits": [
+      21.25,
+      24.234375
+    ],
+    "reference_pair_margin": -2.984375,
+    "fp16_margin": 3.90625,
+    "id": "5a1c8bb4b4fb5d00187146ae",
+    "input_token_ids_sha256": "5ea58270e42b79457a10ff6dd1ba1f35cc8e55890bee527550ab5d3d7ac391a7"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 9454,
+    "top2": 2753,
+    "margin": 1.671875,
+    "top10": [
+      {
+        "token": 9454,
+        "text": "Yes",
+        "logit": 19.34375
+      },
+      {
+        "token": 2753,
+        "text": "No",
+        "logit": 17.671875
+      },
+      {
+        "token": 42,
+        "text": "K",
+        "logit": 17.578125
+      },
+      {
+        "token": 9693,
+        "text": "yes",
+        "logit": 17.390625
+      },
+      {
+        "token": 2152,
+        "text": "no",
+        "logit": 16.53125
+      },
+      {
+        "token": 34,
+        "text": "C",
+        "logit": 15.359375
+      },
+      {
+        "token": 1921,
+        "text": "not",
+        "logit": 15.21875
+      },
+      {
+        "token": 51,
+        "text": "T",
+        "logit": 14.7734375
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 14.7421875
+      },
+      {
+        "token": 65938,
+        "text": " humid",
+        "logit": 14.6171875
+      }
+    ],
+    "reference_top1": 2152,
+    "reference_top2": 2753,
+    "reference_top1_rank": 5,
+    "reference_pair_logits": [
+      16.53125,
+      17.671875
+    ],
+    "reference_pair_margin": -1.140625,
+    "fp16_margin": 0.46875,
+    "id": "5a1c8c34b4fb5d00187146b4",
+    "input_token_ids_sha256": "e4fe63618c223b76fe33bf1458434bc1a17ba2267912143f862991fea3ef7a30"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 22,
+    "top2": 11976,
+    "margin": 0.421875,
+    "top10": [
+      {
+        "token": 22,
+        "text": "7",
+        "logit": 17.84375
+      },
+      {
+        "token": 11976,
+        "text": "High",
+        "logit": 17.421875
+      },
+      {
+        "token": 20,
+        "text": "5",
+        "logit": 17.390625
+      },
+      {
+        "token": 18783,
+        "text": "Mean",
+        "logit": 17.25
+      },
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 17.171875
+      },
+      {
+        "token": 21,
+        "text": "6",
+        "logit": 17.140625
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 16.796875
+      },
+      {
+        "token": 32227,
+        "text": "January",
+        "logit": 16.609375
+      },
+      {
+        "token": 23,
+        "text": "8",
+        "logit": 16.203125
+      },
+      {
+        "token": 24,
+        "text": "9",
+        "logit": 15.6484375
+      }
+    ],
+    "reference_top1": 16,
+    "reference_top2": 23,
+    "reference_top1_rank": 5,
+    "reference_pair_logits": [
+      17.171875,
+      16.203125
+    ],
+    "reference_pair_margin": 0.96875,
+    "fp16_margin": 1.4375,
+    "id": "5a1c8d0bb4fb5d00187146bc",
+    "input_token_ids_sha256": "68976e58e47e8496f812a7905ed474c6121ed8028e6562c158e5d03e3d7d46d5"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 16,
+    "top2": 50,
+    "margin": 2.109375,
+    "top10": [
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 19.578125
+      },
+      {
+        "token": 50,
+        "text": "S",
+        "logit": 17.46875
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 16.765625
+      },
+      {
+        "token": 17,
+        "text": "2",
+        "logit": 15.8515625
+      },
+      {
+        "token": 20,
+        "text": "5",
+        "logit": 15.2421875
+      },
+      {
+        "token": 18,
+        "text": "3",
+        "logit": 15.03125
+      },
+      {
+        "token": 19,
+        "text": "4",
+        "logit": 14.71875
+      },
+      {
+        "token": 24,
+        "text": "9",
+        "logit": 14.5859375
+      },
+      {
+        "token": 21,
+        "text": "6",
+        "logit": 14.5234375
+      },
+      {
+        "token": 47586,
+        "text": "Strong",
+        "logit": 13.9765625
+      }
+    ],
+    "reference_top1": 16,
+    "reference_top2": 50,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      19.578125,
+      17.46875
+    ],
+    "reference_pair_margin": 2.109375,
+    "fp16_margin": 2.84375,
+    "id": "5a1c8e0bb4fb5d00187146c5",
+    "input_token_ids_sha256": "5f75ab9c25462d8ed556e0e2382d8efcee3764d543a4e67873826b8bdcb515f1"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 17,
+    "top2": 16,
+    "margin": 6.328125,
+    "top10": [
+      {
+        "token": 17,
+        "text": "2",
+        "logit": 25.875
+      },
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 19.546875
+      },
+      {
+        "token": 2386,
+        "text": "update",
+        "logit": 19.046875
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 18.75
+      },
+      {
+        "token": 4289,
+        "text": "Update",
+        "logit": 18.515625
+      },
+      {
+        "token": 18,
+        "text": "3",
+        "logit": 17.765625
+      },
+      {
+        "token": 58,
+        "text": "[",
+        "logit": 15.96875
+      },
+      {
+        "token": 16196,
+        "text": "Updated",
+        "logit": 15.921875
+      },
+      {
+        "token": 11768,
+        "text": "updated",
+        "logit": 15.90625
+      },
+      {
+        "token": 20,
+        "text": "5",
+        "logit": 15.5546875
+      }
+    ],
+    "reference_top1": 17,
+    "reference_top2": 16,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      25.875,
+      19.546875
+    ],
+    "reference_pair_margin": 6.328125,
+    "fp16_margin": 5.984375,
+    "id": "5a1c8f54b4fb5d00187146d8",
+    "input_token_ids_sha256": "0a0e347eaf98068eac79acb3f73c24f334fbc7f3f50dc35fe534e972747100e6"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 51861,
+    "top2": 45948,
+    "margin": 0.359375,
+    "top10": [
+      {
+        "token": 51861,
+        "text": "British",
+        "logit": 21.75
+      },
+      {
+        "token": 45948,
+        "text": "Sky",
+        "logit": 21.390625
+      },
+      {
+        "token": 7347,
+        "text": "BS",
+        "logit": 19.578125
+      },
+      {
+        "token": 35228,
+        "text": "Brit",
+        "logit": 16.984375
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 16.421875
+      },
+      {
+        "token": 90738,
+        "text": "Britain",
+        "logit": 16.21875
+      },
+      {
+        "token": 14722,
+        "text": " Sky",
+        "logit": 14.9453125
+      },
+      {
+        "token": 66755,
+        "text": "BBC",
+        "logit": 14.828125
+      },
+      {
+        "token": 19290,
+        "text": "Sk",
+        "logit": 14.6953125
+      },
+      {
+        "token": 50,
+        "text": "S",
+        "logit": 14.5390625
+      }
+    ],
+    "reference_top1": 45948,
+    "reference_top2": 51861,
+    "reference_top1_rank": 2,
+    "reference_pair_logits": [
+      21.390625,
+      21.75
+    ],
+    "reference_pair_margin": -0.359375,
+    "fp16_margin": 1.0625,
+    "id": "5a2c08aebfd06b001a5ae989",
+    "input_token_ids_sha256": "ac248d39c25331f9fbe6a5324e6990d822dcc58426ecea58174145e32177201a"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 16,
+    "top2": 30194,
+    "margin": 2.578125,
+    "top10": [
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 24.5
+      },
+      {
+        "token": 30194,
+        "text": "October",
+        "logit": 21.921875
+      },
+      {
+        "token": 29549,
+        "text": "September",
+        "logit": 18.171875
+      },
+      {
+        "token": 17,
+        "text": "2",
+        "logit": 17.328125
+      },
+      {
+        "token": 18,
+        "text": "3",
+        "logit": 16.109375
+      },
+      {
+        "token": 220,
+        "text": " ",
+        "logit": 16.046875
+      },
+      {
+        "token": 1925,
+        "text": "On",
+        "logit": 15.8984375
+      },
+      {
+        "token": 33727,
+        "text": "November",
+        "logit": 15.875
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 15.390625
+      },
+      {
+        "token": 28046,
+        "text": "April",
+        "logit": 15.375
+      }
+    ],
+    "reference_top1": 16,
+    "reference_top2": 30194,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      24.5,
+      21.921875
+    ],
+    "reference_pair_margin": 2.578125,
+    "fp16_margin": 2.0,
+    "id": "5a2c0fb8bfd06b001a5ae9b9",
+    "input_token_ids_sha256": "c536116c10eaaa88b726bbb597d372ddb660f84b9385cce3dd09f89e710086fd"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 785,
+    "top2": 54,
+    "margin": 0.265625,
+    "top10": [
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 17.3125
+      },
+      {
+        "token": 54,
+        "text": "W",
+        "logit": 17.046875
+      },
+      {
+        "token": 15220,
+        "text": "Cons",
+        "logit": 15.9921875
+      },
+      {
+        "token": 32,
+        "text": "A",
+        "logit": 15.921875
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 15.703125
+      },
+      {
+        "token": 67144,
+        "text": "benef",
+        "logit": 15.671875
+      },
+      {
+        "token": 2008,
+        "text": "Prop",
+        "logit": 15.578125
+      },
+      {
+        "token": 87646,
+        "text": "Payments",
+        "logit": 15.484375
+      },
+      {
+        "token": 63043,
+        "text": "payments",
+        "logit": 15.25
+      },
+      {
+        "token": 13755,
+        "text": "payment",
+        "logit": 15.1484375
+      }
+    ],
+    "reference_top1": 54,
+    "reference_top2": 84323,
+    "reference_top1_rank": 2,
+    "reference_pair_logits": [
+      17.046875,
+      14.4296875
+    ],
+    "reference_pair_margin": 2.6171875,
+    "fp16_margin": 1.984375,
+    "id": "5a2c1397bfd06b001a5ae9c9",
+    "input_token_ids_sha256": "1bedef058c76100b00c69869cfb6dca8504cdbbcddb2f6731279162cff83d718"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 7347,
+    "top2": 1925,
+    "margin": 4.671875,
+    "top10": [
+      {
+        "token": 7347,
+        "text": "BS",
+        "logit": 22.15625
+      },
+      {
+        "token": 1925,
+        "text": "On",
+        "logit": 17.484375
+      },
+      {
+        "token": 33,
+        "text": "B",
+        "logit": 17.171875
+      },
+      {
+        "token": 952,
+        "text": "IT",
+        "logit": 16.9375
+      },
+      {
+        "token": 51861,
+        "text": "British",
+        "logit": 16.734375
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 16.421875
+      },
+      {
+        "token": 35228,
+        "text": "Brit",
+        "logit": 16.390625
+      },
+      {
+        "token": 10098,
+        "text": "BB",
+        "logit": 16.359375
+      },
+      {
+        "token": 2132,
+        "text": "It",
+        "logit": 16.109375
+      },
+      {
+        "token": 74207,
+        "text": "Bs",
+        "logit": 16.0625
+      }
+    ],
+    "reference_top1": 7347,
+    "reference_top2": 711,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      22.15625,
+      15.2109375
+    ],
+    "reference_pair_margin": 6.9453125,
+    "fp16_margin": 1.03125,
+    "id": "5a2c14b4bfd06b001a5ae9d6",
+    "input_token_ids_sha256": "b4d33299c686c7f381b1ed8c22c279c4336db77e4086dd772025cc5448c4d0d8"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 10940,
+    "top2": 7347,
+    "margin": 0.734375,
+    "top10": [
+      {
+        "token": 10940,
+        "text": "Free",
+        "logit": 19.453125
+      },
+      {
+        "token": 7347,
+        "text": "BS",
+        "logit": 18.71875
+      },
+      {
+        "token": 1649,
+        "text": "Set",
+        "logit": 16.9375
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 16.75
+      },
+      {
+        "token": 10593,
+        "text": "free",
+        "logit": 16.40625
+      },
+      {
+        "token": 45,
+        "text": "N",
+        "logit": 16.1875
+      },
+      {
+        "token": 63697,
+        "text": "Virgin",
+        "logit": 15.0
+      },
+      {
+        "token": 2448,
+        "text": "NS",
+        "logit": 14.796875
+      },
+      {
+        "token": 2589,
+        "text": "Ad",
+        "logit": 14.7578125
+      },
+      {
+        "token": 3136,
+        "text": "Sub",
+        "logit": 14.296875
+      }
+    ],
+    "reference_top1": 10940,
+    "reference_top2": 7347,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      19.453125,
+      18.71875
+    ],
+    "reference_pair_margin": 0.734375,
+    "fp16_margin": 2.765625,
+    "id": "5a2c1622bfd06b001a5ae9e1",
+    "input_token_ids_sha256": "eed9da1a154e1a93c720941d80874cddd5bf7d76f3cf948034444b8d839df1dd"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 29549,
+    "top2": 641,
+    "margin": 0.421875,
+    "top10": [
+      {
+        "token": 29549,
+        "text": "September",
+        "logit": 20.953125
+      },
+      {
+        "token": 641,
+        "text": "In",
+        "logit": 20.53125
+      },
+      {
+        "token": 18,
+        "text": "3",
+        "logit": 20.46875
+      },
+      {
+        "token": 17,
+        "text": "2",
+        "logit": 19.734375
+      },
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 18.953125
+      },
+      {
+        "token": 32777,
+        "text": "February",
+        "logit": 18.640625
+      },
+      {
+        "token": 27523,
+        "text": "March",
+        "logit": 18.578125
+      },
+      {
+        "token": 258,
+        "text": "in",
+        "logit": 18.515625
+      },
+      {
+        "token": 32227,
+        "text": "January",
+        "logit": 18.375
+      },
+      {
+        "token": 30194,
+        "text": "October",
+        "logit": 17.75
+      }
+    ],
+    "reference_top1": 17,
+    "reference_top2": 29549,
+    "reference_top1_rank": 4,
+    "reference_pair_logits": [
+      19.734375,
+      20.953125
+    ],
+    "reference_pair_margin": -1.21875,
+    "fp16_margin": 0.3125,
+    "id": "5a2c16e3bfd06b001a5ae9e8",
+    "input_token_ids_sha256": "22ff0d6c1af95c68c1763bb83480e4c660eb486b0aecbb754dc0449667164e67"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 16,
+    "top2": 19,
+    "margin": 0.359375,
+    "top10": [
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 20.65625
+      },
+      {
+        "token": 19,
+        "text": "4",
+        "logit": 20.296875
+      },
+      {
+        "token": 17,
+        "text": "2",
+        "logit": 19.4375
+      },
+      {
+        "token": 20,
+        "text": "5",
+        "logit": 18.625
+      },
+      {
+        "token": 18,
+        "text": "3",
+        "logit": 18.328125
+      },
+      {
+        "token": 22,
+        "text": "7",
+        "logit": 17.171875
+      },
+      {
+        "token": 23,
+        "text": "8",
+        "logit": 16.28125
+      },
+      {
+        "token": 15919,
+        "text": "People",
+        "logit": 16.265625
+      },
+      {
+        "token": 21,
+        "text": "6",
+        "logit": 16.0
+      },
+      {
+        "token": 15,
+        "text": "0",
+        "logit": 15.8984375
+      }
+    ],
+    "reference_top1": 19,
+    "reference_top2": 16,
+    "reference_top1_rank": 2,
+    "reference_pair_logits": [
+      20.296875,
+      20.65625
+    ],
+    "reference_pair_margin": -0.359375,
+    "fp16_margin": 0.265625,
+    "id": "5a2c30dabfd06b001a5aea2b",
+    "input_token_ids_sha256": "0ce185c4435bfb20f76505efe37186c9921e34a8aff8e0becc656402ccd65036"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 785,
+    "top2": 45948,
+    "margin": 0.375,
+    "top10": [
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 20.375
+      },
+      {
+        "token": 45948,
+        "text": "Sky",
+        "logit": 20.0
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 17.296875
+      },
+      {
+        "token": 4064,
+        "text": "None",
+        "logit": 16.203125
+      },
+      {
+        "token": 2753,
+        "text": "No",
+        "logit": 15.515625
+      },
+      {
+        "token": 19290,
+        "text": "Sk",
+        "logit": 14.7890625
+      },
+      {
+        "token": 3862,
+        "text": "There",
+        "logit": 14.78125
+      },
+      {
+        "token": 14986,
+        "text": "Power",
+        "logit": 14.625
+      },
+      {
+        "token": 32,
+        "text": "A",
+        "logit": 14.6015625
+      },
+      {
+        "token": 6865,
+        "text": "They",
+        "logit": 14.453125
+      }
+    ],
+    "reference_top1": 45948,
+    "reference_top2": 785,
+    "reference_top1_rank": 2,
+    "reference_pair_logits": [
+      20.0,
+      20.375
+    ],
+    "reference_pair_margin": -0.375,
+    "fp16_margin": 0.9375,
+    "id": "5a2c31abbfd06b001a5aea34",
+    "input_token_ids_sha256": "31cada7ab1fb7e5e9f5b3cb684ddb2c8f9ca6cf039212f4d0117fc75ad072808"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 32,
+    "top2": 785,
+    "margin": 3.109375,
+    "top10": [
+      {
+        "token": 32,
+        "text": "A",
+        "logit": 22.65625
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 19.546875
+      },
+      {
+        "token": 45948,
+        "text": "Sky",
+        "logit": 19.21875
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 18.125
+      },
+      {
+        "token": 4498,
+        "text": "When",
+        "logit": 16.765625
+      },
+      {
+        "token": 2082,
+        "text": "An",
+        "logit": 15.8671875
+      },
+      {
+        "token": 931,
+        "text": "new",
+        "logit": 15.640625
+      },
+      {
+        "token": 2132,
+        "text": "It",
+        "logit": 15.4765625
+      },
+      {
+        "token": 34882,
+        "text": "Sat",
+        "logit": 15.40625
+      },
+      {
+        "token": 50,
+        "text": "S",
+        "logit": 14.65625
+      }
+    ],
+    "reference_top1": 32,
+    "reference_top2": 45948,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      22.65625,
+      19.21875
+    ],
+    "reference_pair_margin": 3.4375,
+    "fp16_margin": 0.140625,
+    "id": "5a2c3595bfd06b001a5aea5f",
+    "input_token_ids_sha256": "66343ac3c72568116d52cd568831d6ec091884f9a430bf06761bac374b05b1b6"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 45948,
+    "top2": 785,
+    "margin": 1.921875,
+    "top10": [
+      {
+        "token": 45948,
+        "text": "Sky",
+        "logit": 19.296875
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 17.375
+      },
+      {
+        "token": 7347,
+        "text": "BS",
+        "logit": 17.21875
+      },
+      {
+        "token": 35,
+        "text": "D",
+        "logit": 16.921875
+      },
+      {
+        "token": 22,
+        "text": "7",
+        "logit": 16.21875
+      },
+      {
+        "token": 4064,
+        "text": "None",
+        "logit": 15.3046875
+      },
+      {
+        "token": 2753,
+        "text": "No",
+        "logit": 14.1640625
+      },
+      {
+        "token": 71686,
+        "text": "Interactive",
+        "logit": 14.140625
+      },
+      {
+        "token": 2354,
+        "text": "With",
+        "logit": 14.0703125
+      },
+      {
+        "token": 19147,
+        "text": "HD",
+        "logit": 14.0546875
+      }
+    ],
+    "reference_top1": 45948,
+    "reference_top2": 22,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      19.296875,
+      16.21875
+    ],
+    "reference_pair_margin": 3.078125,
+    "fp16_margin": 4.3125,
+    "id": "5a2c382dbfd06b001a5aea73",
+    "input_token_ids_sha256": "18887387562e410140f67296742a10878cf8d1afcae569edbbe9a3c092774a13"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 7347,
+    "top2": 785,
+    "margin": 1.75,
+    "top10": [
+      {
+        "token": 7347,
+        "text": "BS",
+        "logit": 19.390625
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 17.640625
+      },
+      {
+        "token": 45,
+        "text": "N",
+        "logit": 17.25
+      },
+      {
+        "token": 10724,
+        "text": "Video",
+        "logit": 16.21875
+      },
+      {
+        "token": 45948,
+        "text": "Sky",
+        "logit": 15.7578125
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 15.6015625
+      },
+      {
+        "token": 6828,
+        "text": "Br",
+        "logit": 15.4375
+      },
+      {
+        "token": 33,
+        "text": "B",
+        "logit": 14.109375
+      },
+      {
+        "token": 3862,
+        "text": "There",
+        "logit": 13.8125
+      },
+      {
+        "token": 2448,
+        "text": "NS",
+        "logit": 13.703125
+      }
+    ],
+    "reference_top1": 45,
+    "reference_top2": 7347,
+    "reference_top1_rank": 3,
+    "reference_pair_logits": [
+      17.25,
+      19.390625
+    ],
+    "reference_pair_margin": -2.140625,
+    "fp16_margin": 0.125,
+    "id": "5a2c3a5cbfd06b001a5aea7d",
+    "input_token_ids_sha256": "b5f63fa65cf933add0c4febf0a8facb2ed3028f9c7b9c1aeb3770e45318e6e81"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 7347,
+    "top2": 2124,
+    "margin": 0.328125,
+    "top10": [
+      {
+        "token": 7347,
+        "text": "BS",
+        "logit": 20.40625
+      },
+      {
+        "token": 2124,
+        "text": "Of",
+        "logit": 20.078125
+      },
+      {
+        "token": 4596,
+        "text": "Off",
+        "logit": 17.46875
+      },
+      {
+        "token": 1055,
+        "text": "of",
+        "logit": 17.21875
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 17.171875
+      },
+      {
+        "token": 6865,
+        "text": "They",
+        "logit": 16.359375
+      },
+      {
+        "token": 2195,
+        "text": "Or",
+        "logit": 16.15625
+      },
+      {
+        "token": 3830,
+        "text": "From",
+        "logit": 15.8515625
+      },
+      {
+        "token": 2461,
+        "text": "For",
+        "logit": 15.71875
+      },
+      {
+        "token": 4064,
+        "text": "None",
+        "logit": 15.4921875
+      }
+    ],
+    "reference_top1": 2124,
+    "reference_top2": 1055,
+    "reference_top1_rank": 2,
+    "reference_pair_logits": [
+      20.078125,
+      17.21875
+    ],
+    "reference_pair_margin": 2.859375,
+    "fp16_margin": 2.546875,
+    "id": "5a2c3ca9bfd06b001a5aea83",
+    "input_token_ids_sha256": "52c946def0183c1dbe99d712978d95e619c72e170ae46456dd3b4a6d9dbfbed1"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 31898,
+    "top2": 18,
+    "margin": 0.8125,
+    "top10": [
+      {
+        "token": 31898,
+        "text": "Linear",
+        "logit": 18.375
+      },
+      {
+        "token": 18,
+        "text": "3",
+        "logit": 17.5625
+      },
+      {
+        "token": 22763,
+        "text": "linear",
+        "logit": 17.234375
+      },
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 16.578125
+      },
+      {
+        "token": 66755,
+        "text": "BBC",
+        "logit": 16.390625
+      },
+      {
+        "token": 3830,
+        "text": "From",
+        "logit": 16.3125
+      },
+      {
+        "token": 19147,
+        "text": "HD",
+        "logit": 15.875
+      },
+      {
+        "token": 39,
+        "text": "H",
+        "logit": 15.8046875
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 15.546875
+      },
+      {
+        "token": 33727,
+        "text": "November",
+        "logit": 15.2734375
+      }
+    ],
+    "reference_top1": 66755,
+    "reference_top2": 22763,
+    "reference_top1_rank": 5,
+    "reference_pair_logits": [
+      16.390625,
+      17.234375
+    ],
+    "reference_pair_margin": -0.84375,
+    "fp16_margin": 1.046875,
+    "id": "5a2c3d73bfd06b001a5aea8d",
+    "input_token_ids_sha256": "8b7d0ea3187c0aa12c4d19f167f368da85f899c66cce6d704d1a8f73910b6546"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 16,
+    "top2": 17,
+    "margin": 1.140625,
+    "top10": [
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 23.671875
+      },
+      {
+        "token": 17,
+        "text": "2",
+        "logit": 22.53125
+      },
+      {
+        "token": 27523,
+        "text": "March",
+        "logit": 21.765625
+      },
+      {
+        "token": 28046,
+        "text": "April",
+        "logit": 18.515625
+      },
+      {
+        "token": 641,
+        "text": "In",
+        "logit": 17.765625
+      },
+      {
+        "token": 12061,
+        "text": "Mar",
+        "logit": 17.40625
+      },
+      {
+        "token": 18,
+        "text": "3",
+        "logit": 16.96875
+      },
+      {
+        "token": 32227,
+        "text": "January",
+        "logit": 16.96875
+      },
+      {
+        "token": 32777,
+        "text": "February",
+        "logit": 16.671875
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 16.40625
+      }
+    ],
+    "reference_top1": 17,
+    "reference_top2": 27523,
+    "reference_top1_rank": 2,
+    "reference_pair_logits": [
+      22.53125,
+      21.765625
+    ],
+    "reference_pair_margin": 0.765625,
+    "fp16_margin": 4.640625,
+    "id": "5a2c3efbbfd06b001a5aea97",
+    "input_token_ids_sha256": "4d61f0274e31583152da06e1d43f54e512cf2e479fa98b9bf5c5ea130550c6a2"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 6865,
+    "top2": 11976,
+    "margin": 0.171875,
+    "top10": [
+      {
+        "token": 6865,
+        "text": "They",
+        "logit": 17.203125
+      },
+      {
+        "token": 11976,
+        "text": "High",
+        "logit": 17.03125
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 16.25
+      },
+      {
+        "token": 11892,
+        "text": "high",
+        "logit": 15.8359375
+      },
+      {
+        "token": 20629,
+        "text": "Both",
+        "logit": 14.8828125
+      },
+      {
+        "token": 5800,
+        "text": "Part",
+        "logit": 14.7578125
+      },
+      {
+        "token": 20069,
+        "text": "they",
+        "logit": 14.53125
+      },
+      {
+        "token": 6025,
+        "text": "After",
+        "logit": 14.2265625
+      },
+      {
+        "token": 4480,
+        "text": "part",
+        "logit": 14.171875
+      },
+      {
+        "token": 34797,
+        "text": "Their",
+        "logit": 14.09375
+      }
+    ],
+    "reference_top1": 11976,
+    "reference_top2": 11892,
+    "reference_top1_rank": 2,
+    "reference_pair_logits": [
+      17.03125,
+      15.8359375
+    ],
+    "reference_pair_margin": 1.1953125,
+    "fp16_margin": 1.578125,
+    "id": "5a2c40b8bfd06b001a5aea9f",
+    "input_token_ids_sha256": "d30ccc653778878595b3139a1927f13ee1731a6407b0fd80866597f24dd54b4b"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 17,
+    "top2": 18,
+    "margin": 1.078125,
+    "top10": [
+      {
+        "token": 17,
+        "text": "2",
+        "logit": 22.390625
+      },
+      {
+        "token": 18,
+        "text": "3",
+        "logit": 21.3125
+      },
+      {
+        "token": 1925,
+        "text": "On",
+        "logit": 20.515625
+      },
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 18.921875
+      },
+      {
+        "token": 263,
+        "text": "on",
+        "logit": 17.375
+      },
+      {
+        "token": 32227,
+        "text": "January",
+        "logit": 17.078125
+      },
+      {
+        "token": 6025,
+        "text": "After",
+        "logit": 15.8828125
+      },
+      {
+        "token": 15,
+        "text": "0",
+        "logit": 15.8125
+      },
+      {
+        "token": 20,
+        "text": "5",
+        "logit": 15.3359375
+      },
+      {
+        "token": 28427,
+        "text": "July",
+        "logit": 15.2578125
+      }
+    ],
+    "reference_top1": 17,
+    "reference_top2": 18,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      22.390625,
+      21.3125
+    ],
+    "reference_pair_margin": 1.078125,
+    "fp16_margin": 2.765625,
+    "id": "5a2c41c8bfd06b001a5aeaab",
+    "input_token_ids_sha256": "975880676c58c1a70ced0349cd805329addd7b99d3a95d4d2b24c29b275b2e22"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 22286,
+    "top2": 3564,
+    "margin": 0.828125,
+    "top10": [
+      {
+        "token": 22286,
+        "text": "David",
+        "logit": 19.5
+      },
+      {
+        "token": 3564,
+        "text": "New",
+        "logit": 18.671875
+      },
+      {
+        "token": 39,
+        "text": "H",
+        "logit": 17.984375
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 17.4375
+      },
+      {
+        "token": 76491,
+        "text": "Lie",
+        "logit": 15.6875
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 14.453125
+      },
+      {
+        "token": 51861,
+        "text": "British",
+        "logit": 14.3671875
+      },
+      {
+        "token": 2620,
+        "text": "Def",
+        "logit": 14.203125
+      },
+      {
+        "token": 74241,
+        "text": "Australian",
+        "logit": 14.15625
+      },
+      {
+        "token": 48037,
+        "text": "Australia",
+        "logit": 14.1484375
+      }
+    ],
+    "reference_top1": 3564,
+    "reference_top2": 22286,
+    "reference_top1_rank": 2,
+    "reference_pair_logits": [
+      18.671875,
+      19.5
+    ],
+    "reference_pair_margin": -0.828125,
+    "fp16_margin": 1.453125,
+    "id": "5a63772268151a001a9222f4",
+    "input_token_ids_sha256": "19364c5dfe69bdbfde8a87c827f67291bdf394a76db76d98e24373661f5e3849"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 16,
+    "top2": 1925,
+    "margin": 3.296875,
+    "top10": [
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 24.078125
+      },
+      {
+        "token": 1925,
+        "text": "On",
+        "logit": 20.78125
+      },
+      {
+        "token": 28427,
+        "text": "July",
+        "logit": 20.59375
+      },
+      {
+        "token": 17,
+        "text": "2",
+        "logit": 16.78125
+      },
+      {
+        "token": 263,
+        "text": "on",
+        "logit": 16.515625
+      },
+      {
+        "token": 32227,
+        "text": "January",
+        "logit": 16.1875
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 15.9765625
+      },
+      {
+        "token": 22,
+        "text": "7",
+        "logit": 15.8125
+      },
+      {
+        "token": 28085,
+        "text": "Jul",
+        "logit": 15.7578125
+      },
+      {
+        "token": 27160,
+        "text": "June",
+        "logit": 15.375
+      }
+    ],
+    "reference_top1": 16,
+    "reference_top2": 28427,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      24.078125,
+      20.59375
+    ],
+    "reference_pair_margin": 3.484375,
+    "fp16_margin": 6.71875,
+    "id": "5a63787868151a001a9222fa",
+    "input_token_ids_sha256": "a52ab1ff3d4d67fb7dc1963fc3db7f5ed6da3104825113931cfb82be3c0092f7"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 78386,
+    "top2": 8373,
+    "margin": 0.359375,
+    "top10": [
+      {
+        "token": 78386,
+        "text": "leaders",
+        "logit": 17.65625
+      },
+      {
+        "token": 8373,
+        "text": "Some",
+        "logit": 17.296875
+      },
+      {
+        "token": 22974,
+        "text": "members",
+        "logit": 16.578125
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 16.4375
+      },
+      {
+        "token": 14689,
+        "text": "some",
+        "logit": 16.296875
+      },
+      {
+        "token": 51861,
+        "text": "British",
+        "logit": 15.9921875
+      },
+      {
+        "token": 92724,
+        "text": "Leaders",
+        "logit": 15.984375
+      },
+      {
+        "token": 24371,
+        "text": "Members",
+        "logit": 15.96875
+      },
+      {
+        "token": 6865,
+        "text": "They",
+        "logit": 15.7890625
+      },
+      {
+        "token": 26060,
+        "text": "lead",
+        "logit": 15.2890625
+      }
+    ],
+    "reference_top1": 51861,
+    "reference_top2": 1065,
+    "reference_top1_rank": 6,
+    "reference_pair_logits": [
+      15.9921875,
+      10.4140625
+    ],
+    "reference_pair_margin": 5.578125,
+    "fp16_margin": 1.015625,
+    "id": "5a637c6268151a001a922311",
+    "input_token_ids_sha256": "c2b883bbc074d7767a9e5fbc56a395d8d52af6fd027773b77f42c7132e5b961c"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 785,
+    "top2": 40586,
+    "margin": 2.015625,
+    "top10": [
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 21.46875
+      },
+      {
+        "token": 40586,
+        "text": "Daniel",
+        "logit": 19.453125
+      },
+      {
+        "token": 80956,
+        "text": "Victoria",
+        "logit": 17.0
+      },
+      {
+        "token": 36125,
+        "text": "Vict",
+        "logit": 16.21875
+      },
+      {
+        "token": 41462,
+        "text": "Prem",
+        "logit": 15.640625
+      },
+      {
+        "token": 32306,
+        "text": "Prime",
+        "logit": 15.4375
+      },
+      {
+        "token": 53,
+        "text": "V",
+        "logit": 15.40625
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 15.2421875
+      },
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 14.484375
+      },
+      {
+        "token": 61469,
+        "text": "Government",
+        "logit": 14.3984375
+      }
+    ],
+    "reference_top1": 785,
+    "reference_top2": 40586,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      21.46875,
+      19.453125
+    ],
+    "reference_pair_margin": 2.015625,
+    "fp16_margin": 1.953125,
+    "id": "5a6381d868151a001a922325",
+    "input_token_ids_sha256": "912e2f94caed6d04b856a083008835fdba9eeb092209ffda062cdcb967f2cf67"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 785,
+    "top2": 1782,
+    "margin": 1.796875,
+    "top10": [
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 19.890625
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 18.09375
+      },
+      {
+        "token": 22372,
+        "text": "United",
+        "logit": 17.96875
+      },
+      {
+        "token": 4272,
+        "text": "Par",
+        "logit": 15.4140625
+      },
+      {
+        "token": 15919,
+        "text": "People",
+        "logit": 14.6328125
+      },
+      {
+        "token": 53,
+        "text": "V",
+        "logit": 14.6015625
+      },
+      {
+        "token": 24537,
+        "text": "UK",
+        "logit": 14.515625
+      },
+      {
+        "token": 2132,
+        "text": "It",
+        "logit": 14.4921875
+      },
+      {
+        "token": 19723,
+        "text": " Parliament",
+        "logit": 14.453125
+      },
+      {
+        "token": 64,
+        "text": "a",
+        "logit": 14.3203125
+      }
+    ],
+    "reference_top1": 22372,
+    "reference_top2": 4272,
+    "reference_top1_rank": 3,
+    "reference_pair_logits": [
+      17.96875,
+      15.4140625
+    ],
+    "reference_pair_margin": 2.5546875,
+    "fp16_margin": 0.84375,
+    "id": "5a63835a68151a001a92232e",
+    "input_token_ids_sha256": "269fe3cd5ce92b1fb40b47e654eaa48d1e1c0562da6a679bc16e999cd210791f"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 785,
+    "top2": 30812,
+    "margin": 2.671875,
+    "top10": [
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 20.71875
+      },
+      {
+        "token": 30812,
+        "text": "National",
+        "logit": 18.046875
+      },
+      {
+        "token": 74241,
+        "text": "Australian",
+        "logit": 17.078125
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 16.609375
+      },
+      {
+        "token": 76533,
+        "text": "Labor",
+        "logit": 16.375
+      },
+      {
+        "token": 9194,
+        "text": "Lib",
+        "logit": 16.0625
+      },
+      {
+        "token": 48037,
+        "text": "Australia",
+        "logit": 15.8125
+      },
+      {
+        "token": 45,
+        "text": "N",
+        "logit": 15.6171875
+      },
+      {
+        "token": 83528,
+        "text": "Labour",
+        "logit": 14.9140625
+      },
+      {
+        "token": 44,
+        "text": "M",
+        "logit": 14.484375
+      }
+    ],
+    "reference_top1": 785,
+    "reference_top2": 30812,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      20.71875,
+      18.046875
+    ],
+    "reference_pair_margin": 2.671875,
+    "fp16_margin": 2.0625,
+    "id": "5a63866968151a001a922337",
+    "input_token_ids_sha256": "59f57aadfbf97f036f1afe686123d831051df908ef3a9e60eba9642228a5edc4"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 61469,
+    "top2": 86763,
+    "margin": 0.765625,
+    "top10": [
+      {
+        "token": 61469,
+        "text": "Government",
+        "logit": 18.9375
+      },
+      {
+        "token": 86763,
+        "text": "government",
+        "logit": 18.171875
+      },
+      {
+        "token": 80956,
+        "text": "Victoria",
+        "logit": 17.6875
+      },
+      {
+        "token": 26972,
+        "text": "Four",
+        "logit": 16.9375
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 16.828125
+      },
+      {
+        "token": 1092,
+        "text": "Com",
+        "logit": 16.25
+      },
+      {
+        "token": 12676,
+        "text": "Public",
+        "logit": 15.6875
+      },
+      {
+        "token": 888,
+        "text": "public",
+        "logit": 15.65625
+      },
+      {
+        "token": 19,
+        "text": "4",
+        "logit": 15.28125
+      },
+      {
+        "token": 53,
+        "text": "V",
+        "logit": 15.28125
+      }
+    ],
+    "reference_top1": 80956,
+    "reference_top2": 86763,
+    "reference_top1_rank": 3,
+    "reference_pair_logits": [
+      17.6875,
+      18.171875
+    ],
+    "reference_pair_margin": -0.484375,
+    "fp16_margin": 0.265625,
+    "id": "5a638a2468151a001a92234e",
+    "input_token_ids_sha256": "ef20a020b3fb079f13686550f27eb3da5066394a498608a002b0d9a343a5b04c"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 19,
+    "top2": 20,
+    "margin": 0.859375,
+    "top10": [
+      {
+        "token": 19,
+        "text": "4",
+        "logit": 21.65625
+      },
+      {
+        "token": 20,
+        "text": "5",
+        "logit": 20.796875
+      },
+      {
+        "token": 21,
+        "text": "6",
+        "logit": 19.03125
+      },
+      {
+        "token": 18,
+        "text": "3",
+        "logit": 18.6875
+      },
+      {
+        "token": 1975,
+        "text": "over",
+        "logit": 18.640625
+      },
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 18.53125
+      },
+      {
+        "token": 22,
+        "text": "7",
+        "logit": 18.46875
+      },
+      {
+        "token": 1918,
+        "text": "Over",
+        "logit": 18.046875
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 17.296875
+      },
+      {
+        "token": 15,
+        "text": "0",
+        "logit": 17.1875
+      }
+    ],
+    "reference_top1": 19,
+    "reference_top2": 20,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      21.65625,
+      20.796875
+    ],
+    "reference_pair_margin": 0.859375,
+    "fp16_margin": 1.40625,
+    "id": "5a638b3668151a001a92235e",
+    "input_token_ids_sha256": "313f36398dce2d5803338ce45289d0980e4bacde7b6dd295f8b33fd9725cc28c"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 16,
+    "top2": 23,
+    "margin": 0.609375,
+    "top10": [
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 20.234375
+      },
+      {
+        "token": 23,
+        "text": "8",
+        "logit": 19.625
+      },
+      {
+        "token": 17,
+        "text": "2",
+        "logit": 19.53125
+      },
+      {
+        "token": 20,
+        "text": "5",
+        "logit": 18.828125
+      },
+      {
+        "token": 3,
+        "text": "$",
+        "logit": 18.71875
+      },
+      {
+        "token": 19,
+        "text": "4",
+        "logit": 17.9375
+      },
+      {
+        "token": 18,
+        "text": "3",
+        "logit": 17.859375
+      },
+      {
+        "token": 22,
+        "text": "7",
+        "logit": 17.75
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 17.015625
+      },
+      {
+        "token": 24,
+        "text": "9",
+        "logit": 16.65625
+      }
+    ],
+    "reference_top1": 3,
+    "reference_top2": 23,
+    "reference_top1_rank": 5,
+    "reference_pair_logits": [
+      18.71875,
+      19.625
+    ],
+    "reference_pair_margin": -0.90625,
+    "fp16_margin": 0.375,
+    "id": "5a638bf768151a001a922364",
+    "input_token_ids_sha256": "1d146bd0729988fb7966cbe31c0a99b0028d5ed62d37987d6ccfd9d449adfd9c"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 21,
+    "top2": 20,
+    "margin": 2.953125,
+    "top10": [
+      {
+        "token": 21,
+        "text": "6",
+        "logit": 21.796875
+      },
+      {
+        "token": 20,
+        "text": "5",
+        "logit": 18.84375
+      },
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 18.515625
+      },
+      {
+        "token": 22,
+        "text": "7",
+        "logit": 18.046875
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 17.453125
+      },
+      {
+        "token": 17,
+        "text": "2",
+        "logit": 17.234375
+      },
+      {
+        "token": 80956,
+        "text": "Victoria",
+        "logit": 17.03125
+      },
+      {
+        "token": 48037,
+        "text": "Australia",
+        "logit": 17.0
+      },
+      {
+        "token": 18,
+        "text": "3",
+        "logit": 16.8125
+      },
+      {
+        "token": 19,
+        "text": "4",
+        "logit": 16.515625
+      }
+    ],
+    "reference_top1": 21,
+    "reference_top2": 80956,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      21.796875,
+      17.03125
+    ],
+    "reference_pair_margin": 4.765625,
+    "fp16_margin": 4.53125,
+    "id": "5a638e4468151a001a92237a",
+    "input_token_ids_sha256": "6c9d625dbebda783b6388443ed5b0adbaf6cf6b726f340f75d9536e403f03c97"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 58563,
+    "top2": 80956,
+    "margin": 5.53125,
+    "top10": [
+      {
+        "token": 58563,
+        "text": "Ford",
+        "logit": 22.40625
+      },
+      {
+        "token": 80956,
+        "text": "Victoria",
+        "logit": 16.875
+      },
+      {
+        "token": 34602,
+        "text": "Vehicle",
+        "logit": 16.421875
+      },
+      {
+        "token": 53,
+        "text": "V",
+        "logit": 16.34375
+      },
+      {
+        "token": 26716,
+        "text": "Mer",
+        "logit": 16.078125
+      },
+      {
+        "token": 41072,
+        "text": "Autom",
+        "logit": 16.0
+      },
+      {
+        "token": 37,
+        "text": "F",
+        "logit": 15.9765625
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 15.6171875
+      },
+      {
+        "token": 48983,
+        "text": "Histor",
+        "logit": 15.5859375
+      },
+      {
+        "token": 48037,
+        "text": "Australia",
+        "logit": 15.4921875
+      }
+    ],
+    "reference_top1": 6918,
+    "reference_top2": 58563,
+    "reference_top1_rank": 57,
+    "reference_pair_logits": [
+      12.21875,
+      22.40625
+    ],
+    "reference_pair_margin": -10.1875,
+    "fp16_margin": 0.734375,
+    "id": "5a638ffe68151a001a922382",
+    "input_token_ids_sha256": "1439af9a2ede367bed6a2061e63661a8ed451cce4fea495e78adc9b02e7dde81"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 16,
+    "top2": 16284,
+    "margin": 1.21875,
+    "top10": [
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 20.828125
+      },
+      {
+        "token": 16284,
+        "text": "Mount",
+        "logit": 19.609375
+      },
+      {
+        "token": 21,
+        "text": "6",
+        "logit": 19.375
+      },
+      {
+        "token": 17,
+        "text": "2",
+        "logit": 19.234375
+      },
+      {
+        "token": 20,
+        "text": "5",
+        "logit": 17.859375
+      },
+      {
+        "token": 38,
+        "text": "G",
+        "logit": 17.828125
+      },
+      {
+        "token": 19,
+        "text": "4",
+        "logit": 17.53125
+      },
+      {
+        "token": 18,
+        "text": "3",
+        "logit": 17.46875
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 16.703125
+      },
+      {
+        "token": 2132,
+        "text": "It",
+        "logit": 16.53125
+      }
+    ],
+    "reference_top1": 16,
+    "reference_top2": 21,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      20.828125,
+      19.375
+    ],
+    "reference_pair_margin": 1.453125,
+    "fp16_margin": 2.078125,
+    "id": "5a6394b768151a001a922398",
+    "input_token_ids_sha256": "9277e5f163d74d7f6a5f23a913bbf9e86cb76f379c42536a8ce6e3a44f9a4f8c"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 16,
+    "top2": 18,
+    "margin": 0.4375,
+    "top10": [
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 20.546875
+      },
+      {
+        "token": 18,
+        "text": "3",
+        "logit": 20.109375
+      },
+      {
+        "token": 17,
+        "text": "2",
+        "logit": 19.796875
+      },
+      {
+        "token": 20,
+        "text": "5",
+        "logit": 19.421875
+      },
+      {
+        "token": 19,
+        "text": "4",
+        "logit": 19.328125
+      },
+      {
+        "token": 22,
+        "text": "7",
+        "logit": 18.15625
+      },
+      {
+        "token": 26292,
+        "text": "Average",
+        "logit": 18.0
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 17.96875
+      },
+      {
+        "token": 21,
+        "text": "6",
+        "logit": 17.90625
+      },
+      {
+        "token": 24,
+        "text": "9",
+        "logit": 17.609375
+      }
+    ],
+    "reference_top1": 16,
+    "reference_top2": 17,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      20.546875,
+      19.796875
+    ],
+    "reference_pair_margin": 0.75,
+    "fp16_margin": 3.15625,
+    "id": "5a6395e668151a001a9223a1",
+    "input_token_ids_sha256": "f4114237ddef4d3620f1cd8b83fec246f9b428b931af4bb8c1e30bf3eeda1268"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 26292,
+    "top2": 785,
+    "margin": 0.703125,
+    "top10": [
+      {
+        "token": 26292,
+        "text": "Average",
+        "logit": 20.421875
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 19.71875
+      },
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 17.921875
+      },
+      {
+        "token": 15,
+        "text": "0",
+        "logit": 17.53125
+      },
+      {
+        "token": 18,
+        "text": "3",
+        "logit": 17.125
+      },
+      {
+        "token": 20,
+        "text": "5",
+        "logit": 16.828125
+      },
+      {
+        "token": 21,
+        "text": "6",
+        "logit": 16.765625
+      },
+      {
+        "token": 17202,
+        "text": "average",
+        "logit": 16.734375
+      },
+      {
+        "token": 17,
+        "text": "2",
+        "logit": 16.6875
+      },
+      {
+        "token": 19,
+        "text": "4",
+        "logit": 16.609375
+      }
+    ],
+    "reference_top1": 24,
+    "reference_top2": 53177,
+    "reference_top1_rank": 12,
+    "reference_pair_logits": [
+      16.53125,
+      13.265625
+    ],
+    "reference_pair_margin": 3.265625,
+    "fp16_margin": 1.15625,
+    "id": "5a63969068151a001a9223ad",
+    "input_token_ids_sha256": "678cfff92c6fb10e46dc48c82565cd464e333dc51a8937a155c956c6e456a4b9"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 53,
+    "top2": 82615,
+    "margin": 4.125,
+    "top10": [
+      {
+        "token": 53,
+        "text": "V",
+        "logit": 21.375
+      },
+      {
+        "token": 82615,
+        "text": "Pacific",
+        "logit": 17.25
+      },
+      {
+        "token": 80914,
+        "text": "Metro",
+        "logit": 15.734375
+      },
+      {
+        "token": 2448,
+        "text": "NS",
+        "logit": 15.4453125
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 14.953125
+      },
+      {
+        "token": 11287,
+        "text": "VC",
+        "logit": 14.8359375
+      },
+      {
+        "token": 48037,
+        "text": "Australia",
+        "logit": 14.7109375
+      },
+      {
+        "token": 20457,
+        "text": "VT",
+        "logit": 14.640625
+      },
+      {
+        "token": 12820,
+        "text": "VA",
+        "logit": 14.1875
+      },
+      {
+        "token": 36125,
+        "text": "Vict",
+        "logit": 14.1015625
+      }
+    ],
+    "reference_top1": 53,
+    "reference_top2": 82615,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      21.375,
+      17.25
+    ],
+    "reference_pair_margin": 4.125,
+    "fp16_margin": 1.921875,
+    "id": "5a63981168151a001a9223b6",
+    "input_token_ids_sha256": "62840e9580fd34d86d50e0e47ea9abad2f515a71ce264e04a04f9e1f094f5bca"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 16,
+    "top2": 785,
+    "margin": 1.28125,
+    "top10": [
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 21.453125
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 20.171875
+      },
+      {
+        "token": 68324,
+        "text": "Broad",
+        "logit": 19.078125
+      },
+      {
+        "token": 38,
+        "text": "G",
+        "logit": 16.5
+      },
+      {
+        "token": 3862,
+        "text": "There",
+        "logit": 15.9140625
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 15.6875
+      },
+      {
+        "token": 2132,
+        "text": "It",
+        "logit": 15.4375
+      },
+      {
+        "token": 6865,
+        "text": "They",
+        "logit": 15.0234375
+      },
+      {
+        "token": 17,
+        "text": "2",
+        "logit": 14.9296875
+      },
+      {
+        "token": 9150,
+        "text": "wide",
+        "logit": 14.5234375
+      }
+    ],
+    "reference_top1": 16,
+    "reference_top2": 9150,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      21.453125,
+      14.5234375
+    ],
+    "reference_pair_margin": 6.9296875,
+    "fp16_margin": 5.90625,
+    "id": "5a6398fd7f3c80001a150aef",
+    "input_token_ids_sha256": "fa7afd35143ca52ad9f70f6eeda2b63916a6ae4970c199c2db9b831d82874295"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 32079,
+    "top2": 785,
+    "margin": 0.09375,
+    "top10": [
+      {
+        "token": 32079,
+        "text": "German",
+        "logit": 18.90625
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 18.8125
+      },
+      {
+        "token": 38,
+        "text": "G",
+        "logit": 17.453125
+      },
+      {
+        "token": 13218,
+        "text": "Sw",
+        "logit": 17.109375
+      },
+      {
+        "token": 50170,
+        "text": "Germany",
+        "logit": 17.03125
+      },
+      {
+        "token": 35,
+        "text": "D",
+        "logit": 16.78125
+      },
+      {
+        "token": 43197,
+        "text": "French",
+        "logit": 16.484375
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 16.390625
+      },
+      {
+        "token": 49,
+        "text": "R",
+        "logit": 16.046875
+      },
+      {
+        "token": 72162,
+        "text": "Rh",
+        "logit": 15.984375
+      }
+    ],
+    "reference_top1": 13218,
+    "reference_top2": 45,
+    "reference_top1_rank": 4,
+    "reference_pair_logits": [
+      17.109375,
+      13.890625
+    ],
+    "reference_pair_margin": 3.21875,
+    "fp16_margin": 2.3125,
+    "id": "5ad25e17d7d075001a428f12",
+    "input_token_ids_sha256": "8ce8891f00c2e358f524a5f2e114a31a7a7b1d88b7a05360fb7c29e50231d4b4"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 16,
+    "top2": 38,
+    "margin": 3.046875,
+    "top10": [
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 21.28125
+      },
+      {
+        "token": 38,
+        "text": "G",
+        "logit": 18.234375
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 17.546875
+      },
+      {
+        "token": 17,
+        "text": "2",
+        "logit": 17.078125
+      },
+      {
+        "token": 18284,
+        "text": "Old",
+        "logit": 16.703125
+      },
+      {
+        "token": 31549,
+        "text": "Proto",
+        "logit": 16.453125
+      },
+      {
+        "token": 48452,
+        "text": "Modern",
+        "logit": 16.21875
+      },
+      {
+        "token": 61457,
+        "text": "Late",
+        "logit": 15.9140625
+      },
+      {
+        "token": 60980,
+        "text": "Roman",
+        "logit": 15.4765625
+      },
+      {
+        "token": 5338,
+        "text": "First",
+        "logit": 15.234375
+      }
+    ],
+    "reference_top1": 16,
+    "reference_top2": 5338,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      21.28125,
+      15.234375
+    ],
+    "reference_pair_margin": 6.046875,
+    "fp16_margin": 5.828125,
+    "id": "5ad262fbd7d075001a4290dd",
+    "input_token_ids_sha256": "1ddd94811773bbd4f58623d1fb90eddefb4cfa0ee265b6308dbb98700c26908f"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 18284,
+    "top2": 15,
+    "margin": 1.171875,
+    "top10": [
+      {
+        "token": 18284,
+        "text": "Old",
+        "logit": 21.09375
+      },
+      {
+        "token": 15,
+        "text": "0",
+        "logit": 19.921875
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 19.859375
+      },
+      {
+        "token": 49,
+        "text": "R",
+        "logit": 18.03125
+      },
+      {
+        "token": 72162,
+        "text": "Rh",
+        "logit": 16.046875
+      },
+      {
+        "token": 1109,
+        "text": "Con",
+        "logit": 15.8671875
+      },
+      {
+        "token": 4373,
+        "text": "Length",
+        "logit": 15.46875
+      },
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 15.3984375
+      },
+      {
+        "token": 2132,
+        "text": "It",
+        "logit": 15.3515625
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 14.8203125
+      }
+    ],
+    "reference_top1": 15,
+    "reference_top2": 18284,
+    "reference_top1_rank": 2,
+    "reference_pair_logits": [
+      19.921875,
+      21.09375
+    ],
+    "reference_pair_margin": -1.171875,
+    "fp16_margin": 1.734375,
+    "id": "5ad2649ad7d075001a429160",
+    "input_token_ids_sha256": "1c0ead4d3962d3318b9fd48ef43a965026823bc3be9b0bb24bc9a48451f57bc2"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 785,
+    "top2": 1782,
+    "margin": 3.125,
+    "top10": [
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 22.46875
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 19.34375
+      },
+      {
+        "token": 74290,
+        "text": "Alter",
+        "logit": 18.015625
+      },
+      {
+        "token": 641,
+        "text": "In",
+        "logit": 17.46875
+      },
+      {
+        "token": 23306,
+        "text": "West",
+        "logit": 15.625
+      },
+      {
+        "token": 37277,
+        "text": "alter",
+        "logit": 14.3984375
+      },
+      {
+        "token": 1249,
+        "text": "To",
+        "logit": 14.2734375
+      },
+      {
+        "token": 258,
+        "text": "in",
+        "logit": 14.234375
+      },
+      {
+        "token": 2132,
+        "text": "It",
+        "logit": 14.2265625
+      },
+      {
+        "token": 25221,
+        "text": "North",
+        "logit": 14.1328125
+      }
+    ],
+    "reference_top1": 74290,
+    "reference_top2": 785,
+    "reference_top1_rank": 3,
+    "reference_pair_logits": [
+      18.015625,
+      22.46875
+    ],
+    "reference_pair_margin": -4.453125,
+    "fp16_margin": 0.53125,
+    "id": "5ad268a9d7d075001a429280",
+    "input_token_ids_sha256": "61db6a639fea7b1fc3ad6abe2a0da3923f7f86465a5a1c526369baaa86ac400d"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 785,
+    "top2": 49,
+    "margin": 1.84375,
+    "top10": [
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 19.625
+      },
+      {
+        "token": 49,
+        "text": "R",
+        "logit": 17.78125
+      },
+      {
+        "token": 28253,
+        "text": "Water",
+        "logit": 17.765625
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 17.484375
+      },
+      {
+        "token": 72162,
+        "text": "Rh",
+        "logit": 17.234375
+      },
+      {
+        "token": 12987,
+        "text": "water",
+        "logit": 16.375
+      },
+      {
+        "token": 1109,
+        "text": "Con",
+        "logit": 15.859375
+      },
+      {
+        "token": 13319,
+        "text": "Most",
+        "logit": 14.6796875
+      },
+      {
+        "token": 85699,
+        "text": "River",
+        "logit": 14.640625
+      },
+      {
+        "token": 4965,
+        "text": "flow",
+        "logit": 14.484375
+      }
+    ],
+    "reference_top1": 49,
+    "reference_top2": 72162,
+    "reference_top1_rank": 2,
+    "reference_pair_logits": [
+      17.78125,
+      17.234375
+    ],
+    "reference_pair_margin": 0.546875,
+    "fp16_margin": 0.75,
+    "id": "5ad26fafd7d075001a42942e",
+    "input_token_ids_sha256": "62014097c694458ffbed1a109b92b0615da9d6f386f9af5a268be88f29735d78"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 81289,
+    "top2": 39,
+    "margin": 3.703125,
+    "top10": [
+      {
+        "token": 81289,
+        "text": "Lake",
+        "logit": 24.484375
+      },
+      {
+        "token": 39,
+        "text": "H",
+        "logit": 20.78125
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 20.234375
+      },
+      {
+        "token": 43,
+        "text": "L",
+        "logit": 17.515625
+      },
+      {
+        "token": 8747,
+        "text": "La",
+        "logit": 17.203125
+      },
+      {
+        "token": 11678,
+        "text": " Lake",
+        "logit": 15.859375
+      },
+      {
+        "token": 4262,
+        "text": "Lo",
+        "logit": 15.7421875
+      },
+      {
+        "token": 62110,
+        "text": "lake",
+        "logit": 15.34375
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 15.2109375
+      },
+      {
+        "token": 42,
+        "text": "K",
+        "logit": 15.140625
+      }
+    ],
+    "reference_top1": 81289,
+    "reference_top2": 43,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      24.484375,
+      17.515625
+    ],
+    "reference_pair_margin": 6.96875,
+    "fp16_margin": 5.828125,
+    "id": "5ad2741ed7d075001a4294d7",
+    "input_token_ids_sha256": "f1dfe46ffc51f524a50303876490634cb9a0698aaf58c94c27a82bf3407bc041"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 785,
+    "top2": 72162,
+    "margin": 2.703125,
+    "top10": [
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 21.546875
+      },
+      {
+        "token": 72162,
+        "text": "Rh",
+        "logit": 18.84375
+      },
+      {
+        "token": 32,
+        "text": "A",
+        "logit": 17.796875
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 16.0625
+      },
+      {
+        "token": 49,
+        "text": "R",
+        "logit": 15.9765625
+      },
+      {
+        "token": 2132,
+        "text": "It",
+        "logit": 15.046875
+      },
+      {
+        "token": 28320,
+        "text": "Dead",
+        "logit": 14.9453125
+      },
+      {
+        "token": 11564,
+        "text": "Rate",
+        "logit": 14.671875
+      },
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 14.0234375
+      },
+      {
+        "token": 64,
+        "text": "a",
+        "logit": 14.0
+      }
+    ],
+    "reference_top1": 72162,
+    "reference_top2": 785,
+    "reference_top1_rank": 2,
+    "reference_pair_logits": [
+      18.84375,
+      21.546875
+    ],
+    "reference_pair_margin": -2.703125,
+    "fp16_margin": 0.265625,
+    "id": "5ad278add7d075001a429574",
+    "input_token_ids_sha256": "1a9b8bf27f7603c576459683c2ce8faf6e9404b72bd297616f8e5820617dcdbb"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 785,
+    "top2": 76306,
+    "margin": 0.9375,
+    "top10": [
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 20.359375
+      },
+      {
+        "token": 76306,
+        "text": "Mos",
+        "logit": 19.421875
+      },
+      {
+        "token": 17,
+        "text": "2",
+        "logit": 18.609375
+      },
+      {
+        "token": 18,
+        "text": "3",
+        "logit": 18.5
+      },
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 17.390625
+      },
+      {
+        "token": 19,
+        "text": "4",
+        "logit": 17.359375
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 16.859375
+      },
+      {
+        "token": 20,
+        "text": "5",
+        "logit": 16.5625
+      },
+      {
+        "token": 2132,
+        "text": "It",
+        "logit": 16.234375
+      },
+      {
+        "token": 26292,
+        "text": "Average",
+        "logit": 15.421875
+      }
+    ],
+    "reference_top1": 18,
+    "reference_top2": 17,
+    "reference_top1_rank": 4,
+    "reference_pair_logits": [
+      18.5,
+      18.609375
+    ],
+    "reference_pair_margin": -0.109375,
+    "fp16_margin": 0.28125,
+    "id": "5ad27abcd7d075001a42962b",
+    "input_token_ids_sha256": "4119c83b0875a97181efd22f1d01cb6156cdd91bea8445938028f1b42992f748"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 70516,
+    "top2": 70764,
+    "margin": 0.359375,
+    "top10": [
+      {
+        "token": 70516,
+        "text": "Industry",
+        "logit": 20.265625
+      },
+      {
+        "token": 70764,
+        "text": "industry",
+        "logit": 19.90625
+      },
+      {
+        "token": 6025,
+        "text": "After",
+        "logit": 18.953125
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 18.375
+      },
+      {
+        "token": 10227,
+        "text": "Before",
+        "logit": 18.0625
+      },
+      {
+        "token": 24493,
+        "text": "Until",
+        "logit": 17.875
+      },
+      {
+        "token": 38730,
+        "text": "until",
+        "logit": 17.203125
+      },
+      {
+        "token": 14801,
+        "text": "before",
+        "logit": 17.09375
+      },
+      {
+        "token": 4958,
+        "text": " industry",
+        "logit": 16.890625
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 16.75
+      }
+    ],
+    "reference_top1": 70764,
+    "reference_top2": 70516,
+    "reference_top1_rank": 2,
+    "reference_pair_logits": [
+      19.90625,
+      20.265625
+    ],
+    "reference_pair_margin": -0.359375,
+    "fp16_margin": 1.96875,
+    "id": "5ad27f33d7d075001a429752",
+    "input_token_ids_sha256": "ab9438318fc7d3f337282b84c39e0684a5915d5adba000e5fcdad757dbe18d16"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 785,
+    "top2": 26907,
+    "margin": 2.171875,
+    "top10": [
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 19.390625
+      },
+      {
+        "token": 26907,
+        "text": "Hard",
+        "logit": 17.21875
+      },
+      {
+        "token": 33,
+        "text": "B",
+        "logit": 17.015625
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 16.75
+      },
+      {
+        "token": 51962,
+        "text": "Near",
+        "logit": 16.375
+      },
+      {
+        "token": 3830,
+        "text": "From",
+        "logit": 15.9921875
+      },
+      {
+        "token": 11613,
+        "text": "Two",
+        "logit": 15.921875
+      },
+      {
+        "token": 32887,
+        "text": "Far",
+        "logit": 15.234375
+      },
+      {
+        "token": 35,
+        "text": "D",
+        "logit": 15.21875
+      },
+      {
+        "token": 45,
+        "text": "N",
+        "logit": 14.8828125
+      }
+    ],
+    "reference_top1": 2753,
+    "reference_top2": 785,
+    "reference_top1_rank": 12,
+    "reference_pair_logits": [
+      14.53125,
+      19.390625
+    ],
+    "reference_pair_margin": -4.859375,
+    "fp16_margin": 0.609375,
+    "id": "5ad2852ad7d075001a429895",
+    "input_token_ids_sha256": "d4b3463d3b376275f38d7d3b32aea334fc05d1146f75f769e3b81ef77d624787"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 785,
+    "top2": 51,
+    "margin": 1.5625,
+    "top10": [
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 20.421875
+      },
+      {
+        "token": 51,
+        "text": "T",
+        "logit": 18.859375
+      },
+      {
+        "token": 31324,
+        "text": "sed",
+        "logit": 17.359375
+      },
+      {
+        "token": 85699,
+        "text": "River",
+        "logit": 16.84375
+      },
+      {
+        "token": 50,
+        "text": "S",
+        "logit": 16.421875
+      },
+      {
+        "token": 49,
+        "text": "R",
+        "logit": 15.9921875
+      },
+      {
+        "token": 83,
+        "text": "t",
+        "logit": 15.8671875
+      },
+      {
+        "token": 2132,
+        "text": "It",
+        "logit": 15.21875
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 15.1640625
+      },
+      {
+        "token": 82,
+        "text": "s",
+        "logit": 14.6640625
+      }
+    ],
+    "reference_top1": 785,
+    "reference_top2": 31324,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      20.421875,
+      17.359375
+    ],
+    "reference_pair_margin": 3.0625,
+    "fp16_margin": 0.75,
+    "id": "5ad292f0d7d075001a429ad4",
+    "input_token_ids_sha256": "1735045b5cb80675025f05565098bfd48fc6af35f60ca161b3ed5c3ca0f6c0f0"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 17,
+    "top2": 16,
+    "margin": 1.65625,
+    "top10": [
+      {
+        "token": 17,
+        "text": "2",
+        "logit": 23.078125
+      },
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 21.421875
+      },
+      {
+        "token": 9096,
+        "text": "about",
+        "logit": 18.953125
+      },
+      {
+        "token": 10494,
+        "text": "About",
+        "logit": 18.609375
+      },
+      {
+        "token": 18,
+        "text": "3",
+        "logit": 17.109375
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 16.6875
+      },
+      {
+        "token": 2132,
+        "text": "It",
+        "logit": 16.296875
+      },
+      {
+        "token": 1655,
+        "text": "At",
+        "logit": 16.25
+      },
+      {
+        "token": 19,
+        "text": "4",
+        "logit": 16.140625
+      },
+      {
+        "token": 20,
+        "text": "5",
+        "logit": 15.9453125
+      }
+    ],
+    "reference_top1": 17,
+    "reference_top2": 9096,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      23.078125,
+      18.953125
+    ],
+    "reference_pair_margin": 4.125,
+    "fp16_margin": 3.6875,
+    "id": "5ad295d4d7d075001a429afe",
+    "input_token_ids_sha256": "eb81a518b6f989888ad446e1b977810817e7f9e92ba87fff55e18366dd1de90a"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 16,
+    "top2": 21,
+    "margin": 1.296875,
+    "top10": [
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 21.90625
+      },
+      {
+        "token": 21,
+        "text": "6",
+        "logit": 20.609375
+      },
+      {
+        "token": 36441,
+        "text": "sea",
+        "logit": 17.265625
+      },
+      {
+        "token": 18,
+        "text": "3",
+        "logit": 17.0
+      },
+      {
+        "token": 19,
+        "text": "4",
+        "logit": 16.796875
+      },
+      {
+        "token": 17,
+        "text": "2",
+        "logit": 16.671875
+      },
+      {
+        "token": 59161,
+        "text": "Sea",
+        "logit": 16.53125
+      },
+      {
+        "token": 20,
+        "text": "5",
+        "logit": 16.515625
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 16.515625
+      },
+      {
+        "token": 19454,
+        "text": "around",
+        "logit": 15.890625
+      }
+    ],
+    "reference_top1": 16,
+    "reference_top2": 21,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      21.90625,
+      20.609375
+    ],
+    "reference_pair_margin": 1.296875,
+    "fp16_margin": 3.75,
+    "id": "5ad29b43d7d075001a429bcb",
+    "input_token_ids_sha256": "faba454dcfba086317abd5b3d6404df1b0b052d4215c6ee763a22cd0e2a2850a"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 22,
+    "top2": 93,
+    "margin": 2.015625,
+    "top10": [
+      {
+        "token": 22,
+        "text": "7",
+        "logit": 21.359375
+      },
+      {
+        "token": 93,
+        "text": "~",
+        "logit": 19.34375
+      },
+      {
+        "token": 47,
+        "text": "P",
+        "logit": 18.5625
+      },
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 18.53125
+      },
+      {
+        "token": 10227,
+        "text": "Before",
+        "logit": 17.796875
+      },
+      {
+        "token": 6025,
+        "text": "After",
+        "logit": 17.15625
+      },
+      {
+        "token": 43580,
+        "text": "Around",
+        "logit": 16.609375
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 15.890625
+      },
+      {
+        "token": 17,
+        "text": "2",
+        "logit": 15.8046875
+      },
+      {
+        "token": 14801,
+        "text": "before",
+        "logit": 15.4453125
+      }
+    ],
+    "reference_top1": 22,
+    "reference_top2": 17,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      21.359375,
+      15.8046875
+    ],
+    "reference_pair_margin": 5.5546875,
+    "fp16_margin": 3.34375,
+    "id": "5ad29d35d7d075001a429c12",
+    "input_token_ids_sha256": "76cdf71d4f3dd7bf45101f4af6c87894d9f3d75eed1470a8c729c8abbc85d211"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 22,
+    "top2": 16,
+    "margin": 2.890625,
+    "top10": [
+      {
+        "token": 22,
+        "text": "7",
+        "logit": 22.375
+      },
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 19.484375
+      },
+      {
+        "token": 17,
+        "text": "2",
+        "logit": 18.921875
+      },
+      {
+        "token": 6025,
+        "text": "After",
+        "logit": 18.75
+      },
+      {
+        "token": 12549,
+        "text": "Since",
+        "logit": 18.359375
+      },
+      {
+        "token": 23,
+        "text": "8",
+        "logit": 17.609375
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 17.171875
+      },
+      {
+        "token": 19,
+        "text": "4",
+        "logit": 16.984375
+      },
+      {
+        "token": 21,
+        "text": "6",
+        "logit": 16.6875
+      },
+      {
+        "token": 24,
+        "text": "9",
+        "logit": 16.59375
+      }
+    ],
+    "reference_top1": 22,
+    "reference_top2": 12549,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      22.375,
+      18.359375
+    ],
+    "reference_pair_margin": 4.015625,
+    "fp16_margin": 4.390625,
+    "id": "5ad2a3b3d7d075001a429d5a",
+    "input_token_ids_sha256": "debc4b68e29f6438cc7bb6e440f592bb19890fe14e8582a81e4aa937b3cc9350"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 785,
+    "top2": 1782,
+    "margin": 1.59375,
+    "top10": [
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 18.015625
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 16.421875
+      },
+      {
+        "token": 32079,
+        "text": "German",
+        "logit": 15.65625
+      },
+      {
+        "token": 28443,
+        "text": "foreign",
+        "logit": 15.515625
+      },
+      {
+        "token": 30124,
+        "text": "Sch",
+        "logit": 15.015625
+      },
+      {
+        "token": 3326,
+        "text": "Sc",
+        "logit": 14.78125
+      },
+      {
+        "token": 6865,
+        "text": "They",
+        "logit": 13.984375
+      },
+      {
+        "token": 37,
+        "text": "F",
+        "logit": 13.5078125
+      },
+      {
+        "token": 50,
+        "text": "S",
+        "logit": 13.4921875
+      },
+      {
+        "token": 60980,
+        "text": "Roman",
+        "logit": 13.46875
+      }
+    ],
+    "reference_top1": 3326,
+    "reference_top2": 32079,
+    "reference_top1_rank": 6,
+    "reference_pair_logits": [
+      14.78125,
+      15.65625
+    ],
+    "reference_pair_margin": -0.875,
+    "fp16_margin": 0.34375,
+    "id": "5ad2b1e1d7d075001a429f6c",
+    "input_token_ids_sha256": "7d608938e1290680c6a997e431ada56f1767902468c0c379c151269806798155"
+  }
+]

@@ -1,0 +1,5 @@
+{
+  "all_five_rebuilt_models_verified": true,
+  "scope": "All eight tokenizer/template/generation sidecars compared to frozen FP16 file hashes; supplement to tensor identity",
+  "new_inference": false
+}

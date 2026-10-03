@@ -1,0 +1,4 @@
+{
+  "command": "python3 -m experiments.prepare_qwen_confirmation --raw <official SHA-verified dev-v2.0.json> --output-dir runs/reselected-confirmation-v1; cmp runs/reselected-confirmation-v1/data.jsonl configs/qwen-confirmation/dataset/data.jsonl",
+  "byte_identical": true
+}

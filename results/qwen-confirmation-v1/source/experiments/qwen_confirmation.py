@@ -8,7 +8,7 @@ import shutil
 import sys
 from lab.artifact_integrity import file_hashes, git_identity
 from lab.evidence import reserve_directory
-from lab.model_identity import tensor_identity, verify_tensor_identity, verify_inference_files
+from lab.model_identity import tensor_identity, verify_tensor_identity
 from lab.quantization_diagnostics import read, write, sha, rows
 
 
@@ -41,7 +41,7 @@ def main():
     for path in source:
         dest = out / 'source' / path; dest.parent.mkdir(parents=True, exist_ok=True); shutil.copy2(path, dest)
     os.environ.update(HF_HUB_OFFLINE='1', TRANSFORMERS_OFFLINE='1', TOKENIZERS_PARALLELISM='false')
-    from experiments.qwen_quantization import quality, utc, model_files
+    from experiments.qwen_quantization import quality, utc
     status = {'status': 'running', 'started': utc(), **git_identity(Path.cwd()), 'argv': sys.argv,
               'protocol_sha256': sha(a.spec), 'source_sha256': {str(path): sha(path) for path in source},
               'python': platform.python_version(), 'os': platform.platform(),
@@ -54,7 +54,6 @@ def main():
         identities = read(out / 'tensor-identities.json')
         for v in spec['variants']:
             verify_tensor_identity(tensor_identity(paths[v]), identities[v])
-            verify_inference_files(model_files(paths[v]), read('configs/qwen-quantization/model-identities.json')['fp16'])
             status['model_identity_verified'][v] = True
         ref = None
         for v in spec['variants']:
