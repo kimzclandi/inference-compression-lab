@@ -1,0 +1,96 @@
+{
+  "all_token_parity": true,
+  "faults_preserve_residents": true,
+  "predictions_confirmed": true,
+  "requests": 480,
+  "performance": [
+    {
+      "length": 64,
+      "median_trace_seconds": {
+        "direct": 0.42124145801062696,
+        "entries2": 0.4218332499731332,
+        "entries3": 0.3484639579837676,
+        "entries3_bytes2": 0.4237351250194479
+      },
+      "reduction_vs_direct": {
+        "entries2": -0.0014048758764180214,
+        "entries3": 0.172769082061774,
+        "entries3_bytes2": -0.005919804334069134
+      },
+      "counters_per_round": {
+        "direct": {
+          "hits": 0,
+          "misses": 0,
+          "evictions": 0,
+          "bypasses": 0,
+          "failures": 0
+        },
+        "entries2": {
+          "hits": 0,
+          "misses": 12,
+          "evictions": 10,
+          "bypasses": 0,
+          "failures": 0
+        },
+        "entries3": {
+          "hits": 9,
+          "misses": 3,
+          "evictions": 0,
+          "bypasses": 0,
+          "failures": 0
+        },
+        "entries3_bytes2": {
+          "hits": 0,
+          "misses": 12,
+          "evictions": 10,
+          "bypasses": 0,
+          "failures": 0
+        }
+      }
+    },
+    {
+      "length": 1024,
+      "median_trace_seconds": {
+        "direct": 1.1210559169994667,
+        "entries2": 1.1170652500004508,
+        "entries3": 0.548302707989933,
+        "entries3_bytes2": 1.1213763340201695
+      },
+      "reduction_vs_direct": {
+        "entries2": 0.0035597394728508203,
+        "entries3": 0.5109051210777439,
+        "entries3_bytes2": -0.00028581716205589025
+      },
+      "counters_per_round": {
+        "direct": {
+          "hits": 0,
+          "misses": 0,
+          "evictions": 0,
+          "bypasses": 0,
+          "failures": 0
+        },
+        "entries2": {
+          "hits": 0,
+          "misses": 12,
+          "evictions": 10,
+          "bypasses": 0,
+          "failures": 0
+        },
+        "entries3": {
+          "hits": 9,
+          "misses": 3,
+          "evictions": 0,
+          "bypasses": 0,
+          "failures": 0
+        },
+        "entries3_bytes2": {
+          "hits": 0,
+          "misses": 12,
+          "evictions": 10,
+          "bypasses": 0,
+          "failures": 0
+        }
+      }
+    }
+  ]
+}
