@@ -148,6 +148,41 @@ class RuntimeInputTests(unittest.TestCase):
             with fake_numpy(), self.subTest(shape=shape), self.assertRaisesRegex(ValueError, 'tensor shape'):
                 engine.predict('cat dog', 'Q')
 
+    def test_tokenizer_shape_and_value_contracts_fail_before_session(self):
+        mutations = [
+            lambda e: e['attention_mask'].append([1] * 6),
+            lambda e: e['offset_mapping'].clear(),
+            lambda e: e['attention_mask'][0].pop(),
+            lambda e: e['offset_mapping'][0].pop(),
+            lambda e: e.sequence[0].pop(),
+            lambda e: e['input_ids'][0].__setitem__(1, True),
+            lambda e: e['input_ids'][0].__setitem__(1, -1),
+            lambda e: e['attention_mask'][0].__setitem__(3, '0'),
+            lambda e: e['attention_mask'][0].__setitem__(3, True),
+            lambda e: e['attention_mask'][0].__setitem__(3, 2),
+            lambda e: e.sequence[0].__setitem__(3, True),
+            lambda e: e.sequence[0].__setitem__(3, '1'),
+            lambda e: e.sequence[0].__setitem__(3, 2),
+        ]
+        for index, mutate in enumerate(mutations):
+            encoded = FakeEncoding()
+            mutate(encoded)
+            engine = fake_runtime(encoded)
+            with self.subTest(mutation=index), fake_numpy(), self.assertRaises(ValueError):
+                engine.predict('cat dog', 'Q')
+            engine.session.run.assert_not_called()
+
+    def test_oversized_feature_rejected_instead_of_relying_on_tokenizer(self):
+        encoded = FakeEncoding()
+        encoded['input_ids'][0] = [0] + [10] * 384
+        encoded['attention_mask'][0] = [1] * 385
+        encoded['offset_mapping'][0] = [[0, 0]] + [[0, 3]] * 384
+        encoded.sequence[0] = [None] + [1] * 384
+        engine = fake_runtime(encoded)
+        with fake_numpy(), self.assertRaisesRegex(ValueError, 'feature length'):
+            engine.predict('cat dog', 'Q')
+        engine.session.run.assert_not_called()
+
     def test_decoder_rejects_nonfinite_logits_even_on_question_token(self):
         engine = fake_runtime(logits=[FakeTensor([0, float('nan'), 0, 4, 0, 0]),
                                      FakeTensor([0] * 6)])
@@ -215,6 +250,32 @@ class AssetIdentityTests(unittest.TestCase):
             with self.subTest(variant=variant, threads=threads), self.assertRaises(ValueError):
                 ExtractiveRuntime(self.root / 'missing', variant, 'a' * 64, threads)
 
+    def test_provider_and_fast_tokenizer_are_checked_on_initialization(self):
+        session = Mock()
+        session.get_providers.return_value = ['CPUExecutionProvider']
+        fake_ort = SimpleNamespace(SessionOptions=lambda: SimpleNamespace(),
+                                   ExecutionMode=SimpleNamespace(ORT_SEQUENTIAL='sequential'),
+                                   GraphOptimizationLevel=SimpleNamespace(ORT_ENABLE_ALL='all'),
+                                   InferenceSession=Mock(return_value=session))
+        auto = Mock()
+        auto.from_pretrained.return_value = SimpleNamespace(is_fast=True)
+        with patch.dict('sys.modules', {'onnxruntime': fake_ort, 'transformers': SimpleNamespace(AutoTokenizer=auto)}):
+            ExtractiveRuntime(self.root, 'int8', self.digest)
+            call = fake_ort.InferenceSession.call_args
+            self.assertEqual(call.kwargs['providers'], ['CPUExecutionProvider'])
+            options = call.kwargs['sess_options']
+            self.assertEqual((options.intra_op_num_threads, options.inter_op_num_threads), (4, 1))
+            self.assertEqual(options.execution_mode, 'sequential')
+            self.assertEqual(options.graph_optimization_level, 'all')
+            self.assertTrue(auto.from_pretrained.call_args.kwargs['local_files_only'])
+            self.assertTrue(auto.from_pretrained.call_args.kwargs['use_fast'])
+            session.get_providers.return_value = ['CUDAExecutionProvider', 'CPUExecutionProvider']
+            with self.assertRaisesRegex(ValueError, 'provider'):
+                ExtractiveRuntime(self.root, 'fp32', self.digest)
+            auto.from_pretrained.return_value = SimpleNamespace(is_fast=False)
+            with self.assertRaisesRegex(ValueError, 'Fast tokenizer'):
+                ExtractiveRuntime(self.root, 'fp32', self.digest)
+
 
 class RunnerEvidenceTests(unittest.TestCase):
     def setUp(self):
@@ -271,6 +332,14 @@ class RunnerEvidenceTests(unittest.TestCase):
         self.assertEqual((record['status'], record['stage'], record['completed_predictions']),
                          ('failed', 'preflight', 0))
         self.assertEqual(record['error_type'], 'FileNotFoundError')
+
+    def test_identity_failure_also_leaves_a_preflight_record(self):
+        with patch.object(runner, 'git_identity', side_effect=RuntimeError('synthetic identity fault')):
+            with self.assertRaisesRegex(RuntimeError, 'synthetic identity fault'):
+                runner.run(self.args)
+        record = self.result()
+        self.assertEqual((record['status'], record['stage'], record['completed_predictions']),
+                         ('failed', 'preflight', 0))
 
     def test_loader_failure_preserves_copied_protocol_data_and_source(self):
         with patch.object(runtime_module, 'ExtractiveRuntime', side_effect=RuntimeError('synthetic loader fault')):

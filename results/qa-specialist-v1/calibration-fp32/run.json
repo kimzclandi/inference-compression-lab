@@ -1,0 +1,207 @@
+{
+  "status": "complete",
+  "stage": "complete",
+  "variant": "fp32",
+  "python": "3.12.11",
+  "git_head": "5ba7a5e40cfce64a06179493762c6faf6473a6a5",
+  "git_status": "M tests/test_qa_specialist_runtime.py\n?? experiments/verify_qa_specialist.py\n?? results/qa-specialist-review-v1/independent/\n?? results/qa-specialist-v1/\n?? tests/test_verify_qa_specialist.py",
+  "split": "calibration",
+  "dataset_sha256": "0e48a12509048b171c34d801661c8fe94d03fb8f578c399fabf4031a1d1f2eb5",
+  "protocol_sha256": "15df43bd137bec2f0ba56c5523db04725fb8864f411558f82b79b7041360f9e9",
+  "source_sha256": {
+    "experiments/qa_specialist.py": "47ccb951b8e54c18b71738360900adeb819ed7f7008f0eb4b07ea2e5f744506c",
+    "lab/qa_specialist_runtime.py": "40e8a0482b3ddb7d1aca5424c090571e27182c363f15e6b3da0ea72c537b1e54",
+    "lab/extractive_qa.py": "d859b363f2cfcca578f0358595a11bdfdcc9b31d0dda19dcbc9def3e9104de8f",
+    "lab/selective_qa.py": "d4e4c5cf1a6951316a6b5589236e8198113bc2adcab93dce25754dd8e4d16ffd",
+    "lab/qa_metrics.py": "78c4af7f06ba49b3acddd2610586336ecf585c06d8ad89b46ff9fb6358aaaa1f",
+    "lab/qa_gate.py": "ae1d91829e9c0039f903bc8306fb5a72256998433ef551f09fd3c6c42db5512a"
+  },
+  "packages": {
+    "onnxruntime": "1.22.1",
+    "numpy": "2.2.6",
+    "transformers": "4.56.2",
+    "tokenizers": "0.22.0"
+  },
+  "model_load_seconds": 1.697736125002848,
+  "assets": {
+    "model_id": "deepset/roberta-base-squad2",
+    "revision": "adc3b06f79f797d1c575d5479d6f5efe54a9e3b4",
+    "source_files": {
+      "README.md": {
+        "bytes": 9181,
+        "sha256": "04834cd9007b2cdd1b1bdd501b571579577331e467be6e24e47d40f060558a29"
+      },
+      "config.json": {
+        "bytes": 571,
+        "sha256": "64fa58495a722d57609c22f199824bfe98c19be068136a70c268214a08cb8060"
+      },
+      "merges.txt": {
+        "bytes": 456318,
+        "sha256": "1ce1664773c50f3e0cc8842619a93edc4624525b728b188a9e0be33b7726adc5"
+      },
+      "model.safetensors": {
+        "bytes": 496254442,
+        "sha256": "ac5db66fdcfecb400345d09787b71009d60805ef9883451071669cf951b5e2c7"
+      },
+      "special_tokens_map.json": {
+        "bytes": 772,
+        "sha256": "c611b1f7d416eb001ee4f293d903ea8c88e703463f1d403f1866a0352743fd00"
+      },
+      "tokenizer_config.json": {
+        "bytes": 79,
+        "sha256": "7a33226d4265e3989cc6341666af179d0cc710136f4059aae0dd8c0797cba556"
+      },
+      "vocab.json": {
+        "bytes": 898822,
+        "sha256": "06b4d46c8e752d410213d9548eb27a54db70fda0319b6271fb8d59dead5e1cab"
+      }
+    },
+    "python": "3.12.11",
+    "packages": {
+      "torch": "2.8.0",
+      "transformers": "4.56.2",
+      "onnx": "1.19.0",
+      "onnxruntime": "1.22.1",
+      "numpy": "2.2.6",
+      "safetensors": "0.6.2",
+      "tokenizers": "0.22.0"
+    },
+    "tokenizer_files": {
+      "config.json": "64fa58495a722d57609c22f199824bfe98c19be068136a70c268214a08cb8060",
+      "merges.txt": "1ce1664773c50f3e0cc8842619a93edc4624525b728b188a9e0be33b7726adc5",
+      "special_tokens_map.json": "c611b1f7d416eb001ee4f293d903ea8c88e703463f1d403f1866a0352743fd00",
+      "tokenizer_config.json": "7a33226d4265e3989cc6341666af179d0cc710136f4059aae0dd8c0797cba556",
+      "vocab.json": "06b4d46c8e752d410213d9548eb27a54db70fda0319b6271fb8d59dead5e1cab"
+    },
+    "models": {
+      "fp32": {
+        "file": "fp32.onnx",
+        "sha256": "413ad789a98d80bcb6323864735d675b2609412d63323076df9a7d601246f472",
+        "bytes": 496445889
+      },
+      "int8": {
+        "file": "int8.onnx",
+        "sha256": "ffefb4d456f1aa3322c5bde7e48a00a7f5e5a00b1476126f123c4c5eed8e77ec",
+        "bytes": 242243831
+      }
+    },
+    "quantization": {
+      "method": "ONNX Runtime dynamic activation UINT8 / weight INT8",
+      "weight_type": "QInt8",
+      "per_channel": true,
+      "reduce_range": false,
+      "MatMulConstBOnly": true,
+      "excluded_nodes": [
+        "/model/qa_outputs/MatMul"
+      ],
+      "exclusion_rule": "fixed QA projection head remains FP32; no data-driven layer search"
+    },
+    "graph_operator_counts": {
+      "fp32": {
+        "Shape": 39,
+        "Constant": 285,
+        "Gather": 41,
+        "Unsqueeze": 65,
+        "Slice": 1,
+        "Concat": 49,
+        "Reshape": 49,
+        "ConstantOfShape": 1,
+        "Mul": 27,
+        "Equal": 2,
+        "Where": 1,
+        "Expand": 1,
+        "Not": 1,
+        "Cast": 3,
+        "CumSum": 1,
+        "Add": 124,
+        "LayerNormalization": 25,
+        "Sub": 1,
+        "MatMul": 97,
+        "Transpose": 48,
+        "Div": 24,
+        "Softmax": 12,
+        "Erf": 12,
+        "Split": 1,
+        "Squeeze": 2
+      },
+      "int8": {
+        "Constant": 285,
+        "Shape": 39,
+        "Gather": 41,
+        "Equal": 2,
+        "Unsqueeze": 65,
+        "Not": 1,
+        "Cast": 75,
+        "Slice": 1,
+        "Concat": 49,
+        "CumSum": 1,
+        "Sub": 1,
+        "Reshape": 49,
+        "Mul": 171,
+        "ConstantOfShape": 1,
+        "Add": 124,
+        "Where": 1,
+        "Expand": 1,
+        "LayerNormalization": 25,
+        "DynamicQuantizeLinear": 48,
+        "MatMulInteger": 72,
+        "Transpose": 48,
+        "MatMul": 25,
+        "Div": 24,
+        "Softmax": 12,
+        "Erf": 12,
+        "Split": 1,
+        "Squeeze": 2
+      }
+    },
+    "fp32_export_parity": [
+      {
+        "question": "When did the library open?",
+        "context": "The Arbor Library opened in 1982. It contains 4,000 books.",
+        "shape": [
+          1,
+          24
+        ],
+        "max_abs_logit_errors": [
+          1.4781951904296875e-05,
+          1.0967254638671875e-05
+        ],
+        "tolerance": 0.001,
+        "passed": true
+      },
+      {
+        "question": "Who won the gold medal?",
+        "context": "Mara won silver in 2010. Leon won gold.",
+        "shape": [
+          1,
+          21
+        ],
+        "max_abs_logit_errors": [
+          1.2546777725219727e-05,
+          1.1652708053588867e-05
+        ],
+        "tolerance": 0.001,
+        "passed": true
+      },
+      {
+        "question": "What was approved?",
+        "context": "The committee reviewed a request. The committee reviewed a request. The committee reviewed a request. The committee reviewed a request. The committee reviewed a request. The committee reviewed a request. The committee reviewed a request. The committee reviewed a request. The committee reviewed a request. The committee reviewed a request. The committee reviewed a request. The committee reviewed a request. The committee reviewed a request. The committee reviewed a request. The committee reviewed a request. The committee reviewed a request. The committee reviewed a request. The committee reviewed a request. The committee reviewed a request. The committee reviewed a request. The committee reviewed a request. The committee reviewed a request. The committee reviewed a request. The committee reviewed a request. The committee reviewed a request. The committee reviewed a request. The committee reviewed a request. The committee reviewed a request. The committee reviewed a request. The committee reviewed a request. The committee reviewed a request. The committee reviewed a request. The committee reviewed a request. The committee reviewed a request. The committee reviewed a request. The committee reviewed a request. The committee reviewed a request. The committee reviewed a request. The committee reviewed a request. The committee reviewed a request. The committee reviewed a request. The committee reviewed a request. The committee reviewed a request. The committee reviewed a request. The committee reviewed a request. The committee reviewed a request. The committee reviewed a request. The committee reviewed a request. The committee reviewed a request. The committee reviewed a request. The committee approved a new bridge.",
+        "shape": [
+          1,
+          315
+        ],
+        "max_abs_logit_errors": [
+          2.5987625122070312e-05,
+          2.288818359375e-05
+        ],
+        "tolerance": 0.001,
+        "passed": true
+      }
+    ],
+    "scope": "File bytes are not peak runtime memory; graph integer operators are not speedup evidence"
+  },
+  "provider": "CPUExecutionProvider",
+  "intra_op_threads": 4,
+  "inter_op_threads": 1,
+  "completed_predictions": 128
+}
