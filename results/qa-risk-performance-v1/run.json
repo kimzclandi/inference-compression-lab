@@ -1,0 +1,52 @@
+{
+  "status": "complete",
+  "git_head": "0887cf7b65662289f96581e418a751c6ebac29fb",
+  "git_status": "M DATA_LICENSE.md\n M THIRD_PARTY.md\n M experiments/release_archive.py\n?? experiments/verify_qa_risk.py\n?? results/qa-risk-performance-v1/\n?? results/qa-risk-review-v1/verification.json\n?? tests/test_release_head_exclusion.py\n?? tests/test_verify_qa_risk.py",
+  "commands": [
+    [
+      "/Users/yukaiyan/Documents/Codex/2026-10-04/ai-infra-1-2-2027-ai/work/qa-specialist-runtime/venv/bin/python",
+      "-B",
+      "-m",
+      "experiments.benchmark_qa_risk",
+      "--worker",
+      "--asset-root",
+      "runs/qa-specialist-assets-v1",
+      "--training-dir",
+      "results/qa-risk-v2/training",
+      "--protocol",
+      "configs/qa-risk/performance.json",
+      "--output-dir",
+      "results/qa-risk-performance-v1/0"
+    ],
+    [
+      "/Users/yukaiyan/Documents/Codex/2026-10-04/ai-infra-1-2-2027-ai/work/qa-specialist-runtime/venv/bin/python",
+      "-B",
+      "-m",
+      "experiments.benchmark_qa_risk",
+      "--worker",
+      "--asset-root",
+      "runs/qa-specialist-assets-v1",
+      "--training-dir",
+      "results/qa-risk-v2/training",
+      "--protocol",
+      "configs/qa-risk/performance.json",
+      "--output-dir",
+      "results/qa-risk-performance-v1/1"
+    ],
+    [
+      "/Users/yukaiyan/Documents/Codex/2026-10-04/ai-infra-1-2-2027-ai/work/qa-specialist-runtime/venv/bin/python",
+      "-B",
+      "-m",
+      "experiments.benchmark_qa_risk",
+      "--worker",
+      "--asset-root",
+      "runs/qa-specialist-assets-v1",
+      "--training-dir",
+      "results/qa-risk-v2/training",
+      "--protocol",
+      "configs/qa-risk/performance.json",
+      "--output-dir",
+      "results/qa-risk-performance-v1/2"
+    ]
+  ]
+}

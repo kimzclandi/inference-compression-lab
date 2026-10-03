@@ -1,8 +1,8 @@
 # Task-trained extractive QA study / 专用抽取式问答研究
 
-**Specialist v1 的固定评估失败，回答入口保持 `unavailable_quality`。** 上游专用模型和抽取式输出合同解决了任意生成文本的问题，但固定阈值在评估数据上的答案精度及覆盖率均未达标。动态 INT8 在本机 CPU 的固定工作负载上测得约 1.33× 请求加速，文件也更小；这些结果不等于问答系统可部署。下文保留 v1 的完整负结果；一次新的监督风险评分头实验仍为 **pending**，不得用它覆盖或提前改写 v1 结论。
+**Specialist v1 的固定评估失败，回答入口保持 `unavailable_quality`。** 上游专用模型和抽取式输出合同解决了任意生成文本的问题，但固定阈值在评估数据上的答案精度及覆盖率均未达标。动态 INT8 在本机 CPU 的固定工作负载上测得约 1.33× 请求加速，文件也更小；这些结果不等于问答系统可部署。下文保留 v1 的完整负结果；独立的监督风险评分头已在新 128 题上通过有限任务门槛，见 [后续报告](qa-risk-study.md)；它不改变 v1 结论。
 
-**The frozen specialist-v1 evaluation failed; the answer entry remains `unavailable_quality`.** A task-trained model and an extractive output contract constrain answer format, but the selected policies missed both precision and coverage requirements on evaluation. Dynamic INT8 achieved about 1.33× request speedup on the measured local CPU workload and reduced ONNX file bytes. This does not establish deployable QA quality. The one supervised risk-head follow-up is **pending**, and does not change the v1 result.
+**The frozen specialist-v1 evaluation failed; the answer entry remains `unavailable_quality`.** A task-trained model and an extractive output contract constrain answer format, but the selected policies missed both precision and coverage requirements on evaluation. Dynamic INT8 achieved about 1.33× request speedup on the measured local CPU workload and reduced ONNX file bytes. This does not establish deployable QA quality. The separately evaluated risk-head follow-up passed its bounded task gates on 128 new local evaluation rows; see [the follow-up report](qa-risk-study.md). It does not change the v1 result.
 
 ## Model, quantization and provenance / 模型、量化与来源
 
@@ -72,7 +72,7 @@ The independent auditor imports neither the project decoder nor its scorer/gate 
 
 请求计时包含 tokenizer、所有窗口的同步 ORT CPU 推理、穷举解码；不含模型加载、JSON 证据写入和质量证据验证。`72.052 / 54.188 = 1.3297×` 是该固定单调用方工作负载的实测比值。全部 8 个性能样本实际均为单窗口、135–256 tokens，不能据此推断 8 窗口上限或更长 passage 的吞吐。三进程重复不构成线上延迟 SLO，也没有并发、能耗、设备间或生产规模证据。
 
-The ONNX size ratio is `0.487956` (about 51.20% fewer file bytes). Peak RSS is a separate, process-lifetime high-water mark including initialization, tokenizer, ORT and model execution. Neither metric is logical KV storage, isolated weight allocation or the other's proxy. There is no autoregressive generation here, so these measurements must not be described as TTFT or decode-token throughput. The numbers also exclude the pending correctness-head feature extraction and scoring cost.
+The ONNX size ratio is `0.487956` (about 51.20% fewer file bytes). Peak RSS is a separate, process-lifetime high-water mark including initialization, tokenizer, ORT and model execution. Neither metric is logical KV storage, isolated weight allocation or the other's proxy. There is no autoregressive generation here, so these measurements must not be described as TTFT or decode-token throughput. The numbers also exclude the separately measured correctness-head feature extraction and scoring cost.
 
 ## Contribution and limits / 项目贡献与限制
 
@@ -87,13 +87,11 @@ The ONNX size ratio is `0.487956` (about 51.20% fewer file bytes). Peak RSS is a
 
 This study is separate from the historical Qwen block-10 fallback experiment. Different architecture, precision scheme, task head, datasets and acceptance policies prevent a causal before/after comparison. It neither repairs nor re-confirms that failed fallback hypothesis. The historical Qwen result and poor-generative-QA results remain intact; any CV statement must attribute this work to the personal project and retain its measured scope.
 
-## One supervised risk-head follow-up — pending / 唯一监督风险评分头追加实验——待验收
+## Separately evaluated risk-head follow-up / 独立追加实验
 
-**本节截至本草稿提交时仅记录冻结机制和数据角色，未宣称训练、校准或新评估通过。** v1 原 calibration 128 题及已经失败的 evaluation 256 题全部降为 development。按固定文章哈希分成 train 256 题和 calibration 128 题；另选剩余 4 篇文章共 128 题作为这次后续假设的固定 evaluation。这是观察到失败之后提出的新假设，适应性研究历史必须保留；不能把重新分配的旧 evaluation 再称为未见验证。[数据分配与限制](../configs/qa-risk/ATTRIBUTION.md)。
+完整机制、旧 384 题转为开发材料的角色变化、新四篇文章评估、校准选择及一次性评估均见 [qa-risk-study.md](qa-risk-study.md)。INT8 + 固定排序头在新 128 题上接受 27 题且全部 EM 正确，覆盖率 27/64；FP32 排序头校准失败，未进入新评估。这个有限的样本点门槛结果不证明通用部署质量，不构成新的配对量化非劣结论，也不覆盖上述 v1 失败。
 
-The single follow-up holds the base model, quantization and frozen span decoder unchanged. A five-feature linear logistic head will rank candidate correctness: selected span/null margin; selected joint start/end log score normalized over context plus CLS; gap to the best differently normalized candidate across windows; `log1p(answer token count)`; and `log1p(window count)`. Features receive no gold labels. Training labels are supplied separately; means/stds are fitted on training rows only. The fixed objective is summed binary logistic loss plus `0.5 × ||weights||²`, with an unregularized intercept, at most 100 Newton steps and fixed Armijo backtracking. Missing alternative candidates, malformed evidence, non-finite parameters or failed convergence are rejected.[Fixed head implementation](../lab/qa_risk_calibration.py).
-
-风险分数是拟合得到的 logistic score，不保证为校准后的正确概率。剩余评估只有四篇文章，仍是已被上游使用的公开 benchmark；即使通过也不能证明业务部署质量。此草稿不填写尚未独立核验的风险 head 结果、资源开销、发布状态或简历性能数字；最终记录必须由实际运行与重算补齐，并保留这次实验与 v1 的区分。
+The follow-up trains only small correctness-ranking heads on previously observed development data. It preserves the frozen task backbone and decoder. INT8 passes its new bounded task gate; FP32 does not pass calibration, so no new paired compression-quality claim is available. See the dedicated report for uncertainty, evidence and limitations.
 
 首个训练进程因数值运行时问题失败，原目录保留。独立合成复现显示：记录环境 NumPy 2.2.6 使用 Accelerate BLAS，32/128 行矩阵可拟合，而有限的 256/512/1,024 行矩阵在零初始化 `matmul` 报 `divide by zero`。将固定六维乘积改为 `einsum(optimize=False)` 后，五种规模均收敛且重复结果逐值一致，独立标准库重算目标值误差小于 `1.2e-13`。数学目标、特征、训练标签、正则项和优化门槛均未改变；这支持实现层 workaround，未定位上游库的完整根因，也不是质量提升证据。[原始失败](../results/qa-risk-v1/training/run.json)、[独立合成复现](../results/qa-risk-review-v1/numerical-fault/recorded-run/report.json)。
 
@@ -126,3 +124,21 @@ python -B -m experiments.benchmark_qa_specialist \
   --spec configs/qa-specialist/study.json \
   --output-dir runs/specialist-cpu-reproduction
 ```
+
+To prepare local assets independently (no author checkout or cache required), create a fresh Python 3.12 environment and install `requirements-qa-specialist.lock.txt`. Download only the pinned public model files, retaining its CC BY 4.0 model card:
+
+```bash
+python - <<'PYCODE'
+from huggingface_hub import snapshot_download
+snapshot_download('deepset/roberta-base-squad2',
+    revision='adc3b06f79f797d1c575d5479d6f5efe54a9e3b4',
+    local_dir='runs/specialist-upstream',
+    allow_patterns=['README.md','config.json','merges.txt','model.safetensors',
+                    'special_tokens_map.json','tokenizer_config.json','vocab.json'])
+PYCODE
+python -m experiments.prepare_qa_specialist_assets \
+  --source runs/specialist-upstream --identity configs/qa-specialist/upstream.json \
+  --output-dir runs/qa-specialist-assets-v1 --evidence-dir runs/specialist-build-evidence
+```
+
+The builder accepts only the seven pinned source files plus locally created download metadata; exact source hashes, export parity, tokenizer identity and ONNX asset hashes are checked. Use new output directories. Do not commit or attach the downloaded/rebuilt weights.

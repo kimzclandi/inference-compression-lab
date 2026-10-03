@@ -1,0 +1,22 @@
+{
+  "median_of_process_medians_seconds": 0.06960002100095153,
+  "process_medians_seconds": [
+    0.06999179100967012,
+    0.06960002100095153,
+    0.0691923955018865
+  ],
+  "peak_rss_bytes": [
+    1016201216,
+    942833664,
+    1007108096
+  ],
+  "initialization_seconds": [
+    1.6150191249907948,
+    1.6330127500114031,
+    1.6351115830184426
+  ],
+  "processes": 3,
+  "measurements": 120,
+  "scope": "Warm single caller full request: tokenizer, all windows CPU ORT inference, exhaustive decode, all five risk features including exhaustive alternative spans, fitted logistic score, exact-span parse and threshold decision. Excludes model/head load, complete evidence verification at entry startup, JSON I/O. Initialization/head rebuild recorded separately. Same eight published single-window inputs as base benchmark; no tail-latency SLO or concurrent service claim.",
+  "quality": "Single INT8 fixed-policy performance, no FP32 noninferiority or compression-quality claim"
+}

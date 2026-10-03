@@ -21,6 +21,15 @@ def validate_name(name):
         raise ValueError('Local asset forbidden in release: '+name)
 
 
+def validate_payload(name, data):
+    # Tiny learned correctness heads are weights too; a JSON suffix is not an exception.
+    if name.endswith('.json'):
+        value = json.loads(data)
+        if isinstance(value, dict) and value.get('schema') == 'qa-risk-logistic-v1' and any(
+                key in value for key in ('weights', 'intercept', 'scaler')):
+            raise ValueError('Learned head parameters forbidden in release: ' + name)
+
+
 def verify(path):
     with zipfile.ZipFile(path) as z:
         names=z.namelist()
@@ -34,6 +43,7 @@ def verify(path):
         if set(names)-{MANIFEST}!=set(manifest['sha256']):raise ValueError('Incomplete archive manifest')
         if not manifest['sha256']:raise ValueError('Empty archive')
         for name,digest in manifest['sha256'].items():
+            validate_payload(name, z.read(name))
             if hashlib.sha256(z.read(name)).hexdigest()!=digest:raise ValueError('Archive checksum: '+name)
     return manifest
 
@@ -49,6 +59,7 @@ def build(output):
             if item.isdir():continue
             if not item.isfile():raise ValueError('Non-regular archive member')
             validate_name(item.name);data=archive.extractfile(item).read()
+            validate_payload(item.name, data)
             # Scoped token signatures, not generic variable names such as token=.
             if re.search(rb'(?:gh[pousr]_[A-Za-z0-9]{30,}|hf_[A-Za-z0-9]{30,}|-----BEGIN (?:RSA |OPENSSH )?PRIVATE KEY-----)',data):
                 raise ValueError('Potential secret requires review: '+item.name)

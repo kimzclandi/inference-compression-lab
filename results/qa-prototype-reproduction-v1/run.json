@@ -1,0 +1,118 @@
+{
+  "status": "complete",
+  "git_head": "b5f0158d9410cc7c0ac85ff9ffbc0d06c73a209a",
+  "git_status": "M DATA_LICENSE.md\n M README.md\n M THIRD_PARTY.md\n M docs/qa-specialist-study.md\n M experiments/release_archive.py\n?? docs/qa-portfolio-and-learning.md\n?? docs/qa-risk-study.md\n?? results/qa-risk-performance-v1/\n?? results/qa-risk-review-v1/risk-performance-audit.json\n?? results/qa-risk-review-v1/risk-performance-audit.py\n?? tests/test_release_head_exclusion.py",
+  "cases": [
+    {
+      "id": "5726400589a1e219009ac5ef",
+      "case": "accepted_correct",
+      "input": {
+        "context": "Almost all ctenophores are predators, taking prey ranging from microscopic larvae and rotifers to the adults of small crustaceans; the exceptions are juveniles of two species, which live as parasites on the salps on which adults of their species feed. In favorable circumstances, ctenophores can eat ten times their own weight in a day. Only 100–150 species have been validated, and possibly another 25 have not been fully described and named. The textbook examples are cydippids with egg-shaped bodies and a pair of retractable tentacles fringed with tentilla (\"little tentacles\") that are covered with colloblasts, sticky cells that capture prey. The phylum has a wide range of body forms, including the flattened, deep-sea platyctenids, in which the adults of most species lack combs, and the coastal beroids, which lack tentacles and prey on other ctenophores by using huge mouths armed with groups of large, stiffened cilia that act as teeth. These variations enable different species to build huge populations in the same area, because they specialize in different types of prey, which they capture by as wide a range of methods as spiders use.",
+        "question": "What are the small tentacles on Cydippids called?"
+      },
+      "output": {
+        "status": "answer",
+        "reason": "fixed_threshold_met",
+        "score": 0.7823869048234252,
+        "score_kind": "fitted_ranking_score_not_guaranteed_correctness_probability",
+        "threshold": 0.7,
+        "scope": "english_supplied_passage_bounded_local_prototype",
+        "answer": "tentilla",
+        "start": 552,
+        "end": 560,
+        "context_sha256": "ee73f593c26ad38e58d299361ba118fcf077591f71e9d4ed9515efb8b2fc75f2",
+        "timing": {
+          "request_pipeline_seconds": 0.11167908299830742,
+          "includes": "input checks, tokenization, ORT CPU, decoding, risk features and score",
+          "excludes": "startup verification/head rebuild/model load and JSON serialization"
+        }
+      },
+      "gold_for_post_run_review_only": [
+        "tentilla"
+      ],
+      "is_impossible": false
+    },
+    {
+      "id": "5a669ee5f038b7001ab0c06b",
+      "case": "unanswerable_refusal",
+      "input": {
+        "context": "One theory is that, while disobedience may be helpful, any great amount of it would undermine the law by encouraging general disobedience which is neither conscientious nor of social benefit. Therefore, conscientious lawbreakers must be punished. Michael Bayles argues that if a person violates a law in order to create a test case as to the constitutionality of a law, and then wins his case, then that act did not constitute civil disobedience. It has also been argued that breaking the law for self-gratification, as in the case of a homosexual or cannabis user who does not direct his act at securing the repeal of amendment of the law, is not civil disobedience. Likewise, a protestor who attempts to escape punishment by committing the crime covertly and avoiding attribution, or by denying having committed the crime, or by fleeing the jurisdiction, is generally viewed as not being a civil disobedient.",
+        "question": "What does being conscientious toward the law lead to?"
+      },
+      "output": {
+        "status": "abstain",
+        "reason": "below_fixed_threshold",
+        "score": 0.09343904558819022,
+        "score_kind": "fitted_ranking_score_not_guaranteed_correctness_probability",
+        "threshold": 0.7,
+        "scope": "english_supplied_passage_bounded_local_prototype",
+        "timing": {
+          "request_pipeline_seconds": 0.08103191701229662,
+          "includes": "input checks, tokenization, ORT CPU, decoding, risk features and score",
+          "excludes": "startup verification/head rebuild/model load and JSON serialization"
+        }
+      },
+      "gold_for_post_run_review_only": [],
+      "is_impossible": true
+    },
+    {
+      "id": "5728eef92ca10214002daab2",
+      "case": "answerable_refusal_cost",
+      "input": {
+        "context": "Sometimes the prosecution proposes a plea bargain to civil disobedients, as in the case of the Camden 28, in which the defendants were offered an opportunity to plead guilty to one misdemeanor count and receive no jail time. In some mass arrest situations, the activists decide to use solidarity tactics to secure the same plea bargain for everyone. But some activists have opted to enter a blind plea, pleading guilty without any plea agreement in place. Mohandas Gandhi pleaded guilty and told the court, \"I am here to . . . submit cheerfully to the highest penalty that can be inflicted upon me for what in law is a deliberate crime and what appears to me to be the highest duty of a citizen.\"",
+        "question": "When many people are arrested, what is a common tactic negotiating?"
+      },
+      "output": {
+        "status": "abstain",
+        "reason": "below_fixed_threshold",
+        "score": 0.5194854386177155,
+        "score_kind": "fitted_ranking_score_not_guaranteed_correctness_probability",
+        "threshold": 0.7,
+        "scope": "english_supplied_passage_bounded_local_prototype",
+        "timing": {
+          "request_pipeline_seconds": 0.06516704100067727,
+          "includes": "input checks, tokenization, ORT CPU, decoding, risk features and score",
+          "excludes": "startup verification/head rebuild/model load and JSON serialization"
+        }
+      },
+      "gold_for_post_run_review_only": [
+        "solidarity tactics",
+        "solidarity"
+      ],
+      "is_impossible": false
+    },
+    {
+      "case": "unexpected_gold_field",
+      "status": "invalid_input",
+      "reason": "Input JSON must contain exactly context and question; no labels or extra fields."
+    },
+    {
+      "case": "over_question_token_limit",
+      "status": "invalid_input",
+      "reason": "Question exceeds the frozen token limit; no silent truncation"
+    },
+    {
+      "case": "empty_context",
+      "status": "invalid_input",
+      "reason": "context must be nonempty text of at most 12000 characters."
+    },
+    {
+      "case": "missing_assets",
+      "status": "unavailable_model",
+      "reason": "[Errno 2] No such file or directory: 'runs/qa-specialist-assets-v1/missing-assets/manifest.json'"
+    }
+  ],
+  "scope": "Selected published examples, after evaluation. A functional demonstration, not new confirmation or representative sample.",
+  "startup_timing": {
+    "evidence_verification_seconds": 16.439421916002175,
+    "training_head_rebuild_seconds": 0.001941958995303139,
+    "local_model_load_seconds": 1.6019886250142008,
+    "total_startup_seconds": 18.04335250001168,
+    "scope": "One-time initialization; excluded from request-only benchmark timings."
+  },
+  "source_sha256": {
+    "experiments/reproduce_qa_prototype.py": "e8d0f3b94f6bbc21e537f9e6965bbdb617550cd648e3b7c289df7f508631765c",
+    "experiments/serve_qa_specialist.py": "a84f721cfe737e5eb01cbccc0b71e10ead14c65df6ba2749afb71cfd503642c7"
+  },
+  "data_sha256": "d5d1c2e80291bf203179a2151ae71276c00f966e00aa86bee9a054a707f3afef"
+}

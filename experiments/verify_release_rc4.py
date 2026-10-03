@@ -5,6 +5,7 @@ acceptance remains available separately as experiments.verify_release.
 """
 import argparse
 import importlib.metadata
+import importlib.util
 import json
 from pathlib import Path
 
@@ -64,6 +65,14 @@ def verify(root=REPO):
     risk=verify_risk(root/'results/qa-risk-v2',risk_study)
     validate_results(historical,specialist,risk)
     policy=verify_serving_policy(root,risk)
+    # Standalone independent arithmetic modules: no model, training, network or Git.
+    performance={}
+    for label,relative,function in (
+        ('base','results/qa-specialist-review-v1/performance/audit.py','audit_performance'),
+        ('risk','results/qa-risk-review-v1/risk-performance-audit.py','audit')):
+        module_spec=importlib.util.spec_from_file_location('rc4_'+label+'_performance',root/relative)
+        module=importlib.util.module_from_spec(module_spec);module_spec.loader.exec_module(module)
+        performance[label]=getattr(module,function)(root)
     license_present=(root/'LICENSE').is_file()
     return dict(technical_acceptance='pass',research_reproducibility='pass',
         bounded_local_qa_prototype=True,general_qa_deployment_quality=False,
@@ -79,7 +88,7 @@ def verify(root=REPO):
                   answerable_coverage=27/64,unanswerable_false_accepts=0,unanswerable_n=64,
                   accepted_precision_wilson95=risk['variants']['int8']['gate']['intervals']['accepted_precision'],
                   compression_gate='not_evaluated',parameters_distributed=False),
-        serving_policy=policy,numpy_version='2.2.6',
+        serving_policy=policy,performance_evidence_valid=True,numpy_version='2.2.6',
         scope='Fixed public SQuAD2 evidence on one local system; 27 accepted evaluation answers and four articles '
               'do not establish population risk, general application deployment, or independent user mastery. '
               'All prior failures remain part of the release.')
