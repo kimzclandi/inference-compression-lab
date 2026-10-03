@@ -142,6 +142,22 @@ class RiskTrainingVerificationTests(unittest.TestCase):
         assert_no_parameters(result['selection'])
         self.assertNotIn('weights',json.loads((self.folder/'fp32-fit.json').read_text()))
 
+    def test_refit_replays_verified_serialized_training_values(self):
+        actual_reconstruct=reconstruct_matrix
+        def rounded_reconstruction(data,raw):
+            result=actual_reconstruct(data,raw)
+            if data[0]['split']=='train':
+                result[0]['features'][0]+=1e-13
+            return result
+        with patch('experiments.verify_qa_risk.reconstruct_matrix',side_effect=rounded_reconstruction), \
+             patch('experiments.verify_qa_risk.fit',wraps=fit) as fit_spy:
+            self.verify()
+        self.assertEqual(fit_spy.call_count,2)
+        for call,variant in zip(fit_spy.call_args_list,('fp32','int8')):
+            stored=json.loads((self.folder/(variant+'-training-features.json')).read_text())
+            self.assertEqual(call.args[0],[record['features'] for record in stored])
+            self.assertEqual(call.args[1],[record['target'] for record in stored])
+
     def test_rehashed_feature_target_score_and_model_identity_mutations(self):
         cases=[('fp32-training-features.json',lambda v:v[0].update(target=0)),
                ('fp32-calibration-features.json',lambda v:v[0]['features'].__setitem__(0,999.0)),

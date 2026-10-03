@@ -134,9 +134,15 @@ def verify_training(folder, spec, protocol_sha256, *, repo=REPO):
     for variant in VARIANTS:
         matrix=reconstruct_matrix(roles['train'],parent_raw[variant])
         cal_matrix=reconstruct_matrix(roles['calibration'],parent_raw[variant])
-        require(aggregates_equal(matrix,read(folder/(variant+'-training-features.json'))), 'Training features/targets do not reproduce')
+        stored_matrix=read(folder/(variant+'-training-features.json'))
+        require(aggregates_equal(matrix,stored_matrix), 'Training features/targets do not reproduce')
         require(aggregates_equal(cal_matrix,read(folder/(variant+'-calibration-features.json'))), 'Calibration features/targets do not reproduce')
-        model=fit([r['features'] for r in matrix],[r['target'] for r in matrix])
+        # Feature reconstruction above verifies every archived value to the
+        # existing 1e-12 arithmetic tolerance. Refit the exact serialized
+        # training inputs, matching qa_risk.rebuild_head. Feeding recomputed
+        # libm log/log1p last bits into Newton's method would be a different
+        # floating-point optimization input, not a replay of the saved run.
+        model=fit([r['features'] for r in stored_matrix],[r['target'] for r in stored_matrix])
         public_fit=read(folder/(variant+'-fit.json'));assert_no_parameters(public_fit)
         expected_fit={k:v for k,v in model.items() if k not in PRIVATE_FIELDS}
         require(aggregates_equal(expected_fit,public_fit), 'Published fit trace/config differs from training-only reconstruction')
