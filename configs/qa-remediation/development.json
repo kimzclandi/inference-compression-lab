@@ -10,5 +10,12 @@
     "1.5B FP16 grounded few-shot"
   ],
   "audit": "One separate Yes/No answer-support model call for exact-substring proposed answers. Conditional binary logit score is not a calibrated probability.",
-  "stop_rule": "Run each development candidate once. Select candidate on disclosed dev; fix model/prompt before fresh calibration. No confirmation evaluation before final protocol commit. No rescanning blocks to erase the old negative result."
+  "stop_rule": "Run each development candidate once. Select candidate on disclosed dev; fix model/prompt before fresh calibration. No confirmation evaluation before final protocol commit. No rescanning blocks to erase the old negative result.",
+  "bounded_capacity_followup": {
+    "candidate": "3B FP16, same grounded prompt and same published dev cohort",
+    "reason": "Existing 0.5B and 1.5B fixed candidates fail the desired precision/coverage tradeoff. Test the largest already-present local model once; do not change thresholds, prompts, or new confirmation data.",
+    "limit": "One additional capacity cell, no further prompt search in this remediation run",
+    "license_scope": "Qwen2.5-3B-Instruct uses Qwen Research license; this is a noncommercial local research experiment, not a commercial deployment approval",
+    "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1"
+  }
 }
