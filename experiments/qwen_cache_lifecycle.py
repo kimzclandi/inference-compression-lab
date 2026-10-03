@@ -62,6 +62,7 @@ def contracts(model, fingerprint, prefixes, suffix):
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--model',type=Path,required=True);p.add_argument('--output-dir',type=Path,required=True)
+    p.add_argument('--contracts-only',action='store_true',help='Real-model fault/clear/bypass smoke without timing traces')
     args=p.parse_args();out=reserve_directory(args.output_dir)
     spec_path=Path('configs/qwen-prefix/lifecycle.json');spec=json.loads(spec_path.read_text())
     import mlx.core as mx
@@ -79,6 +80,9 @@ def main():
     prefixes=[base[:63]+[n] for n in (20,21,22)]
     save(out/'contracts.json',contracts(model,fingerprint,prefixes,suffix))
     print('fault contracts passed',flush=True)
+    if args.contracts_only:
+        save(out/'complete.json',{'sha256':{p.name:sha256(p) for p in sorted(out.glob('*.json'))}})
+        return
     records=[];works=[];rng=random.Random(spec['seed'])
     for length in spec['prefix_lengths']:
         prefixes=[base[:length-1]+[n] for n in (20,21,22)]

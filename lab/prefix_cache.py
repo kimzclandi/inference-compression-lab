@@ -27,8 +27,8 @@ class PrefixCache:
             raise ValueError('A string model identity and positive integer cache limits are required')
         self._model_id = model_id
         self.clone = clone
-        self.max_entries = max_entries
-        self.max_bytes = max_bytes
+        self._max_entries = max_entries
+        self._max_bytes = max_bytes
         self.entries = OrderedDict()
         self.bytes = 0
         self.hits = self.misses = self.evictions = self.bypasses = self.failures = 0
@@ -36,6 +36,14 @@ class PrefixCache:
     @property
     def model_id(self):
         return self._model_id
+
+    @property
+    def max_entries(self):
+        return self._max_entries
+
+    @property
+    def max_bytes(self):
+        return self._max_bytes
 
     def acquire(self, tokens, builder, *, clone=None, profile=None):
         try:

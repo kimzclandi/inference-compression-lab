@@ -38,7 +38,8 @@ class Transactions(unittest.TestCase):
 
     def test_identity_and_limit_validation(self):
         c=self.store()
-        with self.assertRaises(AttributeError): c.model_id='new'
+        for field,value in [('model_id','new'),('max_entries',1),('max_bytes',1)]:
+            with self.assertRaises(AttributeError):setattr(c,field,value)
         for value in [True,0,-1,1.5]:
             with self.assertRaises(ValueError): PrefixCache('fixed',copy.deepcopy,max_entries=value)
             with self.assertRaises(ValueError): PrefixCache('fixed',copy.deepcopy,max_bytes=value)
