@@ -1,0 +1,202 @@
+{
+  "all_pass": true,
+  "synthetic": {
+    "examples": [
+      {
+        "name": "masked_question_excluded_cls_included",
+        "derivation": "start weights CLS/cat/dog=2/3/1, end=2/1/4; selected 3*4=12, null 2*2=4; log joint=log(12/(6*7)); best different answer dog score4/null4, gaplog3. Masked question logits100 are excluded.",
+        "features": [
+          1.0986122886681098,
+          -1.252762968495368,
+          1.0986122886681098,
+          1.0986122886681098,
+          0.6931471805599453
+        ],
+        "prediction": "cat dog",
+        "diagnostics": {
+          "selected_window_index": 0,
+          "selected_normalized_answer": "cat dog",
+          "start_logsumexp": 1.791759469228055,
+          "end_logsumexp": 1.9459101490553132,
+          "normalization_token_count": 3,
+          "alternative": {
+            "prediction": "dog",
+            "margin": 0.0,
+            "window_index": 0,
+            "start_token": 3,
+            "end_token": 3,
+            "start": 4,
+            "end": 7,
+            "normalized": "dog"
+          }
+        },
+        "all_pass": true
+      },
+      {
+        "name": "cross_window_same_normalized_answer_excluded",
+        "derivation": "WindowA selected The cat score64/null1 and normalized cat. WindowB cat score16 is excluded as same normalized answer; cat dog score12 is best different answer across both windows, above A The score8. Selected-window joint=64/(10*10).",
+        "features": [
+          4.1588830833596715,
+          -0.44628710262841953,
+          1.6739764335716711,
+          1.0986122886681098,
+          1.0986122886681098
+        ],
+        "prediction": "The cat",
+        "diagnostics": {
+          "selected_window_index": 0,
+          "selected_normalized_answer": "cat",
+          "start_logsumexp": 2.3025850929940455,
+          "end_logsumexp": 2.3025850929940455,
+          "normalization_token_count": 3,
+          "alternative": {
+            "prediction": "cat dog",
+            "margin": 2.4849066497880004,
+            "window_index": 1,
+            "start_token": 1,
+            "end_token": 2,
+            "start": 8,
+            "end": 15,
+            "normalized": "cat dog"
+          }
+        },
+        "all_pass": true
+      },
+      {
+        "name": "zero_width_context_in_normalizer_and_token_budget",
+        "derivation": "Context zero-width token weight100 is not an endpoint but participates in each context+CLS normalizer, totaling106; answer spans3tokens, score16/null1; alternative a or b score4, earliest a wins.",
+        "features": [
+          2.772588722239781,
+          -6.554289465984354,
+          1.3862943611198906,
+          1.3862943611198906,
+          0.6931471805599453
+        ],
+        "prediction": "a  b",
+        "diagnostics": {
+          "selected_window_index": 0,
+          "selected_normalized_answer": "b",
+          "start_logsumexp": 4.663439094112068,
+          "end_logsumexp": 4.663439094112068,
+          "normalization_token_count": 4,
+          "alternative": {
+            "prediction": "a",
+            "margin": 1.3862943611198906,
+            "window_index": 0,
+            "start_token": 1,
+            "end_token": 1,
+            "start": 0,
+            "end": 1,
+            "normalized": ""
+          }
+        },
+        "all_pass": true
+      }
+    ],
+    "em_label_cases": [
+      {
+        "prediction": "The, CAT!",
+        "gold": [
+          "cat"
+        ],
+        "expected": 1
+      },
+      {
+        "prediction": "cat dog",
+        "gold": [
+          "cat"
+        ],
+        "expected": 0
+      },
+      {
+        "prediction": "cat",
+        "gold": [],
+        "expected": 0
+      },
+      {
+        "prediction": "The cat",
+        "gold": [
+          "a dog",
+          "cat"
+        ],
+        "expected": 1
+      }
+    ]
+  },
+  "feature_implementation_sha256": "182138f513c311a5e14dece7afc60ca28c1cbf22b1dbbf56a6db0cf3513b3bbd",
+  "runner_sha256": "b384e54e4e396b06ca80394187e6798633eb542acb86edf213a815aff65d7457",
+  "audit_sha256": "2cb9024fed3a0a41173c61aa023376b2fd0ff27c79226a4361114e7228865d0d",
+  "scope": "Feature/EM-label audit only, not head convergence, score calibration, quality acceptance, or new inference.",
+  "real_training_examples": {
+    "training_dir": "results/qa-risk-v2/training",
+    "protocol_sha256": "365a1ff260d9f887558bc5ce5421e4028702ad435717aefc8f17787cea08081b",
+    "selection_rule": "Per precision smallest SHA256(independent-feature-audit- + variant + id); no outcome filtering.",
+    "records": [
+      {
+        "variant": "fp32",
+        "id": "5ad248f7d7d075001a428b8f",
+        "features": [
+          -9.572497367858887,
+          -9.612855306380872,
+          0.10482633113861084,
+          1.9459101490553132,
+          0.6931471805599453
+        ],
+        "diagnostics": {
+          "selected_window_index": 0,
+          "selected_normalized_answer": "founding of new protestant churches",
+          "start_logsumexp": 4.453779344712403,
+          "end_logsumexp": 4.906317458708263,
+          "normalization_token_count": 127,
+          "alternative": {
+            "prediction": "Protestant churches",
+            "margin": -9.677323698997498,
+            "window_index": 0,
+            "start_token": 134,
+            "end_token": 135,
+            "start": 615,
+            "end": 634,
+            "normalized": "protestant churches"
+          }
+        },
+        "target": 0,
+        "answerability": true,
+        "all_pass": true,
+        "features_file_sha256": "55b9e2bb55963af2d0a7f5d6e802473519459aa3e4ac00c19f336ef7fb542336"
+      },
+      {
+        "variant": "int8",
+        "id": "5a7b485921c2de001afe9e52",
+        "features": [
+          -4.162170320749283,
+          -4.7794932037307385,
+          0.015522509813308716,
+          1.791759469228055,
+          0.6931471805599453
+        ],
+        "diagnostics": {
+          "selected_window_index": 0,
+          "selected_normalized_answer": "amtrak san joaquins",
+          "start_logsumexp": 2.529192409350379,
+          "end_logsumexp": 2.778680800932102,
+          "normalization_token_count": 107,
+          "alternative": {
+            "prediction": "San Joaquins",
+            "margin": -4.1776928305625916,
+            "window_index": 0,
+            "start_token": 19,
+            "end_token": 22,
+            "start": 45,
+            "end": 57,
+            "normalized": "san joaquins"
+          }
+        },
+        "target": 0,
+        "answerability": true,
+        "all_pass": true,
+        "features_file_sha256": "07e9b461c034085fd0a7ca5819906e914890dc71ede75f11513d64b3abfcbb55"
+      }
+    ],
+    "evaluation_run_read": false
+  }
+}
