@@ -1,0 +1,13 @@
+{
+  "q8-dev.scored.jsonl": "f30d3b2f1dd5461f0ddce5c82a4a800f65c9d61c375222bb7c074d6d319e39a6",
+  "q4-dev.predictions.jsonl": "04652f7eae8791612725ab2e63a5771a032cf601fe8b179ac0c1efd042661f81",
+  "origin.json": "2871f1e50f39a1c421788a4ea3d83ebac05f5c60863bf5faff900d8bbeed1679",
+  "q4-dev.metrics.json": "8a38bd1bd8af471ffc55df631d64f439926ac135cbda541879765f994b58cfd4",
+  "q8-dev.predictions.jsonl": "1ccc147197fa3efcd52632e894d3079f02011fd38653791c3fb8e600ab078dd4",
+  "fp16-dev.metrics.json": "b155d1819219c107085faca324d95c7930db0c1e1deeddfb278fa63e3fd5167a",
+  "protocol.json": "9c180020494cf7c0ffda9a7359c5df96c65bbe93ca9dfca267c93eee5868c883",
+  "fp16-dev.predictions.jsonl": "92f2979179a6b60664bf1af5d104d93ef9e555e17d9026044a5f86ec8f307425",
+  "q8-dev.metrics.json": "116222f119d13fa67c4ea45d389924a9f93503c99bfaac7e4061e65e66962795",
+  "fp16-dev.scored.jsonl": "9ae770378ef8c425c240abfa8b698787cbd63a458637a1df7f430df808ce7a28",
+  "q4-dev.scored.jsonl": "3e54c6143d1ddfd8e3b65431c53c2e5a2bb939e59cf8a6ca108b0e3c247a6708"
+}

@@ -1,0 +1,13 @@
+{
+  "checks": [
+    {
+      "rejected": true,
+      "reason": "Empty checksum manifest"
+    },
+    {
+      "rejected": true,
+      "reason": "Checksum manifest does not cover exact artifact files"
+    }
+  ],
+  "original_evidence_changed": false
+}

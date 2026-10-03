@@ -1,0 +1,19 @@
+{
+  "file_cost_verifier_correction": {
+    "reason": "Equal tensor cost does not imply identical safetensors header length",
+    "selected_tensor_bytes": 299428608,
+    "control_tensor_bytes": 299428608,
+    "selected_header_bytes": 67569,
+    "control_header_bytes": 67559,
+    "raw_model_experiment_changed": false,
+    "protocol_changed": false
+  },
+  "source_repo_metadata_correction": "Actual source checkout remote is kimzclandi/domain-qa-lab; original metadata retained. No source repo experiment files were modified.",
+  "demo": "One new live five-model replay; same tokens and top10 as the frozen example; not a second benchmark.",
+  "tests": {
+    "total": 63,
+    "passed": 51,
+    "skipped": 12,
+    "failed": 0
+  }
+}

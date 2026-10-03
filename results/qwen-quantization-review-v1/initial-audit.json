@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-04",
+  "source_checkout": "/Users/yukaiyan/Documents/Codex/2026-10-03/readme-ai-1-jd-2-3/work/inference-compression-lab",
+  "source_branch": "codex/qwen-cache-lifecycle",
+  "source_head": "c018de89c24b50632955770ecc5827904e98f90e",
+  "source_dirty": false,
+  "repo_private": true,
+  "default_head": "eefd28ac66d202477ad0e157b3d400c5a24952bd",
+  "prs": [
+    {
+      "number": 1,
+      "state": "OPEN",
+      "draft": true
+    },
+    {
+      "number": 2,
+      "state": "OPEN",
+      "draft": true
+    },
+    {
+      "number": 3,
+      "state": "OPEN",
+      "draft": true
+    },
+    {
+      "number": 4,
+      "state": "OPEN",
+      "draft": true
+    },
+    {
+      "number": 5,
+      "state": "OPEN",
+      "draft": true
+    }
+  ],
+  "filesystem_agents_files": [],
+  "instructions": "User-supplied AGENTS.md; evidence-grounded-repo-implementation skill; current task",
+  "device": "Apple M4 Max, 48 GiB, MLX 0.29.3, MLX-LM 0.26.3, Python 3.12.11",
+  "jetson": "User confirmed not accessible; historically connected to robot arm; model/version/code unverified",
+  "bytedance": "User confirmed model evaluation. Deployment details unverified and excluded from factual resume.",
+  "resume": "Current file not provided"
+}

@@ -1,0 +1,5108 @@
+[
+  {
+    "vocab_size": 151936,
+    "top1": 34586,
+    "top2": 1355,
+    "margin": 1.8125,
+    "top10": [
+      {
+        "token": 34586,
+        "text": "problem",
+        "logit": 22.0625
+      },
+      {
+        "token": 1355,
+        "text": "input",
+        "logit": 20.25
+      },
+      {
+        "token": 64,
+        "text": "a",
+        "logit": 20.0
+      },
+      {
+        "token": 32,
+        "text": "A",
+        "logit": 18.484375
+      },
+      {
+        "token": 258,
+        "text": "in",
+        "logit": 18.40625
+      },
+      {
+        "token": 13573,
+        "text": "inf",
+        "logit": 18.25
+      },
+      {
+        "token": 4851,
+        "text": "instance",
+        "logit": 17.96875
+      },
+      {
+        "token": 31198,
+        "text": "Problem",
+        "logit": 17.828125
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 17.75
+      },
+      {
+        "token": 276,
+        "text": "an",
+        "logit": 17.609375
+      }
+    ],
+    "reference_top1": 34586,
+    "reference_top2": 1355,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      22.0625,
+      20.25
+    ],
+    "reference_pair_margin": 1.8125,
+    "fp16_margin": 1.8125,
+    "id": "56e17a7ccd28a01900c679a1",
+    "input_token_ids_sha256": "b15bc995887c3f00b9453ee6214892e7ec81c14075f94e0a1c0c2a55ddc59128"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 64947,
+    "top2": 64,
+    "margin": 1.734375,
+    "top10": [
+      {
+        "token": 64947,
+        "text": "comput",
+        "logit": 20.859375
+      },
+      {
+        "token": 64,
+        "text": "a",
+        "logit": 19.125
+      },
+      {
+        "token": 19688,
+        "text": "algorithm",
+        "logit": 17.765625
+      },
+      {
+        "token": 34586,
+        "text": "problem",
+        "logit": 17.75
+      },
+      {
+        "token": 58022,
+        "text": "Comput",
+        "logit": 17.640625
+      },
+      {
+        "token": 874,
+        "text": "com",
+        "logit": 17.234375
+      },
+      {
+        "token": 278,
+        "text": "al",
+        "logit": 16.9375
+      },
+      {
+        "token": 32,
+        "text": "A",
+        "logit": 16.78125
+      },
+      {
+        "token": 258,
+        "text": "in",
+        "logit": 16.78125
+      },
+      {
+        "token": 276,
+        "text": "an",
+        "logit": 16.765625
+      }
+    ],
+    "reference_top1": 64947,
+    "reference_top2": 64,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      20.859375,
+      19.125
+    ],
+    "reference_pair_margin": 1.734375,
+    "fp16_margin": 1.734375,
+    "id": "56e17a7ccd28a01900c679a2",
+    "input_token_ids_sha256": "e266de2b78ee6b3ab7daa1a6119bb8d834b75beeec90bff2bf405e88480f64a2"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 16249,
+    "top2": 443,
+    "margin": 3.015625,
+    "top10": [
+      {
+        "token": 16249,
+        "text": "abstract",
+        "logit": 23.21875
+      },
+      {
+        "token": 443,
+        "text": "con",
+        "logit": 20.203125
+      },
+      {
+        "token": 15949,
+        "text": "Abstract",
+        "logit": 18.609375
+      },
+      {
+        "token": 276,
+        "text": "an",
+        "logit": 18.515625
+      },
+      {
+        "token": 258,
+        "text": "in",
+        "logit": 17.5
+      },
+      {
+        "token": 64,
+        "text": "a",
+        "logit": 17.453125
+      },
+      {
+        "token": 370,
+        "text": "ab",
+        "logit": 17.296875
+      },
+      {
+        "token": 13573,
+        "text": "inf",
+        "logit": 16.640625
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 16.484375
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 16.171875
+      }
+    ],
+    "reference_top1": 16249,
+    "reference_top2": 443,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      23.21875,
+      20.203125
+    ],
+    "reference_pair_margin": 3.015625,
+    "fp16_margin": 3.015625,
+    "id": "56e17a7ccd28a01900c679a3",
+    "input_token_ids_sha256": "555054ed1f8fed0841e250de319d885a0cbcd6ee866f475c1d3254da9618107a"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 49460,
+    "top2": 1355,
+    "margin": 0.359375,
+    "top10": [
+      {
+        "token": 49460,
+        "text": "solution",
+        "logit": 20.953125
+      },
+      {
+        "token": 1355,
+        "text": "input",
+        "logit": 20.59375
+      },
+      {
+        "token": 4851,
+        "text": "instance",
+        "logit": 20.34375
+      },
+      {
+        "token": 258,
+        "text": "in",
+        "logit": 18.515625
+      },
+      {
+        "token": 82,
+        "text": "s",
+        "logit": 18.140625
+      },
+      {
+        "token": 34586,
+        "text": "problem",
+        "logit": 17.84375
+      },
+      {
+        "token": 64,
+        "text": "a",
+        "logit": 17.703125
+      },
+      {
+        "token": 276,
+        "text": "an",
+        "logit": 17.625
+      },
+      {
+        "token": 24941,
+        "text": "inputs",
+        "logit": 17.609375
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 17.515625
+      }
+    ],
+    "reference_top1": 49460,
+    "reference_top2": 1355,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      20.953125,
+      20.59375
+    ],
+    "reference_pair_margin": 0.359375,
+    "fp16_margin": 0.359375,
+    "id": "56e17a7ccd28a01900c679a4",
+    "input_token_ids_sha256": "86e03bd4a1a700bd00e6b93b8abc5d40bca94f31e55d242c403cfe1c728e5f2f"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 49460,
+    "top2": 3006,
+    "margin": 1.640625,
+    "top10": [
+      {
+        "token": 49460,
+        "text": "solution",
+        "logit": 23.953125
+      },
+      {
+        "token": 3006,
+        "text": "output",
+        "logit": 22.3125
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 19.734375
+      },
+      {
+        "token": 82,
+        "text": "s",
+        "logit": 19.265625
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 18.125
+      },
+      {
+        "token": 36842,
+        "text": "Solution",
+        "logit": 18.046875
+      },
+      {
+        "token": 64,
+        "text": "a",
+        "logit": 17.984375
+      },
+      {
+        "token": 258,
+        "text": "in",
+        "logit": 17.984375
+      },
+      {
+        "token": 1,
+        "text": "\"",
+        "logit": 17.921875
+      },
+      {
+        "token": 5097,
+        "text": "Output",
+        "logit": 17.34375
+      }
+    ],
+    "reference_top1": 49460,
+    "reference_top2": 3006,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      23.953125,
+      22.3125
+    ],
+    "reference_pair_margin": 1.640625,
+    "fp16_margin": 1.640625,
+    "id": "56e17a7ccd28a01900c679a5",
+    "input_token_ids_sha256": "e527b7fe36ceaa71ac6afc6b7cd94e2c7940d04139dcf200c47eaccc630bc41d"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 32981,
+    "top2": 376,
+    "margin": 0.609375,
+    "top10": [
+      {
+        "token": 32981,
+        "text": "trip",
+        "logit": 23.21875
+      },
+      {
+        "token": 376,
+        "text": "tr",
+        "logit": 22.609375
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 20.171875
+      },
+      {
+        "token": 83,
+        "text": "t",
+        "logit": 18.921875
+      },
+      {
+        "token": 300,
+        "text": "as",
+        "logit": 18.625
+      },
+      {
+        "token": 746,
+        "text": "set",
+        "logit": 18.34375
+      },
+      {
+        "token": 4917,
+        "text": "sets",
+        "logit": 18.171875
+      },
+      {
+        "token": 77976,
+        "text": "multip",
+        "logit": 18.03125
+      },
+      {
+        "token": 983,
+        "text": "to",
+        "logit": 17.96875
+      },
+      {
+        "token": 27856,
+        "text": "three",
+        "logit": 17.59375
+      }
+    ],
+    "reference_top1": 32981,
+    "reference_top2": 376,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      23.21875,
+      22.609375
+    ],
+    "reference_pair_margin": 0.609375,
+    "fp16_margin": 0.609375,
+    "id": "56e1a0dccd28a01900c67a2e",
+    "input_token_ids_sha256": "da3ecc27deed53ed915ad300555d6f5faf8424685d752040254dbe0295bb04f5"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 32981,
+    "top2": 376,
+    "margin": 2.15625,
+    "top10": [
+      {
+        "token": 32981,
+        "text": "trip",
+        "logit": 26.46875
+      },
+      {
+        "token": 376,
+        "text": "tr",
+        "logit": 24.3125
+      },
+      {
+        "token": 83,
+        "text": "t",
+        "logit": 20.875
+      },
+      {
+        "token": 746,
+        "text": "set",
+        "logit": 20.109375
+      },
+      {
+        "token": 77976,
+        "text": "multip",
+        "logit": 19.484375
+      },
+      {
+        "token": 82826,
+        "text": "Triple",
+        "logit": 19.03125
+      },
+      {
+        "token": 22446,
+        "text": "tri",
+        "logit": 18.671875
+      },
+      {
+        "token": 396,
+        "text": "int",
+        "logit": 18.46875
+      },
+      {
+        "token": 4917,
+        "text": "sets",
+        "logit": 18.359375
+      },
+      {
+        "token": 15560,
+        "text": "tw",
+        "logit": 17.953125
+      }
+    ],
+    "reference_top1": 32981,
+    "reference_top2": 376,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      26.46875,
+      24.3125
+    ],
+    "reference_pair_margin": 2.15625,
+    "fp16_margin": 2.15625,
+    "id": "56e1a0dccd28a01900c67a2f",
+    "input_token_ids_sha256": "fdbd9a0b5a8fe0886ac7e2df9dc29ea93f6310ba1477b6415df5e312a1eb19fe"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 23247,
+    "top2": 1678,
+    "margin": 0.640625,
+    "top10": [
+      {
+        "token": 23247,
+        "text": "complex",
+        "logit": 23.625
+      },
+      {
+        "token": 1678,
+        "text": "time",
+        "logit": 22.984375
+      },
+      {
+        "token": 64947,
+        "text": "comput",
+        "logit": 20.8125
+      },
+      {
+        "token": 874,
+        "text": "com",
+        "logit": 20.65625
+      },
+      {
+        "token": 31137,
+        "text": "Complex",
+        "logit": 20.484375
+      },
+      {
+        "token": 8746,
+        "text": "space",
+        "logit": 19.859375
+      },
+      {
+        "token": 5689,
+        "text": "comp",
+        "logit": 18.140625
+      },
+      {
+        "token": 1462,
+        "text": "Time",
+        "logit": 17.921875
+      },
+      {
+        "token": 58022,
+        "text": "Comput",
+        "logit": 17.5
+      },
+      {
+        "token": 12745,
+        "text": "resources",
+        "logit": 17.1875
+      }
+    ],
+    "reference_top1": 23247,
+    "reference_top2": 1678,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      23.625,
+      22.984375
+    ],
+    "reference_pair_margin": 0.640625,
+    "fp16_margin": 0.640625,
+    "id": "56e1b754cd28a01900c67abc",
+    "input_token_ids_sha256": "086ee6f16025ee314633305ed7687559ec04482cae242deff034f790e27353b8"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 50171,
+    "top2": 66,
+    "margin": 1.34375,
+    "top10": [
+      {
+        "token": 50171,
+        "text": "communication",
+        "logit": 21.625
+      },
+      {
+        "token": 66,
+        "text": "c",
+        "logit": 20.28125
+      },
+      {
+        "token": 23247,
+        "text": "complex",
+        "logit": 19.8125
+      },
+      {
+        "token": 63938,
+        "text": "decision",
+        "logit": 19.5
+      },
+      {
+        "token": 1678,
+        "text": "time",
+        "logit": 18.671875
+      },
+      {
+        "token": 874,
+        "text": "com",
+        "logit": 18.65625
+      },
+      {
+        "token": 64947,
+        "text": "comput",
+        "logit": 18.234375
+      },
+      {
+        "token": 65411,
+        "text": "Communication",
+        "logit": 17.875
+      },
+      {
+        "token": 43298,
+        "text": "circ",
+        "logit": 17.765625
+      },
+      {
+        "token": 8169,
+        "text": "dec",
+        "logit": 17.296875
+      }
+    ],
+    "reference_top1": 50171,
+    "reference_top2": 66,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      21.625,
+      20.28125
+    ],
+    "reference_pair_margin": 1.34375,
+    "fp16_margin": 1.34375,
+    "id": "56e1b754cd28a01900c67abd",
+    "input_token_ids_sha256": "1ae47c3675f431f9e68d4189d09a2d1bc53a7143079a17e40177e4526adfcbe7"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 4923,
+    "top2": 50171,
+    "margin": 0.375,
+    "top10": [
+      {
+        "token": 4923,
+        "text": "Bl",
+        "logit": 20.609375
+      },
+      {
+        "token": 50171,
+        "text": "communication",
+        "logit": 20.234375
+      },
+      {
+        "token": 66,
+        "text": "c",
+        "logit": 17.96875
+      },
+      {
+        "token": 65411,
+        "text": "Communication",
+        "logit": 17.9375
+      },
+      {
+        "token": 23247,
+        "text": "complex",
+        "logit": 17.828125
+      },
+      {
+        "token": 2024,
+        "text": "bl",
+        "logit": 17.71875
+      },
+      {
+        "token": 874,
+        "text": "com",
+        "logit": 17.546875
+      },
+      {
+        "token": 1678,
+        "text": "time",
+        "logit": 17.515625
+      },
+      {
+        "token": 34,
+        "text": "C",
+        "logit": 16.640625
+      },
+      {
+        "token": 64947,
+        "text": "comput",
+        "logit": 16.546875
+      }
+    ],
+    "reference_top1": 4923,
+    "reference_top2": 50171,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      20.609375,
+      20.234375
+    ],
+    "reference_pair_margin": 0.375,
+    "fp16_margin": 0.375,
+    "id": "56e1b754cd28a01900c67abe",
+    "input_token_ids_sha256": "00bb92ed042f424fdca993fe2c620b9c325a02f435c72161b47374e9f2d5c397"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 50171,
+    "top2": 65411,
+    "margin": 1.8125,
+    "top10": [
+      {
+        "token": 50171,
+        "text": "communication",
+        "logit": 23.078125
+      },
+      {
+        "token": 65411,
+        "text": "Communication",
+        "logit": 21.265625
+      },
+      {
+        "token": 66,
+        "text": "c",
+        "logit": 18.53125
+      },
+      {
+        "token": 63938,
+        "text": "decision",
+        "logit": 17.625
+      },
+      {
+        "token": 43310,
+        "text": "communications",
+        "logit": 17.265625
+      },
+      {
+        "token": 43298,
+        "text": "circ",
+        "logit": 16.859375
+      },
+      {
+        "token": 874,
+        "text": "com",
+        "logit": 16.734375
+      },
+      {
+        "token": 34,
+        "text": "C",
+        "logit": 16.59375
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 16.03125
+      },
+      {
+        "token": 1092,
+        "text": "Com",
+        "logit": 15.9453125
+      }
+    ],
+    "reference_top1": 50171,
+    "reference_top2": 65411,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      23.078125,
+      21.265625
+    ],
+    "reference_pair_margin": 1.8125,
+    "fp16_margin": 1.8125,
+    "id": "56e1b754cd28a01900c67abf",
+    "input_token_ids_sha256": "74f1f0d8693f793026ec5af30f3d945c70d87f75553808ff439e361323b85af8"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 63938,
+    "top2": 50171,
+    "margin": 3.125,
+    "top10": [
+      {
+        "token": 63938,
+        "text": "decision",
+        "logit": 24.296875
+      },
+      {
+        "token": 50171,
+        "text": "communication",
+        "logit": 21.171875
+      },
+      {
+        "token": 74846,
+        "text": "Decision",
+        "logit": 19.765625
+      },
+      {
+        "token": 8169,
+        "text": "dec",
+        "logit": 19.484375
+      },
+      {
+        "token": 66,
+        "text": "c",
+        "logit": 18.953125
+      },
+      {
+        "token": 23247,
+        "text": "complex",
+        "logit": 17.9375
+      },
+      {
+        "token": 4900,
+        "text": "Dec",
+        "logit": 17.609375
+      },
+      {
+        "token": 65411,
+        "text": "Communication",
+        "logit": 17.0625
+      },
+      {
+        "token": 874,
+        "text": "com",
+        "logit": 16.96875
+      },
+      {
+        "token": 43298,
+        "text": "circ",
+        "logit": 16.484375
+      }
+    ],
+    "reference_top1": 63938,
+    "reference_top2": 50171,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      24.296875,
+      21.171875
+    ],
+    "reference_pair_margin": 3.125,
+    "fp16_margin": 3.125,
+    "id": "56e1b754cd28a01900c67ac0",
+    "input_token_ids_sha256": "26d6722d8f29dca0db2b9501ec08a9aced03846c713efb8879aac357dc8828d3"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 23247,
+    "top2": 31137,
+    "margin": 2.609375,
+    "top10": [
+      {
+        "token": 23247,
+        "text": "complex",
+        "logit": 22.03125
+      },
+      {
+        "token": 31137,
+        "text": "Complex",
+        "logit": 19.421875
+      },
+      {
+        "token": 874,
+        "text": "com",
+        "logit": 18.78125
+      },
+      {
+        "token": 1055,
+        "text": "of",
+        "logit": 18.34375
+      },
+      {
+        "token": 1040,
+        "text": "class",
+        "logit": 18.015625
+      },
+      {
+        "token": 2124,
+        "text": "Of",
+        "logit": 17.59375
+      },
+      {
+        "token": 3794,
+        "text": "framework",
+        "logit": 16.921875
+      },
+      {
+        "token": 64,
+        "text": "a",
+        "logit": 16.8125
+      },
+      {
+        "token": 32,
+        "text": "A",
+        "logit": 16.765625
+      },
+      {
+        "token": 5689,
+        "text": "comp",
+        "logit": 16.46875
+      }
+    ],
+    "reference_top1": 23247,
+    "reference_top2": 31137,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      22.03125,
+      19.421875
+    ],
+    "reference_pair_margin": 2.609375,
+    "fp16_margin": 2.609375,
+    "id": "56e1c0f6cd28a01900c67b2c",
+    "input_token_ids_sha256": "ffb3f64634e5163ac963f6b578df476d8007eeb859be8ffab976f849359d10d0"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 23247,
+    "top2": 8855,
+    "margin": 2.546875,
+    "top10": [
+      {
+        "token": 23247,
+        "text": "complex",
+        "logit": 22.65625
+      },
+      {
+        "token": 8855,
+        "text": "classes",
+        "logit": 20.109375
+      },
+      {
+        "token": 31137,
+        "text": "Complex",
+        "logit": 20.015625
+      },
+      {
+        "token": 1040,
+        "text": "class",
+        "logit": 20.0
+      },
+      {
+        "token": 874,
+        "text": "com",
+        "logit": 19.46875
+      },
+      {
+        "token": 65381,
+        "text": "classification",
+        "logit": 17.484375
+      },
+      {
+        "token": 20077,
+        "text": "Classes",
+        "logit": 17.375
+      },
+      {
+        "token": 1957,
+        "text": "Class",
+        "logit": 17.0625
+      },
+      {
+        "token": 70618,
+        "text": " Complexity",
+        "logit": 16.0625
+      },
+      {
+        "token": 3653,
+        "text": "typ",
+        "logit": 16.046875
+      }
+    ],
+    "reference_top1": 23247,
+    "reference_top2": 8855,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      22.65625,
+      20.109375
+    ],
+    "reference_pair_margin": 2.546875,
+    "fp16_margin": 2.546875,
+    "id": "56e1c0f6cd28a01900c67b2d",
+    "input_token_ids_sha256": "6357ae75a2ec9293ebbf7319d3b6e579aa646c5778eccc263ed4d4df4496365d"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 23247,
+    "top2": 3794,
+    "margin": 1.25,
+    "top10": [
+      {
+        "token": 23247,
+        "text": "complex",
+        "logit": 21.359375
+      },
+      {
+        "token": 3794,
+        "text": "framework",
+        "logit": 20.109375
+      },
+      {
+        "token": 18375,
+        "text": "definition",
+        "logit": 20.015625
+      },
+      {
+        "token": 31137,
+        "text": "Complex",
+        "logit": 18.765625
+      },
+      {
+        "token": 18616,
+        "text": "variables",
+        "logit": 17.9375
+      },
+      {
+        "token": 48563,
+        "text": "definitions",
+        "logit": 17.890625
+      },
+      {
+        "token": 874,
+        "text": "com",
+        "logit": 17.4375
+      },
+      {
+        "token": 5689,
+        "text": "comp",
+        "logit": 17.34375
+      },
+      {
+        "token": 9813,
+        "text": "variable",
+        "logit": 16.828125
+      },
+      {
+        "token": 10398,
+        "text": "Definition",
+        "logit": 16.75
+      }
+    ],
+    "reference_top1": 23247,
+    "reference_top2": 3794,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      21.359375,
+      20.109375
+    ],
+    "reference_pair_margin": 1.25,
+    "fp16_margin": 1.25,
+    "id": "56e1c0f6cd28a01900c67b2e",
+    "input_token_ids_sha256": "a3ca48237cb2b8138cd84b9594a7081d8e65d96341f1454af463b100264bb1a1"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 9896,
+    "top2": 14658,
+    "margin": 5.03125,
+    "top10": [
+      {
+        "token": 9896,
+        "text": "pol",
+        "logit": 25.171875
+      },
+      {
+        "token": 14658,
+        "text": "Pol",
+        "logit": 20.140625
+      },
+      {
+        "token": 64,
+        "text": "a",
+        "logit": 19.734375
+      },
+      {
+        "token": 33435,
+        "text": "poly",
+        "logit": 19.640625
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 19.140625
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 18.78125
+      },
+      {
+        "token": 47311,
+        "text": " polynomial",
+        "logit": 18.171875
+      },
+      {
+        "token": 265,
+        "text": "re",
+        "logit": 18.0625
+      },
+      {
+        "token": 3562,
+        "text": "most",
+        "logit": 17.328125
+      },
+      {
+        "token": 32,
+        "text": "A",
+        "logit": 16.90625
+      }
+    ],
+    "reference_top1": 9896,
+    "reference_top2": 14658,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      25.171875,
+      20.140625
+    ],
+    "reference_pair_margin": 5.03125,
+    "fp16_margin": 5.03125,
+    "id": "56e1cbe2cd28a01900c67bac",
+    "input_token_ids_sha256": "da4132b505de364ef2b477206fa65d1ab901253fa28ea70fa7f58b95d007b379"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 77976,
+    "top2": 82,
+    "margin": 0.4375,
+    "top10": [
+      {
+        "token": 77976,
+        "text": "multip",
+        "logit": 22.28125
+      },
+      {
+        "token": 82,
+        "text": "s",
+        "logit": 21.84375
+      },
+      {
+        "token": 97407,
+        "text": "squ",
+        "logit": 20.328125
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 19.1875
+      },
+      {
+        "token": 64648,
+        "text": "multiply",
+        "logit": 19.09375
+      },
+      {
+        "token": 983,
+        "text": "to",
+        "logit": 19.078125
+      },
+      {
+        "token": 37476,
+        "text": "square",
+        "logit": 18.796875
+      },
+      {
+        "token": 396,
+        "text": "int",
+        "logit": 18.71875
+      },
+      {
+        "token": 57251,
+        "text": "Multip",
+        "logit": 18.53125
+      },
+      {
+        "token": 26268,
+        "text": "multi",
+        "logit": 18.390625
+      }
+    ],
+    "reference_top1": 77976,
+    "reference_top2": 82,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      22.28125,
+      21.84375
+    ],
+    "reference_pair_margin": 0.4375,
+    "fp16_margin": 0.4375,
+    "id": "56e1cbe2cd28a01900c67bad",
+    "input_token_ids_sha256": "dfff3b0256660a9cb5bfb646b3ac0d5451e88caf4c386512f637a2b78b31a1df"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 9896,
+    "top2": 33435,
+    "margin": 4.703125,
+    "top10": [
+      {
+        "token": 9896,
+        "text": "pol",
+        "logit": 24.375
+      },
+      {
+        "token": 33435,
+        "text": "poly",
+        "logit": 19.671875
+      },
+      {
+        "token": 14658,
+        "text": "Pol",
+        "logit": 18.75
+      },
+      {
+        "token": 1678,
+        "text": "time",
+        "logit": 17.46875
+      },
+      {
+        "token": 47311,
+        "text": " polynomial",
+        "logit": 17.4375
+      },
+      {
+        "token": 64,
+        "text": "a",
+        "logit": 16.84375
+      },
+      {
+        "token": 79,
+        "text": "p",
+        "logit": 16.765625
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 16.734375
+      },
+      {
+        "token": 20,
+        "text": "5",
+        "logit": 16.28125
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 16.28125
+      }
+    ],
+    "reference_top1": 9896,
+    "reference_top2": 33435,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      24.375,
+      19.671875
+    ],
+    "reference_pair_margin": 4.703125,
+    "fp16_margin": 4.703125,
+    "id": "56e1cbe2cd28a01900c67bae",
+    "input_token_ids_sha256": "916ec10ec9118912f2a95158a7842277c1d1aa9c0b39917041b4ba5b21de3ce8"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 77976,
+    "top2": 396,
+    "margin": 2.3125,
+    "top10": [
+      {
+        "token": 77976,
+        "text": "multip",
+        "logit": 22.53125
+      },
+      {
+        "token": 396,
+        "text": "int",
+        "logit": 20.21875
+      },
+      {
+        "token": 9896,
+        "text": "pol",
+        "logit": 20.0625
+      },
+      {
+        "token": 82,
+        "text": "s",
+        "logit": 19.296875
+      },
+      {
+        "token": 11662,
+        "text": "integer",
+        "logit": 19.03125
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 18.75
+      },
+      {
+        "token": 276,
+        "text": "an",
+        "logit": 18.453125
+      },
+      {
+        "token": 19789,
+        "text": "two",
+        "logit": 18.265625
+      },
+      {
+        "token": 1355,
+        "text": "input",
+        "logit": 18.171875
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 17.84375
+      }
+    ],
+    "reference_top1": 77976,
+    "reference_top2": 396,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      22.53125,
+      20.21875
+    ],
+    "reference_pair_margin": 2.3125,
+    "fp16_margin": 2.3125,
+    "id": "56e1cbe2cd28a01900c67baf",
+    "input_token_ids_sha256": "182effe38cd454fd4d07a4b17fd5412ed807662ee49c18b794a1e3d65bfb9f4d"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 77976,
+    "top2": 82,
+    "margin": 3.5,
+    "top10": [
+      {
+        "token": 77976,
+        "text": "multip",
+        "logit": 24.296875
+      },
+      {
+        "token": 82,
+        "text": "s",
+        "logit": 20.796875
+      },
+      {
+        "token": 97407,
+        "text": "squ",
+        "logit": 19.71875
+      },
+      {
+        "token": 64648,
+        "text": "multiply",
+        "logit": 19.15625
+      },
+      {
+        "token": 57251,
+        "text": "Multip",
+        "logit": 18.59375
+      },
+      {
+        "token": 26268,
+        "text": "multi",
+        "logit": 18.546875
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 18.421875
+      },
+      {
+        "token": 37476,
+        "text": "square",
+        "logit": 18.28125
+      },
+      {
+        "token": 25875,
+        "text": "mult",
+        "logit": 18.140625
+      },
+      {
+        "token": 9896,
+        "text": "pol",
+        "logit": 18.078125
+      }
+    ],
+    "reference_top1": 77976,
+    "reference_top2": 82,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      24.296875,
+      20.796875
+    ],
+    "reference_pair_margin": 3.5,
+    "fp16_margin": 3.5,
+    "id": "56e1cbe2cd28a01900c67bb0",
+    "input_token_ids_sha256": "43227a1028533c2e008ec0310c96b5ee7717df613a42aafd67792bfa5bc1489a"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 43,
+    "top2": 2753,
+    "margin": 8.78125,
+    "top10": [
+      {
+        "token": 43,
+        "text": "L",
+        "logit": 25.734375
+      },
+      {
+        "token": 2753,
+        "text": "No",
+        "logit": 16.953125
+      },
+      {
+        "token": 41,
+        "text": "J",
+        "logit": 15.796875
+      },
+      {
+        "token": 35,
+        "text": "D",
+        "logit": 15.78125
+      },
+      {
+        "token": 22286,
+        "text": "David",
+        "logit": 15.4296875
+      },
+      {
+        "token": 8747,
+        "text": "La",
+        "logit": 15.3359375
+      },
+      {
+        "token": 60850,
+        "text": "Led",
+        "logit": 15.2578125
+      },
+      {
+        "token": 69030,
+        "text": " Lad",
+        "logit": 15.1640625
+      },
+      {
+        "token": 49,
+        "text": "R",
+        "logit": 15.03125
+      },
+      {
+        "token": 54,
+        "text": "W",
+        "logit": 14.9453125
+      }
+    ],
+    "reference_top1": 43,
+    "reference_top2": 2753,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      25.734375,
+      16.953125
+    ],
+    "reference_pair_margin": 8.78125,
+    "fp16_margin": 8.78125,
+    "id": "56e1ded7cd28a01900c67bd4",
+    "input_token_ids_sha256": "47d87e9eb703828ac7143c0abaff0f48d137c504c0e8eec2cc747cac2d211458"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 4439,
+    "top2": 26227,
+    "margin": 0.859375,
+    "top10": [
+      {
+        "token": 4439,
+        "text": "graph",
+        "logit": 21.90625
+      },
+      {
+        "token": 26227,
+        "text": "NP",
+        "logit": 21.046875
+      },
+      {
+        "token": 11212,
+        "text": "Graph",
+        "logit": 18.84375
+      },
+      {
+        "token": 4243,
+        "text": "dis",
+        "logit": 18.265625
+      },
+      {
+        "token": 43,
+        "text": "L",
+        "logit": 17.640625
+      },
+      {
+        "token": 47,
+        "text": "P",
+        "logit": 17.1875
+      },
+      {
+        "token": 4839,
+        "text": "Dis",
+        "logit": 17.09375
+      },
+      {
+        "token": 45,
+        "text": "N",
+        "logit": 16.609375
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 16.59375
+      },
+      {
+        "token": 3486,
+        "text": "Integer",
+        "logit": 16.265625
+      }
+    ],
+    "reference_top1": 4439,
+    "reference_top2": 26227,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      21.90625,
+      21.046875
+    ],
+    "reference_pair_margin": 0.859375,
+    "fp16_margin": 0.859375,
+    "id": "56e1ded7cd28a01900c67bd5",
+    "input_token_ids_sha256": "9469b9d4526907905a93f7f5dac2a8796573d7b50c8e16f79cc3113cb0c8132f"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 11662,
+    "top2": 1782,
+    "margin": 0.8125,
+    "top10": [
+      {
+        "token": 11662,
+        "text": "integer",
+        "logit": 21.09375
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 20.28125
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 20.140625
+      },
+      {
+        "token": 4243,
+        "text": "dis",
+        "logit": 19.0625
+      },
+      {
+        "token": 4439,
+        "text": "graph",
+        "logit": 18.484375
+      },
+      {
+        "token": 396,
+        "text": "int",
+        "logit": 18.140625
+      },
+      {
+        "token": 3486,
+        "text": "Integer",
+        "logit": 17.71875
+      },
+      {
+        "token": 81035,
+        "text": "integral",
+        "logit": 16.03125
+      },
+      {
+        "token": 276,
+        "text": "an",
+        "logit": 15.9453125
+      },
+      {
+        "token": 4839,
+        "text": "Dis",
+        "logit": 15.9140625
+      }
+    ],
+    "reference_top1": 11662,
+    "reference_top2": 1782,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      21.09375,
+      20.28125
+    ],
+    "reference_pair_margin": 0.8125,
+    "fp16_margin": 0.8125,
+    "id": "56e1ded7cd28a01900c67bd6",
+    "input_token_ids_sha256": "573ee4877c147e4f5858683c2bda8da16583b46e835597d3962ef85229d3a820"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 11662,
+    "top2": 785,
+    "margin": 2.546875,
+    "top10": [
+      {
+        "token": 11662,
+        "text": "integer",
+        "logit": 24.59375
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 22.046875
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 21.6875
+      },
+      {
+        "token": 396,
+        "text": "int",
+        "logit": 21.34375
+      },
+      {
+        "token": 3486,
+        "text": "Integer",
+        "logit": 20.5
+      },
+      {
+        "token": 32338,
+        "text": "prime",
+        "logit": 18.171875
+      },
+      {
+        "token": 87414,
+        "text": "(integer",
+        "logit": 17.359375
+      },
+      {
+        "token": 81035,
+        "text": "integral",
+        "logit": 17.078125
+      },
+      {
+        "token": 4082,
+        "text": "number",
+        "logit": 16.203125
+      },
+      {
+        "token": 649,
+        "text": "pr",
+        "logit": 16.1875
+      }
+    ],
+    "reference_top1": 11662,
+    "reference_top2": 785,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      24.59375,
+      22.046875
+    ],
+    "reference_pair_margin": 2.546875,
+    "fp16_margin": 2.546875,
+    "id": "56e1ec83cd28a01900c67c0a",
+    "input_token_ids_sha256": "f27ae60623e89dd0a831aa798185e93759a834b6fe8f5fa9e7a0bbf9a62d9331"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 74,
+    "top2": 77,
+    "margin": 1.703125,
+    "top10": [
+      {
+        "token": 74,
+        "text": "k",
+        "logit": 22.46875
+      },
+      {
+        "token": 77,
+        "text": "n",
+        "logit": 20.765625
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 18.59375
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 18.015625
+      },
+      {
+        "token": 37591,
+        "text": "factor",
+        "logit": 18.015625
+      },
+      {
+        "token": 21,
+        "text": "6",
+        "logit": 17.84375
+      },
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 17.671875
+      },
+      {
+        "token": 68,
+        "text": "e",
+        "logit": 17.671875
+      },
+      {
+        "token": 2152,
+        "text": "no",
+        "logit": 17.375
+      },
+      {
+        "token": 17,
+        "text": "2",
+        "logit": 16.90625
+      }
+    ],
+    "reference_top1": 74,
+    "reference_top2": 77,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      22.46875,
+      20.765625
+    ],
+    "reference_pair_margin": 1.703125,
+    "fp16_margin": 1.703125,
+    "id": "56e1ec83cd28a01900c67c0b",
+    "input_token_ids_sha256": "9d20672f41fd296ec778c9ba9273ac5429016a214d5d7bffb319757cab007b6a"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 49789,
+    "top2": 2753,
+    "margin": 1.46875,
+    "top10": [
+      {
+        "token": 49789,
+        "text": "modern",
+        "logit": 20.171875
+      },
+      {
+        "token": 2753,
+        "text": "No",
+        "logit": 18.703125
+      },
+      {
+        "token": 2152,
+        "text": "no",
+        "logit": 17.765625
+      },
+      {
+        "token": 73564,
+        "text": "RSA",
+        "logit": 17.734375
+      },
+      {
+        "token": 48125,
+        "text": "crypt",
+        "logit": 17.65625
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 17.5
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 17.265625
+      },
+      {
+        "token": 66,
+        "text": "c",
+        "logit": 17.015625
+      },
+      {
+        "token": 34,
+        "text": "C",
+        "logit": 16.375
+      },
+      {
+        "token": 9896,
+        "text": "pol",
+        "logit": 16.15625
+      }
+    ],
+    "reference_top1": 49789,
+    "reference_top2": 2753,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      20.171875,
+      18.703125
+    ],
+    "reference_pair_margin": 1.46875,
+    "fp16_margin": 1.46875,
+    "id": "56e1ec83cd28a01900c67c0c",
+    "input_token_ids_sha256": "445f34b6ca351f66cc901f4d7181b7b956ad8250155fa750c4d11700a769f14c"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 1782,
+    "top2": 24595,
+    "margin": 0.046875,
+    "top10": [
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 19.84375
+      },
+      {
+        "token": 24595,
+        "text": "general",
+        "logit": 19.796875
+      },
+      {
+        "token": 2016,
+        "text": "Sh",
+        "logit": 19.015625
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 18.796875
+      },
+      {
+        "token": 2753,
+        "text": "No",
+        "logit": 17.671875
+      },
+      {
+        "token": 2152,
+        "text": "no",
+        "logit": 17.421875
+      },
+      {
+        "token": 9896,
+        "text": "pol",
+        "logit": 17.265625
+      },
+      {
+        "token": 11662,
+        "text": "integer",
+        "logit": 17.15625
+      },
+      {
+        "token": 15415,
+        "text": "General",
+        "logit": 16.828125
+      },
+      {
+        "token": 4082,
+        "text": "number",
+        "logit": 15.90625
+      }
+    ],
+    "reference_top1": 1782,
+    "reference_top2": 24595,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      19.84375,
+      19.796875
+    ],
+    "reference_pair_margin": 0.046875,
+    "fp16_margin": 0.046875,
+    "id": "56e1ec83cd28a01900c67c0e",
+    "input_token_ids_sha256": "e6c0ba57b924cd95b16b259fdf020572741fd50febe9acdd61d8fcf7ef0dcc19"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 258,
+    "top2": 327,
+    "margin": 2.265625,
+    "top10": [
+      {
+        "token": 258,
+        "text": "in",
+        "logit": 22.734375
+      },
+      {
+        "token": 327,
+        "text": "ex",
+        "logit": 20.46875
+      },
+      {
+        "token": 641,
+        "text": "In",
+        "logit": 19.34375
+      },
+      {
+        "token": 840,
+        "text": "Ex",
+        "logit": 18.6875
+      },
+      {
+        "token": 3257,
+        "text": "EX",
+        "logit": 17.484375
+      },
+      {
+        "token": 687,
+        "text": "IN",
+        "logit": 16.84375
+      },
+      {
+        "token": 2144,
+        "text": "tract",
+        "logit": 16.71875
+      },
+      {
+        "token": 6280,
+        "text": "non",
+        "logit": 16.1875
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 15.734375
+      },
+      {
+        "token": 26227,
+        "text": "NP",
+        "logit": 15.359375
+      }
+    ],
+    "reference_top1": 258,
+    "reference_top2": 327,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      22.734375,
+      20.46875
+    ],
+    "reference_pair_margin": 2.265625,
+    "fp16_margin": 2.265625,
+    "id": "56e1fc57e3433e140042322c",
+    "input_token_ids_sha256": "c8db69d0b1346fed652805890818d932ac74b30b646223c58354f468d379ae52"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 327,
+    "top2": 258,
+    "margin": 0.03125,
+    "top10": [
+      {
+        "token": 327,
+        "text": "ex",
+        "logit": 21.140625
+      },
+      {
+        "token": 258,
+        "text": "in",
+        "logit": 21.109375
+      },
+      {
+        "token": 840,
+        "text": "Ex",
+        "logit": 20.765625
+      },
+      {
+        "token": 641,
+        "text": "In",
+        "logit": 19.796875
+      },
+      {
+        "token": 3257,
+        "text": "EX",
+        "logit": 18.953125
+      },
+      {
+        "token": 26227,
+        "text": "NP",
+        "logit": 17.859375
+      },
+      {
+        "token": 687,
+        "text": "IN",
+        "logit": 16.640625
+      },
+      {
+        "token": 47,
+        "text": "P",
+        "logit": 16.53125
+      },
+      {
+        "token": 9896,
+        "text": "pol",
+        "logit": 16.296875
+      },
+      {
+        "token": 95340,
+        "text": "problems",
+        "logit": 16.09375
+      }
+    ],
+    "reference_top1": 327,
+    "reference_top2": 258,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      21.140625,
+      21.109375
+    ],
+    "reference_pair_margin": 0.03125,
+    "fp16_margin": 0.03125,
+    "id": "56e1fc57e3433e140042322f",
+    "input_token_ids_sha256": "dca1e75fc7746992b1149483ac56aa15ed7ce88a9b26c9778ace6bc230d2a507"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 258,
+    "top2": 327,
+    "margin": 1.296875,
+    "top10": [
+      {
+        "token": 258,
+        "text": "in",
+        "logit": 22.53125
+      },
+      {
+        "token": 327,
+        "text": "ex",
+        "logit": 21.234375
+      },
+      {
+        "token": 840,
+        "text": "Ex",
+        "logit": 19.65625
+      },
+      {
+        "token": 641,
+        "text": "In",
+        "logit": 19.640625
+      },
+      {
+        "token": 26227,
+        "text": "NP",
+        "logit": 19.3125
+      },
+      {
+        "token": 3257,
+        "text": "EX",
+        "logit": 18.6875
+      },
+      {
+        "token": 687,
+        "text": "IN",
+        "logit": 17.59375
+      },
+      {
+        "token": 47,
+        "text": "P",
+        "logit": 16.78125
+      },
+      {
+        "token": 95340,
+        "text": "problems",
+        "logit": 16.40625
+      },
+      {
+        "token": 2144,
+        "text": "tract",
+        "logit": 15.828125
+      }
+    ],
+    "reference_top1": 258,
+    "reference_top2": 327,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      22.53125,
+      21.234375
+    ],
+    "reference_pair_margin": 1.296875,
+    "fp16_margin": 1.296875,
+    "id": "56e1fc57e3433e1400423230",
+    "input_token_ids_sha256": "db6682eb0e366b8d108ca9f1c8601d45793cb2e9bbdc06edfa552dd3fc9efa18"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 13079,
+    "top2": 5050,
+    "margin": 5.375,
+    "top10": [
+      {
+        "token": 13079,
+        "text": "John",
+        "logit": 24.984375
+      },
+      {
+        "token": 5050,
+        "text": "My",
+        "logit": 19.609375
+      },
+      {
+        "token": 29187,
+        "text": "Ray",
+        "logit": 17.734375
+      },
+      {
+        "token": 3757,
+        "text": " John",
+        "logit": 16.5
+      },
+      {
+        "token": 87860,
+        "text": "Johnny",
+        "logit": 15.640625
+      },
+      {
+        "token": 41,
+        "text": "J",
+        "logit": 15.5625
+      },
+      {
+        "token": 33,
+        "text": "B",
+        "logit": 15.34375
+      },
+      {
+        "token": 49,
+        "text": "R",
+        "logit": 14.953125
+      },
+      {
+        "token": 47817,
+        "text": "john",
+        "logit": 14.9140625
+      },
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 14.7109375
+      }
+    ],
+    "reference_top1": 13079,
+    "reference_top2": 5050,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      24.984375,
+      19.609375
+    ],
+    "reference_pair_margin": 5.375,
+    "fp16_margin": 5.375,
+    "id": "56e2042ecd28a01900c67c1e",
+    "input_token_ids_sha256": "eb9ad35d985f2b4bf2306d8efec78768d05e4b0b8ff10d9d535ac8be8abcd922"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 16,
+    "top2": 5050,
+    "margin": 5.578125,
+    "top10": [
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 24.328125
+      },
+      {
+        "token": 5050,
+        "text": "My",
+        "logit": 18.75
+      },
+      {
+        "token": 29187,
+        "text": "Ray",
+        "logit": 17.984375
+      },
+      {
+        "token": 2408,
+        "text": "my",
+        "logit": 16.1875
+      },
+      {
+        "token": 49,
+        "text": "R",
+        "logit": 16.03125
+      },
+      {
+        "token": 17,
+        "text": "2",
+        "logit": 15.9921875
+      },
+      {
+        "token": 13079,
+        "text": "John",
+        "logit": 15.515625
+      },
+      {
+        "token": 56,
+        "text": "Y",
+        "logit": 15.4453125
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 14.8203125
+      },
+      {
+        "token": 7,
+        "text": "(",
+        "logit": 14.6484375
+      }
+    ],
+    "reference_top1": 16,
+    "reference_top2": 5050,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      24.328125,
+      18.75
+    ],
+    "reference_pair_margin": 5.578125,
+    "fp16_margin": 5.578125,
+    "id": "56e2042ecd28a01900c67c1f",
+    "input_token_ids_sha256": "4dc76b25def46f230ff5eb946d5857528c725293b66f0bb909677bfe0f1e33d7"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 29187,
+    "top2": 56,
+    "margin": 0.015625,
+    "top10": [
+      {
+        "token": 29187,
+        "text": "Ray",
+        "logit": 20.4375
+      },
+      {
+        "token": 56,
+        "text": "Y",
+        "logit": 20.421875
+      },
+      {
+        "token": 49,
+        "text": "R",
+        "logit": 19.0625
+      },
+      {
+        "token": 15986,
+        "text": "His",
+        "logit": 19.0625
+      },
+      {
+        "token": 1519,
+        "text": "He",
+        "logit": 17.84375
+      },
+      {
+        "token": 41215,
+        "text": "Richard",
+        "logit": 15.9765625
+      },
+      {
+        "token": 39,
+        "text": "H",
+        "logit": 15.640625
+      },
+      {
+        "token": 88,
+        "text": "y",
+        "logit": 15.15625
+      },
+      {
+        "token": 13079,
+        "text": "John",
+        "logit": 15.1484375
+      },
+      {
+        "token": 33,
+        "text": "B",
+        "logit": 15.0
+      }
+    ],
+    "reference_top1": 29187,
+    "reference_top2": 56,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      20.4375,
+      20.421875
+    ],
+    "reference_pair_margin": 0.015625,
+    "fp16_margin": 0.015625,
+    "id": "56e2042ecd28a01900c67c20",
+    "input_token_ids_sha256": "04074b4e51d893b2fa79410ac26bf63a5ab30250a894b32568fbfd93de77d1cc"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 34586,
+    "top2": 4851,
+    "margin": 0.4375,
+    "top10": [
+      {
+        "token": 34586,
+        "text": "problem",
+        "logit": 21.21875
+      },
+      {
+        "token": 4851,
+        "text": "instance",
+        "logit": 20.78125
+      },
+      {
+        "token": 47825,
+        "text": "instances",
+        "logit": 20.6875
+      },
+      {
+        "token": 64,
+        "text": "a",
+        "logit": 19.921875
+      },
+      {
+        "token": 32,
+        "text": "A",
+        "logit": 19.640625
+      },
+      {
+        "token": 276,
+        "text": "an",
+        "logit": 18.984375
+      },
+      {
+        "token": 258,
+        "text": "in",
+        "logit": 18.8125
+      },
+      {
+        "token": 13573,
+        "text": "inf",
+        "logit": 18.78125
+      },
+      {
+        "token": 1355,
+        "text": "input",
+        "logit": 18.640625
+      },
+      {
+        "token": 95340,
+        "text": "problems",
+        "logit": 18.1875
+      }
+    ],
+    "reference_top1": 34586,
+    "reference_top2": 4851,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      21.21875,
+      20.78125
+    ],
+    "reference_pair_margin": 0.4375,
+    "fp16_margin": 0.4375,
+    "id": "5ad5364c5b96ef001a10ab90",
+    "input_token_ids_sha256": "57af4c65596cf1c6af0a9d1b2228e959a9bfb0bf4af9e8a0ed8a2511cca73f76"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 34586,
+    "top2": 1355,
+    "margin": 1.015625,
+    "top10": [
+      {
+        "token": 34586,
+        "text": "problem",
+        "logit": 21.0625
+      },
+      {
+        "token": 1355,
+        "text": "input",
+        "logit": 20.046875
+      },
+      {
+        "token": 49460,
+        "text": "solution",
+        "logit": 19.640625
+      },
+      {
+        "token": 64,
+        "text": "a",
+        "logit": 19.375
+      },
+      {
+        "token": 4851,
+        "text": "instance",
+        "logit": 19.09375
+      },
+      {
+        "token": 258,
+        "text": "in",
+        "logit": 18.203125
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 17.984375
+      },
+      {
+        "token": 13573,
+        "text": "inf",
+        "logit": 17.90625
+      },
+      {
+        "token": 276,
+        "text": "an",
+        "logit": 17.859375
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 17.453125
+      }
+    ],
+    "reference_top1": 34586,
+    "reference_top2": 1355,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      21.0625,
+      20.046875
+    ],
+    "reference_pair_margin": 1.015625,
+    "fp16_margin": 1.015625,
+    "id": "5ad5364c5b96ef001a10ab91",
+    "input_token_ids_sha256": "63150b790050d9c02413c5b8ba8399accfdf9d4ba3f5f12485f2f930d2f93d42"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 4851,
+    "top2": 49460,
+    "margin": 0.890625,
+    "top10": [
+      {
+        "token": 4851,
+        "text": "instance",
+        "logit": 21.046875
+      },
+      {
+        "token": 49460,
+        "text": "solution",
+        "logit": 20.15625
+      },
+      {
+        "token": 64,
+        "text": "a",
+        "logit": 19.65625
+      },
+      {
+        "token": 34586,
+        "text": "problem",
+        "logit": 19.234375
+      },
+      {
+        "token": 32,
+        "text": "A",
+        "logit": 18.140625
+      },
+      {
+        "token": 276,
+        "text": "an",
+        "logit": 18.140625
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 17.9375
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 17.65625
+      },
+      {
+        "token": 2523,
+        "text": "Instance",
+        "logit": 17.546875
+      },
+      {
+        "token": 31198,
+        "text": "Problem",
+        "logit": 17.0625
+      }
+    ],
+    "reference_top1": 4851,
+    "reference_top2": 49460,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      21.046875,
+      20.15625
+    ],
+    "reference_pair_margin": 0.890625,
+    "fp16_margin": 0.890625,
+    "id": "5ad5364c5b96ef001a10ab92",
+    "input_token_ids_sha256": "f447ff574c03d1782ff25a3baa24bc7d70d2adf0b5f88e5226e95177b6b1f118"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 1,
+    "top2": 2152,
+    "margin": 0.15625,
+    "top10": [
+      {
+        "token": 1,
+        "text": "\"",
+        "logit": 22.015625
+      },
+      {
+        "token": 2152,
+        "text": "no",
+        "logit": 21.859375
+      },
+      {
+        "token": 49460,
+        "text": "solution",
+        "logit": 20.34375
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 19.265625
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 18.9375
+      },
+      {
+        "token": 9693,
+        "text": "yes",
+        "logit": 18.796875
+      },
+      {
+        "token": 2753,
+        "text": "No",
+        "logit": 18.53125
+      },
+      {
+        "token": 56693,
+        "text": "\"a",
+        "logit": 18.0625
+      },
+      {
+        "token": 64,
+        "text": "a",
+        "logit": 17.921875
+      },
+      {
+        "token": 29133,
+        "text": "\"A",
+        "logit": 17.390625
+      }
+    ],
+    "reference_top1": 1,
+    "reference_top2": 2152,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      22.015625,
+      21.859375
+    ],
+    "reference_pair_margin": 0.15625,
+    "fp16_margin": 0.15625,
+    "id": "5ad5364c5b96ef001a10ab93",
+    "input_token_ids_sha256": "1e889fa1856959614ba0f943976506678a8494ace6743c1b29a363ce52ed3e1e"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 4851,
+    "top2": 1355,
+    "margin": 0.53125,
+    "top10": [
+      {
+        "token": 4851,
+        "text": "instance",
+        "logit": 20.078125
+      },
+      {
+        "token": 1355,
+        "text": "input",
+        "logit": 19.546875
+      },
+      {
+        "token": 49460,
+        "text": "solution",
+        "logit": 19.171875
+      },
+      {
+        "token": 64,
+        "text": "a",
+        "logit": 19.0625
+      },
+      {
+        "token": 276,
+        "text": "an",
+        "logit": 18.5625
+      },
+      {
+        "token": 34586,
+        "text": "problem",
+        "logit": 17.984375
+      },
+      {
+        "token": 258,
+        "text": "in",
+        "logit": 17.859375
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 17.4375
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 17.109375
+      },
+      {
+        "token": 64947,
+        "text": "comput",
+        "logit": 16.953125
+      }
+    ],
+    "reference_top1": 4851,
+    "reference_top2": 1355,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      20.078125,
+      19.546875
+    ],
+    "reference_pair_margin": 0.53125,
+    "fp16_margin": 0.53125,
+    "id": "5ad5364c5b96ef001a10ab94",
+    "input_token_ids_sha256": "0e80ed759e17830cb39205d0e174330b87edd266d64d6e6f3e312c5436826c67"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 1688,
+    "top2": 63938,
+    "margin": 1.09375,
+    "top10": [
+      {
+        "token": 1688,
+        "text": "function",
+        "logit": 21.96875
+      },
+      {
+        "token": 63938,
+        "text": "decision",
+        "logit": 20.875
+      },
+      {
+        "token": 77976,
+        "text": "multip",
+        "logit": 19.53125
+      },
+      {
+        "token": 32981,
+        "text": "trip",
+        "logit": 19.109375
+      },
+      {
+        "token": 8169,
+        "text": "dec",
+        "logit": 19.015625
+      },
+      {
+        "token": 21409,
+        "text": "functions",
+        "logit": 18.65625
+      },
+      {
+        "token": 376,
+        "text": "tr",
+        "logit": 18.46875
+      },
+      {
+        "token": 746,
+        "text": "set",
+        "logit": 18.359375
+      },
+      {
+        "token": 25875,
+        "text": "mult",
+        "logit": 17.421875
+      },
+      {
+        "token": 396,
+        "text": "int",
+        "logit": 17.1875
+      }
+    ],
+    "reference_top1": 1688,
+    "reference_top2": 63938,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      21.96875,
+      20.875
+    ],
+    "reference_pair_margin": 1.09375,
+    "fp16_margin": 1.09375,
+    "id": "5ad53f815b96ef001a10abe4",
+    "input_token_ids_sha256": "db30daaad8b6c07219a01fe74ff1ab3280afa54d0b97ac1e6652c91dd64a71e6"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 32981,
+    "top2": 376,
+    "margin": 1.9375,
+    "top10": [
+      {
+        "token": 32981,
+        "text": "trip",
+        "logit": 25.359375
+      },
+      {
+        "token": 376,
+        "text": "tr",
+        "logit": 23.421875
+      },
+      {
+        "token": 83,
+        "text": "t",
+        "logit": 19.90625
+      },
+      {
+        "token": 77976,
+        "text": "multip",
+        "logit": 19.5
+      },
+      {
+        "token": 82826,
+        "text": "Triple",
+        "logit": 19.46875
+      },
+      {
+        "token": 746,
+        "text": "set",
+        "logit": 18.9375
+      },
+      {
+        "token": 7624,
+        "text": "(tr",
+        "logit": 18.84375
+      },
+      {
+        "token": 396,
+        "text": "int",
+        "logit": 18.546875
+      },
+      {
+        "token": 7,
+        "text": "(",
+        "logit": 18.390625
+      },
+      {
+        "token": 27856,
+        "text": "three",
+        "logit": 18.375
+      }
+    ],
+    "reference_top1": 32981,
+    "reference_top2": 376,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      25.359375,
+      23.421875
+    ],
+    "reference_pair_margin": 1.9375,
+    "fp16_margin": 1.9375,
+    "id": "5ad53f815b96ef001a10abe5",
+    "input_token_ids_sha256": "0f1e1f5a0e178c2167342493279ac81f195de44355ad3660eacb6209905a5a58"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 32981,
+    "top2": 376,
+    "margin": 0.890625,
+    "top10": [
+      {
+        "token": 32981,
+        "text": "trip",
+        "logit": 21.8125
+      },
+      {
+        "token": 376,
+        "text": "tr",
+        "logit": 20.921875
+      },
+      {
+        "token": 64,
+        "text": "a",
+        "logit": 19.890625
+      },
+      {
+        "token": 77976,
+        "text": "multip",
+        "logit": 19.71875
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 19.125
+      },
+      {
+        "token": 1688,
+        "text": "function",
+        "logit": 17.4375
+      },
+      {
+        "token": 66,
+        "text": "c",
+        "logit": 17.34375
+      },
+      {
+        "token": 63938,
+        "text": "decision",
+        "logit": 17.34375
+      },
+      {
+        "token": 25875,
+        "text": "mult",
+        "logit": 17.328125
+      },
+      {
+        "token": 57251,
+        "text": "Multip",
+        "logit": 17.171875
+      }
+    ],
+    "reference_top1": 32981,
+    "reference_top2": 376,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      21.8125,
+      20.921875
+    ],
+    "reference_pair_margin": 0.890625,
+    "fp16_margin": 0.890625,
+    "id": "5ad53f815b96ef001a10abe6",
+    "input_token_ids_sha256": "fcd0329693c1df65acfc49e4fb2e3070967c408cc4fe927a4597717ced03a6e0"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 1678,
+    "top2": 50171,
+    "margin": 3.75,
+    "top10": [
+      {
+        "token": 1678,
+        "text": "time",
+        "logit": 22.734375
+      },
+      {
+        "token": 50171,
+        "text": "communication",
+        "logit": 18.984375
+      },
+      {
+        "token": 874,
+        "text": "com",
+        "logit": 18.65625
+      },
+      {
+        "token": 23247,
+        "text": "complex",
+        "logit": 18.578125
+      },
+      {
+        "token": 8746,
+        "text": "space",
+        "logit": 18.515625
+      },
+      {
+        "token": 1462,
+        "text": "Time",
+        "logit": 18.3125
+      },
+      {
+        "token": 2152,
+        "text": "no",
+        "logit": 17.28125
+      },
+      {
+        "token": 64947,
+        "text": "comput",
+        "logit": 17.078125
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 17.0
+      },
+      {
+        "token": 31137,
+        "text": "Complex",
+        "logit": 16.953125
+      }
+    ],
+    "reference_top1": 1678,
+    "reference_top2": 50171,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      22.734375,
+      18.984375
+    ],
+    "reference_pair_margin": 3.75,
+    "fp16_margin": 3.75,
+    "id": "5ad54b035b96ef001a10ac52",
+    "input_token_ids_sha256": "cd0f63bddd7170fcdc11ed9daf662323e4fbb760bbabd363fdf718666c378d98"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 50171,
+    "top2": 1678,
+    "margin": 0.515625,
+    "top10": [
+      {
+        "token": 50171,
+        "text": "communication",
+        "logit": 20.78125
+      },
+      {
+        "token": 1678,
+        "text": "time",
+        "logit": 20.265625
+      },
+      {
+        "token": 65411,
+        "text": "Communication",
+        "logit": 18.296875
+      },
+      {
+        "token": 2753,
+        "text": "No",
+        "logit": 17.8125
+      },
+      {
+        "token": 2152,
+        "text": "no",
+        "logit": 17.671875
+      },
+      {
+        "token": 63938,
+        "text": "decision",
+        "logit": 17.09375
+      },
+      {
+        "token": 43310,
+        "text": "communications",
+        "logit": 17.015625
+      },
+      {
+        "token": 1575,
+        "text": "other",
+        "logit": 16.734375
+      },
+      {
+        "token": 8169,
+        "text": "dec",
+        "logit": 16.71875
+      },
+      {
+        "token": 874,
+        "text": "com",
+        "logit": 16.5625
+      }
+    ],
+    "reference_top1": 50171,
+    "reference_top2": 1678,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      20.78125,
+      20.265625
+    ],
+    "reference_pair_margin": 0.515625,
+    "fp16_margin": 0.515625,
+    "id": "5ad54b035b96ef001a10ac53",
+    "input_token_ids_sha256": "7d464a5474ca65bccf938f94886808300e3de73ffb2ca2b43e657fe1abf373d1"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 50171,
+    "top2": 1678,
+    "margin": 1.703125,
+    "top10": [
+      {
+        "token": 50171,
+        "text": "communication",
+        "logit": 20.34375
+      },
+      {
+        "token": 1678,
+        "text": "time",
+        "logit": 18.640625
+      },
+      {
+        "token": 1575,
+        "text": "other",
+        "logit": 18.046875
+      },
+      {
+        "token": 65411,
+        "text": "Communication",
+        "logit": 17.9375
+      },
+      {
+        "token": 11409,
+        "text": "Other",
+        "logit": 17.625
+      },
+      {
+        "token": 4923,
+        "text": "Bl",
+        "logit": 17.265625
+      },
+      {
+        "token": 874,
+        "text": "com",
+        "logit": 16.890625
+      },
+      {
+        "token": 2024,
+        "text": "bl",
+        "logit": 16.53125
+      },
+      {
+        "token": 43310,
+        "text": "communications",
+        "logit": 16.21875
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 16.171875
+      }
+    ],
+    "reference_top1": 50171,
+    "reference_top2": 1678,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      20.34375,
+      18.640625
+    ],
+    "reference_pair_margin": 1.703125,
+    "fp16_margin": 1.703125,
+    "id": "5ad54b035b96ef001a10ac54",
+    "input_token_ids_sha256": "7e29fa683e1973f0d99b98537d66dfad2aaf86a81e6a3fc139f965043e6fa042"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 50171,
+    "top2": 63938,
+    "margin": 0.484375,
+    "top10": [
+      {
+        "token": 50171,
+        "text": "communication",
+        "logit": 22.078125
+      },
+      {
+        "token": 63938,
+        "text": "decision",
+        "logit": 21.59375
+      },
+      {
+        "token": 8169,
+        "text": "dec",
+        "logit": 19.953125
+      },
+      {
+        "token": 66,
+        "text": "c",
+        "logit": 19.0
+      },
+      {
+        "token": 43298,
+        "text": "circ",
+        "logit": 18.09375
+      },
+      {
+        "token": 1575,
+        "text": "other",
+        "logit": 17.71875
+      },
+      {
+        "token": 65411,
+        "text": "Communication",
+        "logit": 17.625
+      },
+      {
+        "token": 874,
+        "text": "com",
+        "logit": 17.15625
+      },
+      {
+        "token": 43310,
+        "text": "communications",
+        "logit": 16.390625
+      },
+      {
+        "token": 11409,
+        "text": "Other",
+        "logit": 16.21875
+      }
+    ],
+    "reference_top1": 50171,
+    "reference_top2": 63938,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      22.078125,
+      21.59375
+    ],
+    "reference_pair_margin": 0.484375,
+    "fp16_margin": 0.484375,
+    "id": "5ad54b035b96ef001a10ac55",
+    "input_token_ids_sha256": "93f0d2de69e7523958bd9dc8be47168e6810391188f9bd184eb28b3a964a3552"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 50171,
+    "top2": 66,
+    "margin": 1.78125,
+    "top10": [
+      {
+        "token": 50171,
+        "text": "communication",
+        "logit": 21.859375
+      },
+      {
+        "token": 66,
+        "text": "c",
+        "logit": 20.078125
+      },
+      {
+        "token": 63938,
+        "text": "decision",
+        "logit": 19.421875
+      },
+      {
+        "token": 65411,
+        "text": "Communication",
+        "logit": 18.890625
+      },
+      {
+        "token": 43298,
+        "text": "circ",
+        "logit": 18.125
+      },
+      {
+        "token": 8169,
+        "text": "dec",
+        "logit": 17.296875
+      },
+      {
+        "token": 34,
+        "text": "C",
+        "logit": 17.21875
+      },
+      {
+        "token": 43310,
+        "text": "communications",
+        "logit": 16.234375
+      },
+      {
+        "token": 874,
+        "text": "com",
+        "logit": 16.03125
+      },
+      {
+        "token": 4900,
+        "text": "Dec",
+        "logit": 15.546875
+      }
+    ],
+    "reference_top1": 50171,
+    "reference_top2": 66,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      21.859375,
+      20.078125
+    ],
+    "reference_pair_margin": 1.78125,
+    "fp16_margin": 1.78125,
+    "id": "5ad54b035b96ef001a10ac56",
+    "input_token_ids_sha256": "1f5a71e7a40f88bd8fc9e90024c170e55d7475d608930515fe42a28b77811c46"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 23247,
+    "top2": 31137,
+    "margin": 2.765625,
+    "top10": [
+      {
+        "token": 23247,
+        "text": "complex",
+        "logit": 21.90625
+      },
+      {
+        "token": 31137,
+        "text": "Complex",
+        "logit": 19.140625
+      },
+      {
+        "token": 3794,
+        "text": "framework",
+        "logit": 18.65625
+      },
+      {
+        "token": 874,
+        "text": "com",
+        "logit": 18.265625
+      },
+      {
+        "token": 1055,
+        "text": "of",
+        "logit": 18.03125
+      },
+      {
+        "token": 1040,
+        "text": "class",
+        "logit": 18.015625
+      },
+      {
+        "token": 18375,
+        "text": "definition",
+        "logit": 17.015625
+      },
+      {
+        "token": 3653,
+        "text": "typ",
+        "logit": 16.921875
+      },
+      {
+        "token": 32,
+        "text": "A",
+        "logit": 16.796875
+      },
+      {
+        "token": 64,
+        "text": "a",
+        "logit": 16.640625
+      }
+    ],
+    "reference_top1": 23247,
+    "reference_top2": 31137,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      21.90625,
+      19.140625
+    ],
+    "reference_pair_margin": 2.765625,
+    "fp16_margin": 2.765625,
+    "id": "5ad5501f5b96ef001a10ac90",
+    "input_token_ids_sha256": "26f0321e337eea88a703208ac278efe92e315fbce00775c63f0c4a2b5695653a"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 23247,
+    "top2": 31137,
+    "margin": 2.25,
+    "top10": [
+      {
+        "token": 23247,
+        "text": "complex",
+        "logit": 20.96875
+      },
+      {
+        "token": 31137,
+        "text": "Complex",
+        "logit": 18.71875
+      },
+      {
+        "token": 3794,
+        "text": "framework",
+        "logit": 18.421875
+      },
+      {
+        "token": 874,
+        "text": "com",
+        "logit": 18.109375
+      },
+      {
+        "token": 1055,
+        "text": "of",
+        "logit": 18.0625
+      },
+      {
+        "token": 3653,
+        "text": "typ",
+        "logit": 18.046875
+      },
+      {
+        "token": 1040,
+        "text": "class",
+        "logit": 17.640625
+      },
+      {
+        "token": 2124,
+        "text": "Of",
+        "logit": 16.953125
+      },
+      {
+        "token": 32,
+        "text": "A",
+        "logit": 16.703125
+      },
+      {
+        "token": 64,
+        "text": "a",
+        "logit": 16.421875
+      }
+    ],
+    "reference_top1": 23247,
+    "reference_top2": 31137,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      20.96875,
+      18.71875
+    ],
+    "reference_pair_margin": 2.25,
+    "fp16_margin": 2.25,
+    "id": "5ad5501f5b96ef001a10ac91",
+    "input_token_ids_sha256": "fdcf9d2d80cf808f53ef6595cb4d7cb2ba4437dbf34a438b0a80823612172895"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 23247,
+    "top2": 31137,
+    "margin": 3.046875,
+    "top10": [
+      {
+        "token": 23247,
+        "text": "complex",
+        "logit": 21.546875
+      },
+      {
+        "token": 31137,
+        "text": "Complex",
+        "logit": 18.5
+      },
+      {
+        "token": 874,
+        "text": "com",
+        "logit": 18.234375
+      },
+      {
+        "token": 14689,
+        "text": "some",
+        "logit": 17.34375
+      },
+      {
+        "token": 8373,
+        "text": "Some",
+        "logit": 17.140625
+      },
+      {
+        "token": 1055,
+        "text": "of",
+        "logit": 16.9375
+      },
+      {
+        "token": 5689,
+        "text": "comp",
+        "logit": 16.484375
+      },
+      {
+        "token": 1040,
+        "text": "class",
+        "logit": 16.4375
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 16.3125
+      },
+      {
+        "token": 6280,
+        "text": "non",
+        "logit": 16.25
+      }
+    ],
+    "reference_top1": 23247,
+    "reference_top2": 31137,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      21.546875,
+      18.5
+    ],
+    "reference_pair_margin": 3.046875,
+    "fp16_margin": 3.046875,
+    "id": "5ad5501f5b96ef001a10ac92",
+    "input_token_ids_sha256": "e162d9eb3b78001a285305e770f36db505792afc21b67cc8f7a5aaa63614e23c"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 18375,
+    "top2": 23247,
+    "margin": 0.3125,
+    "top10": [
+      {
+        "token": 18375,
+        "text": "definition",
+        "logit": 20.34375
+      },
+      {
+        "token": 23247,
+        "text": "complex",
+        "logit": 20.03125
+      },
+      {
+        "token": 9813,
+        "text": "variable",
+        "logit": 18.359375
+      },
+      {
+        "token": 18616,
+        "text": "variables",
+        "logit": 18.265625
+      },
+      {
+        "token": 31137,
+        "text": "Complex",
+        "logit": 18.140625
+      },
+      {
+        "token": 2152,
+        "text": "no",
+        "logit": 17.75
+      },
+      {
+        "token": 10398,
+        "text": "Definition",
+        "logit": 17.53125
+      },
+      {
+        "token": 48563,
+        "text": "definitions",
+        "logit": 17.25
+      },
+      {
+        "token": 874,
+        "text": "com",
+        "logit": 16.921875
+      },
+      {
+        "token": 2753,
+        "text": "No",
+        "logit": 16.5625
+      }
+    ],
+    "reference_top1": 18375,
+    "reference_top2": 23247,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      20.34375,
+      20.03125
+    ],
+    "reference_pair_margin": 0.3125,
+    "fp16_margin": 0.3125,
+    "id": "5ad5501f5b96ef001a10ac93",
+    "input_token_ids_sha256": "b75d18f9de2e0af8f08f89dfc5708628757ca5a7f20dab6275a451d17f3eb431"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 9896,
+    "top2": 2152,
+    "margin": 0.875,
+    "top10": [
+      {
+        "token": 9896,
+        "text": "pol",
+        "logit": 22.78125
+      },
+      {
+        "token": 2152,
+        "text": "no",
+        "logit": 21.90625
+      },
+      {
+        "token": 8996,
+        "text": "NO",
+        "logit": 19.4375
+      },
+      {
+        "token": 6280,
+        "text": "non",
+        "logit": 19.140625
+      },
+      {
+        "token": 2753,
+        "text": "No",
+        "logit": 18.453125
+      },
+      {
+        "token": 33435,
+        "text": "poly",
+        "logit": 18.1875
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 17.921875
+      },
+      {
+        "token": 14658,
+        "text": "Pol",
+        "logit": 17.90625
+      },
+      {
+        "token": 3562,
+        "text": "most",
+        "logit": 17.671875
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 17.65625
+      }
+    ],
+    "reference_top1": 9896,
+    "reference_top2": 2152,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      22.78125,
+      21.90625
+    ],
+    "reference_pair_margin": 0.875,
+    "fp16_margin": 0.875,
+    "id": "5ad5648b5b96ef001a10ad94",
+    "input_token_ids_sha256": "00ad0cc9e208474406f2c0e991fe1a8631c21c54c57341af69b4a1ed7d5b8c44"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 9896,
+    "top2": 33435,
+    "margin": 5.046875,
+    "top10": [
+      {
+        "token": 9896,
+        "text": "pol",
+        "logit": 25.109375
+      },
+      {
+        "token": 33435,
+        "text": "poly",
+        "logit": 20.0625
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 20.0
+      },
+      {
+        "token": 64,
+        "text": "a",
+        "logit": 19.46875
+      },
+      {
+        "token": 14658,
+        "text": "Pol",
+        "logit": 18.828125
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 18.640625
+      },
+      {
+        "token": 47311,
+        "text": " polynomial",
+        "logit": 18.015625
+      },
+      {
+        "token": 265,
+        "text": "re",
+        "logit": 17.8125
+      },
+      {
+        "token": 75153,
+        "text": " Polynomial",
+        "logit": 16.609375
+      },
+      {
+        "token": 32,
+        "text": "A",
+        "logit": 16.578125
+      }
+    ],
+    "reference_top1": 9896,
+    "reference_top2": 33435,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      25.109375,
+      20.0625
+    ],
+    "reference_pair_margin": 5.046875,
+    "fp16_margin": 5.046875,
+    "id": "5ad5648b5b96ef001a10ad95",
+    "input_token_ids_sha256": "5c411c68f669f85f40bb12aaa00473ab801295c6840a4e4c223bae2fcc572b32"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 611,
+    "top2": 77976,
+    "margin": 0.21875,
+    "top10": [
+      {
+        "token": 611,
+        "text": "div",
+        "logit": 20.625
+      },
+      {
+        "token": 77976,
+        "text": "multip",
+        "logit": 20.40625
+      },
+      {
+        "token": 28764,
+        "text": "division",
+        "logit": 20.078125
+      },
+      {
+        "token": 82,
+        "text": "s",
+        "logit": 19.421875
+      },
+      {
+        "token": 9896,
+        "text": "pol",
+        "logit": 19.328125
+      },
+      {
+        "token": 2152,
+        "text": "no",
+        "logit": 18.703125
+      },
+      {
+        "token": 396,
+        "text": "int",
+        "logit": 18.546875
+      },
+      {
+        "token": 11662,
+        "text": "integer",
+        "logit": 18.1875
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 18.015625
+      },
+      {
+        "token": 97407,
+        "text": "squ",
+        "logit": 18.0
+      }
+    ],
+    "reference_top1": 611,
+    "reference_top2": 77976,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      20.625,
+      20.40625
+    ],
+    "reference_pair_margin": 0.21875,
+    "fp16_margin": 0.21875,
+    "id": "5ad5648b5b96ef001a10ad96",
+    "input_token_ids_sha256": "678378054daa4efbf9ffd537b7028fd07fd2bd10dc669ca026b8dd7fa240c0d5"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 77976,
+    "top2": 9896,
+    "margin": 1.484375,
+    "top10": [
+      {
+        "token": 77976,
+        "text": "multip",
+        "logit": 21.921875
+      },
+      {
+        "token": 9896,
+        "text": "pol",
+        "logit": 20.4375
+      },
+      {
+        "token": 82,
+        "text": "s",
+        "logit": 19.59375
+      },
+      {
+        "token": 396,
+        "text": "int",
+        "logit": 18.453125
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 18.453125
+      },
+      {
+        "token": 276,
+        "text": "an",
+        "logit": 18.21875
+      },
+      {
+        "token": 983,
+        "text": "to",
+        "logit": 18.171875
+      },
+      {
+        "token": 64,
+        "text": "a",
+        "logit": 17.953125
+      },
+      {
+        "token": 19789,
+        "text": "two",
+        "logit": 17.953125
+      },
+      {
+        "token": 97407,
+        "text": "squ",
+        "logit": 17.84375
+      }
+    ],
+    "reference_top1": 77976,
+    "reference_top2": 9896,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      21.921875,
+      20.4375
+    ],
+    "reference_pair_margin": 1.484375,
+    "fp16_margin": 1.484375,
+    "id": "5ad5648b5b96ef001a10ad97",
+    "input_token_ids_sha256": "6aed8b01840633e719812bc9f2363aab0bcd78df78ae530870e698d2343ef733"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 77976,
+    "top2": 82,
+    "margin": 1.421875,
+    "top10": [
+      {
+        "token": 77976,
+        "text": "multip",
+        "logit": 23.875
+      },
+      {
+        "token": 82,
+        "text": "s",
+        "logit": 22.453125
+      },
+      {
+        "token": 97407,
+        "text": "squ",
+        "logit": 22.109375
+      },
+      {
+        "token": 57251,
+        "text": "Multip",
+        "logit": 19.4375
+      },
+      {
+        "token": 26268,
+        "text": "multi",
+        "logit": 18.515625
+      },
+      {
+        "token": 50,
+        "text": "S",
+        "logit": 18.203125
+      },
+      {
+        "token": 25875,
+        "text": "mult",
+        "logit": 18.03125
+      },
+      {
+        "token": 37476,
+        "text": "square",
+        "logit": 18.03125
+      },
+      {
+        "token": 64648,
+        "text": "multiply",
+        "logit": 17.140625
+      },
+      {
+        "token": 8167,
+        "text": " squ",
+        "logit": 17.046875
+      }
+    ],
+    "reference_top1": 77976,
+    "reference_top2": 82,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      23.875,
+      22.453125
+    ],
+    "reference_pair_margin": 1.421875,
+    "fp16_margin": 1.421875,
+    "id": "5ad5648b5b96ef001a10ad98",
+    "input_token_ids_sha256": "c40803a199554a347039b5b5599d4ac358a764525d03f1a23338d7569c0873fc"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 43,
+    "top2": 2753,
+    "margin": 6.515625,
+    "top10": [
+      {
+        "token": 43,
+        "text": "L",
+        "logit": 24.765625
+      },
+      {
+        "token": 2753,
+        "text": "No",
+        "logit": 18.25
+      },
+      {
+        "token": 41,
+        "text": "J",
+        "logit": 16.203125
+      },
+      {
+        "token": 47,
+        "text": "P",
+        "logit": 16.1875
+      },
+      {
+        "token": 35,
+        "text": "D",
+        "logit": 15.3515625
+      },
+      {
+        "token": 49,
+        "text": "R",
+        "logit": 15.2734375
+      },
+      {
+        "token": 54,
+        "text": "W",
+        "logit": 15.265625
+      },
+      {
+        "token": 22286,
+        "text": "David",
+        "logit": 15.1484375
+      },
+      {
+        "token": 13079,
+        "text": "John",
+        "logit": 14.9453125
+      },
+      {
+        "token": 69030,
+        "text": " Lad",
+        "logit": 14.90625
+      }
+    ],
+    "reference_top1": 43,
+    "reference_top2": 2753,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      24.765625,
+      18.25
+    ],
+    "reference_pair_margin": 6.515625,
+    "fp16_margin": 6.515625,
+    "id": "5ad568d35b96ef001a10ae1a",
+    "input_token_ids_sha256": "8b3df54448490bf2319a5e4c09ed92751aab2d97d1ef6a687e688573e1208ed9"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 4439,
+    "top2": 26227,
+    "margin": 1.6875,
+    "top10": [
+      {
+        "token": 4439,
+        "text": "graph",
+        "logit": 21.609375
+      },
+      {
+        "token": 26227,
+        "text": "NP",
+        "logit": 19.921875
+      },
+      {
+        "token": 11212,
+        "text": "Graph",
+        "logit": 18.890625
+      },
+      {
+        "token": 4243,
+        "text": "dis",
+        "logit": 18.328125
+      },
+      {
+        "token": 3486,
+        "text": "Integer",
+        "logit": 17.640625
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 17.625
+      },
+      {
+        "token": 11662,
+        "text": "integer",
+        "logit": 17.390625
+      },
+      {
+        "token": 4839,
+        "text": "Dis",
+        "logit": 17.203125
+      },
+      {
+        "token": 47,
+        "text": "P",
+        "logit": 17.140625
+      },
+      {
+        "token": 43,
+        "text": "L",
+        "logit": 16.9375
+      }
+    ],
+    "reference_top1": 4439,
+    "reference_top2": 26227,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      21.609375,
+      19.921875
+    ],
+    "reference_pair_margin": 1.6875,
+    "fp16_margin": 1.6875,
+    "id": "5ad568d35b96ef001a10ae1b",
+    "input_token_ids_sha256": "9293fbc20b5fa1e23d3a357b7536f8307f3a28a78bc6640ca76fc301d96a375f"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 11662,
+    "top2": 4243,
+    "margin": 1.078125,
+    "top10": [
+      {
+        "token": 11662,
+        "text": "integer",
+        "logit": 20.625
+      },
+      {
+        "token": 4243,
+        "text": "dis",
+        "logit": 19.546875
+      },
+      {
+        "token": 4439,
+        "text": "graph",
+        "logit": 19.515625
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 19.09375
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 19.0625
+      },
+      {
+        "token": 396,
+        "text": "int",
+        "logit": 18.109375
+      },
+      {
+        "token": 3486,
+        "text": "Integer",
+        "logit": 18.0625
+      },
+      {
+        "token": 4839,
+        "text": "Dis",
+        "logit": 16.3125
+      },
+      {
+        "token": 81035,
+        "text": "integral",
+        "logit": 16.1875
+      },
+      {
+        "token": 26227,
+        "text": "NP",
+        "logit": 16.046875
+      }
+    ],
+    "reference_top1": 11662,
+    "reference_top2": 4243,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      20.625,
+      19.546875
+    ],
+    "reference_pair_margin": 1.078125,
+    "fp16_margin": 1.078125,
+    "id": "5ad568d35b96ef001a10ae1c",
+    "input_token_ids_sha256": "07045ffa864ccf92d0c431a5a6eac9535d331f6a24828709ccdd203e132d238d"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 26227,
+    "top2": 4439,
+    "margin": 1.484375,
+    "top10": [
+      {
+        "token": 26227,
+        "text": "NP",
+        "logit": 21.46875
+      },
+      {
+        "token": 4439,
+        "text": "graph",
+        "logit": 19.984375
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 17.828125
+      },
+      {
+        "token": 4243,
+        "text": "dis",
+        "logit": 17.671875
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 17.5625
+      },
+      {
+        "token": 47,
+        "text": "P",
+        "logit": 16.609375
+      },
+      {
+        "token": 45,
+        "text": "N",
+        "logit": 16.5
+      },
+      {
+        "token": 396,
+        "text": "int",
+        "logit": 16.328125
+      },
+      {
+        "token": 6199,
+        "text": "np",
+        "logit": 16.296875
+      },
+      {
+        "token": 11662,
+        "text": "integer",
+        "logit": 16.03125
+      }
+    ],
+    "reference_top1": 26227,
+    "reference_top2": 4439,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      21.46875,
+      19.984375
+    ],
+    "reference_pair_margin": 1.484375,
+    "fp16_margin": 1.484375,
+    "id": "5ad568d35b96ef001a10ae1d",
+    "input_token_ids_sha256": "33d99f2a06b39143fbbf9137ed74047f7f44197f942a2a975419bb25207d83e9"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 11662,
+    "top2": 1782,
+    "margin": 1.53125,
+    "top10": [
+      {
+        "token": 11662,
+        "text": "integer",
+        "logit": 22.359375
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 20.828125
+      },
+      {
+        "token": 396,
+        "text": "int",
+        "logit": 20.0
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 19.671875
+      },
+      {
+        "token": 67,
+        "text": "d",
+        "logit": 19.140625
+      },
+      {
+        "token": 63938,
+        "text": "decision",
+        "logit": 18.84375
+      },
+      {
+        "token": 8169,
+        "text": "dec",
+        "logit": 18.484375
+      },
+      {
+        "token": 37591,
+        "text": "factor",
+        "logit": 18.015625
+      },
+      {
+        "token": 92648,
+        "text": "Determin",
+        "logit": 17.6875
+      },
+      {
+        "token": 3486,
+        "text": "Integer",
+        "logit": 17.0
+      }
+    ],
+    "reference_top1": 11662,
+    "reference_top2": 1782,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      22.359375,
+      20.828125
+    ],
+    "reference_pair_margin": 1.53125,
+    "fp16_margin": 1.53125,
+    "id": "5ad56aea5b96ef001a10ae48",
+    "input_token_ids_sha256": "a2db96cdfcbe79071074dca30d39b0c0719080222d3b2bb30da679fd91465a6f"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 2753,
+    "top2": 2152,
+    "margin": 0.1875,
+    "top10": [
+      {
+        "token": 2753,
+        "text": "No",
+        "logit": 20.34375
+      },
+      {
+        "token": 2152,
+        "text": "no",
+        "logit": 20.15625
+      },
+      {
+        "token": 9896,
+        "text": "pol",
+        "logit": 19.15625
+      },
+      {
+        "token": 8996,
+        "text": "NO",
+        "logit": 18.484375
+      },
+      {
+        "token": 63938,
+        "text": "decision",
+        "logit": 18.28125
+      },
+      {
+        "token": 11662,
+        "text": "integer",
+        "logit": 17.875
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 17.609375
+      },
+      {
+        "token": 3486,
+        "text": "Integer",
+        "logit": 17.375
+      },
+      {
+        "token": 26227,
+        "text": "NP",
+        "logit": 17.359375
+      },
+      {
+        "token": 1015,
+        "text": "co",
+        "logit": 17.015625
+      }
+    ],
+    "reference_top1": 2753,
+    "reference_top2": 2152,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      20.34375,
+      20.15625
+    ],
+    "reference_pair_margin": 0.1875,
+    "fp16_margin": 0.1875,
+    "id": "5ad56aea5b96ef001a10ae49",
+    "input_token_ids_sha256": "48a401b77f2eb5404a31f05bc1cec1d50f8411f140ceeee500777cd6530644af"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 2753,
+    "top2": 2152,
+    "margin": 0.4375,
+    "top10": [
+      {
+        "token": 2753,
+        "text": "No",
+        "logit": 20.21875
+      },
+      {
+        "token": 2152,
+        "text": "no",
+        "logit": 19.78125
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 19.515625
+      },
+      {
+        "token": 11662,
+        "text": "integer",
+        "logit": 18.96875
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 18.640625
+      },
+      {
+        "token": 3486,
+        "text": "Integer",
+        "logit": 18.453125
+      },
+      {
+        "token": 20661,
+        "text": "Factor",
+        "logit": 18.296875
+      },
+      {
+        "token": 8996,
+        "text": "NO",
+        "logit": 17.5625
+      },
+      {
+        "token": 9896,
+        "text": "pol",
+        "logit": 16.78125
+      },
+      {
+        "token": 37591,
+        "text": "factor",
+        "logit": 16.765625
+      }
+    ],
+    "reference_top1": 2753,
+    "reference_top2": 2152,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      20.21875,
+      19.78125
+    ],
+    "reference_pair_margin": 0.4375,
+    "fp16_margin": 0.4375,
+    "id": "5ad56aea5b96ef001a10ae4a",
+    "input_token_ids_sha256": "425160ab8de4f3b0877d9d7a08be2d04968c2a2fd8c02f2ea6bd4c302e1b02e2"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 11662,
+    "top2": 26227,
+    "margin": 0.375,
+    "top10": [
+      {
+        "token": 11662,
+        "text": "integer",
+        "logit": 20.734375
+      },
+      {
+        "token": 26227,
+        "text": "NP",
+        "logit": 20.359375
+      },
+      {
+        "token": 9896,
+        "text": "pol",
+        "logit": 20.296875
+      },
+      {
+        "token": 8996,
+        "text": "NO",
+        "logit": 20.234375
+      },
+      {
+        "token": 1015,
+        "text": "co",
+        "logit": 19.75
+      },
+      {
+        "token": 2152,
+        "text": "no",
+        "logit": 18.8125
+      },
+      {
+        "token": 3486,
+        "text": "Integer",
+        "logit": 18.578125
+      },
+      {
+        "token": 396,
+        "text": "int",
+        "logit": 18.5
+      },
+      {
+        "token": 2753,
+        "text": "No",
+        "logit": 18.3125
+      },
+      {
+        "token": 63938,
+        "text": "decision",
+        "logit": 17.203125
+      }
+    ],
+    "reference_top1": 11662,
+    "reference_top2": 26227,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      20.734375,
+      20.359375
+    ],
+    "reference_pair_margin": 0.375,
+    "fp16_margin": 0.375,
+    "id": "5ad56aea5b96ef001a10ae4b",
+    "input_token_ids_sha256": "4adfdd61075d6931336777c53566e493431bf8733a874f88e1afa516a064ab54"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 24595,
+    "top2": 2016,
+    "margin": 1.140625,
+    "top10": [
+      {
+        "token": 24595,
+        "text": "general",
+        "logit": 20.109375
+      },
+      {
+        "token": 2016,
+        "text": "Sh",
+        "logit": 18.96875
+      },
+      {
+        "token": 9896,
+        "text": "pol",
+        "logit": 18.359375
+      },
+      {
+        "token": 2753,
+        "text": "No",
+        "logit": 18.3125
+      },
+      {
+        "token": 2152,
+        "text": "no",
+        "logit": 18.234375
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 18.046875
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 17.625
+      },
+      {
+        "token": 15415,
+        "text": "General",
+        "logit": 17.015625
+      },
+      {
+        "token": 11662,
+        "text": "integer",
+        "logit": 16.203125
+      },
+      {
+        "token": 14658,
+        "text": "Pol",
+        "logit": 16.140625
+      }
+    ],
+    "reference_top1": 24595,
+    "reference_top2": 2016,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      20.109375,
+      18.96875
+    ],
+    "reference_pair_margin": 1.140625,
+    "fp16_margin": 1.140625,
+    "id": "5ad56aea5b96ef001a10ae4c",
+    "input_token_ids_sha256": "69adc5b61e1a1af97576f910d469a63f9e579a73224290a9a117f9182d871c6e"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 258,
+    "top2": 1336,
+    "margin": 2.109375,
+    "top10": [
+      {
+        "token": 258,
+        "text": "in",
+        "logit": 22.5625
+      },
+      {
+        "token": 1336,
+        "text": "Pro",
+        "logit": 20.453125
+      },
+      {
+        "token": 95340,
+        "text": "problems",
+        "logit": 20.0
+      },
+      {
+        "token": 327,
+        "text": "ex",
+        "logit": 19.65625
+      },
+      {
+        "token": 776,
+        "text": "pro",
+        "logit": 19.421875
+      },
+      {
+        "token": 641,
+        "text": "In",
+        "logit": 19.359375
+      },
+      {
+        "token": 41968,
+        "text": "given",
+        "logit": 18.78125
+      },
+      {
+        "token": 840,
+        "text": "Ex",
+        "logit": 18.640625
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 17.203125
+      },
+      {
+        "token": 983,
+        "text": "to",
+        "logit": 16.734375
+      }
+    ],
+    "reference_top1": 258,
+    "reference_top2": 1336,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      22.5625,
+      20.453125
+    ],
+    "reference_pair_margin": 2.109375,
+    "fp16_margin": 2.109375,
+    "id": "5ad56e5c5b96ef001a10ae9e",
+    "input_token_ids_sha256": "d42f9ddb552836ec1c85102853949575245c243641bc67647b948b53d2f3d4d7"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 9896,
+    "top2": 258,
+    "margin": 1.28125,
+    "top10": [
+      {
+        "token": 9896,
+        "text": "pol",
+        "logit": 20.328125
+      },
+      {
+        "token": 258,
+        "text": "in",
+        "logit": 19.046875
+      },
+      {
+        "token": 14658,
+        "text": "Pol",
+        "logit": 18.15625
+      },
+      {
+        "token": 327,
+        "text": "ex",
+        "logit": 18.0625
+      },
+      {
+        "token": 641,
+        "text": "In",
+        "logit": 17.484375
+      },
+      {
+        "token": 9309,
+        "text": "when",
+        "logit": 17.109375
+      },
+      {
+        "token": 3243,
+        "text": "only",
+        "logit": 17.0
+      },
+      {
+        "token": 1717,
+        "text": "less",
+        "logit": 16.640625
+      },
+      {
+        "token": 840,
+        "text": "Ex",
+        "logit": 16.59375
+      },
+      {
+        "token": 95340,
+        "text": "problems",
+        "logit": 16.421875
+      }
+    ],
+    "reference_top1": 9896,
+    "reference_top2": 258,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      20.328125,
+      19.046875
+    ],
+    "reference_pair_margin": 1.28125,
+    "fp16_margin": 1.28125,
+    "id": "5ad56e5c5b96ef001a10ae9f",
+    "input_token_ids_sha256": "3cb72921323af2dcbd3522160e4d22b4ffdb0b41bbc284aca30c3b1d6fc53a86"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 34,
+    "top2": 641,
+    "margin": 0.921875,
+    "top10": [
+      {
+        "token": 34,
+        "text": "C",
+        "logit": 20.703125
+      },
+      {
+        "token": 641,
+        "text": "In",
+        "logit": 19.78125
+      },
+      {
+        "token": 840,
+        "text": "Ex",
+        "logit": 19.0625
+      },
+      {
+        "token": 258,
+        "text": "in",
+        "logit": 18.71875
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 18.109375
+      },
+      {
+        "token": 1782,
+        "text": "the",
+        "logit": 17.59375
+      },
+      {
+        "token": 26227,
+        "text": "NP",
+        "logit": 17.40625
+      },
+      {
+        "token": 327,
+        "text": "ex",
+        "logit": 17.046875
+      },
+      {
+        "token": 31137,
+        "text": "Complex",
+        "logit": 16.953125
+      },
+      {
+        "token": 14658,
+        "text": "Pol",
+        "logit": 16.703125
+      }
+    ],
+    "reference_top1": 34,
+    "reference_top2": 641,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      20.703125,
+      19.78125
+    ],
+    "reference_pair_margin": 0.921875,
+    "fp16_margin": 0.921875,
+    "id": "5ad56e5c5b96ef001a10aea0",
+    "input_token_ids_sha256": "38e8e233a961bdaec33b25a6c28af6054136409e70a68c375667ab0e6f9750af"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 1204,
+    "top2": 9004,
+    "margin": 1.953125,
+    "top10": [
+      {
+        "token": 1204,
+        "text": "very",
+        "logit": 21.640625
+      },
+      {
+        "token": 9004,
+        "text": "small",
+        "logit": 19.6875
+      },
+      {
+        "token": 25756,
+        "text": "Very",
+        "logit": 17.78125
+      },
+      {
+        "token": 9309,
+        "text": "when",
+        "logit": 17.5
+      },
+      {
+        "token": 64,
+        "text": "a",
+        "logit": 16.5
+      },
+      {
+        "token": 4498,
+        "text": "When",
+        "logit": 16.4375
+      },
+      {
+        "token": 19,
+        "text": "4",
+        "logit": 16.390625
+      },
+      {
+        "token": 1717,
+        "text": "less",
+        "logit": 16.359375
+      },
+      {
+        "token": 258,
+        "text": "in",
+        "logit": 15.9140625
+      },
+      {
+        "token": 1958,
+        "text": "for",
+        "logit": 15.8984375
+      }
+    ],
+    "reference_top1": 1204,
+    "reference_top2": 9004,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      21.640625,
+      19.6875
+    ],
+    "reference_pair_margin": 1.953125,
+    "fp16_margin": 1.953125,
+    "id": "5ad56e5c5b96ef001a10aea1",
+    "input_token_ids_sha256": "7539e293318a5d359933c253bf3a47d52585d83885e51830b2b742d1bbe7730d"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 9896,
+    "top2": 14658,
+    "margin": 2.515625,
+    "top10": [
+      {
+        "token": 9896,
+        "text": "pol",
+        "logit": 21.71875
+      },
+      {
+        "token": 14658,
+        "text": "Pol",
+        "logit": 19.203125
+      },
+      {
+        "token": 327,
+        "text": "ex",
+        "logit": 19.1875
+      },
+      {
+        "token": 840,
+        "text": "Ex",
+        "logit": 18.234375
+      },
+      {
+        "token": 64,
+        "text": "a",
+        "logit": 17.328125
+      },
+      {
+        "token": 33435,
+        "text": "poly",
+        "logit": 16.625
+      },
+      {
+        "token": 32,
+        "text": "A",
+        "logit": 16.390625
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 16.359375
+      },
+      {
+        "token": 26227,
+        "text": "NP",
+        "logit": 16.171875
+      },
+      {
+        "token": 2152,
+        "text": "no",
+        "logit": 15.8359375
+      }
+    ],
+    "reference_top1": 9896,
+    "reference_top2": 14658,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      21.71875,
+      19.203125
+    ],
+    "reference_pair_margin": 2.515625,
+    "fp16_margin": 2.515625,
+    "id": "5ad56e5c5b96ef001a10aea2",
+    "input_token_ids_sha256": "44d214dfad04c8dbbda18531cbe756e1605418e870a0de09c22775b87828c77d"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 13079,
+    "top2": 29187,
+    "margin": 0.890625,
+    "top10": [
+      {
+        "token": 13079,
+        "text": "John",
+        "logit": 19.6875
+      },
+      {
+        "token": 29187,
+        "text": "Ray",
+        "logit": 18.796875
+      },
+      {
+        "token": 5050,
+        "text": "My",
+        "logit": 17.875
+      },
+      {
+        "token": 33,
+        "text": "B",
+        "logit": 17.59375
+      },
+      {
+        "token": 56,
+        "text": "Y",
+        "logit": 16.984375
+      },
+      {
+        "token": 49,
+        "text": "R",
+        "logit": 15.859375
+      },
+      {
+        "token": 1282,
+        "text": "Tr",
+        "logit": 15.5546875
+      },
+      {
+        "token": 15986,
+        "text": "His",
+        "logit": 15.3203125
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 14.609375
+      },
+      {
+        "token": 2753,
+        "text": "No",
+        "logit": 14.5625
+      }
+    ],
+    "reference_top1": 13079,
+    "reference_top2": 29187,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      19.6875,
+      18.796875
+    ],
+    "reference_pair_margin": 0.890625,
+    "fp16_margin": 0.890625,
+    "id": "5ad5719f5b96ef001a10aeec",
+    "input_token_ids_sha256": "e74895282e9d7f37d88b456cdb37c797ab679297985ed0c7c35bd6f16b3c4d48"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 13079,
+    "top2": 29187,
+    "margin": 2.078125,
+    "top10": [
+      {
+        "token": 13079,
+        "text": "John",
+        "logit": 21.890625
+      },
+      {
+        "token": 29187,
+        "text": "Ray",
+        "logit": 19.8125
+      },
+      {
+        "token": 5050,
+        "text": "My",
+        "logit": 19.359375
+      },
+      {
+        "token": 33,
+        "text": "B",
+        "logit": 16.765625
+      },
+      {
+        "token": 49,
+        "text": "R",
+        "logit": 16.375
+      },
+      {
+        "token": 56,
+        "text": "Y",
+        "logit": 15.1640625
+      },
+      {
+        "token": 41,
+        "text": "J",
+        "logit": 15.0859375
+      },
+      {
+        "token": 1282,
+        "text": "Tr",
+        "logit": 14.9140625
+      },
+      {
+        "token": 41215,
+        "text": "Richard",
+        "logit": 14.8203125
+      },
+      {
+        "token": 2408,
+        "text": "my",
+        "logit": 14.8046875
+      }
+    ],
+    "reference_top1": 13079,
+    "reference_top2": 29187,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      21.890625,
+      19.8125
+    ],
+    "reference_pair_margin": 2.078125,
+    "fp16_margin": 2.078125,
+    "id": "5ad5719f5b96ef001a10aeed",
+    "input_token_ids_sha256": "e7b7fd9ef5c2a4710c18e0a57ba3699d7dd63e8a137b5cc0ef8af5e9550d0a51"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 16,
+    "top2": 5050,
+    "margin": 5.4375,
+    "top10": [
+      {
+        "token": 16,
+        "text": "1",
+        "logit": 23.3125
+      },
+      {
+        "token": 5050,
+        "text": "My",
+        "logit": 17.875
+      },
+      {
+        "token": 13079,
+        "text": "John",
+        "logit": 16.125
+      },
+      {
+        "token": 2408,
+        "text": "my",
+        "logit": 15.71875
+      },
+      {
+        "token": 17,
+        "text": "2",
+        "logit": 15.3828125
+      },
+      {
+        "token": 49,
+        "text": "R",
+        "logit": 15.2890625
+      },
+      {
+        "token": 29187,
+        "text": "Ray",
+        "logit": 15.2265625
+      },
+      {
+        "token": 56,
+        "text": "Y",
+        "logit": 14.71875
+      },
+      {
+        "token": 7,
+        "text": "(",
+        "logit": 14.578125
+      },
+      {
+        "token": 785,
+        "text": "The",
+        "logit": 14.5390625
+      }
+    ],
+    "reference_top1": 16,
+    "reference_top2": 5050,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      23.3125,
+      17.875
+    ],
+    "reference_pair_margin": 5.4375,
+    "fp16_margin": 5.4375,
+    "id": "5ad5719f5b96ef001a10aeee",
+    "input_token_ids_sha256": "40f727eca90fd82fd006dc59c5b33ca3853a2b4fb584d6e5987ac51666db7212"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 15986,
+    "top2": 56,
+    "margin": 0.609375,
+    "top10": [
+      {
+        "token": 15986,
+        "text": "His",
+        "logit": 19.03125
+      },
+      {
+        "token": 56,
+        "text": "Y",
+        "logit": 18.421875
+      },
+      {
+        "token": 33,
+        "text": "B",
+        "logit": 18.109375
+      },
+      {
+        "token": 29187,
+        "text": "Ray",
+        "logit": 17.96875
+      },
+      {
+        "token": 49,
+        "text": "R",
+        "logit": 16.78125
+      },
+      {
+        "token": 13079,
+        "text": "John",
+        "logit": 16.421875
+      },
+      {
+        "token": 1519,
+        "text": "He",
+        "logit": 16.109375
+      },
+      {
+        "token": 1282,
+        "text": "Tr",
+        "logit": 14.9765625
+      },
+      {
+        "token": 39,
+        "text": "H",
+        "logit": 14.6953125
+      },
+      {
+        "token": 41215,
+        "text": "Richard",
+        "logit": 14.6171875
+      }
+    ],
+    "reference_top1": 15986,
+    "reference_top2": 56,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      19.03125,
+      18.421875
+    ],
+    "reference_pair_margin": 0.609375,
+    "fp16_margin": 0.609375,
+    "id": "5ad5719f5b96ef001a10aeef",
+    "input_token_ids_sha256": "216a2f136193bea362d6e1f5f8518ecb2adce5ba9e65b07576b6a071b485a29f"
+  },
+  {
+    "vocab_size": 151936,
+    "top1": 33,
+    "top2": 56,
+    "margin": 1.578125,
+    "top10": [
+      {
+        "token": 33,
+        "text": "B",
+        "logit": 19.4375
+      },
+      {
+        "token": 56,
+        "text": "Y",
+        "logit": 17.859375
+      },
+      {
+        "token": 29187,
+        "text": "Ray",
+        "logit": 17.421875
+      },
+      {
+        "token": 15986,
+        "text": "His",
+        "logit": 17.28125
+      },
+      {
+        "token": 13079,
+        "text": "John",
+        "logit": 17.21875
+      },
+      {
+        "token": 1282,
+        "text": "Tr",
+        "logit": 16.8125
+      },
+      {
+        "token": 51671,
+        "text": " Boris",
+        "logit": 16.78125
+      },
+      {
+        "token": 49,
+        "text": "R",
+        "logit": 15.453125
+      },
+      {
+        "token": 5050,
+        "text": "My",
+        "logit": 15.296875
+      },
+      {
+        "token": 1519,
+        "text": "He",
+        "logit": 15.1015625
+      }
+    ],
+    "reference_top1": 33,
+    "reference_top2": 56,
+    "reference_top1_rank": 1,
+    "reference_pair_logits": [
+      19.4375,
+      17.859375
+    ],
+    "reference_pair_margin": 1.578125,
+    "fp16_margin": 1.578125,
+    "id": "5ad5719f5b96ef001a10aef0",
+    "input_token_ids_sha256": "719f3cdc37c5edf47482cf16696299bd617cc421035a2a26387d025040bde0ac"
+  }
+]

@@ -1,0 +1,78 @@
+{
+  "status": "complete",
+  "started": "2026-10-03T19:13:13.151966+00:00",
+  "git_head": null,
+  "git_status": null,
+  "source_form": "archive; per-file source hashes identify code",
+  "argv": [
+    "/Users/yukaiyan/Documents/Codex/2026-10-04/github-readme-2027-ai-infra-1/work/release-prep/source-runtime-v1/experiments/qwen_confirmation.py",
+    "--model-root",
+    "/Users/yukaiyan/Documents/Codex/2026-10-04/github-readme-2027-ai-infra-1/work/inference-compression-lab/runs/release-models-v1",
+    "--output-dir",
+    "/Users/yukaiyan/Documents/Codex/2026-10-04/github-readme-2027-ai-infra-1/work/inference-compression-lab/results/qwen-confirmation-v1"
+  ],
+  "protocol_sha256": "c0b9e65db025055c53c2ee345625d498978485421e9398cf5c242f5af369c553",
+  "source_sha256": {
+    "experiments/prepare_qwen_confirmation.py": "9a8970964cfa60c6860fa0f1c1aa72ec4e40f651461fd7df08a4bee27199f588",
+    "experiments/prepare_qwen_prefix_model.py": "54dad1ef9fe275fb4856030b69eca3cbecd74ec500a873c4ef557f84d7613e8a",
+    "experiments/prepare_qwen_quantization_assets.py": "0a153e60264a6c9669cb920777e6895b4783b9f6e3a3eb14c37d7cc1c92e4179",
+    "experiments/qwen_cache_lifecycle.py": "2fb0cbfc32116d7eb9931b7dbd33f2651e046f8c7ca2df24cffee00b29eb25be",
+    "experiments/qwen_confirmation.py": "35c9dd27d2b4e03ad0945a833ebbb47bc09fd3d9f506b5cda97107eb78e126d0",
+    "experiments/qwen_direct_contract.py": "c7908d0d9829fac80b96e2787374c2021bc6aa4beedacddaace7b3542c1b343e",
+    "experiments/qwen_prefix_demo.py": "9afbedc5549b440d3a3aaf565e950df0b186de1b9b7e5c4f05f121440cd86d94",
+    "experiments/qwen_prefix_fair.py": "ed1b349098cbbfe89ed54fa0081fbaae9917638bcfd51951ed32bc3867ac3f1d",
+    "experiments/qwen_prefix_study.py": "b905635696c6b7cd88df993dfd6abab89be06765808a469667f1bd4065c739c5",
+    "experiments/qwen_prefix_trace.py": "30c8cb6137139e750a536a0da5620672e7df3f7c0149ece97536fbf1c82baeb1",
+    "experiments/qwen_quantization.py": "7e15fe4e5af77d737c098928c3979b16f337fffa0a38f628924a1d2a05fb2136",
+    "experiments/qwen_quantization_demo.py": "275c9ab879f8b8de24dc70487b529fe4bac0685ce90b026258d79f0ccc7626f3",
+    "experiments/verify_qwen_cache_lifecycle.py": "809d006e7392f79d50fd48982160ebffc8d8ace500db25a11875c12db34df5f1",
+    "experiments/verify_qwen_confirmation.py": "0886e4bdfaef88f62f9534a23f8972d29ff2743da345dab5a6563d2b90fc1f12",
+    "experiments/verify_qwen_prefix_fair.py": "e2b2be64dd90db62271f55b560e4c8c55e8a08fdd56681b64981ebb15ab20f6b",
+    "experiments/verify_qwen_quantization.py": "6fa24f41339366792023b3f9a454e1585c36290869e146ed2a08f651243e7f5b",
+    "lab/__init__.py": "0925f6ce613cb6c7f7eb3feba5cea6f47b47f653ea5b4de1d358915d43ea9a79",
+    "lab/artifact_integrity.py": "75c5f3b366bbb3bea6bcbc101c26398d57deba6c7b7751d05aa457b72109d8e8",
+    "lab/batching.py": "b26302f4e8b14bbd806ce5728fd46f5acbbb5c5900bf5e71b9ca2c06f327b11c",
+    "lab/benchmark.py": "58c207d0f8d15f1244b8c96154d70294ebc8ce883ada3d8e26fc227338774a9c",
+    "lab/confirmation.py": "82e9b11cff7f49e681f117afc50d4ec090e6a493d3b2dd527704540d7e0b111b",
+    "lab/evidence.py": "314c7a009fb2b740db1cb3925d538f7abcd8a8eb719c0d05efd0be71c0abb91d",
+    "lab/minilm_runtime.py": "50644d4a7fe136d3843b4dd6e7e869e0dc472531c4eb041679e9084445ecce3a",
+    "lab/model_identity.py": "4ffaf724539e5ab6677b11f53bf720f6267fc4ea9e7a5ed97ed0307cce367773",
+    "lab/prefix_cache.py": "9b20d6b50830ac347b7bf322775ffd51d93dc440f140f754e1d315d0d2da8909",
+    "lab/qa_metrics.py": "78c4af7f06ba49b3acddd2610586336ecf585c06d8ad89b46ff9fb6358aaaa1f",
+    "lab/quantization.py": "f95d68d84328a85883dca133ad6f05a27d9cbbd224e8005f095537be539c6601",
+    "lab/quantization_diagnostics.py": "947d5bf29b9c238c7330b75c1719044122e1f75c5fc8ad36cf5df1a05d95075f",
+    "lab/qwen_prefix.py": "18b5a77d85766d82d9f4159d9e1fe97a1cff61970ab79f5f0008ec300a6cd6c3"
+  },
+  "python": "3.12.11",
+  "os": "macOS-27.0-arm64-arm-64bit",
+  "packages": {
+    "mlx": "0.29.3",
+    "mlx-lm": "0.26.3",
+    "numpy": "2.5.3",
+    "transformers": "4.56.2",
+    "psutil": "7.0.0"
+  },
+  "model_identity_verified": {
+    "fp16": true,
+    "q4": true,
+    "q8": true,
+    "selected": true,
+    "control": true
+  },
+  "completed_variants": [
+    "fp16",
+    "q4",
+    "q8",
+    "selected",
+    "control"
+  ],
+  "device": {
+    "resource_limit": 499000,
+    "max_buffer_length": 30150672384,
+    "architecture": "applegpu_g16s",
+    "memory_size": 51539607552,
+    "max_recommended_working_set_size": 40200896512,
+    "device_name": "Apple M4 Max"
+  },
+  "finished": "2026-10-03T19:14:14.824859+00:00"
+}

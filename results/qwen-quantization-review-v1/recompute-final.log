@@ -1,0 +1,7 @@
+Verified: 144 interventions, 25 balanced fresh-process benchmarks.
+fp16 EM 19 /74; first-token flips 0
+q4 EM 16 /74; first-token flips 44
+q8 EM 18 /74; first-token flips 3
+selected EM 18 /74; first-token flips 35
+control EM 16 /74; first-token flips 43
+Exploratory candidate gate: {'checks': {'em_gain_vs_q4': True, 'em_gain_vs_control': True, 'em_vs_fp16': True, 'f1_vs_fp16': True, 'weight_vs_fp16': True, 'rss_vs_fp16': True, 'ttft_vs_q4': True, 'decode_vs_q4': True}, 'pass_all': True, 'scope': 'Exploratory dev-only candidate gate; not independent confirmation or deployment readiness.'}

@@ -1,0 +1,6 @@
+{
+  "mutation": "replace checksum manifest with empty object",
+  "old_verifier_accepted": true,
+  "still_recomputed_samples": 74,
+  "original_evidence_changed": false
+}

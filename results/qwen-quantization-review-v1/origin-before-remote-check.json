@@ -1,0 +1,12 @@
+{
+  "source_repo": "kimzclandi/SmallModelQAFinetuningAndQuantization",
+  "local_source_head": "2a469014b0e3e128fad485419fcd6171f007661d",
+  "source_metrics_sha256": "65e3c472761fda70a0e90b9f929a5c85508242eec6fe1259464d05738404c005",
+  "data_sha256": "8eb033584f81c1e5763c609fc6259678a550329dd9e72cdf89e4c806084c2a68",
+  "source_predictions": {
+    "fp16": "92f2979179a6b60664bf1af5d104d93ef9e555e17d9026044a5f86ec8f307425",
+    "q4": "04652f7eae8791612725ab2e63a5771a032cf601fe8b179ac0c1efd042661f81",
+    "q8": "1ccc147197fa3efcd52632e894d3079f02011fd38653791c3fb8e600ab078dd4"
+  },
+  "verification": "Original scripts.verify_quantization executed read-only on 2026-10-04 and passed. No historical model inference in that check."
+}

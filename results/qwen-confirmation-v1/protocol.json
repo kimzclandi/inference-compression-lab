@@ -1,0 +1,47 @@
+{
+  "schema": 1,
+  "model": "Qwen2.5-0.5B-Instruct",
+  "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "seed": 2026100402,
+  "data": "configs/qwen-confirmation/dataset/data.jsonl",
+  "data_sha256": "4b352f5923279ead7407a53e160d6d010de9bce2140b70133b4e75cb3fe9a970",
+  "prompt": "configs/qwen-prefix/source-qa-protocol.json",
+  "prompt_sha256": "7f490913d663f40d5248d59c0c09a899bbdbb6546e05c98fbdf7cdd47866aa13",
+  "variants": [
+    "fp16",
+    "q4",
+    "q8",
+    "selected",
+    "control"
+  ],
+  "blocks": {
+    "selected": 10,
+    "control": 22
+  },
+  "selection_frozen_sha256": "cc1db56bb4779bcd739b7a71af23b7f0d85419a1f21c70f5fe1c5a034f05b42f",
+  "quality": {
+    "greedy": true,
+    "max_new_tokens": 48,
+    "stop_at_eos": true,
+    "unchanged_scorer": "lab/qa_metrics.py",
+    "expected_n": 128,
+    "format_valid_warning": "Includes exact substring constraint; not a pure formatting measure."
+  },
+  "scorer_sha256": "78c4af7f06ba49b3acddd2610586336ecf585c06d8ad89b46ff9fb6358aaaa1f",
+  "bootstrap": {
+    "replicates": 5000,
+    "seed": 2026100402,
+    "unit": "normalized exact context/family",
+    "strata": "source_title",
+    "method": "Within each fixed article resample families with replacement; include all member questions; paired EM count difference divided by resampled row count. Equal-tail percentile interval via sorted indices floor((B-1)*0.025) and floor((B-1)*0.975).",
+    "interpretation": "Conditional on four selected articles. Not a population-wide guarantee."
+  },
+  "primary_confirmation_gate": {
+    "vs_q4": "Selected paired EM gain has 95% cluster-bootstrap lower bound > 0",
+    "vs_control": "Selected paired EM gain has 95% cluster-bootstrap lower bound > 0",
+    "f1_vs_fp16": "Selected F1 drop <= 0.02"
+  },
+  "stop_rule": "One evaluation per fixed variant; no reselection, retraining, prompt/scorer changes or sample replacement after observing outputs. Quality failure does not fail reproducible research artifact release; it blocks claiming confirmed benefit.",
+  "performance_scope": "No new speed claims on this cohort. Prior matched eight-prompt performance experiment remains a separate frozen workload.",
+  "dataset_boundary": "New to known project datasets; public SQuAD dev, not an official hidden test. Possible pretraining contamination; article domain shift relative to old dev."
+}

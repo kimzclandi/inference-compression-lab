@@ -1,0 +1,17 @@
+{
+  "fp16": {
+    "n": 74,
+    "token_mismatches": [],
+    "prompt_mismatches": []
+  },
+  "q4": {
+    "n": 74,
+    "token_mismatches": [],
+    "prompt_mismatches": []
+  },
+  "q8": {
+    "n": 74,
+    "token_mismatches": [],
+    "prompt_mismatches": []
+  }
+}
