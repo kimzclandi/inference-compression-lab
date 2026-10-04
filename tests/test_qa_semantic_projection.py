@@ -13,4 +13,6 @@ class ProjectionTests(unittest.TestCase):
         def fit(model,design,labels,*args,**kwargs):
             observed.append(design.copy());return original(model,design,labels,*args,**kwargs)
         with patch.object(LogisticRegression,'fit',fit):head=fit_head(x,y)
-        np.testing.assert_array_equal(observed[0],head.named_steps['features'].transform(x))
+        from threadpoolctl import threadpool_limits
+        with threadpool_limits(limits=1):
+            np.testing.assert_array_equal(observed[0],head.named_steps['features'].transform(x))
