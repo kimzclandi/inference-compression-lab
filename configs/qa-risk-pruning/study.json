@@ -18,7 +18,10 @@
     "results/qa-risk-v2/evaluation-int8/predictions.jsonl": "40aebcfc03a4aaae3fe8742dc93682a392824de3c763945aa06be419aa000397",
     "configs/qa-risk/dataset/train/data.jsonl": "fdadbc19b5b0d978971ead19e10469d0f92d76187fc923c904d1cf878b81a3a2",
     "configs/qa-risk/dataset/calibration/data.jsonl": "e98f650dc240ab14e84861e7f7dc3efbeb1da9b49c06079fcaaa1159860ca759",
-    "configs/qa-risk/dataset/evaluation/data.jsonl": "d5d1c2e80291bf203179a2151ae71276c00f966e00aa86bee9a054a707f3afef"
+    "configs/qa-risk/dataset/evaluation/data.jsonl": "d5d1c2e80291bf203179a2151ae71276c00f966e00aa86bee9a054a707f3afef",
+    "configs/qa-specialist/dataset/calibration/data.jsonl": "0e48a12509048b171c34d801661c8fe94d03fb8f578c399fabf4031a1d1f2eb5",
+    "results/qa-risk-v2/training/fp32-training-features.json": "55b9e2bb55963af2d0a7f5d6e802473519459aa3e4ac00c19f336ef7fb542336",
+    "results/qa-risk-v2/training/int8-training-features.json": "07e9b461c034085fd0a7ca5819906e914890dc71ede75f11513d64b3abfcbb55"
   },
   "correctness": {
     "development_rows": 768,
