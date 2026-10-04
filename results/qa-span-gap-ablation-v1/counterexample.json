@@ -1,0 +1,206 @@
+{
+  "scope": "Synthetic decoder-contract example, not QA evaluation",
+  "context": "Alpha Beta Alpha Gamma",
+  "prediction": {
+    "prediction": "Alpha",
+    "start": 0,
+    "end": 5,
+    "start_token": 1,
+    "end_token": 1,
+    "span_score": 10.0,
+    "start_logit": 5.0,
+    "end_logit": 5.0,
+    "window_index": 0,
+    "null_score": 0.0,
+    "margin": 10.0,
+    "cls_start_logit": 0.0,
+    "cls_end_logit": 0.0,
+    "confidence": 0.9999546021312976,
+    "context_sha256": "3119adb2d04a6b7b6b22a40614eaddfe70596bd8de5d4238e5f8b512e3691cc2",
+    "max_answer_tokens": 30,
+    "windows": [
+      {
+        "prediction": "Alpha",
+        "start": 0,
+        "end": 5,
+        "start_token": 1,
+        "end_token": 1,
+        "span_score": 10.0,
+        "start_logit": 5.0,
+        "end_logit": 5.0,
+        "window_index": 0,
+        "null_score": 0.0,
+        "margin": 10.0,
+        "cls_start_logit": 0.0,
+        "cls_end_logit": 0.0,
+        "confidence": 0.9999546021312976
+      },
+      {
+        "prediction": "Alpha",
+        "start": 11,
+        "end": 16,
+        "start_token": 1,
+        "end_token": 1,
+        "span_score": 9.5,
+        "start_logit": 4.75,
+        "end_logit": 4.75,
+        "window_index": 1,
+        "null_score": 0.0,
+        "margin": 9.5,
+        "cls_start_logit": 0.0,
+        "cls_end_logit": 0.0,
+        "confidence": 0.9999251537724895
+      }
+    ],
+    "raw_windows": [
+      {
+        "start_logits": [
+          0.0,
+          5.0,
+          0.0,
+          1.0
+        ],
+        "end_logits": [
+          0.0,
+          5.0,
+          0.0,
+          1.0
+        ],
+        "offsets": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            6,
+            10
+          ]
+        ],
+        "context_mask": [
+          false,
+          true,
+          false,
+          true
+        ],
+        "cls_index": 0
+      },
+      {
+        "start_logits": [
+          0.0,
+          4.75,
+          0.0,
+          4.5
+        ],
+        "end_logits": [
+          0.0,
+          4.75,
+          0.0,
+          4.5
+        ],
+        "offsets": [
+          [
+            0,
+            0
+          ],
+          [
+            11,
+            16
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            17,
+            22
+          ]
+        ],
+        "context_mask": [
+          false,
+          true,
+          false,
+          true
+        ],
+        "cls_index": 0
+      }
+    ]
+  },
+  "all_windows": {
+    "features": [
+      10.0,
+      -0.04948978027764461,
+      1.0,
+      0.6931471805599453,
+      1.0986122886681098
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "3119adb2d04a6b7b6b22a40614eaddfe70596bd8de5d4238e5f8b512e3691cc2",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "alpha",
+      "start_logsumexp": 5.024744890138822,
+      "end_logsumexp": 5.024744890138822,
+      "normalization_token_count": 3,
+      "alternative": {
+        "prediction": "Gamma",
+        "normalized": "gamma",
+        "margin": 9.0,
+        "window_index": 1,
+        "start_token": 3,
+        "end_token": 3,
+        "start": 17,
+        "end": 22
+      }
+    }
+  },
+  "selected_window": {
+    "features": [
+      10.0,
+      -0.04948978027764461,
+      8.0,
+      0.6931471805599453,
+      1.0986122886681098
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "3119adb2d04a6b7b6b22a40614eaddfe70596bd8de5d4238e5f8b512e3691cc2",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "alpha",
+      "start_logsumexp": 5.024744890138822,
+      "end_logsumexp": 5.024744890138822,
+      "normalization_token_count": 3,
+      "alternative": {
+        "prediction": "Beta",
+        "normalized": "beta",
+        "margin": 2.0,
+        "window_index": 0,
+        "start_token": 3,
+        "end_token": 3,
+        "start": 6,
+        "end": 10
+      },
+      "competitor_scope": "selected_window_only"
+    }
+  },
+  "explanation": "Alpha margin=10 wins. Duplicate Alpha at 9.5 is excluded by normalized answer identity. Global competitor Gamma=9 gives gap=1; selected-window competitor Beta=2 gives gap=8. Only the third feature changes."
+}

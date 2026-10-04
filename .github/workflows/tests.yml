@@ -34,3 +34,6 @@ jobs:
         run: |
           python results/qa-specialist-review-v1/independent/audit.py --root results/qa-specialist-v1 --output "$RUNNER_TEMP/independent-specialist.json"
           python results/qa-risk-review-v1/independent-feature-audit.py --training-dir results/qa-risk-v2/training --output "$RUNNER_TEMP/independent-risk-features.json"
+
+      - name: Development-only span-gap feature and calibration audit
+        run: python -m experiments.verify_span_gap_ablation --output "$RUNNER_TEMP/span-gap-audit.json"

@@ -1,0 +1,4866 @@
+[
+  {
+    "id": "56ddde6b9a695914005b962c",
+    "prediction": "10th",
+    "features": [
+      9.794562816619873,
+      -0.3951901366547803,
+      1.166374683380127,
+      1.0986122886681098,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "dd5c8526091ce0e937a062da23833808b4e54d9ce41cdc101173265b6a718bbd",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "10th",
+      "start_logsumexp": 6.90214596240007,
+      "end_logsumexp": 7.41755703741389,
+      "normalization_token_count": 164,
+      "alternative": {
+        "prediction": "10th century",
+        "normalized": "10th century",
+        "margin": 8.628188133239746,
+        "window_index": 0,
+        "start_token": 164,
+        "end_token": 166,
+        "start": 671,
+        "end": 683
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "56dde0ba66d3e219004dad76",
+    "prediction": "King Charles III of West Francia",
+    "features": [
+      -6.161828383803368,
+      -6.322480935718192,
+      0.5675950199365616,
+      2.0794415416798357,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "231a015181e1e06c442f571a8baa25ce2ec844e939e02b2955b0aee6945c648b",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "king charles iii of west francia",
+      "start_logsumexp": 3.0798094249255654,
+      "end_logsumexp": 3.5933903815516373,
+      "normalization_token_count": 207,
+      "alternative": {
+        "prediction": "King Charles III",
+        "normalized": "king charles iii",
+        "margin": -6.729423403739929,
+        "window_index": 0,
+        "start_token": 94,
+        "end_token": 96,
+        "start": 324,
+        "end": 340
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "56dde27d9a695914005b9651",
+    "prediction": "Norse",
+    "features": [
+      -3.9546631574630737,
+      -4.335199391882784,
+      0.9821277558803558,
+      0.6931471805599453,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "6cc34106bc6b1deb652e610973c798faa2caaaed6b16c99c39c6f5b49df3a196",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "norse",
+      "start_logsumexp": 2.9826233589951707,
+      "end_logsumexp": 3.5525583183871863,
+      "normalization_token_count": 109,
+      "alternative": {
+        "prediction": "Norse religion",
+        "normalized": "norse religion",
+        "margin": -4.93679091334343,
+        "window_index": 0,
+        "start_token": 24,
+        "end_token": 25,
+        "start": 78,
+        "end": 92
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "56de10b44396321400ee2593",
+    "prediction": "Afranji",
+    "features": [
+      8.667544722557068,
+      -0.08126657546636729,
+      3.4039266109466553,
+      1.3862943611198906,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "e80ce1ef7c64e3240017398f3333a9fece8bfa318dc05be5457d3ab870d07771",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "afranji",
+      "start_logsumexp": 5.797711727131872,
+      "end_logsumexp": 6.494399365088646,
+      "normalization_token_count": 187,
+      "alternative": {
+        "prediction": "Afranji, meaning \"Franks.\"",
+        "normalized": "afranji meaning franks",
+        "margin": 5.263618111610413,
+        "window_index": 0,
+        "start_token": 143,
+        "end_token": 151,
+        "start": 539,
+        "end": 565
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "56de11154396321400ee25aa",
+    "prediction": "Italo-Norman named Raoul",
+    "features": [
+      7.31871223449707,
+      -1.4561106885206625,
+      0.5887546539306641,
+      2.1972245773362196,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "b1d0c552c7191c039b4fd09d303a727030d84b6cc8c1731a2822fd79722b3862",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "italonorman named raoul",
+      "start_logsumexp": 6.1095558609427645,
+      "end_logsumexp": 6.943621230013201,
+      "normalization_token_count": 100,
+      "alternative": {
+        "prediction": "The Raoulii were descended from an Italo-Norman named Raoul",
+        "normalized": "raoulii were descended from italonorman named raoul",
+        "margin": 6.729957580566406,
+        "window_index": 0,
+        "start_token": 45,
+        "end_token": 60,
+        "start": 185,
+        "end": 244
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "56de1563cffd8e1900b4b5c3",
+    "prediction": "Dyrrachium",
+    "features": [
+      5.980819821357727,
+      -0.24233121385375433,
+      2.7924373149871826,
+      1.791759469228055,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "d352fae900cfd1fb07e900ce8c975e46f39748c746696de6bdeb051c5bc2580d",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "dyrrachium",
+      "start_logsumexp": 4.473359501928263,
+      "end_logsumexp": 4.988338262371048,
+      "normalization_token_count": 73,
+      "alternative": {
+        "prediction": "Dyrrachium, owing to the betrayal of high Byzantine officials. Some time later, Dyrrachium",
+        "normalized": "dyrrachium owing to betrayal of high byzantine officials some time later dyrrachium",
+        "margin": 3.1883825063705444,
+        "window_index": 0,
+        "start_token": 38,
+        "end_token": 61,
+        "start": 125,
+        "end": 215
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "56de15dbcffd8e1900b4b5cb",
+    "prediction": "Sweyn Forkbeard",
+    "features": [
+      -0.34964990615844727,
+      -1.585039094678157,
+      4.619640827178955,
+      1.6094379124341003,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "2040b02c1c6b01d5338300b80a1c0ae71f9b266eb95d141e6f008328e7ad6251",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "sweyn forkbeard",
+      "start_logsumexp": 3.762995423371355,
+      "end_logsumexp": 4.315118565258218,
+      "normalization_token_count": 133,
+      "alternative": {
+        "prediction": "Forkbeard",
+        "normalized": "forkbeard",
+        "margin": -4.969290733337402,
+        "window_index": 0,
+        "start_token": 106,
+        "end_token": 107,
+        "start": 486,
+        "end": 495
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "56de1645cffd8e1900b4b5d2",
+    "prediction": "Robert of Jumièges",
+    "features": [
+      9.422096729278564,
+      -0.051178254454359084,
+      3.7312264442443848,
+      1.9459101490553132,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "2eb036f29c316461f4c29577e8a7d145eaf561304aa07090de17f07637b9b838",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "robert of jumièges",
+      "start_logsumexp": 6.7733083528514975,
+      "end_logsumexp": 7.606849393790362,
+      "normalization_token_count": 158,
+      "alternative": {
+        "prediction": "Robert of Jumiè",
+        "normalized": "robert of jumiè",
+        "margin": 5.69087028503418,
+        "window_index": 0,
+        "start_token": 92,
+        "end_token": 96,
+        "start": 382,
+        "end": 397
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "56de16ca4396321400ee25c7",
+    "prediction": "1066",
+    "features": [
+      6.656644344329834,
+      -0.13907517684916115,
+      2.7648656368255615,
+      1.0986122886681098,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "b0cc267c558cbacbae71b948e32e72786e48630b11fbacff7f754248d31c02ee",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "1066",
+      "start_logsumexp": 5.413274882010011,
+      "end_logsumexp": 6.280483026467568,
+      "normalization_token_count": 115,
+      "alternative": {
+        "prediction": "In 1066",
+        "normalized": "in 1066",
+        "margin": 3.8917787075042725,
+        "window_index": 0,
+        "start_token": 10,
+        "end_token": 12,
+        "start": 0,
+        "end": 7
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "56de3cd0cffd8e1900b4b6bf",
+    "prediction": "Normans",
+    "features": [
+      7.756333231925964,
+      -2.0992034524861483,
+      0.17059755325317383,
+      1.0986122886681098,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "889592b3e637c0400bdbe22ed06f541a89a8b1c11477b6a55029e9af6bd2131d",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "normans",
+      "start_logsumexp": 5.728947305463169,
+      "end_logsumexp": 6.805565080281036,
+      "normalization_token_count": 225,
+      "alternative": {
+        "prediction": "Norman",
+        "normalized": "norman",
+        "margin": 7.5857356786727905,
+        "window_index": 0,
+        "start_token": 81,
+        "end_token": 81,
+        "start": 336,
+        "end": 342
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "56de3d594396321400ee26ca",
+    "prediction": "Hereford",
+    "features": [
+      10.793118000030518,
+      -0.013562594972476028,
+      7.032165467739105,
+      1.0986122886681098,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "5ff3ae0e9f5f03c7c4795cd17b5dcba5e7554d6e0137d3133bd31c7039a115f0",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "hereford",
+      "start_logsumexp": 7.451316107807595,
+      "end_logsumexp": 7.976775333905604,
+      "normalization_token_count": 67,
+      "alternative": {
+        "prediction": "earl of Hereford",
+        "normalized": "earl of hereford",
+        "margin": 3.7609525322914124,
+        "window_index": 0,
+        "start_token": 39,
+        "end_token": 43,
+        "start": 150,
+        "end": 166
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "56de3ebc4396321400ee26e6",
+    "prediction": "1097",
+    "features": [
+      9.055368185043335,
+      -0.043008557499735645,
+      4.868501305580139,
+      1.0986122886681098,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "d6b793bb23a351b7418793d96d8e3094c74522cf35f731653c539571da8529f6",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "1097",
+      "start_logsumexp": 6.863319714022229,
+      "end_logsumexp": 8.064935120332976,
+      "normalization_token_count": 114,
+      "alternative": {
+        "prediction": "in 1097",
+        "normalized": "in 1097",
+        "margin": 4.186866879463196,
+        "window_index": 0,
+        "start_token": 73,
+        "end_token": 75,
+        "start": 264,
+        "end": 271
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "56de3f784396321400ee26fc",
+    "prediction": "1191",
+    "features": [
+      5.790881633758545,
+      -0.16818247742351122,
+      4.445717692375183,
+      1.0986122886681098,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "7250341734ca75ae43d8f7cafbba939053160807e1106cee1d1a0c2b5bab85a2",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "1191",
+      "start_logsumexp": 5.60157489952261,
+      "end_logsumexp": 5.213032348256126,
+      "normalization_token_count": 141,
+      "alternative": {
+        "prediction": "April 1191",
+        "normalized": "april 1191",
+        "margin": 1.3451639413833618,
+        "window_index": 0,
+        "start_token": 14,
+        "end_token": 16,
+        "start": 3,
+        "end": 13
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "56de4a474396321400ee2786",
+    "prediction": "Channel Islands",
+    "features": [
+      5.741298198699951,
+      -0.8036659455250259,
+      0.9488945007324219,
+      1.0986122886681098,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "e5f87e55985983815a9352a8e3c2413035c4ebf26e931d9d4dbccd2d10f98bf9",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "channel islands",
+      "start_logsumexp": 5.998784823807257,
+      "end_logsumexp": 6.218517329298336,
+      "normalization_token_count": 122,
+      "alternative": {
+        "prediction": "in the Channel Islands",
+        "normalized": "in channel islands",
+        "margin": 4.792403697967529,
+        "window_index": 0,
+        "start_token": 38,
+        "end_token": 41,
+        "start": 148,
+        "end": 170
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "56de4bb84396321400ee27a2",
+    "prediction": "16th century",
+    "features": [
+      11.833953619003296,
+      -0.3175808466181431,
+      2.6114249229431152,
+      1.3862943611198906,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "2d5e9f304697ac88e70d959415ed2a0826e4e17344d07025e79fe80526e13c31",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "16th century",
+      "start_logsumexp": 7.732742236951309,
+      "end_logsumexp": 8.08806107518197,
+      "normalization_token_count": 91,
+      "alternative": {
+        "prediction": "in the 16th century",
+        "normalized": "in 16th century",
+        "margin": 9.22252869606018,
+        "window_index": 0,
+        "start_token": 16,
+        "end_token": 20,
+        "start": 28,
+        "end": 47
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "56de4c324396321400ee27ad",
+    "prediction": "Odo",
+    "features": [
+      11.343711137771606,
+      -0.13992770585862324,
+      2.361309051513672,
+      1.0986122886681098,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "0500dcf91ad6681a7202730d78e85eed22c2b829b1bfc4d44a2560223db14913",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "odo",
+      "start_logsumexp": 7.2840965676005505,
+      "end_logsumexp": 7.163630000715348,
+      "normalization_token_count": 75,
+      "alternative": {
+        "prediction": "Odo, the Bishop of Bayeux and first Earl of Kent",
+        "normalized": "odo bishop of bayeux and first earl of kent",
+        "margin": 8.982402086257935,
+        "window_index": 0,
+        "start_token": 47,
+        "end_token": 60,
+        "start": 139,
+        "end": 187
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "5725c071271a42140099d127",
+    "prediction": "along the middle of the continent",
+    "features": [
+      9.693554043769836,
+      -1.2465984734345428,
+      0.7738757133483887,
+      1.9459101490553132,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "bb8a76f08ce73953c6a06eda3ddc44cab30380cc4b6a0f4d40f518df582eefb4",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "along middle of continent",
+      "start_logsumexp": 6.333264477146428,
+      "end_logsumexp": 6.54026184891873,
+      "normalization_token_count": 116,
+      "alternative": {
+        "prediction": "along the middle of the continent by the Purus Arch",
+        "normalized": "along middle of continent by purus arch",
+        "margin": 8.919678330421448,
+        "window_index": 0,
+        "start_token": 34,
+        "end_token": 44,
+        "start": 86,
+        "end": 137
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5725c41eec44d21400f3d50d",
+    "prediction": "the rainforest was reduced to small, isolated refugia separated by open forest and grassland",
+    "features": [
+      4.699536442756653,
+      -2.2133394723744555,
+      0.2670762538909912,
+      2.995732273553991,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "f9de1761ee43bd39aac4d0aaaefcd20dbd13070f68926c9fb290571d325156b4",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "rainforest was reduced to small isolated refugia separated by open forest and grassland",
+      "start_logsumexp": 4.925710481679596,
+      "end_logsumexp": 5.290089232012608,
+      "normalization_token_count": 196,
+      "alternative": {
+        "prediction": "that the rainforest was reduced to small, isolated refugia separated by open forest and grassland",
+        "normalized": "that rainforest was reduced to small isolated refugia separated by open forest and grassland",
+        "margin": 4.432460188865662,
+        "window_index": 0,
+        "start_token": 114,
+        "end_token": 133,
+        "start": 539,
+        "end": 636
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "5725cf3238643c19005acd65",
+    "prediction": "Michael Heckenberger",
+    "features": [
+      6.565032362937927,
+      -1.1960814276814844,
+      0.43954944610595703,
+      1.6094379124341003,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "4e29e864fdfd291ba260b61248bc4aded067f95f96277117c78dcb8a7376f655",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "michael heckenberger",
+      "start_logsumexp": 5.73723443028329,
+      "end_logsumexp": 5.751323174613771,
+      "normalization_token_count": 133,
+      "alternative": {
+        "prediction": "Michael Heckenberger and colleagues of the University of Florida",
+        "normalized": "michael heckenberger and colleagues of university of florida",
+        "margin": 6.12548291683197,
+        "window_index": 0,
+        "start_token": 119,
+        "end_token": 129,
+        "start": 577,
+        "end": 641
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5725d16aec44d21400f3d61e",
+    "prediction": "one in five",
+    "features": [
+      8.964890956878662,
+      -0.6607887355641671,
+      2.259591579437256,
+      1.3862943611198906,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "e9030e5e203b110c1161f7cb8b77776f171a3a793ec1fafe8d14e2b9bc0dff07",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "one in five",
+      "start_logsumexp": 6.639163003541596,
+      "end_logsumexp": 7.354377482968616,
+      "normalization_token_count": 125,
+      "alternative": {
+        "prediction": "2,200",
+        "normalized": "2200",
+        "margin": 6.705299377441406,
+        "window_index": 0,
+        "start_token": 56,
+        "end_token": 58,
+        "start": 159,
+        "end": 164
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "572657d9dd62a815002e8231",
+    "prediction": "igneous, sedimentary, and metamorphic",
+    "features": [
+      1.7740004062652588,
+      -1.7446107662326762,
+      0.4435443878173828,
+      2.3978952727983707,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "a05eabc8f87fdca80834359f2972b2ffc1cf60d28eabf4521b6fbb77c0623996",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "igneous sedimentary and metamorphic",
+      "start_logsumexp": 4.248088518658151,
+      "end_logsumexp": 5.142232715866761,
+      "normalization_token_count": 225,
+      "alternative": {
+        "prediction": "metamorphic",
+        "normalized": "metamorphic",
+        "margin": 1.330456018447876,
+        "window_index": 0,
+        "start_token": 34,
+        "end_token": 36,
+        "start": 63,
+        "end": 74
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "57266193dd62a815002e832b",
+    "prediction": "outer core and inner core",
+    "features": [
+      2.311995029449463,
+      -2.140469655418082,
+      0.3953413963317871,
+      1.791759469228055,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "1a2af49f4a71ebbe6894aa6e81cdfdbb693ec13086cd52778cee2f5b92cbccf0",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "outer core and inner core",
+      "start_logsumexp": 4.484480555213192,
+      "end_logsumexp": 5.00736849473614,
+      "normalization_token_count": 168,
+      "alternative": {
+        "prediction": "inner core",
+        "normalized": "inner core",
+        "margin": 1.9166536331176758,
+        "window_index": 0,
+        "start_token": 118,
+        "end_token": 119,
+        "start": 482,
+        "end": 492
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "572663a9f1498d1400e8ddf2",
+    "prediction": "compresses the most recent era",
+    "features": [
+      -1.317624568939209,
+      -2.9578774105657235,
+      0.8062953948974609,
+      1.9459101490553132,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "36480f9ea6f7a385ac0f0d884f56e7f8ddc4af7f2b466bc2f55f70e5d2e107ae",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "compresses most recent era",
+      "start_logsumexp": 3.178571637515769,
+      "end_logsumexp": 4.130206661492948,
+      "normalization_token_count": 171,
+      "alternative": {
+        "prediction": "The second scale compresses the most recent era",
+        "normalized": "second scale compresses most recent era",
+        "margin": -2.12391996383667,
+        "window_index": 0,
+        "start_token": 64,
+        "end_token": 72,
+        "start": 258,
+        "end": 305
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "572665ff708984140094c4c6",
+    "prediction": "younger",
+    "features": [
+      -0.49828004837036133,
+      -2.27785208100343,
+      1.9785925149917603,
+      0.6931471805599453,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "e71eab6fb81f391a6f9f6f7ddf6a435221f7159360e4d7a0549e3b969d010395",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "younger",
+      "start_logsumexp": 3.844582158489141,
+      "end_logsumexp": 4.438677494306892,
+      "normalization_token_count": 104,
+      "alternative": {
+        "prediction": "older than the fault, and the ones that are not cut must be younger",
+        "normalized": "older than fault and ones that are not cut must be younger",
+        "margin": -2.4768725633621216,
+        "window_index": 0,
+        "start_token": 85,
+        "end_token": 99,
+        "start": 309,
+        "end": 376
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "57266c015951b619008f7237",
+    "prediction": "beginning of the 20th century",
+    "features": [
+      1.362274408340454,
+      -1.3180483069990467,
+      1.0833373069763184,
+      1.9459101490553132,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "08e7fcfae5bcd655caa1f38fd9fe71bc3ab1492d5cf003ea856a56fd67fbc23d",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "beginning of 20th century",
+      "start_logsumexp": 4.696523455253861,
+      "end_logsumexp": 5.170114319747505,
+      "normalization_token_count": 112,
+      "alternative": {
+        "prediction": "At the beginning of the 20th century",
+        "normalized": "at beginning of 20th century",
+        "margin": 0.27893710136413574,
+        "window_index": 0,
+        "start_token": 18,
+        "end_token": 25,
+        "start": 0,
+        "end": 36
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "5726701add62a815002e84c8",
+    "prediction": "horizontal",
+    "features": [
+      4.386639475822449,
+      -0.5701120723831083,
+      0.7477624416351318,
+      0.6931471805599453,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "b0cf21bf27f200003b49114240dd961527b95fe1ea1f273726d8d630f7506cf9",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "horizontal",
+      "start_logsumexp": 4.115773782603179,
+      "end_logsumexp": 4.280870415252952,
+      "normalization_token_count": 279,
+      "alternative": {
+        "prediction": "horizontal compression",
+        "normalized": "horizontal compression",
+        "margin": 3.638877034187317,
+        "window_index": 0,
+        "start_token": 24,
+        "end_token": 25,
+        "start": 33,
+        "end": 55
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "572671a5f1498d1400e8dfe5",
+    "prediction": "boudins",
+    "features": [
+      9.063467502593994,
+      -0.06165845582619767,
+      4.594749689102173,
+      1.3862943611198906,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "23d71dcbdc3d2eb58c4a11a2383b024a7098b0ccb3459c59f68be117a7c2b667",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "boudins",
+      "start_logsumexp": 7.6546219997509635,
+      "end_logsumexp": 8.258322390523476,
+      "normalization_token_count": 157,
+      "alternative": {
+        "prediction": "boudins, after the French word for \"sausage",
+        "normalized": "boudins after french word for sausage",
+        "margin": 4.468717813491821,
+        "window_index": 0,
+        "start_token": 153,
+        "end_token": 165,
+        "start": 683,
+        "end": 726
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "5726722bdd62a815002e852b",
+    "prediction": "356 ± 47 tonnes per hectare",
+    "features": [
+      7.235385179519653,
+      -0.23834802935984722,
+      2.1435203552246094,
+      2.0794415416798357,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "b88f2e98aa5ed39684015bb91e028e3f43f8a9f57f9434564aed6b294987397c",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "356 ± 47 tonnes per hectare",
+      "start_logsumexp": 5.960828146051233,
+      "end_logsumexp": 6.629097642097677,
+      "normalization_token_count": 132,
+      "alternative": {
+        "prediction": "356 ± 47 tonnes",
+        "normalized": "356 ± 47 tonnes",
+        "margin": 5.091864824295044,
+        "window_index": 0,
+        "start_token": 84,
+        "end_token": 87,
+        "start": 356,
+        "end": 371
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "572673f5708984140094c69c",
+    "prediction": "in areas that are being actively deformed",
+    "features": [
+      4.946519494056702,
+      -1.3264590325965537,
+      0.8164067268371582,
+      2.1972245773362196,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "76d92e92a6a95722d2402d8f47c5e55073f4f0002468a06046899e2b337d5a02",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "in areas that are being actively deformed",
+      "start_logsumexp": 4.2473794019731255,
+      "end_logsumexp": 5.040302994499771,
+      "normalization_token_count": 212,
+      "alternative": {
+        "prediction": "areas that are being actively deformed",
+        "normalized": "areas that are being actively deformed",
+        "margin": 4.1301127672195435,
+        "window_index": 0,
+        "start_token": 174,
+        "end_token": 180,
+        "start": 829,
+        "end": 867
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "572677e7708984140094c726",
+    "prediction": "soils, rivers, landscapes, and glaciers",
+    "features": [
+      3.8148491382598877,
+      -0.5669013660763911,
+      2.0179426670074463,
+      2.1972245773362196,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "d93c7d5b00d35e994837759344de468ee6476cff3aa4d621189ac8123a4b67db",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "soils rivers landscapes and glaciers",
+      "start_logsumexp": 5.053502948009754,
+      "end_logsumexp": 5.155779609320299,
+      "normalization_token_count": 120,
+      "alternative": {
+        "prediction": "modern soils, rivers, landscapes, and glaciers",
+        "normalized": "modern soils rivers landscapes and glaciers",
+        "margin": 1.7969064712524414,
+        "window_index": 0,
+        "start_token": 97,
+        "end_token": 105,
+        "start": 454,
+        "end": 500
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "57267947f1498d1400e8e0ed",
+    "prediction": "interference",
+    "features": [
+      -0.47575855255126953,
+      -2.2599889225944705,
+      0.4091513156890869,
+      0.6931471805599453,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "8b8190fdb07a1af9c1462db72bed5dbe5d3d2445992eda03965818ceb4ef0857",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "interference",
+      "start_logsumexp": 3.64162186430575,
+      "end_logsumexp": 5.216306549560693,
+      "normalization_token_count": 157,
+      "alternative": {
+        "prediction": "interference properties",
+        "normalized": "interference properties",
+        "margin": -0.8849098682403564,
+        "window_index": 0,
+        "start_token": 124,
+        "end_token": 125,
+        "start": 525,
+        "end": 548
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "57267d52708984140094c7d9",
+    "prediction": "Structural geologists",
+    "features": [
+      11.470534443855286,
+      -0.6037770241482079,
+      0.2065892219543457,
+      1.6094379124341003,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "ab6a56d5f9eb9f32fe7cbcd4297ecd8cbcee3a6a500f85ad70bb607c6bc05c7b",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "structural geologists",
+      "start_logsumexp": 7.234126074432432,
+      "end_logsumexp": 7.9388443129054735,
+      "normalization_token_count": 91,
+      "alternative": {
+        "prediction": "Structural",
+        "normalized": "structural",
+        "margin": 11.26394522190094,
+        "window_index": 0,
+        "start_token": 21,
+        "end_token": 22,
+        "start": 0,
+        "end": 10
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "57268066708984140094c821",
+    "prediction": "stratigraphers",
+    "features": [
+      7.196369171142578,
+      -0.15084529865275353,
+      3.7445571422576904,
+      1.6094379124341003,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "f6d8387f602dd77b227ab8b161d9456f7ad494c5903e27116d9f1009aba9d64b",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "stratigraphers",
+      "start_logsumexp": 6.048208889859656,
+      "end_logsumexp": 6.909558844553596,
+      "normalization_token_count": 131,
+      "alternative": {
+        "prediction": "In the laboratory, stratigraphers",
+        "normalized": "in laboratory stratigraphers",
+        "margin": 3.4518120288848877,
+        "window_index": 0,
+        "start_token": 19,
+        "end_token": 26,
+        "start": 0,
+        "end": 33
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "572683f95951b619008f7526",
+    "prediction": "Abu al-Rayhan al-Biruni",
+    "features": [
+      14.537225842475891,
+      -0.05434014581590141,
+      3.6933517456054688,
+      2.302585092994046,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "67afc3f9c17106ee04d8b927f7d7b05326e595ba6c0a85561c5a168c58bf0616",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "abu alrayhan albiruni",
+      "start_logsumexp": 8.409588326860849,
+      "end_logsumexp": 9.022244723618138,
+      "normalization_token_count": 231,
+      "alternative": {
+        "prediction": "Abu al-Rayhan",
+        "normalized": "abu alrayhan",
+        "margin": 10.843874096870422,
+        "window_index": 0,
+        "start_token": 67,
+        "end_token": 71,
+        "start": 184,
+        "end": 197
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "57268527708984140094c8c0",
+    "prediction": "Theory of the Earth",
+    "features": [
+      13.937809824943542,
+      -0.008880880412137415,
+      5.948480606079102,
+      1.6094379124341003,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "c65899f588f28ae99ef5f3d38d2aa89c81477ceeb9b5361a95c37457b815468d",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "theory of earth",
+      "start_logsumexp": 7.443729065963184,
+      "end_logsumexp": 7.7699452676655065,
+      "normalization_token_count": 113,
+      "alternative": {
+        "prediction": "entitled Theory of the Earth",
+        "normalized": "entitled theory of earth",
+        "margin": 7.989329218864441,
+        "window_index": 0,
+        "start_token": 39,
+        "end_token": 43,
+        "start": 89,
+        "end": 117
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "572686ac5951b619008f75ad",
+    "prediction": "Observations on the Geology of the United States",
+    "features": [
+      7.258617162704468,
+      -0.37211849996135804,
+      1.062758445739746,
+      2.3978952727983707,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "b7ccb0b6320d2cd26aec5b81f0bd352aac0617d45f9be1e73931429e79be605f",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "observations on geology of united states",
+      "start_logsumexp": 6.2653254889307,
+      "end_logsumexp": 6.144149387678607,
+      "normalization_token_count": 153,
+      "alternative": {
+        "prediction": "Observations on the Geology of the United States explanatory of a Geological Map",
+        "normalized": "observations on geology of united states explanatory of geological map",
+        "margin": 6.195858716964722,
+        "window_index": 0,
+        "start_token": 111,
+        "end_token": 125,
+        "start": 420,
+        "end": 500
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "57268882f1498d1400e8e309",
+    "prediction": "catastrophism",
+    "features": [
+      9.329088926315308,
+      -0.03587797483599431,
+      5.303209543228149,
+      1.3862943611198906,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "c2c90d7474f65aafbfb0673b1e8914d12583f3a0ae7de9054f81c8cd079800fe",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "catastrophism",
+      "start_logsumexp": 7.619144743654314,
+      "end_logsumexp": 8.406695809001505,
+      "normalization_token_count": 102,
+      "alternative": {
+        "prediction": "uniformitarianism. This theory states that slow geological processes have occurred throughout the Earth's history and are still occurring today. In contrast, catastrophism",
+        "normalized": "uniformitarianism this theory states that slow geological processes have occurred throughout earths history and are still occurring today in contrast catastrophism",
+        "margin": 4.025879383087158,
+        "window_index": 0,
+        "start_token": 54,
+        "end_token": 83,
+        "start": 180,
+        "end": 351
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "5727478cf1498d1400e8f59a",
+    "prediction": "lower sixth",
+    "features": [
+      11.803649663925171,
+      -0.1577519437974928,
+      4.826943635940552,
+      1.0986122886681098,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "a6bf93aaa317a4cbe3dd6095edaf3c9cad24ebd2270fecf0196ce024b0880c94",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "lower sixth",
+      "start_logsumexp": 8.358787407438278,
+      "end_logsumexp": 8.501118695905113,
+      "normalization_token_count": 156,
+      "alternative": {
+        "prediction": "sixth",
+        "normalized": "sixth",
+        "margin": 6.976706027984619,
+        "window_index": 0,
+        "start_token": 30,
+        "end_token": 30,
+        "start": 96,
+        "end": 101
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "5727482bf1498d1400e8f5a5",
+    "prediction": "Orthodox Christians",
+    "features": [
+      4.932452440261841,
+      -0.899785123635354,
+      0.46809887886047363,
+      1.0986122886681098,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "8ca6346e70d1467511f51f9602901b4dd742209975a436a04c0ea22ac490f86d",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "orthodox christians",
+      "start_logsumexp": 4.3804806173867075,
+      "end_logsumexp": 5.020351163810902,
+      "normalization_token_count": 118,
+      "alternative": {
+        "prediction": "Orthodox",
+        "normalized": "orthodox",
+        "margin": 4.464353561401367,
+        "window_index": 0,
+        "start_token": 134,
+        "end_token": 134,
+        "start": 654,
+        "end": 662
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "5727490bdd62a815002e9a82",
+    "prediction": "expulsion",
+    "features": [
+      0.2990148067474365,
+      -1.614049761080337,
+      0.28446435928344727,
+      0.6931471805599453,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "7d40046d35a495a564aa1049e78bbaf0c72f50500a115c58bba2db578b607cf8",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "expulsion",
+      "start_logsumexp": 4.794017318268476,
+      "end_logsumexp": 5.2929380786456015,
+      "normalization_token_count": 145,
+      "alternative": {
+        "prediction": "power of expulsion",
+        "normalized": "power of expulsion",
+        "margin": 0.014550447463989258,
+        "window_index": 0,
+        "start_token": 108,
+        "end_token": 110,
+        "start": 474,
+        "end": 492
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "57274971708984140094dbbd",
+    "prediction": "Sydney",
+    "features": [
+      8.552887439727783,
+      -0.060532713137881444,
+      5.749898791313171,
+      1.3862943611198906,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "f6f6d96dd4e446654b7841a39161d16203969d16c05d019d479a1f1657ab0896",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "sydney",
+      "start_logsumexp": 7.672104746908999,
+      "end_logsumexp": 8.308812373272339,
+      "normalization_token_count": 189,
+      "alternative": {
+        "prediction": "ydney",
+        "normalized": "ydney",
+        "margin": 2.802988648414612,
+        "window_index": 0,
+        "start_token": 161,
+        "end_token": 162,
+        "start": 681,
+        "end": 686
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "57274a8ff1498d1400e8f5bc",
+    "prediction": "Sonderungsverbot",
+    "features": [
+      3.868886947631836,
+      -0.35284533234360627,
+      3.23512601852417,
+      1.9459101490553132,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "c4b219e2fa6942ba9f303ff5bec6c539545d31cf8731fd264c58f85069b10c45",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "sonderungsverbot",
+      "start_logsumexp": 5.463671686024341,
+      "end_logsumexp": 6.230833192217703,
+      "normalization_token_count": 229,
+      "alternative": {
+        "prediction": "the so-called Sonderungsverbot",
+        "normalized": "socalled sonderungsverbot",
+        "margin": 0.633760929107666,
+        "window_index": 0,
+        "start_token": 147,
+        "end_token": 156,
+        "start": 619,
+        "end": 649
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "57274beff1498d1400e8f5e6",
+    "prediction": "30",
+    "features": [
+      4.857763886451721,
+      -0.24370675239906348,
+      2.8890936374664307,
+      0.6931471805599453,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "7164a06bbe7a859a1701acc5b96841f34611c92ab1541b17f9f20f5e6d21a0bf",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "30",
+      "start_logsumexp": 4.031949498264943,
+      "end_logsumexp": 4.558570217619838,
+      "normalization_token_count": 188,
+      "alternative": {
+        "prediction": "30 different Examination Boards",
+        "normalized": "30 different examination boards",
+        "margin": 1.9686702489852905,
+        "window_index": 0,
+        "start_token": 160,
+        "end_token": 163,
+        "start": 803,
+        "end": 834
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "57274d1cdd62a815002e9aae",
+    "prediction": "scoil phríobháideach",
+    "features": [
+      12.299536287784576,
+      -0.6787938556065409,
+      0.9070558547973633,
+      2.302585092994046,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "2a88a6e435244f1025c628b748e860ab699fad659a4359c6fb5c85d3ee365576",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "scoil phríobháideach",
+      "start_logsumexp": 6.880684846397951,
+      "end_logsumexp": 8.033976509513765,
+      "normalization_token_count": 194,
+      "alternative": {
+        "prediction": "scoil phríobháide",
+        "normalized": "scoil phríobháide",
+        "margin": 11.392480432987213,
+        "window_index": 0,
+        "start_token": 20,
+        "end_token": 27,
+        "start": 36,
+        "end": 53
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "57274d9bf1498d1400e8f5f6",
+    "prediction": "1957",
+    "features": [
+      11.220119833946228,
+      -0.009265513804227687,
+      7.7848124504089355,
+      0.6931471805599453,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "d3224d2a7c9b1fb0c025ab44b397ab073a37fb28162d6b3730660c29e767b600",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "1957",
+      "start_logsumexp": 6.7730968291962865,
+      "end_logsumexp": 7.163483442908722,
+      "normalization_token_count": 117,
+      "alternative": {
+        "prediction": "Malaysia's independence in 1957",
+        "normalized": "malaysias independence in 1957",
+        "margin": 3.4353073835372925,
+        "window_index": 0,
+        "start_token": 13,
+        "end_token": 17,
+        "start": 6,
+        "end": 37
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "57274e145951b619008f87eb",
+    "prediction": "Nepali",
+    "features": [
+      10.805023193359375,
+      -0.13160632289313057,
+      3.311140537261963,
+      1.0986122886681098,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "ef18442bdf437b3bbcd356b07c0f74d9141147b11850e926a227a44b0d66bf1c",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "nepali",
+      "start_logsumexp": 6.5288467836737,
+      "end_logsumexp": 7.401888548466257,
+      "normalization_token_count": 173,
+      "alternative": {
+        "prediction": "Nepali and/or the state's official language",
+        "normalized": "nepali andor states official language",
+        "margin": 7.493882656097412,
+        "window_index": 0,
+        "start_token": 167,
+        "end_token": 176,
+        "start": 704,
+        "end": 747
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "57274eca5951b619008f8800",
+    "prediction": "28,000",
+    "features": [
+      11.109462797641754,
+      -0.6242243269053729,
+      1.2742977142333984,
+      1.3862943611198906,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "46ceed087a89c8c5146679d04d65800e1d5b68fadcd272ac5f73357c18ad83be",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "28000",
+      "start_logsumexp": 6.548340890779378,
+      "end_logsumexp": 7.043255853575946,
+      "normalization_token_count": 209,
+      "alternative": {
+        "prediction": "around 28,000",
+        "normalized": "around 28000",
+        "margin": 9.835165083408356,
+        "window_index": 0,
+        "start_token": 32,
+        "end_token": 35,
+        "start": 76,
+        "end": 89
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "5727500f708984140094dbfd",
+    "prediction": "7.5%",
+    "features": [
+      13.93114447593689,
+      -0.14422326609950886,
+      3.6952247619628906,
+      1.6094379124341003,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "c17ef7adcab459b968e2ef462f3cf4de687b01b702916f09322386dd59bebd28",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "75",
+      "start_logsumexp": 8.00160652414012,
+      "end_logsumexp": 8.156522267166908,
+      "normalization_token_count": 157,
+      "alternative": {
+        "prediction": "about 7.5%",
+        "normalized": "about 75",
+        "margin": 10.235919713973999,
+        "window_index": 0,
+        "start_token": 33,
+        "end_token": 37,
+        "start": 105,
+        "end": 115
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "5727515f708984140094dc11",
+    "prediction": "South African Schools Act of 1996",
+    "features": [
+      12.7562136054039,
+      -0.722603057912754,
+      4.922326326370239,
+      1.9459101490553132,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "b4ba2bbeeee2a856da55303653574a4e172145e70ab00ddcb48b0d01f5f34139",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "south african schools act of 1996",
+      "start_logsumexp": 6.881518046311254,
+      "end_logsumexp": 7.945332581639342,
+      "normalization_token_count": 94,
+      "alternative": {
+        "prediction": "South African Schools Act",
+        "normalized": "south african schools act",
+        "margin": 7.833887279033661,
+        "window_index": 0,
+        "start_token": 62,
+        "end_token": 65,
+        "start": 296,
+        "end": 321
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "57275409708984140094dc35",
+    "prediction": "semi-private",
+    "features": [
+      8.008021473884583,
+      -1.212549235775798,
+      2.3124887943267822,
+      1.6094379124341003,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "7f5c1af34a119abe54f9f2a403725d6cbdc1db530373505faf8cd53f11cad720",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "semiprivate",
+      "start_logsumexp": 5.854189585640316,
+      "end_logsumexp": 5.949153259754623,
+      "normalization_token_count": 161,
+      "alternative": {
+        "prediction": "semi-private\" form",
+        "normalized": "semiprivate form",
+        "margin": 5.6955326795578,
+        "window_index": 0,
+        "start_token": 43,
+        "end_token": 48,
+        "start": 116,
+        "end": 134
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "572754dd708984140094dc3e",
+    "prediction": "The Knowledge School",
+    "features": [
+      11.114749312400818,
+      -0.45505024019253515,
+      1.2613873481750488,
+      1.3862943611198906,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "f396280baabc232b2dbd56220ead1c5d4dcf5e8af7a80222042b7a3a4d987f4a",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "knowledge school",
+      "start_logsumexp": 6.8784983613215385,
+      "end_logsumexp": 7.239618742884669,
+      "normalization_token_count": 117,
+      "alternative": {
+        "prediction": "“The Knowledge School",
+        "normalized": "“ knowledge school",
+        "margin": 9.853361964225769,
+        "window_index": 0,
+        "start_token": 93,
+        "end_token": 97,
+        "start": 407,
+        "end": 428
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "572756265951b619008f886d",
+    "prediction": "13 years old",
+    "features": [
+      12.000835299491882,
+      -0.5212982785315967,
+      1.1677474975585938,
+      1.3862943611198906,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "ce72fed7b084941e90079823ae33cc19adb21829e9f5aa99491ba4d96d782570",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "13 years old",
+      "start_logsumexp": 7.371774538180381,
+      "end_logsumexp": 7.8256669097542915,
+      "normalization_token_count": 195,
+      "alternative": {
+        "prediction": "13 years",
+        "normalized": "13 years",
+        "margin": 10.833087801933289,
+        "window_index": 0,
+        "start_token": 63,
+        "end_token": 64,
+        "start": 259,
+        "end": 267
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "572759665951b619008f8886",
+    "prediction": "268 U.S. 510",
+    "features": [
+      5.072171926498413,
+      -0.5304500882490482,
+      1.684018850326538,
+      1.9459101490553132,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "0fb23036449013510f8c252304c3eecf5fccaa6ce7e6eda9cdd52fb0feda00d2",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "268 us 510",
+      "start_logsumexp": 5.246728062839222,
+      "end_logsumexp": 5.327182871357092,
+      "normalization_token_count": 128,
+      "alternative": {
+        "prediction": "268 U.S. 510 (1925);",
+        "normalized": "268 us 510 1925",
+        "margin": 3.388153076171875,
+        "window_index": 0,
+        "start_token": 119,
+        "end_token": 128,
+        "start": 480,
+        "end": 500
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "5728455bff5b5019007da079",
+    "prediction": "182 million tons",
+    "features": [
+      7.499475359916687,
+      -0.2870251357085998,
+      2.1472935676574707,
+      1.3862943611198906,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "6490f518fe350da9641471f3a1a36ab4a64fb7a97f05b88e0eee6eef8ff7e18f",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "182 million tons",
+      "start_logsumexp": 5.796965297860462,
+      "end_logsumexp": 5.78410290196557,
+      "normalization_token_count": 133,
+      "alternative": {
+        "prediction": "an average 182 million tons",
+        "normalized": "average 182 million tons",
+        "margin": 5.352181792259216,
+        "window_index": 0,
+        "start_token": 37,
+        "end_token": 41,
+        "start": 108,
+        "end": 135
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "5729e500af94a219006aa6b6",
+    "prediction": "66–34 Mya",
+    "features": [
+      5.670820474624634,
+      -0.29300405876172775,
+      2.6110219955444336,
+      1.791759469228055,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "24fea2565633e4166a4a302ac559cbe556726d323a6ae3b67d380259c88732be",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "66–34 mya",
+      "start_logsumexp": 6.443481755440966,
+      "end_logsumexp": 7.022653292395469,
+      "normalization_token_count": 145,
+      "alternative": {
+        "prediction": "66–34 My",
+        "normalized": "66–34 my",
+        "margin": 3.0597984790802,
+        "window_index": 0,
+        "start_token": 56,
+        "end_token": 59,
+        "start": 190,
+        "end": 198
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "5729eb34af94a219006aa6c9",
+    "prediction": "Betty Meggers",
+    "features": [
+      6.37642765045166,
+      -0.11056268057712071,
+      4.148584604263306,
+      1.6094379124341003,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "32aa68d3a51961f2fc85d1117b79448f87b2591002c8300196d5ce966afb629c",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "betty meggers",
+      "start_logsumexp": 5.592060077859569,
+      "end_logsumexp": 6.55418480410305,
+      "normalization_token_count": 188,
+      "alternative": {
+        "prediction": "Archeologist Betty Meggers",
+        "normalized": "archeologist betty meggers",
+        "margin": 2.2278430461883545,
+        "window_index": 0,
+        "start_token": 57,
+        "end_token": 62,
+        "start": 185,
+        "end": 211
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "5729edd56aef051400155116",
+    "prediction": "11,000",
+    "features": [
+      8.822601795196533,
+      -0.7384674082931868,
+      0.3650379180908203,
+      1.3862943611198906,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "040a5627ef7bb5d949592bbcd7381d5c49b141f464054a8ba8c03c8253480ddb",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "11000",
+      "start_logsumexp": 7.533670030047024,
+      "end_logsumexp": 7.593450179759834,
+      "normalization_token_count": 205,
+      "alternative": {
+        "prediction": "11,000 years",
+        "normalized": "11000 years",
+        "margin": 8.457563877105713,
+        "window_index": 0,
+        "start_token": 205,
+        "end_token": 208,
+        "start": 892,
+        "end": 904
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5729f3831d0469140077967b",
+    "prediction": "electric eels",
+    "features": [
+      12.334442853927612,
+      -0.11472476709008994,
+      2.30794620513916,
+      1.3862943611198906,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "41361fe7e8b265d1a5fe99de16547bc90fa0d60410f80adeebe9f4dd476de729",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "electric eels",
+      "start_logsumexp": 8.377156330703821,
+      "end_logsumexp": 8.801815567733925,
+      "normalization_token_count": 127,
+      "alternative": {
+        "prediction": "eels",
+        "normalized": "eels",
+        "margin": 10.026496648788452,
+        "window_index": 0,
+        "start_token": 57,
+        "end_token": 58,
+        "start": 177,
+        "end": 181
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "5729fd56af94a219006aa731",
+    "prediction": "slash and burn method",
+    "features": [
+      1.2277958393096924,
+      -1.3806218444591964,
+      0.20560121536254883,
+      1.6094379124341003,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "1e78d27475aecd3ec0eb73d6278e6a3cbe36d5f520963ba6b65f7dc7602a6dd3",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "slash and burn method",
+      "start_logsumexp": 4.713144576021029,
+      "end_logsumexp": 5.331448215703793,
+      "normalization_token_count": 160,
+      "alternative": {
+        "prediction": "slash and burn",
+        "normalized": "slash and burn",
+        "margin": 1.0221946239471436,
+        "window_index": 0,
+        "start_token": 89,
+        "end_token": 91,
+        "start": 368,
+        "end": 382
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "5729feaf6aef05140015518b",
+    "prediction": "second-largest",
+    "features": [
+      9.511595487594604,
+      -0.39787884418448893,
+      1.7555294036865234,
+      1.3862943611198906,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "3895e66f384dc9afdd15ffe1c33b4044506755bd22d33e8c94583b00ed06854d",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "secondlargest",
+      "start_logsumexp": 6.8198326667596065,
+      "end_logsumexp": 7.443754528560136,
+      "normalization_token_count": 167,
+      "alternative": {
+        "prediction": "second",
+        "normalized": "second",
+        "margin": 7.756066083908081,
+        "window_index": 0,
+        "start_token": 95,
+        "end_token": 95,
+        "start": 352,
+        "end": 358
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "572a020f6aef051400155199",
+    "prediction": "destruction of the forest",
+    "features": [
+      14.236775279045105,
+      -0.05451555434140154,
+      4.689072132110596,
+      1.6094379124341003,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "a5fca4c3e39db7dc72170cfcb6b3abd6a58b735cbb9cce2d5f5f6e553669722a",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "destruction of forest",
+      "start_logsumexp": 8.520283920239745,
+      "end_logsumexp": 9.01322123523691,
+      "normalization_token_count": 107,
+      "alternative": {
+        "prediction": "destruction",
+        "normalized": "destruction",
+        "margin": 9.54770314693451,
+        "window_index": 0,
+        "start_token": 30,
+        "end_token": 30,
+        "start": 81,
+        "end": 92
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "572a07c11d046914007796d9",
+    "prediction": "to protect their tribal lands from commercial interests",
+    "features": [
+      9.020100116729736,
+      -0.7063350718746264,
+      0.706024169921875,
+      2.1972245773362196,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "f4dabeabfa17830c3d2d8edab044167839ef11bb080d2f91289d80dffa01dc27",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "to protect their tribal lands from commercial interests",
+      "start_logsumexp": 6.452262541346847,
+      "end_logsumexp": 7.273628099222848,
+      "normalization_token_count": 99,
+      "alternative": {
+        "prediction": "protect their tribal lands from commercial interests",
+        "normalized": "protect their tribal lands from commercial interests",
+        "margin": 8.314075946807861,
+        "window_index": 0,
+        "start_token": 35,
+        "end_token": 41,
+        "start": 121,
+        "end": 173
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "572a0b101d046914007796e9",
+    "prediction": "2005",
+    "features": [
+      11.446623802185059,
+      -0.03752187125087758,
+      4.942510604858398,
+      0.6931471805599453,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "329e2dd3e90bd25984d9c186e564a1d7ab4e07d619284ce70de287269ef4a9a8",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "2005",
+      "start_logsumexp": 7.035203986913642,
+      "end_logsumexp": 7.279439905058672,
+      "normalization_token_count": 146,
+      "alternative": {
+        "prediction": "2005, parts of the Amazon basin experienced the worst drought in one hundred years, and there were indications that 2006",
+        "normalized": "2005 parts of amazon basin experienced worst drought in one hundred years and there were indications that 2006",
+        "margin": 6.50411319732666,
+        "window_index": 0,
+        "start_token": 18,
+        "end_token": 39,
+        "start": 3,
+        "end": 123
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "572a0bebaf94a219006aa772",
+    "prediction": "2005",
+    "features": [
+      2.7571117877960205,
+      -1.8918253650917825,
+      0.5503299236297607,
+      0.6931471805599453,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "fb7cece550ee7b627e23d5c3f8425c937139da767c728db9729da6ba905465fe",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "2005",
+      "start_logsumexp": 4.875010440113591,
+      "end_logsumexp": 5.098745323919231,
+      "normalization_token_count": 137,
+      "alternative": {
+        "prediction": "2010",
+        "normalized": "2010",
+        "margin": 2.2067818641662598,
+        "window_index": 0,
+        "start_token": 20,
+        "end_token": 20,
+        "start": 3,
+        "end": 7
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 1
+  },
+  {
+    "id": "5a0c6698f5590b0018dab3e7",
+    "prediction": "nine nations",
+    "features": [
+      -18.068744659423828,
+      -18.071096500689315,
+      0.236053466796875,
+      1.0986122886681098,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "c7c7ec362f0439a4c9ad1edead0e0f7505b22fd24ce7be23b8711356cdcda6a3",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "nine nations",
+      "start_logsumexp": 3.762447672084324,
+      "end_logsumexp": 4.298704866507821,
+      "normalization_token_count": 250,
+      "alternative": {
+        "prediction": "nine",
+        "normalized": "nine",
+        "margin": -18.304798126220703,
+        "window_index": 0,
+        "start_token": 148,
+        "end_token": 148,
+        "start": 515,
+        "end": 519
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5a0c677bf5590b0018dab3ee",
+    "prediction": "wetter climate",
+    "features": [
+      -13.963180184364319,
+      -13.96976836938407,
+      0.16054809093475342,
+      1.3862943611198906,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "24fea2565633e4166a4a302ac559cbe556726d323a6ae3b67d380259c88732be",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "wetter climate",
+      "start_logsumexp": 4.517504374926379,
+      "end_logsumexp": 4.932207150700062,
+      "normalization_token_count": 145,
+      "alternative": {
+        "prediction": "wetter climate may have allowed the tropical rainforest",
+        "normalized": "wetter climate may have allowed tropical rainforest",
+        "margin": -14.123728275299072,
+        "window_index": 0,
+        "start_token": 34,
+        "end_token": 43,
+        "start": 93,
+        "end": 148
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5a0c6a7ef5590b0018dab3fb",
+    "prediction": "Solimões Basin",
+    "features": [
+      -14.685025691986084,
+      -14.6874519851195,
+      2.160384178161621,
+      1.9459101490553132,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "bb8a76f08ce73953c6a06eda3ddc44cab30380cc4b6a0f4d40f518df582eefb4",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "solimões basin",
+      "start_logsumexp": 4.791573928711585,
+      "end_logsumexp": 5.326280812145219,
+      "normalization_token_count": 116,
+      "alternative": {
+        "prediction": "Solimões",
+        "normalized": "solimões",
+        "margin": -16.845409870147705,
+        "window_index": 0,
+        "start_token": 93,
+        "end_token": 97,
+        "start": 373,
+        "end": 381
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5a0c77e3f5590b0018dab416",
+    "prediction": "Betty Meggers",
+    "features": [
+      -2.631946086883545,
+      -3.1237125824536376,
+      4.1575000286102295,
+      1.6094379124341003,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "32aa68d3a51961f2fc85d1117b79448f87b2591002c8300196d5ce966afb629c",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "betty meggers",
+      "start_logsumexp": 4.608250197049697,
+      "end_logsumexp": 5.087393270718882,
+      "normalization_token_count": 188,
+      "alternative": {
+        "prediction": "Archeologist Betty Meggers",
+        "normalized": "archeologist betty meggers",
+        "margin": -6.789446115493774,
+        "window_index": 0,
+        "start_token": 57,
+        "end_token": 62,
+        "start": 185,
+        "end": 211
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5a0c7b88f5590b0018dab421",
+    "prediction": "devastated",
+    "features": [
+      -18.68827199935913,
+      -18.689401837196304,
+      0.7685723304748535,
+      0.6931471805599453,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "040a5627ef7bb5d949592bbcd7381d5c49b141f464054a8ba8c03c8253480ddb",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "devastated",
+      "start_logsumexp": 4.163944776138736,
+      "end_logsumexp": 4.805882609611034,
+      "normalization_token_count": 205,
+      "alternative": {
+        "prediction": "devastated by the spread of diseases from Europe, such as smallpox",
+        "normalized": "devastated by spread of diseases from europe such as smallpox",
+        "margin": -19.456844329833984,
+        "window_index": 0,
+        "start_token": 83,
+        "end_token": 95,
+        "start": 371,
+        "end": 437
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5a0c7cb3f5590b0018dab429",
+    "prediction": "Terra preta",
+    "features": [
+      -18.428279638290405,
+      -18.42891201719966,
+      0.6533772945404053,
+      1.6094379124341003,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "4e29e864fdfd291ba260b61248bc4aded067f95f96277117c78dcb8a7376f655",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "terra preta",
+      "start_logsumexp": 4.7797662108056675,
+      "end_logsumexp": 5.320154631696117,
+      "normalization_token_count": 133,
+      "alternative": {
+        "prediction": "Terra preta (black earth",
+        "normalized": "terra preta black earth",
+        "margin": -19.08165693283081,
+        "window_index": 0,
+        "start_token": 12,
+        "end_token": 18,
+        "start": 0,
+        "end": 24
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5a0c7d74f5590b0018dab433",
+    "prediction": "rainforests of the Amazon",
+    "features": [
+      -11.645138680934906,
+      -11.657497275213816,
+      1.7181792259216309,
+      1.9459101490553132,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "e9030e5e203b110c1161f7cb8b77776f171a3a793ec1fafe8d14e2b9bc0dff07",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "rainforests of amazon",
+      "start_logsumexp": 5.1048002070128815,
+      "end_logsumexp": 5.416677897916663,
+      "normalization_token_count": 125,
+      "alternative": {
+        "prediction": "the Amazon",
+        "normalized": "amazon",
+        "margin": -13.363317906856537,
+        "window_index": 0,
+        "start_token": 99,
+        "end_token": 100,
+        "start": 359,
+        "end": 369
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5a0c7edcf5590b0018dab43a",
+    "prediction": "plant species",
+    "features": [
+      -19.620819091796875,
+      -19.621415018714398,
+      1.1635289192199707,
+      1.0986122886681098,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "b88f2e98aa5ed39684015bb91e028e3f43f8a9f57f9434564aed6b294987397c",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "plant species",
+      "start_logsumexp": 4.7047952994006526,
+      "end_logsumexp": 5.21551555519021,
+      "normalization_token_count": 132,
+      "alternative": {
+        "prediction": "plant species is the highest on Earth with one 2001 study finding a quarter square kilometer (62 acres) of Ecuadorian rainforest",
+        "normalized": "plant species is highest on earth with one 2001 study finding quarter square kilometer 62 acres of ecuadorian rainforest",
+        "margin": -20.784348011016846,
+        "window_index": 0,
+        "start_token": 16,
+        "end_token": 41,
+        "start": 20,
+        "end": 148
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5a0c7fb2f5590b0018dab448",
+    "prediction": "rabies virus",
+    "features": [
+      -15.49701189994812,
+      -15.498453198898108,
+      2.67460036277771,
+      1.3862943611198906,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "41361fe7e8b265d1a5fe99de16547bc90fa0d60410f80adeebe9f4dd476de729",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "rabies virus",
+      "start_logsumexp": 4.78808185691414,
+      "end_logsumexp": 5.292974081318075,
+      "normalization_token_count": 127,
+      "alternative": {
+        "prediction": "rabies",
+        "normalized": "rabies",
+        "margin": -18.17161226272583,
+        "window_index": 0,
+        "start_token": 116,
+        "end_token": 117,
+        "start": 490,
+        "end": 496
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5a0c807ff5590b0018dab44e",
+    "prediction": "Deforestation",
+    "features": [
+      -4.940503761172295,
+      -5.2478723815695565,
+      1.8438013345003128,
+      1.0986122886681098,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "1e78d27475aecd3ec0eb73d6278e6a3cbe36d5f520963ba6b65f7dc7602a6dd3",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "deforestation",
+      "start_logsumexp": 2.576104697305818,
+      "end_logsumexp": 3.1708825105853404,
+      "normalization_token_count": 160,
+      "alternative": {
+        "prediction": "slash and burn method",
+        "normalized": "slash and burn method",
+        "margin": -6.784305095672607,
+        "window_index": 0,
+        "start_token": 87,
+        "end_token": 90,
+        "start": 368,
+        "end": 389
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5a0c8ba8f5590b0018dab460",
+    "prediction": "soy",
+    "features": [
+      -3.329888105392456,
+      -3.7631512525826416,
+      0.5814473628997803,
+      0.6931471805599453,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "22a8092c42faa51f3d6dbe3ed281515ca4a9627a0e1ba161e0cb10299afcec3e",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "soy",
+      "start_logsumexp": 4.419862773327876,
+      "end_logsumexp": 5.012117205069585,
+      "normalization_token_count": 116,
+      "alternative": {
+        "prediction": "soy farmers",
+        "normalized": "soy farmers",
+        "margin": -3.9113354682922363,
+        "window_index": 0,
+        "start_token": 21,
+        "end_token": 22,
+        "start": 13,
+        "end": 24
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5a0c93b9f5590b0018dab476",
+    "prediction": "rainfall response",
+    "features": [
+      -13.987598061561584,
+      -13.992554568075752,
+      1.0458049774169922,
+      1.0986122886681098,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "c3fae4238688c4590bb4910c491613f34cd2b5871fb6c949bbd22c1c82bf5247",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "rainfall response",
+      "start_logsumexp": 4.573323616135226,
+      "end_logsumexp": 4.997714891111363,
+      "normalization_token_count": 102,
+      "alternative": {
+        "prediction": "any rainfall response",
+        "normalized": "any rainfall response",
+        "margin": -15.033403038978577,
+        "window_index": 0,
+        "start_token": 79,
+        "end_token": 81,
+        "start": 413,
+        "end": 434
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5a0c958bf5590b0018dab47e",
+    "prediction": "rainforest communities continue to disappear, while others, like the Urarina",
+    "features": [
+      -9.344819195568562,
+      -9.38018346977659,
+      0.5460491180419922,
+      2.772588722239781,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "61b4937b9d0514bc8f149849c776fa0f98dcb11b7af677d4c946b355ff06ca52",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "rainforest communities continue to disappear while others like urarina",
+      "start_logsumexp": 4.058176283593744,
+      "end_logsumexp": 4.5050858253921175,
+      "normalization_token_count": 96,
+      "alternative": {
+        "prediction": "Urarina",
+        "normalized": "urarina",
+        "margin": -9.890868313610554,
+        "window_index": 0,
+        "start_token": 55,
+        "end_token": 57,
+        "start": 201,
+        "end": 208
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5a0c96fbf5590b0018dab486",
+    "prediction": "conservation of the Amazon is also being used by the indigenous tribes of the basin to protect their tribal lands from commercial interests",
+    "features": [
+      -9.67563471198082,
+      -9.713460688827485,
+      0.28544163703918457,
+      3.1780538303479458,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "f4dabeabfa17830c3d2d8edab044167839ef11bb080d2f91289d80dffa01dc27",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "conservation of amazon is also being used by indigenous tribes of basin to protect their tribal lands from commercial interests",
+      "start_logsumexp": 4.784806428640899,
+      "end_logsumexp": 5.2179496057314,
+      "normalization_token_count": 99,
+      "alternative": {
+        "prediction": "conservation of the Amazon",
+        "normalized": "conservation of amazon",
+        "margin": -9.961076349020004,
+        "window_index": 0,
+        "start_token": 22,
+        "end_token": 25,
+        "start": 34,
+        "end": 60
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5a0c9832f5590b0018dab492",
+    "prediction": "Synthetic aperture radar",
+    "features": [
+      3.406498432159424,
+      -0.6770102016388266,
+      1.3223702907562256,
+      1.6094379124341003,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "2c21a41415000684af4848067660868e561f9f1525f219a341976cd6bfae3027",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "synthetic aperture radar",
+      "start_logsumexp": 4.76382778884665,
+      "end_logsumexp": 4.981030618358583,
+      "normalization_token_count": 136,
+      "alternative": {
+        "prediction": "Synthetic aperture",
+        "normalized": "synthetic aperture",
+        "margin": 2.0841281414031982,
+        "window_index": 0,
+        "start_token": 119,
+        "end_token": 121,
+        "start": 504,
+        "end": 522
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5a0c99fcf5590b0018dab4a7",
+    "prediction": "5 gigatons",
+    "features": [
+      -2.4697033166885376,
+      -3.2609041076480185,
+      0.3492719531059265,
+      1.6094379124341003,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "fb7cece550ee7b627e23d5c3f8425c937139da767c728db9729da6ba905465fe",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "5 gigatons",
+      "start_logsumexp": 3.2391457787492746,
+      "end_logsumexp": 3.4318727364381116,
+      "normalization_token_count": 137,
+      "alternative": {
+        "prediction": "5 gigatons were released",
+        "normalized": "5 gigatons were released",
+        "margin": -2.818975269794464,
+        "window_index": 0,
+        "start_token": 133,
+        "end_token": 138,
+        "start": 535,
+        "end": 559
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5a57cf7a770dc0001aeefda6",
+    "prediction": "seismic discontinuities",
+    "features": [
+      -2.0966196060180664,
+      -3.226976766749602,
+      0.7159359455108643,
+      1.6094379124341003,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "1a2af49f4a71ebbe6894aa6e81cdfdbb693ec13086cd52778cee2f5b92cbccf0",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "seismic discontinuities",
+      "start_logsumexp": 4.202811050145263,
+      "end_logsumexp": 4.714368668035614,
+      "normalization_token_count": 168,
+      "alternative": {
+        "prediction": "mantle below (separated within itself by seismic discontinuities",
+        "normalized": "mantle below separated within itself by seismic discontinuities",
+        "margin": -2.8125555515289307,
+        "window_index": 0,
+        "start_token": 93,
+        "end_token": 104,
+        "start": 366,
+        "end": 430
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5a57d364770dc0001aeefdcb",
+    "prediction": "fourth scale",
+    "features": [
+      -9.679211616516113,
+      -9.708821067226491,
+      0.8208959102630615,
+      1.0986122886681098,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "36480f9ea6f7a385ac0f0d884f56e7f8ddc4af7f2b466bc2f55f70e5d2e107ae",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "fourth scale",
+      "start_logsumexp": 4.799187448921172,
+      "end_logsumexp": 5.264028531025047,
+      "normalization_token_count": 171,
+      "alternative": {
+        "prediction": "in the fourth scale",
+        "normalized": "in fourth scale",
+        "margin": -10.500107526779175,
+        "window_index": 0,
+        "start_token": 114,
+        "end_token": 117,
+        "start": 448,
+        "end": 467
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5a57eee0770dc0001aeefeda",
+    "prediction": "older than the rock which contains them",
+    "features": [
+      -0.7714085578918457,
+      -3.0377749552391817,
+      0.8310439586639404,
+      2.0794415416798357,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "1e0b24e08630dc44ca697627146eff0a852b93e1fc7e4d4a8bb9a1efa7ad0d66",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "older than rock which contains them",
+      "start_logsumexp": 4.9252385031723085,
+      "end_logsumexp": 5.3593092181801545,
+      "normalization_token_count": 127,
+      "alternative": {
+        "prediction": "These foreign bodies are picked up as magma or lava flows, and are incorporated, later to cool in the matrix",
+        "normalized": "these foreign bodies are picked up as magma or lava flows and are incorporated later to cool in matrix",
+        "margin": -1.6024525165557861,
+        "window_index": 0,
+        "start_token": 100,
+        "end_token": 122,
+        "start": 407,
+        "end": 515
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5a57f0ea770dc0001aeefee5",
+    "prediction": "almost a hundred years",
+    "features": [
+      -7.67850935459137,
+      -7.748869572342819,
+      0.24817787110805511,
+      1.6094379124341003,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "c018c8eb3d4256f40e35bc0be8827b1ac58191a915621d04874fc9bbf2a895b7",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "almost hundred years",
+      "start_logsumexp": 4.670665693486443,
+      "end_logsumexp": 5.399701199985222,
+      "normalization_token_count": 140,
+      "alternative": {
+        "prediction": "a hundred years",
+        "normalized": "hundred years",
+        "margin": -7.926687225699425,
+        "window_index": 0,
+        "start_token": 83,
+        "end_token": 85,
+        "start": 332,
+        "end": 347
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5a57f717770dc0001aeeff08",
+    "prediction": "ages of pluton emplacement",
+    "features": [
+      -8.280659664422274,
+      -8.343360589056886,
+      1.5392794124782085,
+      2.0794415416798357,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "62ff2780adc89c5c824605eae7e328e00b1ada3ef2a3670921c1f3f69cdd5d67",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "ages of pluton emplacement",
+      "start_logsumexp": 3.942084991405842,
+      "end_logsumexp": 4.557461951066294,
+      "normalization_token_count": 190,
+      "alternative": {
+        "prediction": "ages",
+        "normalized": "ages",
+        "margin": -9.819939076900482,
+        "window_index": 0,
+        "start_token": 173,
+        "end_token": 173,
+        "start": 802,
+        "end": 806
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5a580070770dc0001aeeff37",
+    "prediction": "deformation",
+    "features": [
+      -13.686545372009277,
+      -13.690178716304404,
+      2.6818959712982178,
+      1.0986122886681098,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "76d92e92a6a95722d2402d8f47c5e55073f4f0002468a06046899e2b337d5a02",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "deformation",
+      "start_logsumexp": 4.2334566174575405,
+      "end_logsumexp": 4.760743457336853,
+      "normalization_token_count": 212,
+      "alternative": {
+        "prediction": "deformation. Faulting and other deformational",
+        "normalized": "deformation faulting and other deformational",
+        "margin": -16.368441343307495,
+        "window_index": 0,
+        "start_token": 29,
+        "end_token": 37,
+        "start": 89,
+        "end": 134
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5a5812f9770dc0001aeeffd1",
+    "prediction": "Numerical models",
+    "features": [
+      3.399153470993042,
+      -0.9633019751828495,
+      0.8825328350067139,
+      1.6094379124341003,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "ca24626595fcaaf93d7b5eaabdf0a5a0f4193ef886995a0937088d1f4995964b",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "numerical models",
+      "start_logsumexp": 4.398136642372217,
+      "end_logsumexp": 4.56371980096554,
+      "normalization_token_count": 164,
+      "alternative": {
+        "prediction": "Numerical models work in the same way as these analog models, though they are often more sophisticated",
+        "normalized": "numerical models work in same way as these analog models though they are often more sophisticated",
+        "margin": 2.516620635986328,
+        "window_index": 0,
+        "start_token": 108,
+        "end_token": 127,
+        "start": 448,
+        "end": 550
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5a5817e3770dc0001aeeffec",
+    "prediction": "fossils found in them",
+    "features": [
+      -9.894973665475845,
+      -9.927586347212479,
+      2.031385511159897,
+      1.6094379124341003,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "3b25729dedd14dc1875957be2bee80801b54dcf03df63728e1bc796da721e86b",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "fossils found in them",
+      "start_logsumexp": 3.538935351068635,
+      "end_logsumexp": 4.30933232372525,
+      "normalization_token_count": 116,
+      "alternative": {
+        "prediction": "fossils found in them. These fossils help scientists to date the core and to understand the depositional environment in which the rock units formed",
+        "normalized": "fossils found in them these fossils help scientists to date core and to understand depositional environment in which rock units formed",
+        "margin": -11.926359176635742,
+        "window_index": 0,
+        "start_token": 37,
+        "end_token": 62,
+        "start": 95,
+        "end": 242
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5a58cfd63e1742001a15ce35",
+    "prediction": "mineral content",
+    "features": [
+      -13.428986191749573,
+      -13.434159040226827,
+      1.0814000368118286,
+      1.0986122886681098,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "a05eabc8f87fdca80834359f2972b2ffc1cf60d28eabf4521b6fbb77c0623996",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "mineral content",
+      "start_logsumexp": 4.67705135231263,
+      "end_logsumexp": 5.172515703165357,
+      "normalization_token_count": 225,
+      "alternative": {
+        "prediction": "mineral content of the rock which gives it a characteristic fabric",
+        "normalized": "mineral content of rock which gives it characteristic fabric",
+        "margin": -14.510386228561401,
+        "window_index": 0,
+        "start_token": 122,
+        "end_token": 132,
+        "start": 464,
+        "end": 530
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5a58db973e1742001a15ce4e",
+    "prediction": "Alfred Wegener",
+    "features": [
+      -5.431946516036987,
+      -5.593284520039305,
+      3.625951051712036,
+      1.3862943611198906,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "c8c47f5e5a648817ff11f913f97ee8b366aaf758a4bd7ff32582d54df2a8fa31",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "alfred wegener",
+      "start_logsumexp": 1.4988946643763794,
+      "end_logsumexp": 1.9267640707889622,
+      "normalization_token_count": 206,
+      "alternative": {
+        "prediction": "Wegener",
+        "normalized": "wegener",
+        "margin": -9.057897567749023,
+        "window_index": 0,
+        "start_token": 130,
+        "end_token": 131,
+        "start": 619,
+        "end": 626
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5a59002d3e1742001a15cf3b",
+    "prediction": "new absolute ages",
+    "features": [
+      2.5388312339782715,
+      -0.9244920682045148,
+      0.6194422245025635,
+      1.3862943611198906,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "08e7fcfae5bcd655caa1f38fd9fe71bc3ab1492d5cf003ea856a56fd67fbc23d",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "new absolute ages",
+      "start_logsumexp": 3.6589155009736603,
+      "end_logsumexp": 4.299360003052388,
+      "normalization_token_count": 112,
+      "alternative": {
+        "prediction": "absolute ages",
+        "normalized": "absolute ages",
+        "margin": 1.919389009475708,
+        "window_index": 0,
+        "start_token": 121,
+        "end_token": 122,
+        "start": 606,
+        "end": 619
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5a5918ff3e1742001a15cf81",
+    "prediction": "optical microscopy and by using an electron microprobe",
+    "features": [
+      2.0303077697753906,
+      -0.9388722135144354,
+      1.5977487564086914,
+      2.4849066497880004,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "8b8190fdb07a1af9c1462db72bed5dbe5d3d2445992eda03965818ceb4ef0857",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "optical microscopy and by using electron microprobe",
+      "start_logsumexp": 4.351836220401754,
+      "end_logsumexp": 5.268702128900645,
+      "normalization_token_count": 157,
+      "alternative": {
+        "prediction": "through optical microscopy and by using an electron microprobe",
+        "normalized": "through optical microscopy and by using electron microprobe",
+        "margin": 0.4325590133666992,
+        "window_index": 0,
+        "start_token": 49,
+        "end_token": 60,
+        "start": 172,
+        "end": 234
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5a591f773e1742001a15cfa4",
+    "prediction": "strain within the crystalline structure of the rocks",
+    "features": [
+      2.7932738065719604,
+      -1.3234511000126954,
+      0.7137367725372314,
+      2.302585092994046,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "ab6a56d5f9eb9f32fe7cbcd4297ecd8cbcee3a6a500f85ad70bb607c6bc05c7b",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "strain within crystalline structure of rocks",
+      "start_logsumexp": 3.7585690823739766,
+      "end_logsumexp": 4.269957996871507,
+      "normalization_token_count": 91,
+      "alternative": {
+        "prediction": "information about strain within the crystalline structure of the rocks",
+        "normalized": "information about strain within crystalline structure of rocks",
+        "margin": 2.079537034034729,
+        "window_index": 0,
+        "start_token": 39,
+        "end_token": 49,
+        "start": 144,
+        "end": 214
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5a5929d33e1742001a15cfc6",
+    "prediction": "reconstruct ancient processes occurring on the surface of the Earth",
+    "features": [
+      -4.836345076560974,
+      -5.340019933513732,
+      0.17050421237945557,
+      2.3978952727983707,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "f6d8387f602dd77b227ab8b161d9456f7ad494c5903e27116d9f1009aba9d64b",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "reconstruct ancient processes occurring on surface of earth",
+      "start_logsumexp": 3.5583157785704453,
+      "end_logsumexp": 4.203342524503528,
+      "normalization_token_count": 131,
+      "alternative": {
+        "prediction": "interpret past environments, and locate areas for water, coal, and hydrocarbon extraction",
+        "normalized": "interpret past environments and locate areas for water coal and hydrocarbon extraction",
+        "margin": -5.00684928894043,
+        "window_index": 0,
+        "start_token": 124,
+        "end_token": 139,
+        "start": 550,
+        "end": 639
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5a592c9d3e1742001a15cfd6",
+    "prediction": "Persia",
+    "features": [
+      -0.305971622467041,
+      -1.5671647100006725,
+      6.014104843139648,
+      0.6931471805599453,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "67afc3f9c17106ee04d8b927f7d7b05326e595ba6c0a85561c5a168c58bf0616",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "persia",
+      "start_logsumexp": 2.9333587591548422,
+      "end_logsumexp": 3.5005006396428273,
+      "normalization_token_count": 231,
+      "alternative": {
+        "prediction": "to Persia",
+        "normalized": "to persia",
+        "margin": -6.3200764656066895,
+        "window_index": 0,
+        "start_token": 40,
+        "end_token": 41,
+        "start": 127,
+        "end": 136
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5a592d703e1742001a15cfed",
+    "prediction": "James Hutton",
+    "features": [
+      8.14952826499939,
+      -0.037890611391866,
+      6.874049931764603,
+      1.3862943611198906,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "c65899f588f28ae99ef5f3d38d2aa89c81477ceeb9b5361a95c37457b815468d",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "james hutton",
+      "start_logsumexp": 6.606961410828242,
+      "end_logsumexp": 6.547979371462062,
+      "normalization_token_count": 113,
+      "alternative": {
+        "prediction": "Hutton",
+        "normalized": "hutton",
+        "margin": 1.275478333234787,
+        "window_index": 0,
+        "start_token": 11,
+        "end_token": 12,
+        "start": 6,
+        "end": 12
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5a678f35f038b7001ab0c2c4",
+    "prediction": "prestige",
+    "features": [
+      -11.186498403549194,
+      -11.211786929066045,
+      0.3212428092956543,
+      0.6931471805599453,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "7d40046d35a495a564aa1049e78bbaf0c72f50500a115c58bba2db578b607cf8",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "prestige",
+      "start_logsumexp": 4.253837354189037,
+      "end_logsumexp": 4.693244155336603,
+      "normalization_token_count": 145,
+      "alternative": {
+        "prediction": "Private schools in Australia may be favoured for many reasons: prestige",
+        "normalized": "private schools in australia may be favoured for many reasons prestige",
+        "margin": -11.507741212844849,
+        "window_index": 0,
+        "start_token": 17,
+        "end_token": 28,
+        "start": 0,
+        "end": 71
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5a6790dbf038b7001ab0c2cf",
+    "prediction": "elite schools'. Many of the 'grammar",
+    "features": [
+      -11.681159496307373,
+      -11.705434683507285,
+      0.0879659652709961,
+      2.3978952727983707,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "f6f6d96dd4e446654b7841a39161d16203969d16c05d019d479a1f1657ab0896",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "elite schools many of grammar",
+      "start_logsumexp": 4.398902181911021,
+      "end_logsumexp": 4.8306690448701906,
+      "normalization_token_count": 189,
+      "alternative": {
+        "prediction": "elite schools'. Many of the 'grammar schools",
+        "normalized": "elite schools many of grammar schools",
+        "margin": -11.76912546157837,
+        "window_index": 0,
+        "start_token": 76,
+        "end_token": 86,
+        "start": 327,
+        "end": 371
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5a67978ef038b7001ab0c306",
+    "prediction": "their parents",
+    "features": [
+      -4.515174508094788,
+      -4.982166270579835,
+      0.37476861476898193,
+      1.0986122886681098,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "c4b219e2fa6942ba9f303ff5bec6c539545d31cf8731fd264c58f85069b10c45",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "their parents",
+      "start_logsumexp": 2.6452748675316693,
+      "end_logsumexp": 3.45313583835853,
+      "normalization_token_count": 229,
+      "alternative": {
+        "prediction": "parents",
+        "normalized": "parents",
+        "margin": -4.8899431228637695,
+        "window_index": 0,
+        "start_token": 139,
+        "end_token": 139,
+        "start": 610,
+        "end": 617
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5a6799adf038b7001ab0c31e",
+    "prediction": "school leaving",
+    "features": [
+      -13.196943521499634,
+      -13.201506677952302,
+      0.0003859996795654297,
+      1.0986122886681098,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "7164a06bbe7a859a1701acc5b96841f34611c92ab1541b17f9f20f5e6d21a0bf",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "school leaving",
+      "start_logsumexp": 4.5370561352169325,
+      "end_logsumexp": 5.010743276881489,
+      "normalization_token_count": 188,
+      "alternative": {
+        "prediction": "school leaving certificates",
+        "normalized": "school leaving certificates",
+        "margin": -13.1973295211792,
+        "window_index": 0,
+        "start_token": 172,
+        "end_token": 174,
+        "start": 889,
+        "end": 916
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5a679cc7f038b7001ab0c344",
+    "prediction": "non-profit trusts and societies",
+    "features": [
+      -1.4640865325927734,
+      -2.4153736287285996,
+      1.0642448663711548,
+      1.9459101490553132,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "211cfda70063ab1e0e07d5d81f97e9429340864c0156851deda9af6d7cea2759",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "nonprofit trusts and societies",
+      "start_logsumexp": 4.164185489671636,
+      "end_logsumexp": 4.537510494327349,
+      "normalization_token_count": 176,
+      "alternative": {
+        "prediction": "only non-profit trusts and societies",
+        "normalized": "only nonprofit trusts and societies",
+        "margin": -2.5283313989639282,
+        "window_index": 0,
+        "start_token": 14,
+        "end_token": 20,
+        "start": 9,
+        "end": 45
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5a679f83f038b7001ab0c366",
+    "prediction": "surrender their properties and be assimilated into the National School system",
+    "features": [
+      -1.3953659534454346,
+      -3.0828060375263973,
+      0.21307897567749023,
+      2.5649493574615367,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "d3224d2a7c9b1fb0c025ab44b397ab073a37fb28162d6b3730660c29e767b600",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "surrender their properties and be assimilated into national school system",
+      "start_logsumexp": 3.9602555278493594,
+      "end_logsumexp": 4.455867789492712,
+      "normalization_token_count": 117,
+      "alternative": {
+        "prediction": "surrender their properties",
+        "normalized": "surrender their properties",
+        "margin": -1.6084449291229248,
+        "window_index": 0,
+        "start_token": 26,
+        "end_token": 28,
+        "start": 80,
+        "end": 106
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5a67a1e3f038b7001ab0c38c",
+    "prediction": "private individuals",
+    "features": [
+      -7.6413813829422,
+      -7.796316625636324,
+      0.08863437175750732,
+      1.0986122886681098,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "ef18442bdf437b3bbcd356b07c0f74d9141147b11850e926a227a44b0d66bf1c",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "private individuals",
+      "start_logsumexp": 2.4076959236098077,
+      "end_logsumexp": 2.870886770485073,
+      "normalization_token_count": 173,
+      "alternative": {
+        "prediction": "private individuals, private organizations and religious groups",
+        "normalized": "private individuals private organizations and religious groups",
+        "margin": -7.730015754699707,
+        "window_index": 0,
+        "start_token": 23,
+        "end_token": 30,
+        "start": 74,
+        "end": 137
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5a67a2c7f038b7001ab0c3a5",
+    "prediction": "decline",
+    "features": [
+      -1.0312063694000244,
+      -3.0553016277267115,
+      0.05023181438446045,
+      0.6931471805599453,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "46ceed087a89c8c5146679d04d65800e1d5b68fadcd272ac5f73357c18ad83be",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "decline",
+      "start_logsumexp": 3.0297702918985303,
+      "end_logsumexp": 3.9091704330419264,
+      "normalization_token_count": 209,
+      "alternative": {
+        "prediction": "in decline",
+        "normalized": "in decline",
+        "margin": -1.0814381837844849,
+        "window_index": 0,
+        "start_token": 50,
+        "end_token": 51,
+        "start": 174,
+        "end": 184
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5a67a5d9f038b7001ab0c3de",
+    "prediction": "Per unit costs",
+    "features": [
+      -7.761024862527847,
+      -7.8073699646573544,
+      3.3429638147354126,
+      1.3862943611198906,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "c17ef7adcab459b968e2ef462f3cf4de687b01b702916f09322386dd59bebd28",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "per unit costs",
+      "start_logsumexp": 3.9618772534474966,
+      "end_logsumexp": 4.6466416920658,
+      "normalization_token_count": 157,
+      "alternative": {
+        "prediction": "Per unit costs in private schools",
+        "normalized": "per unit costs in private schools",
+        "margin": -11.10398867726326,
+        "window_index": 0,
+        "start_token": 66,
+        "end_token": 71,
+        "start": 274,
+        "end": 307
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5a67aa48f038b7001ab0c401",
+    "prediction": "nineteenth century",
+    "features": [
+      -3.6290494203567505,
+      -4.168851528034759,
+      0.29734423756599426,
+      1.0986122886681098,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "b4ba2bbeeee2a856da55303653574a4e172145e70ab00ddcb48b0d01f5f34139",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "nineteenth century",
+      "start_logsumexp": 2.96162977625116,
+      "end_logsumexp": 3.416000490759124,
+      "normalization_token_count": 94,
+      "alternative": {
+        "prediction": "early nineteenth century",
+        "normalized": "early nineteenth century",
+        "margin": -3.9263936579227448,
+        "window_index": 0,
+        "start_token": 33,
+        "end_token": 35,
+        "start": 115,
+        "end": 139
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5a67b759f038b7001ab0c43c",
+    "prediction": "Model C",
+    "features": [
+      -9.31136185862124,
+      -9.383982388475788,
+      1.0680902730673552,
+      1.0986122886681098,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "7f5c1af34a119abe54f9f2a403725d6cbdc1db530373505faf8cd53f11cad720",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "model c",
+      "start_logsumexp": 4.495540636308493,
+      "end_logsumexp": 4.982035280661534,
+      "normalization_token_count": 161,
+      "alternative": {
+        "prediction": "semi-private\" form called Model C",
+        "normalized": "semiprivate form called model c",
+        "margin": -10.379452131688595,
+        "window_index": 0,
+        "start_token": 38,
+        "end_token": 46,
+        "start": 116,
+        "end": 149
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5a67b94bf038b7001ab0c444",
+    "prediction": "Over 10%",
+    "features": [
+      -13.862584590911865,
+      -13.866115292893081,
+      1.6107590198516846,
+      1.3862943611198906,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "f396280baabc232b2dbd56220ead1c5d4dcf5e8af7a80222042b7a3a4d987f4a",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "over 10",
+      "start_logsumexp": 4.1758705557485225,
+      "end_logsumexp": 4.639782968040555,
+      "normalization_token_count": 117,
+      "alternative": {
+        "prediction": "10%",
+        "normalized": "10",
+        "margin": -15.47334361076355,
+        "window_index": 0,
+        "start_token": 40,
+        "end_token": 41,
+        "start": 130,
+        "end": 133
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5a67d87ef038b7001ab0c48d",
+    "prediction": "single-sex",
+    "features": [
+      -0.2131185531616211,
+      -1.8197369486441497,
+      0.9339854717254639,
+      1.3862943611198906,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "ce72fed7b084941e90079823ae33cc19adb21829e9f5aa99491ba4d96d782570",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "singlesex",
+      "start_logsumexp": 4.130753750294034,
+      "end_logsumexp": 4.5515394174510675,
+      "normalization_token_count": 195,
+      "alternative": {
+        "prediction": "independent schools are single-sex",
+        "normalized": "independent schools are singlesex",
+        "margin": -1.147104024887085,
+        "window_index": 0,
+        "start_token": 148,
+        "end_token": 153,
+        "start": 676,
+        "end": 710
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5a67dedd8476ee001a58a74f",
+    "prediction": "Blaine Amendments",
+    "features": [
+      -3.7687755823135376,
+      -4.20080037436842,
+      0.14068138599395752,
+      1.3862943611198906,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "2894c924f3b7949239f3846f11a2cdb403c344416a9e245dc179f33fdd345fb9",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "blaine amendments",
+      "start_logsumexp": 4.516274747868601,
+      "end_logsumexp": 4.922366636593508,
+      "normalization_token_count": 109,
+      "alternative": {
+        "prediction": "state Blaine Amendments",
+        "normalized": "state blaine amendments",
+        "margin": -3.909456968307495,
+        "window_index": 0,
+        "start_token": 83,
+        "end_token": 86,
+        "start": 395,
+        "end": 418
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5a67e29c8476ee001a58a756",
+    "prediction": "education",
+    "features": [
+      -15.921794652938843,
+      -15.923814565100779,
+      0.05478858947753906,
+      0.6931471805599453,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "0fb23036449013510f8c252304c3eecf5fccaa6ce7e6eda9cdd52fb0feda00d2",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "education",
+      "start_logsumexp": 4.311970457203166,
+      "end_logsumexp": 4.850312516482207,
+      "normalization_token_count": 128,
+      "alternative": {
+        "prediction": "compulsory education",
+        "normalized": "compulsory education",
+        "margin": -15.976583242416382,
+        "window_index": 0,
+        "start_token": 31,
+        "end_token": 32,
+        "start": 117,
+        "end": 137
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5a67e5278476ee001a58a764",
+    "prediction": "substantial endowments running to hundreds of millions of dollars",
+    "features": [
+      -4.87786225322634,
+      -5.292317320319708,
+      0.0875290036201477,
+      2.4849066497880004,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "18514753d866298f71238efff2e516d2386f7da19255feb3918f789671cbfb12",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "substantial endowments running to hundreds of millions of dollars",
+      "start_logsumexp": 1.9945933771886422,
+      "end_logsumexp": 2.548402086595095,
+      "normalization_token_count": 118,
+      "alternative": {
+        "prediction": "hundreds of millions of dollars",
+        "normalized": "hundreds of millions of dollars",
+        "margin": -4.9653912568464875,
+        "window_index": 0,
+        "start_token": 86,
+        "end_token": 90,
+        "start": 356,
+        "end": 387
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5ad3ad61604f3c001a3fec0d",
+    "prediction": "10th century",
+    "features": [
+      0.6958179473876953,
+      -1.7015252628029032,
+      0.823742151260376,
+      1.3862943611198906,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "231a015181e1e06c442f571a8baa25ce2ec844e939e02b2955b0aee6945c648b",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "10th century",
+      "start_logsumexp": 4.612642257948547,
+      "end_logsumexp": 4.815743766496812,
+      "normalization_token_count": 207,
+      "alternative": {
+        "prediction": "In the course of the 10th century",
+        "normalized": "in course of 10th century",
+        "margin": -0.12792420387268066,
+        "window_index": 0,
+        "start_token": 16,
+        "end_token": 23,
+        "start": 0,
+        "end": 33
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5ad3af11604f3c001a3fec63",
+    "prediction": "Catholicism",
+    "features": [
+      -1.4037599563598633,
+      -2.5314922301740443,
+      1.477632761001587,
+      0.6931471805599453,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "6cc34106bc6b1deb652e610973c798faa2caaaed6b16c99c39c6f5b49df3a196",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "catholicism",
+      "start_logsumexp": 3.205276474007909,
+      "end_logsumexp": 3.7650001170517555,
+      "normalization_token_count": 109,
+      "alternative": {
+        "prediction": "Old Norse language with Catholicism",
+        "normalized": "old norse language with catholicism",
+        "margin": -2.88139271736145,
+        "window_index": 0,
+        "start_token": 29,
+        "end_token": 33,
+        "start": 97,
+        "end": 132
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5ad3de8b604f3c001a3ff469",
+    "prediction": "Roussel de Bailleul",
+    "features": [
+      -8.13582095503807,
+      -8.183688876696916,
+      1.6146146059036255,
+      2.1972245773362196,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "8d0f136ca3e21898494994833851f5c381fc610d00c5a286083f4b15d65caad4",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "roussel de bailleul",
+      "start_logsumexp": 3.1529413464260228,
+      "end_logsumexp": 3.9190140042794535,
+      "normalization_token_count": 126,
+      "alternative": {
+        "prediction": "de Bailleul",
+        "normalized": "de bailleul",
+        "margin": -9.750435560941696,
+        "window_index": 0,
+        "start_token": 104,
+        "end_token": 108,
+        "start": 367,
+        "end": 378
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5ad3e96b604f3c001a3ff689",
+    "prediction": "Turkish forces",
+    "features": [
+      -0.5761942863464355,
+      -2.1448572905351124,
+      0.6213972568511963,
+      1.0986122886681098,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "e80ce1ef7c64e3240017398f3333a9fece8bfa318dc05be5457d3ab870d07771",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "turkish forces",
+      "start_logsumexp": 2.335588457685838,
+      "end_logsumexp": 2.9103686815965277,
+      "normalization_token_count": 187,
+      "alternative": {
+        "prediction": "Turkish",
+        "normalized": "turkish",
+        "margin": -1.1975915431976318,
+        "window_index": 0,
+        "start_token": 19,
+        "end_token": 19,
+        "start": 20,
+        "end": 27
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5ad3f028604f3c001a3ff825",
+    "prediction": "Dyrrachium",
+    "features": [
+      -3.717780590057373,
+      -4.0312648058953755,
+      2.6512664556503296,
+      1.791759469228055,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "d352fae900cfd1fb07e900ce8c975e46f39748c746696de6bdeb051c5bc2580d",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "dyrrachium",
+      "start_logsumexp": 4.584793684608194,
+      "end_logsumexp": 5.076602365946606,
+      "normalization_token_count": 73,
+      "alternative": {
+        "prediction": "Dyrrachium, owing to the betrayal of high Byzantine officials. Some time later, Dyrrachium",
+        "normalized": "dyrrachium owing to betrayal of high byzantine officials some time later dyrrachium",
+        "margin": -6.369047045707703,
+        "window_index": 0,
+        "start_token": 40,
+        "end_token": 63,
+        "start": 125,
+        "end": 215
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5ad3f5b0604f3c001a3ff9ab",
+    "prediction": "Normans merged with the natives, combining languages and traditions. In the course of the Hundred Years' War, the Norman aristocracy",
+    "features": [
+      -20.038270473480225,
+      -20.03886695345745,
+      0.029497146606445312,
+      3.258096538021482,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "e77cc2842075cf67e0f42d9c55fea1df5857504c655c9e1e596c5f52dc859507",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "normans merged with natives combining languages and traditions in course of hundred years war norman aristocracy",
+      "start_logsumexp": 4.336483112133489,
+      "end_logsumexp": 4.818692053604234,
+      "normalization_token_count": 127,
+      "alternative": {
+        "prediction": "Norman aristocracy",
+        "normalized": "norman aristocracy",
+        "margin": -20.06776762008667,
+        "window_index": 0,
+        "start_token": 40,
+        "end_token": 41,
+        "start": 130,
+        "end": 148
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5ad3f6f5604f3c001a3ffa0a",
+    "prediction": "Normans",
+    "features": [
+      -13.549843311309814,
+      -13.55781157354846,
+      0.7476310729980469,
+      1.0986122886681098,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "823249b3c179c7bf3d9de7f322b83644f50d2ae221e5d56785b0dce7e235e2e2",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "normans",
+      "start_logsumexp": 3.403754003577658,
+      "end_logsumexp": 3.986608572473243,
+      "normalization_token_count": 285,
+      "alternative": {
+        "prediction": "Normans had a profound effect on Irish culture and history after their invasion at Bannow Bay in 1169. Initially the Normans",
+        "normalized": "normans had profound effect on irish culture and history after their invasion at bannow bay in 1169 initially normans",
+        "margin": -14.297474384307861,
+        "window_index": 0,
+        "start_token": 15,
+        "end_token": 41,
+        "start": 4,
+        "end": 128
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5ad3f7ac604f3c001a3ffa3c",
+    "prediction": "William",
+    "features": [
+      -10.34407913684845,
+      -10.365101218142971,
+      1.5779194831848145,
+      0.6931471805599453,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "68e815c1eccce28acd02576891be89765c5d2769195c1714b1fb27828cd727a1",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "william",
+      "start_logsumexp": 4.850552369342113,
+      "end_logsumexp": 5.17112488620778,
+      "normalization_token_count": 109,
+      "alternative": {
+        "prediction": "William who had already disputed Scotland's southern borders. William",
+        "normalized": "william who had already disputed scotlands southern borders william",
+        "margin": -11.921998620033264,
+        "window_index": 0,
+        "start_token": 51,
+        "end_token": 61,
+        "start": 210,
+        "end": 279
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5ad3f8d2604f3c001a3ffa8d",
+    "prediction": "Sybilla of Normandy",
+    "features": [
+      8.047017812728882,
+      -0.12107695929209328,
+      2.6547350883483887,
+      1.791759469228055,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "889592b3e637c0400bdbe22ed06f541a89a8b1c11477b6a55029e9af6bd2131d",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "sybilla of normandy",
+      "start_logsumexp": 5.835395014165209,
+      "end_logsumexp": 6.857026797574394,
+      "normalization_token_count": 225,
+      "alternative": {
+        "prediction": "Sybilla",
+        "normalized": "sybilla",
+        "margin": 5.392282724380493,
+        "window_index": 0,
+        "start_token": 63,
+        "end_token": 65,
+        "start": 271,
+        "end": 278
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5ad3fc41604f3c001a3ffb8f",
+    "prediction": "Antioch",
+    "features": [
+      3.7868006229400635,
+      -0.2917381517573707,
+      4.830278784036636,
+      0.6931471805599453,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "8121c40d42d753225c6a469ed73c8181e91e006ed9ad9f72aa74a74b2363b0b8",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "antioch",
+      "start_logsumexp": 4.6732626757594025,
+      "end_logsumexp": 5.0597038657379585,
+      "normalization_token_count": 103,
+      "alternative": {
+        "prediction": "in Antioch",
+        "normalized": "in antioch",
+        "margin": -1.0434781610965729,
+        "window_index": 0,
+        "start_token": 42,
+        "end_token": 43,
+        "start": 139,
+        "end": 149
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5ad3fe0d604f3c001a3ffc1c",
+    "prediction": "mosaics",
+    "features": [
+      2.135704278945923,
+      -1.5088777892586078,
+      0.6878759860992432,
+      1.0986122886681098,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "3bd1082a529b9d984a09852df94240c24b0e05d5f22cb1b10e6d95d51b9e1392",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "mosaics",
+      "start_logsumexp": 3.6599374020262303,
+      "end_logsumexp": 4.038749232752397,
+      "normalization_token_count": 191,
+      "alternative": {
+        "prediction": "sculptured fonts, capitals, and more importantly mosaics",
+        "normalized": "sculptured fonts capitals and more importantly mosaics",
+        "margin": 1.4478282928466797,
+        "window_index": 0,
+        "start_token": 101,
+        "end_token": 111,
+        "start": 417,
+        "end": 473
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5ad3ff1b604f3c001a3ffc73",
+    "prediction": "French Wars of Religion",
+    "features": [
+      -7.026548624038696,
+      -7.116374691044756,
+      1.4761739373207092,
+      1.6094379124341003,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "2d5e9f304697ac88e70d959415ed2a0826e4e17344d07025e79fe80526e13c31",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "french wars of religion",
+      "start_logsumexp": 4.337978849165107,
+      "end_logsumexp": 4.757085274023814,
+      "normalization_token_count": 91,
+      "alternative": {
+        "prediction": "Wars of Religion",
+        "normalized": "wars of religion",
+        "margin": -8.502722561359406,
+        "window_index": 0,
+        "start_token": 15,
+        "end_token": 17,
+        "start": 11,
+        "end": 27
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5ad3ffd7604f3c001a3ffca8",
+    "prediction": "the dukes",
+    "features": [
+      -9.219297245144844,
+      -9.250825909056863,
+      4.976608917117119,
+      1.3862943611198906,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "00c84baa77993a3ac494e18297fb45693d3de708a3172de621d68d140b0a1bcf",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "dukes",
+      "start_logsumexp": 4.830044139497266,
+      "end_logsumexp": 5.45872434298775,
+      "normalization_token_count": 230,
+      "alternative": {
+        "prediction": "Normans did not have the rich and distinctive traditions of the cultures they conquered. However, in the early 11th century the dukes",
+        "normalized": "normans did not have rich and distinctive traditions of cultures they conquered however in early 11th century dukes",
+        "margin": -14.195906162261963,
+        "window_index": 0,
+        "start_token": 20,
+        "end_token": 46,
+        "start": 24,
+        "end": 157
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5ad4017a604f3c001a3ffd1f",
+    "prediction": "1097",
+    "features": [
+      -2.8264923095703125,
+      -3.2801620873639648,
+      5.221253395080566,
+      1.0986122886681098,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "d6b793bb23a351b7418793d96d8e3094c74522cf35f731653c539571da8529f6",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "1097",
+      "start_logsumexp": 4.404996015368215,
+      "end_logsumexp": 4.915455474003807,
+      "normalization_token_count": 114,
+      "alternative": {
+        "prediction": "in 1097",
+        "normalized": "in 1097",
+        "margin": -8.047745704650879,
+        "window_index": 0,
+        "start_token": 74,
+        "end_token": 76,
+        "start": 264,
+        "end": 271
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5ad401f2604f3c001a3ffd41",
+    "prediction": "Western European",
+    "features": [
+      -9.585158228874207,
+      -9.605413891517706,
+      3.723140239715576,
+      1.0986122886681098,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "218bcafd4ea9a6566900672f26303adc874834255c2b12646ddef2c72e9093f2",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "western european",
+      "start_logsumexp": 3.845190446900602,
+      "end_logsumexp": 4.281366046583961,
+      "normalization_token_count": 59,
+      "alternative": {
+        "prediction": "Cyprus by the Anglo-Norman forces of the Third Crusade opened a new chapter in the history of the island, which would be under Western European",
+        "normalized": "cyprus by anglonorman forces of third crusade opened new chapter in history of island which would be under western european",
+        "margin": -13.308298468589783,
+        "window_index": 0,
+        "start_token": 18,
+        "end_token": 46,
+        "start": 16,
+        "end": 159
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  },
+  {
+    "id": "5ad40358604f3c001a3ffd7f",
+    "prediction": "customary law",
+    "features": [
+      -11.963182091712952,
+      -11.975853764921068,
+      1.1043962240219116,
+      1.0986122886681098,
+      0.6931471805599453
+    ],
+    "feature_names": [
+      "selected_span_null_margin",
+      "selected_joint_context_cls_log_probability",
+      "different_normalized_answer_margin_gap",
+      "log1p_answer_token_count",
+      "log1p_window_count"
+    ],
+    "diagnostics": {
+      "context_sha256": "e5f87e55985983815a9352a8e3c2413035c4ebf26e931d9d4dbccd2d10f98bf9",
+      "selected_window_index": 0,
+      "selected_normalized_answer": "customary law",
+      "start_logsumexp": 4.089704614686373,
+      "end_logsumexp": 4.679493528706069,
+      "normalization_token_count": 122,
+      "alternative": {
+        "prediction": "customary law of Normandy",
+        "normalized": "customary law of normandy",
+        "margin": -13.067578315734863,
+        "window_index": 0,
+        "start_token": 13,
+        "end_token": 16,
+        "start": 4,
+        "end": 29
+      },
+      "competitor_scope": "selected_window_only"
+    },
+    "target": 0
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "train": {
+    "n": 256,
+    "window_counts": {
+      "1": 254,
+      "2": 2
+    },
+    "changed_gap_rows": [],
+    "local_feature_failures": [],
+    "max_raw_archive_float_difference": 0.0,
+    "other_four_features_and_labels_unchanged": true
+  },
+  "calibration": {
+    "n": 128,
+    "window_counts": {
+      "1": 128
+    },
+    "changed_gap_rows": [],
+    "local_feature_failures": [],
+    "max_raw_archive_float_difference": 0.0,
+    "other_four_features_and_labels_unchanged": true
+  }
+}

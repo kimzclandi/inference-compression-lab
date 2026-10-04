@@ -1,0 +1,130 @@
+{
+  "all_pass": true,
+  "variants": {
+    "fp32": {
+      "features": {
+        "train": {
+          "n": 256,
+          "multi_window_rows": 2,
+          "changed_gap_ids": [],
+          "undefined_ids": []
+        },
+        "calibration": {
+          "n": 128,
+          "multi_window_rows": 0,
+          "changed_gap_ids": [],
+          "undefined_ids": []
+        }
+      },
+      "arms": {
+        "all_windows": {
+          "status": "complete",
+          "eligible": false,
+          "threshold": null,
+          "fixed_0_7": {
+            "n": 128,
+            "accepted": 37,
+            "accepted_correct": 31,
+            "answerable": 64,
+            "unanswerable": 64,
+            "accepted_answerable": 35,
+            "accepted_unanswerable": 2,
+            "accepted_precision": 0.8378378378378378,
+            "answerable_answer_coverage": 0.546875,
+            "correct_answerable_coverage": 0.484375,
+            "unanswerable_false_accept_rate": 0.03125,
+            "invalid_rate": 0.0
+          }
+        },
+        "selected_window": {
+          "status": "complete",
+          "eligible": false,
+          "threshold": null,
+          "fixed_0_7": {
+            "n": 128,
+            "accepted": 37,
+            "accepted_correct": 31,
+            "answerable": 64,
+            "unanswerable": 64,
+            "accepted_answerable": 35,
+            "accepted_unanswerable": 2,
+            "accepted_precision": 0.8378378378378378,
+            "answerable_answer_coverage": 0.546875,
+            "correct_answerable_coverage": 0.484375,
+            "unanswerable_false_accept_rate": 0.03125,
+            "invalid_rate": 0.0
+          }
+        }
+      },
+      "paired_calibration": {
+        "max_score_difference": 0.0,
+        "score_changed_ids": [],
+        "decision_changed_at_0_7": []
+      }
+    },
+    "int8": {
+      "features": {
+        "train": {
+          "n": 256,
+          "multi_window_rows": 2,
+          "changed_gap_ids": [],
+          "undefined_ids": []
+        },
+        "calibration": {
+          "n": 128,
+          "multi_window_rows": 0,
+          "changed_gap_ids": [],
+          "undefined_ids": []
+        }
+      },
+      "arms": {
+        "all_windows": {
+          "status": "complete",
+          "eligible": true,
+          "threshold": 0.7,
+          "fixed_0_7": {
+            "n": 128,
+            "accepted": 35,
+            "accepted_correct": 33,
+            "answerable": 64,
+            "unanswerable": 64,
+            "accepted_answerable": 34,
+            "accepted_unanswerable": 1,
+            "accepted_precision": 0.9428571428571428,
+            "answerable_answer_coverage": 0.53125,
+            "correct_answerable_coverage": 0.515625,
+            "unanswerable_false_accept_rate": 0.015625,
+            "invalid_rate": 0.0
+          }
+        },
+        "selected_window": {
+          "status": "complete",
+          "eligible": true,
+          "threshold": 0.7,
+          "fixed_0_7": {
+            "n": 128,
+            "accepted": 35,
+            "accepted_correct": 33,
+            "answerable": 64,
+            "unanswerable": 64,
+            "accepted_answerable": 34,
+            "accepted_unanswerable": 1,
+            "accepted_precision": 0.9428571428571428,
+            "answerable_answer_coverage": 0.53125,
+            "correct_answerable_coverage": 0.515625,
+            "unanswerable_false_accept_rate": 0.015625,
+            "invalid_rate": 0.0
+          }
+        }
+      },
+      "paired_calibration": {
+        "max_score_difference": 0.0,
+        "score_changed_ids": [],
+        "decision_changed_at_0_7": []
+      }
+    }
+  },
+  "scope": "Independent legal-span enumeration and threshold counts; saved local fit trace checked without refitting. No evaluation or model inference.",
+  "ablation_run_sha256": "f7b9651ed48e48cddcc61a0abbbd1c7e08ea24a24fce6a0764ba69b6a9619b69",
+  "protocol_sha256": "02aad7baca8826c68a418d814393a071b5e99a8aef9fef706f5f79bbd9f149d6"
+}

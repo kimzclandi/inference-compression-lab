@@ -16,6 +16,8 @@ python -m experiments.review_qa_evidence --output-dir runs/my-evidence-review
 
 命令从原始记录完整核验后输出 `review.md`、`review.json`、`acceptance.json` 与 `run.json`。失败会保留记录、返回非零状态，不生成通过报告；不会运行新评估或检查远端发布状态。实际模型演示另见[无 Git 复现指南](docs/release-reproduction.md)。
 
+[新增第三特征固定消融](docs/qa-span-gap-ablation.md)：仅使用已公布训练/校准材料。两窗反例可区分机制，但真实数据0行特征改变，未产生质量提升；默认策略保持不变。
+
 ## 当前状态：有限 QA 原型通过样本门槛
 
 新增专用抽取模型与固定五特征正确性排序头。INT8 在校准集固定阈值后，对四篇新文章的 128 题只评估一次：接受 27 题，27 题全部 EM 正确；可回答覆盖率 27/64，64 个不可回答问题全部拒答，五项预设点门槛通过。支持有输入范围和严格身份验证的本地原型，**不证明通用部署质量**。精度区间下界约 87.54%，仍有 37 个可回答问题被拒答。

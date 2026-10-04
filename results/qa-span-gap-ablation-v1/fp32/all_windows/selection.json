@@ -1,0 +1,1610 @@
+{
+  "eligible": false,
+  "threshold": null,
+  "candidates": [
+    {
+      "threshold": 0.5,
+      "gate": {
+        "all_pass": false,
+        "criteria": {
+          "constraints_valid": {
+            "passed": true,
+            "reason": null
+          },
+          "counts_consistent": {
+            "passed": true,
+            "reason": null
+          },
+          "accepted_precision": {
+            "value": 0.8269230769230769,
+            "recomputed_value": 0.8269230769230769,
+            "limit": 0.9,
+            "comparator": ">=",
+            "passed": false,
+            "reason": "point_estimate_outside_frozen_limit"
+          },
+          "answerable_answer_coverage": {
+            "value": 0.765625,
+            "recomputed_value": 0.765625,
+            "limit": 0.4,
+            "comparator": ">=",
+            "passed": true,
+            "reason": null
+          },
+          "correct_answerable_coverage": {
+            "value": 0.671875,
+            "recomputed_value": 0.671875,
+            "limit": 0.35,
+            "comparator": ">=",
+            "passed": true,
+            "reason": null
+          },
+          "unanswerable_false_accept_rate": {
+            "value": 0.046875,
+            "recomputed_value": 0.046875,
+            "limit": 0.1,
+            "comparator": "<=",
+            "passed": true,
+            "reason": null
+          },
+          "invalid_rate": {
+            "value": 0.0,
+            "recomputed_value": 0.0,
+            "limit": 0.05,
+            "comparator": "<=",
+            "passed": true,
+            "reason": null
+          }
+        },
+        "constraints": {
+          "min_accepted_precision": 0.9,
+          "min_answerable_answer_coverage": 0.4,
+          "min_correct_answerable_coverage": 0.35,
+          "max_unanswerable_false_accept_rate": 0.1,
+          "max_invalid_rate": 0.05
+        },
+        "intervals": {
+          "accepted_precision": {
+            "lower": 0.702691358755192,
+            "upper": 0.9061752560868979,
+            "estimate": 0.8269230769230769,
+            "successes": 43,
+            "trials": 52,
+            "confidence_level": 0.95,
+            "method": "two_sided_wilson",
+            "scope": "descriptive_binomial_interval_without_context_or_article_dependence_adjustment"
+          },
+          "unanswerable_false_accept_rate": {
+            "lower": 0.016069016786292974,
+            "upper": 0.12899653740093686,
+            "estimate": 0.046875,
+            "successes": 3,
+            "trials": 64,
+            "confidence_level": 0.95,
+            "method": "two_sided_wilson",
+            "scope": "descriptive_binomial_interval_without_context_or_article_dependence_adjustment"
+          },
+          "correct_answerable_coverage": {
+            "lower": 0.549991058490915,
+            "upper": 0.7742944209553081,
+            "estimate": 0.671875,
+            "successes": 43,
+            "trials": 64,
+            "confidence_level": 0.95,
+            "method": "two_sided_wilson",
+            "scope": "descriptive_binomial_interval_without_context_or_article_dependence_adjustment"
+          }
+        },
+        "scope": "empirical_point_estimate_gate_not_population_risk_guarantee",
+        "interval_role": "report_only_not_used_to_pass_the_gate"
+      },
+      "summary": {
+        "raw": {
+          "overall": {
+            "n": 128,
+            "em": 0.4140625,
+            "f1": 0.44816009963768116,
+            "format_valid_rate": 1.0
+          },
+          "answerable": {
+            "n": 64,
+            "em": 0.828125,
+            "f1": 0.8963201992753623,
+            "format_valid_rate": 1.0
+          },
+          "unanswerable": {
+            "n": 64,
+            "em": 0.0,
+            "f1": 0.0,
+            "format_valid_rate": 1.0
+          },
+          "unsupported_answer_rate": 1.0,
+          "over_abstention_rate": 0.0,
+          "categories": {
+            "correct": 53,
+            "wrong_or_partial_span": 11,
+            "unsupported_answer": 64
+          },
+          "family_macro_em": 0.436046511627907,
+          "always_abstain_em": 0.5
+        },
+        "system": {
+          "overall": {
+            "n": 128,
+            "em": 0.8125,
+            "f1": 0.8337069746376812,
+            "format_valid_rate": 1.0
+          },
+          "answerable": {
+            "n": 64,
+            "em": 0.671875,
+            "f1": 0.7142889492753624,
+            "format_valid_rate": 1.0
+          },
+          "unanswerable": {
+            "n": 64,
+            "em": 0.953125,
+            "f1": 0.953125,
+            "format_valid_rate": 1.0
+          },
+          "unsupported_answer_rate": 0.046875,
+          "over_abstention_rate": 0.234375,
+          "categories": {
+            "correct": 104,
+            "over_abstention": 15,
+            "wrong_or_partial_span": 6,
+            "unsupported_answer": 3
+          },
+          "family_macro_em": 0.8313953488372093,
+          "always_abstain_em": 0.5
+        },
+        "selective": {
+          "n": 128,
+          "accepted": 52,
+          "accepted_correct": 43,
+          "answerable": 64,
+          "unanswerable": 64,
+          "accepted_answerable": 49,
+          "accepted_unanswerable": 3,
+          "accepted_precision": 0.8269230769230769,
+          "answerable_answer_coverage": 0.765625,
+          "correct_answerable_coverage": 0.671875,
+          "unanswerable_false_accept_rate": 0.046875,
+          "acceptance_rate": 0.40625,
+          "valid_span_rate": 1.0,
+          "invalid_rate": 0.0,
+          "model_abstention_rate": 0.0,
+          "threshold_abstention_rate": 0.59375,
+          "model_status_counts": {
+            "answer": 128,
+            "abstain": 0,
+            "invalid": 0
+          }
+        },
+        "threshold": 0.5
+      }
+    },
+    {
+      "threshold": 0.6,
+      "gate": {
+        "all_pass": false,
+        "criteria": {
+          "constraints_valid": {
+            "passed": true,
+            "reason": null
+          },
+          "counts_consistent": {
+            "passed": true,
+            "reason": null
+          },
+          "accepted_precision": {
+            "value": 0.8260869565217391,
+            "recomputed_value": 0.8260869565217391,
+            "limit": 0.9,
+            "comparator": ">=",
+            "passed": false,
+            "reason": "point_estimate_outside_frozen_limit"
+          },
+          "answerable_answer_coverage": {
+            "value": 0.671875,
+            "recomputed_value": 0.671875,
+            "limit": 0.4,
+            "comparator": ">=",
+            "passed": true,
+            "reason": null
+          },
+          "correct_answerable_coverage": {
+            "value": 0.59375,
+            "recomputed_value": 0.59375,
+            "limit": 0.35,
+            "comparator": ">=",
+            "passed": true,
+            "reason": null
+          },
+          "unanswerable_false_accept_rate": {
+            "value": 0.046875,
+            "recomputed_value": 0.046875,
+            "limit": 0.1,
+            "comparator": "<=",
+            "passed": true,
+            "reason": null
+          },
+          "invalid_rate": {
+            "value": 0.0,
+            "recomputed_value": 0.0,
+            "limit": 0.05,
+            "comparator": "<=",
+            "passed": true,
+            "reason": null
+          }
+        },
+        "constraints": {
+          "min_accepted_precision": 0.9,
+          "min_answerable_answer_coverage": 0.4,
+          "min_correct_answerable_coverage": 0.35,
+          "max_unanswerable_false_accept_rate": 0.1,
+          "max_invalid_rate": 0.05
+        },
+        "intervals": {
+          "accepted_precision": {
+            "lower": 0.692766462836215,
+            "upper": 0.9091420829775368,
+            "estimate": 0.8260869565217391,
+            "successes": 38,
+            "trials": 46,
+            "confidence_level": 0.95,
+            "method": "two_sided_wilson",
+            "scope": "descriptive_binomial_interval_without_context_or_article_dependence_adjustment"
+          },
+          "unanswerable_false_accept_rate": {
+            "lower": 0.016069016786292974,
+            "upper": 0.12899653740093686,
+            "estimate": 0.046875,
+            "successes": 3,
+            "trials": 64,
+            "confidence_level": 0.95,
+            "method": "two_sided_wilson",
+            "scope": "descriptive_binomial_interval_without_context_or_article_dependence_adjustment"
+          },
+          "correct_answerable_coverage": {
+            "lower": 0.4714520812860451,
+            "upper": 0.7054309075028039,
+            "estimate": 0.59375,
+            "successes": 38,
+            "trials": 64,
+            "confidence_level": 0.95,
+            "method": "two_sided_wilson",
+            "scope": "descriptive_binomial_interval_without_context_or_article_dependence_adjustment"
+          }
+        },
+        "scope": "empirical_point_estimate_gate_not_population_risk_guarantee",
+        "interval_role": "report_only_not_used_to_pass_the_gate"
+      },
+      "summary": {
+        "raw": {
+          "overall": {
+            "n": 128,
+            "em": 0.4140625,
+            "f1": 0.44816009963768116,
+            "format_valid_rate": 1.0
+          },
+          "answerable": {
+            "n": 64,
+            "em": 0.828125,
+            "f1": 0.8963201992753623,
+            "format_valid_rate": 1.0
+          },
+          "unanswerable": {
+            "n": 64,
+            "em": 0.0,
+            "f1": 0.0,
+            "format_valid_rate": 1.0
+          },
+          "unsupported_answer_rate": 1.0,
+          "over_abstention_rate": 0.0,
+          "categories": {
+            "correct": 53,
+            "wrong_or_partial_span": 11,
+            "unsupported_answer": 64
+          },
+          "family_macro_em": 0.436046511627907,
+          "always_abstain_em": 0.5
+        },
+        "system": {
+          "overall": {
+            "n": 128,
+            "em": 0.7734375,
+            "f1": 0.7915194746376811,
+            "format_valid_rate": 1.0
+          },
+          "answerable": {
+            "n": 64,
+            "em": 0.59375,
+            "f1": 0.6299139492753624,
+            "format_valid_rate": 1.0
+          },
+          "unanswerable": {
+            "n": 64,
+            "em": 0.953125,
+            "f1": 0.953125,
+            "format_valid_rate": 1.0
+          },
+          "unsupported_answer_rate": 0.046875,
+          "over_abstention_rate": 0.328125,
+          "categories": {
+            "correct": 99,
+            "over_abstention": 21,
+            "wrong_or_partial_span": 5,
+            "unsupported_answer": 3
+          },
+          "family_macro_em": 0.7848837209302325,
+          "always_abstain_em": 0.5
+        },
+        "selective": {
+          "n": 128,
+          "accepted": 46,
+          "accepted_correct": 38,
+          "answerable": 64,
+          "unanswerable": 64,
+          "accepted_answerable": 43,
+          "accepted_unanswerable": 3,
+          "accepted_precision": 0.8260869565217391,
+          "answerable_answer_coverage": 0.671875,
+          "correct_answerable_coverage": 0.59375,
+          "unanswerable_false_accept_rate": 0.046875,
+          "acceptance_rate": 0.359375,
+          "valid_span_rate": 1.0,
+          "invalid_rate": 0.0,
+          "model_abstention_rate": 0.0,
+          "threshold_abstention_rate": 0.640625,
+          "model_status_counts": {
+            "answer": 128,
+            "abstain": 0,
+            "invalid": 0
+          }
+        },
+        "threshold": 0.6
+      }
+    },
+    {
+      "threshold": 0.7,
+      "gate": {
+        "all_pass": false,
+        "criteria": {
+          "constraints_valid": {
+            "passed": true,
+            "reason": null
+          },
+          "counts_consistent": {
+            "passed": true,
+            "reason": null
+          },
+          "accepted_precision": {
+            "value": 0.8378378378378378,
+            "recomputed_value": 0.8378378378378378,
+            "limit": 0.9,
+            "comparator": ">=",
+            "passed": false,
+            "reason": "point_estimate_outside_frozen_limit"
+          },
+          "answerable_answer_coverage": {
+            "value": 0.546875,
+            "recomputed_value": 0.546875,
+            "limit": 0.4,
+            "comparator": ">=",
+            "passed": true,
+            "reason": null
+          },
+          "correct_answerable_coverage": {
+            "value": 0.484375,
+            "recomputed_value": 0.484375,
+            "limit": 0.35,
+            "comparator": ">=",
+            "passed": true,
+            "reason": null
+          },
+          "unanswerable_false_accept_rate": {
+            "value": 0.03125,
+            "recomputed_value": 0.03125,
+            "limit": 0.1,
+            "comparator": "<=",
+            "passed": true,
+            "reason": null
+          },
+          "invalid_rate": {
+            "value": 0.0,
+            "recomputed_value": 0.0,
+            "limit": 0.05,
+            "comparator": "<=",
+            "passed": true,
+            "reason": null
+          }
+        },
+        "constraints": {
+          "min_accepted_precision": 0.9,
+          "min_answerable_answer_coverage": 0.4,
+          "min_correct_answerable_coverage": 0.35,
+          "max_unanswerable_false_accept_rate": 0.1,
+          "max_invalid_rate": 0.05
+        },
+        "intervals": {
+          "accepted_precision": {
+            "lower": 0.6886351629906503,
+            "upper": 0.9234879276598885,
+            "estimate": 0.8378378378378378,
+            "successes": 31,
+            "trials": 37,
+            "confidence_level": 0.95,
+            "method": "two_sided_wilson",
+            "scope": "descriptive_binomial_interval_without_context_or_article_dependence_adjustment"
+          },
+          "unanswerable_false_accept_rate": {
+            "lower": 0.008612138346171874,
+            "upper": 0.10697291770958313,
+            "estimate": 0.03125,
+            "successes": 2,
+            "trials": 64,
+            "confidence_level": 0.95,
+            "method": "two_sided_wilson",
+            "scope": "descriptive_binomial_interval_without_context_or_article_dependence_adjustment"
+          },
+          "correct_answerable_coverage": {
+            "lower": 0.3663355166543264,
+            "upper": 0.6041839852141988,
+            "estimate": 0.484375,
+            "successes": 31,
+            "trials": 64,
+            "confidence_level": 0.95,
+            "method": "two_sided_wilson",
+            "scope": "descriptive_binomial_interval_without_context_or_article_dependence_adjustment"
+          }
+        },
+        "scope": "empirical_point_estimate_gate_not_population_risk_guarantee",
+        "interval_role": "report_only_not_used_to_pass_the_gate"
+      },
+      "summary": {
+        "raw": {
+          "overall": {
+            "n": 128,
+            "em": 0.4140625,
+            "f1": 0.44816009963768116,
+            "format_valid_rate": 1.0
+          },
+          "answerable": {
+            "n": 64,
+            "em": 0.828125,
+            "f1": 0.8963201992753623,
+            "format_valid_rate": 1.0
+          },
+          "unanswerable": {
+            "n": 64,
+            "em": 0.0,
+            "f1": 0.0,
+            "format_valid_rate": 1.0
+          },
+          "unsupported_answer_rate": 1.0,
+          "over_abstention_rate": 0.0,
+          "categories": {
+            "correct": 53,
+            "wrong_or_partial_span": 11,
+            "unsupported_answer": 64
+          },
+          "family_macro_em": 0.436046511627907,
+          "always_abstain_em": 0.5
+        },
+        "system": {
+          "overall": {
+            "n": 128,
+            "em": 0.7265625,
+            "f1": 0.7446444746376811,
+            "format_valid_rate": 1.0
+          },
+          "answerable": {
+            "n": 64,
+            "em": 0.484375,
+            "f1": 0.5205389492753624,
+            "format_valid_rate": 1.0
+          },
+          "unanswerable": {
+            "n": 64,
+            "em": 0.96875,
+            "f1": 0.96875,
+            "format_valid_rate": 1.0
+          },
+          "unsupported_answer_rate": 0.03125,
+          "over_abstention_rate": 0.453125,
+          "categories": {
+            "correct": 93,
+            "over_abstention": 29,
+            "wrong_or_partial_span": 4,
+            "unsupported_answer": 2
+          },
+          "family_macro_em": 0.75,
+          "always_abstain_em": 0.5
+        },
+        "selective": {
+          "n": 128,
+          "accepted": 37,
+          "accepted_correct": 31,
+          "answerable": 64,
+          "unanswerable": 64,
+          "accepted_answerable": 35,
+          "accepted_unanswerable": 2,
+          "accepted_precision": 0.8378378378378378,
+          "answerable_answer_coverage": 0.546875,
+          "correct_answerable_coverage": 0.484375,
+          "unanswerable_false_accept_rate": 0.03125,
+          "acceptance_rate": 0.2890625,
+          "valid_span_rate": 1.0,
+          "invalid_rate": 0.0,
+          "model_abstention_rate": 0.0,
+          "threshold_abstention_rate": 0.7109375,
+          "model_status_counts": {
+            "answer": 128,
+            "abstain": 0,
+            "invalid": 0
+          }
+        },
+        "threshold": 0.7
+      }
+    },
+    {
+      "threshold": 0.8,
+      "gate": {
+        "all_pass": false,
+        "criteria": {
+          "constraints_valid": {
+            "passed": true,
+            "reason": null
+          },
+          "counts_consistent": {
+            "passed": true,
+            "reason": null
+          },
+          "accepted_precision": {
+            "value": 0.8846153846153846,
+            "recomputed_value": 0.8846153846153846,
+            "limit": 0.9,
+            "comparator": ">=",
+            "passed": false,
+            "reason": "point_estimate_outside_frozen_limit"
+          },
+          "answerable_answer_coverage": {
+            "value": 0.390625,
+            "recomputed_value": 0.390625,
+            "limit": 0.4,
+            "comparator": ">=",
+            "passed": false,
+            "reason": "point_estimate_outside_frozen_limit"
+          },
+          "correct_answerable_coverage": {
+            "value": 0.359375,
+            "recomputed_value": 0.359375,
+            "limit": 0.35,
+            "comparator": ">=",
+            "passed": true,
+            "reason": null
+          },
+          "unanswerable_false_accept_rate": {
+            "value": 0.015625,
+            "recomputed_value": 0.015625,
+            "limit": 0.1,
+            "comparator": "<=",
+            "passed": true,
+            "reason": null
+          },
+          "invalid_rate": {
+            "value": 0.0,
+            "recomputed_value": 0.0,
+            "limit": 0.05,
+            "comparator": "<=",
+            "passed": true,
+            "reason": null
+          }
+        },
+        "constraints": {
+          "min_accepted_precision": 0.9,
+          "min_answerable_answer_coverage": 0.4,
+          "min_correct_answerable_coverage": 0.35,
+          "max_unanswerable_false_accept_rate": 0.1,
+          "max_invalid_rate": 0.05
+        },
+        "intervals": {
+          "accepted_precision": {
+            "lower": 0.7102409678828635,
+            "upper": 0.9599675537638938,
+            "estimate": 0.8846153846153846,
+            "successes": 23,
+            "trials": 26,
+            "confidence_level": 0.95,
+            "method": "two_sided_wilson",
+            "scope": "descriptive_binomial_interval_without_context_or_article_dependence_adjustment"
+          },
+          "unanswerable_false_accept_rate": {
+            "lower": 0.002763541923337505,
+            "upper": 0.08334101600094265,
+            "estimate": 0.015625,
+            "successes": 1,
+            "trials": 64,
+            "confidence_level": 0.95,
+            "method": "two_sided_wilson",
+            "scope": "descriptive_binomial_interval_without_context_or_article_dependence_adjustment"
+          },
+          "correct_answerable_coverage": {
+            "lower": 0.25288402291451745,
+            "upper": 0.48179149390220904,
+            "estimate": 0.359375,
+            "successes": 23,
+            "trials": 64,
+            "confidence_level": 0.95,
+            "method": "two_sided_wilson",
+            "scope": "descriptive_binomial_interval_without_context_or_article_dependence_adjustment"
+          }
+        },
+        "scope": "empirical_point_estimate_gate_not_population_risk_guarantee",
+        "interval_role": "report_only_not_used_to_pass_the_gate"
+      },
+      "summary": {
+        "raw": {
+          "overall": {
+            "n": 128,
+            "em": 0.4140625,
+            "f1": 0.44816009963768116,
+            "format_valid_rate": 1.0
+          },
+          "answerable": {
+            "n": 64,
+            "em": 0.828125,
+            "f1": 0.8963201992753623,
+            "format_valid_rate": 1.0
+          },
+          "unanswerable": {
+            "n": 64,
+            "em": 0.0,
+            "f1": 0.0,
+            "format_valid_rate": 1.0
+          },
+          "unsupported_answer_rate": 1.0,
+          "over_abstention_rate": 0.0,
+          "categories": {
+            "correct": 53,
+            "wrong_or_partial_span": 11,
+            "unsupported_answer": 64
+          },
+          "family_macro_em": 0.436046511627907,
+          "always_abstain_em": 0.5
+        },
+        "system": {
+          "overall": {
+            "n": 128,
+            "em": 0.671875,
+            "f1": 0.68203125,
+            "format_valid_rate": 1.0
+          },
+          "answerable": {
+            "n": 64,
+            "em": 0.359375,
+            "f1": 0.3796875,
+            "format_valid_rate": 1.0
+          },
+          "unanswerable": {
+            "n": 64,
+            "em": 0.984375,
+            "f1": 0.984375,
+            "format_valid_rate": 1.0
+          },
+          "unsupported_answer_rate": 0.015625,
+          "over_abstention_rate": 0.609375,
+          "categories": {
+            "correct": 86,
+            "over_abstention": 39,
+            "wrong_or_partial_span": 2,
+            "unsupported_answer": 1
+          },
+          "family_macro_em": 0.686046511627907,
+          "always_abstain_em": 0.5
+        },
+        "selective": {
+          "n": 128,
+          "accepted": 26,
+          "accepted_correct": 23,
+          "answerable": 64,
+          "unanswerable": 64,
+          "accepted_answerable": 25,
+          "accepted_unanswerable": 1,
+          "accepted_precision": 0.8846153846153846,
+          "answerable_answer_coverage": 0.390625,
+          "correct_answerable_coverage": 0.359375,
+          "unanswerable_false_accept_rate": 0.015625,
+          "acceptance_rate": 0.203125,
+          "valid_span_rate": 1.0,
+          "invalid_rate": 0.0,
+          "model_abstention_rate": 0.0,
+          "threshold_abstention_rate": 0.796875,
+          "model_status_counts": {
+            "answer": 128,
+            "abstain": 0,
+            "invalid": 0
+          }
+        },
+        "threshold": 0.8
+      }
+    },
+    {
+      "threshold": 0.85,
+      "gate": {
+        "all_pass": false,
+        "criteria": {
+          "constraints_valid": {
+            "passed": true,
+            "reason": null
+          },
+          "counts_consistent": {
+            "passed": true,
+            "reason": null
+          },
+          "accepted_precision": {
+            "value": 0.8333333333333334,
+            "recomputed_value": 0.8333333333333334,
+            "limit": 0.9,
+            "comparator": ">=",
+            "passed": false,
+            "reason": "point_estimate_outside_frozen_limit"
+          },
+          "answerable_answer_coverage": {
+            "value": 0.265625,
+            "recomputed_value": 0.265625,
+            "limit": 0.4,
+            "comparator": ">=",
+            "passed": false,
+            "reason": "point_estimate_outside_frozen_limit"
+          },
+          "correct_answerable_coverage": {
+            "value": 0.234375,
+            "recomputed_value": 0.234375,
+            "limit": 0.35,
+            "comparator": ">=",
+            "passed": false,
+            "reason": "point_estimate_outside_frozen_limit"
+          },
+          "unanswerable_false_accept_rate": {
+            "value": 0.015625,
+            "recomputed_value": 0.015625,
+            "limit": 0.1,
+            "comparator": "<=",
+            "passed": true,
+            "reason": null
+          },
+          "invalid_rate": {
+            "value": 0.0,
+            "recomputed_value": 0.0,
+            "limit": 0.05,
+            "comparator": "<=",
+            "passed": true,
+            "reason": null
+          }
+        },
+        "constraints": {
+          "min_accepted_precision": 0.9,
+          "min_answerable_answer_coverage": 0.4,
+          "min_correct_answerable_coverage": 0.35,
+          "max_unanswerable_false_accept_rate": 0.1,
+          "max_invalid_rate": 0.05
+        },
+        "intervals": {
+          "accepted_precision": {
+            "lower": 0.6077796189608428,
+            "upper": 0.9416342319413856,
+            "estimate": 0.8333333333333334,
+            "successes": 15,
+            "trials": 18,
+            "confidence_level": 0.95,
+            "method": "two_sided_wilson",
+            "scope": "descriptive_binomial_interval_without_context_or_article_dependence_adjustment"
+          },
+          "unanswerable_false_accept_rate": {
+            "lower": 0.002763541923337505,
+            "upper": 0.08334101600094265,
+            "estimate": 0.015625,
+            "successes": 1,
+            "trials": 64,
+            "confidence_level": 0.95,
+            "method": "two_sided_wilson",
+            "scope": "descriptive_binomial_interval_without_context_or_article_dependence_adjustment"
+          },
+          "correct_answerable_coverage": {
+            "lower": 0.1474989559392414,
+            "upper": 0.35133257582568644,
+            "estimate": 0.234375,
+            "successes": 15,
+            "trials": 64,
+            "confidence_level": 0.95,
+            "method": "two_sided_wilson",
+            "scope": "descriptive_binomial_interval_without_context_or_article_dependence_adjustment"
+          }
+        },
+        "scope": "empirical_point_estimate_gate_not_population_risk_guarantee",
+        "interval_role": "report_only_not_used_to_pass_the_gate"
+      },
+      "summary": {
+        "raw": {
+          "overall": {
+            "n": 128,
+            "em": 0.4140625,
+            "f1": 0.44816009963768116,
+            "format_valid_rate": 1.0
+          },
+          "answerable": {
+            "n": 64,
+            "em": 0.828125,
+            "f1": 0.8963201992753623,
+            "format_valid_rate": 1.0
+          },
+          "unanswerable": {
+            "n": 64,
+            "em": 0.0,
+            "f1": 0.0,
+            "format_valid_rate": 1.0
+          },
+          "unsupported_answer_rate": 1.0,
+          "over_abstention_rate": 0.0,
+          "categories": {
+            "correct": 53,
+            "wrong_or_partial_span": 11,
+            "unsupported_answer": 64
+          },
+          "family_macro_em": 0.436046511627907,
+          "always_abstain_em": 0.5
+        },
+        "system": {
+          "overall": {
+            "n": 128,
+            "em": 0.609375,
+            "f1": 0.61953125,
+            "format_valid_rate": 1.0
+          },
+          "answerable": {
+            "n": 64,
+            "em": 0.234375,
+            "f1": 0.2546875,
+            "format_valid_rate": 1.0
+          },
+          "unanswerable": {
+            "n": 64,
+            "em": 0.984375,
+            "f1": 0.984375,
+            "format_valid_rate": 1.0
+          },
+          "unsupported_answer_rate": 0.015625,
+          "over_abstention_rate": 0.734375,
+          "categories": {
+            "over_abstention": 47,
+            "correct": 78,
+            "wrong_or_partial_span": 2,
+            "unsupported_answer": 1
+          },
+          "family_macro_em": 0.6162790697674418,
+          "always_abstain_em": 0.5
+        },
+        "selective": {
+          "n": 128,
+          "accepted": 18,
+          "accepted_correct": 15,
+          "answerable": 64,
+          "unanswerable": 64,
+          "accepted_answerable": 17,
+          "accepted_unanswerable": 1,
+          "accepted_precision": 0.8333333333333334,
+          "answerable_answer_coverage": 0.265625,
+          "correct_answerable_coverage": 0.234375,
+          "unanswerable_false_accept_rate": 0.015625,
+          "acceptance_rate": 0.140625,
+          "valid_span_rate": 1.0,
+          "invalid_rate": 0.0,
+          "model_abstention_rate": 0.0,
+          "threshold_abstention_rate": 0.859375,
+          "model_status_counts": {
+            "answer": 128,
+            "abstain": 0,
+            "invalid": 0
+          }
+        },
+        "threshold": 0.85
+      }
+    },
+    {
+      "threshold": 0.9,
+      "gate": {
+        "all_pass": false,
+        "criteria": {
+          "constraints_valid": {
+            "passed": true,
+            "reason": null
+          },
+          "counts_consistent": {
+            "passed": true,
+            "reason": null
+          },
+          "accepted_precision": {
+            "value": 0.8888888888888888,
+            "recomputed_value": 0.8888888888888888,
+            "limit": 0.9,
+            "comparator": ">=",
+            "passed": false,
+            "reason": "point_estimate_outside_frozen_limit"
+          },
+          "answerable_answer_coverage": {
+            "value": 0.140625,
+            "recomputed_value": 0.140625,
+            "limit": 0.4,
+            "comparator": ">=",
+            "passed": false,
+            "reason": "point_estimate_outside_frozen_limit"
+          },
+          "correct_answerable_coverage": {
+            "value": 0.125,
+            "recomputed_value": 0.125,
+            "limit": 0.35,
+            "comparator": ">=",
+            "passed": false,
+            "reason": "point_estimate_outside_frozen_limit"
+          },
+          "unanswerable_false_accept_rate": {
+            "value": 0.0,
+            "recomputed_value": 0.0,
+            "limit": 0.1,
+            "comparator": "<=",
+            "passed": true,
+            "reason": null
+          },
+          "invalid_rate": {
+            "value": 0.0,
+            "recomputed_value": 0.0,
+            "limit": 0.05,
+            "comparator": "<=",
+            "passed": true,
+            "reason": null
+          }
+        },
+        "constraints": {
+          "min_accepted_precision": 0.9,
+          "min_answerable_answer_coverage": 0.4,
+          "min_correct_answerable_coverage": 0.35,
+          "max_unanswerable_false_accept_rate": 0.1,
+          "max_invalid_rate": 0.05
+        },
+        "intervals": {
+          "accepted_precision": {
+            "lower": 0.5650002944233439,
+            "upper": 0.9801091123614551,
+            "estimate": 0.8888888888888888,
+            "successes": 8,
+            "trials": 9,
+            "confidence_level": 0.95,
+            "method": "two_sided_wilson",
+            "scope": "descriptive_binomial_interval_without_context_or_article_dependence_adjustment"
+          },
+          "unanswerable_false_accept_rate": {
+            "lower": 0.0,
+            "upper": 0.05662405979280534,
+            "estimate": 0.0,
+            "successes": 0,
+            "trials": 64,
+            "confidence_level": 0.95,
+            "method": "two_sided_wilson",
+            "scope": "descriptive_binomial_interval_without_context_or_article_dependence_adjustment"
+          },
+          "correct_answerable_coverage": {
+            "lower": 0.06472242663330453,
+            "upper": 0.22774561821129946,
+            "estimate": 0.125,
+            "successes": 8,
+            "trials": 64,
+            "confidence_level": 0.95,
+            "method": "two_sided_wilson",
+            "scope": "descriptive_binomial_interval_without_context_or_article_dependence_adjustment"
+          }
+        },
+        "scope": "empirical_point_estimate_gate_not_population_risk_guarantee",
+        "interval_role": "report_only_not_used_to_pass_the_gate"
+      },
+      "summary": {
+        "raw": {
+          "overall": {
+            "n": 128,
+            "em": 0.4140625,
+            "f1": 0.44816009963768116,
+            "format_valid_rate": 1.0
+          },
+          "answerable": {
+            "n": 64,
+            "em": 0.828125,
+            "f1": 0.8963201992753623,
+            "format_valid_rate": 1.0
+          },
+          "unanswerable": {
+            "n": 64,
+            "em": 0.0,
+            "f1": 0.0,
+            "format_valid_rate": 1.0
+          },
+          "unsupported_answer_rate": 1.0,
+          "over_abstention_rate": 0.0,
+          "categories": {
+            "correct": 53,
+            "wrong_or_partial_span": 11,
+            "unsupported_answer": 64
+          },
+          "family_macro_em": 0.436046511627907,
+          "always_abstain_em": 0.5
+        },
+        "system": {
+          "overall": {
+            "n": 128,
+            "em": 0.5625,
+            "f1": 0.56875,
+            "format_valid_rate": 1.0
+          },
+          "answerable": {
+            "n": 64,
+            "em": 0.125,
+            "f1": 0.1375,
+            "format_valid_rate": 1.0
+          },
+          "unanswerable": {
+            "n": 64,
+            "em": 1.0,
+            "f1": 1.0,
+            "format_valid_rate": 1.0
+          },
+          "unsupported_answer_rate": 0.0,
+          "over_abstention_rate": 0.859375,
+          "categories": {
+            "over_abstention": 55,
+            "correct": 72,
+            "wrong_or_partial_span": 1
+          },
+          "family_macro_em": 0.5697674418604651,
+          "always_abstain_em": 0.5
+        },
+        "selective": {
+          "n": 128,
+          "accepted": 9,
+          "accepted_correct": 8,
+          "answerable": 64,
+          "unanswerable": 64,
+          "accepted_answerable": 9,
+          "accepted_unanswerable": 0,
+          "accepted_precision": 0.8888888888888888,
+          "answerable_answer_coverage": 0.140625,
+          "correct_answerable_coverage": 0.125,
+          "unanswerable_false_accept_rate": 0.0,
+          "acceptance_rate": 0.0703125,
+          "valid_span_rate": 1.0,
+          "invalid_rate": 0.0,
+          "model_abstention_rate": 0.0,
+          "threshold_abstention_rate": 0.9296875,
+          "model_status_counts": {
+            "answer": 128,
+            "abstain": 0,
+            "invalid": 0
+          }
+        },
+        "threshold": 0.9
+      }
+    },
+    {
+      "threshold": 0.95,
+      "gate": {
+        "all_pass": false,
+        "criteria": {
+          "constraints_valid": {
+            "passed": true,
+            "reason": null
+          },
+          "counts_consistent": {
+            "passed": true,
+            "reason": null
+          },
+          "accepted_precision": {
+            "value": null,
+            "recomputed_value": null,
+            "limit": 0.9,
+            "comparator": ">=",
+            "passed": false,
+            "reason": "missing_nonfinite_undefined_or_inconsistent_metric"
+          },
+          "answerable_answer_coverage": {
+            "value": 0.0,
+            "recomputed_value": 0.0,
+            "limit": 0.4,
+            "comparator": ">=",
+            "passed": false,
+            "reason": "point_estimate_outside_frozen_limit"
+          },
+          "correct_answerable_coverage": {
+            "value": 0.0,
+            "recomputed_value": 0.0,
+            "limit": 0.35,
+            "comparator": ">=",
+            "passed": false,
+            "reason": "point_estimate_outside_frozen_limit"
+          },
+          "unanswerable_false_accept_rate": {
+            "value": 0.0,
+            "recomputed_value": 0.0,
+            "limit": 0.1,
+            "comparator": "<=",
+            "passed": true,
+            "reason": null
+          },
+          "invalid_rate": {
+            "value": 0.0,
+            "recomputed_value": 0.0,
+            "limit": 0.05,
+            "comparator": "<=",
+            "passed": true,
+            "reason": null
+          }
+        },
+        "constraints": {
+          "min_accepted_precision": 0.9,
+          "min_answerable_answer_coverage": 0.4,
+          "min_correct_answerable_coverage": 0.35,
+          "max_unanswerable_false_accept_rate": 0.1,
+          "max_invalid_rate": 0.05
+        },
+        "intervals": {
+          "accepted_precision": null,
+          "unanswerable_false_accept_rate": {
+            "lower": 0.0,
+            "upper": 0.05662405979280534,
+            "estimate": 0.0,
+            "successes": 0,
+            "trials": 64,
+            "confidence_level": 0.95,
+            "method": "two_sided_wilson",
+            "scope": "descriptive_binomial_interval_without_context_or_article_dependence_adjustment"
+          },
+          "correct_answerable_coverage": {
+            "lower": 0.0,
+            "upper": 0.05662405979280534,
+            "estimate": 0.0,
+            "successes": 0,
+            "trials": 64,
+            "confidence_level": 0.95,
+            "method": "two_sided_wilson",
+            "scope": "descriptive_binomial_interval_without_context_or_article_dependence_adjustment"
+          }
+        },
+        "scope": "empirical_point_estimate_gate_not_population_risk_guarantee",
+        "interval_role": "report_only_not_used_to_pass_the_gate"
+      },
+      "summary": {
+        "raw": {
+          "overall": {
+            "n": 128,
+            "em": 0.4140625,
+            "f1": 0.44816009963768116,
+            "format_valid_rate": 1.0
+          },
+          "answerable": {
+            "n": 64,
+            "em": 0.828125,
+            "f1": 0.8963201992753623,
+            "format_valid_rate": 1.0
+          },
+          "unanswerable": {
+            "n": 64,
+            "em": 0.0,
+            "f1": 0.0,
+            "format_valid_rate": 1.0
+          },
+          "unsupported_answer_rate": 1.0,
+          "over_abstention_rate": 0.0,
+          "categories": {
+            "correct": 53,
+            "wrong_or_partial_span": 11,
+            "unsupported_answer": 64
+          },
+          "family_macro_em": 0.436046511627907,
+          "always_abstain_em": 0.5
+        },
+        "system": {
+          "overall": {
+            "n": 128,
+            "em": 0.5,
+            "f1": 0.5,
+            "format_valid_rate": 1.0
+          },
+          "answerable": {
+            "n": 64,
+            "em": 0.0,
+            "f1": 0.0,
+            "format_valid_rate": 1.0
+          },
+          "unanswerable": {
+            "n": 64,
+            "em": 1.0,
+            "f1": 1.0,
+            "format_valid_rate": 1.0
+          },
+          "unsupported_answer_rate": 0.0,
+          "over_abstention_rate": 1.0,
+          "categories": {
+            "over_abstention": 64,
+            "correct": 64
+          },
+          "family_macro_em": 0.5,
+          "always_abstain_em": 0.5
+        },
+        "selective": {
+          "n": 128,
+          "accepted": 0,
+          "accepted_correct": 0,
+          "answerable": 64,
+          "unanswerable": 64,
+          "accepted_answerable": 0,
+          "accepted_unanswerable": 0,
+          "accepted_precision": null,
+          "answerable_answer_coverage": 0.0,
+          "correct_answerable_coverage": 0.0,
+          "unanswerable_false_accept_rate": 0.0,
+          "acceptance_rate": 0.0,
+          "valid_span_rate": 1.0,
+          "invalid_rate": 0.0,
+          "model_abstention_rate": 0.0,
+          "threshold_abstention_rate": 1.0,
+          "model_status_counts": {
+            "answer": 128,
+            "abstain": 0,
+            "invalid": 0
+          }
+        },
+        "threshold": 0.95
+      }
+    },
+    {
+      "threshold": 0.975,
+      "gate": {
+        "all_pass": false,
+        "criteria": {
+          "constraints_valid": {
+            "passed": true,
+            "reason": null
+          },
+          "counts_consistent": {
+            "passed": true,
+            "reason": null
+          },
+          "accepted_precision": {
+            "value": null,
+            "recomputed_value": null,
+            "limit": 0.9,
+            "comparator": ">=",
+            "passed": false,
+            "reason": "missing_nonfinite_undefined_or_inconsistent_metric"
+          },
+          "answerable_answer_coverage": {
+            "value": 0.0,
+            "recomputed_value": 0.0,
+            "limit": 0.4,
+            "comparator": ">=",
+            "passed": false,
+            "reason": "point_estimate_outside_frozen_limit"
+          },
+          "correct_answerable_coverage": {
+            "value": 0.0,
+            "recomputed_value": 0.0,
+            "limit": 0.35,
+            "comparator": ">=",
+            "passed": false,
+            "reason": "point_estimate_outside_frozen_limit"
+          },
+          "unanswerable_false_accept_rate": {
+            "value": 0.0,
+            "recomputed_value": 0.0,
+            "limit": 0.1,
+            "comparator": "<=",
+            "passed": true,
+            "reason": null
+          },
+          "invalid_rate": {
+            "value": 0.0,
+            "recomputed_value": 0.0,
+            "limit": 0.05,
+            "comparator": "<=",
+            "passed": true,
+            "reason": null
+          }
+        },
+        "constraints": {
+          "min_accepted_precision": 0.9,
+          "min_answerable_answer_coverage": 0.4,
+          "min_correct_answerable_coverage": 0.35,
+          "max_unanswerable_false_accept_rate": 0.1,
+          "max_invalid_rate": 0.05
+        },
+        "intervals": {
+          "accepted_precision": null,
+          "unanswerable_false_accept_rate": {
+            "lower": 0.0,
+            "upper": 0.05662405979280534,
+            "estimate": 0.0,
+            "successes": 0,
+            "trials": 64,
+            "confidence_level": 0.95,
+            "method": "two_sided_wilson",
+            "scope": "descriptive_binomial_interval_without_context_or_article_dependence_adjustment"
+          },
+          "correct_answerable_coverage": {
+            "lower": 0.0,
+            "upper": 0.05662405979280534,
+            "estimate": 0.0,
+            "successes": 0,
+            "trials": 64,
+            "confidence_level": 0.95,
+            "method": "two_sided_wilson",
+            "scope": "descriptive_binomial_interval_without_context_or_article_dependence_adjustment"
+          }
+        },
+        "scope": "empirical_point_estimate_gate_not_population_risk_guarantee",
+        "interval_role": "report_only_not_used_to_pass_the_gate"
+      },
+      "summary": {
+        "raw": {
+          "overall": {
+            "n": 128,
+            "em": 0.4140625,
+            "f1": 0.44816009963768116,
+            "format_valid_rate": 1.0
+          },
+          "answerable": {
+            "n": 64,
+            "em": 0.828125,
+            "f1": 0.8963201992753623,
+            "format_valid_rate": 1.0
+          },
+          "unanswerable": {
+            "n": 64,
+            "em": 0.0,
+            "f1": 0.0,
+            "format_valid_rate": 1.0
+          },
+          "unsupported_answer_rate": 1.0,
+          "over_abstention_rate": 0.0,
+          "categories": {
+            "correct": 53,
+            "wrong_or_partial_span": 11,
+            "unsupported_answer": 64
+          },
+          "family_macro_em": 0.436046511627907,
+          "always_abstain_em": 0.5
+        },
+        "system": {
+          "overall": {
+            "n": 128,
+            "em": 0.5,
+            "f1": 0.5,
+            "format_valid_rate": 1.0
+          },
+          "answerable": {
+            "n": 64,
+            "em": 0.0,
+            "f1": 0.0,
+            "format_valid_rate": 1.0
+          },
+          "unanswerable": {
+            "n": 64,
+            "em": 1.0,
+            "f1": 1.0,
+            "format_valid_rate": 1.0
+          },
+          "unsupported_answer_rate": 0.0,
+          "over_abstention_rate": 1.0,
+          "categories": {
+            "over_abstention": 64,
+            "correct": 64
+          },
+          "family_macro_em": 0.5,
+          "always_abstain_em": 0.5
+        },
+        "selective": {
+          "n": 128,
+          "accepted": 0,
+          "accepted_correct": 0,
+          "answerable": 64,
+          "unanswerable": 64,
+          "accepted_answerable": 0,
+          "accepted_unanswerable": 0,
+          "accepted_precision": null,
+          "answerable_answer_coverage": 0.0,
+          "correct_answerable_coverage": 0.0,
+          "unanswerable_false_accept_rate": 0.0,
+          "acceptance_rate": 0.0,
+          "valid_span_rate": 1.0,
+          "invalid_rate": 0.0,
+          "model_abstention_rate": 0.0,
+          "threshold_abstention_rate": 1.0,
+          "model_status_counts": {
+            "answer": 128,
+            "abstain": 0,
+            "invalid": 0
+          }
+        },
+        "threshold": 0.975
+      }
+    },
+    {
+      "threshold": 0.99,
+      "gate": {
+        "all_pass": false,
+        "criteria": {
+          "constraints_valid": {
+            "passed": true,
+            "reason": null
+          },
+          "counts_consistent": {
+            "passed": true,
+            "reason": null
+          },
+          "accepted_precision": {
+            "value": null,
+            "recomputed_value": null,
+            "limit": 0.9,
+            "comparator": ">=",
+            "passed": false,
+            "reason": "missing_nonfinite_undefined_or_inconsistent_metric"
+          },
+          "answerable_answer_coverage": {
+            "value": 0.0,
+            "recomputed_value": 0.0,
+            "limit": 0.4,
+            "comparator": ">=",
+            "passed": false,
+            "reason": "point_estimate_outside_frozen_limit"
+          },
+          "correct_answerable_coverage": {
+            "value": 0.0,
+            "recomputed_value": 0.0,
+            "limit": 0.35,
+            "comparator": ">=",
+            "passed": false,
+            "reason": "point_estimate_outside_frozen_limit"
+          },
+          "unanswerable_false_accept_rate": {
+            "value": 0.0,
+            "recomputed_value": 0.0,
+            "limit": 0.1,
+            "comparator": "<=",
+            "passed": true,
+            "reason": null
+          },
+          "invalid_rate": {
+            "value": 0.0,
+            "recomputed_value": 0.0,
+            "limit": 0.05,
+            "comparator": "<=",
+            "passed": true,
+            "reason": null
+          }
+        },
+        "constraints": {
+          "min_accepted_precision": 0.9,
+          "min_answerable_answer_coverage": 0.4,
+          "min_correct_answerable_coverage": 0.35,
+          "max_unanswerable_false_accept_rate": 0.1,
+          "max_invalid_rate": 0.05
+        },
+        "intervals": {
+          "accepted_precision": null,
+          "unanswerable_false_accept_rate": {
+            "lower": 0.0,
+            "upper": 0.05662405979280534,
+            "estimate": 0.0,
+            "successes": 0,
+            "trials": 64,
+            "confidence_level": 0.95,
+            "method": "two_sided_wilson",
+            "scope": "descriptive_binomial_interval_without_context_or_article_dependence_adjustment"
+          },
+          "correct_answerable_coverage": {
+            "lower": 0.0,
+            "upper": 0.05662405979280534,
+            "estimate": 0.0,
+            "successes": 0,
+            "trials": 64,
+            "confidence_level": 0.95,
+            "method": "two_sided_wilson",
+            "scope": "descriptive_binomial_interval_without_context_or_article_dependence_adjustment"
+          }
+        },
+        "scope": "empirical_point_estimate_gate_not_population_risk_guarantee",
+        "interval_role": "report_only_not_used_to_pass_the_gate"
+      },
+      "summary": {
+        "raw": {
+          "overall": {
+            "n": 128,
+            "em": 0.4140625,
+            "f1": 0.44816009963768116,
+            "format_valid_rate": 1.0
+          },
+          "answerable": {
+            "n": 64,
+            "em": 0.828125,
+            "f1": 0.8963201992753623,
+            "format_valid_rate": 1.0
+          },
+          "unanswerable": {
+            "n": 64,
+            "em": 0.0,
+            "f1": 0.0,
+            "format_valid_rate": 1.0
+          },
+          "unsupported_answer_rate": 1.0,
+          "over_abstention_rate": 0.0,
+          "categories": {
+            "correct": 53,
+            "wrong_or_partial_span": 11,
+            "unsupported_answer": 64
+          },
+          "family_macro_em": 0.436046511627907,
+          "always_abstain_em": 0.5
+        },
+        "system": {
+          "overall": {
+            "n": 128,
+            "em": 0.5,
+            "f1": 0.5,
+            "format_valid_rate": 1.0
+          },
+          "answerable": {
+            "n": 64,
+            "em": 0.0,
+            "f1": 0.0,
+            "format_valid_rate": 1.0
+          },
+          "unanswerable": {
+            "n": 64,
+            "em": 1.0,
+            "f1": 1.0,
+            "format_valid_rate": 1.0
+          },
+          "unsupported_answer_rate": 0.0,
+          "over_abstention_rate": 1.0,
+          "categories": {
+            "over_abstention": 64,
+            "correct": 64
+          },
+          "family_macro_em": 0.5,
+          "always_abstain_em": 0.5
+        },
+        "selective": {
+          "n": 128,
+          "accepted": 0,
+          "accepted_correct": 0,
+          "answerable": 64,
+          "unanswerable": 64,
+          "accepted_answerable": 0,
+          "accepted_unanswerable": 0,
+          "accepted_precision": null,
+          "answerable_answer_coverage": 0.0,
+          "correct_answerable_coverage": 0.0,
+          "unanswerable_false_accept_rate": 0.0,
+          "acceptance_rate": 0.0,
+          "valid_span_rate": 1.0,
+          "invalid_rate": 0.0,
+          "model_abstention_rate": 0.0,
+          "threshold_abstention_rate": 1.0,
+          "model_status_counts": {
+            "answer": 128,
+            "abstain": 0,
+            "invalid": 0
+          }
+        },
+        "threshold": 0.99
+      }
+    }
+  ]
+}
