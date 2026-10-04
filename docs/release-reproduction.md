@@ -16,6 +16,8 @@ python3.12 -m venv .venv
 .venv/bin/python -B -m unittest discover -s tests -v
 ```
 
+需要可读的精简双语报告时，可用 `python -m experiments.review_qa_evidence --output-dir runs/my-evidence-review` 替代上面的 `verify_release_rc4` 命令；它调用同一完整验收，不必重复执行两遍。输出目录必须全新，失败记录会保留。系统与原始记录导航见 [技术导览](qa-system-overview.md)。
+
 安装依赖需要网络或预先准备的 wheel；安装完成后，完整证据验收不需要 Git、模型或网络。核对 archive verifier 输出的 commit 与交付记录；包内清单只证明自洽，外部 SHA256 才是此次交付的独立比对锚。CI 的 Python 3.11/3.12 仅安装 NumPy；依赖 ORT/MLX 等的测试可能跳过，必须查看实际 skip 原因。不要将这种验收写成跨平台真实推理成功。
 
 **数值重建边界：** 验证器先从 raw 独立核对全部特征和标签（既有数值容差 `1e-12`），再用已核验的原存档训练矩阵重放固定优化器，与运行时 `rebuild_head` 一致。Linux 的 `log/log1p` 重算曾产生约 `4.44e-16` 差异，让从新矩阵出发的训练在原 `1e-8` 梯度门槛附近停滞。没有放宽收敛或质量门槛。存档矩阵重建通过，不等于任意环境重新生成浮点输入并训练均稳定；`experiments.qa_risk train` 是后者，应保留失败记录，不能通过调参追求相同结果。

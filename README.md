@@ -2,6 +2,20 @@
 
 面向量化诊断与推理性能分析的个人研究实验。保留原始记录、负结果和明确的硬件/质量边界；模型权重不上传。
 
+## 从这里开始 / Start here
+
+本项目研究：在固定本地 CPU 成本下，量化、抽取解码和拒答策略如何分别影响延迟、答案正确性与覆盖率。
+This project studies the separate effects of quantization, span decoding and abstention on local CPU cost, answer correctness and coverage.
+
+- [系统结构、实现取舍与证据导航](docs/qa-system-overview.md)：按输入→推理→解码→排序→门控定位代码。
+- 无需模型的完整核验与精简双语报告（需 `numpy==2.2.6`，输出目录必须全新）：
+
+```bash
+python -m experiments.review_qa_evidence --output-dir runs/my-evidence-review
+```
+
+命令从原始记录完整核验后输出 `review.md`、`review.json`、`acceptance.json` 与 `run.json`。失败会保留记录、返回非零状态，不生成通过报告；不会运行新评估或检查远端发布状态。实际模型演示另见[无 Git 复现指南](docs/release-reproduction.md)。
+
 ## 当前状态：有限 QA 原型通过样本门槛
 
 新增专用抽取模型与固定五特征正确性排序头。INT8 在校准集固定阈值后，对四篇新文章的 128 题只评估一次：接受 27 题，27 题全部 EM 正确；可回答覆盖率 27/64，64 个不可回答问题全部拒答，五项预设点门槛通过。支持有输入范围和严格身份验证的本地原型，**不证明通用部署质量**。精度区间下界约 87.54%，仍有 37 个可回答问题被拒答。
