@@ -17,3 +17,5 @@
 维护者已明确采用根 [MIT 许可证](LICENSE)，适用于本项目代码；上表第三方内容与数据继续遵循各自许可，不将模型权重或数据重新授权为 MIT。个人实验、学校/团队工作、字节模型评测和 Jetson 经历分开归属。
 
 新增正确性排序头使用本项目固定五特征训练代码；系数及标准化参数仅保存本地 `runs/`，发布材料只含公开数据派生特征、目标、训练过程与重建命令。上游模型能力、ORT 量化 kernel 与本项目实验/门控贡献分开归属。
+
+本实验分支的 `lab/kernels/residual_rmsnorm.metal` 将 residual add 与 RMSNorm 融合；归约结构与舍入顺序改编自 [MLX v0.29.3 rms_norm.metal](https://github.com/ml-explore/mlx/blob/v0.29.3/mlx/backend/metal/kernels/rms_norm.metal)。保留 Apple 2024 copyright 和 [MIT 原文](third_party/MLX-MIT.txt)。项目新增融合/入口/审计，不将 RMSNorm、SIMD 归约或上游量化 kernel 写为原创。

@@ -10,7 +10,7 @@
 
 模型量化以后，体积、速度和答案质量不一定同时改善。本项目固定模型 revision、数据、硬件与计时范围，研究真实 INT8/Q4/Q8 推理、错误定位、正确性排序和拒答之间的取舍，并用冻结协议、逐题原始记录与失败后关闭的入口约束结论。
 
-The project separates model size, measured latency and answer quality. It combines fixed-revision CPU/MLX experiments with raw-record audits, correctness ranking, abstention and fail-closed runtime checks. MLX and ONNX Runtime supply quantizers and kernels; the project contributes experiments, diagnostics, runtime controls and evidence verification. Implementation and execution are AI-assisted.
+The project separates model size, measured latency and answer quality. It combines fixed-revision CPU/MLX experiments with raw-record audits, correctness ranking, abstention and fail-closed runtime checks. MLX and ONNX Runtime supply quantizers and base inference kernels; the project contributes experiments, diagnostics, runtime controls, evidence verification and an opt-in Metal fusion experiment. Implementation and execution are AI-assisted.
 
 ## 结果与限制 / Results and limits
 
@@ -37,6 +37,10 @@ The same exact pruning now accelerates [complete startup evidence verification](
 `v0.1.0-research.3` 另收录 [Qwen 最后位置 prefill 需求裁剪](docs/qwen-demand-prefill.md)，进入模型内部计算图。固定2048-token负载下，TTFT相对原路径1.407×，但相对强分段对照仅1.042×，未达到冻结的1.05×门槛。74条公开生成序列与完整KV检查一致，logits存在舍入差异；候选未默认启用；research.3 收录其可复现负结果，research.2 保持原样，不声称质量提升或新kernel。
 
 `v0.1.0-research.3` adds [last-position Qwen prefill](docs/qwen-demand-prefill.md), a model-graph experiment with full, head-only and split-last controls. Its 1.042× TTFT speedup over the strongest control missed the preregistered 1.05× gate despite output parity. The candidate remains disabled by default. Research.3 publishes the reproducible negative result; research.2 remains unchanged. No new quality or kernel claim.
+
+后续实验分支新增 [Residual Add + RMSNorm Metal 融合 kernel](docs/metal-residual-rmsnorm.md)：已真实 GPU 执行，300 组算子与 32 组模型检查逐位一致，74 条公开生成序列保持一致；但固定主场景为 22.835→28.277 μs（相对编译原生对照慢约 23.8%），整模型无确认加速。候选仅显式启用，未纳入 research.3；保留负结果，没有调参重跑。归约与舍入参考 MLX MIT 实现，不声称原创 RMSNorm 或低比特 kernel。
+
+The follow-up branch adds a real [Residual Add + RMSNorm Metal fusion](docs/metal-residual-rmsnorm.md). Numerical/output checks passed, but primary pair latency was 23.8% slower than compiled native and no model speed gate passed. It remains opt-in, outside research.3. Reduction/rounding follows attributed MLX MIT source; this is not a new RMSNorm or low-bit kernel algorithm.
 
 ## 运行与复现 / Run and reproduce
 
