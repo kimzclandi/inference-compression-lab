@@ -12,8 +12,6 @@ Engineering defects were repaired and exercised, but the QA quality goal remains
 |block10 回退优化|历史确认未通过；退出部署候选。不能说已证明彻底无效，也不能改称成功|
 |新 Q8 压缩|实际参数张量存储减少46.87%；未获得确认集质量非劣效结论，无本轮加速结论|
 |QA 可部署|不通过本地研究门槛；默认入口不可用。业务分布、安全、并发、延迟SLO未验收|
-|目标JD全面匹配|不覆盖训练加速、蒸馏、稀疏、token压缩、CUDA kernel、TensorRT或多设备部署|
-|用户本人掌握|没有新增证明；Codex辅助实现和自动复跑不等于本人独立实现|
 
 ## 问题、假设、固定验收和实际动作
 
@@ -106,18 +104,4 @@ python -m experiments.verify_qa_remediation --root runs/qa-replay
 
 源目录需要与协议九个文件及内容完全匹配；缺LICENSE/README/tokenizer文件也会失败，应补齐原始指定revision文件，不能改协议hash以掩盖身份问题。数值跨版本/设备不一致时保留差异，不挑选通过的一次。
 
-面试最小案例：演示 `qa_remediation_demo`，解释一个原文中的合法span为何仍因关系方向倒置而错误，接着展示完整阈值曲线中精度和覆盖的冲突，再运行关闭入口。讲清楚“机制诊断→固定验收→真实运行→停止结论”，不是展示一个挑出的正确问答。
-
-## 招聘表述与个人验收
-
-最有价值的仍是两类证据：已有受控量化/回退诊断及公平性能/缓存生命周期实验；本轮把QA失败分解为任务、格式、拒答、容量和精度覆盖的实验判断。框架负责模型、量化器、Metal/ORT算子；本项目贡献合同、固定对照、校准停止规则、身份/证据验证。文档/测试数量、始终关闭的入口本身不作为算法业绩。
-
-|原表述|候选改写|代码/原始证据|理由|本人需核实|
-|---|---|---|---|---|
-|无当前简历原文；不采用“量化回退恢复精度并完成部署”|个人推理压缩实验：建立MLX Q4/Q8数值诊断与等成本FP16模块回退对照，固定样本确认未通过质量门槛并保留负结果；进一步实现抽取QA输出合同、拒答校准与失败关闭机制，对1.5B FP16/Q8各128题校准并独立重算，识别精度—覆盖率不可兼得的失败配置。|`experiments/qwen_quantization.py`、`lab/selective_qa.py`、`lab/qa_gate.py`；`results/qwen-confirmation-v1/`与`results/qa-remediation-v1/`|支持实验设计与工程判断，不支持成功算法或生产部署|个人完成的部分、能否独立复跑、时间与项目归属；代码由Codex辅助不代表掌握|
-
-English candidate: Built controlled MLX low-bit diagnostics and equal-cost FP16 block-restoration experiments; retained a failed confirmation instead of claiming restored quality. Added extractive QA contracts, abstention calibration, and fail-closed evidence checks, auditing 128-question FP16/Q8 calibration runs to expose the precision–coverage limitation. Use only after personally validating the claimed contribution.
-
-当前更适合作为**补充项目**，或经本人讲解/复跑验证后作为以实验与Infra工程为主的核心项目；不宜作为已成功加速算法或部署QA的核心成果。没有当前简历DOCX/PDF，本报告只是候选，未修改历史简历。学校、NUSRI、字节及个人项目保持分开归属。
-
-本人必须亲自完成、此次没有代做的任务：从 `predictions.jsonl` 和 `data.jsonl` 实现按文章报告“答案精度、正确覆盖、错误作答率”的小工具，拒绝重复/缺失ID，并写一个关系方向反转的反例；在已公开校准集复跑该分析，对比全局结论。提交本人修改diff、命令和输出后，再解释为什么这不是新的独立确认。此前学习单中的个人任务亦未被自动标记掌握。
+功能演示：演示 `qa_remediation_demo`，解释一个原文中的合法span为何仍因关系方向倒置而错误，接着展示完整阈值曲线中精度和覆盖的冲突，再运行关闭入口。讲清楚“机制诊断→固定验收→真实运行→停止结论”，不是展示一个挑出的正确问答。

@@ -54,7 +54,7 @@ python3.12 -m venv .venv-qa
 
 发布包、tag 和 Release 必须绑定同一个验收 commit；不能从缺少叠加成果的 main 打包。任何许可证修改都先提交，再重建包、核对历史字节和对应 HEAD 的 CI。GitHub 自动生成的 source ZIP 不等同于本项目带逐文件清单的自定义 ZIP；交付使用附带外部 SHA256 的自定义附件。
 
-保持 PRIVATE 时，Release、PR 和仓库链接仅供获准账户访问；招聘者需要由所有者授权访问，或由所有者单独分享经过审阅的无权重源码证据包及说明。当前流程不邀请他人、不主动发送材料，也不承诺私有链接公开可读。公开展示需另行明确授权改变可见性。根许可证的选择不改变第三方数据/模型的原有归属。
+保持 PRIVATE 时，Release、PR 和仓库链接仅供获准账户访问；读者需要由所有者授权访问，或由所有者单独分享经过审阅的无权重源码证据包及说明。当前流程不邀请他人、不主动发送材料，也不承诺私有链接公开可读。公开展示需另行明确授权改变可见性。根许可证的选择不改变第三方数据/模型的原有归属。
 
 A private release is not a public portfolio. Recruiters need owner-approved repository access or an independently shared source/evidence package. No merge, visibility change, tag or release is implied by successful verification. Owner decisions on the root code license and distribution visibility remain required.
 
@@ -126,7 +126,7 @@ python3 -m experiments.release_archive verify /tmp/inference-compression-lab-rc.
 
 必须满足：历史证据字节保留、原始记录重算一致、五模型独立重建身份一致、无 Git 真实确认执行完成、固定协议与负结果公开可见、源码包转移后可验、相关 CI 通过、许可和数据归属清晰。可复用代码许可证须维护者确认；公开可见性与 PR 合并不在自动执行范围。
 
-不在本次验收内：机器人接入、CUDA/TensorRT/手机/昇腾实测、并发生产服务、GPU OOM 验证、功耗测量、独立多设备重复、质量达标、原创量化算法，以及用户本人已经掌握代码。
+不在本次验收内：机器人接入、CUDA/TensorRT/手机/昇腾实测、并发生产服务、GPU OOM 验证、功耗测量、独立多设备重复、质量达标、原创量化算法。
 
 ## 独立审查的小规模真实复现
 

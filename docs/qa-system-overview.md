@@ -68,6 +68,6 @@ python -m experiments.review_qa_evidence --output-dir runs/my-evidence-review
 
 ## Remaining boundaries / 剩余边界
 
-研究材料可以发布，同时保留失败；这不要求把项目改造成生产QA。公开访问与根代码许可证仍由所有者决定；验收命令不检查GitHub当前状态、不授予许可、不发布。独立阅读与修改能力需要使用者亲自证明，不能从自动化测试通过推定。
+研究材料可以发布，同时保留失败；这不要求把项目改造成生产QA。公开访问与根代码许可证仍由所有者决定；验收命令不检查GitHub当前状态、不授予许可、不发布。
 
-The release scope is reproducible research, including negative results. Publishing it does not establish production QA, novel quantization kernels, cross-device speedup or independent user mastery. Access and root-license decisions remain separate from technical verification.
+The release scope is reproducible research, including negative results. Publishing it does not establish production QA, novel quantization kernels, cross-device speedup. Access and root-license decisions remain separate from technical verification.

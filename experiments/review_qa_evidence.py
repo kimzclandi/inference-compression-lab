@@ -2,7 +2,7 @@
 
 Requires NumPy 2.2.6. The output directory must be new. This command replays
 archived evidence; it does not train a new policy, benchmark hardware, inspect
-GitHub access, publish a release, or certify the user's independent mastery.
+GitHub access or publish a release.
 """
 import argparse
 from datetime import datetime, timezone
@@ -54,7 +54,6 @@ def compact(acceptance):
         original_fallback_confirmed=acceptance['original_quantization_fallback_confirmed'],
         compression_noninferiority_confirmed=acceptance['compression_quality_noninferiority_confirmed'],
         general_deployment_verified=acceptance['general_qa_deployment_quality'],
-        independent_user_mastery='unverified',
         publication='not_checked_or_performed_by_this_command',
         root_license_status=acceptance['root_code_license_status'],
         numerical_scope='Raw features/labels checked, then verified archived training matrix replayed. '
@@ -93,8 +92,8 @@ This is a replay of published evidence, not a new inference, quality evaluation 
    Coverage loss and article-level failure remain material limitations.
 5. 存档矩阵重建通过不等于任意平台重新生成浮点输入后训练均稳定。
    Archived-input reconstruction does not establish arbitrary regenerated-input convergence.
-6. 未检查远端发布状态、未发布、未证明用户本人掌握。
-   Remote publication and independent user mastery are outside this command.
+6. 未检查远端发布状态，也未执行发布。
+   Remote publication is outside this command.
 
 核验范围与文件SHA256见同目录`review.json`；完整验收见`acceptance.json`。
 Source paths below are relative to the source checkout/archive, not this report directory:
