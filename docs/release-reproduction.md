@@ -4,6 +4,8 @@
 
 当前研究发布分支为 `codex/research-prerelease`，基于 PR #13 的固定研究代码和证据；根代码已采用 MIT，第三方及数据许可单独保留。当前发布说明、精确 tag、附件与新增检查入口见 [研究 prerelease](research-prerelease.md)。下面保留 RC4 运行时复现方法；历史 RC4 ZIP 名称请替换为实际发布附件名称。PR #14 语义头的 Linux 数值复现仍失败，不纳入本次通过技术验收的发布快照。
 
+**PR #16 分支补充：**当前剪枝分支尚不在上述Release中。它的完整验收与原型启动额外调用`experiments.verify_qa_risk_pruning`，核对实际剪枝源码和固定实验清单。当前源码包须按交付记录核对精确commit及外部SHA256；不能把旧Release的验收结果当作当前分支验收。下面的依赖与无Git流程仍适用。
+
 ## RC4：从无 Git 源码包开始 / Start from the source archive
 
 先用发布者单独提供的 `SHA256SUMS.txt` 核对 ZIP（macOS 用 `shasum -a 256`，Linux 用 `sha256sum`），再解压到一个新目录。在解压根目录执行：

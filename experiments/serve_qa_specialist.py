@@ -142,6 +142,11 @@ def _verify_evidence(root, study):
     return verify(root, study)
 
 
+def _verify_pruning():
+    from experiments.verify_qa_risk_pruning import verify
+    return verify(REPO)
+
+
 def _rebuild_head(training_dir, expected_digest):
     from experiments.qa_risk import rebuild_head
     return rebuild_head(training_dir, 'int8', expected_digest)
@@ -210,6 +215,7 @@ def load_service(policy_path, evidence_root, study_path, asset_root):
             raise ValueError('Backbone identity or training-only row count changed.')
         verification = _verify_evidence(root, study)
         validate_verified_quality(policy, verification)
+        _verify_pruning()
         selection = read(root/'training'/'selection.json')
         chosen = selection['variants']['int8']
         if chosen['eligible'] is not True or chosen['threshold'] != .7:

@@ -56,7 +56,7 @@ The joint gates passed once. The result is a same-host CPU postprocessing optimi
 
 ```bash
 OMP_NUM_THREADS=1 python -m experiments.qa_risk_pruning audit --output-dir runs/my-pruning-replay
-python results/qa-risk-pruning-v1/verify_measurements.py
+python -m experiments.verify_qa_risk_pruning
 python -m unittest discover -s tests -p 'test_qa_risk_pruning.py' -v
 ```
 
@@ -72,3 +72,15 @@ OMP_NUM_THREADS=1 python -m experiments.qa_risk_pruning benchmark \
 [最终差分记录](../results/qa-risk-pruning-v1/audit-final) · [原始计时和摘要](../results/qa-risk-pruning-v1/benchmark) · [回归测试](../tests/test_qa_risk_pruning.py)
 
 本分支接入原型入口；已有 `v0.1.0-research.1` tag和附件保持原样。新变更仅通过草稿PR交付，未经合并、未创建新Release。底层模型、量化和kernel来自上游，本项目贡献为瓶颈分析、精确剪枝、固定对照与验收。
+
+## Delivery review / 交付完整性复核
+
+继续审查发现第一版核验器只检查自洽哈希，未固定已验收清单身份：删空源码绑定、伪造质量摘要、替换回放ID或改写计时数量，再重算校验和，均可能被接受。原型启动也仅核验旧排序证据，没有绑定实际新剪枝实现。[修复前样例](../results/qa-risk-pruning-readiness-v1/before-probes.json)和[原核验器](../results/qa-risk-pruning-readiness-v1/reference/verify_measurements.py)保留。
+
+当前[核验器](../experiments/verify_qa_risk_pruning.py)固定协议、已验收manifest、完整源码集合与对应字节；独立核对回放身份/角色、质量计数和计时记录。原型在重建头及模型加载前执行这一检查；完整RC4验收也纳入它。四类篡改现在均被拒绝，另有协议改门槛、源码漂移及符号链接回归测试。
+
+原始 audit、benchmark、计时源码快照和优化算法字节未变。当前实验runner仅增加运行前协议哈希检查；测试核对去掉该检查后的AST与已计时runner一致，因此未重新测速度。旧`results/.../verify_measurements.py`入口转发到新核验器，原实现单独存档。
+
+These are integrity checks under reviewed code, not signatures against a publisher able to rewrite both the verifier and its anchors. They preserve the accepted experiment and reject incomplete or altered evidence. They do not prove unseen model quality, arbitrary input equivalence by testing alone, or performance on another device.
+
+复核日志、无Git新环境检查、七条真实路径摘要及源码漂移拒绝见 `results/qa-risk-pruning-readiness-v1/verification.json`。可从仓库根目录执行 `python results/qa-risk-pruning-readiness-v1/reproduce_reference_gaps.py`，在临时副本复现旧核验器的四次误接受；执行 `python -m unittest discover -s tests -p test_qa_risk_pruning_acceptance.py -v` 验证修复后的拒绝行为。无需模型，不改历史记录。

@@ -38,6 +38,7 @@ Python 3.11/3.12。无需下载模型即可核验源码、证据和存档排序�
 python3 -m venv .venv
 .venv/bin/python -m pip install -r configs/qa-nonlinear/requirements.txt
 .venv/bin/python -m experiments.verify_release --require-license
+.venv/bin/python -m experiments.verify_qa_risk_pruning
 .venv/bin/python -m experiments.review_qa_evidence --output-dir runs/my-review
 OMP_NUM_THREADS=1 .venv/bin/python -m experiments.qa_nonlinear verify \
   --folder results/qa-nonlinear-v2 --output runs/my-nonlinear-audit.json
@@ -47,6 +48,10 @@ OMP_NUM_THREADS=1 .venv/bin/python -m experiments.qa_rich verify \
 ```
 
 这些检查重算历史结果，不产生新的质量确认。完整新增特征核对、扩大训练重建、无 Git 流程与真实模型演示见 [发布说明](docs/research-prerelease.md) 和 [运行时复现](docs/release-reproduction.md)。可选 MLX/ORT 路径缺依赖时会跳过，查看 skip 原因；测试通过不是跨平台真实推理成功。
+
+`verify_release`保留历史基线验收；当前分支的`review_qa_evidence`/`verify_release_rc4`以及原型启动还会校验剪枝源码与固定证据身份。只通过旧基线检查不能授权当前优化入口。历史计时记录保持原样，旧计时核验命令兼容转发到加强后的检查器。
+
+Historical baseline checks alone do not authorize the optimized runtime. Current full acceptance and prototype startup also bind the pruning implementation to the fixed evidence manifests; modified or incomplete receipts fail closed.
 
 ## 代码与证据 / Implementation and evidence
 

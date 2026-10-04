@@ -25,6 +25,7 @@ from lab.selective_qa import apply_threshold, evaluate_selective, parse_output
 
 ROOT = Path(__file__).resolve().parents[1]
 PROTOCOL = ROOT / 'configs/qa-risk-pruning/study.json'
+PROTOCOL_SHA256 = '4efa6b19d945b475c3244a1e456b06207c00dab7241f595b7baf9904849b34ef'
 EXTRACTORS = {'reference': reference, 'pruned': pruned}
 SOURCES = ('experiments/qa_risk_pruning.py', 'lab/qa_risk_pruning.py',
            'lab/qa_risk_calibration.py', 'lab/qa_metrics.py', 'lab/extractive_qa.py',
@@ -40,6 +41,8 @@ def digest(value):
 
 
 def protocol():
+    if sha(PROTOCOL) != PROTOCOL_SHA256:
+        raise ValueError('Fixed pruning protocol changed; do not retune this study')
     result = read(PROTOCOL)
     for name, expected in result['inputs_sha256'].items():
         if sha(ROOT / name) != expected:

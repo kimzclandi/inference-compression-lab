@@ -94,9 +94,13 @@ def verify(root=REPO):
 
 
 def verify_serving_policy(root,risk):
+    from experiments.verify_qa_risk_pruning import verify as verify_pruning
     from experiments.serve_qa_specialist import load_policy, validate_verified_quality
     policy=load_policy(root/'configs/qa-risk/policy.json')
-    return validate_verified_quality(policy,risk)
+    pruning = verify_pruning(root)
+    result = validate_verified_quality(policy,risk)
+    result['pruning_acceptance'] = pruning
+    return result
 
 
 def main():

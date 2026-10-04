@@ -21,7 +21,7 @@ jobs:
       - name: Exact risk-feature pruning and archived timing arithmetic
         run: |
           python -m experiments.qa_risk_pruning audit --output-dir "$RUNNER_TEMP/risk-pruning-replay"
-          python results/qa-risk-pruning-v1/verify_measurements.py
+          python -m experiments.verify_qa_risk_pruning
       - name: Independent raw-record arithmetic
         run: |
           python results/independent-review-v1/statistics/audit_statistics.py --output "$RUNNER_TEMP/independent-statistics"
