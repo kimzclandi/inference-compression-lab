@@ -4,7 +4,7 @@
 
 **A reproducible research project for inference optimization and quality gating. A bounded historical QA cohort passed empirical gates; subsequent coverage challengers failed joint quality gates. This is not a production QA service.**
 
-[研究发布说明 / Research prerelease](docs/research-prerelease.md) · [Release 与校验附件](https://github.com/kimzclandi/inference-compression-lab/releases/tag/v0.1.0-research.2) · [系统与代码导览](docs/qa-system-overview.md) · [MIT](LICENSE) · [数据许可](DATA_LICENSE.md) · [第三方归属](THIRD_PARTY.md)
+[研究发布说明 / Research prerelease](docs/research-prerelease.md) · [Release 与校验附件](https://github.com/kimzclandi/inference-compression-lab/releases/tag/v0.1.0-research.3) · [系统与代码导览](docs/qa-system-overview.md) · [MIT](LICENSE) · [数据许可](DATA_LICENSE.md) · [第三方归属](THIRD_PARTY.md)
 
 ## 解决什么问题 / Problem and scope
 
@@ -34,6 +34,10 @@ The encoder is frozen. Learned correctness heads are fitted locally and rebuilt 
 
 The same exact pruning now accelerates [complete startup evidence verification](docs/qa-risk-startup.md), recomputing all 896 feature rows. One fixed six-process study reduced median full `load_service` initialization from **17.919 to 5.139 seconds (3.487×)**, with all three pairs faster and identical verification and disclosed functional outputs. It includes evidence verification, head reconstruction, asset validation and model loading, excluding interpreter/pre-call imports and requests. Ordinary OS caching applies; no cold-disk, warm-request or quality improvement is inferred.
 
+`v0.1.0-research.3` 另收录 [Qwen 最后位置 prefill 需求裁剪](docs/qwen-demand-prefill.md)，进入模型内部计算图。固定2048-token负载下，TTFT相对原路径1.407×，但相对强分段对照仅1.042×，未达到冻结的1.05×门槛。74条公开生成序列与完整KV检查一致，logits存在舍入差异；候选未默认启用；research.3 收录其可复现负结果，research.2 保持原样，不声称质量提升或新kernel。
+
+`v0.1.0-research.3` adds [last-position Qwen prefill](docs/qwen-demand-prefill.md), a model-graph experiment with full, head-only and split-last controls. Its 1.042× TTFT speedup over the strongest control missed the preregistered 1.05× gate despite output parity. The candidate remains disabled by default. Research.3 publishes the reproducible negative result; research.2 remains unchanged. No new quality or kernel claim.
+
 ## 运行与复现 / Run and reproduce
 
 Python 3.11/3.12。无需下载模型即可核验源码、证据和存档排序头；依赖安装需要网络或本地 wheel。输出目录必须全新。
@@ -44,6 +48,9 @@ python3 -m venv .venv
 .venv/bin/python -m experiments.verify_release --require-license
 .venv/bin/python -m experiments.verify_qa_risk_pruning
 .venv/bin/python -m experiments.verify_qa_risk_startup
+.venv/bin/python -m experiments.verify_qwen_demand_prefill \
+  --audit-root results/qwen-demand-prefill-v1/audit \
+  --benchmark-root results/qwen-demand-prefill-v1/benchmark
 .venv/bin/python -m experiments.review_qa_evidence --output-dir runs/my-review
 OMP_NUM_THREADS=1 .venv/bin/python -m experiments.qa_nonlinear verify \
   --folder results/qa-nonlinear-v2 --output runs/my-nonlinear-audit.json
