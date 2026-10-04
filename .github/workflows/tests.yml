@@ -30,6 +30,10 @@ jobs:
         run: |
           python -m experiments.verify_qwen_demand_prefill --audit-root results/qwen-demand-prefill-v1/audit --benchmark-root results/qwen-demand-prefill-v1/benchmark > "$RUNNER_TEMP/qwen-demand-prefill.json"
           python -c 'import json, os; r=json.load(open(os.path.join(os.environ["RUNNER_TEMP"], "qwen-demand-prefill.json"))); assert r["evidence_valid"] and not r["acceptance"]["accepted"]; assert [k for k,v in r["acceptance"]["gates"].items() if not v] == ["primary_ttft_vs_split_last"]'
+      - name: Metal fusion evidence (expected speed-gate failure; no GPU claim)
+        run: |
+          python -m experiments.verify_metal_residual_rmsnorm --audit-root results/metal-residual-rmsnorm-v1/audit --benchmark-root results/metal-residual-rmsnorm-v1/benchmark > "$RUNNER_TEMP/metal-fusion.json"
+          python -c 'import json, os; r=json.load(open(os.path.join(os.environ["RUNNER_TEMP"], "metal-fusion.json"))); assert r["evidence_valid"] and not r["acceptance"]["accepted"]; assert {k for k,v in r["acceptance"]["gates"].items() if not v} == {"micro_speedup_vs_native", "micro_faster_rounds_vs_native", "micro_speedup_vs_compiled", "micro_faster_rounds_vs_compiled", "same_model_metric_beats_both_controls"}'
       - name: Independent raw-record arithmetic
         run: |
           python results/independent-review-v1/statistics/audit_statistics.py --output "$RUNNER_TEMP/independent-statistics"
