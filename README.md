@@ -20,6 +20,8 @@ python -m experiments.review_qa_evidence --output-dir runs/my-evidence-review
 
 ## 当前状态：历史样本通过；扩大训练后的新校准失败
 
+[后续非线性与不确定性特征实验](docs/qa-nonlinear-study.md)：两项固定候选也未通过完整开发门槛，预留评估仍未运行。Two subsequent fixed ranking challengers also failed development gates; the reserved evaluation remains unused.
+
 最新一次固定实验把 INT8 五特征正确性排序头的训练集从 256 题扩大到 2,304 题，保持基础模型、特征、优化器和阈值网格不变。训练在 8 次迭代后收敛，但原头与扩大训练后的头均未通过新的 192 题校准门槛，因此没有运行预留的 192 题评估，也没有提高已验证的可用覆盖率。[完整协议、曲线与复跑](docs/qa-expanded-ranking-study.md)。
 
 The latest fixed experiment expanded the five-feature INT8 correctness-head training set from 256 to 2,304 rows. Fitting converged in eight iterations, but both the original and expanded heads failed the new 192-question calibration gates. The reserved 192-question evaluation was not run. This exposes limited transfer of the earlier result; it does not establish improved usable coverage or deployment quality.

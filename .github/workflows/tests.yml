@@ -43,3 +43,12 @@ jobs:
 
       - name: Expanded ranking raw evidence and archived-input reconstruction (expected calibration failure)
         run: python -m experiments.verify_qa_expanded --replay-fit --output "$RUNNER_TEMP/expanded-ranking-audit.json"
+
+      - name: Nonlinear challengers (expected development failure)
+        env:
+          OMP_NUM_THREADS: '1'
+        run: |
+          python -m pip install -r configs/qa-nonlinear/requirements.txt
+          python -m experiments.qa_nonlinear verify --folder results/qa-nonlinear-v2 --output "$RUNNER_TEMP/nonlinear-audit.json"
+          python -m experiments.qa_rich verify --folder results/qa-rich-v1 --output "$RUNNER_TEMP/rich-audit.json"
+          python -m experiments.verify_qa_rich_inputs --output "$RUNNER_TEMP/rich-input-audit.json"

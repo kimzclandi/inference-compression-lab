@@ -1,0 +1,8 @@
+{
+  "status": "complete",
+  "training_rows": 2304,
+  "development_rows": 192,
+  "features": 16,
+  "model_inference": false,
+  "labels_used_for_features": false
+}

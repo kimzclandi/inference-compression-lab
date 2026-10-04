@@ -1,0 +1,10 @@
+{
+  "action": "train",
+  "status": "failed",
+  "git_head": "df9ef975514f44e664ae4840041f8e7b0b66bdf4",
+  "git_status": "?? results/qa-nonlinear-v1/",
+  "protocol_sha256": "3aadbc710bba99b7a30a0362836a53e670ed724fe734fb5717843373aeafc15f",
+  "parameters_distributed": false,
+  "authorship": "AI-assisted implementation and execution",
+  "error": "ImportError(\"dlopen(/Users/yukaiyan/Documents/Codex/2026-10-04/x20/work/nonlinear-deps/scipy/sparse/linalg/_propack/_spropack.cpython-312-darwin.so, 0x0002): tried: '/Users/yukaiyan/Documents/Codex/2026-10-04/x20/work/nonlinear-deps/scipy/sparse/linalg/_propack/_spropack.cpython-312-darwin.so' (section '__DATA/__thread_bss' has a zero-fill section type, but offset field is not zero), '/System/Volumes/Preboot/Cryptexes/OS/Users/yukaiyan/Documents/Codex/2026-10-04/x20/work/nonlinear-deps/scipy/sparse/linalg/_propack/_spropack.cpython-312-darwin.so' (no such file), '/Users/yukaiyan/Documents/Codex/2026-10-04/x20/work/nonlinear-deps/scipy/sparse/linalg/_propack/_spropack.cpython-312-darwin.so' (section '__DATA/__thread_bss' has a zero-fill section type, but offset field is not zero)\")"
+}

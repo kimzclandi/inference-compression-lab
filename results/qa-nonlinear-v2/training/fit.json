@@ -1,0 +1,19 @@
+{
+  "n_train": 2304,
+  "n_features": 5,
+  "iterations": 150,
+  "estimator": {
+    "loss": "log_loss",
+    "learning_rate": 0.05,
+    "max_iter": 150,
+    "max_leaf_nodes": 7,
+    "max_depth": 3,
+    "min_samples_leaf": 30,
+    "l2_regularization": 1.0,
+    "max_bins": 63,
+    "early_stopping": false,
+    "random_state": 2026100416
+  },
+  "stopping": "Fixed iteration budget; no gradient convergence claim for boosting",
+  "fit_attempts": 1
+}
