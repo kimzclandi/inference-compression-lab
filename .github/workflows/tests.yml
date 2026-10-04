@@ -40,3 +40,6 @@ jobs:
 
       - name: Fixed coverage challenger evidence (expected calibration failure)
         run: python -m experiments.verify_qa_coverage_gap --output "$RUNNER_TEMP/coverage-gap-audit.json"
+
+      - name: Expanded ranking raw evidence and archived-input reconstruction (expected calibration failure)
+        run: python -m experiments.verify_qa_expanded --replay-fit --output "$RUNNER_TEMP/expanded-ranking-audit.json"

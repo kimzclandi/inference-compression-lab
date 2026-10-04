@@ -18,7 +18,13 @@ python -m experiments.review_qa_evidence --output-dir runs/my-evidence-review
 
 [新增第三特征固定消融](docs/qa-span-gap-ablation.md)：仅使用已公布训练/校准材料。两窗反例可区分机制，但真实数据0行特征改变，未产生质量提升；默认策略保持不变。
 
-## 当前状态：有限 QA 原型通过样本门槛
+## 当前状态：历史样本通过；扩大训练后的新校准失败
+
+最新一次固定实验把 INT8 五特征正确性排序头的训练集从 256 题扩大到 2,304 题，保持基础模型、特征、优化器和阈值网格不变。训练在 8 次迭代后收敛，但原头与扩大训练后的头均未通过新的 192 题校准门槛，因此没有运行预留的 192 题评估，也没有提高已验证的可用覆盖率。[完整协议、曲线与复跑](docs/qa-expanded-ranking-study.md)。
+
+The latest fixed experiment expanded the five-feature INT8 correctness-head training set from 256 to 2,304 rows. Fitting converged in eight iterations, but both the original and expanded heads failed the new 192-question calibration gates. The reserved 192-question evaluation was not run. This exposes limited transfer of the earlier result; it does not establish improved usable coverage or deployment quality.
+
+### 历史固定样本结果 / Earlier fixed-cohort result
 
 新增专用抽取模型与固定五特征正确性排序头。INT8 在校准集固定阈值后，对四篇新文章的 128 题只评估一次：接受 27 题，27 题全部 EM 正确；可回答覆盖率 27/64，64 个不可回答问题全部拒答，五项预设点门槛通过。支持有输入范围和严格身份验证的本地原型，**不证明通用部署质量**。精度区间下界约 87.54%，仍有 37 个可回答问题被拒答。
 
@@ -87,3 +93,5 @@ RC4 完整验收新增小排序头重建，需要 `numpy==2.2.6`，运行 `pytho
 [系统结构与验证入口](docs/qa-system-overview.md) · [第三特征消融](docs/qa-span-gap-ablation.md)。
 
 [不重叠竞争片段覆盖率实验](docs/qa-coverage-gap-study.md)：实际改变多数样本特征，但候选校准失败，保留原策略。 / Disjoint-competitor features changed most development rows but failed calibration; the default policy is retained.
+
+[扩大排序头训练实验](docs/qa-expanded-ranking-study.md)：2,304 题训练收敛，新校准失败；包含全部 raw→feature→label 审计、存档矩阵重建和禁止失败后评估的回归检查。

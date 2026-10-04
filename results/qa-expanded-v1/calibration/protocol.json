@@ -1,0 +1,89 @@
+{
+  "schema": "qa-expanded-ranking-v1",
+  "base_commit": "81f526cf32adcf35b4c9a369a9e79f9141fc519f",
+  "hypothesis": "More article coverage and correctness labels may improve selective ranking with the same five features. Adding official-train data changes both sample count and source distribution; no pure sample-size causality is claimed.",
+  "dataset_sizes": {
+    "old_train": 256,
+    "new_train": 2048,
+    "combined_train": 2304,
+    "calibration": 192,
+    "evaluation": 192
+  },
+  "variant": "int8",
+  "asset_manifest_sha256": "c7709c2098b46dc59223b451c076974e1035f591c1e03ca3c2af2747d1f5c7ed",
+  "numpy_version": "2.2.6",
+  "fit_config": {
+    "objective": "sum_binary_logistic_loss_plus_half_l2_weight_squared",
+    "l2": 1.0,
+    "regularize_intercept": false,
+    "standard_deviation_ddof": 0,
+    "zero_variance_scale": 1.0,
+    "max_iterations": 100,
+    "gradient_max_abs_tolerance": 1e-08,
+    "armijo": 0.0001,
+    "backtracking_factor": 0.5,
+    "max_backtracking_steps": 40
+  },
+  "threshold_grid": [
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.85,
+    0.9,
+    0.95,
+    0.975,
+    0.99
+  ],
+  "quality_constraints": {
+    "min_accepted_precision": 0.9,
+    "min_answerable_answer_coverage": 0.4,
+    "min_correct_answerable_coverage": 0.35,
+    "max_unanswerable_false_accept_rate": 0.1,
+    "max_invalid_rate": 0.05
+  },
+  "policies": [
+    "original_frozen_at_0.7",
+    "original_head_recalibrated_on_new_calibration",
+    "expanded_head_calibrated_on_new_calibration"
+  ],
+  "evaluation_permission": "Expanded head must pass all original calibration point gates; freeze selection hash before collecting any evaluation logits.",
+  "min_correct_coverage_gain": 0.05,
+  "bootstrap": {
+    "seed": 2026100415,
+    "replicates": 5000
+  },
+  "improvement_gate": "On the reserved local evaluation, expanded policy must pass all original quality gates and improve correct-answer coverage by >=5 percentage points over the equally recalibrated original head, with hierarchical paired article/context bootstrap 95% lower bound >0. If recalibrated original is ineligible, do not claim this comparative gate passed.",
+  "attempts": "One original reconstruction and one expanded fit. No model, feature, threshold-grid or solver changes after viewing outcomes; no reseeding or sample replacement. Calibration failure ends the evaluation branch. Later archived-input reconstruction is verification, not another optimization trial.",
+  "scope": "Local public-benchmark ranking study, not production or model-unseen confirmation. Upstream model was trained on official SQuAD2 train and publicly assessed on dev. New development/evaluation IDs and exact contexts/questions exclude recorded history; some dev article titles appeared in older Qwen studies. New training/calibration/evaluation titles are disjoint. Only four evaluation articles and balanced answerability limit external validity. No new FP32 comparison or quantization noninferiority claim.",
+  "source_sha256": {
+    "experiments/qa_risk.py": "b384e54e4e396b06ca80394187e6798633eb542acb86edf213a815aff65d7457",
+    "lab/qa_risk_calibration.py": "182138f513c311a5e14dece7afc60ca28c1cbf22b1dbbf56a6db0cf3513b3bbd",
+    "lab/qa_specialist_runtime.py": "40e8a0482b3ddb7d1aca5424c090571e27182c363f15e6b3da0ea72c537b1e54",
+    "lab/extractive_qa.py": "d859b363f2cfcca578f0358595a11bdfdcc9b31d0dda19dcbc9def3e9104de8f",
+    "lab/selective_qa.py": "d4e4c5cf1a6951316a6b5589236e8198113bc2adcab93dce25754dd8e4d16ffd",
+    "lab/qa_metrics.py": "78c4af7f06ba49b3acddd2610586336ecf585c06d8ad89b46ff9fb6358aaaa1f",
+    "lab/qa_gate.py": "ae1d91829e9c0039f903bc8306fb5a72256998433ef551f09fd3c6c42db5512a",
+    "experiments/prepare_qa_expanded.py": "7cdd431d26e78f86e9657a72cfafcb40fb63eea733511cac1fc6dfcb8d0fed63",
+    "experiments/qa_expanded.py": "be4f41f82ec0896740aa5f0e30f5f6bbca1a41473c2811664240afec33070d91",
+    "experiments/my_span_gap_ablation.py": "69440609ca67a939be6482de3082c32c525e57bfa54e44066dd23e67cd07e10e",
+    "lab/qa_expanded_io.py": "8873d2f08dcf84b99e02ff8c75ba9398518df83dea93c6689d73f986fbe943d1",
+    "lab/artifact_integrity.py": "8f10b1899e83258baf3a39a8c0d2652c20cab8708d576fc3485cff7654278187",
+    "lab/evidence.py": "314c7a009fb2b740db1cb3925d538f7abcd8a8eb719c0d05efd0be71c0abb91d",
+    "lab/quantization_diagnostics.py": "947d5bf29b9c238c7330b75c1719044122e1f75c5fc8ad36cf5df1a05d95075f",
+    "tests/test_qa_expanded.py": "24bd891f0802349e64facf1245ad63c2c5f9f755878dc51d9c9f472728ca2da0"
+  },
+  "input_sha256": {
+    "configs/qa-expanded/dataset/manifest.json": "e14a2388728985dc77085aa264bd018896739f0eecdd4e1dcc7d6a824517b4f7",
+    "configs/qa-expanded/dataset/train_new.jsonl": "d9877ccd155ce355dd3518fe5d7bd83250b9f5b8ebb3c1cc8ad6d590cc961da0",
+    "configs/qa-expanded/dataset/calibration.jsonl": "eb6a8ba5f8504013fd55593f7945ae702b00734ba40d4156f07a2bb07428ab7e",
+    "configs/qa-expanded/dataset/evaluation.jsonl": "483a8c737f9503e921fdadc819691f2a71e39b69047e3e9e9d6202ce8b57857f",
+    "configs/qa-risk/study.json": "365a1ff260d9f887558bc5ce5421e4028702ad435717aefc8f17787cea08081b",
+    "configs/qa-risk/exclusions.json": "c0cacff222f6760e5e1fb2d3879015ec37276976ad950d5237ec7a9f71923476",
+    "results/qa-risk-v2/training/int8-training-features.json": "07e9b461c034085fd0a7ca5819906e914890dc71ede75f11513d64b3abfcbb55",
+    "results/qa-risk-v2/training/selection.json": "b2999477ee82318a98266ef0674c22a526cddea1eec541c591a7bec7e354b74a",
+    "configs/qa-risk/dataset/train/data.jsonl": "fdadbc19b5b0d978971ead19e10469d0f92d76187fc923c904d1cf878b81a3a2",
+    "configs/qa-risk/dataset/calibration/data.jsonl": "e98f650dc240ab14e84861e7f7dc3efbeb1da9b49c06079fcaaa1159860ca759",
+    "configs/qa-risk/dataset/evaluation/data.jsonl": "d5d1c2e80291bf203179a2151ae71276c00f966e00aa86bee9a054a707f3afef"
+  }
+}

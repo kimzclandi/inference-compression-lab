@@ -27,3 +27,5 @@ QA 整改追加的本地 calibration/confirmation 拆分及变更说明见 [conf
 ## 抽取式 QA 与正确性排序实验
 
 `configs/qa-specialist/dataset/` 与 `configs/qa-risk/dataset/` 继续使用同一公开 SQuAD 2.0 dev 原始来源。各目录的 ATTRIBUTION、manifest 和 selection 保留 CC BY-SA 4.0、原作者与 Wikipedia 段落归属。拆分、特征、错误性标签与原始模型输出均为派生研究材料；不同数据角色、重用与过滤详见协议。新文章不意味着上游模型未见该 benchmark。原始数据 SHA256 为 `80a5225e94905956a6446d296ca1093975c4d3b3260f1d6c8f68bc2ab77182d8`。
+
+扩大训练实验的 `configs/qa-expanded/dataset/` 与 `results/qa-expanded-v1/` 使用官方 SQuAD 2.0 train/dev 的固定派生子集，继续遵守 CC BY-SA 4.0。train 原文件 SHA256 为 `68dcfbb971bd3e96d5b46c7177b16c1a4e7d4bdef19fb204502738552dede002`；dev 同上。新增训练 2,048 题、校准及预留评估各 192 题，保留问题、原文、gold 答案并增加角色/文章/原文族标识。完整归属、过滤规则与上游模型已接触该 benchmark 的边界见 [新增数据归属](configs/qa-expanded/ATTRIBUTION.md)。预留评估没有运行；公开后不能再称为未见确认材料。
