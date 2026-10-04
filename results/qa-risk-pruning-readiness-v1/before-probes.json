@@ -1,0 +1,18 @@
+[
+  {
+    "case": "empty_source_bindings",
+    "incorrectly_accepted": true
+  },
+  {
+    "case": "forged_quality_summary",
+    "incorrectly_accepted": true
+  },
+  {
+    "case": "unknown_replay_id",
+    "incorrectly_accepted": true
+  },
+  {
+    "case": "forged_timing_counts",
+    "incorrectly_accepted": true
+  }
+]

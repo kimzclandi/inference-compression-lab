@@ -2,7 +2,9 @@
 
 发布对象是可复现的个人研究代码和证据，不是已验证可部署的 QA 产品。确认实验未通过质量门槛；这个负结果不阻止研究材料交付，但必须保留在首页和报告。
 
-当前研究发布分支为 `codex/research-prerelease`，基于 PR #13 的固定研究代码和证据；根代码已采用 MIT，第三方及数据许可单独保留。当前发布说明、精确 tag、附件与新增检查入口见 [研究 prerelease](research-prerelease.md)。下面保留 RC4 运行时复现方法；历史 RC4 ZIP 名称请替换为实际发布附件名称。PR #14 语义头的 Linux 数值复现仍失败，不纳入本次通过技术验收的发布快照。
+当前研究发布分支为 `codex/research-prerelease`；`v0.1.0-research.2` 在原研究基线上收录 PR #16 的精确剪枝与完整启动核验优化。根代码采用 MIT，第三方及数据许可单独保留。当前发布说明、精确 tag、附件与新增检查入口见 [研究 prerelease](research-prerelease.md)。下面保留 RC4 运行时复现方法；历史 RC4 ZIP 名称请替换为实际发布附件名称。PR #14 语义头的 Linux 数值复现仍失败，不纳入本次通过技术验收的发布快照。
+
+**当前优化验收：**完整验收与原型启动调用 `experiments.verify_qa_risk_pruning`，核对实际剪枝源码和固定实验清单；原型默认逐行采用剪枝重算完整证据。完整 RC4 还调用 `experiments.verify_qa_risk_startup`，独立核对存档启动实验的源码、功能输出及算术。当前源码包须按 Release 记录核对精确 commit 及外部 SHA256；旧 `research.1` 不包含这些优化，不能用旧附件验收代替当前版本验收。
 
 ## RC4：从无 Git 源码包开始 / Start from the source archive
 
@@ -48,13 +50,13 @@ python3.12 -m venv .venv-qa
 {"context":"Alpha is a city. Beta is a river.","question":"Which place is a city?"}
 ```
 
-保存为 `request.json`，运行 `.venv-qa/bin/python -m experiments.serve_qa_specialist --asset-root /absolute/path/to/local-qa-assets --input-json request.json`。这只是输入格式示例，不保证被接受。CLI 每次启动均进行证据核验与加载；热请求约 69.600 ms 和历史首次初始化约 18.04 s 属于不同计时范围。
+保存为 `request.json`，运行 `.venv-qa/bin/python -m experiments.serve_qa_specialist --asset-root /absolute/path/to/local-qa-assets --input-json request.json`。这只是输入格式示例，不保证被接受。CLI 每次启动均进行证据核验与加载；当前固定研究的完整热计算为 55.342 ms，完整初始化为 5.139 s，两者属于不同计时范围，不能当作任意设备的延迟承诺。旧 69.600 ms 和约 18.04 s 记录仍保留，详见上述两项独立研究。
 
 ## RC4：发布和访问 / Release and access
 
 发布包、tag 和 Release 必须绑定同一个验收 commit；不能从缺少叠加成果的 main 打包。任何许可证修改都先提交，再重建包、核对历史字节和对应 HEAD 的 CI。GitHub 自动生成的 source ZIP 不等同于本项目带逐文件清单的自定义 ZIP；交付使用附带外部 SHA256 的自定义附件。
 
-本研究发布经所有者授权公开；实际访问状态以 GitHub Release 页面和匿名访问核验为准。源码包、tag、Release 的 commit 与 SHA256 必须相符。发布研究材料不代表质量优化、生产部署或用户能力验证已经通过。旧 PR 与失败语义分支完整保留；本次不合并 PR。
+本研究发布经所有者授权公开；实际访问状态以 GitHub Release 页面和匿名访问核验为准。源码包、tag、Release 的 commit 与 SHA256 必须相符。发布研究材料不代表质量优化或生产部署已经通过。本次同步 PR #16 的已验收优化；旧 Release 与失败语义分支完整保留。
 
 This is an owner-authorized public research prerelease with MIT project code and separate data/third-party licenses. Technical reproducibility is separate from model quality and production readiness. Use the release tag and custom verified asset, not an arbitrary branch or GitHub-generated source archive.
 

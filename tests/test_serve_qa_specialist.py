@@ -157,13 +157,24 @@ class ServingTests(unittest.TestCase):
              patch.object(cli, '_rebuild_head', return_value=head()) as rebuild, \
              patch.object(cli, '_load_runtime', return_value=fake_runtime) as runtime:
             service = cli.load_service(self.policy, self.evidence, self.study, self.assets)
-        verify.assert_called_once_with(self.evidence, self.study)
+        verify.assert_called_once_with(self.evidence, self.study, feature_mode='pruned')
         rebuild.assert_called_once_with(self.evidence / 'training', 'fixture-training-head')
         runtime.assert_called_once_with(self.assets)
         self.assertIs(service.runtime, fake_runtime)
         for key in ('evidence_verification_seconds', 'training_head_rebuild_seconds',
                     'local_model_load_seconds', 'total_startup_seconds'):
             self.assertGreaterEqual(service.startup_timing[key], 0)
+
+    def test_pruning_evidence_failure_stops_before_head_or_model(self):
+        with patch.object(cli, 'sha', side_effect=self.fake_digest), \
+             patch.object(cli, '_verify_evidence', return_value=verified()), \
+             patch.object(cli, '_verify_pruning', side_effect=ValueError('pruning source drift'), create=True), \
+             patch.object(cli, '_rebuild_head', return_value=head()) as rebuild, \
+             patch.object(cli, '_load_runtime') as runtime:
+            with self.assertRaisesRegex(cli.QualityUnavailable, 'pruning source drift'):
+                cli.load_service(self.policy, self.evidence, self.study, self.assets)
+        rebuild.assert_not_called()
+        runtime.assert_not_called()
 
     def test_nontraining_rebuild_or_wrong_assets_never_load_model(self):
         wrong = head()

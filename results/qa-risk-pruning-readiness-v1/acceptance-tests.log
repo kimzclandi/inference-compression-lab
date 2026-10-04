@@ -1,0 +1,14 @@
+test_changed_current_extractor_rejected (test_qa_risk_pruning_acceptance.AcceptanceTests.test_changed_current_extractor_rejected) ... ok
+test_complete_fixture_passes (test_qa_risk_pruning_acceptance.AcceptanceTests.test_complete_fixture_passes) ... ok
+test_current_runner_changes_only_protocol_guard (test_qa_risk_pruning_acceptance.AcceptanceTests.test_current_runner_changes_only_protocol_guard) ... ok
+test_edited_gate_rejected_before_running_experiment (test_qa_risk_pruning_acceptance.AcceptanceTests.test_edited_gate_rejected_before_running_experiment) ... ok
+test_empty_resigned_source_bindings_rejected (test_qa_risk_pruning_acceptance.AcceptanceTests.test_empty_resigned_source_bindings_rejected) ... ok
+test_resigned_missing_or_unknown_replay_identity_rejected (test_qa_risk_pruning_acceptance.AcceptanceTests.test_resigned_missing_or_unknown_replay_identity_rejected) ... ok
+test_resigned_quality_claim_rejected (test_qa_risk_pruning_acceptance.AcceptanceTests.test_resigned_quality_claim_rejected) ... ok
+test_resigned_timing_count_and_omitted_measurement_rejected (test_qa_risk_pruning_acceptance.AcceptanceTests.test_resigned_timing_count_and_omitted_measurement_rejected) ... ok
+test_source_symlink_rejected_even_with_identical_bytes (test_qa_risk_pruning_acceptance.AcceptanceTests.test_source_symlink_rejected_even_with_identical_bytes) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.405s
+
+OK

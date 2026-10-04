@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/Users/yukaiyan/Documents/Codex/2026-10-05/ai-2012-ai-infra-ai-ai/work/inference-compression-lab/results/qa-risk-startup-v1/check_cli.py", line 89, in <module>
+    main()
+  File "/Users/yukaiyan/Documents/Codex/2026-10-05/ai-2012-ai-infra-ai-ai/work/inference-compression-lab/results/qa-risk-startup-v1/check_cli.py", line 78, in main
+    invoke('rehashed_training_features', 2, 'unavailable_quality',
+  File "/Users/yukaiyan/Documents/Codex/2026-10-05/ai-2012-ai-infra-ai-ai/work/inference-compression-lab/results/qa-risk-startup-v1/check_cli.py", line 57, in invoke
+    assert expected_reason in response['reason'], (label, response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('rehashed_training_features', {'status': 'unavailable_quality', 'reason': 'Reference/input changed: results/qa-risk-v2/training/int8-training-features.json', 'scope': 'english_supplied_passage_bounded_local_prototype'})

@@ -1,0 +1,13 @@
+{
+  "measurements.json": "2f588829d81740c101d1df9d2748a3349bdcc1197aac9252899e21867ea3de86",
+  "protocol.json": "4efa6b19d945b475c3244a1e456b06207c00dab7241f595b7baf9904849b34ef",
+  "run.json": "b8c31770fcceb1f93d50590d1878f6ddddc576c8394446dc127934e57222a7de",
+  "source/experiments/qa_risk.py": "b384e54e4e396b06ca80394187e6798633eb542acb86edf213a815aff65d7457",
+  "source/experiments/qa_risk_pruning.py": "7023bc99eb100e5583b57b1e66a3d9508e88686962c253609d86b0cd1e2ab76e",
+  "source/lab/extractive_qa.py": "d859b363f2cfcca578f0358595a11bdfdcc9b31d0dda19dcbc9def3e9104de8f",
+  "source/lab/qa_metrics.py": "78c4af7f06ba49b3acddd2610586336ecf585c06d8ad89b46ff9fb6358aaaa1f",
+  "source/lab/qa_risk_calibration.py": "182138f513c311a5e14dece7afc60ca28c1cbf22b1dbbf56a6db0cf3513b3bbd",
+  "source/lab/qa_risk_pruning.py": "788cfb3f5ed6b4c63dc5167ec7eb3398bfb911924ee3cf7ee1172c49092643a5",
+  "source/lab/qa_specialist_runtime.py": "40e8a0482b3ddb7d1aca5424c090571e27182c363f15e6b3da0ea72c537b1e54",
+  "source/lab/selective_qa.py": "d4e4c5cf1a6951316a6b5589236e8198113bc2adcab93dce25754dd8e4d16ffd"
+}

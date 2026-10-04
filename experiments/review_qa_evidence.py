@@ -22,6 +22,10 @@ SOURCES = (
     'results/qa-risk-v2/evaluation-int8/summary.json',
     'results/qa-specialist-performance-v1/summary.json',
     'results/qa-risk-performance-v1/summary.json',
+    'experiments/verify_qa_risk_pruning.py', 'experiments/serve_qa_specialist.py',
+    'lab/qa_risk_pruning.py', 'configs/qa-risk-pruning/study.json',
+    'results/qa-risk-pruning-v1/audit-final/checksums.json',
+    'results/qa-risk-pruning-v1/benchmark/checksums.json',
 )
 
 
@@ -39,8 +43,11 @@ def compact(acceptance):
     qa = read(ROOT / 'results/qa-risk-v2/evaluation-int8/summary.json')['summary']
     base = read(ROOT / 'results/qa-specialist-performance-v1/summary.json')
     risk = read(ROOT / 'results/qa-risk-performance-v1/summary.json')
+    pruning = read(ROOT / 'results/qa-risk-pruning-v1/benchmark/summary.json')
     return dict(
         evidence_acceptance=acceptance['technical_acceptance'],
+        pruning_acceptance=acceptance['serving_policy']['pruning_acceptance'],
+        pruning_performance=pruning['metrics'],
         task_scope='bounded_local_english_supplied_passage_prototype',
         quality=dict(counts=qa['selective'], system=qa['system']['overall'],
                      precision_wilson95=acceptance['risk']['accepted_precision_wilson95']),
@@ -81,6 +88,16 @@ This is a replay of published evidence, not a new inference, quality evaluation 
 | 基础 INT8 / Base INT8 | {p['base_pipeline_ms']['int8']:.3f} ms |
 | 基础流水线加速比 / Base-only speedup | {p['base_fp32_over_int8']:.3f}x |
 | 含排序与拒答的 INT8 / INT8 with ranking and abstention | {p['ranked_int8_ms']:.3f} ms |
+
+上述表格为剪枝前的历史计时；当前分支额外核验剪枝后的同机固定对照。
+The table above preserves pre-pruning historical timings; this branch also verifies the fixed pruning comparison.
+
+| 剪枝研究 / Pruning study | Reference | Pruned | Speedup |
+|---|---:|---:|---:|
+| 完整热计算 / Complete warm computation | {report['pruning_performance']['full_request']['median_seconds']['reference']*1000:.3f} ms | {report['pruning_performance']['full_request']['median_seconds']['pruned']*1000:.3f} ms | {report['pruning_performance']['full_request']['speedup']:.3f}x |
+
+剪枝源码和原始证据身份检查已通过；只重算已存计时，没有新速度测量或质量提升声明。
+Pruning source/evidence identities passed; archived arithmetic only, no new latency or quality claim.
 
 1. 性能范围不同，1.33x不属于完整排序流水线；历史启动核验/加载约18.04秒不含在热请求内。
    Different timing scopes: do not transfer the base speedup to the ranked pipeline or hide startup costs.

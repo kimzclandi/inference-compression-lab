@@ -1,0 +1,18 @@
+{
+  "baseline_commit": "3be781202a90a1259b310073a7e3c5217debf6ba",
+  "hypothesis": "The adopted extractor must be bound to verified fixed evidence at startup, and incomplete/resigned receipts must not satisfy acceptance.",
+  "fixed_conditions": [
+    "No algorithm, head, threshold, frozen experiment, or timing samples change.",
+    "Keep every original audit and benchmark record byte-identical.",
+    "No repeated speed benchmark; original timing source is preserved."
+  ],
+  "acceptance": [
+    "All before-probe cases rejected after repair",
+    "Startup rejects pruning-source drift before head/model loading",
+    "All original source/evidence preservation checks pass",
+    "Clean no-Git archive and clean remote checkout run documented checks",
+    "Full local tests, actual startup/functional cases and exact-head Python3.11/3.12 CI pass"
+  ],
+  "budget": "Free local verification; no training, model download, paid API or timing search.",
+  "reference_verifier_sha256": "c0991b1fcb4fc54a2cca5b6479b7b9119dc32a5090bb40f73785716ca8c70f6f"
+}
