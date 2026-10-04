@@ -1,8 +1,8 @@
 # Last-position prefill / 最后位置需求裁剪
 
-本节点进入 Transformer 内部计算图：保留全层、全位置 KV，只计算最终生成位置所需的最后层输出。固定四臂研究中，相对原完整路径更快，但相对最强对照未达到预注册收益门槛。因此保留为实验实现，**没有启用为默认优化，也没有发布新版本**。
+本节点进入 Transformer 内部计算图：保留全层、全位置 KV，只计算最终生成位置所需的最后层输出。固定四臂研究中，相对原完整路径更快，但相对最强对照未达到预注册收益门槛。因此保留为实验实现，**没有启用为默认优化；research.3 仅收录可复现的研究实现与负结果**。
 
-This study prunes unused final-block computations for last-position causal generation while retaining every layer's complete KV cache. One preregistered four-arm experiment passed its output checks but missed its required speedup over the strongest control. The implementation remains experimental; it changes no production/default path and is not part of research.2.
+This study prunes unused final-block computations for last-position causal generation while retaining every layer's complete KV cache. One preregistered four-arm experiment passed its output checks but missed its required speedup over the strongest control. The implementation remains experimental and disabled by default. Research.3 includes its source and reproducible negative result; research.2 remains unchanged.
 
 ## Mechanism / 机制与范围
 
@@ -88,4 +88,4 @@ python -m unittest discover -s tests -p 'test_qwen_demand*.py' -v
 
 哈希证明所审记录的一致性，不抵抗同时更改verifier与全部证据的发布者。离线核验不重新执行量化模型或计算完整logits误差；这些数值来自绑定源码的真实audit。四轮、两个合成文本只支持固定工作负载描述，不是统计总体、线上p95、功耗、Linux/GPU横向或手机/NPU结论。
 
-本节点补充的是模型内部依赖分析、图级实现、强对照消融、低精度舍入与成本取舍的实证。上游提供模型、量化与attention kernel，代码与执行有AI辅助；未实现新的低比特kernel、量化算法、蒸馏或论文级创新。历史Qwen量化确认和QA质量失败原样保留。`v0.1.0-research.2` 与默认入口未改；本节点仅通过独立研究分支/草稿PR交付。
+本节点补充的是模型内部依赖分析、图级实现、强对照消融、低精度舍入与成本取舍的实证。上游提供模型、量化与attention kernel，代码与执行有AI辅助；未实现新的低比特kernel、量化算法、蒸馏或论文级创新。历史Qwen量化确认和QA质量失败原样保留。`v0.1.0-research.2` 与默认推理入口未改；`v0.1.0-research.3` 收录 PR #17 的研究实现、原始记录和独立验算，不把未过门槛的候选升级为已接受优化。
