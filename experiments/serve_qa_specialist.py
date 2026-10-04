@@ -12,7 +12,8 @@ from pathlib import Path
 import sys
 import time
 
-from lab.qa_risk_calibration import extract_features, predict_probability
+from lab.qa_risk_calibration import predict_probability
+from lab.qa_risk_pruning import extract_features
 from lab.quantization_diagnostics import read, sha
 
 

@@ -1,0 +1,58 @@
+{
+  "status": "pass",
+  "tests": {
+    "total": 328,
+    "passed": 325,
+    "skipped": 3,
+    "skip_reason": "MLX is absent in the reused local environment"
+  },
+  "real_cases": [
+    {
+      "case": "accepted_correct",
+      "status": "answer",
+      "score": 0.7823869048234252
+    },
+    {
+      "case": "unanswerable_refusal",
+      "status": "abstain",
+      "score": 0.09343904558819022
+    },
+    {
+      "case": "answerable_refusal_cost",
+      "status": "abstain",
+      "score": 0.5194854386177155
+    },
+    {
+      "case": "unexpected_gold_field",
+      "status": "invalid_input"
+    },
+    {
+      "case": "over_question_token_limit",
+      "status": "invalid_input"
+    },
+    {
+      "case": "empty_context",
+      "status": "invalid_input"
+    },
+    {
+      "case": "missing_assets",
+      "status": "unavailable_model"
+    }
+  ],
+  "startup_timing": {
+    "evidence_verification_seconds": 16.246161000002758,
+    "training_head_rebuild_seconds": 0.001911832998302998,
+    "local_model_load_seconds": 1.5544752499990864,
+    "total_startup_seconds": 17.802548083000147,
+    "scope": "One-time initialization; excluded from request-only benchmark timings."
+  },
+  "source_sha256": {
+    "lab/qa_risk_pruning.py": "788cfb3f5ed6b4c63dc5167ec7eb3398bfb911924ee3cf7ee1172c49092643a5",
+    "experiments/serve_qa_specialist.py": "19f961e6d52981e4834d95f4d35595007a1b49df1eb4fa3fcb8b761506766cde",
+    "experiments/reproduce_qa_prototype.py": "e8d0f3b94f6bbc21e537f9e6965bbdb617550cd648e3b7c289df7f508631765c",
+    "tests/test_qa_risk_pruning.py": "904e7ee973cb995202d6f81b69f8ade43a23fa4627cacce12116bc8cb4182190"
+  },
+  "provenance": "Same-host existing pinned environment and local assets. Functional receipt derived from reproduce_qa_prototype; error paths and payloads are omitted here. No new independent QA confirmation.",
+  "raw_functional_record_sha256": "0cd3862b26f5885a875d9bee454b9c3c3804b8a66558c02425188c472db887d1",
+  "parameters_or_assets_uploaded": false
+}

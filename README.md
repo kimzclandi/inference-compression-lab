@@ -26,6 +26,10 @@ The project separates model size, measured latency and answer quality. It combin
 
 The encoder is frozen. Learned correctness heads are fitted locally and rebuilt from verified archived training inputs; neither base weights nor learned head/scaler parameters are distributed. Public samples support reproduction and ablation, not future unseen confirmation. QA v1's original quality and quantization noninferiority failures remain unchanged.
 
+本分支新增[正确性特征精确剪枝](docs/qa-risk-pruning.md)：同机固定负载下，特征提取 14.042→1.074 ms，包含排序与拒答的 INT8 热请求计算流水线 68.681→55.342 ms（1.241×）。896 条已公开记录逐项复算无差异；质量结论未改善。此变更尚未包含在 `v0.1.0-research.1` 中。
+
+This branch adds [exact risk-feature pruning](docs/qa-risk-pruning.md): 13.07× faster feature extraction and 1.241× faster complete warm INT8 computation on the fixed same-host workload. All 896 published-record replays retain identical features, scores and decisions. No new QA-quality claim; this change is outside the existing research prerelease.
+
 ## 运行与复现 / Run and reproduce
 
 Python 3.11/3.12。无需下载模型即可核验源码、证据和存档排序头；依赖安装需要网络或本地 wheel。输出目录必须全新。
