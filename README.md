@@ -4,7 +4,7 @@
 
 **A reproducible research project for inference optimization and quality gating. A bounded historical QA cohort passed empirical gates; subsequent coverage challengers failed joint quality gates. This is not a production QA service.**
 
-[研究发布说明 / Research prerelease](docs/research-prerelease.md) · [Release 与校验附件](https://github.com/kimzclandi/inference-compression-lab/releases/tag/v0.1.0-research.3) · [系统与代码导览](docs/qa-system-overview.md) · [MIT](LICENSE) · [数据许可](DATA_LICENSE.md) · [第三方归属](THIRD_PARTY.md)
+[研究发布说明 / Research prerelease](docs/research-prerelease.md) · [Release 与校验附件](https://github.com/kimzclandi/inference-compression-lab/releases/tag/v0.1.0-research.4) · [系统与代码导览](docs/qa-system-overview.md) · [MIT](LICENSE) · [数据许可](DATA_LICENSE.md) · [第三方归属](THIRD_PARTY.md)
 
 ## 解决什么问题 / Problem and scope
 
@@ -38,9 +38,9 @@ The same exact pruning now accelerates [complete startup evidence verification](
 
 `v0.1.0-research.3` adds [last-position Qwen prefill](docs/qwen-demand-prefill.md), a model-graph experiment with full, head-only and split-last controls. Its 1.042× TTFT speedup over the strongest control missed the preregistered 1.05× gate despite output parity. The candidate remains disabled by default. Research.3 publishes the reproducible negative result; research.2 remains unchanged. No new quality or kernel claim.
 
-后续实验分支新增 [Residual Add + RMSNorm Metal 融合 kernel](docs/metal-residual-rmsnorm.md)：已真实 GPU 执行，300 组算子与 32 组模型检查逐位一致，74 条公开生成序列保持一致；但固定主场景为 22.835→28.277 μs（相对编译原生对照慢约 23.8%），整模型无确认加速。候选仅显式启用，未纳入 research.3；保留负结果，没有调参重跑。归约与舍入参考 MLX MIT 实现，不声称原创 RMSNorm 或低比特 kernel。
+`v0.1.0-research.4` 收录 [Residual Add + RMSNorm Metal 融合 kernel](docs/metal-residual-rmsnorm.md)：已真实 GPU 执行，300 组算子与 32 组模型检查逐位一致，74 条公开生成序列保持一致；但固定主场景为 22.835→28.277 μs（相对编译原生对照慢约 23.8%），整模型无确认加速。候选仅显式启用；research.4 发布其实现与负结果，research.3 保持原样，没有调参重跑。归约与舍入参考 MLX MIT 实现，不声称原创 RMSNorm 或低比特 kernel。
 
-The follow-up branch adds a real [Residual Add + RMSNorm Metal fusion](docs/metal-residual-rmsnorm.md). Numerical/output checks passed, but primary pair latency was 23.8% slower than compiled native and no model speed gate passed. It remains opt-in, outside research.3. Reduction/rounding follows attributed MLX MIT source; this is not a new RMSNorm or low-bit kernel algorithm.
+`v0.1.0-research.4` includes a real [Residual Add + RMSNorm Metal fusion](docs/metal-residual-rmsnorm.md). Numerical/output checks passed, but primary pair latency was 23.8% slower than compiled native and no model speed gate passed. It remains opt-in; research.4 publishes its implementation and negative result, while research.3 remains unchanged. Reduction/rounding follows attributed MLX MIT source; this is not a new RMSNorm or low-bit kernel algorithm.
 
 ## 运行与复现 / Run and reproduce
 

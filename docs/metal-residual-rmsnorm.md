@@ -1,8 +1,8 @@
 # Residual Add + RMSNorm Metal fusion / Metal 融合研究
 
-已实现并在 Apple M4 Max GPU 实际执行自定义 Metal kernel；正确性检查通过，但唯一一次固定性能研究未通过加速门槛。候选仅可显式选择 `mode="metal"`，不替换默认入口。此节点位于后续实验分支，**不包含在已发布的 v0.1.0-research.3 中**。
+已实现并在 Apple M4 Max GPU 实际执行自定义 Metal kernel；正确性检查通过，但唯一一次固定性能研究未通过加速门槛。候选仅可显式选择 `mode="metal"`，不替换默认入口。此节点作为 **v0.1.0-research.4 研究预发布**收录实现与负结果；research.3 保持原样。
 
-A real custom Metal kernel is implemented and GPU-tested. Correctness passed, but the single fixed performance study failed its speed gates. The candidate remains explicitly opt-in and is not part of the already published research.3. This is a reproducible kernel implementation and negative optimization result, not a successful acceleration claim.
+A real custom Metal kernel is implemented and GPU-tested. Correctness passed, but the single fixed performance study failed its speed gates. The candidate remains explicitly opt-in in research.4; the previous research.3 remains unchanged. This is a reproducible kernel implementation and negative optimization result, not a successful acceleration claim.
 
 ## Implementation and attribution
 
