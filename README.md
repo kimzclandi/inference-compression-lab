@@ -34,6 +34,10 @@ The encoder is frozen. Learned correctness heads are fitted locally and rebuilt 
 
 The same exact pruning now accelerates [complete startup evidence verification](docs/qa-risk-startup.md), recomputing all 896 feature rows. One fixed six-process study reduced median full `load_service` initialization from **17.919 to 5.139 seconds (3.487×)**, with all three pairs faster and identical verification and disclosed functional outputs. It includes evidence verification, head reconstruction, asset validation and model loading, excluding interpreter/pre-call imports and requests. Ordinary OS caching applies; no cold-disk, warm-request or quality improvement is inferred.
 
+本研究分支另实现 [Qwen 最后位置 prefill 需求裁剪](docs/qwen-demand-prefill.md)，进入模型内部计算图。固定2048-token负载下，TTFT相对原路径1.407×，但相对强分段对照仅1.042×，未达到冻结的1.05×门槛。74条公开生成序列与完整KV检查一致，logits存在舍入差异；候选未启用、未纳入research.2，不声称质量提升或新kernel。
+
+This research branch adds [last-position Qwen prefill](docs/qwen-demand-prefill.md), a model-graph experiment with full, head-only and split-last controls. Its 1.042× TTFT speedup over the strongest control missed the preregistered 1.05× gate despite output parity. The candidate remains experimental and outside research.2; no new quality or kernel claim.
+
 ## 运行与复现 / Run and reproduce
 
 Python 3.11/3.12。无需下载模型即可核验源码、证据和存档排序头；依赖安装需要网络或本地 wheel。输出目录必须全新。

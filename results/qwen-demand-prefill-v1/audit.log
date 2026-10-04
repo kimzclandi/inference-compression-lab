@@ -1,0 +1,28 @@
+audit shape 1 prior 0
+audit shape 1 prior 17
+audit shape 2 prior 0
+audit shape 2 prior 17
+audit shape 63 prior 0
+audit shape 63 prior 17
+audit shape 64 prior 0
+audit shape 64 prior 17
+audit shape 65 prior 0
+audit shape 65 prior 17
+audit shape 255 prior 0
+audit shape 255 prior 17
+audit shape 256 prior 0
+audit shape 256 prior 17
+audit shape 257 prior 0
+audit shape 257 prior 17
+audit shape 512 prior 0
+audit shape 512 prior 17
+audit shape 2048 prior 0
+audit shape 2048 prior 17
+quality 10 / 74
+quality 20 / 74
+quality 30 / 74
+quality 40 / 74
+quality 50 / 74
+quality 60 / 74
+quality 70 / 74
+audit complete

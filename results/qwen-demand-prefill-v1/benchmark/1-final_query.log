@@ -1,0 +1,3 @@
+bench 1 final_query 64
+bench 1 final_query 512
+bench 1 final_query 2048
