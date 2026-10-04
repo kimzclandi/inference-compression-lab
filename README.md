@@ -6,7 +6,7 @@
 
 新增专用抽取模型与固定五特征正确性排序头。INT8 在校准集固定阈值后，对四篇新文章的 128 题只评估一次：接受 27 题，27 题全部 EM 正确；可回答覆盖率 27/64，64 个不可回答问题全部拒答，五项预设点门槛通过。支持有输入范围和严格身份验证的本地原型，**不证明通用部署质量**。精度区间下界约 87.54%，仍有 37 个可回答问题被拒答。
 
-[固定排序实验、命令与限制](docs/qa-risk-study.md) · [专用模型 v1 与 CPU 性能](docs/qa-specialist-study.md) · [128 题原始 logits](results/qa-risk-v2/evaluation-int8) · [独立验收](results/qa-risk-review-v1/verification.json)
+[RC4 无 Git 使用、依赖与发布访问](docs/release-reproduction.md) · [固定排序实验、命令与限制](docs/qa-risk-study.md) · [专用模型 v1 与 CPU 性能](docs/qa-specialist-study.md) · [128 题原始 logits](results/qa-risk-v2/evaluation-int8) · [独立验收](results/qa-risk-review-v1/verification.json)
 
 The frozen INT8 correctness-ranking pipeline passed five empirical point gates on 128 locally reserved public-benchmark questions: 27/27 accepted answers correct, 27/64 answerable coverage, and 0/64 false acceptance on unanswerable questions. This supports a bounded local supplied-passage QA prototype, not a general deployment claim or population-risk guarantee. No model weights or learned ranking parameters are distributed. Earlier failures remain unchanged.
 

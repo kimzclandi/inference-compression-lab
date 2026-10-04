@@ -2,9 +2,61 @@
 
 发布对象是可复现的个人研究代码和证据，不是已验证可部署的 QA 产品。确认实验未通过质量门槛；这个负结果不阻止研究材料交付，但必须保留在首页和报告。
 
-仓库保持私有；main 尚未合并 PR #1–#6。独立审查发布候选在 `codex/independent-release-review`，不自动合并、不创建公开 Release、不改变可见性。根代码许可证等待维护者选择；第三方原有许可与数据声明已经整理。`--require-license` 会阻止在尚未选择根许可证时宣称开源授权已完备。
+当前 RC4 候选在 `codex/qa-extractive-specialist`（草稿 PR #9，基于 #8）；核验时仓库为 PRIVATE，PR #1–#9 未合并，默认 main 不含完整叠加成果。请使用明确 commit 的源码包或 PR 分支。根代码许可证和发布可见性仍待维护者决定，MIT 候选不代表已采用。第三方许可与数据声明单独保留。`--require-license` 只检查根 LICENSE 文件存在，不能替代维护者授权或法律审查。
 
-## 零模型、零网络验收
+## RC4：从无 Git 源码包开始 / Start from the source archive
+
+先用发布者单独提供的 `SHA256SUMS.txt` 核对 ZIP（macOS 用 `shasum -a 256`，Linux 用 `sha256sum`），再解压到一个新目录。在解压根目录执行：
+
+```bash
+python3 -m experiments.release_archive verify /absolute/path/to/inference-compression-lab-rc4.zip
+python3.12 -m venv .venv
+.venv/bin/python -m pip install numpy==2.2.6
+.venv/bin/python -B -m experiments.verify_release_rc4
+.venv/bin/python -B -m unittest discover -s tests -v
+```
+
+安装依赖需要网络或预先准备的 wheel；安装完成后，完整证据验收不需要 Git、模型或网络。核对 archive verifier 输出的 commit 与交付记录；包内清单只证明自洽，外部 SHA256 才是此次交付的独立比对锚。CI 的 Python 3.11/3.12 仅安装 NumPy；依赖 ORT/MLX 等的测试可能跳过，必须查看实际 skip 原因。不要将这种验收写成跨平台真实推理成功。
+
+**数值重建边界：** 验证器先从 raw 独立核对全部特征和标签（既有数值容差 `1e-12`），再用已核验的原存档训练矩阵重放固定优化器，与运行时 `rebuild_head` 一致。Linux 的 `log/log1p` 重算曾产生约 `4.44e-16` 差异，让从新矩阵出发的训练在原 `1e-8` 梯度门槛附近停滞。没有放宽收敛或质量门槛。存档矩阵重建通过，不等于任意环境重新生成浮点输入并训练均稳定；`experiments.qa_risk train` 是后者，应保留失败记录，不能通过调参追求相同结果。
+
+The verifier checks raw-derived features and labels before replaying the verified serialized training matrix. This establishes archived-input head reconstruction, not platform-independent convergence for freshly regenerated floating-point inputs. Published samples support reproduction and ablation only; they are not new confirmation data.
+
+## RC4：七条真实功能与故障路径 / Local inference exercise
+
+完整模型环境与本地资产准备见 [专用模型指南](qa-specialist-study.md#model-quantization-and-provenance--模型量化与来源) 及该页末尾的固定 revision 下载/导出命令。使用独立 Python 3.12 环境：
+
+```bash
+python3.12 -m venv .venv-qa
+.venv-qa/bin/python -m pip install -r requirements-qa-specialist.lock.txt
+.venv-qa/bin/python -m pip check
+# 用 .venv-qa/bin/python 执行专用模型指南的下载和资产构建命令。
+.venv-qa/bin/python -B -m experiments.reproduce_qa_prototype \
+  --asset-root /absolute/path/to/local-qa-assets \
+  --output-dir runs/my-rc4-reproduction
+```
+
+`--asset-root` 必须是显式本地普通文件目录，包含固定 FP32/INT8 ONNX、tokenizer、manifest 与上游模型卡；运行时会校验身份和固定依赖。发布包不包含这些资产，也不包含训练 head 的系数、截距或 scaler。离线演示使用已有本地资产；新的下载、导出与在不同硬件上的推理是额外工作，不能据本包离线验收推定已完成。锁文件记录原模型环境；全仓库可选 MiniLM/MLX 测试不全属于这份锁文件的安装范围。
+
+输出应为 `status=complete`，涵盖：正确接受、不可回答拒答、可回答拒答、额外 gold 字段、超 question token 上限、空 context、缺失资产。无 Git 解压目录的 `git_head` 应为 null。已公布后选择的三个演示样本不代表新评估。输出目录必须不存在；不覆盖历史结果。
+
+本地请求例子（恰好两个字段）：
+
+```json
+{"context":"Alpha is a city. Beta is a river.","question":"Which place is a city?"}
+```
+
+保存为 `request.json`，运行 `.venv-qa/bin/python -m experiments.serve_qa_specialist --asset-root /absolute/path/to/local-qa-assets --input-json request.json`。这只是输入格式示例，不保证被接受。CLI 每次启动均进行证据核验与加载；热请求约 69.600 ms 和历史首次初始化约 18.04 s 属于不同计时范围。
+
+## RC4：发布和访问 / Release and access
+
+发布包、tag 和 Release 必须绑定同一个验收 commit；不能从缺少叠加成果的 main 打包。任何许可证修改都先提交，再重建包、核对历史字节和对应 HEAD 的 CI。GitHub 自动生成的 source ZIP 不等同于本项目带逐文件清单的自定义 ZIP；交付使用附带外部 SHA256 的自定义附件。
+
+保持 PRIVATE 时，Release、PR 和仓库链接仅供获准账户访问；招聘者需要由所有者授权访问，或由所有者单独分享经过审阅的无权重源码证据包及说明。当前流程不邀请他人、不主动发送材料，也不承诺私有链接公开可读。公开展示需另行明确授权改变可见性。根许可证的选择不改变第三方数据/模型的原有归属。
+
+A private release is not a public portfolio. Recruiters need owner-approved repository access or an independently shared source/evidence package. No merge, visibility change, tag or release is implied by successful verification. Owner decisions on the root code license and distribution visibility remain required.
+
+## 历史 RC2/RC3：零模型、零网络验收
 
 Python 3.11+；在解压后的仓库根目录运行。源码包含所有协议与冻结数据，不需要作者其他仓库。
 

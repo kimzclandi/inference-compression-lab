@@ -46,6 +46,8 @@ python -m experiments.verify_qa_risk --root results/qa-risk-v2
 python results/qa-risk-review-v1/evaluation-independent.py
 ```
 
+**数值边界：** 上面的验证器先从 raw 核对 features/labels，再用核验后的原存档矩阵重放训练。下面的 `qa_risk train` 会从 raw 重新生成浮点特征；在 Linux 曾因约 `4.44e-16` 差异于原收敛门槛附近停滞。它不是运行原型所需的 head 重建入口。存档输入跨平台重建通过不代表任意重新生成的输入都能稳定训练；详见 [RC4 无 Git 使用与数值边界](release-reproduction.md)。保留失败，勿改变优化器或阈值寻求通过。
+
 完整模型环境见 `requirements-qa-specialist.lock.txt`。先按 `docs/qa-specialist-study.md` 准备本地固定 ONNX 资产，再复现训练与**已公布**样本：
 
 ```bash
