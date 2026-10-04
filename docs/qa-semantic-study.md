@@ -61,3 +61,14 @@ python -m unittest discover -s tests -v
 ```
 
 真实表征抽查另需原固定模型资产和 ONNX 运行环境，调用 `experiments.check_qa_semantic_tap`。该命令不能在没有资产时被称为已执行。代码与实验由 AI 辅助实现和执行；默认本地 QA 策略保持不变，历史失败没有改判。
+
+## Linux CI failure retained
+
+At commit `b517530`, Linux Python 3.11 and 3.12 both failed the original
+semantic head's fixed `1e-6` score-reproduction tolerance. The repaired-head
+check was not reached in that run. Local replay success is therefore not a
+cross-platform pass. CI now executes both checks separately, retains their
+maximum score differences and changed-decision counts, and still fails on the
+same tolerance violation. It does not relax a numerical or quality gate.
+The semantic branch is not fully technically accepted while this remains
+unresolved; the earlier nonlinear branch has separate passing checks.

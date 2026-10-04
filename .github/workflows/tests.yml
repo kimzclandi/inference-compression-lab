@@ -53,10 +53,27 @@ jobs:
           python -m experiments.qa_rich verify --folder results/qa-rich-v1 --output "$RUNNER_TEMP/rich-audit.json"
           python -m experiments.verify_qa_rich_inputs --output "$RUNNER_TEMP/rich-input-audit.json"
 
-      - name: Semantic projection repair and archived activations (expected development failure)
+      - name: Semantic projection regression
         env:
           OMP_NUM_THREADS: '1'
-        run: |
-          python -m unittest tests.test_qa_semantic_projection -v
-          python -m experiments.verify_qa_semantic --output "$RUNNER_TEMP/semantic-audit.json"
-          python -m experiments.verify_qa_semantic --fixed --root results/qa-semantic-fixed-v1 --output "$RUNNER_TEMP/semantic-fixed-audit.json"
+        run: python -m unittest tests.test_qa_semantic_projection -v
+
+      - name: Original semantic archived reproduction
+        if: always()
+        env:
+          OMP_NUM_THREADS: '1'
+        run: python -m experiments.verify_qa_semantic --output "$RUNNER_TEMP/semantic-audit.json"
+
+      - name: Repaired semantic archived reproduction
+        if: always()
+        env:
+          OMP_NUM_THREADS: '1'
+        run: python -m experiments.verify_qa_semantic --fixed --root results/qa-semantic-fixed-v1 --output "$RUNNER_TEMP/semantic-fixed-audit.json"
+
+      - name: Retain semantic reproduction diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: semantic-reproduction-${{ matrix.python }}
+          path: ${{ runner.temp }}/semantic*-audit.json
+          if-no-files-found: warn
