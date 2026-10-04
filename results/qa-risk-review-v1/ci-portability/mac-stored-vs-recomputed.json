@@ -1,0 +1,143 @@
+{
+  "frozen_source_sha256": "182138f513c311a5e14dece7afc60ca28c1cbf22b1dbbf56a6db0cf3513b3bbd",
+  "variants": {
+    "fp32": {
+      "max_recomputed_feature_difference": 0.0,
+      "stored": {
+        "convergence": {
+          "converged": true,
+          "iterations": 8,
+          "gradient_max_abs": 1.459943277382081e-14
+        },
+        "last_trace": [
+          {
+            "iteration": 5,
+            "objective": 79.57995543675634,
+            "gradient_max_abs": 0.045273858276532325,
+            "step_size": 1.0
+          },
+          {
+            "iteration": 6,
+            "objective": 79.57933719572338,
+            "gradient_max_abs": 0.00033428727868528574,
+            "step_size": 1.0
+          },
+          {
+            "iteration": 7,
+            "objective": 79.5793371668923,
+            "gradient_max_abs": 1.5928033031409328e-08,
+            "step_size": 1.0
+          },
+          {
+            "iteration": 8,
+            "objective": 79.5793371668923,
+            "gradient_max_abs": 1.459943277382081e-14,
+            "step_size": null
+          }
+        ]
+      },
+      "recomputed": {
+        "convergence": {
+          "converged": true,
+          "iterations": 8,
+          "gradient_max_abs": 1.459943277382081e-14
+        },
+        "last_trace": [
+          {
+            "iteration": 5,
+            "objective": 79.57995543675634,
+            "gradient_max_abs": 0.045273858276532325,
+            "step_size": 1.0
+          },
+          {
+            "iteration": 6,
+            "objective": 79.57933719572338,
+            "gradient_max_abs": 0.00033428727868528574,
+            "step_size": 1.0
+          },
+          {
+            "iteration": 7,
+            "objective": 79.5793371668923,
+            "gradient_max_abs": 1.5928033031409328e-08,
+            "step_size": 1.0
+          },
+          {
+            "iteration": 8,
+            "objective": 79.5793371668923,
+            "gradient_max_abs": 1.459943277382081e-14,
+            "step_size": null
+          }
+        ]
+      }
+    },
+    "int8": {
+      "max_recomputed_feature_difference": 0.0,
+      "stored": {
+        "convergence": {
+          "converged": true,
+          "iterations": 7,
+          "gradient_max_abs": 4.4635661833325457e-10
+        },
+        "last_trace": [
+          {
+            "iteration": 4,
+            "objective": 86.77747525115238,
+            "gradient_max_abs": 0.35783222506660395,
+            "step_size": 1.0
+          },
+          {
+            "iteration": 5,
+            "objective": 86.73794860662038,
+            "gradient_max_abs": 0.021033738129330848,
+            "step_size": 1.0
+          },
+          {
+            "iteration": 6,
+            "objective": 86.73784321358933,
+            "gradient_max_abs": 6.014173595547678e-05,
+            "step_size": 1.0
+          },
+          {
+            "iteration": 7,
+            "objective": 86.73784321281806,
+            "gradient_max_abs": 4.4635661833325457e-10,
+            "step_size": null
+          }
+        ]
+      },
+      "recomputed": {
+        "convergence": {
+          "converged": true,
+          "iterations": 7,
+          "gradient_max_abs": 4.4635661833325457e-10
+        },
+        "last_trace": [
+          {
+            "iteration": 4,
+            "objective": 86.77747525115238,
+            "gradient_max_abs": 0.35783222506660395,
+            "step_size": 1.0
+          },
+          {
+            "iteration": 5,
+            "objective": 86.73794860662038,
+            "gradient_max_abs": 0.021033738129330848,
+            "step_size": 1.0
+          },
+          {
+            "iteration": 6,
+            "objective": 86.73784321358933,
+            "gradient_max_abs": 6.014173595547678e-05,
+            "step_size": 1.0
+          },
+          {
+            "iteration": 7,
+            "objective": 86.73784321281806,
+            "gradient_max_abs": 4.4635661833325457e-10,
+            "step_size": null
+          }
+        ]
+      }
+    }
+  }
+}

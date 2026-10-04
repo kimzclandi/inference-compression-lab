@@ -1,0 +1,83 @@
+{
+  "schema": "qa-risk-logistic-v1",
+  "feature_names": [
+    "selected_span_null_margin",
+    "selected_joint_context_cls_log_probability",
+    "different_normalized_answer_margin_gap",
+    "log1p_answer_token_count",
+    "log1p_window_count"
+  ],
+  "config": {
+    "objective": "sum_binary_logistic_loss_plus_half_l2_weight_squared",
+    "l2": 1.0,
+    "regularize_intercept": false,
+    "standard_deviation_ddof": 0,
+    "zero_variance_scale": 1.0,
+    "max_iterations": 100,
+    "gradient_max_abs_tolerance": 1e-08,
+    "armijo": 0.0001,
+    "backtracking_factor": 0.5,
+    "max_backtracking_steps": 40
+  },
+  "n_train": 256,
+  "class_counts": {
+    "0": 148,
+    "1": 108
+  },
+  "convergence": {
+    "converged": true,
+    "iterations": 7,
+    "gradient_max_abs": 4.4635661833325457e-10
+  },
+  "trace": [
+    {
+      "iteration": 0,
+      "objective": 177.445678223346,
+      "gradient_max_abs": 89.20779569491931,
+      "step_size": 1.0
+    },
+    {
+      "iteration": 1,
+      "objective": 100.93233327802459,
+      "gradient_max_abs": 19.392088178271518,
+      "step_size": 1.0
+    },
+    {
+      "iteration": 2,
+      "objective": 90.96888143595561,
+      "gradient_max_abs": 6.32352613839296,
+      "step_size": 1.0
+    },
+    {
+      "iteration": 3,
+      "objective": 87.54699862588372,
+      "gradient_max_abs": 1.8677727967266755,
+      "step_size": 1.0
+    },
+    {
+      "iteration": 4,
+      "objective": 86.77747525115238,
+      "gradient_max_abs": 0.35783222506660395,
+      "step_size": 1.0
+    },
+    {
+      "iteration": 5,
+      "objective": 86.73794860662038,
+      "gradient_max_abs": 0.021033738129330848,
+      "step_size": 1.0
+    },
+    {
+      "iteration": 6,
+      "objective": 86.73784321358933,
+      "gradient_max_abs": 6.014173595547678e-05,
+      "step_size": 1.0
+    },
+    {
+      "iteration": 7,
+      "objective": 86.73784321281806,
+      "gradient_max_abs": 4.4635661833325457e-10,
+      "step_size": null
+    }
+  ],
+  "interpretation": "Fitted logistic score; no guarantee of calibrated correctness probability."
+}

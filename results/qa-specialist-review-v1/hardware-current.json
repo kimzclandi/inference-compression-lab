@@ -1,0 +1,10 @@
+{
+  "chip": "Apple M4 Max",
+  "physical_memory_bytes": 51539607552,
+  "logical_cpu_count": 16,
+  "macOS": "27.0",
+  "build": "26A428",
+  "inference_python": "3.12.11",
+  "source": "fresh sysctl -n machdep.cpu.brand_string hw.memsize hw.ncpu; sw_vers; specialist venv python -V",
+  "scope": "Host identification read this turn; runtime uses four ORT intra-op threads and CPUExecutionProvider. No GPU inference performance claim."
+}

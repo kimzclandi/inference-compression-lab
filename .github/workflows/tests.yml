@@ -6,6 +6,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         python: ['3.11', '3.12']
     steps:
@@ -13,6 +14,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python }}
+      - name: Install explicit offline-verification dependency
+        run: python -m pip install numpy==2.2.6
       - run: python -m unittest discover -s tests -v
       - run: python -m experiments.verify_release
       - name: Independent raw-record arithmetic
@@ -23,3 +26,11 @@ jobs:
         run: |
           python -m experiments.verify_qa_remediation --root results/qa-remediation-v1
           python results/qa-remediation-review-v1/independent/audit.py --run fp16=results/qa-remediation-v1/calibration-fp16 --run q8=results/qa-remediation-v1/calibration-q8 --output "$RUNNER_TEMP/independent-qa-calibration.json"
+      - name: Frozen optimizer portability diagnosis (no learned parameters)
+        run: python -m experiments.diagnose_qa_risk_portability
+      - name: Complete RC4 acceptance and compact evidence review
+        run: python -m experiments.review_qa_evidence --output-dir "$RUNNER_TEMP/qa-evidence-review"
+      - name: Independent specialist decoding and supervised feature arithmetic
+        run: |
+          python results/qa-specialist-review-v1/independent/audit.py --root results/qa-specialist-v1 --output "$RUNNER_TEMP/independent-specialist.json"
+          python results/qa-risk-review-v1/independent-feature-audit.py --training-dir results/qa-risk-v2/training --output "$RUNNER_TEMP/independent-risk-features.json"

@@ -1,0 +1,22 @@
+{
+  "calibration-data.jsonl": "e98f650dc240ab14e84861e7f7dc3efbeb1da9b49c06079fcaaa1159860ca759",
+  "fp32-calibration-features.json": "25c872822da7822c1211460f0f26aa458fdafcfd9b11dcddd5093a511fabc404",
+  "fp32-calibration-predictions.json": "3b06b101af2198a5bdd59513494a1914f61401a4e551884d174ec92a71773d02",
+  "fp32-fit.json": "1b90b62e7f273e79128f75e0e1a2881633fc84a168cd52488f6f78725ea37a1b",
+  "fp32-training-features.json": "55b9e2bb55963af2d0a7f5d6e802473519459aa3e4ac00c19f336ef7fb542336",
+  "int8-calibration-features.json": "b3096ebd3fb64ee65ac87e53877d87a8114421a8006789d5e1d8bf84c7bd41fa",
+  "int8-calibration-predictions.json": "08c26d62d9c2ce3f77dfd284722265819a3b864a488aec816be683f2d6261636",
+  "int8-fit.json": "9837c0401aa2abf344b9313f568ed28af8543e2abe5f37e02fbac5295ff49f9e",
+  "int8-training-features.json": "07e9b461c034085fd0a7ca5819906e914890dc71ede75f11513d64b3abfcbb55",
+  "protocol.json": "365a1ff260d9f887558bc5ce5421e4028702ad435717aefc8f17787cea08081b",
+  "run.json": "a54f76d2cf89a3024c79c9cf070182dfbd361ae42146d121a07ccfae425fa9d7",
+  "selection.json": "b2999477ee82318a98266ef0674c22a526cddea1eec541c591a7bec7e354b74a",
+  "source/experiments/qa_risk.py": "b384e54e4e396b06ca80394187e6798633eb542acb86edf213a815aff65d7457",
+  "source/lab/extractive_qa.py": "d859b363f2cfcca578f0358595a11bdfdcc9b31d0dda19dcbc9def3e9104de8f",
+  "source/lab/qa_gate.py": "ae1d91829e9c0039f903bc8306fb5a72256998433ef551f09fd3c6c42db5512a",
+  "source/lab/qa_metrics.py": "78c4af7f06ba49b3acddd2610586336ecf585c06d8ad89b46ff9fb6358aaaa1f",
+  "source/lab/qa_risk_calibration.py": "182138f513c311a5e14dece7afc60ca28c1cbf22b1dbbf56a6db0cf3513b3bbd",
+  "source/lab/qa_specialist_runtime.py": "40e8a0482b3ddb7d1aca5424c090571e27182c363f15e6b3da0ea72c537b1e54",
+  "source/lab/selective_qa.py": "d4e4c5cf1a6951316a6b5589236e8198113bc2adcab93dce25754dd8e4d16ffd",
+  "train-data.jsonl": "fdadbc19b5b0d978971ead19e10469d0f92d76187fc923c904d1cf878b81a3a2"
+}

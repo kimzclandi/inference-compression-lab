@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "/Users/yukaiyan/Documents/Codex/2026-10-04/ai-infra-1-2-2027-ai/work/qa-extractive-specialist/experiments/prepare_qa_specialist.py",
+    "--raw",
+    "/Users/yukaiyan/Documents/Codex/2026-10-04/github-readme-2027-ai-infra-1/work/release-prep/squad-dev-v2.0.json",
+    "--output-dir",
+    "configs/qa-specialist/dataset"
+  ],
+  "source_sha256": "80a5225e94905956a6446d296ca1093975c4d3b3260f1d6c8f68bc2ab77182d8",
+  "selector_sources_sha256": {
+    "experiments/prepare_qa_specialist.py": "766051017a8f013ab50826d7e3dde29b6f0c580f6ce9671805cd94bdc17ac680",
+    "experiments/prepare_qa_remediation.py": "ee4323be4a7b0e772c959d67f3b3cdf29d32cc282d1fb7dd93dd49196defc95a",
+    "lab/evidence.py": "314c7a009fb2b740db1cb3925d538f7abcd8a8eb719c0d05efd0be71c0abb91d"
+  },
+  "selection_sha256": "6943bf9efef5406f1f744d7d154009ab6aca0425f642592e7676317fe08b6e41",
+  "exclusions_sha256": "176fba5ad90f9e78bf488fbe8a3e2e40c859119552639497585a9a151c9e4eae"
+}

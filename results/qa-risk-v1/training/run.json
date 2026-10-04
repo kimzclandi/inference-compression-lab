@@ -1,0 +1,9 @@
+{
+  "status": "failed",
+  "git_head": "1c560a287d11b904b39c1124a3d541c97707f1d9",
+  "git_status": "?? results/qa-specialist-performance-v1/",
+  "python": "3.12.11",
+  "numpy": "2.2.6",
+  "protocol_sha256": "018ef76c79e25234919acbc682ebaf1a13ad708a52d64a74ea63a84bbff85231",
+  "error": "ValueError('Non-finite or singular logistic fit.')"
+}

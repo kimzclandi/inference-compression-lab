@@ -1,0 +1,68 @@
+{
+  "all_pass": true,
+  "reselected_byte_identical": [
+    "calibration/data.jsonl",
+    "calibration/manifest.json",
+    "evaluation/data.jsonl",
+    "evaluation/manifest.json",
+    "manifest.json"
+  ],
+  "existing_output_rejected": true,
+  "exclusion_counts": {
+    "ids": 1090,
+    "titles": 115,
+    "context_hashes": 560,
+    "question_hashes": 1090
+  },
+  "commands": [
+    {
+      "argv": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-B",
+        "-m",
+        "experiments.prepare_qa_specialist",
+        "--raw",
+        "/Users/yukaiyan/Documents/Codex/2026-10-04/github-readme-2027-ai-infra-1/work/release-prep/squad-dev-v2.0.json",
+        "--output-dir",
+        "/var/folders/k2/x_hsgl2n4nb4gcc0ss_4h7kc0000gn/T/qa-specialist-selection-pzh1kmxh/reselected"
+      ],
+      "returncode": 0,
+      "stdout": "{\"calibration\": {\"n\": 128, \"families\": 103, \"titles\": [\"Fresno,_California\", \"Huguenot\", \"Steam_engine\", \"Normans\"], \"data_sha256\": \"0e48a12509048b171c34d801661c8fe94d03fb8f578c399fabf4031a1d1f2eb5\"}, \"evaluation\": {\"n\": 256, \"families\": 189, \"titles\": [\"Immune_system\", \"Imperialism\", \"Force\", \"Islamism\", \"Amazon_rainforest\", \"Private_school\", \"Geology\", \"French_and_Indian_War\"], \"data_sha256\": \"6961529e99940e253562196ab1e775893354b2b8c6bd7fb3616b30a0a1c0daa0\"}}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-B",
+        "-m",
+        "experiments.prepare_qa_specialist",
+        "--raw",
+        "/Users/yukaiyan/Documents/Codex/2026-10-04/github-readme-2027-ai-infra-1/work/release-prep/squad-dev-v2.0.json",
+        "--output-dir",
+        "/var/folders/k2/x_hsgl2n4nb4gcc0ss_4h7kc0000gn/T/qa-specialist-selection-pzh1kmxh/reselected"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 203, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/yukaiyan/Documents/Codex/2026-10-04/ai-infra-1-2-2027-ai/work/qa-extractive-specialist/experiments/prepare_qa_specialist.py\", line 96, in <module>\n    main()\n    ~~~~^^\n  File \"/Users/yukaiyan/Documents/Codex/2026-10-04/ai-infra-1-2-2027-ai/work/qa-extractive-specialist/experiments/prepare_qa_specialist.py\", line 61, in main\n    out = reserve_directory(args.output_dir)\n  File \"/Users/yukaiyan/Documents/Codex/2026-10-04/ai-infra-1-2-2027-ai/work/qa-extractive-specialist/lab/evidence.py\", line 15, in reserve_directory\n    path.mkdir(parents=True, exist_ok=False)\n    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py\", line 1011, in mkdir\n    os.mkdir(self, mode)\n    ~~~~~~~~^^^^^^^^^^^^\nFileExistsError: [Errno 17] File exists: '/var/folders/k2/x_hsgl2n4nb4gcc0ss_4h7kc0000gn/T/qa-specialist-selection-pzh1kmxh/reselected'\n"
+    },
+    {
+      "argv": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_qa_specialist_selection.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "test_committed_cohorts_independent_balance_and_disjointness (test_qa_specialist_selection.SpecialistSelectionTests.test_committed_cohorts_independent_balance_and_disjointness) ... ok\ntest_deterministic_under_upstream_order (test_qa_specialist_selection.SpecialistSelectionTests.test_deterministic_under_upstream_order) ... ok\ntest_incorrect_split_claim_is_rejected (test_qa_specialist_selection.SpecialistSelectionTests.test_incorrect_split_claim_is_rejected) ... ok\ntest_inventory_hash_change_and_resigned_omission_fail (test_qa_specialist_selection.SpecialistSelectionTests.test_inventory_hash_change_and_resigned_omission_fail) ... ok\ntest_no_fallback_when_quota_unavailable (test_qa_specialist_selection.SpecialistSelectionTests.test_no_fallback_when_quota_unavailable) ... ok\ntest_previous_inventory_and_all_384_rows_are_retained (test_qa_specialist_selection.SpecialistSelectionTests.test_previous_inventory_and_all_384_rows_are_retained) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.016s\n\nOK\n"
+    }
+  ],
+  "model_outputs_read": false,
+  "harness_note": "First manual harness expected lowercase substring already exists but platform exception was FileExistsError: File exists; corrected harness assertion only, reran full byte comparison and rejection check; no selector or dataset changes."
+}

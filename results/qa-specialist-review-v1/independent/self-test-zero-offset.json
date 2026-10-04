@@ -1,0 +1,12 @@
+{
+  "all_pass": true,
+  "tests": [
+    "same_window_null_margin",
+    "minnull_counterexample",
+    "masked_interior",
+    "unicode_trimming",
+    "zero_offset_internal_only",
+    "zero_offset_counts_as_token",
+    "four_prediction_mutations_rejected"
+  ]
+}

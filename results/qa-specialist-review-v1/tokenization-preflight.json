@@ -1,0 +1,26 @@
+{
+  "calibration": {
+    "stats": {
+      "rows": 128,
+      "max_windows": 2,
+      "max_question_tokens": 23
+    },
+    "zero_context_offset_count": 2,
+    "affected_ids": [
+      "57106644b654c5140001f8e7",
+      "57107d73b654c5140001f91f"
+    ]
+  },
+  "evaluation": {
+    "stats": {
+      "rows": 256,
+      "max_windows": 1,
+      "max_question_tokens": 24
+    },
+    "zero_context_offset_count": 2,
+    "affected_ids": [
+      "5728f2e26aef051400154896",
+      "5ad2877cd7d075001a429913"
+    ]
+  }
+}

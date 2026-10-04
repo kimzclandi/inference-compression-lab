@@ -1,0 +1,11 @@
+{
+  "verification_command": "python -m experiments.verify_qa_risk --root results/qa-risk-v2 --study configs/qa-risk/study.json",
+  "verification_exit_code": 0,
+  "tests_command": "python -m unittest tests.test_verify_qa_risk -v",
+  "tests_exit_code": 0,
+  "tests_run": 8,
+  "tests_skipped": 0,
+  "numpy_required": "2.2.6",
+  "interpreter": "/Users/yukaiyan/Documents/Codex/2026-10-04/ai-infra-1-2-2027-ai/work/qa-specialist-runtime/venv/bin/python",
+  "scope": "Reconstructed train-only heads and all thresholds from frozen public evidence; no learned coefficients emitted. Tests attack rehashed training/evaluation artifacts."
+}

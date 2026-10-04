@@ -1,0 +1,11 @@
+{
+  "protocol_sha256": "15df43bd137bec2f0ba56c5523db04725fb8864f411558f82b79b7041360f9e9",
+  "selection_sha256": "8f37032e170aae538246d20f69820e80223192d28f0c939e5ac0c766f747e100",
+  "data_sha256": "6961529e99940e253562196ab1e775893354b2b8c6bd7fb3616b30a0a1c0daa0",
+  "thresholds": {
+    "fp32": 0.9999546021312976,
+    "int8": 0.9996646498695336
+  },
+  "prerequisite": "Commit this selection and calibration evidence before evaluation inference.",
+  "scope": "Fixed public benchmark evaluation; not unseen-model confirmation."
+}

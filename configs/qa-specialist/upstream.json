@@ -1,0 +1,49 @@
+{
+  "model": "deepset/roberta-base-squad2",
+  "revision": "adc3b06f79f797d1c575d5479d6f5efe54a9e3b4",
+  "files": {
+    "README.md": {
+      "bytes": 9181,
+      "sha256": "04834cd9007b2cdd1b1bdd501b571579577331e467be6e24e47d40f060558a29",
+      "url": "https://huggingface.co/deepset/roberta-base-squad2/resolve/adc3b06f79f797d1c575d5479d6f5efe54a9e3b4/README.md",
+      "upstream_lfs_sha256": null
+    },
+    "config.json": {
+      "bytes": 571,
+      "sha256": "64fa58495a722d57609c22f199824bfe98c19be068136a70c268214a08cb8060",
+      "url": "https://huggingface.co/deepset/roberta-base-squad2/resolve/adc3b06f79f797d1c575d5479d6f5efe54a9e3b4/config.json",
+      "upstream_lfs_sha256": null
+    },
+    "merges.txt": {
+      "bytes": 456318,
+      "sha256": "1ce1664773c50f3e0cc8842619a93edc4624525b728b188a9e0be33b7726adc5",
+      "url": "https://huggingface.co/deepset/roberta-base-squad2/resolve/adc3b06f79f797d1c575d5479d6f5efe54a9e3b4/merges.txt",
+      "upstream_lfs_sha256": null
+    },
+    "model.safetensors": {
+      "bytes": 496254442,
+      "sha256": "ac5db66fdcfecb400345d09787b71009d60805ef9883451071669cf951b5e2c7",
+      "url": "https://huggingface.co/deepset/roberta-base-squad2/resolve/adc3b06f79f797d1c575d5479d6f5efe54a9e3b4/model.safetensors",
+      "upstream_lfs_sha256": "ac5db66fdcfecb400345d09787b71009d60805ef9883451071669cf951b5e2c7"
+    },
+    "special_tokens_map.json": {
+      "bytes": 772,
+      "sha256": "c611b1f7d416eb001ee4f293d903ea8c88e703463f1d403f1866a0352743fd00",
+      "url": "https://huggingface.co/deepset/roberta-base-squad2/resolve/adc3b06f79f797d1c575d5479d6f5efe54a9e3b4/special_tokens_map.json",
+      "upstream_lfs_sha256": null
+    },
+    "tokenizer_config.json": {
+      "bytes": 79,
+      "sha256": "7a33226d4265e3989cc6341666af179d0cc710136f4059aae0dd8c0797cba556",
+      "url": "https://huggingface.co/deepset/roberta-base-squad2/resolve/adc3b06f79f797d1c575d5479d6f5efe54a9e3b4/tokenizer_config.json",
+      "upstream_lfs_sha256": null
+    },
+    "vocab.json": {
+      "bytes": 898822,
+      "sha256": "06b4d46c8e752d410213d9548eb27a54db70fda0319b6271fb8d59dead5e1cab",
+      "url": "https://huggingface.co/deepset/roberta-base-squad2/resolve/adc3b06f79f797d1c575d5479d6f5efe54a9e3b4/vocab.json",
+      "upstream_lfs_sha256": null
+    }
+  },
+  "license": "CC BY 4.0 per pinned model card; model weights are local only"
+}

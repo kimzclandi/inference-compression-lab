@@ -1,0 +1,7 @@
+{
+  "problem": "Linux CI reconstructed features from raw logits then failed fixed 100-step optimizer; published training originally used stored serialized feature matrix.",
+  "hypothesis": "Small platform-dependent feature rounding can change near-optimum Armijo behavior. Compare stored and recomputed inputs before concluding.",
+  "acceptance": "Preserve raw source/hash/ID/label/feature verification. Refit exactly saved train features, same fixed optimizer and stopping threshold. Require convergence plus matching frozen parameter identity, calibrated scores, threshold, and fixed evaluation evidence. No new evaluation.",
+  "linux_failed_commit": "891438f447e4997cc298148ec2b4a2e29ba3790d",
+  "ci_run": 37156180574
+}

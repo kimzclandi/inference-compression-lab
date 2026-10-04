@@ -2,7 +2,29 @@
 
 面向量化诊断与推理性能分析的个人研究实验。保留原始记录、负结果和明确的硬件/质量边界；模型权重不上传。
 
-## 当前状态：QA 质量整改与明确停止条件
+## 从这里开始 / Start here
+
+本项目研究：在固定本地 CPU 成本下，量化、抽取解码和拒答策略如何分别影响延迟、答案正确性与覆盖率。
+This project studies the separate effects of quantization, span decoding and abstention on local CPU cost, answer correctness and coverage.
+
+- [系统结构、实现取舍与证据导航](docs/qa-system-overview.md)：按输入→推理→解码→排序→门控定位代码。
+- 无需模型的完整核验与精简双语报告（需 `numpy==2.2.6`，输出目录必须全新）：
+
+```bash
+python -m experiments.review_qa_evidence --output-dir runs/my-evidence-review
+```
+
+命令从原始记录完整核验后输出 `review.md`、`review.json`、`acceptance.json` 与 `run.json`。失败会保留记录、返回非零状态，不生成通过报告；不会运行新评估或检查远端发布状态。实际模型演示另见[无 Git 复现指南](docs/release-reproduction.md)。
+
+## 当前状态：有限 QA 原型通过样本门槛
+
+新增专用抽取模型与固定五特征正确性排序头。INT8 在校准集固定阈值后，对四篇新文章的 128 题只评估一次：接受 27 题，27 题全部 EM 正确；可回答覆盖率 27/64，64 个不可回答问题全部拒答，五项预设点门槛通过。支持有输入范围和严格身份验证的本地原型，**不证明通用部署质量**。精度区间下界约 87.54%，仍有 37 个可回答问题被拒答。
+
+[RC4 无 Git 使用、依赖与发布访问](docs/release-reproduction.md) · [固定排序实验、命令与限制](docs/qa-risk-study.md) · [专用模型 v1 与 CPU 性能](docs/qa-specialist-study.md) · [128 题原始 logits](results/qa-risk-v2/evaluation-int8) · [独立验收](results/qa-risk-review-v1/verification.json)
+
+The frozen INT8 correctness-ranking pipeline passed five empirical point gates on 128 locally reserved public-benchmark questions: 27/27 accepted answers correct, 27/64 answerable coverage, and 0/64 false acceptance on unanswerable questions. This supports a bounded local supplied-passage QA prototype, not a general deployment claim or population-risk guarantee. No model weights or learned ranking parameters are distributed. Earlier failures remain unchanged.
+
+## 先前 QA 整改：保留的失败与停止条件
 
 新增原文片段合同、证据偏移、拒答校准、模型/数据身份锁定和失败后关闭的本地入口。历史 block-10 回退确认仍失败，已退出部署候选。新增有限的模型/提示对照后，固定 1.5B FP16/Q8 在新校准集上各运行 128 题；原始 EM 为 74/128 与 76/128，但**均无满足预设精度、覆盖率、错误作答率和格式门槛的阈值**。按运行前提交的规则停止，不消费预留的 256 题确认集。默认入口返回 `unavailable_quality`，不能把这一保护措施写成 QA 质量已达标。
 
@@ -38,7 +60,7 @@ A personal research artifact for low-bit inference diagnostics and controlled pe
 
 ## 最短离线检查
 
-无需 MLX、模型或网络：
+历史材料重算无需 MLX、模型或网络：
 
 ```bash
 python3 -m experiments.verify_qwen_quantization results/qwen-quantization-v1
@@ -48,8 +70,16 @@ python3 -m experiments.qwen_quantization_demo
 python3 -m unittest discover -s tests -v
 ```
 
+RC4 完整验收新增小排序头重建，需要 `numpy==2.2.6`，运行 `python -m experiments.verify_release_rc4`。这与上面历史标准库验收的范围不同。
+
 真实实验的固定环境、模型身份、数据许可和全量复跑命令见各报告；所有新输出目录拒绝覆盖。`runs/` 保存本地权重及中间产物，不上传。
 
 发布候选支持从 pinned upstream 本地重建五个模型；已在全新 Python 环境和无 Git 源码归档完成真实推理。当前仓库保持私有、PR 保持草稿；根代码复用许可证等待维护者选择。
 
 框架提供量化算子和推理后端；本项目实现对照、诊断、运行时改进和证据验证，不声称原创量化算法。学校/公司经历与个人实验分开归属；本人理解和复跑需另行验证。
+
+专用模型基础流水线在 M4 Max CPU 的固定 8 输入、6 进程轮换中为 72.052 ms FP32 / 54.188 ms INT8（1.330×）；带正确性排序器和拒答门控的 INT8 流水线另测 69.600 ms。两者计时范围不同，不把前者加速倍数套到后者。新 QA 原型也没有新的 FP32 配对质量非劣证据。
+
+按文章检查暴露了明显分布差异：Civil_disobedience 的 32 题全部拒答（可回答覆盖率 0/16），Ctenophora 为 6/16，Harvard_University 为 11/16，Yuan_dynasty 为 10/16。被拒的 37 个可回答问题中，有 19 个 raw span 本来 EM 正确。整体点门槛通过不能外推到每一篇文章或业务领域；排序器换来了精度，也丢弃了有效答案。
+
+[招聘证据表、最小演示与本人必做任务](docs/qa-portfolio-and-learning.md)。

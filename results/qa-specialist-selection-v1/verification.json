@@ -1,0 +1,27 @@
+{
+  "all_pass": true,
+  "source_sha256": "80a5225e94905956a6446d296ca1093975c4d3b3260f1d6c8f68bc2ab77182d8",
+  "splits": {
+    "calibration": {
+      "n": 128,
+      "articles": 4,
+      "families": 103,
+      "unanswerable": 64,
+      "data_sha256": "0e48a12509048b171c34d801661c8fe94d03fb8f578c399fabf4031a1d1f2eb5",
+      "raw_fields_equal": true,
+      "local_disjointness": true
+    },
+    "evaluation": {
+      "n": 256,
+      "articles": 8,
+      "families": 189,
+      "unanswerable": 128,
+      "data_sha256": "6961529e99940e253562196ab1e775893354b2b8c6bd7fb3616b30a0a1c0daa0",
+      "raw_fields_equal": true,
+      "local_disjointness": true
+    }
+  },
+  "answer_offsets_checked": 666,
+  "model_outputs_read": false,
+  "scope": "Local public-benchmark assessment; not model-unseen confirmation."
+}
