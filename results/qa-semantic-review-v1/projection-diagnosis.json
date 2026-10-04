@@ -1,0 +1,5 @@
+{
+  "max_fit_transform_vs_transform_difference": 0.34327576282794947,
+  "max_training_path_gradient": 7.692915226275057e-07,
+  "classifier_weights_unchanged": true
+}

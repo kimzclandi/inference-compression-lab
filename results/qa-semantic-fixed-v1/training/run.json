@@ -1,0 +1,11 @@
+{
+  "status": "complete",
+  "action": "train",
+  "git_head": "859b62bdd6a1da30bf368ae9542a2b5ad23a8c12",
+  "git_status": "?? experiments/check_qa_semantic_tap.py\n?? experiments/verify_qa_semantic.py\n?? results/qa-semantic-fixed-v1/\n?? tests/test_qa_semantic.py",
+  "protocol_sha256": "0a24430217f0860fb484eec4c50a235381df17883e3ff77e8c0eec2eddb106ff",
+  "parameters_distributed": false,
+  "authorship": "AI-assisted implementation and execution",
+  "development_passed": false,
+  "evaluation_permitted": false
+}

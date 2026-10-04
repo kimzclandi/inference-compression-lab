@@ -1,0 +1,8 @@
+{
+  "n_train": 2304,
+  "input_features": 1541,
+  "classifier_features": 69,
+  "iterations": 225,
+  "fit_attempts": 1,
+  "convergence_warning": false
+}

@@ -1,0 +1,20 @@
+{
+  "evidence_valid": true,
+  "projection_repair": false,
+  "archived_activation_rebuild": true,
+  "probability_tolerance": 1e-06,
+  "max_probability_difference": 0.0,
+  "independent_score_difference": 3.3306690738754696e-16,
+  "final_inference_path_gradient_max": 0.0008480806044583004,
+  "runtime_warning_messages": [
+    "divide by zero encountered in matmul",
+    "invalid value encountered in matmul",
+    "overflow encountered in matmul",
+    "scipy.optimize: The `disp` and `iprint` options of the L-BFGS-B solver are deprecated and will be removed in SciPy 1.18.0."
+  ],
+  "runtime_warning_count": 1399,
+  "all_grid_decisions_identical": true,
+  "development_passed": false,
+  "evaluation_run": false,
+  "scope": "Archived activation/score reproduction with fixed probability tolerance and exact grid decisions. Original fit_transform/transform discrepancy is retained; numerical warnings are disclosed, not suppressed into a clean-training claim. No arbitrary regenerated-activation portability or model quality acceptance."
+}

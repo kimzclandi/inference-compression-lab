@@ -18,7 +18,7 @@ python -m experiments.review_qa_evidence --output-dir runs/my-evidence-review
 
 [新增第三特征固定消融](docs/qa-span-gap-ablation.md)：仅使用已公布训练/校准材料。两窗反例可区分机制，但真实数据0行特征改变，未产生质量提升；默认策略保持不变。
 
-## 当前状态：历史样本通过；扩大训练后的新校准失败
+## 当前状态：历史样本通过；后续覆盖率候选仍未通过完整门槛
 
 [后续非线性与不确定性特征实验](docs/qa-nonlinear-study.md)：两项固定候选也未通过完整开发门槛，预留评估仍未运行。Two subsequent fixed ranking challengers also failed development gates; the reserved evaluation remains unused.
 
@@ -97,3 +97,5 @@ RC4 完整验收新增小排序头重建，需要 `numpy==2.2.6`，运行 `pytho
 [不重叠竞争片段覆盖率实验](docs/qa-coverage-gap-study.md)：实际改变多数样本特征，但候选校准失败，保留原策略。 / Disjoint-competitor features changed most development rows but failed calibration; the default policy is retained.
 
 [扩大排序头训练实验](docs/qa-expanded-ranking-study.md)：2,304 题训练收敛，新校准失败；包含全部 raw→feature→label 审计、存档矩阵重建和禁止失败后评估的回归检查。
+
+[语义表征与投影一致性修复](docs/qa-semantic-study.md)：实际修复训练/推理投影差异，但仍未通过开发质量门槛，未运行预留评估。Training/inference projection consistency was repaired; development quality still failed.

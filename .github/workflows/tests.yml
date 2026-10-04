@@ -52,3 +52,11 @@ jobs:
           python -m experiments.qa_nonlinear verify --folder results/qa-nonlinear-v2 --output "$RUNNER_TEMP/nonlinear-audit.json"
           python -m experiments.qa_rich verify --folder results/qa-rich-v1 --output "$RUNNER_TEMP/rich-audit.json"
           python -m experiments.verify_qa_rich_inputs --output "$RUNNER_TEMP/rich-input-audit.json"
+
+      - name: Semantic projection repair and archived activations (expected development failure)
+        env:
+          OMP_NUM_THREADS: '1'
+        run: |
+          python -m unittest tests.test_qa_semantic_projection -v
+          python -m experiments.verify_qa_semantic --output "$RUNNER_TEMP/semantic-audit.json"
+          python -m experiments.verify_qa_semantic --fixed --root results/qa-semantic-fixed-v1 --output "$RUNNER_TEMP/semantic-fixed-audit.json"

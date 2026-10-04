@@ -1,0 +1,57 @@
+{
+  "all_pass": true,
+  "selection": "Four smallest SHA256(semantic-audit- + id) per role; no outcome filtering",
+  "records": [
+    {
+      "split": "training",
+      "id": "5acebb7232bba1001ae4b223",
+      "projection_error": 1.33514404296875e-05,
+      "pooling_error": 3.5762786865234375e-07
+    },
+    {
+      "split": "training",
+      "id": "5a7a175117ab25001a8a031a",
+      "projection_error": 9.5367431640625e-06,
+      "pooling_error": 6.357828770120477e-07
+    },
+    {
+      "split": "training",
+      "id": "5a7b54ff21c2de001afe9edb",
+      "projection_error": 1.049041748046875e-05,
+      "pooling_error": 4.76837158203125e-07
+    },
+    {
+      "split": "training",
+      "id": "572782b6dd62a815002e9f31",
+      "projection_error": 1.049041748046875e-05,
+      "pooling_error": 4.76837158203125e-07
+    },
+    {
+      "split": "development",
+      "id": "5ad28098d7d075001a4297bc",
+      "projection_error": 9.059906005859375e-06,
+      "pooling_error": 3.178914393942023e-07
+    },
+    {
+      "split": "development",
+      "id": "5705fd8475f01819005e7840",
+      "projection_error": 1.1444091796875e-05,
+      "pooling_error": 4.76837158203125e-07
+    },
+    {
+      "split": "development",
+      "id": "5ad0331877cf76001a686e18",
+      "projection_error": 1.239776611328125e-05,
+      "pooling_error": 4.76837158203125e-07
+    },
+    {
+      "split": "development",
+      "id": "5705e4fe75f01819005e7705",
+      "projection_error": 9.059906005859375e-06,
+      "pooling_error": 2.384185791015625e-07
+    }
+  ],
+  "model_inference": true,
+  "encoder_trained": false,
+  "scope": "Eight-row local implementation/projection check; not a new quality evaluation"
+}
