@@ -1,0 +1,9 @@
+{
+  "development-predictions.json": "f6502b9b202ed0e8caeafedf7c953e784616ef221684e4ff87c4a4c408b34d37",
+  "fit.json": "11c81c3f9241bb4ca714d600abc19c82430d2c07177395ad3c9945e39d8e2a41",
+  "protocol.json": "a1ab1375b2c1dc1736fbe843d13f3c9773a16c8d890858cbd6a0e07474350146",
+  "run.json": "9a7b80479ca001792318d128794f65c9025388cd5893fd29808c16d18e38c713",
+  "selection.json": "2fea261464f220ad747f47cb72b80284b10095a041fa121edd7106de6718faad",
+  "source/experiments/qa_semantic.py": "8115bfdacb21a20ec0a407d7225fd9d614b9139b69520e7e0e3fa4d56c0cfed3",
+  "source/lab/qa_semantic.py": "5839766a882c722693077f07ea32caff3c0592a51808dd2c8e72df862f68cb0a"
+}

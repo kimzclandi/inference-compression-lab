@@ -1,0 +1,10 @@
+{
+  "development-identity.json": "9a7b48d72b567e48c075d2fd59b0a503254298061619364e6be665ec90c67d39",
+  "development.npz": "674996cd70350c460b5a2f08767c69e8b146ba9dbc76691f0ea1a97ef74b4c92",
+  "protocol.json": "a1ab1375b2c1dc1736fbe843d13f3c9773a16c8d890858cbd6a0e07474350146",
+  "run.json": "d98e3134283726f44d3eb53d1d6f8067236a9996d1ae90a39b4b9a35e180ff62",
+  "source/experiments/qa_semantic.py": "8115bfdacb21a20ec0a407d7225fd9d614b9139b69520e7e0e3fa4d56c0cfed3",
+  "source/lab/qa_semantic.py": "5839766a882c722693077f07ea32caff3c0592a51808dd2c8e72df862f68cb0a",
+  "training-identity.json": "1c31d189b942cf6c0bb098e60336b0fa56095b9af4a7973ab509066f2028e1dd",
+  "training.npz": "7292de5d6fbb4171d78340fa42a2cf7474d1bd6bbc0472ee9e849cf500b3a476"
+}

@@ -1,0 +1,12 @@
+{
+  "status": "complete",
+  "action": "collect",
+  "git_head": "92e9d3528d9878ee1e4590c9a77ed2d1c32795d5",
+  "git_status": "?? results/qa-semantic-v1/",
+  "protocol_sha256": "a1ab1375b2c1dc1736fbe843d13f3c9773a16c8d890858cbd6a0e07474350146",
+  "parameters_distributed": false,
+  "authorship": "AI-assisted implementation and execution",
+  "instrumented_model_sha256": "aebfe84bb8a76dd8cecdd378a2ad6d8a75fcbff0dc047d3207ed10ebc2c6226e",
+  "inference_rows": 2496,
+  "encoder_trained": false
+}

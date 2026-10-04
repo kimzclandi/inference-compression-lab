@@ -1,0 +1,171 @@
+{
+  "eligible": false,
+  "threshold": null,
+  "curve": [
+    {
+      "threshold": 0.5,
+      "metrics": {
+        "n": 192,
+        "accepted": 85,
+        "accepted_correct": 67,
+        "answerable": 96,
+        "unanswerable": 96,
+        "accepted_answerable": 69,
+        "accepted_unanswerable": 16,
+        "accepted_precision": 0.788235294117647,
+        "answerable_answer_coverage": 0.71875,
+        "correct_answerable_coverage": 0.6979166666666666,
+        "unanswerable_false_accept_rate": 0.16666666666666666,
+        "invalid_rate": 0.0
+      },
+      "passes": false
+    },
+    {
+      "threshold": 0.6,
+      "metrics": {
+        "n": 192,
+        "accepted": 76,
+        "accepted_correct": 60,
+        "answerable": 96,
+        "unanswerable": 96,
+        "accepted_answerable": 62,
+        "accepted_unanswerable": 14,
+        "accepted_precision": 0.7894736842105263,
+        "answerable_answer_coverage": 0.6458333333333334,
+        "correct_answerable_coverage": 0.625,
+        "unanswerable_false_accept_rate": 0.14583333333333334,
+        "invalid_rate": 0.0
+      },
+      "passes": false
+    },
+    {
+      "threshold": 0.7,
+      "metrics": {
+        "n": 192,
+        "accepted": 70,
+        "accepted_correct": 56,
+        "answerable": 96,
+        "unanswerable": 96,
+        "accepted_answerable": 58,
+        "accepted_unanswerable": 12,
+        "accepted_precision": 0.8,
+        "answerable_answer_coverage": 0.6041666666666666,
+        "correct_answerable_coverage": 0.5833333333333334,
+        "unanswerable_false_accept_rate": 0.125,
+        "invalid_rate": 0.0
+      },
+      "passes": false
+    },
+    {
+      "threshold": 0.8,
+      "metrics": {
+        "n": 192,
+        "accepted": 50,
+        "accepted_correct": 42,
+        "answerable": 96,
+        "unanswerable": 96,
+        "accepted_answerable": 43,
+        "accepted_unanswerable": 7,
+        "accepted_precision": 0.84,
+        "answerable_answer_coverage": 0.4479166666666667,
+        "correct_answerable_coverage": 0.4375,
+        "unanswerable_false_accept_rate": 0.07291666666666667,
+        "invalid_rate": 0.0
+      },
+      "passes": false
+    },
+    {
+      "threshold": 0.85,
+      "metrics": {
+        "n": 192,
+        "accepted": 46,
+        "accepted_correct": 39,
+        "answerable": 96,
+        "unanswerable": 96,
+        "accepted_answerable": 40,
+        "accepted_unanswerable": 6,
+        "accepted_precision": 0.8478260869565217,
+        "answerable_answer_coverage": 0.4166666666666667,
+        "correct_answerable_coverage": 0.40625,
+        "unanswerable_false_accept_rate": 0.0625,
+        "invalid_rate": 0.0
+      },
+      "passes": false
+    },
+    {
+      "threshold": 0.9,
+      "metrics": {
+        "n": 192,
+        "accepted": 34,
+        "accepted_correct": 30,
+        "answerable": 96,
+        "unanswerable": 96,
+        "accepted_answerable": 30,
+        "accepted_unanswerable": 4,
+        "accepted_precision": 0.8823529411764706,
+        "answerable_answer_coverage": 0.3125,
+        "correct_answerable_coverage": 0.3125,
+        "unanswerable_false_accept_rate": 0.041666666666666664,
+        "invalid_rate": 0.0
+      },
+      "passes": false
+    },
+    {
+      "threshold": 0.95,
+      "metrics": {
+        "n": 192,
+        "accepted": 16,
+        "accepted_correct": 15,
+        "answerable": 96,
+        "unanswerable": 96,
+        "accepted_answerable": 15,
+        "accepted_unanswerable": 1,
+        "accepted_precision": 0.9375,
+        "answerable_answer_coverage": 0.15625,
+        "correct_answerable_coverage": 0.15625,
+        "unanswerable_false_accept_rate": 0.010416666666666666,
+        "invalid_rate": 0.0
+      },
+      "passes": false
+    },
+    {
+      "threshold": 0.975,
+      "metrics": {
+        "n": 192,
+        "accepted": 6,
+        "accepted_correct": 6,
+        "answerable": 96,
+        "unanswerable": 96,
+        "accepted_answerable": 6,
+        "accepted_unanswerable": 0,
+        "accepted_precision": 1.0,
+        "answerable_answer_coverage": 0.0625,
+        "correct_answerable_coverage": 0.0625,
+        "unanswerable_false_accept_rate": 0.0,
+        "invalid_rate": 0.0
+      },
+      "passes": false
+    },
+    {
+      "threshold": 0.99,
+      "metrics": {
+        "n": 192,
+        "accepted": 0,
+        "accepted_correct": 0,
+        "answerable": 96,
+        "unanswerable": 96,
+        "accepted_answerable": 0,
+        "accepted_unanswerable": 0,
+        "accepted_precision": null,
+        "answerable_answer_coverage": 0.0,
+        "correct_answerable_coverage": 0.0,
+        "unanswerable_false_accept_rate": 0.0,
+        "invalid_rate": 0.0
+      },
+      "passes": false
+    }
+  ],
+  "protocol_sha256": "a1ab1375b2c1dc1736fbe843d13f3c9773a16c8d890858cbd6a0e07474350146",
+  "head_pickle_sha256": "a033a9e04831539ff2457b0f310ff9c9bc8c2333696e36f20c00b48f0ca3c563",
+  "collection_checksums_sha256": "0229042565264991d742765cf78f8a4a99c25e8e9b10619e8e689cb59032decd"
+}
