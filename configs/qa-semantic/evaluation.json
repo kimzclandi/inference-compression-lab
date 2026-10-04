@@ -1,0 +1,7 @@
+{
+  "training_protocol_sha256": "a1ab1375b2c1dc1736fbe843d13f3c9773a16c8d890858cbd6a0e07474350146",
+  "evaluator_sha256": "fca6a97994b82efe0f00928c5f7c3d79429300c66f911939d6857ce05ce2e6f2",
+  "primary": "All five original absolute point gates on reserved192; not paired improvement or population guarantee",
+  "baseline": "Descriptive original256 head at historical0.7; no threshold re-selection",
+  "no_retries_or_threshold_changes": true
+}
