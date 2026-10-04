@@ -8,7 +8,7 @@
   "versions": {
     "numpy": "2.2.6",
     "scikit-learn": "1.6.1",
-    "scipy": "1.16.2",
+    "scipy": "1.15.3",
     "joblib": "1.4.2",
     "threadpoolctl": "3.6.0"
   },
@@ -50,7 +50,7 @@
     "configs/qa-expanded/dataset/manifest.json": "e14a2388728985dc77085aa264bd018896739f0eecdd4e1dcc7d6a824517b4f7",
     "configs/qa-expanded/dataset/train_new.jsonl": "d9877ccd155ce355dd3518fe5d7bd83250b9f5b8ebb3c1cc8ad6d590cc961da0",
     "configs/qa-expanded/study.json": "5d7d55aec9307c6c5d7f16ad10af90175778f29d215680e3529cf68dc38c37fb",
-    "configs/qa-nonlinear/requirements.txt": "0842e064e01e6085e7e7c5f04724ac69547948cccb63892d2e310c8da7c90969",
+    "configs/qa-nonlinear/requirements.txt": "cb27ecae1548da97209abea810613420e42c252c96610a15efc4ecb1ff71b966",
     "configs/qa-risk/dataset/calibration/data.jsonl": "e98f650dc240ab14e84861e7f7dc3efbeb1da9b49c06079fcaaa1159860ca759",
     "configs/qa-risk/dataset/evaluation/data.jsonl": "d5d1c2e80291bf203179a2151ae71276c00f966e00aa86bee9a054a707f3afef",
     "configs/qa-risk/dataset/train/data.jsonl": "fdadbc19b5b0d978971ead19e10469d0f92d76187fc923c904d1cf878b81a3a2",
@@ -80,6 +80,5 @@
     "results/qa-risk-v2/training/selection.json": "b2999477ee82318a98266ef0674c22a526cddea1eec541c591a7bec7e354b74a",
     "tests/test_qa_expanded.py": "24bd891f0802349e64facf1245ad63c2c5f9f755878dc51d9c9f472728ca2da0",
     "tests/test_qa_nonlinear.py": "55c0e72d9ae5888470083062ba5309f8c68c8931a80bf1872f464ca3d5af54db"
-  },
-  "environment_repair": "First attempt failed importing scipy 1.15.3 before fitting. scipy 1.16.2 import passed locally. No estimator, data, grid, gate or observed prediction changed; retain results/qa-nonlinear-v1/training."
+  }
 }
