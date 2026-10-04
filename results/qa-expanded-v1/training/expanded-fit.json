@@ -1,0 +1,89 @@
+{
+  "schema": "qa-risk-logistic-v1",
+  "feature_names": [
+    "selected_span_null_margin",
+    "selected_joint_context_cls_log_probability",
+    "different_normalized_answer_margin_gap",
+    "log1p_answer_token_count",
+    "log1p_window_count"
+  ],
+  "config": {
+    "objective": "sum_binary_logistic_loss_plus_half_l2_weight_squared",
+    "l2": 1.0,
+    "regularize_intercept": false,
+    "standard_deviation_ddof": 0,
+    "zero_variance_scale": 1.0,
+    "max_iterations": 100,
+    "gradient_max_abs_tolerance": 1e-08,
+    "armijo": 0.0001,
+    "backtracking_factor": 0.5,
+    "max_backtracking_steps": 40
+  },
+  "n_train": 2304,
+  "class_counts": {
+    "0": 1437,
+    "1": 867
+  },
+  "convergence": {
+    "converged": true,
+    "iterations": 8,
+    "gradient_max_abs": 6.326080770335807e-10
+  },
+  "trace": [
+    {
+      "iteration": 0,
+      "objective": 1597.011104010114,
+      "gradient_max_abs": 753.0968108187462,
+      "step_size": 1.0
+    },
+    {
+      "iteration": 1,
+      "objective": 891.3998732677999,
+      "gradient_max_abs": 174.01456901937877,
+      "step_size": 1.0
+    },
+    {
+      "iteration": 2,
+      "objective": 789.5758430194852,
+      "gradient_max_abs": 60.13089749246012,
+      "step_size": 1.0
+    },
+    {
+      "iteration": 3,
+      "objective": 750.2832217642159,
+      "gradient_max_abs": 21.21960422520229,
+      "step_size": 1.0
+    },
+    {
+      "iteration": 4,
+      "objective": 734.1834533128558,
+      "gradient_max_abs": 6.814401209729585,
+      "step_size": 1.0
+    },
+    {
+      "iteration": 5,
+      "objective": 730.8045107015175,
+      "gradient_max_abs": 1.625950776261189,
+      "step_size": 1.0
+    },
+    {
+      "iteration": 6,
+      "objective": 730.660532334799,
+      "gradient_max_abs": 0.0826871698903866,
+      "step_size": 1.0
+    },
+    {
+      "iteration": 7,
+      "objective": 730.6602603154931,
+      "gradient_max_abs": 0.00016888362495565135,
+      "step_size": 1.0
+    },
+    {
+      "iteration": 8,
+      "objective": 730.6602603144886,
+      "gradient_max_abs": 6.326080770335807e-10,
+      "step_size": null
+    }
+  ],
+  "interpretation": "Fitted logistic score; no guarantee of calibrated correctness probability."
+}

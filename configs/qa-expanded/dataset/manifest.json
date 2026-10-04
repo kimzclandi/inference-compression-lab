@@ -1,0 +1,133 @@
+{
+  "seed": 2026100414,
+  "sources": {
+    "train-v2.0.json": "68dcfbb971bd3e96d5b46c7177b16c1a4e7d4bdef19fb204502738552dede002",
+    "dev-v2.0.json": "80a5225e94905956a6446d296ca1093975c4d3b3260f1d6c8f68bc2ab77182d8"
+  },
+  "splits": {
+    "train_new": {
+      "titles": [
+        "Nintendo_Entertainment_System",
+        "Literature",
+        "Ann_Arbor,_Michigan",
+        "Human_Development_Index",
+        "ASCII",
+        "Green",
+        "Ministry_of_Defence_(United_Kingdom)",
+        "Federal_Bureau_of_Investigation",
+        "Jehovah%27s_Witnesses",
+        "Multiracial_American",
+        "Railway_electrification_system",
+        "Armenians",
+        "Videoconferencing",
+        "Crucifixion_of_Jesus",
+        "Estonian_language",
+        "Separation_of_church_and_state_in_the_United_States",
+        "Edmund_Burke",
+        "Communications_in_Somalia",
+        "Economy_of_Greece",
+        "Windows_8",
+        "Steven_Spielberg",
+        "Houston",
+        "Molotov%E2%80%93Ribbentrop_Pact",
+        "Law_of_the_United_States",
+        "San_Diego",
+        "Copyright_infringement",
+        "Comprehensive_school",
+        "Royal_assent",
+        "Hanover",
+        "Russian_Soviet_Federative_Socialist_Republic",
+        "Central_African_Republic",
+        "Aspirated_consonant",
+        "European_Central_Bank",
+        "Hindu_philosophy",
+        "Genocide",
+        "Dutch_Republic",
+        "The_Legend_of_Zelda:_Twilight_Princess",
+        "Presbyterianism",
+        "Namibia",
+        "Raleigh,_North_Carolina",
+        "Czech_language",
+        "Super_Nintendo_Entertainment_System",
+        "Old_English",
+        "Imperial_College_London",
+        "Compact_disc",
+        "Georgian_architecture",
+        "Light-emitting_diode",
+        "Somerset",
+        "Hokkien",
+        "Universal_Studios",
+        "Anthropology",
+        "Royal_Dutch_Shell",
+        "Premier_League",
+        "Police",
+        "Baptists",
+        "Muslim_world",
+        "Phonology",
+        "Memory",
+        "Internet_service_provider",
+        "Norfolk_Island",
+        "Marvel_Comics",
+        "Alloy",
+        "Clothing",
+        "Bras%C3%ADlia"
+      ],
+      "per_class_per_article": 16,
+      "max_questions_per_context_per_class": 1,
+      "n": 2048,
+      "context_families": 1472,
+      "input_rejections": {
+        "insufficient_article_quota": 34
+      },
+      "sha256": "d9877ccd155ce355dd3518fe5d7bd83250b9f5b8ebb3c1cc8ad6d590cc961da0",
+      "source": "official_train"
+    },
+    "calibration": {
+      "titles": [
+        "Southern_California",
+        "Rhine",
+        "University_of_Chicago",
+        "Economic_inequality"
+      ],
+      "per_class_per_article": 24,
+      "max_questions_per_context_per_class": 2,
+      "n": 192,
+      "context_families": 62,
+      "input_rejections": {
+        "insufficient_article_quota": 4
+      },
+      "sha256": "eb6a8ba5f8504013fd55593f7945ae702b00734ba40d4156f07a2bb07428ab7e",
+      "source": "official_dev"
+    },
+    "evaluation": {
+      "titles": [
+        "European_Union_law",
+        "Scottish_Parliament",
+        "Oxygen",
+        "Warsaw"
+      ],
+      "per_class_per_article": 24,
+      "max_questions_per_context_per_class": 2,
+      "n": 192,
+      "context_families": 63,
+      "input_rejections": {
+        "insufficient_article_quota": 11
+      },
+      "sha256": "483a8c737f9503e921fdadc819691f2a71e39b69047e3e9e9d6202ce8b57857f",
+      "source": "official_dev"
+    }
+  },
+  "source_urls": {
+    "train-v2.0.json": "https://rajpurkar.github.io/SQuAD-explorer/dataset/train-v2.0.json",
+    "dev-v2.0.json": "https://rajpurkar.github.io/SQuAD-explorer/dataset/dev-v2.0.json"
+  },
+  "tokenizer_asset_manifest_sha256": "c7709c2098b46dc59223b451c076974e1035f591c1e03ca3c2af2747d1f5c7ed",
+  "model_outputs_read": false,
+  "selector_sha256": "7cdd431d26e78f86e9657a72cfafcb40fb63eea733511cac1fc6dfcb8d0fed63",
+  "scope": "New ranking-head data roles; public upstream benchmark exposure remains. Dev titles exclude prior head cohorts, while exact IDs/contexts/questions exclude cumulative historical inventory. Older Qwen title overlap is explicitly permitted.",
+  "license": {
+    "name": "CC BY-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+    "attribution": "SQuAD2: Pranav Rajpurkar, Robin Jia, Percy Liang; Wikipedia contributors"
+  }
+}
