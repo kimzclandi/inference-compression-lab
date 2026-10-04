@@ -1,0 +1,48 @@
+{
+  "schema": 1,
+  "baseline_commit": "396d269d1c7ddb17451b32f692501c611172dfaa",
+  "hypothesis": "Using already validated exact pruning to reconstruct every risk-evidence feature reduces startup time without skipping integrity, decoding, fitting, calibration or evaluation checks.",
+  "arms": [
+    "reference",
+    "pruned",
+    "pruned",
+    "reference",
+    "reference",
+    "pruned"
+  ],
+  "fixed_inputs_sha256": {
+    "configs/qa-risk/study.json": "365a1ff260d9f887558bc5ce5421e4028702ad435717aefc8f17787cea08081b",
+    "configs/qa-risk/policy.json": "a8dbaa250bbba783494c4274fad93715210983bca4d513afa135f0cc00f760d4",
+    "configs/qa-risk/demo.json": "af2f8d39bee1a2a82ba6598b2b06daf03c95939c98775314bb64db0ee8756800",
+    "configs/qa-risk/dataset/evaluation/data.jsonl": "d5d1c2e80291bf203179a2151ae71276c00f966e00aa86bee9a054a707f3afef",
+    "configs/qa-risk-pruning/study.json": "4efa6b19d945b475c3244a1e456b06207c00dab7241f595b7baf9904849b34ef",
+    "lab/qa_risk_calibration.py": "182138f513c311a5e14dece7afc60ca28c1cbf22b1dbbf56a6db0cf3513b3bbd",
+    "lab/qa_risk_pruning.py": "788cfb3f5ed6b4c63dc5167ec7eb3398bfb911924ee3cf7ee1172c49092643a5",
+    "results/qa-risk-v2/training/checksums.json": "e5cd9d53d46beea5dc880c86a8cf7cb4d9eaa2ece36ab30e52ab6aa61d055c4a",
+    "results/qa-risk-v2/evaluation-int8/checksums.json": "244d7ab01944b6a8d993c8cba909159703e1ea67cc3b0a36d48c01aa70c730d9"
+  },
+  "quality": {
+    "complete_verification_result": "exact canonical JSON equality",
+    "feature_rows": 896,
+    "require_identical_three_disclosed_functional_responses": true,
+    "preserve_error_rejection": true
+  },
+  "performance": {
+    "minimum_startup_speedup": 1.5,
+    "minimum_pairs_faster": 2,
+    "timing": "Full load_service initialization: policy and complete evidence verification, training-head reconstruction, validated local model loading. Excludes Python process/import startup and request inference; fresh processes with ordinary OS filesystem cache, not a cold-disk claim."
+  },
+  "limits": {
+    "compute_budget_seconds": 900,
+    "timing_runs": 1,
+    "fresh_processes": 6,
+    "no_retuning": true,
+    "no_training_search": true
+  },
+  "stop_conditions": [
+    "Any verification or functional difference rejects adoption.",
+    "Any failed integrity regression rejects adoption.",
+    "Timing gate failure retains results without a retry or changed threshold."
+  ],
+  "scope": "Single M4 Max CPU, existing pinned local assets; reproduction and startup engineering, no new quality confirmation or hot-request speed claim."
+}

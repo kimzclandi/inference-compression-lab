@@ -1,0 +1,39 @@
+[
+  {
+    "id": "5726400589a1e219009ac5ef",
+    "response": {
+      "status": "answer",
+      "reason": "fixed_threshold_met",
+      "score": 0.7823869048234252,
+      "score_kind": "fitted_ranking_score_not_guaranteed_correctness_probability",
+      "threshold": 0.7,
+      "scope": "english_supplied_passage_bounded_local_prototype",
+      "answer": "tentilla",
+      "start": 552,
+      "end": 560,
+      "context_sha256": "ee73f593c26ad38e58d299361ba118fcf077591f71e9d4ed9515efb8b2fc75f2"
+    }
+  },
+  {
+    "id": "5a669ee5f038b7001ab0c06b",
+    "response": {
+      "status": "abstain",
+      "reason": "below_fixed_threshold",
+      "score": 0.09343904558819022,
+      "score_kind": "fitted_ranking_score_not_guaranteed_correctness_probability",
+      "threshold": 0.7,
+      "scope": "english_supplied_passage_bounded_local_prototype"
+    }
+  },
+  {
+    "id": "5728eef92ca10214002daab2",
+    "response": {
+      "status": "abstain",
+      "reason": "below_fixed_threshold",
+      "score": 0.5194854386177155,
+      "score_kind": "fitted_ranking_score_not_guaranteed_correctness_probability",
+      "threshold": 0.7,
+      "scope": "english_supplied_passage_bounded_local_prototype"
+    }
+  }
+]

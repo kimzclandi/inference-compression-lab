@@ -30,6 +30,10 @@ The encoder is frozen. Learned correctness heads are fitted locally and rebuilt 
 
 This branch adds [exact risk-feature pruning](docs/qa-risk-pruning.md): 13.07× faster feature extraction and 1.241× faster complete warm INT8 computation on the fixed same-host workload. All 896 published-record replays retain identical features, scores and decisions. No new QA-quality claim; this change is outside the existing research prerelease.
 
+本分支另将同一精确剪枝用于[完整启动证据核验](docs/qa-risk-startup.md)，仍逐行重算 896 条特征。唯一一次固定六进程对照中，完整 `load_service` 初始化中位数 **17.919→5.139 秒（3.487×）**，三对均更快；完整核验结果与三个公开样例响应一致。包括证据核验、训练头重建、资产验证和模型加载；不含进程启动、前置导入或请求推理，使用正常 OS 文件缓存，不是冷磁盘启动或 QA 质量提升。
+
+The same exact pruning now accelerates [complete startup evidence verification](docs/qa-risk-startup.md), recomputing all 896 feature rows. One fixed six-process study reduced median full `load_service` initialization from **17.919 to 5.139 seconds (3.487×)**, with all three pairs faster and identical verification and disclosed functional outputs. It includes evidence verification, head reconstruction, asset validation and model loading, excluding interpreter/pre-call imports and requests. Ordinary OS caching applies; no cold-disk, warm-request or quality improvement is inferred.
+
 ## 运行与复现 / Run and reproduce
 
 Python 3.11/3.12。无需下载模型即可核验源码、证据和存档排序头；依赖安装需要网络或本地 wheel。输出目录必须全新。
@@ -39,6 +43,7 @@ python3 -m venv .venv
 .venv/bin/python -m pip install -r configs/qa-nonlinear/requirements.txt
 .venv/bin/python -m experiments.verify_release --require-license
 .venv/bin/python -m experiments.verify_qa_risk_pruning
+.venv/bin/python -m experiments.verify_qa_risk_startup
 .venv/bin/python -m experiments.review_qa_evidence --output-dir runs/my-review
 OMP_NUM_THREADS=1 .venv/bin/python -m experiments.qa_nonlinear verify \
   --folder results/qa-nonlinear-v2 --output runs/my-nonlinear-audit.json

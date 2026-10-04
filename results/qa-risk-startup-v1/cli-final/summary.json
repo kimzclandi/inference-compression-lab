@@ -1,0 +1,40 @@
+{
+  "status": "pass",
+  "cases": [
+    {
+      "case": "default_accepted",
+      "exit_code": 0,
+      "status": "answer",
+      "reason": "fixed_threshold_met",
+      "stdout_sha256": "1daf5d547fbaaec7d92242602801b39d7574b413a4e9b1eafbae1fd6abf3190e"
+    },
+    {
+      "case": "missing_assets",
+      "exit_code": 3,
+      "status": "unavailable_model",
+      "reason": "[Errno 2] No such file or directory: '/var/folders/k2/x_hsgl2n4nb4gcc0ss_4h7kc0000gn/T/tmp2lbhc7uu/missing-assets/manifest.json'",
+      "stdout_sha256": "5dfbb76e6b7cd88f36db3f11ad89862be98b80240176ab7d93ab29120e87ab85"
+    },
+    {
+      "case": "source_drift",
+      "exit_code": 2,
+      "status": "unavailable_quality",
+      "reason": "Current implementation differs: lab/qa_risk_pruning.py",
+      "stdout_sha256": "bd6d2ec7ff103aba18c3ac57bf589313e5fb7364b57564fb3e1096b0b192e1a6"
+    },
+    {
+      "case": "rehashed_training_features",
+      "exit_code": 2,
+      "status": "unavailable_quality",
+      "reason": "Reference/input changed: results/qa-risk-v2/training/int8-training-features.json",
+      "stdout_sha256": "0004394344f7486c8948b0096d309ea61bf1dcb8bc6624fd385dc06878c4ce09"
+    }
+  ],
+  "scope": "Actual CLI status/exit-code checks; diagnostic startup times are not a latency study.",
+  "check_script_sha256": "19ee79a56996abaf532cf6fcd30c30f0488ffdfda84bdd96f7791499a86e6cc2",
+  "source_sha256": {
+    "experiments/serve_qa_specialist.py": "e2cb97b84679d589987237465e28767bd6d40890b0da8fcec42be8732672327b",
+    "experiments/verify_qa_risk.py": "8424b12e3ba6704d1c9101f4bff7fe1e7c8d1df672d4a902181a227eb9018852",
+    "lab/qa_risk_pruning.py": "788cfb3f5ed6b4c63dc5167ec7eb3398bfb911924ee3cf7ee1172c49092643a5"
+  }
+}

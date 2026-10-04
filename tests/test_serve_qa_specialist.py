@@ -157,7 +157,7 @@ class ServingTests(unittest.TestCase):
              patch.object(cli, '_rebuild_head', return_value=head()) as rebuild, \
              patch.object(cli, '_load_runtime', return_value=fake_runtime) as runtime:
             service = cli.load_service(self.policy, self.evidence, self.study, self.assets)
-        verify.assert_called_once_with(self.evidence, self.study)
+        verify.assert_called_once_with(self.evidence, self.study, feature_mode='pruned')
         rebuild.assert_called_once_with(self.evidence / 'training', 'fixture-training-head')
         runtime.assert_called_once_with(self.assets)
         self.assertIs(service.runtime, fake_runtime)

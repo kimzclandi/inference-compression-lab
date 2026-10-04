@@ -22,6 +22,10 @@ jobs:
         run: |
           python -m experiments.qa_risk_pruning audit --output-dir "$RUNNER_TEMP/risk-pruning-replay"
           python -m experiments.verify_qa_risk_pruning
+      - name: Complete pruned verification and archived startup arithmetic
+        run: |
+          python -m experiments.verify_qa_risk --root results/qa-risk-v2 --feature-mode pruned
+          python -m experiments.verify_qa_risk_startup
       - name: Independent raw-record arithmetic
         run: |
           python results/independent-review-v1/statistics/audit_statistics.py --output "$RUNNER_TEMP/independent-statistics"

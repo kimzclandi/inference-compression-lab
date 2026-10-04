@@ -1,0 +1,60 @@
+{
+  "status": "pass",
+  "processes": 6,
+  "metrics": {
+    "total_startup_seconds": {
+      "seconds": {
+        "reference": [
+          17.76648379099788,
+          17.91944491599861,
+          17.956014875002438
+        ],
+        "pruned": [
+          5.139233458001399,
+          5.12841183400451,
+          5.215491332994134
+        ]
+      },
+      "medians": {
+        "reference": 17.91944491599861,
+        "pruned": 5.139233458001399
+      },
+      "speedup": 3.4867933248098284,
+      "paired_speedups": [
+        3.4570299123766803,
+        3.4941509176743026,
+        3.4428232602764512
+      ],
+      "pairs_faster": 3
+    },
+    "evidence_verification_seconds": {
+      "seconds": {
+        "reference": [
+          16.19285612499516,
+          16.32851487500011,
+          16.3769067500034
+        ],
+        "pruned": [
+          3.572126458006096,
+          3.5638304590029293,
+          3.6307535829982953
+        ]
+      },
+      "medians": {
+        "reference": 16.32851487500011,
+        "pruned": 3.572126458006096
+      },
+      "speedup": 4.571090936157514,
+      "paired_speedups": [
+        4.533113907180586,
+        4.581731668449913,
+        4.5106081631899855
+      ],
+      "pairs_faster": 3
+    }
+  },
+  "verification_sha256": "e02004ef46010646181e31aa113d5ef4fb279cabf1b052a520d353c4fc0b48b1",
+  "responses_sha256": "9b089faa7ce95dcec1e08304fdaac4ebe61ef49f6e5e6d57abd0599198361923",
+  "scope": "Full load_service initialization: policy and complete evidence verification, training-head reconstruction, validated local model loading. Excludes Python process/import startup and request inference; fresh processes with ordinary OS filesystem cache, not a cold-disk claim.",
+  "new_quality_confirmation": false
+}
