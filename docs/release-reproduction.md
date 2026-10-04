@@ -2,7 +2,7 @@
 
 发布对象是可复现的个人研究代码和证据，不是已验证可部署的 QA 产品。确认实验未通过质量门槛；这个负结果不阻止研究材料交付，但必须保留在首页和报告。
 
-当前 RC4 候选在 `codex/qa-extractive-specialist`（草稿 PR #9，基于 #8）；核验时仓库为 PRIVATE，PR #1–#9 未合并，默认 main 不含完整叠加成果。请使用明确 commit 的源码包或 PR 分支。根代码许可证和发布可见性仍待维护者决定，MIT 候选不代表已采用。第三方许可与数据声明单独保留。`--require-license` 只检查根 LICENSE 文件存在，不能替代维护者授权或法律审查。
+当前研究发布分支为 `codex/research-prerelease`，基于 PR #13 的固定研究代码和证据；根代码已采用 MIT，第三方及数据许可单独保留。当前发布说明、精确 tag、附件与新增检查入口见 [研究 prerelease](research-prerelease.md)。下面保留 RC4 运行时复现方法；历史 RC4 ZIP 名称请替换为实际发布附件名称。PR #14 语义头的 Linux 数值复现仍失败，不纳入本次通过技术验收的发布快照。
 
 ## RC4：从无 Git 源码包开始 / Start from the source archive
 
@@ -18,7 +18,7 @@ python3.12 -m venv .venv
 
 需要可读的精简双语报告时，可用 `python -m experiments.review_qa_evidence --output-dir runs/my-evidence-review` 替代上面的 `verify_release_rc4` 命令；它调用同一完整验收，不必重复执行两遍。输出目录必须全新，失败记录会保留。系统与原始记录导航见 [技术导览](qa-system-overview.md)。
 
-安装依赖需要网络或预先准备的 wheel；安装完成后，完整证据验收不需要 Git、模型或网络。核对 archive verifier 输出的 commit 与交付记录；包内清单只证明自洽，外部 SHA256 才是此次交付的独立比对锚。CI 的 Python 3.11/3.12 仅安装 NumPy；依赖 ORT/MLX 等的测试可能跳过，必须查看实际 skip 原因。不要将这种验收写成跨平台真实推理成功。
+安装依赖需要网络或预先准备的 wheel；安装完成后，完整证据验收不需要 Git、模型或网络。核对 archive verifier 输出的 commit 与交付记录；包内清单只证明自洽，外部 SHA256 才是此次交付的独立比对锚。历史 RC4 检查需要 NumPy；当前研究发布 CI 另安装固定 scikit-learn/SciPy 依赖来核验后续排序实验。依赖 ORT/MLX 等的测试可能跳过，必须查看实际 skip 原因。不要将这种验收写成跨平台真实推理成功。
 
 **数值重建边界：** 验证器先从 raw 独立核对全部特征和标签（既有数值容差 `1e-12`），再用已核验的原存档训练矩阵重放固定优化器，与运行时 `rebuild_head` 一致。Linux 的 `log/log1p` 重算曾产生约 `4.44e-16` 差异，让从新矩阵出发的训练在原 `1e-8` 梯度门槛附近停滞。没有放宽收敛或质量门槛。存档矩阵重建通过，不等于任意环境重新生成浮点输入并训练均稳定；`experiments.qa_risk train` 是后者，应保留失败记录，不能通过调参追求相同结果。
 
@@ -54,9 +54,9 @@ python3.12 -m venv .venv-qa
 
 发布包、tag 和 Release 必须绑定同一个验收 commit；不能从缺少叠加成果的 main 打包。任何许可证修改都先提交，再重建包、核对历史字节和对应 HEAD 的 CI。GitHub 自动生成的 source ZIP 不等同于本项目带逐文件清单的自定义 ZIP；交付使用附带外部 SHA256 的自定义附件。
 
-保持 PRIVATE 时，Release、PR 和仓库链接仅供获准账户访问；读者需要由所有者授权访问，或由所有者单独分享经过审阅的无权重源码证据包及说明。当前流程不邀请他人、不主动发送材料，也不承诺私有链接公开可读。公开展示需另行明确授权改变可见性。根许可证的选择不改变第三方数据/模型的原有归属。
+本研究发布经所有者授权公开；实际访问状态以 GitHub Release 页面和匿名访问核验为准。源码包、tag、Release 的 commit 与 SHA256 必须相符。发布研究材料不代表质量优化、生产部署或用户能力验证已经通过。旧 PR 与失败语义分支完整保留；本次不合并 PR。
 
-A private release is not a public portfolio. Recruiters need owner-approved repository access or an independently shared source/evidence package. No merge, visibility change, tag or release is implied by successful verification. Owner decisions on the root code license and distribution visibility remain required.
+This is an owner-authorized public research prerelease with MIT project code and separate data/third-party licenses. Technical reproducibility is separate from model quality and production readiness. Use the release tag and custom verified asset, not an arbitrary branch or GitHub-generated source archive.
 
 ## 历史 RC2/RC3：零模型、零网络验收
 
