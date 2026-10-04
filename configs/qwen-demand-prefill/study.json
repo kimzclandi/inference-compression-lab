@@ -48,7 +48,8 @@
     "max_input_tokens": 2048,
     "stop_at_eos": true,
     "all_arms": true,
-    "status": "previously consumed public reproduction cohort, no new quality confirmation"
+    "status": "previously consumed public reproduction cohort, no new quality confirmation",
+    "prompt_construction": "Tokenizer apply_chat_template of system_prompt from source-qa-protocol and user Passage:\\n{context}\\n\\nQuestion: {question}; tokenize=True, add_generation_prompt=True. No truncation."
   },
   "audit": {
     "shape_lengths": [
@@ -116,7 +117,9 @@
     ],
     "timing": "Pre-tokenized/evaluated input and fresh KV objects before timer; synchronized first output token is TTFT; 31 further synchronized token intervals are decode. Complete 32-token model compute includes both. Excludes load/tokenization/network/queue/JSON. No prefix reuse across requests. Each input is whole within pinned upstream default 2048 chunk limit.",
     "memory": "reset MLX peak after model/inputs ready; report peak active and pre-call active separately, do not add unified-memory counters. Includes whole 32-token request.",
-    "stop_rule": "Exactly one fixed study, no worker timing pre-runs, no threshold/input/variant changes after results. Record negative results. Functional/model audits contain no performance claims."
+    "stop_rule": "Exactly one fixed study, no worker timing pre-runs, no threshold/input/variant changes after results. Record negative results. Functional/model audits contain no performance claims.",
+    "aggregation": "Per length and arm, first take median of the two request TTFT (or decode/total seconds) within each round, then median of the four round values. Speedup is control aggregate divided by candidate aggregate. Faster rounds compare the two same-round request medians. Memory aggregates use the same median-of-round-medians, and raw per-request values are retained.",
+    "input_construction": "For each body, repeat exactly 600 times; tok.encode(add_special_tokens=False), take first length tokens. No suffix or chat template for synthetic shape workload. Audit uses body0 first length tokens; prior cache uses body1 first17 tokens when specified."
   },
   "acceptance": {
     "candidate": "final_query",
