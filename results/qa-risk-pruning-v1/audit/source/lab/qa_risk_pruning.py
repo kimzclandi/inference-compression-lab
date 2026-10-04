@@ -66,14 +66,8 @@ def extract_features(context, prediction):
                 # beat the first best *different* answer. Keep nonrepresentable
                 # arithmetic on the reference path: duplicate answers may be
                 # ignored there, but nonduplicate overflow must still fail.
-                try:
-                    raw_margin = start_logits[first] + end_logits[last] - null_score
-                except OverflowError:
-                    # Raw integer addition may overflow conversion even when
-                    # decode's separately converted float operands did not.
-                    # Only the original post-normalization path may reject it.
-                    raw_margin = None
-                if (alternative is not None and raw_margin is not None and
+                raw_margin = start_logits[first] + end_logits[last] - null_score
+                if (alternative is not None and
                         -sys.float_info.max <= raw_margin <= alternative['margin']):
                     continue
                 text = context[left:right]
@@ -101,3 +95,4 @@ def extract_features(context, prediction):
                                  start_logsumexp=start_lse, end_logsumexp=end_lse,
                                  normalization_token_count=len(indices),
                                  alternative=alternative))
+

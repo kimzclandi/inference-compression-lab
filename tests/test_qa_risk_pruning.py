@@ -2,6 +2,7 @@
 from copy import deepcopy
 import json
 import random
+import sys
 import unittest
 from unittest.mock import patch
 
@@ -78,6 +79,17 @@ class PruningTests(unittest.TestCase):
                 with self.subTest(integer=integer, extractor=extractor.__module__):
                     with self.assertRaisesRegex(ValueError, 'alternative margin'):
                         extractor(context, pred)
+
+    def test_duplicate_integer_sum_conversion_overflow_is_still_ignored(self):
+        # decode converts each integer before adding; reference normalization
+        # can exclude this duplicate before the raw integer sum is converted.
+        maximum = int(sys.float_info.max)
+        context = 'Alpha Beta'
+        raw = dict(start_logits=[0, maximum + 2**969, 0, 1],
+                   end_logits=[0, 2**969, 0, 1],
+                   offsets=[[0, 0], [0, 5], [0, 0], [6, 10]],
+                   context_mask=[False, True, False, True], cls_index=0)
+        self.same(context, record(context, [raw]))
 
     def test_dominated_spans_skip_normalization(self):
         context = 'Alpha Beta Gamma'
