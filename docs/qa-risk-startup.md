@@ -62,6 +62,6 @@ python -m experiments.verify_qa_risk --root results/qa-risk-v2 --feature-mode pr
 
 Civil_disobedience 整篇拒答；37 个被拒可回答问题中 19 个 raw 答案原本正确。Qwen block-10 回退确认失败、专用 QA v1 量化非劣失败、扩展训练/树模型未通过联合门槛、未发布语义/PCA 质量与 Linux 数值问题均保留。本次没有改善质量或覆盖。公开样本已经消耗，属于复现和机制/工程优化；存档矩阵重建不证明任意浮点重生成训练稳定。
 
-上游提供模型、量化框架和 kernel，本项目贡献是实验、诊断、精确后处理及证据实现，实施与执行有 AI 辅助。无原创低比特 kernel、手机/GPU/NPU 或生产部署声明。个人掌握不属于本工程节点的前置条件或验收结论。
+上游提供模型、量化框架和 kernel，本项目贡献是实验、诊断、精确后处理及证据实现，实施与执行有 AI 辅助。无原创低比特 kernel、手机/GPU/NPU 或生产部署声明。
 
-交付为现有草稿 PR #16；不合并、不改变可见性、不创建 tag/Release。默认分支及已有公开研究 prerelease `v0.1.0-research.1` 仍指向 `65ed839d8f018bacc7fbdd1792782a9367bcb016`，不含本优化。
+本优化经 [PR #16](https://github.com/kimzclandi/inference-compression-lab/pull/16) 纳入 `v0.1.0-research.2`，精确发布提交与附件哈希以 [Release](https://github.com/kimzclandi/inference-compression-lab/releases/tag/v0.1.0-research.2) 为准。旧公开研究 prerelease `v0.1.0-research.1` 仍指向 `65ed839d8f018bacc7fbdd1792782a9367bcb016`，其附件和历史验收记录保持原样；这些旧记录不包含本优化。

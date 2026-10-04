@@ -4,7 +4,7 @@
 
 **A reproducible research project for inference optimization and quality gating. A bounded historical QA cohort passed empirical gates; subsequent coverage challengers failed joint quality gates. This is not a production QA service.**
 
-[研究发布说明 / Research prerelease](docs/research-prerelease.md) · [Release 与校验附件](https://github.com/kimzclandi/inference-compression-lab/releases/tag/v0.1.0-research.1) · [系统与代码导览](docs/qa-system-overview.md) · [MIT](LICENSE) · [数据许可](DATA_LICENSE.md) · [第三方归属](THIRD_PARTY.md)
+[研究发布说明 / Research prerelease](docs/research-prerelease.md) · [Release 与校验附件](https://github.com/kimzclandi/inference-compression-lab/releases/tag/v0.1.0-research.2) · [系统与代码导览](docs/qa-system-overview.md) · [MIT](LICENSE) · [数据许可](DATA_LICENSE.md) · [第三方归属](THIRD_PARTY.md)
 
 ## 解决什么问题 / Problem and scope
 
@@ -26,11 +26,11 @@ The project separates model size, measured latency and answer quality. It combin
 
 The encoder is frozen. Learned correctness heads are fitted locally and rebuilt from verified archived training inputs; neither base weights nor learned head/scaler parameters are distributed. Public samples support reproduction and ablation, not future unseen confirmation. QA v1's original quality and quantization noninferiority failures remain unchanged.
 
-本分支新增[正确性特征精确剪枝](docs/qa-risk-pruning.md)：同机固定负载下，特征提取 14.042→1.074 ms，包含排序与拒答的 INT8 热请求计算流水线 68.681→55.342 ms（1.241×）。896 条已公开记录逐项复算无差异；质量结论未改善。此变更尚未包含在 `v0.1.0-research.1` 中。
+`v0.1.0-research.2` 收录[正确性特征精确剪枝](docs/qa-risk-pruning.md)：同机固定负载下，特征提取 14.042→1.074 ms，包含排序与拒答的 INT8 热请求计算流水线 68.681→55.342 ms（1.241×）。896 条已公开记录逐项复算无差异；质量结论未改善。旧 `v0.1.0-research.1` 保留原样。
 
-This branch adds [exact risk-feature pruning](docs/qa-risk-pruning.md): 13.07× faster feature extraction and 1.241× faster complete warm INT8 computation on the fixed same-host workload. All 896 published-record replays retain identical features, scores and decisions. No new QA-quality claim; this change is outside the existing research prerelease.
+`v0.1.0-research.2` includes [exact risk-feature pruning](docs/qa-risk-pruning.md): 13.07× faster feature extraction and 1.241× faster complete warm INT8 computation on the fixed same-host workload. All 896 published-record replays retain identical features, scores and decisions. No new QA-quality claim; the original research prerelease remains unchanged.
 
-本分支另将同一精确剪枝用于[完整启动证据核验](docs/qa-risk-startup.md)，仍逐行重算 896 条特征。唯一一次固定六进程对照中，完整 `load_service` 初始化中位数 **17.919→5.139 秒（3.487×）**，三对均更快；完整核验结果与三个公开样例响应一致。包括证据核验、训练头重建、资产验证和模型加载；不含进程启动、前置导入或请求推理，使用正常 OS 文件缓存，不是冷磁盘启动或 QA 质量提升。
+同一版本还将精确剪枝用于[完整启动证据核验](docs/qa-risk-startup.md)，仍逐行重算 896 条特征。唯一一次固定六进程对照中，完整 `load_service` 初始化中位数 **17.919→5.139 秒（3.487×）**，三对均更快；完整核验结果与三个公开样例响应一致。包括证据核验、训练头重建、资产验证和模型加载；不含进程启动、前置导入或请求推理，使用正常 OS 文件缓存，不是冷磁盘启动或 QA 质量提升。
 
 The same exact pruning now accelerates [complete startup evidence verification](docs/qa-risk-startup.md), recomputing all 896 feature rows. One fixed six-process study reduced median full `load_service` initialization from **17.919 to 5.139 seconds (3.487×)**, with all three pairs faster and identical verification and disclosed functional outputs. It includes evidence verification, head reconstruction, asset validation and model loading, excluding interpreter/pre-call imports and requests. Ordinary OS caching applies; no cold-disk, warm-request or quality improvement is inferred.
 

@@ -1,6 +1,6 @@
 # Exact risk-feature pruning / 正确性特征精确剪枝
 
-输入为已验证的原文、各窗口 start/end logits 和原解码记录；输出仍为同一五维特征及完整竞争答案诊断。本次减少 Python 文本规范化工作，未训练模型、修改量化方案或更换第三特征定义。实现与运行由 AI 辅助，个人独立掌握尚待验收。
+输入为已验证的原文、各窗口 start/end logits 和原解码记录；输出仍为同一五维特征及完整竞争答案诊断。本次减少 Python 文本规范化工作，未训练模型、修改量化方案或更换第三特征定义。实现与运行由 AI 辅助。
 
 Input: the passage, validated window logits and decoder record. Output: the same five features and competitor diagnostics. This change reduces Python normalization work while retaining all-window competition, the frozen head and threshold. It introduces no quantizer, kernel or model-quality improvement. Implementation and execution are AI-assisted.
 
@@ -71,7 +71,7 @@ OMP_NUM_THREADS=1 python -m experiments.qa_risk_pruning benchmark \
 
 [最终差分记录](../results/qa-risk-pruning-v1/audit-final) · [原始计时和摘要](../results/qa-risk-pruning-v1/benchmark) · [回归测试](../tests/test_qa_risk_pruning.py)
 
-本分支接入原型入口；已有 `v0.1.0-research.1` tag和附件保持原样。新变更仅通过草稿PR交付，未经合并、未创建新Release。底层模型、量化和kernel来自上游，本项目贡献为瓶颈分析、精确剪枝、固定对照与验收。
+本优化经 [PR #16](https://github.com/kimzclandi/inference-compression-lab/pull/16) 纳入 `v0.1.0-research.2`，包含原型入口与后续[完整启动核验优化](qa-risk-startup.md)；已有 `v0.1.0-research.1` tag 和附件保持原样。精确发布提交与附件哈希以 [Release](https://github.com/kimzclandi/inference-compression-lab/releases/tag/v0.1.0-research.2) 为准。底层模型、量化和 kernel 来自上游，本项目贡献为瓶颈分析、精确剪枝、固定对照与验收。
 
 ## Delivery review / 交付完整性复核
 
