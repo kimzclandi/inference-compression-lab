@@ -1,18 +1,16 @@
-# 独立技术审查与招聘判断
+# 独立技术审查
 
-2026-10-04，对 `0670643e9e0b7c4e58418718ce001119f0de7d03` 开始独立审查。结论：修复完整性缺陷后，可作为有明确负结果的可复现个人研究材料交付；量化回退的预设确认未通过，QA 不具备部署质量，不能推断本人已掌握或覆盖 AI Infra 加速算法岗全部要求。根代码许可证及仓库公开与否仍由维护者决定，当前不能称已公开发布。
+2026-10-04，对 `0670643e9e0b7c4e58418718ce001119f0de7d03` 开始独立审查。结论：修复完整性缺陷后，可作为有明确负结果的可复现个人研究材料交付；量化回退的预设确认未通过，QA 不具备部署质量。根代码许可证及仓库公开与否仍由维护者决定，当前不能称已公开发布。
 
-This review supports releasing a reproducible personal research artifact after the integrity fixes. It does **not** establish a confirmed quantization improvement, deployment-ready QA, full coverage of an AI Infra role, or independent author mastery. The fixed confirmation failed its prespecified gates. Licensing and visibility remain maintainer decisions.
+This review supports releasing a reproducible personal research artifact after the integrity fixes. It does **not** establish a confirmed quantization improvement or deployment-ready QA. The fixed confirmation failed its prespecified gates. Licensing and visibility remain maintainer decisions.
 
-## 五个必须分别回答的问题
+## 技术验收范围
 
 |问题|本轮独立结论|证据边界|
 |---|---|---|
 |研究项目可发布吗|技术上通过；许可及发布范围待决定|真实模型复现、原始数据重算、失败注入和归档验收；不是跨机器独立复现|
 |某项优化得到验证吗|固定 CPU 分桶及精确前缀缓存负载有历史有效收益，本轮独立重算支持；block10 量化回退未通过确认|性能实验未在本轮重测；质量与性能来自不同固定任务集，不能合并成新整体指标|
 |QA 系统可部署吗|否|五变体均未正确处理 64 个不可回答问题，最高 EM 34/128；始终拒答基线 64/128，也不等于可用系统|
-|满足目标岗位全部要求吗|否|支持推理测量、量化诊断、受控实验、缓存生命周期；不支持训练加速、原创算法、CUDA/Triton kernel、手机或生产部署|
-|本人已掌握实现吗|未证明|本轮及此前实现/运行有 Codex 辅助；须亲自改动、复跑与解释，不自动标成独立负责|
 
 审查不是第三方认证：由同一助手的独立代码路径及并行审阅交叉检查，仍使用同一 M4 Max 和已有环境。保存完整记录以便外部复核。
 
@@ -58,38 +56,12 @@ block10 对 Q4 gain=3、loss=0，差 +2.34375 个百分点。按四篇文章分�
 
 四篇文章来自公开 SQuAD dev，不是官方隐藏测试。只排除盘点内标题、ID、规范化精确 context/question；预训练污染和语义近重复未知，文章领域变化影响解释。文章分层未重采样文章，区间条件于这四篇文章。已公布数据以后复跑不再称未见确认集。
 
-## 招聘价值判断
+## 实现范围
 
-**目前适合补充项目；本人完成验证任务后，可升级为校招工程方向的核心项目候选。** 对偏原创算法、顶会研究、CUDA kernel 或训练系统的岗位，不能独靠本项目作为强核心。没有当前 DOCX/PDF，以下不是已修改的投递简历。
+框架提供量化/反量化算子、模型层、Metal/ORT kernels 和 KV 张量基础实现。项目实现前缀身份与复用边界、缓存生命周期和预算、直接分段公平基线、原始权重回退导出、诊断、轮换协议、独立评分和验收工具。代码与实验由 Codex 辅助完成。
 
-最有价值的两条证据：
+不覆盖训练加速、分布式训练、蒸馏、稀疏、token 压缩、自研 Attention/kernel、激活或 KV 量化、FP8、功耗测量及生产部署。历史固定性能实验的范围与局限见对应报告。
 
-1. **精确前缀缓存的公平比较与失效处理。** 历史 Qwen 固定合成负载，2048-token 前缀、4 请求、每次强制 32 token：与直接分段的公平基线相比，组完成时间中位数 1.00327→0.63039 s，减少 37.17%；另一固定内容为 39.24%。收益是重复 prefill 被复用，decode 约 268.80 对 268.09 token/s 并未变快。结合 LRU 容量、失败后状态/重放一致性，比只报 hot TTFT 倍率更有工程价值。不能写成线上吞吐/P95 或通用 37% 加速。
-2. **量化的诊断和可证伪确认。** FP16/Q4/Q8、原始 FP16 模块回退、等张量成本对照、选择偏差及确认失败构成可审查链条。新增贡献是可控干预和判断证据是否足够，不是 MLX 的量化算子。负结果体现实验设计、测量和拒绝过度结论的能力，不能代替原创方法、论文或已确认质量改进。
-
-MiniLM 分桶可合并成同一项目的补充证据：固定 FP32 编码器负载由 1.25234→1.04440 s，耗时减少 16.60%，Spearman 0.820301 保持一致；INT8 分桶减少 18.55%，但仍慢于 FP32。文件缩小不等于端到端加速。不要把同仓三个方向拆成三个“大项目”。
-
-框架提供：量化/反量化算子、模型层、Metal/ORT kernels、KV 张量基础实现。项目代码提供：前缀身份与复用边界、缓存生命周期和预算、直接分段公平基线、原始权重回退导出、诊断、轮换协议、独立评分和验收工具。统计测试、CI 数量、打包文件数、双语 README 属于交付保障，简历删去“通过 N 项测试”等数量型卖点。
-
-不支持：训练加速、分布式训练、蒸馏、稀疏、token 压缩、自研 Attention/kernel、激活或 KV 量化、FP8、端云协同、功耗、生产规模、真实手机/Jetson/CUDA/TensorRT 落地、论文及个人独立负责。学校研究、NUSRI、字节模型评测、个人项目继续分开，不能倒填成果。
-
-## 简历候选与核实要求
-
-|原表述|候选改写|代码和原始证据|修改理由|本人需核实项|
-|---|---|---|---|---|
-|无当前简历原文|实现 Qwen 精确前缀复用与失败恢复，在固定串行负载下对照直接分段基线，组完成时间减少 37.2%，保留 decode 无收益和容量失效边界|`lab/prefix_cache.py`、`lab/qwen_prefix.py`；`qwen-prefix-fair-v1/timings.json`、`qwen-cache-lifecycle-gpu-v1`|采用公平基线和完整组耗时，避免把 warm-hit TTFT 放大为整体速度|实际编写/修改部分；亲自复跑；缓存身份、复制和失效语义|
-|无当前简历原文|构建 Qwen FP16/Q4/Q8 数值诊断与等成本模块回退对照；对固定 128 题检验预设质量门槛，保留回退 EM 29/128、Q4 26/128 及确认未通过结论|`experiments/qwen_quantization.py`、`qwen_confirmation.py`；`qwen-confirmation-v1/*-quality.json`、`*-logits.json`|突出机制与证据判断，删除“自研无损量化/显著提升”等不实效果|原始 FP16 与反量化差别；选层偏差；评分和 bootstrap；个人实际贡献|
-
-**短段候选，只有本人核实贡献并完成现场任务后才适合直接投递：**
-
-> 个人推理优化研究：实现 Qwen 精确前缀复用与量化诊断对照，在 M4 Max 固定串行负载下，相对直接分段基线将 4 请求组完成时间减少 37.2%；构建 FP16/Q4/Q8 与等成本模块回退实验，在 128 题固定确认中记录回退 EM 29/128、Q4 26/128 及预设质量门槛未通过的负结果，保留逐题输出、模型身份和复跑入口。
-
-当前只适合描述为 **Codex 辅助的个人研究项目**；“实现”候选须经本人确认，不能把工具完成的实现等同于本人熟练掌握。项目日期也需本人确认。
-
-## 面试最小案例与必须本人完成的任务
+## 冻结证据演示
 
 离线展示 `python3 -B -m experiments.qwen_quantization_demo`，单题 `56e1c0f6cd28a01900c67b2c`：FP16/Q8/block10 为 `complexity classes`，Q4/block22 为 `The passage contains the answer.`。Q4 中原 FP16 top1 相对原 top2 margin 仍为正，但第三个 token 获胜；由此解释为何看两枚 token 的 margin 不足以解释完整生成。展示后运行确认验证器，解释为什么单案例成功和 +3 题仍不能宣称确认成功。无模型演示明确标为 frozen evidence。
-
-最可能的追问：为什么需要直接分段基线？缓存命中是否每次复制？失败后有没有污染？回退原始张量如何证明？六个诊断样本是否属于同一个 dev？四篇文章的区间能外推到哪里？这些可由原始记录回答；并发、异机收益、真实 OOM、端侧功耗和个人独立能力没有证据。
-
-本人任务：在自己的新分支亲自为 `lab/confirmation.py` 增加每篇文章的 gain/loss、样本数与配对 EM 差，保持主 bootstrap、评分、数据、模块和门槛不变。先写预测，再提交代码 diff，运行全部 128 题离线重算，解释总 gain/loss 如何与原结果对应、描述性分组为何不是新确认。不得由助手替你完成此项后标记掌握。学习框架与十道无答案主动回忆见 [确认学习单元](confirmation-learning.md)。

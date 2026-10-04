@@ -83,9 +83,9 @@ The ONNX size ratio is `0.487956` (about 51.20% fewer file bytes). Peak RSS is a
 | Start/end QA logits and ordinary null-answer scoring | Explicit exhaustive decoding and window rule, mask/zero-offset handling, independently reimplemented arithmetic audit |
 | Standard metrics, bootstrap and logistic regression methods | Frozen data roles, threshold-only calibration, precision/coverage gates, dependency-aware paired statistics, preserved failures and no-overwrite evidence |
 
-本项目的价值是把模型能力、量化实现、置信排序、拒答策略、性能和发布证据放到同一套可审计协议中，区分“文件更小”“特定请求更快”“质量非劣”“系统能上线”。它没有提供原创量化器、CUDA kernel、训练加速、蒸馏、稀疏、token 压缩或分布式服务成果；文档/测试数量本身不是简历贡献。代码由 AI 辅助完成也不证明作者已能独立解释或复跑。
+本项目的价值是把模型能力、量化实现、置信排序、拒答策略、性能和发布证据放到同一套可审计协议中，区分“文件更小”“特定请求更快”“质量非劣”“系统能上线”。它没有提供原创量化器、CUDA kernel、训练加速、蒸馏、稀疏、token 压缩或分布式服务成果。代码与实验由 AI 辅助实现和执行。
 
-This study is separate from the historical Qwen block-10 fallback experiment. Different architecture, precision scheme, task head, datasets and acceptance policies prevent a causal before/after comparison. It neither repairs nor re-confirms that failed fallback hypothesis. The historical Qwen result and poor-generative-QA results remain intact; any CV statement must attribute this work to the personal project and retain its measured scope.
+This study is separate from the historical Qwen block-10 fallback experiment. Different architecture, precision scheme, task head, datasets and acceptance policies prevent a causal before/after comparison. It neither repairs nor re-confirms that failed fallback hypothesis. The historical Qwen result and poor-generative-QA results remain intact. The measured scope remains unchanged.
 
 ## Separately evaluated risk-head follow-up / 独立追加实验
 

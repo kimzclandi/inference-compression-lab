@@ -77,7 +77,6 @@ def verify(root=REPO):
     return dict(technical_acceptance='pass',research_reproducibility='pass',
         bounded_local_qa_prototype=True,general_qa_deployment_quality=False,
         original_quantization_fallback_confirmed=False,compression_quality_noninferiority_confirmed=False,
-        whole_target_job_requirements_met=False,author_independent_mastery='unverified',
         root_code_license_present=license_present,
         root_code_license_status='present_owner_authorization_not_inferred' if license_present else 'pending_owner_decision',
         release_created_by_this_verification=False,
@@ -90,7 +89,7 @@ def verify(root=REPO):
                   compression_gate='not_evaluated',parameters_distributed=False),
         serving_policy=policy,performance_evidence_valid=True,numpy_version='2.2.6',
         scope='Fixed public SQuAD2 evidence on one local system; 27 accepted evaluation answers and four articles '
-              'do not establish population risk, general application deployment, or independent user mastery. '
+              'do not establish population risk or general application deployment. '
               'All prior failures remain part of the release.')
 
 

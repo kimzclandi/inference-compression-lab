@@ -2,7 +2,7 @@
 
 本文记录 2026-10-04 早期探索阶段。后续固定 128 题确认已完成且未通过门槛，见 [确认报告](qwen-confirmation-study.md) 与 [独立审查](independent-release-review.md)。以下原始探索数字保持不变。
 
-2026-10-04，个人项目，探索阶段实际执行。目标 JD 为用户提供截图中的“AI Infra 加速算法工程师”；招聘者身份、开放状态及截止日期未核实。学校研究、NUSRI/Jetson、字节实习均不归入本轮成果。
+2026-10-04，个人项目，探索阶段实际执行；代码与实验由 Codex 辅助完成。
 
 本轮完成了“历史失败 → 固定假设 → 逐块干预 → 原始 FP16 回退 → 质量/成本复验”闭环。0-based block 10 回退使重复使用的 dev 集归一化 EM 从 Q4 的 16/74 到 18/74，等成本 block 22 为 16/74。该探索阶段尚无独立确认结果；后续确认未通过，仍不声称找到唯一根因、通用敏感层或新量化算法。
 
@@ -10,11 +10,8 @@
 
 - 远端现场核验：仓库 private，默认分支 main=`eefd28a`；PR #1–#5 均 OPEN/DRAFT，仍按原依赖链叠加，没有合并。原 checkout 为 `codex/qwen-cache-lifecycle` / `c018de8`，dirty state 为空。
 - 新隔离 worktree / 分支 `codex/qwen-quantization-diagnostics` 基于 PR #5。协议与实现先提交于 `59a2c28`，模块遍历预检修正于 `c0453f2`，随后才执行模型实验。新证据运行源码为 `c0453f2`，另有逐文件源码快照和 SHA256。
-- 路径祖先和仓库内未发现额外 AGENTS.md；遵循用户本轮提供的 AGENTS.md、事实边界及 evidence-grounded-repo-implementation 工作流。
 - 本轮硬件实测为 Apple M4 Max / 48 GiB，Python 3.12.11、MLX 0.29.3、MLX-LM 0.26.3、Transformers 4.56.2。执行了 Metal smoke 和真实模型推理；没有 CUDA/TensorRT/昇腾/手机推理。
-- 用户本轮确认 Jetson Orin Nano 当前不可访问，历史上连接机械臂；字节工作为模型评测。学校模型、代码、JetPack/TensorRT 版本、字节部署参与范围仍缺原始材料。
 - 旧量化项目实际远端为 `kimzclandi/domain-qa-lab`；本轮新建来源元数据初填为更早的上游仓库名，核实 remote 后已更正并保留更正前记录。原项目文件未修改。执行原 `scripts.verify_quantization` 通过；本轮另逐题重算历史 EM、F1、format_valid，未改评分。MiniLM 分桶、Qwen 公平基线、生命周期结果只做归档重算和完整性检查，本轮不冒充重新运行其性能实验。514 个父分支结果文件保持逐字节一致。
-- 最新简历未提供，不修改历史简历文件；候选措辞另见 [简历与 JD 事实表](qwen-quantization-resume.md)。本人掌握状态全部待验证。
 
 ## 发现的问题与预先固定的对照
 
@@ -125,4 +122,4 @@ python3 -m experiments.verify_qwen_quantization results/my-qwen-quantization --w
 
 模型和混合权重只保存在本地 `runs/`，不上传。依赖沿用 `requirements-mlx-prefix.txt`；本轮没有重新安装依赖或从网络下载模型，不声称完成全新机器安装验收。
 
-原计划的固定模块确认已完成并记录负结果，见 [确认报告](qwen-confirmation-study.md)。已公布样本今后只能称复现。用户仍需亲自完成 [学习与复跑](confirmation-learning.md) 后核实个人贡献，再决定简历措辞。
+原计划的固定模块确认已完成并记录负结果，见 [确认报告](qwen-confirmation-study.md)。已公布样本今后只能称复现。

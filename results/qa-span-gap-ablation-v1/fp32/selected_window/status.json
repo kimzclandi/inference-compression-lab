@@ -1,0 +1,197 @@
+{
+  "status": "complete",
+  "eligible": false,
+  "threshold": null,
+  "fixed_0_7": {
+    "threshold": 0.7,
+    "gate": {
+      "all_pass": false,
+      "criteria": {
+        "constraints_valid": {
+          "passed": true,
+          "reason": null
+        },
+        "counts_consistent": {
+          "passed": true,
+          "reason": null
+        },
+        "accepted_precision": {
+          "value": 0.8378378378378378,
+          "recomputed_value": 0.8378378378378378,
+          "limit": 0.9,
+          "comparator": ">=",
+          "passed": false,
+          "reason": "point_estimate_outside_frozen_limit"
+        },
+        "answerable_answer_coverage": {
+          "value": 0.546875,
+          "recomputed_value": 0.546875,
+          "limit": 0.4,
+          "comparator": ">=",
+          "passed": true,
+          "reason": null
+        },
+        "correct_answerable_coverage": {
+          "value": 0.484375,
+          "recomputed_value": 0.484375,
+          "limit": 0.35,
+          "comparator": ">=",
+          "passed": true,
+          "reason": null
+        },
+        "unanswerable_false_accept_rate": {
+          "value": 0.03125,
+          "recomputed_value": 0.03125,
+          "limit": 0.1,
+          "comparator": "<=",
+          "passed": true,
+          "reason": null
+        },
+        "invalid_rate": {
+          "value": 0.0,
+          "recomputed_value": 0.0,
+          "limit": 0.05,
+          "comparator": "<=",
+          "passed": true,
+          "reason": null
+        }
+      },
+      "constraints": {
+        "min_accepted_precision": 0.9,
+        "min_answerable_answer_coverage": 0.4,
+        "min_correct_answerable_coverage": 0.35,
+        "max_unanswerable_false_accept_rate": 0.1,
+        "max_invalid_rate": 0.05
+      },
+      "intervals": {
+        "accepted_precision": {
+          "lower": 0.6886351629906503,
+          "upper": 0.9234879276598885,
+          "estimate": 0.8378378378378378,
+          "successes": 31,
+          "trials": 37,
+          "confidence_level": 0.95,
+          "method": "two_sided_wilson",
+          "scope": "descriptive_binomial_interval_without_context_or_article_dependence_adjustment"
+        },
+        "unanswerable_false_accept_rate": {
+          "lower": 0.008612138346171874,
+          "upper": 0.10697291770958313,
+          "estimate": 0.03125,
+          "successes": 2,
+          "trials": 64,
+          "confidence_level": 0.95,
+          "method": "two_sided_wilson",
+          "scope": "descriptive_binomial_interval_without_context_or_article_dependence_adjustment"
+        },
+        "correct_answerable_coverage": {
+          "lower": 0.3663355166543264,
+          "upper": 0.6041839852141988,
+          "estimate": 0.484375,
+          "successes": 31,
+          "trials": 64,
+          "confidence_level": 0.95,
+          "method": "two_sided_wilson",
+          "scope": "descriptive_binomial_interval_without_context_or_article_dependence_adjustment"
+        }
+      },
+      "scope": "empirical_point_estimate_gate_not_population_risk_guarantee",
+      "interval_role": "report_only_not_used_to_pass_the_gate"
+    },
+    "summary": {
+      "raw": {
+        "overall": {
+          "n": 128,
+          "em": 0.4140625,
+          "f1": 0.44816009963768116,
+          "format_valid_rate": 1.0
+        },
+        "answerable": {
+          "n": 64,
+          "em": 0.828125,
+          "f1": 0.8963201992753623,
+          "format_valid_rate": 1.0
+        },
+        "unanswerable": {
+          "n": 64,
+          "em": 0.0,
+          "f1": 0.0,
+          "format_valid_rate": 1.0
+        },
+        "unsupported_answer_rate": 1.0,
+        "over_abstention_rate": 0.0,
+        "categories": {
+          "correct": 53,
+          "wrong_or_partial_span": 11,
+          "unsupported_answer": 64
+        },
+        "family_macro_em": 0.436046511627907,
+        "always_abstain_em": 0.5
+      },
+      "system": {
+        "overall": {
+          "n": 128,
+          "em": 0.7265625,
+          "f1": 0.7446444746376811,
+          "format_valid_rate": 1.0
+        },
+        "answerable": {
+          "n": 64,
+          "em": 0.484375,
+          "f1": 0.5205389492753624,
+          "format_valid_rate": 1.0
+        },
+        "unanswerable": {
+          "n": 64,
+          "em": 0.96875,
+          "f1": 0.96875,
+          "format_valid_rate": 1.0
+        },
+        "unsupported_answer_rate": 0.03125,
+        "over_abstention_rate": 0.453125,
+        "categories": {
+          "correct": 93,
+          "over_abstention": 29,
+          "wrong_or_partial_span": 4,
+          "unsupported_answer": 2
+        },
+        "family_macro_em": 0.75,
+        "always_abstain_em": 0.5
+      },
+      "selective": {
+        "n": 128,
+        "accepted": 37,
+        "accepted_correct": 31,
+        "answerable": 64,
+        "unanswerable": 64,
+        "accepted_answerable": 35,
+        "accepted_unanswerable": 2,
+        "accepted_precision": 0.8378378378378378,
+        "answerable_answer_coverage": 0.546875,
+        "correct_answerable_coverage": 0.484375,
+        "unanswerable_false_accept_rate": 0.03125,
+        "acceptance_rate": 0.2890625,
+        "valid_span_rate": 1.0,
+        "invalid_rate": 0.0,
+        "model_abstention_rate": 0.0,
+        "threshold_abstention_rate": 0.7109375,
+        "model_status_counts": {
+          "answer": 128,
+          "abstain": 0,
+          "invalid": 0
+        }
+      },
+      "threshold": 0.7
+    }
+  },
+  "selected": null,
+  "model_sha256": "9f038e3b7ba45c748cf0ce65a58a27ebb248373ef3715d08698964fe974febfe",
+  "convergence": {
+    "converged": true,
+    "iterations": 8,
+    "gradient_max_abs": 1.459943277382081e-14
+  },
+  "objective_start": 177.445678223346,
+  "objective_end": 79.5793371668923,
+  "parameters_distributed": false
+}

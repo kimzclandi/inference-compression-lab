@@ -1,0 +1,18 @@
+{
+  "status": "complete",
+  "started_at_utc": "2026-10-04T09:05:01.601382+00:00",
+  "git_head": "59972c44e53b708b97c149de1981eaa5dbbc830c",
+  "git_status": "",
+  "python": "3.12.11",
+  "platform": "macOS-27.0-arm64-arm-64bit",
+  "argv": [
+    "/Users/yukaiyan/Documents/Codex/2026-10-04/x20/work/qa-span-gap-ablation/experiments/my_span_gap_ablation.py",
+    "--output-dir",
+    "results/qa-span-gap-ablation-v1"
+  ],
+  "evaluation_consumed": false,
+  "model_inference_run": false,
+  "authorship": "AI-assisted implementation and experiment; user mastery unverified",
+  "protocol_sha256": "02aad7baca8826c68a418d814393a071b5e99a8aef9fef706f5f79bbd9f149d6",
+  "numpy": "2.2.6"
+}
