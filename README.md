@@ -85,3 +85,5 @@ RC4 完整验收新增小排序头重建，需要 `numpy==2.2.6`，运行 `pytho
 按文章检查暴露了明显分布差异：Civil_disobedience 的 32 题全部拒答（可回答覆盖率 0/16），Ctenophora 为 6/16，Harvard_University 为 11/16，Yuan_dynasty 为 10/16。被拒的 37 个可回答问题中，有 19 个 raw span 本来 EM 正确。整体点门槛通过不能外推到每一篇文章或业务领域；排序器换来了精度，也丢弃了有效答案。
 
 [系统结构与验证入口](docs/qa-system-overview.md) · [第三特征消融](docs/qa-span-gap-ablation.md)。
+
+[不重叠竞争片段覆盖率实验](docs/qa-coverage-gap-study.md)：实际改变多数样本特征，但候选校准失败，保留原策略。 / Disjoint-competitor features changed most development rows but failed calibration; the default policy is retained.

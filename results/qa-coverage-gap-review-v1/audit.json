@@ -1,0 +1,16 @@
+{
+  "evidence_valid": true,
+  "candidate_calibration_improved": false,
+  "independently_checked_feature_rows": 384,
+  "changed_feature_rows": {
+    "train": 241,
+    "calibration": 117
+  },
+  "calibration_selected_thresholds": {
+    "baseline": 0.7,
+    "disjoint": null
+  },
+  "scope": "Independent span-gap and metric arithmetic; no optimizer refit, inference, unseen evaluation or production permission",
+  "protocol_sha256": "46c4a42e15689d144856223f0b7768ae13ff0631c218c3c304eafab81560a2d1",
+  "run_sha256": "3d65ad953967c31b3869a26c3f17cfe6e20222dfe7a0ee861e701ab802c9c7e7"
+}

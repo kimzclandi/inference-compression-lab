@@ -1,0 +1,65 @@
+{
+  "scope": "Descriptive paired calibration decisions at fixed 0.7, after one failed candidate fit",
+  "changes": [
+    {
+      "id": "5725d16aec44d21400f3d61e",
+      "source_title": "Amazon_rainforest",
+      "question": "What is the total make up of fish species living in the Amazon?",
+      "raw_answer": "one in five",
+      "raw_correct": true,
+      "answerable": true,
+      "old_score": 0.7216443409257584,
+      "new_score": 0.6611903239167372,
+      "old_accepted": true,
+      "new_accepted": false
+    },
+    {
+      "id": "5726722bdd62a815002e852b",
+      "source_title": "Amazon_rainforest",
+      "question": "What is the average plant biosmass?",
+      "raw_answer": "356 ± 47 tonnes per hectare",
+      "raw_correct": true,
+      "answerable": true,
+      "old_score": 0.6705433379770335,
+      "new_score": 0.7169147331171022,
+      "old_accepted": false,
+      "new_accepted": true
+    },
+    {
+      "id": "57275409708984140094dc35",
+      "source_title": "Private_school",
+      "question": "After apartheid, what types of schools are referred to as \"Model C\" schools?",
+      "raw_answer": "semi-private",
+      "raw_correct": true,
+      "answerable": true,
+      "old_score": 0.7326818380178687,
+      "new_score": 0.6509437673178283,
+      "old_accepted": true,
+      "new_accepted": false
+    },
+    {
+      "id": "5729edd56aef051400155116",
+      "source_title": "Amazon_rainforest",
+      "question": "For how many years was evidence shown that humans shaped the the Amazon?",
+      "raw_answer": "11,000",
+      "raw_correct": false,
+      "answerable": true,
+      "old_score": 0.6517532228765992,
+      "new_score": 0.7434614671403611,
+      "old_accepted": false,
+      "new_accepted": true
+    },
+    {
+      "id": "5ad3f8d2604f3c001a3ffa8d",
+      "source_title": "Normans",
+      "question": "Who did King David I of Scotland Marry?",
+      "raw_answer": "Sybilla of Normandy",
+      "raw_correct": false,
+      "answerable": false,
+      "old_score": 0.6808897342296848,
+      "new_score": 0.7568743958043921,
+      "old_accepted": false,
+      "new_accepted": true
+    }
+  ]
+}

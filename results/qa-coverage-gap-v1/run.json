@@ -1,0 +1,17 @@
+{
+  "status": "complete",
+  "started_at_utc": "2026-10-04T10:24:49.139435+00:00",
+  "git_head": "016462caa689c30740e1c12e518008d55f1a8e51",
+  "git_status": "",
+  "python": "3.12.11",
+  "numpy": "2.2.6",
+  "model_inference": false,
+  "fresh_evaluation": false,
+  "parameters_distributed": false,
+  "authorship": "AI-assisted development and experiment",
+  "protocol_sha256": "46c4a42e15689d144856223f0b7768ae13ff0631c218c3c304eafab81560a2d1",
+  "candidate_calibration_improved": false,
+  "retrospective_replay_run": false,
+  "default_policy_changed": false,
+  "finished_at_utc": "2026-10-04T10:25:07.164084+00:00"
+}

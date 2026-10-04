@@ -1,0 +1,1163 @@
+{
+  "scope": "Post-hoc diagnosis of already published outcomes; used for hypothesis selection",
+  "n": 128,
+  "answerable": 64,
+  "refused_answerable": 37,
+  "refused_raw_correct": 19,
+  "correct_refused_with_overlapping_competitor": 18,
+  "raw_correct_answerable": 46,
+  "records": [
+    {
+      "id": "5726400589a1e219009ac5ef",
+      "source_title": "Ctenophora",
+      "answerable": true,
+      "raw_correct": 1,
+      "accepted": true,
+      "confidence": 0.7823869048234252,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5726415bec44d21400f3dcd1",
+      "source_title": "Ctenophora",
+      "answerable": true,
+      "raw_correct": 1,
+      "accepted": false,
+      "confidence": 0.6359647125092281,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5726431d271a42140099d7f5",
+      "source_title": "Ctenophora",
+      "answerable": true,
+      "raw_correct": 1,
+      "accepted": true,
+      "confidence": 0.7991088374666969,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5726449f1125e71900ae1928",
+      "source_title": "Ctenophora",
+      "answerable": true,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.6655427898290817,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "572646655951b619008f6ec0",
+      "source_title": "Ctenophora",
+      "answerable": true,
+      "raw_correct": 1,
+      "accepted": false,
+      "confidence": 0.42017068384157374,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "57264b1ddd62a815002e80a0",
+      "source_title": "Ctenophora",
+      "answerable": true,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.41307374084829596,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "572655e5f1498d1400e8dc62",
+      "source_title": "Ctenophora",
+      "answerable": true,
+      "raw_correct": 1,
+      "accepted": true,
+      "confidence": 0.7998263089511248,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "57265aaf5951b619008f706e",
+      "source_title": "Ctenophora",
+      "answerable": true,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.5069712312738994,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "57265c10f1498d1400e8dd39",
+      "source_title": "Ctenophora",
+      "answerable": true,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.27717930226817433,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "57265e97708984140094c3c5",
+      "source_title": "Ctenophora",
+      "answerable": true,
+      "raw_correct": 1,
+      "accepted": true,
+      "confidence": 0.7023466826690072,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "572681c1dd62a815002e8798",
+      "source_title": "Ctenophora",
+      "answerable": true,
+      "raw_correct": 1,
+      "accepted": true,
+      "confidence": 0.9558490639117297,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "572686fc708984140094c8e7",
+      "source_title": "Ctenophora",
+      "answerable": true,
+      "raw_correct": 1,
+      "accepted": true,
+      "confidence": 0.8788330544831843,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5726887e708984140094c91a",
+      "source_title": "Ctenophora",
+      "answerable": true,
+      "raw_correct": 1,
+      "accepted": false,
+      "confidence": 0.5886529389793961,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "57268a37f1498d1400e8e33e",
+      "source_title": "Ctenophora",
+      "answerable": true,
+      "raw_correct": 1,
+      "accepted": false,
+      "confidence": 0.5918505590863941,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "57268c01dd62a815002e8912",
+      "source_title": "Ctenophora",
+      "answerable": true,
+      "raw_correct": 1,
+      "accepted": false,
+      "confidence": 0.4744327329389756,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "57268f05dd62a815002e8990",
+      "source_title": "Ctenophora",
+      "answerable": true,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.4438214398072685,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "57271c235951b619008f860c",
+      "source_title": "Civil_disobedience",
+      "answerable": true,
+      "raw_correct": 1,
+      "accepted": false,
+      "confidence": 0.2528341136144946,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5727aa413acd2414000de921",
+      "source_title": "Harvard_University",
+      "answerable": true,
+      "raw_correct": 1,
+      "accepted": true,
+      "confidence": 0.8170925897938884,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5727c0402ca10214002d9564",
+      "source_title": "Harvard_University",
+      "answerable": true,
+      "raw_correct": 1,
+      "accepted": true,
+      "confidence": 0.9296304503766478,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5727c55bff5b5019007d94d0",
+      "source_title": "Harvard_University",
+      "answerable": true,
+      "raw_correct": 1,
+      "accepted": true,
+      "confidence": 0.881689268015076,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5727c8863acd2414000dec4c",
+      "source_title": "Harvard_University",
+      "answerable": true,
+      "raw_correct": 1,
+      "accepted": false,
+      "confidence": 0.6404789955321702,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5727cc15ff5b5019007d9578",
+      "source_title": "Harvard_University",
+      "answerable": true,
+      "raw_correct": 1,
+      "accepted": true,
+      "confidence": 0.7211234004041265,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5727cebc2ca10214002d96f0",
+      "source_title": "Harvard_University",
+      "answerable": true,
+      "raw_correct": 1,
+      "accepted": true,
+      "confidence": 0.8165496214292787,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5727d0f73acd2414000ded13",
+      "source_title": "Harvard_University",
+      "answerable": true,
+      "raw_correct": 1,
+      "accepted": true,
+      "confidence": 0.8227535841736334,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5727d1c93acd2414000ded42",
+      "source_title": "Harvard_University",
+      "answerable": true,
+      "raw_correct": 1,
+      "accepted": true,
+      "confidence": 0.8558430702363311,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5727d3843acd2414000ded6a",
+      "source_title": "Harvard_University",
+      "answerable": true,
+      "raw_correct": 1,
+      "accepted": false,
+      "confidence": 0.3207970591648489,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5727d4922ca10214002d977f",
+      "source_title": "Harvard_University",
+      "answerable": true,
+      "raw_correct": 1,
+      "accepted": true,
+      "confidence": 0.8447398889908344,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5727d6154b864d1900163e35",
+      "source_title": "Harvard_University",
+      "answerable": true,
+      "raw_correct": 1,
+      "accepted": true,
+      "confidence": 0.9302801879250429,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5727d88b4b864d1900163e60",
+      "source_title": "Harvard_University",
+      "answerable": true,
+      "raw_correct": 1,
+      "accepted": true,
+      "confidence": 0.8684160425476121,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5727d9c43acd2414000dee18",
+      "source_title": "Harvard_University",
+      "answerable": true,
+      "raw_correct": 1,
+      "accepted": true,
+      "confidence": 0.8488421095113827,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5727db85ff5b5019007d96fc",
+      "source_title": "Harvard_University",
+      "answerable": true,
+      "raw_correct": 1,
+      "accepted": false,
+      "confidence": 0.13729745849189595,
+      "alternative_overlaps": false
+    },
+    {
+      "id": "5727dc473acd2414000dee43",
+      "source_title": "Harvard_University",
+      "answerable": true,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.2600507983258078,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5727de862ca10214002d9861",
+      "source_title": "Harvard_University",
+      "answerable": true,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.0002533646383127888,
+      "alternative_overlaps": false
+    },
+    {
+      "id": "5728151b4b864d1900164428",
+      "source_title": "Civil_disobedience",
+      "answerable": true,
+      "raw_correct": 1,
+      "accepted": false,
+      "confidence": 0.582383495078903,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "57282dfb4b864d1900164668",
+      "source_title": "Civil_disobedience",
+      "answerable": true,
+      "raw_correct": 1,
+      "accepted": false,
+      "confidence": 0.6375498008408063,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "572860e03acd2414000df977",
+      "source_title": "Yuan_dynasty",
+      "answerable": true,
+      "raw_correct": 1,
+      "accepted": false,
+      "confidence": 0.5181907711304288,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "572864dd4b864d1900164977",
+      "source_title": "Yuan_dynasty",
+      "answerable": true,
+      "raw_correct": 1,
+      "accepted": true,
+      "confidence": 0.7168986153832198,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "572867212ca10214002da2f2",
+      "source_title": "Yuan_dynasty",
+      "answerable": true,
+      "raw_correct": 1,
+      "accepted": true,
+      "confidence": 0.8928934762233828,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "572869b84b864d19001649ae",
+      "source_title": "Yuan_dynasty",
+      "answerable": true,
+      "raw_correct": 1,
+      "accepted": true,
+      "confidence": 0.8291485900157121,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "57286b003acd2414000df9c4",
+      "source_title": "Yuan_dynasty",
+      "answerable": true,
+      "raw_correct": 1,
+      "accepted": true,
+      "confidence": 0.854242649026235,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "57286d4f2ca10214002da328",
+      "source_title": "Yuan_dynasty",
+      "answerable": true,
+      "raw_correct": 1,
+      "accepted": true,
+      "confidence": 0.9021011287638301,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "57286ead2ca10214002da348",
+      "source_title": "Yuan_dynasty",
+      "answerable": true,
+      "raw_correct": 1,
+      "accepted": true,
+      "confidence": 0.9166363623386106,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "57286f373acd2414000df9dc",
+      "source_title": "Yuan_dynasty",
+      "answerable": true,
+      "raw_correct": 1,
+      "accepted": false,
+      "confidence": 0.26772339747264134,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "57287ee3ff5b5019007da275",
+      "source_title": "Yuan_dynasty",
+      "answerable": true,
+      "raw_correct": 1,
+      "accepted": true,
+      "confidence": 0.9354384577032164,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "57287f6a3acd2414000dfa51",
+      "source_title": "Yuan_dynasty",
+      "answerable": true,
+      "raw_correct": 1,
+      "accepted": false,
+      "confidence": 0.44810557240643073,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "572882242ca10214002da421",
+      "source_title": "Yuan_dynasty",
+      "answerable": true,
+      "raw_correct": 1,
+      "accepted": true,
+      "confidence": 0.9372262103496818,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5728827b2ca10214002da42e",
+      "source_title": "Yuan_dynasty",
+      "answerable": true,
+      "raw_correct": 1,
+      "accepted": true,
+      "confidence": 0.7506290314214159,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "572883a33acd2414000dfa7a",
+      "source_title": "Yuan_dynasty",
+      "answerable": true,
+      "raw_correct": 1,
+      "accepted": false,
+      "confidence": 0.4807058384205103,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "57288428ff5b5019007da291",
+      "source_title": "Yuan_dynasty",
+      "answerable": true,
+      "raw_correct": 1,
+      "accepted": true,
+      "confidence": 0.7747627444559408,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "572885023acd2414000dfa86",
+      "source_title": "Yuan_dynasty",
+      "answerable": true,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.01354146146067242,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5728855d3acd2414000dfa90",
+      "source_title": "Yuan_dynasty",
+      "answerable": true,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.5018458894096856,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5728d5793acd2414000dffb7",
+      "source_title": "Civil_disobedience",
+      "answerable": true,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.17207448026445946,
+      "alternative_overlaps": false
+    },
+    {
+      "id": "5728d63c4b864d1900164f18",
+      "source_title": "Civil_disobedience",
+      "answerable": true,
+      "raw_correct": 1,
+      "accepted": false,
+      "confidence": 0.021911427186907587,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5728d7c54b864d1900164f4f",
+      "source_title": "Civil_disobedience",
+      "answerable": true,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.1742351549884853,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5728d9403acd2414000e001f",
+      "source_title": "Civil_disobedience",
+      "answerable": true,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.06519803970521712,
+      "alternative_overlaps": false
+    },
+    {
+      "id": "5728df634b864d1900164fe3",
+      "source_title": "Civil_disobedience",
+      "answerable": true,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.09718291570661552,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5728e8212ca10214002daa6e",
+      "source_title": "Civil_disobedience",
+      "answerable": true,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.05051176423014601,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5728ebcb3acd2414000e01db",
+      "source_title": "Civil_disobedience",
+      "answerable": true,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.20351257840298054,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5728ed94ff5b5019007da97f",
+      "source_title": "Civil_disobedience",
+      "answerable": true,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.018198202146522145,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5728eef92ca10214002daab2",
+      "source_title": "Civil_disobedience",
+      "answerable": true,
+      "raw_correct": 1,
+      "accepted": false,
+      "confidence": 0.5194854386177155,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5728f50baf94a219006a9e59",
+      "source_title": "Civil_disobedience",
+      "answerable": true,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.1401173935856043,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5728facd4b864d1900165170",
+      "source_title": "Civil_disobedience",
+      "answerable": true,
+      "raw_correct": 1,
+      "accepted": false,
+      "confidence": 0.08889925371936573,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5728fb6a1d04691400778ef5",
+      "source_title": "Civil_disobedience",
+      "answerable": true,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.05504405123462591,
+      "alternative_overlaps": false
+    },
+    {
+      "id": "5728fc9e1d04691400778f13",
+      "source_title": "Civil_disobedience",
+      "answerable": true,
+      "raw_correct": 1,
+      "accepted": false,
+      "confidence": 0.17815792152955426,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5a66413dc2b11c001a425ec8",
+      "source_title": "Civil_disobedience",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.5691848575696108,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5a664612c2b11c001a425f0b",
+      "source_title": "Civil_disobedience",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.04782053680652215,
+      "alternative_overlaps": false
+    },
+    {
+      "id": "5a6647d2c2b11c001a425f21",
+      "source_title": "Civil_disobedience",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.36299103934243143,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5a665549846392001a1e1ad7",
+      "source_title": "Civil_disobedience",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.08283063624894563,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5a665747846392001a1e1aed",
+      "source_title": "Civil_disobedience",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.48184442027489627,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5a6659d3846392001a1e1b11",
+      "source_title": "Civil_disobedience",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.09013132555419186,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5a665b56846392001a1e1b1e",
+      "source_title": "Civil_disobedience",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.054165976436559855,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5a6681d1f038b7001ab0bf02",
+      "source_title": "Civil_disobedience",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.055818029336939086,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5a668632f038b7001ab0bf47",
+      "source_title": "Civil_disobedience",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.00907809842923258,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5a668b33f038b7001ab0bf90",
+      "source_title": "Civil_disobedience",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.0032902868397856277,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5a668d4ef038b7001ab0bfc3",
+      "source_title": "Civil_disobedience",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.10791851433177352,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5a668ef8f038b7001ab0bfde",
+      "source_title": "Civil_disobedience",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.29702475823194147,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5a66938ff038b7001ab0bffb",
+      "source_title": "Civil_disobedience",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.07468627468495741,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5a66978af038b7001ab0c028",
+      "source_title": "Civil_disobedience",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.06831808123662246,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5a669ee5f038b7001ab0c06b",
+      "source_title": "Civil_disobedience",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.09343904558819022,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5a66a55af038b7001ab0c07e",
+      "source_title": "Civil_disobedience",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.012622002416656277,
+      "alternative_overlaps": false
+    },
+    {
+      "id": "5a81ee4b31013a001a334f9f",
+      "source_title": "Harvard_University",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.025662454664872582,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5a81f0f031013a001a334faa",
+      "source_title": "Harvard_University",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.0461112259165501,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5a81f84e31013a001a335008",
+      "source_title": "Harvard_University",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.004939169248481788,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5a82001531013a001a3350a3",
+      "source_title": "Harvard_University",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.44901680992610354,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5a8203d431013a001a3350bf",
+      "source_title": "Harvard_University",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.002194121605664699,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5a820c4931013a001a335148",
+      "source_title": "Harvard_University",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.00584242954872582,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5a820ebf31013a001a33516e",
+      "source_title": "Harvard_University",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.3220452639537709,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5a8225de31013a001a335265",
+      "source_title": "Harvard_University",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.0892795602669793,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5a82294a31013a001a335275",
+      "source_title": "Harvard_University",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.021270629485699254,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5a82370631013a001a3352e5",
+      "source_title": "Harvard_University",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.2418916016453449,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5a8238f531013a001a3352f8",
+      "source_title": "Harvard_University",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.022785040197988094,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5a823a7731013a001a33530c",
+      "source_title": "Harvard_University",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.0617021751210244,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5a823e6f31013a001a335330",
+      "source_title": "Harvard_University",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.6180471474228638,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5a8241e631013a001a335362",
+      "source_title": "Harvard_University",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.005078343521104129,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5a82432131013a001a33536e",
+      "source_title": "Harvard_University",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.0002877054513176208,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5a82458131013a001a33538b",
+      "source_title": "Harvard_University",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.10256904041998018,
+      "alternative_overlaps": false
+    },
+    {
+      "id": "5a8349a2e60761001a2eb509",
+      "source_title": "Ctenophora",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.04350549411215201,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5a834af5e60761001a2eb51e",
+      "source_title": "Ctenophora",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.009680564811142227,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5a834caae60761001a2eb539",
+      "source_title": "Ctenophora",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.06667483261742106,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5a834dbde60761001a2eb558",
+      "source_title": "Ctenophora",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.0011365845793968087,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5a8352ebe60761001a2eb581",
+      "source_title": "Ctenophora",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.024701605622868404,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5a835482e60761001a2eb59b",
+      "source_title": "Ctenophora",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.08040108341706283,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5a835778e60761001a2eb5da",
+      "source_title": "Ctenophora",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.19904017022370868,
+      "alternative_overlaps": false
+    },
+    {
+      "id": "5a8359c1e60761001a2eb5f3",
+      "source_title": "Ctenophora",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.24299974674229566,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5a836496e60761001a2eb659",
+      "source_title": "Ctenophora",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.006730778587896698,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5a8371dfe60761001a2eb726",
+      "source_title": "Ctenophora",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.006672164175474106,
+      "alternative_overlaps": false
+    },
+    {
+      "id": "5a837549e60761001a2eb73a",
+      "source_title": "Ctenophora",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.3859847311341299,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5a83894de60761001a2eb78a",
+      "source_title": "Ctenophora",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.20543299714646848,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5a838a2ee60761001a2eb793",
+      "source_title": "Ctenophora",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.0013127520511367992,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5a838b42e60761001a2eb7aa",
+      "source_title": "Ctenophora",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.20090790724779148,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5a838db9e60761001a2eb7bd",
+      "source_title": "Ctenophora",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.17270752701689893,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5a83a80ae60761001a2eb858",
+      "source_title": "Ctenophora",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.007772014975476812,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5ad400f0604f3c001a3ffcf1",
+      "source_title": "Yuan_dynasty",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.039448027353295105,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5ad40158604f3c001a3ffd0f",
+      "source_title": "Yuan_dynasty",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.001900935450547725,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5ad402ae604f3c001a3ffd60",
+      "source_title": "Yuan_dynasty",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.36557826909091945,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5ad40432604f3c001a3ffdbb",
+      "source_title": "Yuan_dynasty",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.013963956742584504,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5ad40582604f3c001a3ffe1d",
+      "source_title": "Yuan_dynasty",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.3836612152369431,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5ad405f0604f3c001a3ffe2d",
+      "source_title": "Yuan_dynasty",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.6428545075038054,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5ad40639604f3c001a3ffe4b",
+      "source_title": "Yuan_dynasty",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.0015564383846284032,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5ad4066a604f3c001a3ffe63",
+      "source_title": "Yuan_dynasty",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.037384100822481864,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5ad406b6604f3c001a3ffe74",
+      "source_title": "Yuan_dynasty",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.140677962097808,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5ad40726604f3c001a3ffe8f",
+      "source_title": "Yuan_dynasty",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.0024059167237666583,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5ad40796604f3c001a3ffeaa",
+      "source_title": "Yuan_dynasty",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.049748171291316076,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5ad4081b604f3c001a3ffedc",
+      "source_title": "Yuan_dynasty",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.08923067866369605,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5ad40995604f3c001a3fff45",
+      "source_title": "Yuan_dynasty",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.023050371596769082,
+      "alternative_overlaps": false
+    },
+    {
+      "id": "5ad40a72604f3c001a3fffa9",
+      "source_title": "Yuan_dynasty",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.0003065851718205976,
+      "alternative_overlaps": true
+    },
+    {
+      "id": "5ad40c2d604f3c001a40004b",
+      "source_title": "Yuan_dynasty",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.025187346502594618,
+      "alternative_overlaps": false
+    },
+    {
+      "id": "5ad40cac604f3c001a400087",
+      "source_title": "Yuan_dynasty",
+      "answerable": false,
+      "raw_correct": 0,
+      "accepted": false,
+      "confidence": 0.04625413833931699,
+      "alternative_overlaps": true
+    }
+  ]
+}
