@@ -120,7 +120,8 @@
     "stop_rule": "Exactly one fixed study, no worker timing pre-runs, no threshold/input/variant changes after results. Record negative results. Functional/model audits contain no performance claims.",
     "aggregation": "Per length and arm, first take median of the two request TTFT (or decode/total seconds) within each round, then median of the four round values. Speedup is control aggregate divided by candidate aggregate. Faster rounds compare the two same-round request medians. Memory aggregates use the same median-of-round-medians, and raw per-request values are retained.",
     "input_construction": "For each body, repeat exactly 600 times; tok.encode(add_special_tokens=False), take first length tokens. No suffix or chat template for synthetic shape workload. Audit uses body0 first length tokens; prior cache uses body1 first17 tokens when specified.",
-    "raw_token_timing": "Store each of the32 synchronized token completion times relative to request start; decoder total is elapsed[-1]-elapsed[0]."
+    "raw_token_timing": "Store each of the32 synchronized token completion times relative to request start; decoder total is elapsed[-1]-elapsed[0].",
+    "quality_failure_policy": "After a complete finite-output audit, run the single fixed performance characterization even if greedy parity fails, to measure the speed-versus-rounding tradeoff. Audit complete is not acceptance. Candidate promotion requires every original joint gate; a quality failure cannot be repaired by speed and triggers no alternate candidate or repeated study."
   },
   "acceptance": {
     "candidate": "final_query",
