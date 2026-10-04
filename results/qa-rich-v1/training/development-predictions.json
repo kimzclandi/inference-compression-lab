@@ -1,0 +1,962 @@
+[
+  {
+    "id": "5705e4fe75f01819005e7704",
+    "prediction": "Colorado River",
+    "confidence": 0.36383481677554863
+  },
+  {
+    "id": "5705e4fe75f01819005e7705",
+    "prediction": "Colorado Desert",
+    "confidence": 0.637931907050417
+  },
+  {
+    "id": "5705e99452bb891400689688",
+    "prediction": "Los Angeles",
+    "confidence": 0.0023415626927763924
+  },
+  {
+    "id": "5705e99452bb89140068968c",
+    "prediction": "Los Angeles, Orange, San Diego, San Bernardino, and Riverside are the five most populous in the state",
+    "confidence": 0.001934740860019498
+  },
+  {
+    "id": "5705f09e75f01819005e77a5",
+    "prediction": "Cow Counties",
+    "confidence": 0.8673110349813598
+  },
+  {
+    "id": "5705f09e75f01819005e77a7",
+    "prediction": "75%",
+    "confidence": 0.8688378124778546
+  },
+  {
+    "id": "5705fb7f52bb891400689751",
+    "prediction": "Temecula and Murrieta",
+    "confidence": 0.41930027525858216
+  },
+  {
+    "id": "5705fd8475f01819005e7840",
+    "prediction": "natural ecosystem",
+    "confidence": 0.2525890578416086
+  },
+  {
+    "id": "5705fd8475f01819005e7842",
+    "prediction": "topographic",
+    "confidence": 0.10071961133943044
+  },
+  {
+    "id": "5706094b52bb8914006897e0",
+    "prediction": "housing bubble",
+    "confidence": 0.9302619744248638
+  },
+  {
+    "id": "5706094b52bb8914006897e1",
+    "prediction": "diverse",
+    "confidence": 0.9059315481349656
+  },
+  {
+    "id": "57060a6e52bb8914006897f9",
+    "prediction": "Central business districts",
+    "confidence": 0.8936836554433076
+  },
+  {
+    "id": "57060a6e52bb8914006897fa",
+    "prediction": "Downtown Riverside",
+    "confidence": 0.030544161483288895
+  },
+  {
+    "id": "57060cc352bb89140068980e",
+    "prediction": "business",
+    "confidence": 0.6874766552124361
+  },
+  {
+    "id": "57060cc352bb891400689811",
+    "prediction": "Los Angeles itself has many business districts including the Downtown Los Angeles",
+    "confidence": 0.28816230154048145
+  },
+  {
+    "id": "57060df252bb891400689821",
+    "prediction": "Downtown Riverside",
+    "confidence": 0.22583866759980972
+  },
+  {
+    "id": "570610b275f01819005e792c",
+    "prediction": "third",
+    "confidence": 0.9211992275059465
+  },
+  {
+    "id": "570610b275f01819005e792d",
+    "prediction": "San Diego International Airport",
+    "confidence": 0.90427556665998
+  },
+  {
+    "id": "5706111a52bb89140068984d",
+    "prediction": "seven",
+    "confidence": 0.8269069798159833
+  },
+  {
+    "id": "5706111a52bb89140068984f",
+    "prediction": "Orange",
+    "confidence": 0.42771562166754107
+  },
+  {
+    "id": "5706139252bb891400689866",
+    "prediction": "private",
+    "confidence": 0.8869670633942197
+  },
+  {
+    "id": "5706139252bb891400689867",
+    "prediction": "5",
+    "confidence": 0.7758864297343024
+  },
+  {
+    "id": "570614ff52bb89140068988a",
+    "prediction": "College sports",
+    "confidence": 0.5342898137822313
+  },
+  {
+    "id": "570614ff52bb89140068988b",
+    "prediction": "UCLA",
+    "confidence": 0.8631959106215539
+  },
+  {
+    "id": "5727ee372ca10214002d99ef",
+    "prediction": "achievement-oriented motivations",
+    "confidence": 0.02349631814926184
+  },
+  {
+    "id": "5727fd123acd2414000df188",
+    "prediction": "males",
+    "confidence": 0.873903675225697
+  },
+  {
+    "id": "5727ff083acd2414000df1ac",
+    "prediction": "low levels",
+    "confidence": 0.01552127362612625
+  },
+  {
+    "id": "5727ff083acd2414000df1ad",
+    "prediction": "it acquires more capital",
+    "confidence": 0.43601421493251136
+  },
+  {
+    "id": "57283c464b864d19001647ca",
+    "prediction": "seven",
+    "confidence": 0.9332159405581156
+  },
+  {
+    "id": "57283c464b864d19001647cb",
+    "prediction": "four",
+    "confidence": 0.9244258163235273
+  },
+  {
+    "id": "57283db6ff5b5019007d9fc0",
+    "prediction": "2020",
+    "confidence": 0.9747938579705615
+  },
+  {
+    "id": "57283f014b864d19001647ea",
+    "prediction": "William Rainey Harper",
+    "confidence": 0.9553916647458244
+  },
+  {
+    "id": "572843304b864d1900164848",
+    "prediction": "Des Moines College, Kalamazoo College, Butler University, and Stetson University. In 1896, the university affiliated with Shimer College",
+    "confidence": 0.025908123302932986
+  },
+  {
+    "id": "572843304b864d190016484b",
+    "prediction": "University of Chicago professors",
+    "confidence": 0.5800645751697561
+  },
+  {
+    "id": "57284456ff5b5019007da05d",
+    "prediction": "1929",
+    "confidence": 0.6891322780197883
+  },
+  {
+    "id": "57284456ff5b5019007da05f",
+    "prediction": "to emphasize academics over athletics",
+    "confidence": 0.3970683605825613
+  },
+  {
+    "id": "57284b904b864d19001648e2",
+    "prediction": "Main Quadrangles",
+    "confidence": 0.9202414247080453
+  },
+  {
+    "id": "57284b904b864d19001648e5",
+    "prediction": "Magdalen Tower",
+    "confidence": 0.8663766717932829
+  },
+  {
+    "id": "572855973acd2414000df925",
+    "prediction": "University of Chicago Laboratory Schools",
+    "confidence": 0.9012313297664053
+  },
+  {
+    "id": "572855973acd2414000df926",
+    "prediction": "Sonia Shankman Orthogenic School",
+    "confidence": 0.8945392136413431
+  },
+  {
+    "id": "57285841ff5b5019007da19a",
+    "prediction": "12",
+    "confidence": 0.913091358325847
+  },
+  {
+    "id": "57285841ff5b5019007da19c",
+    "prediction": "Oriental Institute",
+    "confidence": 0.9131946545392462
+  },
+  {
+    "id": "572864542ca10214002da2de",
+    "prediction": "University Athletic Association",
+    "confidence": 0.6982143952390417
+  },
+  {
+    "id": "572864542ca10214002da2e1",
+    "prediction": "Jay Berwanger",
+    "confidence": 0.927521660709286
+  },
+  {
+    "id": "5728659f4b864d190016498c",
+    "prediction": "University of Chicago College Bowl Team",
+    "confidence": 0.8202107143072175
+  },
+  {
+    "id": "5728659f4b864d190016498e",
+    "prediction": "Off-Off Campus",
+    "confidence": 0.9734596679380745
+  },
+  {
+    "id": "572867543acd2414000df9a3",
+    "prediction": "Alpha Phi Omega",
+    "confidence": 0.9598640684125372
+  },
+  {
+    "id": "572867543acd2414000df9a5",
+    "prediction": "ten",
+    "confidence": 0.9146949034905638
+  },
+  {
+    "id": "57286951ff5b5019007da20e",
+    "prediction": "Satya Nadella",
+    "confidence": 0.9578456889442722
+  },
+  {
+    "id": "57286951ff5b5019007da20f",
+    "prediction": "Larry Ellison",
+    "confidence": 0.9025918087124091
+  },
+  {
+    "id": "572872dd2ca10214002da37f",
+    "prediction": "Arthur H. Compton",
+    "confidence": 0.8339900543055259
+  },
+  {
+    "id": "572872dd2ca10214002da382",
+    "prediction": "Maria Goeppert-Mayer",
+    "confidence": 0.9593255690811022
+  },
+  {
+    "id": "57287b322ca10214002da3c1",
+    "prediction": "service",
+    "confidence": 0.02981976670814793
+  },
+  {
+    "id": "5729de24af94a219006aa68d",
+    "prediction": "positive",
+    "confidence": 0.4115776341663275
+  },
+  {
+    "id": "5729e1101d04691400779642",
+    "prediction": "high wages",
+    "confidence": 0.8910673307370952
+  },
+  {
+    "id": "5729e1101d04691400779645",
+    "prediction": "education",
+    "confidence": 0.7442782772628926
+  },
+  {
+    "id": "5729f1c13f37b319004785ea",
+    "prediction": "Thomas Sowell",
+    "confidence": 0.9539630085964469
+  },
+  {
+    "id": "5729f3883f37b319004785f3",
+    "prediction": "very weak",
+    "confidence": 0.5574274213849056
+  },
+  {
+    "id": "5729f4273f37b319004785fc",
+    "prediction": "those who already hold wealth",
+    "confidence": 0.11894246728758744
+  },
+  {
+    "id": "5729f4273f37b319004785fe",
+    "prediction": "Thomas Piketty",
+    "confidence": 0.9663046863396605
+  },
+  {
+    "id": "5729f4e46aef051400155156",
+    "prediction": "Economist",
+    "confidence": 0.7700037096823137
+  },
+  {
+    "id": "572a05eb3f37b31900478657",
+    "prediction": "economic",
+    "confidence": 0.3185275504354177
+  },
+  {
+    "id": "572a06866aef0514001551bf",
+    "prediction": "higher rates",
+    "confidence": 0.37919762037011484
+  },
+  {
+    "id": "572a06866aef0514001551c0",
+    "prediction": "lower",
+    "confidence": 0.6054751964394329
+  },
+  {
+    "id": "572a0bafaf94a219006aa766",
+    "prediction": "distributive efficiency",
+    "confidence": 0.25968896800968677
+  },
+  {
+    "id": "572a1046af94a219006aa78e",
+    "prediction": "limiting aggregate demand",
+    "confidence": 0.5428772023360225
+  },
+  {
+    "id": "572a18a4af94a219006aa7e2",
+    "prediction": "several years",
+    "confidence": 0.892615246472113
+  },
+  {
+    "id": "572a1ba46aef051400155290",
+    "prediction": "extra-legal",
+    "confidence": 0.7943835682981196
+  },
+  {
+    "id": "572a1fe16aef0514001552d0",
+    "prediction": "private ownership of the means of production by a class of owners",
+    "confidence": 0.891379525089033
+  },
+  {
+    "id": "572a1fe16aef0514001552d2",
+    "prediction": "wage or salary",
+    "confidence": 0.8936592272949242
+  },
+  {
+    "id": "572a20816aef0514001552e4",
+    "prediction": "Robert Nozick",
+    "confidence": 0.8773908280054772
+  },
+  {
+    "id": "572a20816aef0514001552e8",
+    "prediction": "when they improve society as a whole",
+    "confidence": 0.6551041256020094
+  },
+  {
+    "id": "572f5703a23a5019007fc573",
+    "prediction": "north",
+    "confidence": 0.8369252174887395
+  },
+  {
+    "id": "572f58d9a23a5019007fc57f",
+    "prediction": "upper lake",
+    "confidence": 0.9557010239633481
+  },
+  {
+    "id": "572f58d9a23a5019007fc581",
+    "prediction": "Swiss-Austrian border",
+    "confidence": 0.3031347646812687
+  },
+  {
+    "id": "572f6a0ba23a5019007fc5ec",
+    "prediction": "Rhine Gorge",
+    "confidence": 0.8119843170517795
+  },
+  {
+    "id": "572f6ec7a23a5019007fc623",
+    "prediction": "Lorelei",
+    "confidence": 0.4531582297671054
+  },
+  {
+    "id": "572f6ec7a23a5019007fc624",
+    "prediction": "Middle Rhine Valley",
+    "confidence": 0.9022893596727402
+  },
+  {
+    "id": "572f7b33947a6a140053c9a5",
+    "prediction": "Wijk bij Duurstede",
+    "confidence": 0.36855350145568033
+  },
+  {
+    "id": "572fe41e04bcaa1900d76e4c",
+    "prediction": "86 km",
+    "confidence": 0.5873793628521166
+  },
+  {
+    "id": "572fe53104bcaa1900d76e6d",
+    "prediction": "continuous input of sediment into the lake",
+    "confidence": 0.3088081231814245
+  },
+  {
+    "id": "572ff5fcb2c2fd1400568658",
+    "prediction": "draining the surrounding land and polders",
+    "confidence": 0.7321923704212707
+  },
+  {
+    "id": "572ff5fcb2c2fd140056865b",
+    "prediction": "sluice",
+    "confidence": 0.23079656576233185
+  },
+  {
+    "id": "572ff7ab04bcaa1900d76f52",
+    "prediction": "three",
+    "confidence": 0.6753205629174668
+  },
+  {
+    "id": "572ffb02b2c2fd14005686b8",
+    "prediction": "Upper Rhine Graben",
+    "confidence": 0.6060812157850747
+  },
+  {
+    "id": "572fffb404bcaa1900d76fef",
+    "prediction": "22,000 years ago",
+    "confidence": 0.6473344107648502
+  },
+  {
+    "id": "572fffb404bcaa1900d76ff0",
+    "prediction": "thaw",
+    "confidence": 0.8994275610412179
+  },
+  {
+    "id": "5730042804bcaa1900d77013",
+    "prediction": "Netherlands",
+    "confidence": 0.05231715749991055
+  },
+  {
+    "id": "57300580b2c2fd1400568750",
+    "prediction": "80",
+    "confidence": 0.8510291352195621
+  },
+  {
+    "id": "57300580b2c2fd1400568751",
+    "prediction": "11–13th century AD",
+    "confidence": 0.6353713529325313
+  },
+  {
+    "id": "5730069004bcaa1900d7702e",
+    "prediction": "to the North Sea",
+    "confidence": 0.6929256678286179
+  },
+  {
+    "id": "57300761947a6a140053cf9c",
+    "prediction": "6th century BC",
+    "confidence": 0.8860197099632208
+  },
+  {
+    "id": "57300888b2c2fd1400568779",
+    "prediction": "oppidum Ubiorum",
+    "confidence": 0.17293585482583404
+  },
+  {
+    "id": "573009a004bcaa1900d7704f",
+    "prediction": "6th century",
+    "confidence": 0.8381540219070726
+  },
+  {
+    "id": "573009a004bcaa1900d77053",
+    "prediction": "1469",
+    "confidence": 0.9644520077107707
+  },
+  {
+    "id": "57300bf504bcaa1900d77088",
+    "prediction": "Germany",
+    "confidence": 0.5342425178634856
+  },
+  {
+    "id": "5acf774877cf76001a684e99",
+    "prediction": "Booth School of Business",
+    "confidence": 0.002056423917675531
+  },
+  {
+    "id": "5acf774877cf76001a684e9a",
+    "prediction": "professional",
+    "confidence": 0.002604116631774773
+  },
+  {
+    "id": "5acf782877cf76001a684eb3",
+    "prediction": "man-made, self-sustaining nuclear reaction",
+    "confidence": 0.0028774066229896233
+  },
+  {
+    "id": "5acf782877cf76001a684eb4",
+    "prediction": "Stagg Field",
+    "confidence": 0.7553942272441093
+  },
+  {
+    "id": "5acf7dcf77cf76001a684f7a",
+    "prediction": "John D. Rockefeller",
+    "confidence": 0.0022794973729135175
+  },
+  {
+    "id": "5acf7dcf77cf76001a684f7b",
+    "prediction": "1890",
+    "confidence": 0.0016801936475975706
+  },
+  {
+    "id": "5acf7fdf77cf76001a684fd5",
+    "prediction": "Mount Carroll",
+    "confidence": 0.7633016949386695
+  },
+  {
+    "id": "5acf808877cf76001a685006",
+    "prediction": "to emphasize academics over athletics",
+    "confidence": 0.0009500878703816585
+  },
+  {
+    "id": "5acf808877cf76001a685007",
+    "prediction": "1933",
+    "confidence": 0.04751760707576635
+  },
+  {
+    "id": "5acf8b1177cf76001a68518f",
+    "prediction": "Cobb, Shepley, Rutan and Coolidge, Holabird & Roche",
+    "confidence": 0.0028695374519724817
+  },
+  {
+    "id": "5acf8b1177cf76001a685190",
+    "prediction": "Main Quadrangles",
+    "confidence": 0.0071863864985853
+  },
+  {
+    "id": "5acf98ad77cf76001a6853c7",
+    "prediction": "University of Chicago Laboratory Schools",
+    "confidence": 0.0024301592711251005
+  },
+  {
+    "id": "5acf98ad77cf76001a6853ca",
+    "prediction": "University of Chicago Press",
+    "confidence": 0.06865104127231203
+  },
+  {
+    "id": "5acf9a5277cf76001a68541c",
+    "prediction": "12",
+    "confidence": 0.27055481300306466
+  },
+  {
+    "id": "5acf9a5277cf76001a685420",
+    "prediction": "Chicago",
+    "confidence": 0.2372920737195404
+  },
+  {
+    "id": "5acf9dfb77cf76001a68555a",
+    "prediction": "football",
+    "confidence": 0.002410164205955573
+  },
+  {
+    "id": "5acf9e9377cf76001a685583",
+    "prediction": "Recognized Student Organizations",
+    "confidence": 0.004777522285705475
+  },
+  {
+    "id": "5acf9e9377cf76001a685584",
+    "prediction": "2013-14 and 2014-2015",
+    "confidence": 0.007763101560850024
+  },
+  {
+    "id": "5acfa09277cf76001a6855ca",
+    "prediction": "seven",
+    "confidence": 0.914460666733944
+  },
+  {
+    "id": "5acfa09277cf76001a6855ce",
+    "prediction": "2002",
+    "confidence": 0.0804516604211137
+  },
+  {
+    "id": "5acfa23577cf76001a685630",
+    "prediction": "Thomas S. Ricketts",
+    "confidence": 0.07558457604641688
+  },
+  {
+    "id": "5acfa23577cf76001a685631",
+    "prediction": "Adam Silver",
+    "confidence": 0.9253182708017069
+  },
+  {
+    "id": "5acfa9b877cf76001a6857a8",
+    "prediction": "Enrico Fermi",
+    "confidence": 0.03563133658366728
+  },
+  {
+    "id": "5acfa9b877cf76001a6857aa",
+    "prediction": "Robert A. Millikan",
+    "confidence": 0.8292769835796724
+  },
+  {
+    "id": "5ad01c8877cf76001a686a64",
+    "prediction": "Colorado Desert",
+    "confidence": 0.019832250952198045
+  },
+  {
+    "id": "5ad01c8877cf76001a686a65",
+    "prediction": "Mojave Desert",
+    "confidence": 0.38134500217744155
+  },
+  {
+    "id": "5ad01f0f77cf76001a686ac2",
+    "prediction": "Los Angeles, Orange, San Diego, San Bernardino, and Riverside",
+    "confidence": 0.8152735298386451
+  },
+  {
+    "id": "5ad02e5d77cf76001a686d3a",
+    "prediction": "Californios",
+    "confidence": 0.0017106310653143626
+  },
+  {
+    "id": "5ad02e5d77cf76001a686d3d",
+    "prediction": "John B. Weller",
+    "confidence": 0.0019991286661646566
+  },
+  {
+    "id": "5ad0331877cf76001a686e17",
+    "prediction": "L.A. and Orange Counties",
+    "confidence": 0.8839045184165417
+  },
+  {
+    "id": "5ad0331877cf76001a686e18",
+    "prediction": "Imperial Valley",
+    "confidence": 0.0042434683733817225
+  },
+  {
+    "id": "5ad0394877cf76001a686e58",
+    "prediction": "Pacific Ocean",
+    "confidence": 0.10745848474359175
+  },
+  {
+    "id": "5ad0394877cf76001a686e59",
+    "prediction": "Southern California",
+    "confidence": 0.587584534082185
+  },
+  {
+    "id": "5ad044f077cf76001a686f58",
+    "prediction": "Southern California",
+    "confidence": 0.5440373138942824
+  },
+  {
+    "id": "5ad044f077cf76001a686f5b",
+    "prediction": "Southern California",
+    "confidence": 0.002516077101125855
+  },
+  {
+    "id": "5ad0461477cf76001a686f7a",
+    "prediction": "Central business districts",
+    "confidence": 0.2945546039886756
+  },
+  {
+    "id": "5ad0461477cf76001a686f7b",
+    "prediction": "Downtown Los Angeles, Downtown San Diego, Downtown San Bernardino, Downtown Bakersfield, South Coast Metro and Downtown Riverside",
+    "confidence": 0.07315414144114253
+  },
+  {
+    "id": "5ad0470477cf76001a686f81",
+    "prediction": "Downtown Los Angeles central business district",
+    "confidence": 0.31456028281908427
+  },
+  {
+    "id": "5ad0470477cf76001a686f82",
+    "prediction": "central business district",
+    "confidence": 0.3097785579094242
+  },
+  {
+    "id": "5ad0475c77cf76001a686f86",
+    "prediction": "Downtown San Bernardino, Hospitality Business/Financial Centre, University Town",
+    "confidence": 0.20027818023730196
+  },
+  {
+    "id": "5ad0475c77cf76001a686f87",
+    "prediction": "Downtown Riverside",
+    "confidence": 0.026832298114914895
+  },
+  {
+    "id": "5ad04bfc77cf76001a686f98",
+    "prediction": "Los Angeles International Airport",
+    "confidence": 0.1458512427359717
+  },
+  {
+    "id": "5ad04bfc77cf76001a686f9b",
+    "prediction": "Orange County, Bakersfield, Ontario, Burbank and Long Beach",
+    "confidence": 0.28299900645546905
+  },
+  {
+    "id": "5ad04d3077cf76001a686fa2",
+    "prediction": "Riverside, Orange, and San Diego",
+    "confidence": 0.060689179267525546
+  },
+  {
+    "id": "5ad04ecf77cf76001a686fae",
+    "prediction": "Irvine, Los Angeles, Riverside, Santa Barbara, and San Diego",
+    "confidence": 0.9360537985316874
+  },
+  {
+    "id": "5ad04ecf77cf76001a686fb0",
+    "prediction": "12",
+    "confidence": 0.7305692666626377
+  },
+  {
+    "id": "5ad0511577cf76001a686fca",
+    "prediction": "Bruins",
+    "confidence": 0.04453504898049185
+  },
+  {
+    "id": "5ad0511577cf76001a686fcc",
+    "prediction": "Pac-12 Conference",
+    "confidence": 0.02390959861284696
+  },
+  {
+    "id": "5ad2461ad7d075001a428ad3",
+    "prediction": "chronically understaffed",
+    "confidence": 0.025154473573503512
+  },
+  {
+    "id": "5ad2461ad7d075001a428ad6",
+    "prediction": "the market",
+    "confidence": 0.0017474137454284104
+  },
+  {
+    "id": "5ad2472bd7d075001a428b22",
+    "prediction": "entrepreneurship rates",
+    "confidence": 0.0024539660913398004
+  },
+  {
+    "id": "5ad2472bd7d075001a428b25",
+    "prediction": "opportunity-based entrepreneurship is driven by achievement-oriented motivations",
+    "confidence": 0.021913368487979656
+  },
+  {
+    "id": "5ad24840d7d075001a428b5e",
+    "prediction": "high wages for those with this education, however, increases in education first increase and then decrease growth",
+    "confidence": 0.0217019659340105
+  },
+  {
+    "id": "5ad258f3d7d075001a428de5",
+    "prediction": "-40%",
+    "confidence": 0.0022545449609233763
+  },
+  {
+    "id": "5ad258f3d7d075001a428de6",
+    "prediction": "discrimination",
+    "confidence": 0.0022794973729135175
+  },
+  {
+    "id": "5ad2594ed7d075001a428dfa",
+    "prediction": "low levels of development have relatively equal distributions of wealth. As a country develops, it acquires more capital, which leads to the owners of this capital",
+    "confidence": 0.0015909815697875967
+  },
+  {
+    "id": "5ad2594ed7d075001a428dfb",
+    "prediction": "capital",
+    "confidence": 0.13469999801582552
+  },
+  {
+    "id": "5ad259fdd7d075001a428e29",
+    "prediction": "service",
+    "confidence": 0.029178751883888597
+  },
+  {
+    "id": "5ad25a8bd7d075001a428e32",
+    "prediction": "wealth condensation",
+    "confidence": 0.002962926427941869
+  },
+  {
+    "id": "5ad25a8bd7d075001a428e34",
+    "prediction": "possession of already-wealthy individuals or entities",
+    "confidence": 0.002174322231266599
+  },
+  {
+    "id": "5ad25af2d7d075001a428e54",
+    "prediction": "rare and desired skills",
+    "confidence": 0.0024025880071129532
+  },
+  {
+    "id": "5ad25c56d7d075001a428e9b",
+    "prediction": "human capital is neglected",
+    "confidence": 0.003967910004900849
+  },
+  {
+    "id": "5ad25cced7d075001a428ec6",
+    "prediction": "2013",
+    "confidence": 0.003417452916268475
+  },
+  {
+    "id": "5ad25cced7d075001a428ec7",
+    "prediction": "inequality",
+    "confidence": 0.0025454105447610597
+  },
+  {
+    "id": "5ad25d39d7d075001a428ed8",
+    "prediction": "British",
+    "confidence": 0.003417452916268475
+  },
+  {
+    "id": "5ad2647bd7d075001a429157",
+    "prediction": "decreases",
+    "confidence": 0.899972285056967
+  },
+  {
+    "id": "5ad264e2d7d075001a42917d",
+    "prediction": "reduced consumer demand",
+    "confidence": 0.01687230490073152
+  },
+  {
+    "id": "5ad264e2d7d075001a429180",
+    "prediction": "more equality in the income distribution",
+    "confidence": 0.0021264656624700937
+  },
+  {
+    "id": "5ad265d2d7d075001a4291c6",
+    "prediction": "much land and housing",
+    "confidence": 0.0025454105447610597
+  },
+  {
+    "id": "5ad2660dd7d075001a4291d8",
+    "prediction": "Chur",
+    "confidence": 0.0025458601388948666
+  },
+  {
+    "id": "5ad2684bd7d075001a429262",
+    "prediction": "private ownership of the means of production by a class of owners",
+    "confidence": 0.002944652204737433
+  },
+  {
+    "id": "5ad2684bd7d075001a429266",
+    "prediction": "income differentials would be reflective of individual contributions to the social product",
+    "confidence": 0.004009695202837383
+  },
+  {
+    "id": "5ad268b2d7d075001a429288",
+    "prediction": "Robert Nozick",
+    "confidence": 0.002320711745217544
+  },
+  {
+    "id": "5ad26aa8d7d075001a429323",
+    "prediction": "continuous input of sediment into the lake will silt",
+    "confidence": 0.003169373980572891
+  },
+  {
+    "id": "5ad26d27d7d075001a4293c1",
+    "prediction": "German states of Bavaria and Baden-Württemberg",
+    "confidence": 0.0027225131322426784
+  },
+  {
+    "id": "5ad26d27d7d075001a4293c3",
+    "prediction": "Swiss-Austrian border",
+    "confidence": 0.0018201304784651595
+  },
+  {
+    "id": "5ad27d5dd7d075001a4296be",
+    "prediction": "Rhine Gorge",
+    "confidence": 0.0011562994879814137
+  },
+  {
+    "id": "5ad27d5dd7d075001a4296c0",
+    "prediction": "Middle Rhine",
+    "confidence": 0.05711289186137627
+  },
+  {
+    "id": "5ad28098d7d075001a4297b9",
+    "prediction": "The Rhine Gorge",
+    "confidence": 0.03392147075895033
+  },
+  {
+    "id": "5ad28098d7d075001a4297bc",
+    "prediction": "narrow river banks",
+    "confidence": 0.05699909172475841
+  },
+  {
+    "id": "5ad286b4d7d075001a4298f6",
+    "prediction": "third",
+    "confidence": 0.05204333884336397
+  },
+  {
+    "id": "5ad286b4d7d075001a4298fa",
+    "prediction": "Nederrijn",
+    "confidence": 0.016063301175791484
+  },
+  {
+    "id": "5ad28861d7d075001a42993f",
+    "prediction": "smaller streams",
+    "confidence": 0.0017474137454284104
+  },
+  {
+    "id": "5ad28c93d7d075001a429a0e",
+    "prediction": "Lake IJsselmeer",
+    "confidence": 0.0030424263461135788
+  },
+  {
+    "id": "5ad28c93d7d075001a429a10",
+    "prediction": "IJssel",
+    "confidence": 0.0021942099367553607
+  },
+  {
+    "id": "5ad297dbd7d075001a429b2c",
+    "prediction": "N–S rift system",
+    "confidence": 0.002480095337333408
+  },
+  {
+    "id": "5ad2a15ad7d075001a429cc8",
+    "prediction": "22,000",
+    "confidence": 0.13812454890943435
+  },
+  {
+    "id": "5ad2a15ad7d075001a429ccb",
+    "prediction": "Meltwater",
+    "confidence": 0.0025346960331136524
+  },
+  {
+    "id": "5ad2a58bd7d075001a429dce",
+    "prediction": "(~11,700 years ago",
+    "confidence": 0.0011754496672598
+  },
+  {
+    "id": "5ad2a71ad7d075001a429e02",
+    "prediction": "~3000 yr BP",
+    "confidence": 0.5758428205623329
+  },
+  {
+    "id": "5ad2a901d7d075001a429e2a",
+    "prediction": "1932",
+    "confidence": 0.0012019554484511575
+  },
+  {
+    "id": "5ad2a901d7d075001a429e2c",
+    "prediction": "20th",
+    "confidence": 0.7841384872952036
+  },
+  {
+    "id": "5ad2b3bcd7d075001a429fa5",
+    "prediction": "AD 14 and 180",
+    "confidence": 0.10792469298942704
+  },
+  {
+    "id": "5ad2b72fd7d075001a42a023",
+    "prediction": "9th",
+    "confidence": 0.02859887626530019
+  },
+  {
+    "id": "5ad2b72fd7d075001a42a026",
+    "prediction": "Thirty Years' War",
+    "confidence": 0.05922447373777282
+  },
+  {
+    "id": "5ad2b882d7d075001a42a040",
+    "prediction": "Peace of Westphalia",
+    "confidence": 0.0037817033285355555
+  }
+]

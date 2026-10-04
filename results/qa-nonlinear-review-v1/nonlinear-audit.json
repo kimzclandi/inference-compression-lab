@@ -1,0 +1,8 @@
+{
+  "evidence_valid": true,
+  "development_passed": false,
+  "evaluation_run": false,
+  "archived_input_reconstruction": true,
+  "model_inference": false,
+  "quality_gate_passed": false
+}
