@@ -119,7 +119,8 @@
     "memory": "reset MLX peak after model/inputs ready; report peak active and pre-call active separately, do not add unified-memory counters. Includes whole 32-token request.",
     "stop_rule": "Exactly one fixed study, no worker timing pre-runs, no threshold/input/variant changes after results. Record negative results. Functional/model audits contain no performance claims.",
     "aggregation": "Per length and arm, first take median of the two request TTFT (or decode/total seconds) within each round, then median of the four round values. Speedup is control aggregate divided by candidate aggregate. Faster rounds compare the two same-round request medians. Memory aggregates use the same median-of-round-medians, and raw per-request values are retained.",
-    "input_construction": "For each body, repeat exactly 600 times; tok.encode(add_special_tokens=False), take first length tokens. No suffix or chat template for synthetic shape workload. Audit uses body0 first length tokens; prior cache uses body1 first17 tokens when specified."
+    "input_construction": "For each body, repeat exactly 600 times; tok.encode(add_special_tokens=False), take first length tokens. No suffix or chat template for synthetic shape workload. Audit uses body0 first length tokens; prior cache uses body1 first17 tokens when specified.",
+    "raw_token_timing": "Store each of the32 synchronized token completion times relative to request start; decoder total is elapsed[-1]-elapsed[0]."
   },
   "acceptance": {
     "candidate": "final_query",
@@ -144,5 +145,16 @@
     "https://huggingface.co/docs/transformers/v4.50.0/model_doc/qwen2",
     "https://github.com/ml-explore/mlx-lm/tree/v0.26.3"
   ],
-  "publication": "New draft PR permitted; no automatic merge, tag or release for this new node."
+  "publication": "New draft PR permitted; no automatic merge, tag or release for this new node.",
+  "upstream_source_sha256": {
+    "mlx_lm.models.qwen2": "dcd8ee9bc15db59b88c7932778489e51f957ec1f895d186ff1e9968f99f6d113",
+    "mlx_lm.models.base": "e483d553d845db9b681fb81215c56eb08592b67387fa35f2d5c02d0ce0b7cc2a",
+    "mlx_lm.models.cache": "f418c059dfa4c9b4ff2c69a795284ecf3e616eb29ac1877f7ee64bee06549b5d",
+    "mlx_lm.models.rope_utils": "95a0bd2ba11cf1d9cb71a3e49ea202046f604e0e3fc2db633ad0e6cd4a5182fb",
+    "mlx_lm.generate": "919352048641d4556f63fe6081e688a8e9217a18a57e686dde76565725e04c0d",
+    "mlx.nn.layers.quantized": "d8b5120e82989ee7a3507682108bea5906cb4098590a1f218c73ab152a078d64",
+    "mlx.nn.layers.linear": "ce2e22fa5f479acef339d6629dd9e34e87ac6168874e4ed6da6b10be6ed1947a",
+    "mlx.nn.layers.embedding": "a4630b8959ed75e9b29955f576731d8efeaafde2e3989b947fdf92856f659cb1",
+    "mlx.nn.layers.normalization": "92cfbc9ba53d4b2d7681a9096881d8cce4c7f5aff06ce054efbd6d454cf8c14f"
+  }
 }
