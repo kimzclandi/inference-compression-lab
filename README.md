@@ -42,6 +42,10 @@ The same exact pruning now accelerates [complete startup evidence verification](
 
 `v0.1.0-research.4` includes a real [Residual Add + RMSNorm Metal fusion](docs/metal-residual-rmsnorm.md). Numerical/output checks passed, but primary pair latency was 23.8% slower than compiled native and no model speed gate passed. It remains opt-in; research.4 publishes its implementation and negative result, while research.3 remains unchanged. Reduction/rounding follows attributed MLX MIT source; this is not a new RMSNorm or low-bit kernel algorithm.
 
+后续静态诊断在不重跑性能实验的前提下补充了[逻辑访存成本模型](docs/metal-residual-rmsnorm.md#post-hoc-logical-traffic-diagnosis--not-a-new-benchmark)：由于融合后仍需同时输出 residual 与 normalized tensor，理想模型只减少 1/6 的 primitive-boundary 逻辑字节，traffic-only 上限为 1.20×。该模型不是实测 Roofline，也不改变 `accepted=false`；它明确解释了该融合候选的理论空间和仍未确认的硬件瓶颈。
+
+另用 Xcode Metal System Trace 对主形状 `2048×896` 做了 PID 归属的后验诊断：native 与自定义 Metal 各完整执行 5,000 次，均观察到 5,007 个 GPU compute intervals，累计 GPU compute duration 仅相差约 0.37%。这说明该融合在 Instruments interval 层面没有减少 command-buffer/compute-interval 数量；但模板只暴露 `RT Unit Active`，没有带宽、occupancy 或 cache counter，因此仍不能声称完成 Roofline 定位。该 trace 不是新 benchmark，不推翻固定研究中自定义 Metal 慢约 23.8% 与 `accepted=false` 的结论。
+
 ## 运行与复现 / Run and reproduce
 
 Python 3.11/3.12。无需下载模型即可核验源码、证据和存档排序头；依赖安装需要网络或本地 wheel。输出目录必须全新。
@@ -80,5 +84,6 @@ Historical baseline checks alone do not authorize the optimized runtime. Current
 |扩大训练与非线性对照|[2,304 题研究](docs/qa-expanded-ranking-study.md)、[非线性研究](docs/qa-nonlinear-study.md)|
 |Qwen 量化与缓存生命周期|[量化诊断](docs/qwen-quantization-study.md)、[确认失败](docs/qwen-confirmation-study.md)、[缓存研究](docs/qwen-cache-lifecycle-study.md)|
 |MiniLM CPU 与负载实验|[Mac 复现](docs/mac-reproduction.md)、[长度分桶](docs/length-bucketing-study.md)|
+|自定义 Metal kernel、成本模型与 trace 诊断|[Residual Add + RMSNorm 实现、固定负结果、逻辑访存分析及 Instruments interval 证据](docs/metal-residual-rmsnorm.md)|
 
 这是个人研究项目；学校/团队、字节经历及历史 Jetson 工作不属于本仓库已验证成果。没有本项目 TensorRT/CUDA/昇腾部署或原创量化 kernel 声明。源码采用 MIT；公开数据和第三方内容保留原许可。
