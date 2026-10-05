@@ -49,7 +49,38 @@ Model timings use the same guarded head-only decoder in all arms, pre-tokenized 
 
 Neither primary TTFT nor decode achieved 1.02× against both controls. All model regression limits of 1.05 were respected, but passing a regression limit is not acceleration. The joint acceptance is **false**. No alternative candidate was selected from these results.
 
-Fewer graph operations did not produce lower measured latency here. `native.dot` and `compiled.dot` retain separate Add and RMSNorm primitives; `metal.dot` records the custom primitive. DOT is not a hardware execution trace. Register use, occupancy, memory access and dispatch overhead remain possible explanations, not established diagnoses. Existing Xcode license state prevented `xctrace` use; no license was accepted or GPU model trace uploaded. This node stops at the fixed negative result instead of retuning to pass.
+## Post-hoc logical-traffic diagnosis — not a new benchmark
+
+[The deterministic cost model](../lab/kernel_cost_model.py) counts tensor bytes crossing framework primitive boundaries. The materialized native pair reads `x` and `residual`, writes `h`, then reads `h` and `weight` and writes `y`: six elements of logical traffic per output element. The fused contract must still return both `h` and `y`, so it reads `x`, `residual` and `weight` and writes both outputs: five elements. Under this deliberately optimistic model, fusion removes only **1/6 = 16.67%** of logical bytes and has a **1.20× traffic-only ceiling**. This is an upper bound under the stated assumptions, not a predicted speedup or measured Roofline.
+
+| FP16 rows × 896 | Native logical bytes | Fused logical bytes | Traffic-only ceiling | Observed native/Metal | Observed compiled/Metal |
+|---|---:|---:|---:|---:|---:|
+| 1 | 10,752 | 8,960 | 1.20× | 0.985× | 0.942× |
+| 64 | 688,128 | 573,440 | 1.20× | 0.896× | 0.937× |
+| 512 | 5,505,024 | 4,587,520 | 1.20× | 0.665× | 0.694× |
+| 2048 | 22,020,096 | 18,350,080 | 1.20× | 0.842× | 0.808× |
+
+The low counted-operation-to-byte ratio makes the pair sensitive to bandwidth and dispatch overhead, but the model excludes caches, internal reduction passes, register/threadgroup traffic, occupancy and measured DRAM bandwidth. It therefore cannot identify the actual bottleneck. It does explain why this particular fusion has limited theoretical headroom: preserving the residual output prevents removal of its write, leaving only one logical reread to eliminate. The observed custom kernel did not realize even that idealized saving. The original failed gates and disabled default remain unchanged. [Derived JSON](../results/metal-residual-rmsnorm-v1/cost-model.json) binds this analysis to the frozen summary and analysis source.
+
+For hardware diagnosis, [the profiler workload](../experiments/profile_metal_residual_rmsnorm.py) emits a deterministic native, compiled or Metal workload for an external Instruments trace. It deliberately records no latency and cannot alter the frozen benchmark. It supports a fixed startup delay and flushed progress records so `xctrace` can attach to a known PID; every batch is evaluated separately to avoid spending the capture window only constructing a long lazy graph. [The XML summarizer](../experiments/summarize_metal_trace_export.py) resolves Instruments' cross-row references and filters GPU intervals to the target process. Trace bundles and XML exports remain machine-local diagnostics rather than release evidence.
+
+### Post-hoc Instruments interval trace — diagnostic only
+
+After the Xcode license was accepted, one matched native/Metal diagnostic was captured with Xcode `xctrace 16.0 (17F113)`, the `Metal System Trace` template and PID attachment. Each arm completed 5 warmup calls and 5,000 profiled calls at the frozen primary shape `2048 × 896` FP16; both emitted checksum 1,835,008. The workload uses `chain=1`, while the frozen latency protocol uses dependent chains of 50. Instruments also perturbs scheduling. The following values therefore describe trace intervals, not replacement latency measurements:
+
+| Process-attributed interval | Native | Custom Metal |
+|---|---:|---:|
+| Application command buffers | 5,008 | 5,008 |
+| Application compute commands | 5,007 | 5,007 |
+| GPU compute intervals | 5,007 | 5,007 |
+| GPU compute median | 21.000 μs | 19.000 μs |
+| GPU compute p95 | 81.875 μs | 82.834 μs |
+| Sum of GPU compute intervals | 145.451 ms | 144.907 ms |
+| Observed GPU interval span | 1,062.371 ms | 1,070.008 ms |
+
+At this trace abstraction level the custom primitive did **not** reduce command-buffer, compute-command or GPU-compute-interval counts; aggregate GPU compute duration was nearly unchanged (`Metal/native = 0.9963`). An interval is not necessarily one kernel dispatch, so the count is not presented as a kernel-launch count. The template's exported counter metadata exposed only `RT Unit Active`; it did not expose DRAM bandwidth, occupancy, cache-hit or useful Roofline counters. Consequently this capture supports a narrower conclusion: the idealized 16.67% logical-traffic reduction did not translate into an observable interval-count reduction, while the actual low-level bottleneck remains unresolved.
+
+Fewer graph operations did not produce lower frozen latency. `native.dot` and `compiled.dot` retain separate Add and RMSNorm primitives; `metal.dot` records the custom primitive. DOT is graph evidence, while [the compact trace receipt](../results/metal-residual-rmsnorm-v1/trace-diagnostic.json) records process-attributed interval evidence and hashes of machine-local XML exports. Neither establishes sustained bandwidth or occupancy. The original performance study remains authoritative: `accepted=false`, custom mode stays disabled by default, and there was no trace-guided retuning after observing results.
 
 ## Evidence and offline reproduction
 
@@ -59,8 +90,18 @@ Fewer graph operations did not produce lower measured latency here. `native.dot`
 python -m experiments.verify_metal_residual_rmsnorm \
   --audit-root results/metal-residual-rmsnorm-v1/audit \
   --benchmark-root results/metal-residual-rmsnorm-v1/benchmark
+python -m experiments.analyze_metal_kernel_cost \
+  --output runs/my-metal-cost-model.json
+python -m experiments.profile_metal_residual_rmsnorm \
+  --mode metal --rows 2048 --width 896 --warmup-batches 5 \
+  --batches 5000 --chain 1 --emit-progress --startup-delay 30
+python -m experiments.summarize_metal_trace_export \
+  --application runs/native-application.xml \
+  --gpu runs/native-gpu.xml --output runs/native-trace-summary.json
 python -m unittest tests.test_metal_residual_rmsnorm \
-  tests.test_metal_residual_rmsnorm_study tests.test_verify_metal_residual_rmsnorm -v
+  tests.test_metal_residual_rmsnorm_study tests.test_verify_metal_residual_rmsnorm \
+  tests.test_kernel_cost_model tests.test_profile_metal_residual_rmsnorm \
+  tests.test_metal_trace_summary -v
 # Only on a configured, supported Metal runtime:
 RUN_METAL_TESTS=1 python -m unittest tests.test_metal_residual_rmsnorm -v
 ```
