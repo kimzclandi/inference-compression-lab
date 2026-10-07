@@ -69,3 +69,8 @@ jobs:
           python -m experiments.qa_nonlinear verify --folder results/qa-nonlinear-v2 --output "$RUNNER_TEMP/nonlinear-audit.json"
           python -m experiments.qa_rich verify --folder results/qa-rich-v1 --output "$RUNNER_TEMP/rich-audit.json"
           python -m experiments.verify_qa_rich_inputs --output "$RUNNER_TEMP/rich-input-audit.json"
+
+      - name: Additive mechanism and cache boundary evidence (no GPU execution)
+        run: |
+          python -m experiments.metal_mechanism_diagnostic verify --output results/metal-mechanism-v1
+          python -m experiments.cache_workload_boundaries verify --output results/cache-workload-boundaries-v1

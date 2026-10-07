@@ -12,3 +12,5 @@
 每项速度来自各自固定负载，不能拼接为统一端到端加速。启动不含进程启动/前置导入，不是冷磁盘测量。480请求为40条固定trace的请求记录。Metal失败结果与所有质量门槛保持原样；逻辑字节不是DRAM实测，Instruments interval不是kernel launch。
 
 [完整CI检查](../.github/workflows/tests.yml)验证工程与冻结记录；Linux CI不执行Metal GPU，也不证明业务模型质量。实现与上游技术归属见[Metal说明](metal-residual-rmsnorm.md#implementation-and-attribution)及[第三方说明](../THIRD_PARTY.md)。未声称原创低比特kernel、CUDA/Ascend实现或生产部署。
+
+[新增机制诊断与收益边界](mechanism-diagnostics.md)。与旧冻结实验分开保存，不替换历史结果。
