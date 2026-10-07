@@ -87,3 +87,5 @@ Historical baseline checks alone do not authorize the optimized runtime. Current
 |自定义 Metal kernel、成本模型与 trace 诊断|[Residual Add + RMSNorm 实现、固定负结果、逻辑访存分析及 Instruments interval 证据](docs/metal-residual-rmsnorm.md)|
 
 这是个人研究项目；学校/团队、字节经历及历史 Jetson 工作不属于本仓库已验证成果。没有本项目 TensorRT/CUDA/昇腾部署或原创量化 kernel 声明。源码采用 MIT；公开数据和第三方内容保留原许可。
+
+[核心表述、代码与原始证据索引](docs/EVIDENCE_MAP.md) · [公开 Instruments 区间记录与只读重算](results/metal-trace-rows-v1/README.md)。逻辑访存分析不是实测 Roofline，Metal 性能门槛仍失败。

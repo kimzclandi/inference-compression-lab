@@ -62,7 +62,7 @@ Neither primary TTFT nor decode achieved 1.02× against both controls. All model
 
 The low counted-operation-to-byte ratio makes the pair sensitive to bandwidth and dispatch overhead, but the model excludes caches, internal reduction passes, register/threadgroup traffic, occupancy and measured DRAM bandwidth. It therefore cannot identify the actual bottleneck. It does explain why this particular fusion has limited theoretical headroom: preserving the residual output prevents removal of its write, leaving only one logical reread to eliminate. The observed custom kernel did not realize even that idealized saving. The original failed gates and disabled default remain unchanged. [Derived JSON](../results/metal-residual-rmsnorm-v1/cost-model.json) binds this analysis to the frozen summary and analysis source.
 
-For hardware diagnosis, [the profiler workload](../experiments/profile_metal_residual_rmsnorm.py) emits a deterministic native, compiled or Metal workload for an external Instruments trace. It deliberately records no latency and cannot alter the frozen benchmark. It supports a fixed startup delay and flushed progress records so `xctrace` can attach to a known PID; every batch is evaluated separately to avoid spending the capture window only constructing a long lazy graph. [The XML summarizer](../experiments/summarize_metal_trace_export.py) resolves Instruments' cross-row references and filters GPU intervals to the target process. Trace bundles and XML exports remain machine-local diagnostics rather than release evidence.
+For hardware diagnosis, [the profiler workload](../experiments/profile_metal_residual_rmsnorm.py) emits a deterministic native, compiled or Metal workload for an external Instruments trace. It deliberately records no latency and cannot alter the frozen benchmark. It supports a fixed startup delay and flushed progress records so `xctrace` can attach to a known PID; every batch is evaluated separately to avoid spending the capture window only constructing a long lazy graph. [The XML summarizer](../experiments/summarize_metal_trace_export.py) resolves Instruments' cross-row references and filters GPU intervals to the target process. Trace bundles and full XML exports remain machine-local diagnostics. A later [public row archive](../results/metal-trace-rows-v1/README.md) retains the process-filtered numeric fields from the hash-matched historical exports for offline recomputation; it is not a new capture or performance experiment.
 
 ### Post-hoc Instruments interval trace — diagnostic only
 
@@ -87,6 +87,7 @@ Fewer graph operations did not produce lower frozen latency. `native.dot` and `c
 [Raw audit](../results/metal-residual-rmsnorm-v1/audit/run.json), [nine-process timing receipt](../results/metal-residual-rmsnorm-v1/benchmark/run.json), [independent summary](../results/metal-residual-rmsnorm-v1/summary.json), [runner](../experiments/metal_residual_rmsnorm.py), [stdlib verifier](../experiments/verify_metal_residual_rmsnorm.py).
 
 ```bash
+python -m experiments.verify_metal_trace_rows
 python -m experiments.verify_metal_residual_rmsnorm \
   --audit-root results/metal-residual-rmsnorm-v1/audit \
   --benchmark-root results/metal-residual-rmsnorm-v1/benchmark
