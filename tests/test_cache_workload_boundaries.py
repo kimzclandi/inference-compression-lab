@@ -28,6 +28,7 @@ class WorkloadBoundaries(unittest.TestCase):
             delta=dict(hits=1, misses=1, evictions=0, bypasses=0, failures=0))
             for arm, statuses in [('direct',['direct','direct']),('cache',['miss','hit'])]]
         self.assertTrue(summarize(rows, spec)['token_parity'])
+        self.assertEqual(summarize(rows, spec)['compared_request_pairs'], 2)
         for change in ('token','counter','status'):
             bad = copy.deepcopy(rows)
             if change == 'token': bad[1]['outputs'][0]['token_ids']=[8]

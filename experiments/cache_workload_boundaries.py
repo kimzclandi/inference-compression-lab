@@ -76,7 +76,7 @@ def summarize(records, spec):
                 faster_rounds=faster, speed_gate=speedup >= spec['minimum_speedup'] and
                 faster >= spec['minimum_faster_rounds']))
     return dict(scope=spec['scope'], cells=summaries,
-                compared_request_pairs=len(spec['prefix_lengths']) * len(spec['traces']) * spec['rounds'] * 12,
+                compared_request_pairs=len(spec['prefix_lengths']) * spec['rounds'] * sum(len(t) for t in spec['traces'].values()),
                 token_parity=True, service_latency_claim=False)
 
 
