@@ -17,6 +17,7 @@ jobs:
       - name: Install explicit offline-verification dependency
         run: python -m pip install numpy==2.2.6
       - run: python -m unittest discover -s tests -v
+      - run: python -m experiments.verify_metal_trace_rows
       - run: python -m experiments.verify_release --require-license
       - name: Exact risk-feature pruning and archived timing arithmetic
         run: |
