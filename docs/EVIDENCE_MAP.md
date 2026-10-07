@@ -14,3 +14,5 @@
 [完整CI检查](../.github/workflows/tests.yml)验证工程与冻结记录；Linux CI不执行Metal GPU，也不证明业务模型质量。实现与上游技术归属见[Metal说明](metal-residual-rmsnorm.md#implementation-and-attribution)及[第三方说明](../THIRD_PARTY.md)。未声称原创低比特kernel、CUDA/Ascend实现或生产部署。
 
 [新增机制诊断与收益边界](mechanism-diagnostics.md)。与旧冻结实验分开保存，不替换历史结果。
+
+[新增相同运算量的同步粒度与Metal trace诊断](metal-sync-granularity.md)：确认计时敏感性，不宣称kernel加速或根因已确定。
