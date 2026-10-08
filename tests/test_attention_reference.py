@@ -1,9 +1,12 @@
 import copy
 import json
+from pathlib import Path
+import shutil
+import tempfile
 import unittest
 import numpy as np
 from lab.attention_reference import attention, prefix_mask
-from experiments.attention_backend_study import SPEC, summarize
+from experiments.attention_backend_study import SPEC, digest, summarize, verify
 
 
 class AttentionReferenceTests(unittest.TestCase):
@@ -59,3 +62,24 @@ class TimingIntegrityTests(unittest.TestCase):
         for r in self.rows:
             if r['arm']=='flash' and r['round']<2:r['event_ms_per_call']=3
         self.assertTrue(all(not r['speed_gate'] for r in summarize(self.rows,self.spec)['shapes']))
+
+
+class ArchivedSemanticIntegrityTests(unittest.TestCase):
+    def test_modified_artifact_is_rejected(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory)/'copy'
+            shutil.copytree('results/attention-cpu-semantics-v1',root)
+            with (root/'semantics.json').open('a') as f:f.write(' ')
+            with self.assertRaisesRegex(ValueError,'Artifact hash mismatch'):verify(root)
+
+    def test_self_consistent_hash_does_not_hide_failed_numerics(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory)/'copy'
+            shutil.copytree('results/attention-cpu-semantics-v1',root)
+            path=root/'semantics.json';data=json.loads(path.read_text())
+            data['cases'][0]['normalized_error']['math']=1.01
+            path.write_text(json.dumps(data))
+            receipt=root/'run.json';info=json.loads(receipt.read_text())
+            info['artifact_sha256']['semantics.json']=digest(path)
+            receipt.write_text(json.dumps(info))
+            with self.assertRaisesRegex(ValueError,'Semantic tolerance failed'):verify(root)
