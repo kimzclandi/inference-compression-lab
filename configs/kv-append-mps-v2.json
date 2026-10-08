@@ -29,7 +29,7 @@
   "rtol": 0.01,
   "minimum_speedup": 1.05,
   "minimum_faster_rounds": 4,
-  "timing_scope": "64-step synchronized host wall time; initialization recorded separately; attention uses synthetic independent precomputed queries and SDPA, not a model",
+  "timing_scope": "64-step synchronized host wall time; initialization recorded separately; attention uses synthetic independent precomputed queries and explicit FP32 Attention, not a model",
   "decision": "Report initialization, append-only and append+attention separately; per-shape primary gate on append+attention against cat; never infer end-to-end gain from copy counts",
   "attention_backend": "explicit_fp32",
   "supersedes": "v1 stopped on correctness before any timings; SDPA failure preserved; no shape, seed, tolerance or speed-gate changes"
