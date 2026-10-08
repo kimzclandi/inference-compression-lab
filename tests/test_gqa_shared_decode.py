@@ -70,3 +70,23 @@ class AdapterContracts(unittest.TestCase):
         result=subprocess.run([sys.executable,'-O','-m','experiments.gqa_shared_decode','--help'],capture_output=True,text=True)
         self.assertNotEqual(result.returncode,0)
         self.assertIn('optimized Python mode unsupported',result.stderr)
+
+class FrozenGQAEvidence(unittest.TestCase):
+    def test_preserved_correctness_failure_has_no_performance(self):
+        from experiments.verify_gqa_shared_decode import verify
+        r=verify('results/gqa-shared-decode-v1')
+        self.assertTrue(r['evidence_valid']);self.assertFalse(r['accepted'])
+        self.assertEqual(r['performance_trials'],0)
+        self.assertEqual(len(r['model_kv_failed_records']),10)
+
+    def test_modified_record_and_optimized_verifier_rejected(self):
+        import json,shutil,subprocess,sys,tempfile
+        from pathlib import Path
+        from experiments.verify_gqa_shared_decode import verify
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp)/'evidence';shutil.copytree('results/gqa-shared-decode-v1',root)
+            p=root/'model-correctness.json';data=json.loads(p.read_text());data[0]['kv'][18]['allclose']=True
+            p.write_text(json.dumps(data))
+            with self.assertRaisesRegex(AssertionError,'artifact modified'):verify(root)
+        result=subprocess.run([sys.executable,'-O','-m','experiments.verify_gqa_shared_decode'],capture_output=True,text=True)
+        self.assertNotEqual(result.returncode,0);self.assertIn('optimized Python mode unsupported',result.stderr)

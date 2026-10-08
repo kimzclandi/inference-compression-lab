@@ -69,3 +69,6 @@ jobs:
           python -m experiments.qa_nonlinear verify --folder results/qa-nonlinear-v2 --output "$RUNNER_TEMP/nonlinear-audit.json"
           python -m experiments.qa_rich verify --folder results/qa-rich-v1 --output "$RUNNER_TEMP/rich-audit.json"
           python -m experiments.verify_qa_rich_inputs --output "$RUNNER_TEMP/rich-input-audit.json"
+
+      - name: Shared GQA decode evidence (model KV gate failure; no speed claim)
+        run: python -m experiments.verify_gqa_shared_decode

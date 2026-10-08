@@ -46,6 +46,8 @@ The same exact pruning now accelerates [complete startup evidence verification](
 
 另用 Xcode Metal System Trace 对主形状 `2048×896` 做了 PID 归属的后验诊断：native 与自定义 Metal 各完整执行 5,000 次，均观察到 5,007 个 GPU compute intervals，累计 GPU compute duration 仅相差约 0.37%。这说明该融合在 Instruments interval 层面没有减少 command-buffer/compute-interval 数量；但模板只暴露 `RT Unit Active`，没有带宽、occupancy 或 cache counter，因此仍不能声称完成 Roofline 定位。该 trace 不是新 benchmark，不推翻固定研究中自定义 Metal 慢约 23.8% 与 `accepted=false` 的结论。
 
+新增 [GQA 组内共享 K/V 的 Metal decode 特化](docs/gqa-shared-decode.md)：8 个固定算子输入 × 3 条实现路径共 24 项输出检查通过；真实 Qwen 128-token 提示的 token/logprobs 达到冻结门槛，但 48 份最终 K/V 中 10 份失败。因此长提示模型场景与全部性能计时停止；没有 Attention 或整模型加速结论，候选默认关闭。原理来自已有 online softmax/split-K，非原创 Attention 架构。
+
 ## 运行与复现 / Run and reproduce
 
 Python 3.11/3.12。无需下载模型即可核验源码、证据和存档排序头；依赖安装需要网络或本地 wheel。输出目录必须全新。
