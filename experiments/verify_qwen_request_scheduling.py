@@ -26,6 +26,8 @@ def close(left, right):
 
 
 def verify(root=Path('results/qwen-request-scheduling-v1')):
+    if not __debug__:
+        raise RuntimeError('Evidence verification requires assertions; optimized Python is unsupported')
     root = Path(root)
     assert sha(root / 'run.json') == EXPECTED_RUN_SHA256, 'frozen receipt drift'
     run = json.loads((root / 'run.json').read_text())

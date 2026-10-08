@@ -1,6 +1,8 @@
 import json
 from pathlib import Path
 import shutil
+import subprocess
+import sys
 import tempfile
 import unittest
 from experiments.verify_qwen_request_scheduling import verify
@@ -39,6 +41,12 @@ class SchedulingEvidenceTests(unittest.TestCase):
         q.submit(Request('backdated', 0, 5000, 32))
         self.assertEqual(q.pop_ready(2).request_id, 'old')
         self.assertLessEqual(max(q.bypasses.values()), 3)
+
+    def test_optimized_python_fails_closed(self):
+        result = subprocess.run([sys.executable, '-O', '-m', 'experiments.verify_qwen_request_scheduling'],
+                                text=True, capture_output=True)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn('optimized Python is unsupported', result.stderr)
 
     def test_live_submissions_respect_arrival_and_duplicate_identity(self):
         q = AdmissionQueue([], 'short_budget')
