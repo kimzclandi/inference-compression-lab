@@ -6,6 +6,14 @@
 
 [研究发布说明 / Research prerelease](docs/research-prerelease.md) · [Release 与校验附件](https://github.com/kimzclandi/inference-compression-lab/releases/tag/v0.1.0-research.4) · [系统与代码导览](docs/qa-system-overview.md) · [MIT](LICENSE) · [数据许可](DATA_LICENSE.md) · [第三方归属](THIRD_PARTY.md)
 
+## 相同运算量的同步诊断
+
+固定32次有依赖运算，改变同步粒度后调用级计时明显变化；新增三臂进程级Metal trace和区间并集核验。该比例不是kernel或模型加速，底层硬件瓶颈仍未闭环。[协议、原始记录与边界](docs/metal-sync-granularity.md)。
+
+## 独立机制诊断与工作负载边界
+
+新增一次未通过速度门槛的 Metal 归约干预，以及五类固定 Cache 访问负载。结果保留失败、零命中无收益和适用边界；[代码、协议与逐次记录](docs/mechanism-diagnostics.md)。
+
 ## 解决什么问题 / Problem and scope
 
 模型量化以后，体积、速度和答案质量不一定同时改善。本项目固定模型 revision、数据、硬件与计时范围，研究真实 INT8/Q4/Q8 推理、错误定位、正确性排序和拒答之间的取舍，并用冻结协议、逐题原始记录与失败后关闭的入口约束结论。

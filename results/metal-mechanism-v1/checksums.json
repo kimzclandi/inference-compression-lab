@@ -1,0 +1,11 @@
+{
+  "correctness.json": "805082104e699368d8128aa511d461a9137e2565ecef1f3d5a5d349bfc848f89",
+  "protocol.json": "e86af0d9207c383765ec50a12aeaddee3519fa561d72ab84b741e566d934ef31",
+  "run.json": "d444ecc4a543fb2ac4883a5cd1d7b04e9aa574b66441284ecd21fd32d9c3359e",
+  "source/configs/mechanism-diagnostics-v1.json": "4f971a86236c82747487faacb8a82b071fd7a544b48fafcb833745abba137628",
+  "source/experiments/metal_mechanism_diagnostic.py": "7579a828207e553e9743bce6d94d4e895bb37d1046ab9c0a3cd95dfd09105a3b",
+  "source/lab/kernels/residual_rmsnorm.metal": "9fabf83f4257874eb3de315db3d45d419d1a3ba0b57cbc33813823dfa5488c91",
+  "source/lab/kernels/residual_rmsnorm_masked.metal": "edfa6c088f40ee165629166cde1c11d7661054c1ab633aaa4a8c60a8af388fe1",
+  "summary.json": "36f0cc5fae8ed739eea1ca2fabcf3827ead5e9bb0d89a54dbf1d3f3ee47951e4",
+  "timings.json": "1dc0d08eed2f0083ac9ddc7e1db9caf5146191f17d139479178b8582d2d75688"
+}

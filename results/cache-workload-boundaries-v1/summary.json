@@ -1,0 +1,138 @@
+{
+  "scope": "Synthetic serial real-model cache workload boundaries; no service or production claims",
+  "cells": [
+    {
+      "prefix_tokens": 64,
+      "trace": "unique",
+      "hits": 0,
+      "requests": 12,
+      "median_sum_request_seconds": {
+        "direct": 0.4090565830002788,
+        "cache": 0.4123497110001608
+      },
+      "direct_over_cache": 0.9920137497079979,
+      "faster_rounds": 0,
+      "speed_gate": false
+    },
+    {
+      "prefix_tokens": 64,
+      "trace": "cycle4",
+      "hits": 0,
+      "requests": 12,
+      "median_sum_request_seconds": {
+        "direct": 0.40929333399947154,
+        "cache": 0.41280333299982885
+      },
+      "direct_over_cache": 0.9914971640978519,
+      "faster_rounds": 0,
+      "speed_gate": false
+    },
+    {
+      "prefix_tokens": 64,
+      "trace": "bursts",
+      "hits": 9,
+      "requests": 12,
+      "median_sum_request_seconds": {
+        "direct": 0.409949458999904,
+        "cache": 0.3409667480001417
+      },
+      "direct_over_cache": 1.202315068564204,
+      "faster_rounds": 5,
+      "speed_gate": true
+    },
+    {
+      "prefix_tokens": 64,
+      "trace": "skew",
+      "hits": 6,
+      "requests": 12,
+      "median_sum_request_seconds": {
+        "direct": 0.4102784989997872,
+        "cache": 0.3645932910000056
+      },
+      "direct_over_cache": 1.1253045767092322,
+      "faster_rounds": 5,
+      "speed_gate": true
+    },
+    {
+      "prefix_tokens": 64,
+      "trace": "byte_pressure",
+      "hits": 0,
+      "requests": 12,
+      "median_sum_request_seconds": {
+        "direct": 0.4108751669997446,
+        "cache": 0.4133098759997438
+      },
+      "direct_over_cache": 0.9941092406899062,
+      "faster_rounds": 0,
+      "speed_gate": false
+    },
+    {
+      "prefix_tokens": 1024,
+      "trace": "unique",
+      "hits": 0,
+      "requests": 12,
+      "median_sum_request_seconds": {
+        "direct": 1.0694226230001505,
+        "cache": 1.0707903749998877
+      },
+      "direct_over_cache": 0.9987226706256699,
+      "faster_rounds": 2,
+      "speed_gate": false
+    },
+    {
+      "prefix_tokens": 1024,
+      "trace": "cycle4",
+      "hits": 0,
+      "requests": 12,
+      "median_sum_request_seconds": {
+        "direct": 1.097143748000235,
+        "cache": 1.1015699580002547
+      },
+      "direct_over_cache": 0.9959819074876962,
+      "faster_rounds": 2,
+      "speed_gate": false
+    },
+    {
+      "prefix_tokens": 1024,
+      "trace": "bursts",
+      "hits": 9,
+      "requests": 12,
+      "median_sum_request_seconds": {
+        "direct": 1.1284297510001124,
+        "cache": 0.5412545850001607
+      },
+      "direct_over_cache": 2.0848410013926766,
+      "faster_rounds": 5,
+      "speed_gate": true
+    },
+    {
+      "prefix_tokens": 1024,
+      "trace": "skew",
+      "hits": 6,
+      "requests": 12,
+      "median_sum_request_seconds": {
+        "direct": 1.1399295429997665,
+        "cache": 0.7342689159997917
+      },
+      "direct_over_cache": 1.552468745660602,
+      "faster_rounds": 5,
+      "speed_gate": true
+    },
+    {
+      "prefix_tokens": 1024,
+      "trace": "byte_pressure",
+      "hits": 0,
+      "requests": 12,
+      "median_sum_request_seconds": {
+        "direct": 1.1335189599999467,
+        "cache": 1.1345332119998375
+      },
+      "direct_over_cache": 0.9991060182380179,
+      "faster_rounds": 0,
+      "speed_gate": false
+    }
+  ],
+  "compared_request_pairs": 600,
+  "token_parity": true,
+  "service_latency_claim": false
+}
