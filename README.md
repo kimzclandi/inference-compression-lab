@@ -48,6 +48,8 @@ The same exact pruning now accelerates [complete startup evidence verification](
 
 新增 [GQA 组内共享 K/V 的 Metal decode 特化](docs/gqa-shared-decode.md)：8 个固定算子输入 × 3 条实现路径共 24 项输出检查通过；真实 Qwen 128-token 提示的 token/logprobs 达到冻结门槛，但 48 份最终 K/V 中 10 份失败。因此长提示模型场景与全部性能计时停止；没有 Attention 或整模型加速结论，候选默认关闭。原理来自已有 online softmax/split-K，非原创 Attention 架构。
 
+后续[固定输入数值诊断](docs/gqa-shared-diagnostic.md)用原生复跑、适配器原生控制和 384 次同输入 float64 对照，精确重现上述输出与最终 K/V。首个观察到的差异在第 1 个 decode 输入、第 5 层 Attention 输出的两个 FP16 值（各 1 ULP，层索引从 0 开始）；同输入算子检查均通过，但模型 K/V 的 10 份失败仍存在。已归档完整 K/V 与坐标供 CPU 重放；没有确定具体浮点机制、修复模型门槛或开始性能计时。
+
 ## 运行与复现 / Run and reproduce
 
 Python 3.11/3.12。无需下载模型即可核验源码、证据和存档排序头；依赖安装需要网络或本地 wheel。输出目录必须全新。

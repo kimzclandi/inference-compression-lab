@@ -72,3 +72,8 @@ jobs:
 
       - name: Shared GQA decode evidence (model KV gate failure; no speed claim)
         run: python -m experiments.verify_gqa_shared_decode
+
+      - name: GQA numerical diagnosis (complete array replay; original model gate remains failed)
+        run: |
+          python -m experiments.verify_gqa_shared_diagnostic > "$RUNNER_TEMP/gqa-diagnostic.json"
+          python -c 'import json, os; r=json.load(open(os.path.join(os.environ["RUNNER_TEMP"], "gqa-diagnostic.json"))); assert r["evidence_valid"] and r["diagnostic_complete"]; assert r["shadow_probes_checked"] == 384 and r["final_kv_arrays_replayed"] == 192; assert not r["original_v1_model_gate_pass"] and not r["new_trajectory_model_conditions"]["final_kv_gate"]; assert r["performance_trials"] == 0'
