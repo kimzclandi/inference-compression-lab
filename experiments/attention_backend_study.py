@@ -12,13 +12,16 @@ import time
 
 import numpy as np
 from lab.attention_reference import attention, prefix_mask
+from lab.attention_failure import validate_case, verify_failure
 
 SPEC = Path('configs/attention-backend-v1.json')
-SOURCES = [str(SPEC), 'lab/attention_reference.py', __file__]
+SOURCES = [str(SPEC), 'lab/attention_reference.py', 'lab/attention_failure.py', __file__]
 
 
 def save(path, obj):
-    path.write_text(json.dumps(obj, indent=2, allow_nan=False) + '\n')
+    temporary = path.with_suffix(path.suffix + '.tmp')
+    temporary.write_text(json.dumps(obj, indent=2, allow_nan=False) + '\n')
+    temporary.replace(path)
 
 
 def digest(path):
@@ -162,17 +165,22 @@ def cuda_benchmark(torch, output, spec, info):
     with torch.inference_mode():
         for b in spec['batches']:
             for length, keys in spec['shapes']:
-                inputs = [torch.from_numpy(rng.normal(size=(b, spec['heads'], n, spec['head_dim'])).astype('float16')).cuda()
-                          for n in (length, keys, keys)]
-                ref = torch_attention(torch, *inputs, 'eager_fp32').float().cpu()
-                for arm in spec['arms']:
+                host_inputs = [rng.normal(size=(b, spec['heads'], n, spec['head_dim'])).astype('float16')
+                               for n in (length, keys, keys)]
+                inputs = []
+                def evaluate(arm):
+                    # Retain the original host inputs even if transfer/reference fails.
+                    if not inputs:
+                        inputs.extend(torch.from_numpy(array).cuda() for array in host_inputs)
                     with context(arm):
-                        actual = torch_attention(torch, *inputs, arm).float().cpu()
-                        torch.testing.assert_close(actual, ref, atol=spec['atol'], rtol=spec['rtol'])
-                        checks.append(dict(batch=b, query_length=length, key_length=keys, arm=arm,
-                                           max_abs_error=(actual-ref).abs().max().item(),
-                                           normalized_error=((actual-ref).abs()/(spec['atol']+spec['rtol']*ref.abs())).max().item()))
-                save(output / 'correctness.json', checks)
+                        return torch_attention(torch, *inputs, arm).float().cpu().numpy()
+                def compare(actual, reference):
+                    torch.testing.assert_close(torch.from_numpy(actual), torch.from_numpy(reference),
+                                               atol=spec['atol'], rtol=spec['rtol'])
+                validate_case(output, checks, dict(batch=b, query_length=length, key_length=keys),
+                              host_inputs, spec['arms'], evaluate, compare, spec['atol'], spec['rtol'])
+                # A failed shape raises before warmup/memory/timing. Earlier shape
+                # timings remain partial records; a failed run never gets a summary.
                 for arm in spec['arms']:
                     with context(arm):
                         for _ in range(spec['warmups']):
@@ -221,7 +229,8 @@ def run(output, mode):
         info.update(status='failed', error=f'{type(exc).__name__}: {exc}')
         raise
     finally:
-        info['artifact_sha256'] = {p.name: digest(p) for p in output.glob('*.json') if p.name != 'run.json'}
+        info['artifact_sha256'] = {p.name: digest(p) for p in output.iterdir()
+                                  if p.is_file() and p.suffix in ('.json', '.npz') and p.name != 'run.json'}
         save(output / 'run.json', info)
 
 
@@ -276,7 +285,10 @@ def verify(output):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('mode', choices=['cpu-semantics', 'cuda', 'verify'])
+    parser.add_argument('mode', choices=['cpu-semantics', 'cuda', 'verify', 'verify-failure'])
     parser.add_argument('--output', type=Path, required=True)
     args = parser.parse_args()
-    verify(args.output) if args.mode == 'verify' else run(args.output, args.mode)
+    if args.mode == 'verify-failure':
+        print(json.dumps(verify_failure(args.output), indent=2, allow_nan=False))
+    else:
+        verify(args.output) if args.mode == 'verify' else run(args.output, args.mode)

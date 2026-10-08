@@ -101,3 +101,5 @@ jobs:
           python -m experiments.attention_backend_study verify --output "$RUNNER_TEMP/attention-cpu"
       - name: Required cache lifecycle and synchronous failure-injection tests
         run: python -m unittest discover -s tests -p test_append_only_kv.py -v
+      - name: CUDA harness correctness-failure archival on CPU (no CUDA execution)
+        run: python -m unittest discover -s tests -p test_attention_failure.py -v

@@ -97,3 +97,36 @@ Directories must not exist. Exceptions leave a failed receipt and partial record
 failed output is not replaced. Structural/hash verification checks archived
 evidence without requiring torch or a GPU; CPU CI additionally re-executes semantics.
 Neither form of CI verifies pending CUDA timing code on hardware.
+
+## Correctness failure evidence
+
+The CUDA runner now persists each arm's correctness receipt before continuing.
+Previously, an assertion could stop execution before either the failed arm or
+earlier successful arms for that shape were saved. This was an evidence-loss bug,
+not a discovered CUDA numerical failure: the CUDA protocol is still unexecuted.
+
+On a correctness mismatch, the runner retains that case's Q/K/V, reference and
+actual output in a NumPy archive, together with shapes, finite-value checks,
+errors and hashes. Reference/backend exceptions retain available inputs and the
+failure stage; an unavailable output is not fabricated. Non-finite arrays remain
+in the archive, while non-computable JSON metrics use null and explicit status.
+The failing shape does not enter warmup or timing. Timings from any previously
+completed shapes remain partial evidence and cannot pass whole-study acceptance.
+The ordinary `verify` command continues to reject a failed run.
+
+For a run stopped at correctness, inspect and replay its failure evidence without
+accepting its timings:
+
+```bash
+python -m experiments.attention_backend_study verify-failure --output runs/attention-cuda
+```
+
+This separate audit can establish that the archived mismatch or exception receipt
+is consistent; it does not turn a failed experiment into a passed study or rerun a
+GPU exception on CPU.
+
+CPU fault injection tests cover these failure paths. They validate evidence
+handling and stopping behavior, not GPU kernel correctness, CUDA performance,
+device-loss recovery or a model-level result. Existing frozen sources, protocols,
+results and acceptance thresholds remain unchanged; a future CUDA run must use
+a clean committed checkout and a new output directory.
