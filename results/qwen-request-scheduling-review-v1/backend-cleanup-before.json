@@ -1,0 +1,7 @@
+{
+  "failure": "early backend error before KV allocation can be masked by None.nbytes in finally",
+  "old_source": "../qwen-request-scheduling-v1/source/experiments/qwen_request_scheduling.py",
+  "fix": "safe unallocated metadata; preserve original exception on secondary cleanup failure; save failed-request partial delivery receipt",
+  "verification": "CPU fake-cache and synchronization-error tests only; no backend/OOM GPU recovery claim",
+  "performance_rerun": false
+}

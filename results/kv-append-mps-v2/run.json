@@ -1,0 +1,32 @@
+{
+  "status": "complete",
+  "git_head": "ab2ed35b904297190a19dad0ce57e6117f681e57",
+  "start_utc": "2026-10-08T09:21:48.593850+00:00",
+  "platform": "macOS-27.0-arm64-arm-64bit",
+  "source_sha256": {
+    "configs/kv-append-mps-v2.json": "7e1e6e5a6f3fecfb7260bd85c890f59861602c654c883990290ea8274b5ac298",
+    "lab/append_only_kv.py": "d38ce4c24c0f5f1bbf1855675d430c63369840c34a6d4a338c50689266afd421",
+    "experiments/kv_append_mps.py": "9259bd27e23b2c40ff80c1864981cb1c2c4252a5ba4e333df1540adff91cb480",
+    "experiments/attention_backend_study.py": "2b8d9b8b66d236e603ae591998ecbeb594a43ce8930667fce1d8b019c9919d71",
+    "experiments/attention_mps_study.py": "5e6a13c3cfe6fffa79e36ec5d246455645e90f02db63a25b079e4635e32ae578",
+    "lab/attention_reference.py": "7f2d8a0b014c2715df2a1c7f9aa784cb8a6b41a905e7678c8eb8df267468ffe6"
+  },
+  "hardware": [
+    "Chip: Apple M4 Max",
+    "Total Number of Cores: 16 (12 Performance and 4 Efficiency)",
+    "Memory: 48 GB",
+    "Chipset Model: Apple M4 Max",
+    "Total Number of Cores: 40"
+  ],
+  "torch": "2.8.0",
+  "numpy": "2.2.6",
+  "fallback": false,
+  "artifact_sha256": {
+    "summary.json": "709c81cc747634432d2f1a28bd266e26851b69f46c8e4074b710c2e0972821c6",
+    "timings.json": "6bd24112caf3485d344b8fef938da0f43c7413acb2ce0a9809c61a08564d62a5",
+    "witnesses.json": "45c7e3df8b5e95ad46f98b36c6fe45c6e55944bb8c9043faab83249da1da5922",
+    "correctness.json": "5a30e47151249cc11b59833d39719ec7895fe1c03141386c681ae24f4a05dda6",
+    "inputs.json": "6c4e6e6efb24c093f73d12a98e2ae089262b9d80f00177e88222312153570a1a"
+  },
+  "end_utc": "2026-10-08T09:22:26.363596+00:00"
+}
