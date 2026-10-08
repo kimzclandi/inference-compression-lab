@@ -39,6 +39,14 @@ This is forward-only FP32 coverage, not exhaustive correctness or backward testi
 
 ## Frozen CUDA protocol, not yet executed
 
+CPU study completed at protocol commit `a33dfa0fe1b20d93b5f7c2213dd4895b5596b9f3`:
+all 36 cases × two arms passed; largest absolute errors were `8.778730345637697e-05`
+(explicit FP32) and `2.5588181487012918e-05` (math). The counterexample returned
+`2.5` versus `1.0`; both cached-suffix checks passed. Environment: macOS arm64,
+PyTorch 2.8.0, NumPy 2.2.6, CPU one thread. No timing was measured.
+See [raw semantic records](../results/attention-cpu-semantics-v1/semantics.json)
+and [source/environment receipt](../results/attention-cpu-semantics-v1/run.json).
+
 [Protocol](../configs/attention-backend-v1.json): PyTorch 2.8.0 (CUDA wheel suffix
 allowed), FP16, H=8, D=64, B=1/4; prefill L=S=512/1024, decode L=1 with
 S=1024/4096. There are 8 shape cells and three arms:

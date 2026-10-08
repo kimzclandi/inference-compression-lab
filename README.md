@@ -48,6 +48,8 @@ The same exact pruning now accelerates [complete startup evidence verification](
 
 ## 运行与复现 / Run and reproduce
 
+新增 [Attention 掩码与后端实验](docs/attention-backend-study.md)：CPU 上 36 组输入、两条实现路径通过独立 float64 参考检查，并验证带缓存 decode/chunk 与完整 prefill 对应位置一致。CUDA 后端对照协议与执行脚本已准备，**尚未在 NVIDIA GPU 执行，没有 CUDA 加速结论**。PyTorch 提供优化 kernel，本项目贡献实验、语义检查和证据审计。
+
 Python 3.11/3.12。无需下载模型即可核验源码、证据和存档排序头；依赖安装需要网络或本地 wheel。输出目录必须全新。
 
 ```bash
