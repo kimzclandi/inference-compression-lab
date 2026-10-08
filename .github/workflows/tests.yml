@@ -73,6 +73,11 @@ jobs:
       - name: Archived attention semantics (no CUDA claim)
         run: python -m experiments.attention_backend_study verify --output results/attention-cpu-semantics-v1
 
+      - name: Apple GPU archived timing and non-BLAS output-row replay (no GPU execution)
+        run: |
+          python -m experiments.attention_mps_study verify --output results/attention-mps-v1
+          python -m experiments.verify_attention_mps_reference
+
   attention-cpu:
     runs-on: ubuntu-latest
     steps:

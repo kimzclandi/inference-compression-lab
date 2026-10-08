@@ -50,6 +50,8 @@ The same exact pruning now accelerates [complete startup evidence verification](
 
 新增 [Attention 掩码与后端实验](docs/attention-backend-study.md)：CPU 上 36 组输入、两条实现路径通过独立 float64 参考检查，并验证带缓存 decode/chunk 与完整 prefill 对应位置一致。CUDA 后端对照协议与执行脚本已准备，**尚未在 NVIDIA GPU 执行，没有 CUDA 加速结论**。PyTorch 提供优化 kernel，本项目贡献实验、语义检查和证据审计。
 
+另已完成 [M4 Max Attention 对照实验](docs/attention-mps-study.md)：8 个固定 prefill/decode 形状中，PyTorch MPS SDPA 相对更快的显式 FP16 路径，同步 API 延迟改善 **1.422–1.771×**；24 组完整输出通过 float64 参考检查。比较的是框架实现，非原创 kernel、纯 GPU 时间或整模型加速。NumPy 参考计算告警及独立非 BLAS 复核结果均保留；CUDA/Ascend 仍未实测。
+
 Python 3.11/3.12。无需下载模型即可核验源码、证据和存档排序头；依赖安装需要网络或本地 wheel。输出目录必须全新。
 
 ```bash

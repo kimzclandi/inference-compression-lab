@@ -3,6 +3,7 @@ import json
 import unittest
 import numpy as np
 from experiments.attention_mps_study import SPEC, make_arms, summarize
+from experiments.verify_attention_mps_reference import nonblas_reference
 
 
 class MPSProtocolTests(unittest.TestCase):
@@ -37,3 +38,9 @@ class MPSProtocolTests(unittest.TestCase):
     def test_cached_chunk_is_out_of_performance_scope(self):
         with self.assertRaises(ValueError):
             make_arms(None,[np.zeros((1,1,3,2)),np.zeros((1,1,7,2)),np.zeros((1,1,7,2))])
+
+    def test_nonblas_oracle_uniform_and_chunk_boundaries(self):
+        k=np.zeros((1,1,4,1));v=np.arange(1,5).reshape(1,1,4,1)
+        for length,expected in [(4,[1,1.5,2,2.5]),(2,[2,2.5]),(1,[2.5])]:
+            q=np.zeros((1,1,length,1))
+            np.testing.assert_array_equal(nonblas_reference(q,k,v,chunk=1).ravel(),expected)

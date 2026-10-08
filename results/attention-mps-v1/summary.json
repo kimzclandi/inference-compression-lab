@@ -1,0 +1,192 @@
+{
+  "shapes": [
+    {
+      "batch": 1,
+      "query_length": 512,
+      "key_length": 512,
+      "median_seconds": {
+        "eager_fp16": 0.00034906199925899273,
+        "eager_fp32": 0.00043404149892012356,
+        "sdpa_auto": 0.0002454585001032683
+      },
+      "controls": {
+        "eager_fp16": {
+          "speedup": 1.4220815295136928,
+          "faster_rounds": 5,
+          "passed": true
+        },
+        "eager_fp32": {
+          "speedup": 1.7682887279825934,
+          "faster_rounds": 5,
+          "passed": true
+        }
+      },
+      "speed_gate": true
+    },
+    {
+      "batch": 1,
+      "query_length": 1024,
+      "key_length": 1024,
+      "median_seconds": {
+        "eager_fp16": 0.0008290415007650154,
+        "eager_fp32": 0.0010400834999018116,
+        "sdpa_auto": 0.00048039600005722605
+      },
+      "controls": {
+        "eager_fp16": {
+          "speedup": 1.7257460525613406,
+          "faster_rounds": 5,
+          "passed": true
+        },
+        "eager_fp32": {
+          "speedup": 2.165054454612266,
+          "faster_rounds": 5,
+          "passed": true
+        }
+      },
+      "speed_gate": true
+    },
+    {
+      "batch": 1,
+      "query_length": 1,
+      "key_length": 1024,
+      "median_seconds": {
+        "eager_fp16": 0.00018400000044493936,
+        "eager_fp32": 0.0002492915000402718,
+        "sdpa_auto": 0.00011420849932619603
+      },
+      "controls": {
+        "eager_fp16": {
+          "speedup": 1.6110885050630837,
+          "faster_rounds": 5,
+          "passed": true
+        },
+        "eager_fp32": {
+          "speedup": 2.1827753758348503,
+          "faster_rounds": 5,
+          "passed": true
+        }
+      },
+      "speed_gate": true
+    },
+    {
+      "batch": 1,
+      "query_length": 1,
+      "key_length": 4096,
+      "median_seconds": {
+        "eager_fp16": 0.0002160204994652304,
+        "eager_fp32": 0.00030529200012097135,
+        "sdpa_auto": 0.00012333300037425943
+      },
+      "controls": {
+        "eager_fp16": {
+          "speedup": 1.7515222917605722,
+          "faster_rounds": 5,
+          "passed": true
+        },
+        "eager_fp32": {
+          "speedup": 2.4753472241374923,
+          "faster_rounds": 5,
+          "passed": true
+        }
+      },
+      "speed_gate": true
+    },
+    {
+      "batch": 4,
+      "query_length": 512,
+      "key_length": 512,
+      "median_seconds": {
+        "eager_fp16": 0.0008536665000065113,
+        "eager_fp32": 0.001051021000421315,
+        "sdpa_auto": 0.0004952709996359772
+      },
+      "controls": {
+        "eager_fp16": {
+          "speedup": 1.723635142445154,
+          "faster_rounds": 5,
+          "passed": true
+        },
+        "eager_fp32": {
+          "speedup": 2.122112946636917,
+          "faster_rounds": 5,
+          "passed": true
+        }
+      },
+      "speed_gate": true
+    },
+    {
+      "batch": 4,
+      "query_length": 1024,
+      "key_length": 1024,
+      "median_seconds": {
+        "eager_fp16": 0.0025030625001818407,
+        "eager_fp32": 0.003148229499856825,
+        "sdpa_auto": 0.0014827919994786498
+      },
+      "controls": {
+        "eager_fp16": {
+          "speedup": 1.6880739180289066,
+          "faster_rounds": 5,
+          "passed": true
+        },
+        "eager_fp32": {
+          "speedup": 2.1231767509965955,
+          "faster_rounds": 5,
+          "passed": true
+        }
+      },
+      "speed_gate": true
+    },
+    {
+      "batch": 4,
+      "query_length": 1,
+      "key_length": 1024,
+      "median_seconds": {
+        "eager_fp16": 0.00019966599938925356,
+        "eager_fp32": 0.0002856250002878369,
+        "sdpa_auto": 0.0001250000004802132
+      },
+      "controls": {
+        "eager_fp16": {
+          "speedup": 1.5973279889775645,
+          "faster_rounds": 5,
+          "passed": true
+        },
+        "eager_fp32": {
+          "speedup": 2.284999993524398,
+          "faster_rounds": 5,
+          "passed": true
+        }
+      },
+      "speed_gate": true
+    },
+    {
+      "batch": 4,
+      "query_length": 1,
+      "key_length": 4096,
+      "median_seconds": {
+        "eager_fp16": 0.00030908350072422763,
+        "eager_fp32": 0.0006126250000306754,
+        "sdpa_auto": 0.00017454150111007039
+      },
+      "controls": {
+        "eager_fp16": {
+          "speedup": 1.7708309986936093,
+          "faster_rounds": 5,
+          "passed": true
+        },
+        "eager_fp32": {
+          "speedup": 3.5099102284237733,
+          "faster_rounds": 5,
+          "passed": true
+        }
+      },
+      "speed_gate": true
+    }
+  ],
+  "cuda_measured": false,
+  "custom_kernel": false,
+  "model_speedup_claim": false,
+  "timing_scope": "One API call plus completion synchronization per sample; synchronized host wall time including dispatch, allocations and GPU work, not pure GPU kernel time"
+}

@@ -7,6 +7,8 @@ Attention kernel, model-quality study, serving benchmark, or CUDA/Ascend success
 The CPU semantic study and CUDA performance study have separate output folders.
 CUDA execution is pending access to an NVIDIA GPU. CPU correctness cannot fill
 that evidence gap. Existing frozen experiments and negative results are unchanged.
+The separate [Apple GPU study](attention-mps-study.md) has now executed on M4 Max;
+its results must not be relabeled as CUDA or an original Attention kernel.
 
 ## Mechanism and inputs
 
