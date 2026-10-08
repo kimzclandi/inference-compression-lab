@@ -12,8 +12,10 @@ import statistics
 
 from lab.request_scheduling import AdmissionQueue, Request
 
-# Post-run generic backdated-arrival hardening; archived timing source is unchanged.
+# Post-run boundary hardening; archived timing source is unchanged.
 CURRENT_POLICY_SHA256 = '44f28343fa2688e71696da106052fb84721db05aa85b5822a676fa182bfe99e0'
+CURRENT_RUNNER_SHA256 = 'db41ef9d584bf26419c36d469fdc9a1014b1be8031f66b8bd57d552ce5c59aca'
+RESOURCE_HELPER_SHA256 = 'e693686dddedfb4d69636bc3ac92e7257468fe6027eecefcd86dc387953ea137'
 EXPECTED_RUN_SHA256 = '4de1218bbcc19059d4dfb53ca4d0c86560df4b66960051b12f5f6f5319d15843'
 
 
@@ -36,8 +38,10 @@ def verify(root=Path('results/qwen-request-scheduling-v1')):
     assert len(run['protocol_commit']) == 40
     for name, expected in run['source_sha256'].items():
         assert sha(root / 'source' / name) == expected, 'archived source modified'
-        current_expected = CURRENT_POLICY_SHA256 if name == 'lab/request_scheduling.py' else expected
+        current_expected = {'lab/request_scheduling.py': CURRENT_POLICY_SHA256,
+                            'experiments/qwen_request_scheduling.py': CURRENT_RUNNER_SHA256}.get(name, expected)
         assert sha(Path(name)) == current_expected, 'current execution source drift'
+    assert sha(Path('lab/request_resources.py')) == RESOURCE_HELPER_SHA256, 'resource helper drift'
     assert json.loads((root / 'source/configs/qwen-request-scheduling-v1.json').read_text()) == spec
     for name, expected in run['artifacts'].items():
         assert sha(root / name) == expected, 'artifact modified'

@@ -12,9 +12,10 @@ import threading
 import time
 
 from lab.request_scheduling import AdmissionQueue, Request, consume_stream, summarize
+from lab.request_resources import collect_after_sync
 
 SPEC = Path('configs/qwen-request-scheduling-v1.json')
-SOURCES = [str(SPEC), 'lab/request_scheduling.py', 'experiments/qwen_request_scheduling.py']
+SOURCES = [str(SPEC), 'lab/request_scheduling.py', 'experiments/qwen_request_scheduling.py', 'lab/request_resources.py']
 
 
 def digest(path):
@@ -79,6 +80,7 @@ def main():
             iterator = generate_step(mx.array(token_ids[req['id']]), model,
                                      max_tokens=req['output_tokens'], prompt_cache=cache)
             outcome = 'running'
+            original_error = None
             try:
                 def on_token(item):
                     token, scores = item
@@ -88,15 +90,25 @@ def main():
                 outcome = consume_stream(iterator, on_token, cancel_after=cancel_after, fail_after=fail_after)
             except RuntimeError as error:
                 if str(error) != 'injected consumer failure':
+                    original_error = error
                     raise
                 outcome = 'injected_failure'
+            except BaseException as error:
+                original_error = error
+                raise
             finally:
                 # A native generator may prefetch work before yielding. Close does
                 # not abort that device work; sync before dropping private caches.
-                mx.synchronize()
-                kv_bytes = sum(c.keys.nbytes + c.values.nbytes for c in cache)
-                offset = [int(c.offset) for c in cache]
+                cleanup = collect_after_sync(cache, mx.synchronize, original_error)
+                kv_bytes = cleanup['allocated_kv_bytes']
+                offset = cleanup['layer_offsets']
                 del iterator, cache
+                if original_error is not None:
+                    save(args.output / 'request-failure.json', dict(
+                        id=req['id'], error_type=type(original_error).__name__,
+                        delivered_tokens=tokens,
+                        token_times_service_s=[stamp-start for stamp in stamps],
+                        elapsed_service_s=time.perf_counter()-start, cleanup=cleanup))
             end = time.perf_counter()
             row = dict(id=req['id'], outcome=outcome, tokens=tokens, token_times=stamps,
                        start=start, end=end, allocated_kv_bytes=kv_bytes, layer_offsets=offset)
@@ -212,7 +224,7 @@ def main():
         # Keep private paths and traceback local, not in the public receipt.
         raise
     finally:
-        for name in ('correctness.json', 'lifecycle.json', 'trials.json', 'in-progress.json'):
+        for name in ('correctness.json', 'lifecycle.json', 'trials.json', 'in-progress.json', 'request-failure.json'):
             if (args.output / name).exists():
                 info['artifacts'][name] = digest(args.output / name)
         save(args.output / 'run.json', info)
