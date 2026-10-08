@@ -9,6 +9,7 @@
 | Qwen量化回退确认失败；MiniLM同线程INT8负结果 | [诊断](../lab/quantization_diagnostics.py) | [研究发布与各轮证据](research-prerelease.md)、[结果树](../results/) |
 | GQA共享Metal decode：算子8输入×3路径通过，模型48份K/V中10份失败；性能未运行 | [接入](../lab/gqa_shared_decode.py)、[kernel](../lab/kernels/gqa_shared_partial.metal) | [协议](../configs/gqa-shared-decode-v1.json)、[报告](gqa-shared-decode.md)、[冻结记录](../results/gqa-shared-decode-v1/run.json) |
 | GQA数值诊断：原生重复/适配器控制一致；384同输入参考检查；旧10份K/V失败精确重现，性能0 | [捕获与控制](../experiments/gqa_shared_diagnostic.py)、[独立CPU重放](../experiments/verify_gqa_shared_diagnostic.py) | [冻结协议](../configs/gqa-shared-diagnostic-v1.json)、[诊断报告](gqa-shared-diagnostic.md)、[完整数组与记录](../results/gqa-shared-diagnostic-v1/) |
+| exp单因素干预：48处旧差异消除、149处持续、37处新增；假设未通过，未运行模型/性能 | [执行](../experiments/gqa_exp_choice.py)、[独立CPU重放](../experiments/verify_gqa_exp_choice.py) | [协议](../configs/gqa-exp-choice-v1.json)、[报告](gqa-exp-choice.md)、[完整输出与回执](../results/gqa-exp-choice-v1/) |
 | KV Cache容量/失败提交语义；固定1024-token前缀循环下降51.09%；480请求token一致 | [LRU](../lab/prefix_cache.py)、[Qwen接入](../lab/qwen_prefix.py) | [生命周期研究及原始trace](qwen-cache-lifecycle-study.md) |
 
 每项速度来自各自固定负载，不能拼接为统一端到端加速。启动不含进程启动/前置导入，不是冷磁盘测量。480请求为40条固定trace的请求记录。Metal失败结果与所有质量门槛保持原样；逻辑字节不是DRAM实测，Instruments interval不是kernel launch。

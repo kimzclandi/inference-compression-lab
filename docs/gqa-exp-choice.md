@@ -57,3 +57,48 @@ python -m unittest discover -s tests -p 'test_gqa_exp_choice*.py' -v
 CPU replay checks complete arrays and recorded receipts; it cannot rerun GPU
 layout checks or prove a Metal instruction sequence. AI-assisted implementation
 and execution remain separate from the owner's independent understanding.
+
+## Frozen outcome: substitution is insufficient
+
+Protocol, runner and instrumented operators were committed at
+`b87038ed2defe2991d531a119832da0f57056824` before the sole GPU run. All 384
+reconstructed-input, native/old-candidate/tap-output and cast fidelity checks
+passed. The [manifest](../results/gqa-exp-choice-v1/run.json),
+[complete metrics](../results/gqa-exp-choice-v1/records.json),
+[aggregate](../results/gqa-exp-choice-v1/summary.json) and all output arrays retain
+the unsuccessful hypothesis without changing the original model-KV result.
+
+| Full fixed input set | Result |
+|---|---:|
+| Output elements per arm | 344,064 |
+| Original FP16 native/candidate disagreements | 197 |
+| Old disagreements resolved / persistent | 48 / 149 |
+| Newly introduced disagreements | 37 |
+| Fast-family FP16 native disagreements | 186 |
+| FP16 values changed by intervention | 85 |
+| FP16 absolute error vs float64 improved / worsened / unchanged | 47 / 38 / 343,979 |
+| FP32 tap values changed by intervention | 162,861 |
+| FP32 absolute error improved / worsened / unchanged | 78,866 / 83,995 / 181,203 |
+
+Native, standard-half and fast-half all meet the old operator tolerance against
+float64 on every element. Standard/fast FP32 maximum absolute errors are
+8.241045585499762e-6 / 7.287371269093512e-6; their full-set mean absolute errors
+are 6.316642523708049e-8 / 6.339820064375524e-8. Thus a lower maximum and fewer
+native disagreements do not mean uniformly better accuracy; the mean error
+increased slightly. All three FP16 arms have the same maximum absolute error,
+0.0019517061520968326. None is treated as an exact mathematical ground truth.
+
+The source-level exp-family intervention changes outputs under this fixed
+schedule, but it does not eliminate the observed native disagreements. The
+predeclared hypothesis is **not supported**. There is no evidence to adopt the
+variant as a model fix. This experiment cannot attribute the remaining differences
+to a unique reduction/FMA mechanism or predict a new variant's final K/V state.
+The old candidate's 10/48 model-KV failures remain preserved; this new variant
+has **zero model runs and zero performance trials**.
+
+Independent CPU replay checks all 384 probes, 197 original-disagreement midpoint
+records, all generated sources, 778 artifact hashes and all metrics. It recomputes
+the float64 reference with a separate sum-based implementation. The archive totals
+8,033,287 bytes and observed MLX allocator peak is 278,280 bytes; these are budget
+observations, not physical device memory measurements or optimization claims.
+There was no adaptive follow-up run, tolerance change or input selection.

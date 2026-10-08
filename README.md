@@ -50,6 +50,8 @@ The same exact pruning now accelerates [complete startup evidence verification](
 
 后续[固定输入数值诊断](docs/gqa-shared-diagnostic.md)用原生复跑、适配器原生控制和 384 次同输入 float64 对照，精确重现上述输出与最终 K/V。首个观察到的差异在第 1 个 decode 输入、第 5 层 Attention 输出的两个 FP16 值（各 1 ULP，层索引从 0 开始）；同输入算子检查均通过，但模型 K/V 的 10 份失败仍存在。已归档完整 K/V 与坐标供 CPU 重放；没有确定具体浮点机制、修复模型门槛或开始性能计时。
 
+[exp 函数族单因素干预](docs/gqa-exp-choice.md)固定上述 384 组输入与归约顺序，仅替换三个 exp 调用：原 197 处原生/候选差异中消除 48 处、保留 149 处，同时新增 37 处，未达到事前冻结的全部消除门槛。全部 344,064 个输出参与 FP64 误差检查，85 个变化的 FP16 值中 47 个改善、38 个恶化。此结果仅说明函数族干预影响局部输出；未采纳为模型修复，未新跑模型或性能，旧 kernel 和失败证据保持不变。
+
 ## 运行与复现 / Run and reproduce
 
 Python 3.11/3.12。无需下载模型即可核验源码、证据和存档排序头；依赖安装需要网络或本地 wheel。输出目录必须全新。
