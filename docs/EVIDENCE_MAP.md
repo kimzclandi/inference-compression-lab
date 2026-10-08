@@ -19,3 +19,7 @@
 ## 原生框架强对照
 
 [Qwen Cache 容量预留](qwen-cache-reservation.md)：[适配代码](../lab/mlx_cache_reservation.py)、[冻结协议](../configs/qwen-cache-reservation-v1.json)、[正确性记录](../results/qwen-cache-reservation-v1/correctness.json)、[60 次计时](../results/qwen-cache-reservation-v1/samples.json)、[CI 离线验收](../experiments/verify_qwen_cache_reservation.py)。3 个长度均未通过性能门槛；仅分配 KV payload 减少，无质量、峰值内存或生产能力结论。
+
+[新增机制诊断与收益边界](mechanism-diagnostics.md)。与旧冻结实验分开保存，不替换历史结果。
+
+[新增相同运算量的同步粒度与Metal trace诊断](metal-sync-granularity.md)：确认计时敏感性，不宣称kernel加速或根因已确定。

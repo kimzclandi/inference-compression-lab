@@ -70,6 +70,16 @@ jobs:
           python -m experiments.qa_rich verify --folder results/qa-rich-v1 --output "$RUNNER_TEMP/rich-audit.json"
           python -m experiments.verify_qa_rich_inputs --output "$RUNNER_TEMP/rich-input-audit.json"
 
+      - name: Additive mechanism and cache boundary evidence (no GPU execution)
+        run: |
+          python -m experiments.metal_mechanism_diagnostic verify --output results/metal-mechanism-v1
+          python -m experiments.cache_workload_boundaries verify --output results/cache-workload-boundaries-v1
+
+      - name: Equal-work synchronization and process-attributed trace evidence
+        run: |
+          python -m experiments.metal_sync_granularity verify --output results/metal-sync-granularity-v1
+          python -m experiments.metal_sync_trace verify --output results/metal-sync-trace-v1
+
       - name: Archived attention semantics (no CUDA claim)
         run: python -m experiments.attention_backend_study verify --output results/attention-cpu-semantics-v1
 
