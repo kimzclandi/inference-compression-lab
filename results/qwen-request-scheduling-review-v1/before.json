@@ -1,0 +1,8 @@
+{
+  "failure": "late submission with backdated arrival can hide a saturated request behind an unsaturated one",
+  "old_bypasses": 4,
+  "allowed": 3,
+  "timed_trace_affected": false,
+  "timed_source": "../qwen-request-scheduling-v1/source/lab/request_scheduling.py",
+  "input": "old arrival1 budget1000+32; four short arrival2; pop3; submit backdated arrival0 budget5000+32; pop once"
+}

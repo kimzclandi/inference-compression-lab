@@ -67,12 +67,9 @@ class AdmissionQueue:
         if not ready:
             return None
         chosen = ready[0]
-        if self.policy == 'short_budget':
-            saturated = next((item for item in ready
-                              if self.bypasses[item[1].request_id] >= self.max_bypasses), None)
-            chosen = saturated or min(ready, key=lambda x: (
-                x[1].prompt_tokens + self.decode_weight*x[1].output_tokens,
-                x[1].arrival_s, x[0]))
+        if self.policy == 'short_budget' and self.bypasses[chosen[1].request_id] < self.max_bypasses:
+            chosen = min(ready, key=lambda x: (x[1].prompt_tokens + self.decode_weight*x[1].output_tokens,
+                                                x[1].arrival_s, x[0]))
         # Every skipped older request consumes one of its bounded bypasses.
         for item in ready:
             if item == chosen:

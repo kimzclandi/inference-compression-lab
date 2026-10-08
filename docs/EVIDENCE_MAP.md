@@ -12,3 +12,5 @@
 每项速度来自各自固定负载，不能拼接为统一端到端加速。启动不含进程启动/前置导入，不是冷磁盘测量。480请求为40条固定trace的请求记录。Metal失败结果与所有质量门槛保持原样；逻辑字节不是DRAM实测，Instruments interval不是kernel launch。
 
 [完整CI检查](../.github/workflows/tests.yml)验证工程与冻结记录；Linux CI不执行Metal GPU，也不证明业务模型质量。实现与上游技术归属见[Metal说明](metal-residual-rmsnorm.md#implementation-and-attribution)及[第三方说明](../THIRD_PARTY.md)。未声称原创低比特kernel、CUDA/Ascend实现或生产部署。
+
+请求队列单独研究：[原生生成器与有界策略](../lab/request_scheduling.py)、[固定协议](../configs/qwen-request-scheduling-v1.json)、[240 请求与负结果报告](qwen-request-scheduling.md)、[实际到达与逐 token 原始记录](../results/qwen-request-scheduling-v1/trials.json)。仅 burst 通过联合门槛，staggered 未通过平均 TTFT 门槛；不合并为通用加速结论。
