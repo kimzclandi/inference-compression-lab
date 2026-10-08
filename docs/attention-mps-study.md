@@ -87,6 +87,12 @@ is 1.422–1.771×. This is a framework implementation comparison on synthetic
 inputs. It does not prove the kernel identity, reduced DRAM traffic, peak-memory
 savings, an original optimization, or model/production acceleration.
 
+Subsequent [KV append inputs](kv-append-mps.md#v1-stopped-at-correctness-not-a-discarded-timing-result)
+failed an MPS SDPA correctness guard. That failure is retained and its cause is
+unresolved. The successful results above therefore remain explicitly limited
+to the original eight archived input cells; they do not establish general
+correctness of SDPA on dynamic/cache-derived tensors.
+
 Evidence: [raw timings](../results/attention-mps-v1/timings.json),
 [full-output error receipts](../results/attention-mps-v1/correctness.json),
 [output-row witnesses](../results/attention-mps-v1/witnesses.json),

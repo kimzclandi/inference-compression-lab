@@ -103,3 +103,41 @@ correctness repair before performance measurement, not tuning after a speed
 result. It is committed separately before its one performance run. It cannot
 be compared directly with the older SDPA timing study or described as SDPA
 cache acceleration.
+
+
+## v2 observed results
+
+The corrected protocol was committed as `ab2ed35` before its single fixed run.
+All 512 full-output checks passed, and every visible K/V prefix matched the
+source arrays exactly. All four primary speed gates passed in 5/5 rounds.
+Median-of-round-median times below are milliseconds per **64-step chain**,
+not per-token model latency.
+
+| B | Prefix | Cat append ms | Prealloc append ms | Cat append+Attention ms | Prealloc append+Attention ms | Primary speedup |
+|---|---|---|---|---|---|---|
+| 1 | 128 | 55.486 | 10.072 | 251.147 | 169.582 | 1.481× |
+| 1 | 1024 | 55.073 | 9.709 | 261.355 | 173.968 | 1.502× |
+| 4 | 128 | 53.802 | 9.422 | 272.336 | 173.359 | 1.571× |
+| 4 | 1024 | 57.539 | 9.636 | 270.519 | 181.598 | 1.490× |
+
+Initialization is not silently charged to just one arm: separate initialization
+and sample-paired initialization+chain medians are in the summary.
+
+| B | Prefix | Cat init ms | Prealloc init ms | Cat init+chain ms | Prealloc init+chain ms |
+|---|---|---|---|---|---|
+| 1 | 128 | 0.205 | 0.236 | 251.301 | 169.864 |
+| 1 | 1024 | 0.261 | 0.276 | 261.602 | 174.244 |
+| 4 | 128 | 0.257 | 0.247 | 272.624 | 173.630 |
+| 4 | 1024 | 0.459 | 0.453 | 271.308 | 182.251 |
+
+[Raw timings](../results/kv-append-mps-v2/timings.json),
+[full-output/KV check receipts](../results/kv-append-mps-v2/correctness.json),
+[24 output-row witnesses](../results/kv-append-mps-v2/witnesses.json),
+[source/environment receipt](../results/kv-append-mps-v2/run.json),
+and [summary including logical writes](../results/kv-append-mps-v2/summary.json).
+
+The append-only gains are not evidence of the same whole-loop or model gains.
+This compares a bounded preallocation implementation with a naive repeated-cat
+control, not with a tuned cache in vLLM/MLX. No existing model runtime is switched
+to this cache. CPU CI replays witnesses and lifecycle tests; only the original
+M4 Max run measured performance.

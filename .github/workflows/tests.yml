@@ -78,6 +78,11 @@ jobs:
           python -m experiments.attention_mps_study verify --output results/attention-mps-v1
           python -m experiments.verify_attention_mps_reference
 
+      - name: KV append failure preservation and repaired-study replay (no GPU execution)
+        run: |
+          python -m experiments.verify_kv_append_failure
+          python -m experiments.kv_append_mps verify --output results/kv-append-mps-v2
+
   attention-cpu:
     runs-on: ubuntu-latest
     steps:
@@ -91,3 +96,5 @@ jobs:
         run: |
           python -m experiments.attention_backend_study cpu-semantics --output "$RUNNER_TEMP/attention-cpu"
           python -m experiments.attention_backend_study verify --output "$RUNNER_TEMP/attention-cpu"
+      - name: Required cache lifecycle and synchronous failure-injection tests
+        run: python -m unittest discover -s tests -p test_append_only_kv.py -v

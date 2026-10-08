@@ -52,6 +52,8 @@ The same exact pruning now accelerates [complete startup evidence verification](
 
 另已完成 [M4 Max Attention 对照实验](docs/attention-mps-study.md)：8 个固定 prefill/decode 形状中，PyTorch MPS SDPA 相对更快的显式 FP16 路径，同步 API 延迟改善 **1.422–1.771×**；24 组完整输出通过 float64 参考检查。比较的是框架实现，非原创 kernel、纯 GPU 时间或整模型加速。NumPy 参考计算告警及独立非 BLAS 复核结果均保留；CUDA/Ascend 仍未实测。
 
+[固定容量 KV 追加实验](docs/kv-append-mps.md)补充了缓存更新成本：4 个固定 64-step 场景，预分配相对逐步 `cat` 的仅追加循环约 **5.51–5.97×**，加入同一显式 FP32 Attention 后约 **1.48–1.57×**；512 次完整输出检查通过。初版在新增缓存输入上的 MPS SDPA 正确性检查失败，未计时；失败证据公开，修复版两组统一显式 Attention，旧输入、容差及速度门槛不变。这不是 SDPA、整模型或生产服务加速，也不能与上一实验倍率相乘。
+
 Python 3.11/3.12。无需下载模型即可核验源码、证据和存档排序头；依赖安装需要网络或本地 wheel。输出目录必须全新。
 
 ```bash

@@ -10,6 +10,7 @@
 | KV Cache容量/失败提交语义；固定1024-token前缀循环下降51.09%；480请求token一致 | [LRU](../lab/prefix_cache.py)、[Qwen接入](../lab/qwen_prefix.py) | [生命周期研究及原始trace](qwen-cache-lifecycle-study.md) |
 | Attention prefill/decode/chunk CPU语义检查；CUDA性能尚未执行 | [独立参考](../lab/attention_reference.py)、[实验](../experiments/attention_backend_study.py) | [范围与协议](attention-backend-study.md)、[CPU原始记录](../results/attention-cpu-semantics-v1/semantics.json) |
 | M4 Max MPS SDPA 8种形状同步API延迟相对更快显式对照1.422–1.771×；不外推整模型/CUDA | [实验与核验](../experiments/attention_mps_study.py)、[独立参考复核](../experiments/verify_attention_mps_reference.py) | [报告及告警边界](attention-mps-study.md)、[原始计时](../results/attention-mps-v1/timings.json) |
+| 固定容量KV追加；4种64-step场景含显式Attention约1.48–1.57×；初版SDPA正确性失败 | [缓存](../lab/append_only_kv.py)、[实验](../experiments/kv_append_mps.py) | [失败边界与报告](kv-append-mps.md)、[v2计时](../results/kv-append-mps-v2/timings.json)、[v1失败](../results/kv-append-mps-v1/run.json) |
 
 每项速度来自各自固定负载，不能拼接为统一端到端加速。启动不含进程启动/前置导入，不是冷磁盘测量。480请求为40条固定trace的请求记录。Metal失败结果与所有质量门槛保持原样；逻辑字节不是DRAM实测，Instruments interval不是kernel launch。
 
