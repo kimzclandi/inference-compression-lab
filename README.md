@@ -6,6 +6,14 @@
 
 [研究发布说明 / Research prerelease](docs/research-prerelease.md) · [Release 与校验附件](https://github.com/kimzclandi/inference-compression-lab/releases/tag/v0.1.0-research.4) · [系统与代码导览](docs/qa-system-overview.md) · [MIT](LICENSE) · [数据许可](DATA_LICENSE.md) · [第三方归属](THIRD_PARTY.md)
 
+## 相同运算量的同步诊断
+
+固定32次有依赖运算，改变同步粒度后调用级计时明显变化；新增三臂进程级Metal trace和区间并集核验。该比例不是kernel或模型加速，底层硬件瓶颈仍未闭环。[协议、原始记录与边界](docs/metal-sync-granularity.md)。
+
+## 独立机制诊断与工作负载边界
+
+新增一次未通过速度门槛的 Metal 归约干预，以及五类固定 Cache 访问负载。结果保留失败、零命中无收益和适用边界；[代码、协议与逐次记录](docs/mechanism-diagnostics.md)。
+
 ## 解决什么问题 / Problem and scope
 
 模型量化以后，体积、速度和答案质量不一定同时改善。本项目固定模型 revision、数据、硬件与计时范围，研究真实 INT8/Q4/Q8 推理、错误定位、正确性排序和拒答之间的取舍，并用冻结协议、逐题原始记录与失败后关闭的入口约束结论。
@@ -48,6 +56,12 @@ The same exact pruning now accelerates [complete startup evidence verification](
 
 ## 运行与复现 / Run and reproduce
 
+新增 [Attention 掩码与后端实验](docs/attention-backend-study.md)：CPU 上 36 组输入、两条实现路径通过独立 float64 参考检查，并验证带缓存 decode/chunk 与完整 prefill 对应位置一致。CUDA 后端对照协议与执行脚本已准备，**尚未在 NVIDIA GPU 执行，没有 CUDA 加速结论**。PyTorch 提供优化 kernel，本项目贡献实验、语义检查和证据审计。
+
+另已完成 [M4 Max Attention 对照实验](docs/attention-mps-study.md)：8 个固定 prefill/decode 形状中，PyTorch MPS SDPA 相对更快的显式 FP16 路径，同步 API 延迟改善 **1.422–1.771×**；24 组完整输出通过 float64 参考检查。比较的是框架实现，非原创 kernel、纯 GPU 时间或整模型加速。NumPy 参考计算告警及独立非 BLAS 复核结果均保留；CUDA/Ascend 仍未实测。
+
+[固定容量 KV 追加实验](docs/kv-append-mps.md)补充了缓存更新成本：4 个固定 64-step 场景，预分配相对逐步 `cat` 的仅追加循环约 **5.51–5.97×**，加入同一显式 FP32 Attention 后约 **1.48–1.57×**；512 次完整输出检查通过。初版在新增缓存输入上的 MPS SDPA 正确性检查失败，未计时；失败证据公开，修复版两组统一显式 Attention，旧输入、容差及速度门槛不变。这不是 SDPA、整模型或生产服务加速，也不能与上一实验倍率相乘。
+
 Python 3.11/3.12。无需下载模型即可核验源码、证据和存档排序头；依赖安装需要网络或本地 wheel。输出目录必须全新。
 
 ```bash
@@ -72,6 +86,8 @@ OMP_NUM_THREADS=1 .venv/bin/python -m experiments.qa_rich verify \
 `verify_release`保留历史基线验收；当前分支的`review_qa_evidence`/`verify_release_rc4`以及原型启动还会校验剪枝源码与固定证据身份。只通过旧基线检查不能授权当前优化入口。历史计时记录保持原样，旧计时核验命令兼容转发到加强后的检查器。
 
 Historical baseline checks alone do not authorize the optimized runtime. Current full acceptance and prototype startup also bind the pruning implementation to the fixed evidence manifests; modified or incomplete receipts fail closed.
+
+新增 [真实 Qwen 原生 Cache 强对照](docs/qwen-cache-reservation.md)：MLX 原生已按 256 token 扩容；按请求预留容量在 3 个长度的总请求耗时比为 **0.994×/1.025×/0.992×，均未通过加速门槛**。完整生成 token、logits 和最终 KV 一致，最终分配 KV 张量减少 17.5%–43.75%，不代表峰值设备内存减少。此前相对逐步 `cat` 的微基准收益不能外推到成熟框架。
 
 ## 代码与证据 / Implementation and evidence
 

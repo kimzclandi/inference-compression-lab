@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "seed": 20261008,
+  "torch_version": "2.8.0",
+  "dtype": "float16",
+  "heads": 8,
+  "head_dim": 64,
+  "batches": [1, 4],
+  "shapes": [[512, 512], [1024, 1024], [1, 1024], [1, 4096]],
+  "arms": ["eager_fp32", "math", "flash"],
+  "warmups": 10,
+  "rounds": 5,
+  "repeats": 20,
+  "atol": 0.01,
+  "rtol": 0.01,
+  "minimum_speedup": 1.05,
+  "minimum_faster_rounds": 4,
+  "primary_control": "math",
+  "scope": "Synthetic contiguous MHA attention only; no model, KV allocation policy, GQA, serving or custom kernel claim",
+  "timing_scope": "CUDA event and synchronized host block time, each divided by repeat count; not per-request latency percentiles",
+  "decision": "Per shape only; no aggregate promotion or production acceptance"
+}
