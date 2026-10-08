@@ -1,5 +1,9 @@
 # 大模型推理优化与性能分析
 
+**简体中文** | [English overview](README.en.md)
+
+[![Offline checks](https://github.com/kimzclandi/inference-compression-lab/actions/workflows/tests.yml/badge.svg?branch=codex%2Fresearch-prerelease)](https://github.com/kimzclandi/inference-compression-lab/actions/workflows/tests.yml)
+
 **Inference Compression Lab** · 真实模型推理、KV Cache、Attention 与 Metal 算子的受控实验。固定协议、强控制组、原始记录和失败分析分别验证正确性、质量与性能。
 
 **A reproducible research project for model inference, KV Cache, Attention and Metal operators.** Correctness, quality and performance are checked separately with fixed protocols and retained negative results.
@@ -83,6 +87,8 @@ The same exact pruning now accelerates [complete startup evidence verification](
 Python 3.11/3.12。无需下载模型即可核验源码、证据和存档排序头；依赖安装需要网络或本地 wheel。输出目录必须全新。
 
 ```bash
+git clone --branch codex/research-prerelease https://github.com/kimzclandi/inference-compression-lab.git
+cd inference-compression-lab
 python3 -m venv .venv
 .venv/bin/python -m pip install -r configs/qa-nonlinear/requirements.txt
 .venv/bin/python -m experiments.verify_release --require-license
