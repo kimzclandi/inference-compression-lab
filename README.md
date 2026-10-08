@@ -1,10 +1,22 @@
-# Inference Compression Lab
+# 大模型推理优化与性能分析
 
-**可复现的推理优化与质量门控研究项目。历史有限 QA 样本通过点门槛，后续覆盖率优化未通过联合质量验收；不是生产 QA 服务。**
+**Inference Compression Lab** · 真实模型推理、KV Cache、Attention 与 Metal 算子的受控实验。固定协议、强控制组、原始记录和失败分析分别验证正确性、质量与性能。
 
-**A reproducible research project for inference optimization and quality gating. A bounded historical QA cohort passed empirical gates; subsequent coverage challengers failed joint quality gates. This is not a production QA service.**
+**A reproducible research project for model inference, KV Cache, Attention and Metal operators.** Correctness, quality and performance are checked separately with fixed protocols and retained negative results.
+
+已实测 CPU 与 Apple GPU；CUDA／Ascend 尚未实测，未验证生产服务。实现与执行使用 AI 辅助，MLX、PyTorch 和 ONNX Runtime 提供底层框架与通用 kernel；具体实现、归属和证据边界见各研究报告。
 
 [研究发布说明 / Research prerelease](docs/research-prerelease.md) · [Release 与校验附件](https://github.com/kimzclandi/inference-compression-lab/releases/tag/v0.1.0-research.4) · [系统与代码导览](docs/qa-system-overview.md) · [MIT](LICENSE) · [数据许可](DATA_LICENSE.md) · [第三方归属](THIRD_PARTY.md)
+
+## 从这里开始 / Start here
+
+|方向 / Topic|实现与证据入口 / Evidence|当前结论与边界 / Scope|
+|---|---|---|
+|模型与请求耗时|[CPU 热路径](docs/qa-risk-pruning.md)、[初始化](docs/qa-risk-startup.md)、[真实 Qwen 请求队列](docs/qwen-request-scheduling.md)|热路径与初始化是不同计时范围；请求调度总体未通过采用门槛|
+|KV Cache|[固定容量追加](docs/kv-append-mps.md)、[MLX 原生 Cache 强对照](docs/qwen-cache-reservation.md)|相对逐步 `cat` 的收益不能外推成熟框架；原生 Cache 预留未达到加速门槛|
+|Attention|[掩码语义与后端协议](docs/attention-backend-study.md)、[M4 Max 框架对照](docs/attention-mps-study.md)|CPU 语义与固定 MPS 输入已验证；不是 CUDA 实测或整模型加速|
+|Metal kernel 与数值分析|[Residual Add + RMSNorm](docs/metal-residual-rmsnorm.md)、[GQA decode](docs/gqa-shared-decode.md)、[逐层诊断](docs/gqa-shared-diagnostic.md)|保留 kernel 速度门槛失败和 GQA 模型 K/V 门槛失败；候选未获采用|
+|质量与完整证据|[Qwen 质量确认失败](docs/qwen-confirmation-study.md)、[声明到源码与原始记录](docs/EVIDENCE_MAP.md)|历史有限 QA 样本通过点门槛，后续覆盖率优化未通过联合质量验收；不是生产 QA 服务|
 
 ## 相同运算量的同步诊断
 
