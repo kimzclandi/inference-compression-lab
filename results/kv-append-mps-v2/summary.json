@@ -1,0 +1,199 @@
+{
+  "cases": [
+    {
+      "batch": 1,
+      "prefix": 128,
+      "scopes": {
+        "append_only": {
+          "median_chain_seconds": {
+            "cat": 0.055485625000073924,
+            "preallocated": 0.010072125000078813
+          },
+          "median_initialization_seconds": {
+            "cat": 0.00018891699983214494,
+            "preallocated": 0.00017158300033770502
+          },
+          "median_combined_seconds": {
+            "cat": 0.0556580419997772,
+            "preallocated": 0.010284458001478924
+          },
+          "speedup": 5.508830063133624,
+          "faster_rounds": 5,
+          "passed": true
+        },
+        "append_attention": {
+          "median_chain_seconds": {
+            "cat": 0.2511468339998828,
+            "preallocated": 0.1695817919990077
+          },
+          "median_initialization_seconds": {
+            "cat": 0.00020520799989753868,
+            "preallocated": 0.00023579200023959856
+          },
+          "median_combined_seconds": {
+            "cat": 0.25130066800011264,
+            "preallocated": 0.16986383399853366
+          },
+          "speedup": 1.4809775922249506,
+          "faster_rounds": 5,
+          "passed": true
+        }
+      },
+      "logical_writes": {
+        "cat_append_output_bytes": 21037056,
+        "preallocated_append_write_bytes": 131072,
+        "initial_prefix_write_bytes": 262144,
+        "preallocated_storage_bytes": 393216,
+        "not_measured_dram": true
+      },
+      "primary_speed_gate": true
+    },
+    {
+      "batch": 1,
+      "prefix": 1024,
+      "scopes": {
+        "append_only": {
+          "median_chain_seconds": {
+            "cat": 0.05507283399856533,
+            "preallocated": 0.009708583000247017
+          },
+          "median_initialization_seconds": {
+            "cat": 0.0002327919992239913,
+            "preallocated": 0.00024254100026155356
+          },
+          "median_combined_seconds": {
+            "cat": 0.05530562599778932,
+            "preallocated": 0.00992545900044206
+          },
+          "speedup": 5.672592385229039,
+          "faster_rounds": 5,
+          "passed": true
+        },
+        "append_attention": {
+          "median_chain_seconds": {
+            "cat": 0.26135504199919524,
+            "preallocated": 0.1739677080004185
+          },
+          "median_initialization_seconds": {
+            "cat": 0.00026087500009452924,
+            "preallocated": 0.000276250000752043
+          },
+          "median_combined_seconds": {
+            "cat": 0.2616022089987382,
+            "preallocated": 0.17424420799943618
+          },
+          "speedup": 1.5023192809930366,
+          "faster_rounds": 5,
+          "passed": true
+        }
+      },
+      "logical_writes": {
+        "cat_append_output_bytes": 138477568,
+        "preallocated_append_write_bytes": 131072,
+        "initial_prefix_write_bytes": 2097152,
+        "preallocated_storage_bytes": 2228224,
+        "not_measured_dram": true
+      },
+      "primary_speed_gate": true
+    },
+    {
+      "batch": 4,
+      "prefix": 128,
+      "scopes": {
+        "append_only": {
+          "median_chain_seconds": {
+            "cat": 0.053801583000677056,
+            "preallocated": 0.009422082999662962
+          },
+          "median_initialization_seconds": {
+            "cat": 0.00019424999845796265,
+            "preallocated": 0.00021666700013156515
+          },
+          "median_combined_seconds": {
+            "cat": 0.053966583000146784,
+            "preallocated": 0.009669540999311721
+          },
+          "speedup": 5.710158040700936,
+          "faster_rounds": 5,
+          "passed": true
+        },
+        "append_attention": {
+          "median_chain_seconds": {
+            "cat": 0.27233583300039754,
+            "preallocated": 0.17335862499930954
+          },
+          "median_initialization_seconds": {
+            "cat": 0.00025695899967104197,
+            "preallocated": 0.0002471249990776414
+          },
+          "median_combined_seconds": {
+            "cat": 0.27262433300165867,
+            "preallocated": 0.17362991599839006
+          },
+          "speedup": 1.5709390461621522,
+          "faster_rounds": 5,
+          "passed": true
+        }
+      },
+      "logical_writes": {
+        "cat_append_output_bytes": 84148224,
+        "preallocated_append_write_bytes": 524288,
+        "initial_prefix_write_bytes": 1048576,
+        "preallocated_storage_bytes": 1572864,
+        "not_measured_dram": true
+      },
+      "primary_speed_gate": true
+    },
+    {
+      "batch": 4,
+      "prefix": 1024,
+      "scopes": {
+        "append_only": {
+          "median_chain_seconds": {
+            "cat": 0.05753924999953597,
+            "preallocated": 0.009635708000132581
+          },
+          "median_initialization_seconds": {
+            "cat": 0.00039983299939194694,
+            "preallocated": 0.0004341669991845265
+          },
+          "median_combined_seconds": {
+            "cat": 0.058260624999093125,
+            "preallocated": 0.010072083001432475
+          },
+          "speedup": 5.971460529806867,
+          "faster_rounds": 5,
+          "passed": true
+        },
+        "append_attention": {
+          "median_chain_seconds": {
+            "cat": 0.27051858400045603,
+            "preallocated": 0.18159750000086206
+          },
+          "median_initialization_seconds": {
+            "cat": 0.00045937499999126885,
+            "preallocated": 0.00045279199912329204
+          },
+          "median_combined_seconds": {
+            "cat": 0.2713082919999579,
+            "preallocated": 0.18225108300066495
+          },
+          "speedup": 1.4896602871689966,
+          "faster_rounds": 5,
+          "passed": true
+        }
+      },
+      "logical_writes": {
+        "cat_append_output_bytes": 553910272,
+        "preallocated_append_write_bytes": 524288,
+        "initial_prefix_write_bytes": 8388608,
+        "preallocated_storage_bytes": 8912896,
+        "not_measured_dram": true
+      },
+      "primary_speed_gate": true
+    }
+  ],
+  "model_speedup": false,
+  "cuda_measured": false,
+  "production_cache": false
+}

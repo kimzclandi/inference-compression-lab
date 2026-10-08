@@ -79,3 +79,37 @@ jobs:
         run: |
           python -m experiments.metal_sync_granularity verify --output results/metal-sync-granularity-v1
           python -m experiments.metal_sync_trace verify --output results/metal-sync-trace-v1
+
+      - name: Archived attention semantics (no CUDA claim)
+        run: python -m experiments.attention_backend_study verify --output results/attention-cpu-semantics-v1
+
+      - name: Apple GPU archived timing and non-BLAS output-row replay (no GPU execution)
+        run: |
+          python -m experiments.attention_mps_study verify --output results/attention-mps-v1
+          python -m experiments.verify_attention_mps_reference
+
+      - name: KV append failure preservation and repaired-study replay (no GPU execution)
+        run: |
+          python -m experiments.verify_kv_append_failure
+          python -m experiments.kv_append_mps verify --output results/kv-append-mps-v2
+
+      - name: Native MLX cache reservation archived audit (no GPU execution)
+        run: python -m experiments.verify_qwen_cache_reservation
+
+  attention-cpu:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy==2.2.6
+      - run: python -m pip install torch==2.8.0 --index-url https://download.pytorch.org/whl/cpu
+      - name: Re-execute semantic study; no CUDA performance acceptance
+        run: |
+          python -m experiments.attention_backend_study cpu-semantics --output "$RUNNER_TEMP/attention-cpu"
+          python -m experiments.attention_backend_study verify --output "$RUNNER_TEMP/attention-cpu"
+      - name: Required cache lifecycle and synchronous failure-injection tests
+        run: python -m unittest discover -s tests -p test_append_only_kv.py -v
+      - name: CUDA harness correctness-failure archival on CPU (no CUDA execution)
+        run: python -m unittest discover -s tests -p test_attention_failure.py -v
