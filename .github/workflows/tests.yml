@@ -83,6 +83,9 @@ jobs:
           python -m experiments.verify_kv_append_failure
           python -m experiments.kv_append_mps verify --output results/kv-append-mps-v2
 
+      - name: Native MLX cache reservation archived audit (no GPU execution)
+        run: python -m experiments.verify_qwen_cache_reservation
+
   attention-cpu:
     runs-on: ubuntu-latest
     steps:

@@ -79,6 +79,8 @@ OMP_NUM_THREADS=1 .venv/bin/python -m experiments.qa_rich verify \
 
 Historical baseline checks alone do not authorize the optimized runtime. Current full acceptance and prototype startup also bind the pruning implementation to the fixed evidence manifests; modified or incomplete receipts fail closed.
 
+新增 [真实 Qwen 原生 Cache 强对照](docs/qwen-cache-reservation.md)：MLX 原生已按 256 token 扩容；按请求预留容量在 3 个长度的总请求耗时比为 **0.994×/1.025×/0.992×，均未通过加速门槛**。完整生成 token、logits 和最终 KV 一致，最终分配 KV 张量减少 17.5%–43.75%，不代表峰值设备内存减少。此前相对逐步 `cat` 的微基准收益不能外推到成熟框架。
+
 ## 代码与证据 / Implementation and evidence
 
 |模块|入口|

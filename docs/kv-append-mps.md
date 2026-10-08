@@ -141,3 +141,7 @@ This compares a bounded preallocation implementation with a naive repeated-cat
 control, not with a tuned cache in vLLM/MLX. No existing model runtime is switched
 to this cache. CPU CI replays witnesses and lifecycle tests; only the original
 M4 Max run measured performance.
+
+## 后续强对照
+
+[真实 Qwen / MLX 原生 Cache 研究](qwen-cache-reservation.md)保留了本文全部结果，并补充成熟框架对照：原生已按 256 token 扩容，按请求预留容量在 3 个长度均未达到加速门槛。本文相对逐步 `cat` 的收益不能外推为整模型提速。

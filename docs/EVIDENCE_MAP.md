@@ -15,3 +15,7 @@
 每项速度来自各自固定负载，不能拼接为统一端到端加速。启动不含进程启动/前置导入，不是冷磁盘测量。480请求为40条固定trace的请求记录。Metal失败结果与所有质量门槛保持原样；逻辑字节不是DRAM实测，Instruments interval不是kernel launch。
 
 [完整CI检查](../.github/workflows/tests.yml)验证工程与冻结记录；Linux CI不执行Metal GPU，也不证明业务模型质量。实现与上游技术归属见[Metal说明](metal-residual-rmsnorm.md#implementation-and-attribution)及[第三方说明](../THIRD_PARTY.md)。未声称原创低比特kernel、CUDA/Ascend实现或生产部署。
+
+## 原生框架强对照
+
+[Qwen Cache 容量预留](qwen-cache-reservation.md)：[适配代码](../lab/mlx_cache_reservation.py)、[冻结协议](../configs/qwen-cache-reservation-v1.json)、[正确性记录](../results/qwen-cache-reservation-v1/correctness.json)、[60 次计时](../results/qwen-cache-reservation-v1/samples.json)、[CI 离线验收](../experiments/verify_qwen_cache_reservation.py)。3 个长度均未通过性能门槛；仅分配 KV payload 减少，无质量、峰值内存或生产能力结论。
