@@ -1,0 +1,194 @@
+[
+  {
+    "length": 127,
+    "family": "normal",
+    "mode": "native",
+    "finite": true,
+    "allclose": true,
+    "max_abs": 0.00022196658777706713
+  },
+  {
+    "length": 127,
+    "family": "normal",
+    "mode": "native_compiled",
+    "finite": true,
+    "allclose": true,
+    "max_abs": 0.00022196658777706713
+  },
+  {
+    "length": 127,
+    "family": "normal",
+    "mode": "shared_compiled",
+    "finite": true,
+    "allclose": true,
+    "max_abs": 0.00022196658777706713
+  },
+  {
+    "length": 127,
+    "family": "large_scores",
+    "mode": "native",
+    "finite": true,
+    "allclose": true,
+    "max_abs": 0.0009133873089832711
+  },
+  {
+    "length": 127,
+    "family": "large_scores",
+    "mode": "native_compiled",
+    "finite": true,
+    "allclose": true,
+    "max_abs": 0.0009133873089832711
+  },
+  {
+    "length": 127,
+    "family": "large_scores",
+    "mode": "shared_compiled",
+    "finite": true,
+    "allclose": true,
+    "max_abs": 0.0009133873089832711
+  },
+  {
+    "length": 257,
+    "family": "normal",
+    "mode": "native",
+    "finite": true,
+    "allclose": true,
+    "max_abs": 0.00011514024985503912
+  },
+  {
+    "length": 257,
+    "family": "normal",
+    "mode": "native_compiled",
+    "finite": true,
+    "allclose": true,
+    "max_abs": 0.00011514024985503912
+  },
+  {
+    "length": 257,
+    "family": "normal",
+    "mode": "shared_compiled",
+    "finite": true,
+    "allclose": true,
+    "max_abs": 0.00011514024985503912
+  },
+  {
+    "length": 257,
+    "family": "large_scores",
+    "mode": "native",
+    "finite": true,
+    "allclose": true,
+    "max_abs": 2.8742274647441945e-05
+  },
+  {
+    "length": 257,
+    "family": "large_scores",
+    "mode": "native_compiled",
+    "finite": true,
+    "allclose": true,
+    "max_abs": 2.8742274647441945e-05
+  },
+  {
+    "length": 257,
+    "family": "large_scores",
+    "mode": "shared_compiled",
+    "finite": true,
+    "allclose": true,
+    "max_abs": 2.8742274647441945e-05
+  },
+  {
+    "length": 1024,
+    "family": "normal",
+    "mode": "native",
+    "finite": true,
+    "allclose": true,
+    "max_abs": 6.041265522588324e-05
+  },
+  {
+    "length": 1024,
+    "family": "normal",
+    "mode": "native_compiled",
+    "finite": true,
+    "allclose": true,
+    "max_abs": 6.041265522588324e-05
+  },
+  {
+    "length": 1024,
+    "family": "normal",
+    "mode": "shared_compiled",
+    "finite": true,
+    "allclose": true,
+    "max_abs": 6.041265522588324e-05
+  },
+  {
+    "length": 1024,
+    "family": "large_scores",
+    "mode": "native",
+    "finite": true,
+    "allclose": true,
+    "max_abs": 0.0009637369380985916
+  },
+  {
+    "length": 1024,
+    "family": "large_scores",
+    "mode": "native_compiled",
+    "finite": true,
+    "allclose": true,
+    "max_abs": 0.0009637369380985916
+  },
+  {
+    "length": 1024,
+    "family": "large_scores",
+    "mode": "shared_compiled",
+    "finite": true,
+    "allclose": true,
+    "max_abs": 0.0009637369380985916
+  },
+  {
+    "length": 4096,
+    "family": "normal",
+    "mode": "native",
+    "finite": true,
+    "allclose": true,
+    "max_abs": 3.842755434581291e-05
+  },
+  {
+    "length": 4096,
+    "family": "normal",
+    "mode": "native_compiled",
+    "finite": true,
+    "allclose": true,
+    "max_abs": 3.842755434581291e-05
+  },
+  {
+    "length": 4096,
+    "family": "normal",
+    "mode": "shared_compiled",
+    "finite": true,
+    "allclose": true,
+    "max_abs": 3.0360991727984565e-05
+  },
+  {
+    "length": 4096,
+    "family": "large_scores",
+    "mode": "native",
+    "finite": true,
+    "allclose": true,
+    "max_abs": 0.00015647205213165094
+  },
+  {
+    "length": 4096,
+    "family": "large_scores",
+    "mode": "native_compiled",
+    "finite": true,
+    "allclose": true,
+    "max_abs": 0.00015647205213165094
+  },
+  {
+    "length": 4096,
+    "family": "large_scores",
+    "mode": "shared_compiled",
+    "finite": true,
+    "allclose": true,
+    "max_abs": 0.00015647205213165094
+  }
+]

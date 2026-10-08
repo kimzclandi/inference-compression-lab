@@ -54,6 +54,12 @@ The same exact pruning now accelerates [complete startup evidence verification](
 
 另用 Xcode Metal System Trace 对主形状 `2048×896` 做了 PID 归属的后验诊断：native 与自定义 Metal 各完整执行 5,000 次，均观察到 5,007 个 GPU compute intervals，累计 GPU compute duration 仅相差约 0.37%。这说明该融合在 Instruments interval 层面没有减少 command-buffer/compute-interval 数量；但模板只暴露 `RT Unit Active`，没有带宽、occupancy 或 cache counter，因此仍不能声称完成 Roofline 定位。该 trace 不是新 benchmark，不推翻固定研究中自定义 Metal 慢约 23.8% 与 `accepted=false` 的结论。
 
+新增 [GQA 组内共享 K/V 的 Metal decode 特化](docs/gqa-shared-decode.md)：8 个固定算子输入 × 3 条实现路径共 24 项输出检查通过；真实 Qwen 128-token 提示的 token/logprobs 达到冻结门槛，但 48 份最终 K/V 中 10 份失败。因此长提示模型场景与全部性能计时停止；没有 Attention 或整模型加速结论，候选默认关闭。原理来自已有 online softmax/split-K，非原创 Attention 架构。
+
+后续[固定输入数值诊断](docs/gqa-shared-diagnostic.md)用原生复跑、适配器原生控制和 384 次同输入 float64 对照，精确重现上述输出与最终 K/V。首个观察到的差异在第 1 个 decode 输入、第 5 层 Attention 输出的两个 FP16 值（各 1 ULP，层索引从 0 开始）；同输入算子检查均通过，但模型 K/V 的 10 份失败仍存在。已归档完整 K/V 与坐标供 CPU 重放；没有确定具体浮点机制、修复模型门槛或开始性能计时。
+
+[exp 函数族单因素干预](docs/gqa-exp-choice.md)固定上述 384 组输入与归约顺序，仅替换三个 exp 调用：原 197 处原生/候选差异中消除 48 处、保留 149 处，同时新增 37 处，未达到事前冻结的全部消除门槛。全部 344,064 个输出参与 FP64 误差检查，85 个变化的 FP16 值中 47 个改善、38 个恶化。此结果仅说明函数族干预影响局部输出；未采纳为模型修复，未新跑模型或性能，旧 kernel 和失败证据保持不变。
+
 ## 运行与复现 / Run and reproduce
 
 新增 [Attention 掩码与后端实验](docs/attention-backend-study.md)：CPU 上 36 组输入、两条实现路径通过独立 float64 参考检查，并验证带缓存 decode/chunk 与完整 prefill 对应位置一致。CUDA 后端对照协议与执行脚本已准备，**尚未在 NVIDIA GPU 执行，没有 CUDA 加速结论**。PyTorch 提供优化 kernel，本项目贡献实验、语义检查和证据审计。

@@ -70,6 +70,19 @@ jobs:
           python -m experiments.qa_rich verify --folder results/qa-rich-v1 --output "$RUNNER_TEMP/rich-audit.json"
           python -m experiments.verify_qa_rich_inputs --output "$RUNNER_TEMP/rich-input-audit.json"
 
+      - name: Shared GQA decode evidence (model KV gate failure; no speed claim)
+        run: python -m experiments.verify_gqa_shared_decode
+
+      - name: GQA numerical diagnosis (complete array replay; original model gate remains failed)
+        run: |
+          python -m experiments.verify_gqa_shared_diagnostic > "$RUNNER_TEMP/gqa-diagnostic.json"
+          python -c 'import json, os; r=json.load(open(os.path.join(os.environ["RUNNER_TEMP"], "gqa-diagnostic.json"))); assert r["evidence_valid"] and r["diagnostic_complete"]; assert r["shadow_probes_checked"] == 384 and r["final_kv_arrays_replayed"] == 192; assert not r["original_v1_model_gate_pass"] and not r["new_trajectory_model_conditions"]["final_kv_gate"]; assert r["performance_trials"] == 0'
+
+      - name: Exp-family intervention (complete replay; substitution hypothesis rejected)
+        run: |
+          python -m experiments.verify_gqa_exp_choice > "$RUNNER_TEMP/gqa-exp-choice.json"
+          python -c 'import json, os; r=json.load(open(os.path.join(os.environ["RUNNER_TEMP"], "gqa-exp-choice.json"))); assert r["evidence_valid"] and r["diagnostic_complete"]; assert r["probes_replayed"] == 384 and r["full_output_elements"] == 344064; s=r["mechanism_summary"]; assert (s["resolved"], s["persistent"], s["introduced"]) == (48,149,37); assert not s["hypothesis_supported"] and not r["original_model_gate_pass"]; assert r["model_runs"] == r["performance_trials"] == 0'
+
       - name: Native request admission archived audit (expected staggered TTFT gate failure)
         run: python -m experiments.verify_qwen_request_scheduling
 
