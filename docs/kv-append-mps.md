@@ -23,7 +23,7 @@ contract. CPU fault-injection tests cover this bounded guarantee.
 
 ## Preregistered experiment
 
-[Protocol](../configs/kv-append-mps-v1.json) and [runner/verifier](../experiments/kv_append_mps.py).
+[v2 protocol](../configs/kv-append-mps-v2.json) and [runner/verifier](../experiments/kv_append_mps.py).
 MPS, PyTorch 2.8.0, NumPy 2.2.6, FP16, H=8, D=64; B=1/4, initial prefix=128/1024,
 64 one-token append steps. Queries and all K/V are generated beforehand from a
 fixed seed; queries are independent random tensors, not autoregressive model output.
@@ -31,8 +31,9 @@ All inputs and input views are prepared outside timing. CPU fallback, fast math
 and prefer-Metal overrides are disabled.
 
 Two arms: `torch.cat` K/V growth and fixed-capacity append. Two measured scopes:
-append-only and append plus framework SDPA (`is_causal=False`, because the single
-query sees the complete available prefix). Each sample uses a fresh cache.
+append-only and append plus explicit FP32-intermediate Attention with FP16 output
+(the single query sees the complete available prefix). Both cache arms use the
+same Attention implementation. Each sample uses a fresh cache.
 Initial allocation/prefix copy is timed separately; the full 64-step chain waits
 for MPS completion at each step. Chain timers include Python, validation, copying,
 dispatch and synchronization, not just GPU instructions. Final cache cleanup and
@@ -70,7 +71,35 @@ python -m unittest discover -s tests -p test_append_only_kv.py -v
 ```
 
 PyTorch supplies [copy_](https://docs.pytorch.org/docs/2.8/generated/torch.Tensor.copy_.html),
-[cat](https://docs.pytorch.org/docs/2.8/generated/torch.cat.html) and SDPA kernels.
+[cat](https://docs.pytorch.org/docs/2.8/generated/torch.cat.html) and tensor kernels.
 Preallocation is a standard engineering technique. Cache integration, protocol,
 failure tests and execution are AI-assisted; there is no original kernel,
 CUDA/Ascend, production cache or model-quality claim.
+
+## v1 stopped at correctness, not a discarded timing result
+
+The [v1 protocol](../configs/kv-append-mps-v1.json), committed as `8b89bea`, used
+framework SDPA. It stopped at the correctness guard before recording any timings.
+Its [failed receipt and source](../results/kv-append-mps-v1/run.json) are unchanged.
+This is a failure to validate this input path, not a preallocation speed failure.
+
+A first-step diagnostic reconstructed case B=4, prefix=1024: K/V matched their
+input arrays exactly, but SDPA failed the tolerance with both the original and
+contiguous query layouts. A further correctness-only diagnostic on six prefix
+lengths found errors/nonfinite outputs with automatic/forced-math SDPA while
+explicit FP32 computation passed. No cause is assigned to PyTorch, Metal or the
+cache allocator without a stronger investigation. The earlier MPS Attention
+results remain limited to their own archived inputs and checked outputs.
+
+[First-step records](../results/kv-append-mps-diagnostic-v1/first-step-diagnostic.json)
+and [backend diagnostic](../results/kv-append-mps-diagnostic-v1/backend-length-diagnostic.json)
+are retained. The original backend diagnostic serialized NaN as a nonstandard
+JSON constant; its unchanged bytes are stored as `.json.txt`, and strict JSON
+uses the string `"NaN"`, not a finite substitute.
+
+v2 switches **both** cache arms to the same explicit FP32 Attention, keeping
+input seeds, shapes, rounds, tolerance and speed gates unchanged. This is a
+correctness repair before performance measurement, not tuning after a speed
+result. It is committed separately before its one performance run. It cannot
+be compared directly with the older SDPA timing study or described as SDPA
+cache acceleration.

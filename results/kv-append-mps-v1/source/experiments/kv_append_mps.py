@@ -14,7 +14,7 @@ from lab.append_only_kv import AppendOnlyKV
 from experiments.attention_backend_study import digest,save
 from experiments.attention_mps_study import array_hash
 
-SPEC=Path('configs/kv-append-mps-v2.json')
+SPEC=Path('configs/kv-append-mps-v1.json')
 SOURCES=[str(SPEC),'lab/append_only_kv.py','experiments/kv_append_mps.py',
          'experiments/attention_backend_study.py','experiments/attention_mps_study.py','lab/attention_reference.py']
 
@@ -38,12 +38,6 @@ def logical_writes(spec,b,p):
     return dict(cat_append_output_bytes=unit*(t*p+t*(t+1)//2),
                 preallocated_append_write_bytes=unit*t,initial_prefix_write_bytes=unit*p,
                 preallocated_storage_bytes=unit*(p+t),not_measured_dram=True)
-
-
-def decode_attention(q,k,v):
-    """Same explicit FP32 attention for both cache arms after v1 SDPA failure."""
-    scores=q.float()@k.float().transpose(-1,-2)/q.shape[-1]**0.5
-    return (scores.softmax(dim=-1)@v.float()).to(q.dtype)
 
 
 def summarize(rows,spec):
@@ -107,7 +101,6 @@ def run(root):
             for index in indices:
                 b,p=cases[index];q,k,v=arrays(spec,index,b,p)
                 input_rows.append(dict(index=index,sha256=[array_hash(x) for x in (q,k,v)]))
-                save(root/'inputs.json',input_rows)
                 tq,tk,tv=[torch.from_numpy(x).to('mps') for x in (q,k,v)]
                 steps=[(tq[:,:,i:i+1],tk[:,:,p+i:p+i+1],tv[:,:,p+i:p+i+1]) for i in range(spec['steps'])]
                 def new(arm):
@@ -123,14 +116,10 @@ def run(root):
                         cache,pair=append(cache,arm,nk,nv)
                         ak,av=[x.cpu().numpy() for x in pair]
                         keys_equal &= np.array_equal(ak,k[:,:,:p+i+1]) and np.array_equal(av,v[:,:,:p+i+1])
-                        actual=decode_attention(nq,*pair).float().cpu().numpy()
+                        actual=torch.nn.functional.scaled_dot_product_attention(nq,*pair,dropout_p=0.,is_causal=False).float().cpu().numpy()
                         ref=reference(q[:,:,i:i+1],k[:,:,:p+i+1],v[:,:,:p+i+1])
                         e=np.abs(actual-ref);ratio=e/(spec['atol']+spec['rtol']*np.abs(ref))
-                        if not np.isfinite(ratio).all() or not np.all(ratio<=1) or not keys_equal:
-                            save(root/'failure.json',dict(index=index,arm=arm,step=i,kv_exact=bool(keys_equal),
-                                all_finite=bool(np.isfinite(ratio).all()),
-                                normalized_error=float(ratio.max()) if np.isfinite(ratio).all() else None))
-                            raise ValueError('K/V or Attention correctness failure')
+                        if not np.isfinite(ratio).all() or not np.all(ratio<=1) or not keys_equal:raise ValueError('K/V or Attention correctness failure')
                         error=max(error,float(e.max()));norm=max(norm,float(ratio.max()))
                         if i in (0,spec['steps']//2,spec['steps']-1):witnesses.append(dict(index=index,arm=arm,step=i,actual=actual[0,0,0].tolist()))
                     checks.append(dict(index=index,arm=arm,steps=spec['steps'],all_kv_exact=bool(keys_equal),max_abs_error=error,normalized_error=norm))
@@ -142,7 +131,7 @@ def run(root):
                     for nq,nk,nv in steps:
                         cache,pair=append(cache,arm,nk,nv)
                         if scope=='append_attention':
-                            y=decode_attention(nq,*pair)
+                            y=torch.nn.functional.scaled_dot_product_attention(nq,*pair,dropout_p=0.,is_causal=False)
                         torch.mps.synchronize()
                         if scope=='append_attention':del y
                     elapsed=time.perf_counter()-start
