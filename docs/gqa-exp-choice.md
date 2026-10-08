@@ -102,3 +102,20 @@ the float64 reference with a separate sum-based implementation. The archive tota
 8,033,287 bytes and observed MLX allocator peak is 278,280 bytes; these are budget
 observations, not physical device memory measurements or optimization claims.
 There was no adaptive follow-up run, tolerance change or input selection.
+
+## CPU replay portability correction
+
+At result commit `50611f2`, both Python 3.11 CI jobs failed the aggregate's exact
+comparison while Python 3.12 jobs passed. Every per-probe array metric had already
+passed. The failure is retained in the [PR run](https://github.com/kimzclandi/inference-compression-lab/actions/runs/37809049578)
+and [push run](https://github.com/kimzclandi/inference-compression-lab/actions/runs/37809037337).
+
+The five means were generated on Python 3.12. Python documents a change to
+[floating-point `sum` in 3.12](https://docs.python.org/3/builtins/functions.html#sum).
+Replaying these positive per-probe means using a left fold gives different last
+bits; `math.fsum` reproduces all five archived means exactly. The CPU verifier
+now requests that summation explicitly. Full dictionary equality remains strict,
+including rejection of a one-ULP edit to an aggregate mean. No experimental
+tolerance, source snapshot, array, protocol, metric, hypothesis or GPU run changed.
+This correction makes the observed archive reproducible across the tested Python
+versions; it is not a universal cross-platform floating-point equality guarantee.

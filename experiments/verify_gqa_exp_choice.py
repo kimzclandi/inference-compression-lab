@@ -7,6 +7,7 @@ tap casts, every mechanism statistic, and the aggregate are recomputed.
 import argparse
 import hashlib
 import json
+import math
 from pathlib import Path
 
 import numpy as np
@@ -140,7 +141,10 @@ def recompute_summary(rows):
     for arm in REFERENCE_ARMS:
         entries = [r[arm + '_reference'] for r in rows]
         result[arm + '_reference'] = dict(max_abs=max(x['max_abs'] for x in entries),
-            mean_abs=sum(x['mean_abs'] for x in entries) / len(entries),
+            # Python 3.12 changed float sum(). Use explicit compensated
+            # summation so CPU replay has the same strict result on 3.11+.
+            # https://docs.python.org/3/library/functions.html#sum
+            mean_abs=math.fsum(x['mean_abs'] for x in entries) / len(entries),
             failed_elements=sum(x['failed_elements'] for x in entries))
     for kind in ('half', 'float'):
         result[kind + '_reference_change'] = {metric: sum(r[kind + '_reference_change'][metric] for r in rows)

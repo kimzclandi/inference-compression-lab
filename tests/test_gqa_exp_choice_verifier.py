@@ -1,6 +1,7 @@
 """CPU-only tests of exp-choice generation, metric partitions and replay gates."""
 import copy
 import json
+import math
 from pathlib import Path
 import shutil
 import subprocess
@@ -10,7 +11,7 @@ import unittest
 
 import numpy as np
 
-from experiments.verify_gqa_exp_choice import (check_generated, digest, expected_sources, members,
+from experiments.verify_gqa_exp_choice import (REFERENCE_ARMS, check_generated, digest, expected_sources, members,
     npz, read, recompute_metrics, recompute_summary, verify, verify_probe, verify_receipt)
 
 
@@ -98,6 +99,37 @@ class ExpMetricContracts(unittest.TestCase):
         self.assertEqual((expected['resolved'], expected['persistent'], expected['introduced']), (2, 2, 2))
         self.assertFalse(expected['hypothesis_supported'])
         self.assertIn('not native arithmetic identity', expected['scope'])
+
+    def test_positive_means_use_compensated_sum_instead_of_left_fold(self):
+        values = [1.0, 2.0 ** -53, 2.0 ** -53]
+        left_fold = 0.0
+        for value in values:
+            left_fold += value
+        self.assertEqual(left_fold, 1.0)
+        self.assertEqual(math.fsum(values), 1.0 + 2.0 ** -52)
+        self.assertNotEqual(left_fold, math.fsum(values))
+        arrays, ref = example()
+        template = recompute_metrics(arrays, ref)
+        rows = [copy.deepcopy(template) for _ in values]
+        for row, value in zip(rows, values):
+            for arm in REFERENCE_ARMS:
+                row[arm + '_reference']['mean_abs'] = value
+        summary = recompute_summary(rows)
+        for arm in REFERENCE_ARMS:
+            self.assertEqual(summary[arm + '_reference']['mean_abs'], (1.0 + 2.0 ** -52) / 3)
+            self.assertNotEqual(summary[arm + '_reference']['mean_abs'], left_fold / 3)
+
+    def test_all_five_archived_means_match_compensated_replay_exactly(self):
+        root = Path('results/gqa-exp-choice-v1')
+        records = read(root / 'records.json')
+        archived = read(root / 'summary.json')
+        self.assertEqual(len(records), 384)
+        rebuilt = recompute_summary([row['metrics'] for row in records])
+        for arm in REFERENCE_ARMS:
+            field = arm + '_reference'
+            explicit = math.fsum(row['metrics'][field]['mean_abs'] for row in records) / 384
+            self.assertEqual(explicit, archived[field]['mean_abs'])
+            self.assertEqual(rebuilt[field]['mean_abs'], archived[field]['mean_abs'])
 
 
 class GenerationAndFidelityContracts(unittest.TestCase):
@@ -203,6 +235,18 @@ class ArchivalContracts(unittest.TestCase):
             run = read(target / 'run.json'); run['artifacts'] = members(target)
             (target / 'run.json').write_text(json.dumps(run))
             with self.assertRaisesRegex(AssertionError, 'mechanism metrics changed'):
+                verify(target)
+            # Even a one-ULP aggregate edit with fresh artifact hashes fails
+            # strict dictionary equality after the full numerical replay.
+            shutil.copy2(root / 'records.json', target / 'records.json')
+            summary = read(target / 'summary.json')
+            old_mean = summary['native_reference']['mean_abs']
+            summary['native_reference']['mean_abs'] = float(np.nextafter(old_mean, np.inf))
+            self.assertNotEqual(summary['native_reference']['mean_abs'], old_mean)
+            (target / 'summary.json').write_text(json.dumps(summary))
+            run['artifacts'] = members(target)
+            (target / 'run.json').write_text(json.dumps(run))
+            with self.assertRaisesRegex(AssertionError, 'aggregate changed'):
                 verify(target)
 
 
