@@ -105,3 +105,5 @@ Historical baseline checks alone do not authorize the optimized runtime. Current
 这是个人研究项目；学校/团队、字节经历及历史 Jetson 工作不属于本仓库已验证成果。没有本项目 TensorRT/CUDA/昇腾部署或原创量化 kernel 声明。源码采用 MIT；公开数据和第三方内容保留原许可。
 
 [核心表述、代码与原始证据索引](docs/EVIDENCE_MAP.md) · [公开 Instruments 区间记录与只读重算](results/metal-trace-rows-v1/README.md)。逻辑访存分析不是实测 Roofline，Metal 性能门槛仍失败。
+
+[真实 Qwen 请求队列实验](docs/qwen-request-scheduling.md)使用相同 MLX-LM 原生逐请求生成器比较 FCFS 与有界短预算调度：240 次请求输出一致，burst 平均 TTFT 为 630.066→478.365 ms；staggered 为 455.441→398.439 ms，未达到冻结的 1.15× 门槛，且 p95 完成延迟增加 2.97%。总体不接纳，不宣称连续批处理、模型计算加速或生产尾延迟改善。
