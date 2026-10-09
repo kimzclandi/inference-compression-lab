@@ -1,10 +1,34 @@
-# Inference Compression Lab
+# 大模型推理优化与性能分析
 
-**可复现的推理优化与质量门控研究项目。历史有限 QA 样本通过点门槛，后续覆盖率优化未通过联合质量验收；不是生产 QA 服务。**
+**简体中文** | [English overview](README.en.md)
 
-**A reproducible research project for inference optimization and quality gating. A bounded historical QA cohort passed empirical gates; subsequent coverage challengers failed joint quality gates. This is not a production QA service.**
+[![Offline checks](https://github.com/kimzclandi/inference-compression-lab/actions/workflows/tests.yml/badge.svg?branch=codex%2Fresearch-prerelease)](https://github.com/kimzclandi/inference-compression-lab/actions/workflows/tests.yml)
+
+**Inference Compression Lab** 是在 NUS 实验室期间持续迭代的个人研究项目，围绕固定模型负载中的重复计算和推理耗时展开。项目分别研究共享前缀请求的 KV 复用、CPU 问答流水线的冗余计算，以及 Attention／Metal 算子改动能否在原生框架对照下带来收益。
+
+研究按问题逐项推进：先固定输入、计时范围和对照实现，再检查输出一致性、时延与内存；达到门槛的改动保留，未通过的候选保持默认关闭，并保存失败记录。各实验使用独立协议，性能数字不串接为一个端到端收益。
+
+**Personal research developed during the maintainer’s time in a NUS lab.** The project evaluates repeated computation and latency in fixed inference workloads through KV reuse, CPU QA hot-path changes and controlled Attention/operator experiments.
+
+已实测 CPU 与 Apple GPU；CUDA／Ascend 尚未实测，未验证生产服务。实现与执行使用 AI 辅助，MLX、PyTorch 和 ONNX Runtime 提供底层框架与通用 kernel；具体实现、归属和证据边界见各研究报告。
 
 [研究发布说明 / Research prerelease](docs/research-prerelease.md) · [Release 与校验附件](https://github.com/kimzclandi/inference-compression-lab/releases/tag/v0.1.0-research.4) · [系统与代码导览](docs/qa-system-overview.md) · [MIT](LICENSE) · [数据许可](DATA_LICENSE.md) · [第三方归属](THIRD_PARTY.md)
+
+## 项目主线 / Project questions
+
+- **重复前缀是否需要重复计算？** 为 Qwen 请求实现 KV 复用、容量限制与失败状态保护，并比较固定请求循环和直接重算。后续单独对照 MLX 原生 Cache，预留策略未通过加速门槛。
+- **CPU 流水线中哪些计算可以精确省去？** 对文本规范化与候选特征计算做精确剪枝，重放 896 条记录检查特征、分数与决策，再分别测量完整热计算和初始化。
+- **减少算子边界是否一定更快？** 以原生及编译实现为对照验证 Attention／Metal 候选。新的 [Q8 QKV 投影合并实验（PR #25，未合并）](https://github.com/kimzclandi/inference-compression-lab/pull/25)数值检查通过，但未达加速门槛；该实现与记录位于独立 PR，未包含在此展示分支。
+
+## 从这里开始 / Start here
+
+|方向 / Topic|实现与证据入口 / Evidence|当前结论与边界 / Scope|
+|---|---|---|
+|模型与请求耗时|[CPU 热路径](docs/qa-risk-pruning.md)、[初始化](docs/qa-risk-startup.md)、[真实 Qwen 请求队列](docs/qwen-request-scheduling.md)|热路径与初始化是不同计时范围；请求调度总体未通过采用门槛|
+|KV Cache|[固定容量追加](docs/kv-append-mps.md)、[MLX 原生 Cache 强对照](docs/qwen-cache-reservation.md)|相对逐步 `cat` 的收益不能外推成熟框架；原生 Cache 预留未达到加速门槛|
+|Attention|[掩码语义与后端协议](docs/attention-backend-study.md)、[M4 Max 框架对照](docs/attention-mps-study.md)|CPU 语义与固定 MPS 输入已验证；不是 CUDA 实测或整模型加速|
+|Metal kernel 与数值分析|[Residual Add + RMSNorm](docs/metal-residual-rmsnorm.md)、[GQA decode](docs/gqa-shared-decode.md)、[逐层诊断](docs/gqa-shared-diagnostic.md)|保留 kernel 速度门槛失败和 GQA 模型 K/V 门槛失败；候选未获采用|
+|质量与完整证据|[Qwen 质量确认失败](docs/qwen-confirmation-study.md)、[声明到源码与原始记录](docs/EVIDENCE_MAP.md)|历史有限 QA 样本通过点门槛，后续覆盖率优化未通过联合质量验收；不是生产 QA 服务|
 
 ## 相同运算量的同步诊断
 
@@ -71,6 +95,8 @@ The same exact pruning now accelerates [complete startup evidence verification](
 Python 3.11/3.12。无需下载模型即可核验源码、证据和存档排序头；依赖安装需要网络或本地 wheel。输出目录必须全新。
 
 ```bash
+git clone --branch codex/research-prerelease https://github.com/kimzclandi/inference-compression-lab.git
+cd inference-compression-lab
 python3 -m venv .venv
 .venv/bin/python -m pip install -r configs/qa-nonlinear/requirements.txt
 .venv/bin/python -m experiments.verify_release --require-license
