@@ -72,9 +72,10 @@ arrays. Summary generation and verification share a statistics function; array
 reconstruction and hand-calculated tests provide independent checks of the stated
 contracts, not an independently implemented performance statistics engine.
 
-No CUDA/Ascend execution, quality improvement, phone deployment, release or
-production claim is made. A new PR remains separate from the default branch until
-owner-approved merge. Results will be recorded below after the single execution.
+No CUDA/Ascend execution, quality improvement, phone deployment or production
+claim is made. The implementation and frozen results below are included in this
+repository; publishing this research does not mean adopting the candidate.
+Existing versioned Releases are separate snapshots and remain unchanged.
 
 ## Single execution result
 
