@@ -4,13 +4,21 @@
 
 [![Offline checks](https://github.com/kimzclandi/inference-compression-lab/actions/workflows/tests.yml/badge.svg?branch=codex%2Fresearch-prerelease)](https://github.com/kimzclandi/inference-compression-lab/actions/workflows/tests.yml)
 
-**Inference Compression Lab** · 真实模型推理、KV Cache、Attention 与 Metal 算子的受控实验。固定协议、强控制组、原始记录和失败分析分别验证正确性、质量与性能。
+**Inference Compression Lab** 是在 NUS 实验室期间持续迭代的个人研究项目，围绕固定模型负载中的重复计算和推理耗时展开。项目分别研究共享前缀请求的 KV 复用、CPU 问答流水线的冗余计算，以及 Attention／Metal 算子改动能否在原生框架对照下带来收益。
 
-**A reproducible research project for model inference, KV Cache, Attention and Metal operators.** Correctness, quality and performance are checked separately with fixed protocols and retained negative results.
+研究按问题逐项推进：先固定输入、计时范围和对照实现，再检查输出一致性、时延与内存；达到门槛的改动保留，未通过的候选保持默认关闭，并保存失败记录。各实验使用独立协议，性能数字不串接为一个端到端收益。
+
+**Personal research developed during the maintainer’s time in a NUS lab.** The project evaluates repeated computation and latency in fixed inference workloads through KV reuse, CPU QA hot-path changes and controlled Attention/operator experiments.
 
 已实测 CPU 与 Apple GPU；CUDA／Ascend 尚未实测，未验证生产服务。实现与执行使用 AI 辅助，MLX、PyTorch 和 ONNX Runtime 提供底层框架与通用 kernel；具体实现、归属和证据边界见各研究报告。
 
 [研究发布说明 / Research prerelease](docs/research-prerelease.md) · [Release 与校验附件](https://github.com/kimzclandi/inference-compression-lab/releases/tag/v0.1.0-research.4) · [系统与代码导览](docs/qa-system-overview.md) · [MIT](LICENSE) · [数据许可](DATA_LICENSE.md) · [第三方归属](THIRD_PARTY.md)
+
+## 项目主线 / Project questions
+
+- **重复前缀是否需要重复计算？** 为 Qwen 请求实现 KV 复用、容量限制与失败状态保护，并比较固定请求循环和直接重算。后续单独对照 MLX 原生 Cache，预留策略未通过加速门槛。
+- **CPU 流水线中哪些计算可以精确省去？** 对文本规范化与候选特征计算做精确剪枝，重放 896 条记录检查特征、分数与决策，再分别测量完整热计算和初始化。
+- **减少算子边界是否一定更快？** 以原生及编译实现为对照验证 Attention／Metal 候选。新的 [Q8 QKV 投影合并实验（PR #25，未合并）](https://github.com/kimzclandi/inference-compression-lab/pull/25)数值检查通过，但未达加速门槛；该实现与记录位于独立 PR，未包含在此展示分支。
 
 ## 从这里开始 / Start here
 

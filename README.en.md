@@ -4,9 +4,17 @@
 
 [![Offline checks](https://github.com/kimzclandi/inference-compression-lab/actions/workflows/tests.yml/badge.svg?branch=codex%2Fresearch-prerelease)](https://github.com/kimzclandi/inference-compression-lab/actions/workflows/tests.yml)
 
-**Inference Compression Lab** studies CPU inference hot paths, KV Cache, Attention and Metal operators with fixed protocols, native-framework controls, archived records and retained failures. Smaller models and fewer operations do not automatically mean lower request latency or better answers; each claim needs its own correctness, quality and performance check.
+**Inference Compression Lab** is a personal research project developed and iterated during the maintainer’s time in a NUS lab. It studies repeated computation and latency in fixed inference workloads: reusing KV state across shared-prefix requests, removing redundant CPU QA work, and evaluating Attention/Metal changes against native-framework controls.
 
-Measurements cover CPU and Apple GPU. CUDA, Ascend and production serving are unverified. Implementation, execution and documentation are AI-assisted. MLX, PyTorch and ONNX Runtime supply frameworks and general-purpose kernels; the project work is in controlled experiments, diagnostics, runtime checks and evidence verification. This is a personal research project, separate from school/team, internship and historical Jetson work.
+Each study fixes its inputs, timing scope and controls before checking output parity, latency and memory. Candidates that miss their gates remain disabled by default, with failures retained. Separate studies do not form a single end-to-end speedup claim.
+
+Measurements cover CPU and Apple GPU. CUDA, Ascend and production serving are unverified. Implementation, execution and documentation are AI-assisted. MLX, PyTorch and ONNX Runtime supply frameworks and general-purpose kernels; the project work is in controlled experiments, diagnostics, runtime checks and evidence verification. The work is maintained as a personal project; team research, internships and historical Jetson deployment have separate contributions and evidence.
+
+## Project progression
+
+- **Avoid repeated prefix computation:** implement KV reuse with capacity limits and failure handling, compare a fixed request loop with recomputation, then separately test reservation against native MLX Cache. Reservation did not pass its speed gate.
+- **Remove CPU work without changing decisions:** prune redundant normalization and candidate-feature calculations, replay 896 records, and measure complete warm computation separately from initialization.
+- **Test operator changes against strong controls:** compare native and compiled implementations before deciding whether to adopt an Attention/Metal candidate. The newer [Q8 QKV projection experiment (PR #25, unmerged)](https://github.com/kimzclandi/inference-compression-lab/pull/25) passed numerical checks but missed the speed gates; its implementation and records are in that separate PR, not this presentation branch.
 
 ## Start with a question
 
