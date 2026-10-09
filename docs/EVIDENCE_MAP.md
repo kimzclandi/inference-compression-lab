@@ -28,3 +28,7 @@
 [新增机制诊断与收益边界](mechanism-diagnostics.md)。与旧冻结实验分开保存，不替换历史结果。
 
 [新增相同运算量的同步粒度与Metal trace诊断](metal-sync-granularity.md)：确认计时敏感性，不宣称kernel加速或根因已确定。
+
+## QKV projection packing
+
+See [fixed Q8 projection study](qkv-projection.md), [implementation](../lab/qkv_projection.py) and [public result](../results/qkv-projection-v1/summary.json). Full local array comparisons passed; both micro and model speed acceptance failed. Public CI verifies scalar consistency only; private arrays are required for numerical replay. Extra packed tensor storage is retained, and the candidate is opt-in.

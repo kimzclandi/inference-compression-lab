@@ -6,6 +6,12 @@
 
 [研究发布说明 / Research prerelease](docs/research-prerelease.md) · [Release 与校验附件](https://github.com/kimzclandi/inference-compression-lab/releases/tag/v0.1.0-research.4) · [系统与代码导览](docs/qa-system-overview.md) · [MIT](LICENSE) · [数据许可](DATA_LICENSE.md) · [第三方归属](THIRD_PARTY.md)
 
+## QKV 投影合并实验
+
+已实现原 Q8 packed 参数按输出维合并，并完成两个提示长度的真实模型实验；完整 Q/K/V、logits、tokens 与最终 KV 逐位一致。但微测试未达到 1.05×门槛，整模型也未通过强对照速度门槛；额外常驻 packed 参数约25.15 MiB，候选保持显式启用。[实现、完整结果与复现边界](docs/qkv-projection.md)。
+
+An opt-in packed QKV projection implementation preserves full numerical outputs on the fixed model workload, but fails the preregistered micro and end-to-end speed gates. It adds 25.15 MiB of packed tensors. This is an upstream-kernel scheduling experiment, not a new low-bit kernel or an accepted acceleration.
+
 ## 相同运算量的同步诊断
 
 固定32次有依赖运算，改变同步粒度后调用级计时明显变化；新增三臂进程级Metal trace和区间并集核验。该比例不是kernel或模型加速，底层硬件瓶颈仍未闭环。[协议、原始记录与边界](docs/metal-sync-granularity.md)。

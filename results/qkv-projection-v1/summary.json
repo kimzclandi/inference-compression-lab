@@ -1,0 +1,230 @@
+{
+  "correctness_complete": true,
+  "recorded_correctness_pass": true,
+  "timing_complete": true,
+  "micro": [
+    {
+      "case": "p128",
+      "complete": true,
+      "medians": {
+        "native": {
+          "latency_ms": 0.836
+        },
+        "compiled_three": {
+          "latency_ms": 0.841125
+        },
+        "packed": {
+          "latency_ms": 0.814958
+        }
+      },
+      "descriptive_p95": {
+        "native": {
+          "latency_ms": 1.1687501999999999
+        },
+        "compiled_three": {
+          "latency_ms": 1.0951997999999996
+        },
+        "packed": {
+          "latency_ms": 1.1843252
+        }
+      },
+      "comparisons": {
+        "native": {
+          "control_over_packed": 1.0258197354955716,
+          "faster_rounds": 4,
+          "speed_pass": false
+        },
+        "compiled_three": {
+          "control_over_packed": 1.0321084031324315,
+          "faster_rounds": 3,
+          "speed_pass": false
+        }
+      }
+    },
+    {
+      "case": "p4096",
+      "complete": true,
+      "medians": {
+        "native": {
+          "latency_ms": 0.827
+        },
+        "compiled_three": {
+          "latency_ms": 0.841875
+        },
+        "packed": {
+          "latency_ms": 0.817208
+        }
+      },
+      "descriptive_p95": {
+        "native": {
+          "latency_ms": 1.1148909999999999
+        },
+        "compiled_three": {
+          "latency_ms": 2.3271751999999957
+        },
+        "packed": {
+          "latency_ms": 1.1729
+        }
+      },
+      "comparisons": {
+        "native": {
+          "control_over_packed": 1.011982261553974,
+          "faster_rounds": 3,
+          "speed_pass": false
+        },
+        "compiled_three": {
+          "control_over_packed": 1.030184481796556,
+          "faster_rounds": 2,
+          "speed_pass": false
+        }
+      }
+    }
+  ],
+  "model": [
+    {
+      "case": "p128",
+      "complete": true,
+      "medians": {
+        "native": {
+          "latency_ms": 66.683458,
+          "ttft_ms": 15.919708,
+          "decode_ms": 50.7819175
+        },
+        "native_adapter": {
+          "latency_ms": 68.0137915,
+          "ttft_ms": 16.048583,
+          "decode_ms": 51.90764599999999
+        },
+        "compiled_three": {
+          "latency_ms": 67.777771,
+          "ttft_ms": 16.0399165,
+          "decode_ms": 51.657250000000005
+        },
+        "packed": {
+          "latency_ms": 65.6575625,
+          "ttft_ms": 16.037854000000003,
+          "decode_ms": 49.57879199999999
+        }
+      },
+      "descriptive_p95": {
+        "native": {
+          "latency_ms": 69.27469185,
+          "ttft_ms": 16.44334185,
+          "decode_ms": 52.7780696
+        },
+        "native_adapter": {
+          "latency_ms": 69.67449825,
+          "ttft_ms": 16.37559985,
+          "decode_ms": 53.64208930000001
+        },
+        "compiled_three": {
+          "latency_ms": 69.12517894999999,
+          "ttft_ms": 16.427585599999997,
+          "decode_ms": 52.6788168
+        },
+        "packed": {
+          "latency_ms": 67.06325245,
+          "ttft_ms": 16.4912769,
+          "decode_ms": 50.63097174999999
+        }
+      },
+      "comparisons": {
+        "native": {
+          "control_over_packed": 1.0156249403867226,
+          "faster_rounds": 5,
+          "speed_pass": false,
+          "packed_over_control": 0.9846154424085204,
+          "ttft_packed_over_control": 1.0074213672763346,
+          "peak_packed_over_control": 1.0,
+          "nonregression_pass": true,
+          "memory_pass": true
+        },
+        "compiled_three": {
+          "control_over_packed": 1.0322919161063893,
+          "faster_rounds": 5,
+          "speed_pass": true,
+          "packed_over_control": 0.9687182321177247,
+          "ttft_packed_over_control": 0.9998714145425883,
+          "peak_packed_over_control": 1.0,
+          "nonregression_pass": true,
+          "memory_pass": true
+        }
+      }
+    },
+    {
+      "case": "p4096",
+      "complete": true,
+      "medians": {
+        "native": {
+          "latency_ms": 472.702396,
+          "ttft_ms": 411.464917,
+          "decode_ms": 59.7316045
+        },
+        "native_adapter": {
+          "latency_ms": 481.430875,
+          "ttft_ms": 416.235146,
+          "decode_ms": 64.0348335
+        },
+        "compiled_three": {
+          "latency_ms": 466.505812,
+          "ttft_ms": 405.0051665,
+          "decode_ms": 61.262417000000006
+        },
+        "packed": {
+          "latency_ms": 469.7026045,
+          "ttft_ms": 409.9745625,
+          "decode_ms": 60.16499949999999
+        }
+      },
+      "descriptive_p95": {
+        "native": {
+          "latency_ms": 492.03338575,
+          "ttft_ms": 429.97567935,
+          "decode_ms": 61.9539769
+        },
+        "native_adapter": {
+          "latency_ms": 498.61304535,
+          "ttft_ms": 432.83495350000004,
+          "decode_ms": 66.32123535000001
+        },
+        "compiled_three": {
+          "latency_ms": 512.1194773,
+          "ttft_ms": 446.44554755,
+          "decode_ms": 66.75236509999999
+        },
+        "packed": {
+          "latency_ms": 499.5866462,
+          "ttft_ms": 435.20448355,
+          "decode_ms": 64.19311325
+        }
+      },
+      "comparisons": {
+        "native": {
+          "control_over_packed": 1.0063865762532727,
+          "faster_rounds": 3,
+          "speed_pass": false,
+          "packed_over_control": 0.993653953258151,
+          "ttft_packed_over_control": 0.9963779305636402,
+          "peak_packed_over_control": 1.0,
+          "nonregression_pass": true,
+          "memory_pass": true
+        },
+        "compiled_three": {
+          "control_over_packed": 0.9931940072944603,
+          "faster_rounds": 2,
+          "speed_pass": false,
+          "packed_over_control": 1.0068526316666768,
+          "ttft_packed_over_control": 1.01226995705498,
+          "peak_packed_over_control": 1.0,
+          "nonregression_pass": true,
+          "memory_pass": true
+        }
+      }
+    }
+  ],
+  "micro_pass": false,
+  "model_speed_pass": false,
+  "nonregression_pass": true,
+  "memory_pass": true,
+  "performance_accepted": false
+}

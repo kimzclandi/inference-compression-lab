@@ -112,6 +112,11 @@ jobs:
       - name: Native MLX cache reservation archived audit (no GPU execution)
         run: python -m experiments.verify_qwen_cache_reservation
 
+      - name: QKV projection packing receipt (expected performance failure; arrays remain local)
+        run: |
+          python -m experiments.verify_qkv_projection > "$RUNNER_TEMP/qkv-projection.json"
+          python -c 'import json, os; r=json.load(open(os.path.join(os.environ["RUNNER_TEMP"], "qkv-projection.json"))); assert r["public_consistency_valid"]; assert not r["recorded_performance_accepted"] and not r["numerical_replay_complete"] and not r["accepted"]'
+
   attention-cpu:
     runs-on: ubuntu-latest
     steps:

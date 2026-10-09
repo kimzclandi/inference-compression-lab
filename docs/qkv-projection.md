@@ -75,3 +75,65 @@ contracts, not an independently implemented performance statistics engine.
 No CUDA/Ascend execution, quality improvement, phone deployment, release or
 production claim is made. A new PR remains separate from the default branch until
 owner-approved merge. Results will be recorded below after the single execution.
+
+## Single execution result
+
+The protocol and all execution sources were frozen in commit
+`2e9bdb332242b218cb176c9ef9cb453b4400b37f`. One local M4 Max / 48 GiB execution
+completed with MLX 0.29.3, MLX-LM 0.26.3 and NumPy 2.5.3. Both synchronized
+profile outputs were bitwise equal to native. QKV occupied 13.50% / 13.04% of the
+instrumented stage sums (128/4096 prompts); this passed the budget screen only.
+
+All 48 captured input cases (24 layers × two prompts), compiled-three and packed
+projection outputs, and complete model comparisons passed bitwise equality.
+Private CPU replay recomputed 104 comparison records across 58 NPZ files and
+125,369,480 compared elements, including repeated native references. It verified
+all returned full-vocabulary logits, tokens and 48 final K/V arrays per model arm.
+The 288 original in-memory QKV parameter arrays retained their hashes. No new QA
+quality evaluation was performed.
+
+### Performance gates failed
+
+| Captured-input projection block (24 layers) | Native ms | Compiled-three ms | Packed ms | Compiled-three / packed |
+|---|---:|---:|---:|---:|
+| From 128-token prompt | 0.836000 | 0.841125 | 0.814958 | 1.032× |
+| From 4096-token prompt | 0.827000 | 0.841875 | 0.817208 | 1.030× |
+
+Neither case reached the required 1.05× against both controls. Packed was faster
+than compiled-three in only 3/5 and 2/5 rounds, below the required 4/5. Each block
+includes API dispatch and completion synchronization; these are not GPU kernel
+durations. All 150 raw micro timing samples are retained.
+
+| Whole request (prefill + 16 decode steps) | Native ms | Compiled-three ms | Packed ms | Native / packed | Compiled-three / packed |
+|---|---:|---:|---:|---:|---:|
+| 128-token prompt | 66.683458 | 67.777771 | 65.657563 | 1.016× | 1.032× |
+| 4096-token prompt | 472.702396 | 466.505812 | 469.702605 | 1.006× | 0.993× |
+
+The short request improved 1.54% against original native but missed the 1.02×
+threshold. The long request took 0.69% longer than compiled-three. Thus the model
+speed gate failed. Nonregression and matched-residency allocator-peak gates
+passed. All 80 model samples (including native-adapter controls), per-request
+TTFT/decode values and fixed order are retained. Descriptive p95 over 10 requests
+per arm is not a production tail-latency estimate. Ratios from different studies
+must not be multiplied.
+
+Packing took 62.963 ms in this execution and added 26,376,192 bytes (25.15 MiB)
+of packed tensors while retaining the originals. Active MLX allocation immediately
+before/after packing was 527,364,360 / 554,160,904 bytes; that observed difference
+also includes other preparation allocations. Per-request peak equality among the
+timed arms does not erase this extra resident storage. Observed overall MLX peak
+was 2,631,478,312 bytes, not process RSS or physical device-wide memory.
+
+**Overall performance acceptance is false.** The candidate stays opt-in; there is
+no new accepted Attention or end-to-end acceleration claim. There was no retuning,
+second performance execution, threshold change or adoption based on the best case.
+
+[Public run receipt](../results/qkv-projection-v1/run.json),
+[raw micro samples](../results/qkv-projection-v1/micro-samples.json),
+[raw model samples](../results/qkv-projection-v1/model-samples.json),
+[complete statistics](../results/qkv-projection-v1/summary.json),
+[correctness receipts](../results/qkv-projection-v1/correctness.json), and
+[synchronized profile observations](../results/qkv-projection-v1/profile-samples.json).
+These six public JSON files contain no model tensors or weights. Public CI checks
+source/record/summary consistency and synthetic fault contracts; real numerical
+replay additionally requires the private local arrays.
