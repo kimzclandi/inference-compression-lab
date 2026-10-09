@@ -18,7 +18,7 @@
 
 - **重复前缀是否需要重复计算？** 为 Qwen 请求实现 KV 复用、容量限制与失败状态保护，并比较固定请求循环和直接重算。后续单独对照 MLX 原生 Cache，预留策略未通过加速门槛。
 - **CPU 流水线中哪些计算可以精确省去？** 对文本规范化与候选特征计算做精确剪枝，重放 896 条记录检查特征、分数与决策，再分别测量完整热计算和初始化。
-- **减少算子边界是否一定更快？** 以原生及编译实现为对照验证 Attention／Metal 候选。新的 [Q8 QKV 投影合并实验（PR #25，未合并）](https://github.com/kimzclandi/inference-compression-lab/pull/25)数值检查通过，但未达加速门槛；该实现与记录位于独立 PR，未包含在此展示分支。
+- **减少算子边界是否一定更快？** 以原生及编译实现为对照验证 Attention／Metal 候选。新的 [Q8 QKV 投影合并实验](docs/qkv-projection.md)数值检查通过，但未达加速门槛；实现与实验记录已收录，候选仍默认关闭。
 
 ## 从这里开始 / Start here
 
@@ -29,6 +29,13 @@
 |Attention|[掩码语义与后端协议](docs/attention-backend-study.md)、[M4 Max 框架对照](docs/attention-mps-study.md)|CPU 语义与固定 MPS 输入已验证；不是 CUDA 实测或整模型加速|
 |Metal kernel 与数值分析|[Residual Add + RMSNorm](docs/metal-residual-rmsnorm.md)、[GQA decode](docs/gqa-shared-decode.md)、[逐层诊断](docs/gqa-shared-diagnostic.md)|保留 kernel 速度门槛失败和 GQA 模型 K/V 门槛失败；候选未获采用|
 |质量与完整证据|[Qwen 质量确认失败](docs/qwen-confirmation-study.md)、[声明到源码与原始记录](docs/EVIDENCE_MAP.md)|历史有限 QA 样本通过点门槛，后续覆盖率优化未通过联合质量验收；不是生产 QA 服务|
+
+## QKV 投影合并实验
+
+已实现原 Q8 packed 参数按输出维合并，并完成两个提示长度的真实模型实验；完整 Q/K/V、logits、tokens 与最终 KV 逐位一致。但微测试未达到 1.05×门槛，整模型也未通过强对照速度门槛；额外常驻 packed 参数约25.15 MiB，候选保持显式启用。[实现、完整结果与复现边界](docs/qkv-projection.md)。
+
+An opt-in packed QKV projection implementation preserves full numerical outputs on the fixed model workload, but fails the preregistered micro and end-to-end speed gates. It adds 25.15 MiB of packed tensors. This is an upstream-kernel scheduling experiment, not a new low-bit kernel or an accepted acceleration.
+
 
 ## 相同运算量的同步诊断
 

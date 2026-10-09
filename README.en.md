@@ -14,7 +14,7 @@ Measurements cover CPU and Apple GPU. CUDA, Ascend and production serving are un
 
 - **Avoid repeated prefix computation:** implement KV reuse with capacity limits and failure handling, compare a fixed request loop with recomputation, then separately test reservation against native MLX Cache. Reservation did not pass its speed gate.
 - **Remove CPU work without changing decisions:** prune redundant normalization and candidate-feature calculations, replay 896 records, and measure complete warm computation separately from initialization.
-- **Test operator changes against strong controls:** compare native and compiled implementations before deciding whether to adopt an Attention/Metal candidate. The newer [Q8 QKV projection experiment (PR #25, unmerged)](https://github.com/kimzclandi/inference-compression-lab/pull/25) passed numerical checks but missed the speed gates; its implementation and records are in that separate PR, not this presentation branch.
+- **Test operator changes against strong controls:** compare native and compiled implementations before deciding whether to adopt an Attention/Metal candidate. The newer [Q8 QKV projection experiment](docs/qkv-projection.md) passed numerical checks but missed the speed gates. Its implementation and records are included; the candidate remains disabled by default.
 
 ## Start with a question
 
