@@ -1,0 +1,22 @@
+{
+  "status": "complete",
+  "protocol_commit": "d6007927af0c0c7d56f56b36ee30687dd02aa4ad",
+  "dirty": false,
+  "source_sha256": {
+    "configs/kv-eviction-streaming-v1.json": "25c7f695fb5e55390ce601bc05a6cbc24cd3f83888c111faeace9170efc6fb31",
+    "lab/kv_eviction.py": "c26c8616bc03df015c2bb812b6b2adf3b70cb152e767f1dff434befdcda35eae",
+    "lab/mlx_kv_eviction.py": "35ea60638c7648ac8871c294886b2505214c3132b26abfcf55d5a874678cc829",
+    "lab/long_context_qa.py": "559a60ce00dabf6241ab6ec2547a5b3f21fe9fe1ed253cc46bb52b695c56d465",
+    "lab/qa_metrics.py": "78c4af7f06ba49b3acddd2610586336ecf585c06d8ad89b46ff9fb6358aaaa1f",
+    "experiments/kv_eviction_streaming.py": "27d05aa3583f3e443bfc31234a3c97d1d574b15c48936fb7192f09079a5ccd47"
+  },
+  "artifacts": {
+    "prompts.json": "e5b301267af6931d457dd1acad7b4817d27a91b39de8cef27aeee5603a3911aa",
+    "correctness.json": "d50579ce0e294eeff353e6f75316707bc5bc97e3e27983d55b177108a57ffd20",
+    "quality.json": "afaa06fc3a1185a4412b7941fa471e6534863c8e26207b3fbeabd35e9a6ce60d",
+    "timing.json": "9721c0a47888e0d34a836d8783b6dd733d29ccc4eb33fbce45e254f3b4a3b136",
+    "summary.json": "115429ad558263b3870b931ebc8ed5a4bf3dd1775053f3d622a1dbdc72d31590"
+  },
+  "device": "Device(gpu, 0)",
+  "system": "ProductName:\t\tmacOS\nProductVersion:\t\t27.0\nBuildVersion:\t\t26A428\n"
+}
