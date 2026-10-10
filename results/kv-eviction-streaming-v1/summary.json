@@ -1,0 +1,51 @@
+{
+  "full_cache": {
+    "overall": 8.108108108108109,
+    "answerable": 18.181818181818183,
+    "impossible": 0.0
+  },
+  "stream_50": {
+    "overall": 4.054054054054054,
+    "answerable": 9.090909090909092,
+    "impossible": 0.0,
+    "answerable_em_target_last": 20.0,
+    "kv_reduction": 0.49998955133429457,
+    "decode_ratio_by_round": [
+      1.108282569489883,
+      1.1078626299416123,
+      1.1061450077166002,
+      1.1085997451373266,
+      1.109884044817204
+    ],
+    "decode_ratio_median": 1.108282569489883,
+    "gate_checks": {
+      "answerable": false,
+      "overall": false,
+      "kv": true,
+      "speed": true
+    },
+    "adopt": false
+  },
+  "stream_25": {
+    "overall": 2.7027027027027026,
+    "answerable": 6.0606060606060606,
+    "impossible": 0.0,
+    "answerable_em_target_last": 20.0,
+    "kv_reduction": 0.7499947756671472,
+    "decode_ratio_by_round": [
+      1.140323972285623,
+      1.1397399854892338,
+      1.1381596299193386,
+      1.139481605612417,
+      1.140328670482288
+    ],
+    "decode_ratio_median": 1.1397399854892338,
+    "gate_checks": {
+      "answerable": false,
+      "overall": false,
+      "kv": true,
+      "speed": true
+    },
+    "adopt": false
+  }
+}

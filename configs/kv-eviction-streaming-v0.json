@@ -1,0 +1,37 @@
+{
+  "status": "superseded-by-v1 (draft, never run)",
+  "method": "StreamingLLM-style sink + recent-window KV eviction",
+  "model": "Qwen2.5-0.5B-Instruct, MLX Q8 (same artifact as existing cache experiments)",
+  "hardware": "Apple M4 Max via MLX; NOT CUDA, Ascend or phone",
+  "task": "existing passage QA dev items, filtered to prompts >= 1024 tokens; filter fixed before any run",
+  "conditions": [
+    {
+      "name": "full_cache"
+    },
+    {
+      "name": "stream_50",
+      "budget_ratio": 0.5,
+      "sink": 4
+    },
+    {
+      "name": "stream_25",
+      "budget_ratio": 0.25,
+      "sink": 4
+    }
+  ],
+  "eviction_point": "once after prefill, before decode (open question: also during decode)",
+  "metrics": [
+    "normalized EM vs full_cache",
+    "logical KV payload bytes",
+    "decode tokens/s median",
+    "TTFT"
+  ],
+  "adoption_gate": {
+    "em_drop_max_points": 2.0,
+    "kv_payload_reduction_min": 0.4,
+    "decode_speed_not_slower": true,
+    "note": "gate to be frozen in a separate commit before the first model run; never changed after results"
+  },
+  "repeats": "5 rounds x 2 timings per condition, interleaved order",
+  "known_risk": "sliding-window eviction tends to drop the answer span in retrieval-style QA; a negative result is an expected outcome"
+}
