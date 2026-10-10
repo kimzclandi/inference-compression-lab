@@ -1,0 +1,7 @@
+{
+  "unchanged": true,
+  "capacity": 4352,
+  "visible": 4096,
+  "sentinel_k": 60000,
+  "sentinel_v": -60000
+}

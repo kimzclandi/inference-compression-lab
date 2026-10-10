@@ -1,0 +1,21 @@
+{
+  "schema": "metal-trace-rows-v1",
+  "source_xml_sha256": {
+    "native_application_xml": "3a2fbc27e59a99e00bf47b64e73d02dab05f5e26ff5e8ce49453e7836030a208",
+    "native_gpu_xml": "c2ddc91af64f542f01eedd8442a681bf312b0e63a0849c4c168be7779bad6ea7",
+    "metal_application_xml": "cff9bfabce4824bb245bdaf6b00fe863dd839139d830accef052576876d8361c",
+    "metal_gpu_xml": "3cf83cb2498542f24d3ff491099a7953ed977208171e712159002c9ec7209b57",
+    "metal_counter_info_xml": "149a5dfe9dfd9e2f306508babb9bc89964661a4a56e90904126d5b5e4da5b7d5"
+  },
+  "files": {
+    "native-application.csv": "3959badfe0d561a9aa3eedd9bf87d6a4fa6b2edfd52728cce9a33c3383dda9b2",
+    "native-gpu.csv": "80e64dd0c822350551d3a4337fd1e13d602e22772a06860bb3c4344e742f0f22",
+    "metal-application.csv": "6377ef894cccbc18ad41994787cc907920800d30a75c08ed9ebd425def5635f6",
+    "metal-gpu.csv": "f4c2eacd7a8979e2f7bd004e38cbd03ec1bf7028aac959307a7c41e2bf881f36"
+  },
+  "processes": {
+    "native": "python (8660)",
+    "metal": "python (8633)"
+  },
+  "scope": "Lossless selected numeric fields from historical PID-attributed XML; not new capture, timing or complete trace archive."
+}

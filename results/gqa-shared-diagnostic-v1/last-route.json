@@ -1,0 +1,24 @@
+{
+  "arm": "candidate",
+  "step": 16,
+  "layer": 23,
+  "q_shape": [
+    1,
+    14,
+    1,
+    64
+  ],
+  "k_shape": [
+    1,
+    2,
+    144,
+    64
+  ],
+  "v_shape": [
+    1,
+    2,
+    144,
+    64
+  ],
+  "native_route": false
+}

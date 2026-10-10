@@ -1,0 +1,15 @@
+digraph {
+{ rank=source; "A"; }
+{ rank=source; "B"; }
+{ 517833333384 [label ="Add", shape=rectangle]; }
+"A" -> 517833333384
+"B" -> 517833333384
+{ "C"; }
+517833333384 -> "C"
+{ rank=source; "D"; }
+{ 517923545848 [label ="RMSNorm", shape=rectangle]; }
+"C" -> 517923545848
+"D" -> 517923545848
+{ rank=sink; "E"; }
+517923545848 -> "E"
+}

@@ -1,0 +1,9 @@
+{
+  "exit_code": 2,
+  "result": {
+    "status": "unavailable_quality",
+    "reason": "Current implementation differs: lab/qa_risk_pruning.py",
+    "scope": "english_supplied_passage_bounded_local_prototype"
+  },
+  "scope": "Actual CLI rejection with deliberately changed source and absent model assets; no model inference."
+}

@@ -1,0 +1,286 @@
+{
+  "status": "pass",
+  "source_form": "No-Git copy of the exact candidate file bytes; additional receipts were added afterwards.",
+  "source_manifest_sha256": "7795ffe16cd3663be3bb8efb00094219ccfb47135b1126b2c8318e68dc50739d",
+  "source_files": 1642,
+  "fresh_environment": {
+    "python": "3.12.11",
+    "numpy": "2.2.6",
+    "scikit_learn": "1.6.1",
+    "scipy": "1.16.2",
+    "joblib": "1.4.2",
+    "threadpoolctl": "3.6.0",
+    "unit_tests": {
+      "total": 338,
+      "passed": 329,
+      "skipped": 9
+    },
+    "scope": "New venv installed from fixed requirements. No original PYTHONPATH, model runtime or MLX dependencies."
+  },
+  "full_existing_environment": {
+    "unit_tests": {
+      "total": 338,
+      "passed": 335,
+      "skipped": 3
+    },
+    "skipped_contracts": [
+      "test_bucketing.RealModelTests.test_order_truncation_padding_and_call_isolation",
+      "test_minilm_runtime.RuntimeTests.test_hash_and_real_encode_contract",
+      "test_runtime_study_evidence.ShortRequestEvidenceTests.test_short_pair_selection_has_no_truncation"
+    ]
+  },
+  "checks": [
+    {
+      "check": "dependency-check",
+      "command": [
+        "python",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.09944758300116519,
+      "log_sha256": "ee16ee49f22b546bb149b17697a00ff8338ec6b8a2e0ca5e9278a6b642e9b040"
+    },
+    {
+      "check": "unit-tests",
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 6.505564374998357,
+      "log_sha256": "f13dc6b06ab9c84198f8bd53e8cd5eb676a700d0867ec58d7110352d1d84e415"
+    },
+    {
+      "check": "complete-review",
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "experiments.review_qa_evidence",
+        "--output-dir",
+        "<new-output-dir>/complete-review"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 18.37614641699838,
+      "log_sha256": "eb862db3915efccff19e09689ab32563158f23102e9013aab0541b33b8f25402"
+    },
+    {
+      "check": "pruning-fresh-audit",
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "experiments.qa_risk_pruning",
+        "audit",
+        "--output-dir",
+        "<new-output-dir>/pruning-fresh-audit"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 15.165211791001639,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "check": "pruning-acceptance",
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "experiments.verify_qa_risk_pruning"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.05437345899918,
+      "log_sha256": "7be51b031a9a653539bb6338b830a54b5655ebe4ae609f1f99492a610c5b48b3"
+    },
+    {
+      "check": "legacy-compatibility",
+      "command": [
+        "python",
+        "-B",
+        "results/qa-risk-pruning-v1/verify_measurements.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.052848583000013605,
+      "log_sha256": "7be51b031a9a653539bb6338b830a54b5655ebe4ae609f1f99492a610c5b48b3"
+    },
+    {
+      "check": "span-gap",
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "experiments.verify_span_gap_ablation",
+        "--output",
+        "<new-output-dir>/span-gap.json"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 11.768468042002496,
+      "log_sha256": "e91e13f6655b45945b2421db585428204db2d0e41e67c0473ece2ff35311af65"
+    },
+    {
+      "check": "coverage-gap",
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "experiments.verify_qa_coverage_gap",
+        "--output",
+        "<new-output-dir>/coverage-gap.json"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 6.546486332998029,
+      "log_sha256": "4119b750539a0852eb857083c7cca772ba6aba5bf6c255e089d8d41116c1559f"
+    },
+    {
+      "check": "expanded",
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "experiments.verify_qa_expanded",
+        "--replay-fit",
+        "--output",
+        "<new-output-dir>/expanded.json"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 48.85336520900091,
+      "log_sha256": "ad0d87725e5fb60997347fd83e469593386446374b330b7903217f5c202c7194"
+    },
+    {
+      "check": "nonlinear",
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "experiments.qa_nonlinear",
+        "verify",
+        "--folder",
+        "results/qa-nonlinear-v2",
+        "--output",
+        "<new-output-dir>/nonlinear.json"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 2.0600571670001955,
+      "log_sha256": "fd91588e4d7fc39b0d76da114b91e10d821b16a1db79c256a285c6959702419c"
+    },
+    {
+      "check": "rich",
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "experiments.qa_rich",
+        "verify",
+        "--folder",
+        "results/qa-rich-v1",
+        "--output",
+        "<new-output-dir>/rich.json"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.5237612079981773,
+      "log_sha256": "fd91588e4d7fc39b0d76da114b91e10d821b16a1db79c256a285c6959702419c"
+    },
+    {
+      "check": "rich-inputs",
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "experiments.verify_qa_rich_inputs",
+        "--output",
+        "<new-output-dir>/rich-inputs.json"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 0.5256921250002051,
+      "log_sha256": "070ca2ca453bccfaa540bd8fd37c335491a77c284575d79f902702757cdcb161"
+    }
+  ],
+  "prototype": {
+    "status": "complete",
+    "git_head": null,
+    "source_sha256": {
+      "experiments/reproduce_qa_prototype.py": "e8d0f3b94f6bbc21e537f9e6965bbdb617550cd648e3b7c289df7f508631765c",
+      "experiments/serve_qa_specialist.py": "7d4db65c2beabb8b4f673e05dbbc981f5370fe4fce18e3ceeb7046674d23b7fd"
+    },
+    "data_sha256": "d5d1c2e80291bf203179a2151ae71276c00f966e00aa86bee9a054a707f3afef",
+    "cases": [
+      {
+        "case": "accepted_correct",
+        "status": "answer"
+      },
+      {
+        "case": "unanswerable_refusal",
+        "status": "abstain"
+      },
+      {
+        "case": "answerable_refusal_cost",
+        "status": "abstain"
+      },
+      {
+        "case": "unexpected_gold_field",
+        "status": "invalid_input"
+      },
+      {
+        "case": "over_question_token_limit",
+        "status": "invalid_input"
+      },
+      {
+        "case": "empty_context",
+        "status": "invalid_input"
+      },
+      {
+        "case": "missing_assets",
+        "status": "unavailable_model"
+      }
+    ],
+    "startup_timing": {
+      "evidence_verification_seconds": 16.376583334000316,
+      "training_head_rebuild_seconds": 0.002037624999502441,
+      "local_model_load_seconds": 1.6575189159993897,
+      "total_startup_seconds": 18.036139874999208,
+      "scope": "One-time initialization; excluded from request-only benchmark timings."
+    },
+    "raw_run_sha256": "fae36473d6ffc379a86d7f96bc69a20603423a78e5d505a9e6b75802e66228d6",
+    "scope": "Seven disclosed functional/error paths on existing pinned local model assets. No download, new quality evaluation or latency benchmark; local raw log retains the private asset path."
+  },
+  "fresh_replay": {
+    "counts": {
+      "development": 768,
+      "historical_evaluation": 128
+    },
+    "exact_feature_score_decision_differences": 0,
+    "mechanism": {
+      "reference": {
+        "normalize_calls": 34933
+      },
+      "pruned": {
+        "normalize_calls": 121
+      }
+    }
+  },
+  "preserved_historical_files": {
+    "65ed839d8f018bacc7fbdd1792782a9367bcb016": {
+      "files_checked": 1331,
+      "changed": []
+    },
+    "3be781202a90a1259b310073a7e3c5217debf6ba": {
+      "files_checked": 1459,
+      "changed": [
+        "results/qa-risk-pruning-v1/verify_measurements.py"
+      ]
+    }
+  },
+  "limits": [
+    "No new timing experiment or quality confirmation.",
+    "Negative coverage and compression results remain.",
+    "No mobile/GPU/NPU or concurrent-serving verification.",
+    "Commit/remote-CI/package identities are recorded in the PR and external delivery receipt, not recursively inside this pre-commit receipt."
+  ]
+}

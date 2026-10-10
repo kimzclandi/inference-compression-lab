@@ -1,0 +1,13 @@
+{
+  "protocol.json": "9e46fc69c65f631cc69919b61e820eaf191ddd4817a2aa4f58a8cbe5b42e304e",
+  "run.json": "f6fd2926810f96067e5c5bb10ea58ddc0e5cb40b7a5e9e6c126b0854c7da9f0c",
+  "source/experiments/__init__.py": "7c54e0db53064338fa4534e5e27fadb47c6632b81ba3b249f2d251bc0c0321ba",
+  "source/experiments/metal_residual_rmsnorm.py": "a9d91a7e668077b1884adfa1b44ea0d84a7128def68090b6eb4167988a5006eb",
+  "source/experiments/qwen_demand_prefill.py": "dfdf70300f8baebaecb971ee60d58ff212f009d4bad6c1ff2d6020e253d9267f",
+  "source/lab/__init__.py": "0925f6ce613cb6c7f7eb3feba5cea6f47b47f653ea5b4de1d358915d43ea9a79",
+  "source/lab/kernels/residual_rmsnorm.metal": "9fabf83f4257874eb3de315db3d45d419d1a3ba0b57cbc33813823dfa5488c91",
+  "source/lab/metal_residual_rmsnorm.py": "b8fe3839bf85b93252b6e29018c803050912bb5e7a23b56b111ddc4b675e9d29",
+  "source/lab/qa_metrics.py": "78c4af7f06ba49b3acddd2610586336ecf585c06d8ad89b46ff9fb6358aaaa1f",
+  "source/lab/qwen_demand_prefill.py": "4ed687317da9ca0008036cc8452963a8a6b67be5efbc2fdfbe8500c58a29f7c2",
+  "source/third_party/MLX-MIT.txt": "c4a903e6b8a5042474bbfe2cd44d0babf0f1dcc157b396cdb5d18231c8a0e134"
+}

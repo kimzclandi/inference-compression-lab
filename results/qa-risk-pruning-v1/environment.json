@@ -1,0 +1,13 @@
+{
+  "hardware": {
+    "chip": "Apple M4 Max",
+    "memory_GB": 48,
+    "logical_processors": 16
+  },
+  "hardware_check": "system_profiler SPHardwareDataType; exported only chip/model/core/memory fields",
+  "baseline_profile_interpreter": "system python3; cProfile evidence is diagnostic only",
+  "timed_interpreter": "Python 3.12.11 in existing local QA runtime",
+  "budget": "one six-process benchmark; no timing retune or training search",
+  "ai_assisted": true,
+  "personal_mastery": "unverified"
+}

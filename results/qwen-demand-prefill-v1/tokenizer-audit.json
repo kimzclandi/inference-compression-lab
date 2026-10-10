@@ -1,0 +1,10 @@
+{
+  "status": "pass",
+  "quality_prompts": 74,
+  "decoded_arm_outputs": 296,
+  "synthetic_workloads": 6,
+  "source": "independent local AutoTokenizer reconstruction; no model or performance execution",
+  "quality_sha256": "4171f9eebd93f1d10b8b12b4823bf79459dd460eb9f5b28d01c7f9e590b45601",
+  "workloads_sha256": "2c5d1188d38799427e708c73e2e525d66c6ed231c1f5e8c2bd0a3036edfdc478",
+  "tokenizer_json_sha256": "9c5ae00e602b8860cbd784ba82a8aa14e8feecec692e7076590d014d7b7fdafa"
+}

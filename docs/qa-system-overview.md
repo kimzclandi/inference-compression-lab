@@ -21,6 +21,8 @@ flowchart LR
 
 初始化还核验冻结协议、校准选择、全部质量证据和本地资产身份。推理不接收gold标签、不在线拟合、不调整阈值。图中的训练矩阵仅用于初始化时重建排序头；与每条请求的token矩阵不同。
 
+`v0.1.0-research.2` 的入口使用[精确剪枝特征提取器](../lab/qa_risk_pruning.py)，并在加载头/模型之前校验其源码及已验收证据身份；完整启动核验也逐行采用同一剪枝重算。原[参考提取器](../lab/qa_risk_calibration.py)仍用于冻结实验复现；两者的证据绑定不能互相替代。详见[剪枝研究与交付复核](qa-risk-pruning.md)和[启动核验研究](qa-risk-startup.md)。
+
 Initialization verifies the fixed protocol, calibration selection, complete evidence and local asset identity. Gold labels never enter request inference. Training-only head reconstruction occurs at initialization, with no online fitting or threshold adaptation.
 
 | 层 / Layer | 输入、输出与合同 / Contract | 实现与检查 / Implementation |

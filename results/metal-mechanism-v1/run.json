@@ -1,0 +1,22 @@
+{
+  "status": "complete",
+  "git_head": "afbde3ed1a8eefb067ec13240a8a5bdbb9e2a751",
+  "source_sha256": {
+    "experiments/metal_mechanism_diagnostic.py": "7579a828207e553e9743bce6d94d4e895bb37d1046ab9c0a3cd95dfd09105a3b",
+    "lab/kernels/residual_rmsnorm.metal": "9fabf83f4257874eb3de315db3d45d419d1a3ba0b57cbc33813823dfa5488c91",
+    "lab/kernels/residual_rmsnorm_masked.metal": "edfa6c088f40ee165629166cde1c11d7661054c1ab633aaa4a8c60a8af388fe1",
+    "configs/mechanism-diagnostics-v1.json": "4f971a86236c82747487faacb8a82b071fd7a544b48fafcb833745abba137628"
+  },
+  "platform": "macOS-27.0-arm64-arm-64bit",
+  "started_utc": "2026-10-07T18:30:22.718937+00:00",
+  "device": {
+    "resource_limit": 499000,
+    "max_buffer_length": 30150672384,
+    "architecture": "applegpu_g16s",
+    "memory_size": 51539607552,
+    "max_recommended_working_set_size": 40200896512,
+    "device_name": "Apple M4 Max"
+  },
+  "mlx": "0.29.3",
+  "numpy": "2.5.3"
+}

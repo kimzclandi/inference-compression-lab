@@ -14,6 +14,8 @@
 
 量化不是本项目原创。新增工作是诊断、受控模块回退、固定对照实验、失败处理和证据重算。Q8 不是 FP8，KV 保持浮点。下载模型随附 LICENSE/README 在本地重建时保留；权重不随仓库或发布包分发。
 
-除上表明确继承许可的内容外，仓库当前尚未选择根代码许可证。维护者确认后才能加入新的复用授权；准备发布包本身不代表已经授权公开开源。个人实验、学校/团队工作、字节模型评测和 Jetson 经历分开归属。
+维护者已明确采用根 [MIT 许可证](LICENSE)，适用于本项目代码；上表第三方内容与数据继续遵循各自许可，不将模型权重或数据重新授权为 MIT。个人实验、学校/团队工作、字节模型评测和 Jetson 经历分开归属。
 
 新增正确性排序头使用本项目固定五特征训练代码；系数及标准化参数仅保存本地 `runs/`，发布材料只含公开数据派生特征、目标、训练过程与重建命令。上游模型能力、ORT 量化 kernel 与本项目实验/门控贡献分开归属。
+
+本实验分支的 `lab/kernels/residual_rmsnorm.metal` 将 residual add 与 RMSNorm 融合；归约结构与舍入顺序改编自 [MLX v0.29.3 rms_norm.metal](https://github.com/ml-explore/mlx/blob/v0.29.3/mlx/backend/metal/kernels/rms_norm.metal)。保留 Apple 2024 copyright 和 [MIT 原文](third_party/MLX-MIT.txt)。项目新增融合/入口/审计，不将 RMSNorm、SIMD 归约或上游量化 kernel 写为原创。

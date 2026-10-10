@@ -1,0 +1,144 @@
+{
+  "expected_input_sha256": [
+    "b5b52a4f05bd17fab21b126987c5aa422ea9a3c66904fd1ff4628868a5631efd",
+    "8e999acde6c0e51b8e3f3b12d85340b422c1da493d191074254d396a7eec85bc",
+    "5c24059227c3ef0c0dc6efed7bd4be19661162921d32704cf2386bfbc9856e8a"
+  ],
+  "expected_layout": {
+    "k_shape": [
+      1,
+      2,
+      138,
+      64
+    ],
+    "k_strides": [
+      32768,
+      16384,
+      64,
+      1
+    ],
+    "q_shape": [
+      1,
+      14,
+      1,
+      64
+    ],
+    "q_strides": [
+      896,
+      64,
+      896,
+      1
+    ],
+    "v_shape": [
+      1,
+      2,
+      138,
+      64
+    ],
+    "v_strides": [
+      32768,
+      16384,
+      64,
+      1
+    ]
+  },
+  "gates": {
+    "fast_cast": true,
+    "finite": true,
+    "inputs_unchanged": true,
+    "layout_reconstructed": true,
+    "native_reproduced": true,
+    "original_reproduced": true,
+    "standard_cast": true,
+    "tap_reproduced": true,
+    "values_reconstructed": true
+  },
+  "input_sha256_after": [
+    "b5b52a4f05bd17fab21b126987c5aa422ea9a3c66904fd1ff4628868a5631efd",
+    "8e999acde6c0e51b8e3f3b12d85340b422c1da493d191074254d396a7eec85bc",
+    "5c24059227c3ef0c0dc6efed7bd4be19661162921d32704cf2386bfbc9856e8a"
+  ],
+  "input_sha256_before": [
+    "b5b52a4f05bd17fab21b126987c5aa422ea9a3c66904fd1ff4628868a5631efd",
+    "8e999acde6c0e51b8e3f3b12d85340b422c1da493d191074254d396a7eec85bc",
+    "5c24059227c3ef0c0dc6efed7bd4be19661162921d32704cf2386bfbc9856e8a"
+  ],
+  "key": "s10-l10",
+  "layout_after": {
+    "k_shape": [
+      1,
+      2,
+      138,
+      64
+    ],
+    "k_strides": [
+      32768,
+      16384,
+      64,
+      1
+    ],
+    "q_shape": [
+      1,
+      14,
+      1,
+      64
+    ],
+    "q_strides": [
+      896,
+      64,
+      896,
+      1
+    ],
+    "v_shape": [
+      1,
+      2,
+      138,
+      64
+    ],
+    "v_strides": [
+      32768,
+      16384,
+      64,
+      1
+    ]
+  },
+  "layout_before": {
+    "k_shape": [
+      1,
+      2,
+      138,
+      64
+    ],
+    "k_strides": [
+      32768,
+      16384,
+      64,
+      1
+    ],
+    "q_shape": [
+      1,
+      14,
+      1,
+      64
+    ],
+    "q_strides": [
+      896,
+      64,
+      896,
+      1
+    ],
+    "v_shape": [
+      1,
+      2,
+      138,
+      64
+    ],
+    "v_strides": [
+      32768,
+      16384,
+      64,
+      1
+    ]
+  },
+  "stage": "after"
+}

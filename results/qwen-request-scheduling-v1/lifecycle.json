@@ -1,0 +1,88 @@
+[
+  {
+    "kind": "cancel",
+    "outcome": "cancelled",
+    "delivered_tokens": [
+      323,
+      13723,
+      5479
+    ],
+    "delivered_count": 3,
+    "layer_offsets": [
+      131,
+      131,
+      131,
+      131,
+      131,
+      131,
+      131,
+      131,
+      131,
+      131,
+      131,
+      131,
+      131,
+      131,
+      131,
+      131,
+      131,
+      131,
+      131,
+      131,
+      131,
+      131,
+      131,
+      131
+    ],
+    "token_times_service_s": [
+      0.01612520799972117,
+      0.018744041997706518,
+      0.02092208300018683
+    ],
+    "close_complete_service_s": 0.020974167000531452,
+    "recovery_tokens_equal": true
+  },
+  {
+    "kind": "failure",
+    "outcome": "injected_failure",
+    "delivered_tokens": [
+      323,
+      13723,
+      5479
+    ],
+    "delivered_count": 3,
+    "layer_offsets": [
+      131,
+      131,
+      131,
+      131,
+      131,
+      131,
+      131,
+      131,
+      131,
+      131,
+      131,
+      131,
+      131,
+      131,
+      131,
+      131,
+      131,
+      131,
+      131,
+      131,
+      131,
+      131,
+      131,
+      131
+    ],
+    "token_times_service_s": [
+      0.016321000002790242,
+      0.018912625000666594,
+      0.02096295800220105
+    ],
+    "close_complete_service_s": 0.02101050000055693,
+    "recovery_tokens_equal": true
+  }
+]

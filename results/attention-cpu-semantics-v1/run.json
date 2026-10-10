@@ -1,0 +1,17 @@
+{
+  "mode": "cpu-semantics",
+  "status": "complete",
+  "platform": "macOS-27.0-arm64-arm-64bit",
+  "git_head": "a33dfa0fe1b20d93b5f7c2213dd4895b5596b9f3",
+  "source_sha256": {
+    "configs/attention-backend-v1.json": "88eb969eb16e56b36f2af5607c49880f177752768f059e8a57d1d0117fa6b6f4",
+    "lab/attention_reference.py": "7f2d8a0b014c2715df2a1c7f9aa784cb8a6b41a905e7678c8eb8df267468ffe6",
+    "experiments/attention_backend_study.py": "2b8d9b8b66d236e603ae591998ecbeb594a43ce8930667fce1d8b019c9919d71"
+  },
+  "cuda_performance_measured": false,
+  "torch_version": "2.8.0",
+  "numpy_version": "2.2.6",
+  "artifact_sha256": {
+    "semantics.json": "6025e1ae63a293eb800a998bc0c39aee8ea47ba62b6e47463a32d4752ddd9f1d"
+  }
+}

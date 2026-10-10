@@ -1,0 +1,16 @@
+[
+  {
+    "id": "56e17a7ccd28a01900c679a1",
+    "noop_tokens_equal": true,
+    "noop_logits_allclose": true,
+    "capture_tokens_equal": true,
+    "capture_logits_allclose": true
+  },
+  {
+    "id": "56e17a7ccd28a01900c679a2",
+    "noop_tokens_equal": true,
+    "noop_logits_allclose": true,
+    "capture_tokens_equal": true,
+    "capture_logits_allclose": true
+  }
+]

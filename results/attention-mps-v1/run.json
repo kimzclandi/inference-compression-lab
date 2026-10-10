@@ -1,0 +1,36 @@
+{
+  "status": "complete",
+  "start_utc": "2026-10-08T08:52:03.256780+00:00",
+  "git_head": "25aff9f2ef99776bc3b88a0ef13b8ea7e9414f52",
+  "platform": "macOS-27.0-arm64-arm-64bit",
+  "source_sha256": {
+    "configs/attention-mps-v1.json": "04fad1a357633226e6940041ca08ef55521c8c147643c986450e15159a634f89",
+    "experiments/attention_mps_study.py": "5e6a13c3cfe6fffa79e36ec5d246455645e90f02db63a25b079e4635e32ae578",
+    "experiments/attention_backend_study.py": "2b8d9b8b66d236e603ae591998ecbeb594a43ce8930667fce1d8b019c9919d71",
+    "lab/attention_reference.py": "7f2d8a0b014c2715df2a1c7f9aa784cb8a6b41a905e7678c8eb8df267468ffe6"
+  },
+  "mps_performance_measured": true,
+  "cuda_performance_measured": false,
+  "torch_version": "2.8.0",
+  "numpy_version": "2.2.6",
+  "hardware": [
+    "Chip: Apple M4 Max",
+    "Total Number of Cores: 16 (12 Performance and 4 Efficiency)",
+    "Memory: 48 GB",
+    "Chipset Model: Apple M4 Max",
+    "Total Number of Cores: 40",
+    "Metal Support: Metal 4"
+  ],
+  "fallback_enabled": false,
+  "fast_math": false,
+  "prefer_metal": false,
+  "actual_sdpa_kernel": "Not identified; framework automatic dispatch, no FlashAttention attribution",
+  "artifact_sha256": {
+    "summary.json": "8a9d9a9254faac7249081f00176960e3249039d3040685fc71e57d94b08559b0",
+    "timings.json": "3c62f8a30c67c81652147006f91766e986d6ef26821b232d5df3f7bcb097eac3",
+    "witnesses.json": "7b7ee2677873f1105f5a6c44dc638c0550c803080d2f98fd1851011f616b78b7",
+    "correctness.json": "8d2ac3ca976cde729e93e3f9b235d44c60a2e4f5de607631145fd94c0d07fadb",
+    "inputs.json": "4f12b43fc8390cea6dbdb5687449a2051e1c3ea6a59fee8e22866d69b2acebc9"
+  },
+  "end_utc": "2026-10-08T08:52:08.279984+00:00"
+}

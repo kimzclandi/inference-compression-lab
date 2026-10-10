@@ -1,0 +1,22 @@
+test_alternative_can_come_from_another_window_and_uses_own_null (test_qa_risk_pruning.ExistingFeatureContracts.test_alternative_can_come_from_another_window_and_uses_own_null) ... ok
+test_five_features_match_independent_hand_calculation (test_qa_risk_pruning.ExistingFeatureContracts.test_five_features_match_independent_hand_calculation) ... ok
+test_full_decoder_shape_mask_and_finite_checks_are_inherited (test_qa_risk_pruning.ExistingFeatureContracts.test_full_decoder_shape_mask_and_finite_checks_are_inherited) ... ok
+test_gold_fields_are_ignored_and_input_is_not_mutated (test_qa_risk_pruning.ExistingFeatureContracts.test_gold_fields_are_ignored_and_input_is_not_mutated) ... ok
+test_missing_alternative_fails_instead_of_infinite_confidence (test_qa_risk_pruning.ExistingFeatureContracts.test_missing_alternative_fails_instead_of_infinite_confidence) ... ok
+test_question_and_padding_logits_do_not_enter_normalization (test_qa_risk_pruning.ExistingFeatureContracts.test_question_and_padding_logits_do_not_enter_normalization) ... ok
+test_same_normalized_answer_is_excluded_even_at_different_offsets (test_qa_risk_pruning.ExistingFeatureContracts.test_same_normalized_answer_is_excluded_even_at_different_offsets) ... ok
+test_stale_span_margin_offsets_and_source_context_are_rejected (test_qa_risk_pruning.ExistingFeatureContracts.test_stale_span_margin_offsets_and_source_context_are_rejected) ... ok
+test_zero_width_tokens_cannot_win_alternative_endpoints (test_qa_risk_pruning.ExistingFeatureContracts.test_zero_width_tokens_cannot_win_alternative_endpoints) ... ok
+test_cross_window_second_best_survives_duplicate_winner (test_qa_risk_pruning.PruningTests.test_cross_window_second_best_survives_duplicate_winner) ... ok
+test_dominated_spans_skip_normalization (test_qa_risk_pruning.PruningTests.test_dominated_spans_skip_normalization) ... ok
+test_duplicate_integer_sum_conversion_overflow_is_still_ignored (test_qa_risk_pruning.PruningTests.test_duplicate_integer_sum_conversion_overflow_is_still_ignored) ... ok
+test_first_equal_alternative_keeps_its_diagnostics (test_qa_risk_pruning.PruningTests.test_first_equal_alternative_keeps_its_diagnostics) ... ok
+test_low_margin_duplicate_overflow_is_still_ignored (test_qa_risk_pruning.PruningTests.test_low_margin_duplicate_overflow_is_still_ignored) ... ok
+test_low_margin_nonduplicate_overflow_is_not_pruned (test_qa_risk_pruning.PruningTests.test_low_margin_nonduplicate_overflow_is_not_pruned) ... ok
+test_seeded_masks_offsets_ties_and_unicode (test_qa_risk_pruning.PruningTests.test_seeded_masks_offsets_ties_and_unicode) ... ok
+test_undefined_normalized_alternative_still_fails (test_qa_risk_pruning.PruningTests.test_undefined_normalized_alternative_still_fails) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.099s
+
+OK
