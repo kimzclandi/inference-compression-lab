@@ -25,8 +25,7 @@ explicitly. Only the pinned GPU FP16 decode configuration is supported.
 The upstream behavior is read from [MLX v0.29.3 QuantizedLinear](https://github.com/ml-explore/mlx/blob/v0.29.3/python/mlx/nn/layers/quantized.py)
 and [MLX-LM v0.26.3 Qwen2](https://github.com/ml-explore/mlx-lm/blob/v0.26.3/mlx_lm/models/qwen2.py).
 Algorithmic projection concatenation is established practice; implementation,
-contracts and measurements here are project work with AI assistance, not evidence
-of the owner's independent mastery.
+contracts and measurements here are project work with AI assistance.
 
 ## Frozen procedure
 
