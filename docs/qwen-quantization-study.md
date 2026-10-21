@@ -103,11 +103,11 @@ python3 -m experiments.qwen_quantization_demo
 python3 -m unittest discover -s tests -v
 ```
 
-本机已验证的环境和模型位置：
+先把下面两个变量替换为本机的 MLX 环境解释器与模型缓存目录（原实验在维护者本机执行）：
 
 ```bash
-qwen_python=/Users/yukaiyan/Documents/Codex/2026-09-18/github-gpu-api-cuda-api-1/outputs/domain-qa-lab/.venv-mlx/bin/python
-qwen_models=/Users/yukaiyan/Documents/Codex/2026-09-18/github-gpu-api-cuda-api-1/outputs/domain-qa-lab/.cache/mlx
+qwen_python=/path/to/.venv-mlx/bin/python
+qwen_models=/path/to/mlx-model-cache
 
 # 新目录，禁止覆盖已有 run；预计约两分钟，负载随机器状态改变。
 HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 "$qwen_python" -m experiments.qwen_quantization study \
