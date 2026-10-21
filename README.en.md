@@ -8,7 +8,7 @@
 
 Each study fixes its inputs, timing scope and controls before checking output parity, latency and memory. Candidates that miss their gates remain disabled by default, with failures retained. Separate studies do not form a single end-to-end speedup claim.
 
-Measurements cover CPU and Apple GPU. CUDA, Ascend and production serving are unverified. Implementation, execution and documentation are AI-assisted. MLX, PyTorch and ONNX Runtime supply frameworks and general-purpose kernels; the project work is in controlled experiments, diagnostics, runtime checks and evidence verification. The work is maintained as a personal project; team research, internships and historical Jetson deployment have separate contributions and evidence.
+Measurements cover CPU and Apple GPU. CUDA, Ascend and production serving are unverified. Implementation, execution and documentation are AI-assisted. MLX, PyTorch and ONNX Runtime supply frameworks and general-purpose kernels; the project work is in controlled experiments, diagnostics, runtime checks and evidence verification.
 
 ## Project progression
 

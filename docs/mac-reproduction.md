@@ -1,6 +1,6 @@
 # Mac MiniLM 实验复跑与交接
 
-本轮在 Apple M4 Max / 48 GiB / macOS 27.0 / arm64 上真实执行。实验代码由 Codex 协助实现与运行，量化核心调用 ORT 官方 API。用户是否已自行复跑、理解和参与修改尚未确认。
+本轮在 Apple M4 Max / 48 GiB / macOS 27.0 / arm64 上真实执行。实验代码由 Codex 协助实现与运行，量化核心调用 ORT 官方 API。
 
 ## 环境
 

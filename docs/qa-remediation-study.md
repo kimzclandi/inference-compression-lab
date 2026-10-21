@@ -104,4 +104,4 @@ python -m experiments.verify_qa_remediation --root runs/qa-replay
 
 源目录需要与协议九个文件及内容完全匹配；缺LICENSE/README/tokenizer文件也会失败，应补齐原始指定revision文件，不能改协议hash以掩盖身份问题。数值跨版本/设备不一致时保留差异，不挑选通过的一次。
 
-功能演示：演示 `qa_remediation_demo`，解释一个原文中的合法span为何仍因关系方向倒置而错误，接着展示完整阈值曲线中精度和覆盖的冲突，再运行关闭入口。讲清楚“机制诊断→固定验收→真实运行→停止结论”，不是展示一个挑出的正确问答。
+离线演示 `qa_remediation_demo` 重放已发布的校准证据：一个原文中的合法span因关系方向倒置而错误、完整阈值曲线中精度与覆盖的冲突，以及保持关闭的回答入口。它不运行模型推理，也不构成新的确认。

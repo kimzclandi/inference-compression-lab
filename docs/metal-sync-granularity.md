@@ -72,4 +72,4 @@ python -m unittest discover -s tests -v
 ```
 
 验证覆盖、来源归档、原始计时算术、PID过滤、区间并集和计数器名称，不会执行GPU或重跑性能。
-Linux CI不证明模型质量、跨设备加速或用户已独立掌握；本轮没有CUDA/Ascend实现、生产部署或简历新加速表述。
+Linux CI不证明模型质量或跨设备加速；本轮没有CUDA/Ascend实现或生产部署。
