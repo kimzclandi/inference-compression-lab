@@ -1,0 +1,147 @@
+{
+  "scope": "Synchronization-granularity diagnosis, not a replacement kernel benchmark or deployment claim",
+  "timing_scope": "Host perf_counter includes Python graph construction, eval, GPU work and synchronization. Each sample starts from the same input and performs the same dependent 32 calls; all h/y outputs are forced before their batch is released. Outer chain is not compiled as one function.",
+  "shapes": {
+    "1": {
+      "median_chain_seconds": {
+        "1": {
+          "compiled": 0.003770207999878039,
+          "original": 0.0038833544999761216,
+          "masked": 0.0038160834999416693
+        },
+        "8": {
+          "compiled": 0.000686312999960137,
+          "original": 0.0006203749996984698,
+          "masked": 0.0006541459999880317
+        },
+        "32": {
+          "compiled": 0.0003120409999155527,
+          "original": 0.0003082084999732615,
+          "masked": 0.00031337549989984836
+        }
+      },
+      "sensitivity": {
+        "compiled": {
+          "sync1_over_sync32": 12.082412249987554,
+          "faster_rounds": 7,
+          "meets_sensitivity_rule": true
+        },
+        "original": {
+          "sync1_over_sync32": 12.59976444618828,
+          "faster_rounds": 7,
+          "meets_sensitivity_rule": true
+        },
+        "masked": {
+          "sync1_over_sync32": 12.177351136771225,
+          "faster_rounds": 7,
+          "meets_sensitivity_rule": true
+        }
+      },
+      "original_over_masked": {
+        "1": 1.0176282830382197,
+        "8": 0.9483739099678362,
+        "32": 0.9835117935887197
+      },
+      "compiled_over_masked": {
+        "1": 0.987978381483442,
+        "8": 1.0491740375584255,
+        "32": 0.995741530576825
+      }
+    },
+    "512": {
+      "median_chain_seconds": {
+        "1": {
+          "compiled": 0.00405116599995381,
+          "original": 0.003970895999827917,
+          "masked": 0.004048334000117393
+        },
+        "8": {
+          "compiled": 0.000862228999949366,
+          "original": 0.0008570420000069134,
+          "masked": 0.0008680204998654517
+        },
+        "32": {
+          "compiled": 0.0004412499999943975,
+          "original": 0.00048139599994101445,
+          "masked": 0.00048677099994165474
+        }
+      },
+      "sensitivity": {
+        "compiled": {
+          "sync1_over_sync32": 9.181112747887244,
+          "faster_rounds": 7,
+          "meets_sensitivity_rule": true
+        },
+        "original": {
+          "sync1_over_sync32": 8.248710002398175,
+          "faster_rounds": 7,
+          "meets_sensitivity_rule": true
+        },
+        "masked": {
+          "sync1_over_sync32": 8.316711555541792,
+          "faster_rounds": 7,
+          "meets_sensitivity_rule": true
+        }
+      },
+      "original_over_masked": {
+        "1": 0.9808716374965034,
+        "8": 0.9873522573945661,
+        "32": 0.9889578467055669
+      },
+      "compiled_over_masked": {
+        "1": 1.0006995469831133,
+        "8": 0.9933279226504633,
+        "32": 0.9064837470746748
+      }
+    },
+    "2048": {
+      "median_chain_seconds": {
+        "1": {
+          "compiled": 0.004503062500134547,
+          "original": 0.004702645999941524,
+          "masked": 0.004830916999935653
+        },
+        "8": {
+          "compiled": 0.0014318959999854997,
+          "original": 0.001327582999920196,
+          "masked": 0.001331229500237896
+        },
+        "32": {
+          "compiled": 0.000942125000165106,
+          "original": 0.0008819999998195271,
+          "masked": 0.0008733120000670169
+        }
+      },
+      "sensitivity": {
+        "compiled": {
+          "sync1_over_sync32": 4.779686877373376,
+          "faster_rounds": 7,
+          "meets_sensitivity_rule": true
+        },
+        "original": {
+          "sync1_over_sync32": 5.331798186965724,
+          "faster_rounds": 7,
+          "meets_sensitivity_rule": true
+        },
+        "masked": {
+          "sync1_over_sync32": 5.531719476618819,
+          "faster_rounds": 7,
+          "meets_sensitivity_rule": true
+        }
+      },
+      "original_over_masked": {
+        "1": 0.9734478981949312,
+        "8": 0.997260802651197,
+        "32": 1.0099483343316518
+      },
+      "compiled_over_masked": {
+        "1": 0.9321341062565404,
+        "8": 1.0756191924304668,
+        "32": 1.0787954363306682
+      }
+    }
+  },
+  "kernel_promoted": false,
+  "excludes_pure_gpu_time": true,
+  "causal_limit": "Cadence changes graph scheduling, live outputs and GPU submission as well as host synchronization; cannot subtract timings to identify isolated host cost."
+}

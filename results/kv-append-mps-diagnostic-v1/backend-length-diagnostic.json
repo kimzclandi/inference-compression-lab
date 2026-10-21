@@ -1,0 +1,128 @@
+[
+  {
+    "keys": 1024,
+    "arm": "auto",
+    "max_abs_error": 0.5973590527570259,
+    "normalized_error": 59.22667559274581,
+    "passed": false
+  },
+  {
+    "keys": 1024,
+    "arm": "math",
+    "max_abs_error": "NaN",
+    "normalized_error": "NaN",
+    "passed": false
+  },
+  {
+    "keys": 1024,
+    "arm": "explicit_fp32",
+    "max_abs_error": 5.964789132428816e-05,
+    "normalized_error": 0.005258958439235294,
+    "passed": true
+  },
+  {
+    "keys": 1025,
+    "arm": "auto",
+    "max_abs_error": "NaN",
+    "normalized_error": "NaN",
+    "passed": false
+  },
+  {
+    "keys": 1025,
+    "arm": "math",
+    "max_abs_error": "NaN",
+    "normalized_error": "NaN",
+    "passed": false
+  },
+  {
+    "keys": 1025,
+    "arm": "explicit_fp32",
+    "max_abs_error": 5.916564171629113e-05,
+    "normalized_error": 0.005197325274466387,
+    "passed": true
+  },
+  {
+    "keys": 1026,
+    "arm": "auto",
+    "max_abs_error": "NaN",
+    "normalized_error": "NaN",
+    "passed": false
+  },
+  {
+    "keys": 1026,
+    "arm": "math",
+    "max_abs_error": "NaN",
+    "normalized_error": "NaN",
+    "passed": false
+  },
+  {
+    "keys": 1026,
+    "arm": "explicit_fp32",
+    "max_abs_error": 6.005506657918991e-05,
+    "normalized_error": 0.005333313823219344,
+    "passed": true
+  },
+  {
+    "keys": 1040,
+    "arm": "auto",
+    "max_abs_error": 0.6009370305477995,
+    "normalized_error": 58.29252766640706,
+    "passed": false
+  },
+  {
+    "keys": 1040,
+    "arm": "math",
+    "max_abs_error": "NaN",
+    "normalized_error": "NaN",
+    "passed": false
+  },
+  {
+    "keys": 1040,
+    "arm": "explicit_fp32",
+    "max_abs_error": 5.9746140784855406e-05,
+    "normalized_error": 0.005194053778311944,
+    "passed": true
+  },
+  {
+    "keys": 1056,
+    "arm": "auto",
+    "max_abs_error": "NaN",
+    "normalized_error": "NaN",
+    "passed": false
+  },
+  {
+    "keys": 1056,
+    "arm": "math",
+    "max_abs_error": "NaN",
+    "normalized_error": "NaN",
+    "passed": false
+  },
+  {
+    "keys": 1056,
+    "arm": "explicit_fp32",
+    "max_abs_error": 6.0754687446096245e-05,
+    "normalized_error": 0.005332286667153074,
+    "passed": true
+  },
+  {
+    "keys": 1088,
+    "arm": "auto",
+    "max_abs_error": "NaN",
+    "normalized_error": "NaN",
+    "passed": false
+  },
+  {
+    "keys": 1088,
+    "arm": "math",
+    "max_abs_error": "NaN",
+    "normalized_error": "NaN",
+    "passed": false
+  },
+  {
+    "keys": 1088,
+    "arm": "explicit_fp32",
+    "max_abs_error": 6.068381922572086e-05,
+    "normalized_error": 0.005357784138625047,
+    "passed": true
+  }
+]

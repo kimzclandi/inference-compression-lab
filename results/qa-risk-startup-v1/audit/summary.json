@@ -1,0 +1,15 @@
+{
+  "status": "pass",
+  "verification_sha256": "e02004ef46010646181e31aa113d5ef4fb279cabf1b052a520d353c4fc0b48b1",
+  "calls": {
+    "reference": {
+      "reference": 896,
+      "pruned": 0
+    },
+    "pruned": {
+      "reference": 0,
+      "pruned": 896
+    }
+  },
+  "scope": "Full fixed evidence recomputation, no new inference or quality confirmation."
+}

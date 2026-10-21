@@ -1,0 +1,22 @@
+{
+  "seed": 20261008,
+  "torch_version": "2.8.0",
+  "numpy_version": "2.2.6",
+  "batches": [1, 4],
+  "prefixes": [128, 1024],
+  "heads": 8,
+  "head_dim": 64,
+  "steps": 64,
+  "dtype": "float16",
+  "arms": ["cat", "preallocated"],
+  "scopes": ["append_only", "append_attention"],
+  "rounds": 5,
+  "repeats": 3,
+  "warmup_chains": 1,
+  "atol": 0.01,
+  "rtol": 0.01,
+  "minimum_speedup": 1.05,
+  "minimum_faster_rounds": 4,
+  "timing_scope": "64-step synchronized host wall time; initialization recorded separately; attention uses synthetic independent precomputed queries and SDPA, not a model",
+  "decision": "Report initialization, append-only and append+attention separately; per-shape primary gate on append+attention against cat; never infer end-to-end gain from copy counts"
+}

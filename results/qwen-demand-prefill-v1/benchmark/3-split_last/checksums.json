@@ -1,0 +1,9 @@
+{
+  "protocol.json": "a087cc0a5ab44e8faa7dc38c56cb2a049f9f4403ccc954596619ac06db89c0f2",
+  "run.json": "d2aece8c07c826fcfda90eb04377c3db46a77504256ada4b2df9a08f14887c79",
+  "source/experiments/__init__.py": "7c54e0db53064338fa4534e5e27fadb47c6632b81ba3b249f2d251bc0c0321ba",
+  "source/experiments/qwen_demand_prefill.py": "dfdf70300f8baebaecb971ee60d58ff212f009d4bad6c1ff2d6020e253d9267f",
+  "source/lab/__init__.py": "0925f6ce613cb6c7f7eb3feba5cea6f47b47f653ea5b4de1d358915d43ea9a79",
+  "source/lab/qa_metrics.py": "78c4af7f06ba49b3acddd2610586336ecf585c06d8ad89b46ff9fb6358aaaa1f",
+  "source/lab/qwen_demand_prefill.py": "4ed687317da9ca0008036cc8452963a8a6b67be5efbc2fdfbe8500c58a29f7c2"
+}

@@ -1,0 +1,60 @@
+{
+  "status": "pass",
+  "metrics": {
+    "feature_only": {
+      "process_medians_seconds": {
+        "reference": [
+          0.013922312500653788,
+          0.014042333499673987,
+          0.014078874499318772
+        ],
+        "pruned": [
+          0.0010743749990069773,
+          0.0010925414990197169,
+          0.001072208000550745
+        ]
+      },
+      "median_seconds": {
+        "reference": 0.014042333499673987,
+        "pruned": 0.0010743749990069773
+      },
+      "speedup": 13.070234799444354,
+      "paired_speedups": [
+        12.958522409328117,
+        12.852906285274724,
+        13.130730690395042
+      ],
+      "pairs_faster": 3
+    },
+    "full_request": {
+      "process_medians_seconds": {
+        "reference": [
+          0.06823768749927694,
+          0.06868137499986915,
+          0.06893987500006915
+        ],
+        "pruned": [
+          0.05520516700016742,
+          0.05569681249835412,
+          0.055342167001072085
+        ]
+      },
+      "median_seconds": {
+        "reference": 0.06868137499986915,
+        "pruned": 0.055342167001072085
+      },
+      "speedup": 1.2410315446906635,
+      "paired_speedups": [
+        1.2360742881018727,
+        1.2331293644838066,
+        1.2457024857507595
+      ],
+      "pairs_faster": 3
+    }
+  },
+  "measured_requests": 240,
+  "feature_measurements": 240,
+  "warmup_requests": 48,
+  "scope": "Separate feature-only and full warm request including tokenizer, CPU ORT, decode, five features, score, parse and threshold decision. Excludes initialization/verification/JSON I/O; report initialization separately. Same eight historical single-window inputs. No concurrency or tail-latency claim.",
+  "statistical_claim": "Descriptive fixed-load measurements; no population latency guarantee."
+}

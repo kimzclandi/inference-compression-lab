@@ -1,0 +1,20 @@
+test_abstention_contains_no_answer_offsets_or_context_hash (test_serve_qa_specialist.ServingTests.test_abstention_contains_no_answer_offsets_or_context_hash) ... ok
+test_answer_has_exact_offsets_hash_and_ranking_score_notice (test_serve_qa_specialist.ServingTests.test_answer_has_exact_offsets_hash_and_ranking_score_notice) ... ok
+test_bad_input_or_gold_labels_rejected_before_model_load (test_serve_qa_specialist.ServingTests.test_bad_input_or_gold_labels_rejected_before_model_load) ... ok
+test_cli_status_mapping_and_startup_timing (test_serve_qa_specialist.ServingTests.test_cli_status_mapping_and_startup_timing) ... ok
+test_disabled_policy_does_not_read_request_verify_or_load (test_serve_qa_specialist.ServingTests.test_disabled_policy_does_not_read_request_verify_or_load) ... ok
+test_empty_forged_partial_untyped_or_changed_policies_fail_closed (test_serve_qa_specialist.ServingTests.test_empty_forged_partial_untyped_or_changed_policies_fail_closed) ... ok
+test_model_or_nonfinite_feature_errors_cannot_be_scored_as_refusal (test_serve_qa_specialist.ServingTests.test_model_or_nonfinite_feature_errors_cannot_be_scored_as_refusal) ... ok
+test_nontraining_rebuild_or_wrong_assets_never_load_model (test_serve_qa_specialist.ServingTests.test_nontraining_rebuild_or_wrong_assets_never_load_model) ... ok
+test_parser_size_limit_and_invalid_utf8_fail_closed (test_serve_qa_specialist.ServingTests.test_parser_size_limit_and_invalid_utf8_fail_closed) ... ok
+test_pruning_evidence_failure_stops_before_head_or_model (test_serve_qa_specialist.ServingTests.test_pruning_evidence_failure_stops_before_head_or_model) ... ok
+test_quality_result_must_pass_all_bound_fields (test_serve_qa_specialist.ServingTests.test_quality_result_must_pass_all_bound_fields) ... ok
+test_real_failed_quality_recomputation_cannot_be_enabled_by_policy (test_serve_qa_specialist.ServingTests.test_real_failed_quality_recomputation_cannot_be_enabled_by_policy) ... ok
+test_token_window_limit_errors_are_input_errors_not_refusals (test_serve_qa_specialist.ServingTests.test_token_window_limit_errors_are_input_errors_not_refusals) ... ok
+test_training_only_head_is_rebuilt_before_cpu_asset_load (test_serve_qa_specialist.ServingTests.test_training_only_head_is_rebuilt_before_cpu_asset_load) ... ok
+test_wrong_study_or_selection_hash_stops_before_evidence_or_model (test_serve_qa_specialist.ServingTests.test_wrong_study_or_selection_hash_stops_before_evidence_or_model) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.108s
+
+OK

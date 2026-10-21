@@ -1,0 +1,10 @@
+{
+  "experiments/qa_risk_pruning.py": "2bd8b9d6318df251bfd611773a685b09e279b2610997969a50a2b0def6547b9d",
+  "experiments/verify_qa_risk_pruning.py": "4588676d7cf2c9e01a2e9f0ae4adba99df5a0c0ef15159ed197c2909f9570288",
+  "experiments/verify_release_rc4.py": "b203e5e466043a075bb82e29dee4f2d3e4a7c31e6e120398ddebcf9973e4a72b",
+  "experiments/serve_qa_specialist.py": "7d4db65c2beabb8b4f673e05dbbc981f5370fe4fce18e3ceeb7046674d23b7fd",
+  "experiments/review_qa_evidence.py": "11824056d58df1e82b8753b8c0e4ca2e84f137a4142f1ca4b335f5ae54544cfe",
+  "tests/test_qa_risk_pruning_acceptance.py": "6eb3d539338f2ac83f9545e76dc03c5b39ce0a0c63b5649298b6e65609b3a3da",
+  "tests/test_serve_qa_specialist.py": "f0d46fe9d845eb944284193df126f824d9c827564ab5727e57dcfa17b1d5379c",
+  "results/qa-risk-pruning-readiness-v1/reproduce_reference_gaps.py": "37bc9ca433c4b91e3ed8ce5adc09842b9f381ca5ca2c7a2c43f419c9cc1d7ed3"
+}

@@ -1,0 +1,25 @@
+{
+  "status": "complete",
+  "git_head": "abcb6ff6ab871abbb32946faec19e180227021ea",
+  "source_sha256": {
+    "experiments/metal_sync_granularity.py": "85354f08477a60df7523ea635658aef40e97fd4d89d5c59fff133dafc22fa01b",
+    "experiments/metal_mechanism_diagnostic.py": "7579a828207e553e9743bce6d94d4e895bb37d1046ab9c0a3cd95dfd09105a3b",
+    "configs/metal-sync-granularity-v1.json": "4f0685bf8b98fe08b41fd4c8804c731c9892e22ca640c30fafa1fd2b1246e372",
+    "lab/kernels/residual_rmsnorm.metal": "9fabf83f4257874eb3de315db3d45d419d1a3ba0b57cbc33813823dfa5488c91",
+    "lab/kernels/residual_rmsnorm_masked.metal": "edfa6c088f40ee165629166cde1c11d7661054c1ab633aaa4a8c60a8af388fe1"
+  },
+  "platform": "macOS-27.0-arm64-arm-64bit",
+  "pid": 3359,
+  "device": {
+    "resource_limit": 499000,
+    "max_buffer_length": 30150672384,
+    "architecture": "applegpu_g16s",
+    "memory_size": 51539607552,
+    "max_recommended_working_set_size": 40200896512,
+    "device_name": "Apple M4 Max"
+  },
+  "versions": {
+    "mlx": "0.29.3",
+    "numpy": "2.5.3"
+  }
+}

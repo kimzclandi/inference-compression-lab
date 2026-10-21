@@ -1,0 +1,39 @@
+{
+  "status": "review_complete",
+  "candidate_accepted": false,
+  "failure": "primary_ttft_vs_split_last: 1.0422589587574957 < 1.05",
+  "preimplementation_protocol_commits": [
+    "2de6219",
+    "e388aa0",
+    "32e27a6",
+    "10b3604"
+  ],
+  "run_commit": "afeabfca70830a955b6f8730f69745d6d4bd35aa",
+  "independent_review": [
+    "Protocol aggregation ambiguity resolved before models or timing",
+    "Actual installed Qwen/attention/cache/quantized embedding source reviewed and SHA pinned",
+    "Raw records recomputed independently without runner/verifier imports; only strong-control gain gate fails"
+  ],
+  "pre_timing_runner_fixes": [
+    "Atomic per-request receipts and timeout state preservation",
+    "Explicit Metal default GPU plus model/dependency/upstream identity checks"
+  ],
+  "execution_notes": [
+    "Initial sandbox-only MLX environment import could not enumerate Metal and aborted; existing environment worked outside sandbox. No model/audit/timing had run in that check.",
+    "Exactly one completed audit and one 16-process timed study. No model downloads or parameter changes.",
+    "Independent verifier refused to overwrite existing summary; independent recomputation matched it exactly."
+  ],
+  "tests": {
+    "total": 409,
+    "passed": 400,
+    "skipped_optional": 9
+  },
+  "protected_existing_files": 1817,
+  "publication": "Draft research only; default service, default branch and research.2 release unchanged",
+  "local_log_sha256": {
+    "audit.log": "872fcb7f75b375b0a16b453b6f0c793ae2163b7b267f91af809d18c1a442b1a0",
+    "benchmark.log": "b5a22d285ad3790d732eac222f19da59fa46ac8f58806604e3608f389dbe77b8",
+    "pre-audit-tests.log": "67f6f568a0c505cd8e850195742c9ae1e7ff3b78f5048e8a58947de6236ad066",
+    "final-tests.log": "87c1c84716fa0de7b72f9b5d25000cc492d788f454cb763fa8f4f3afb8a73890"
+  }
+}

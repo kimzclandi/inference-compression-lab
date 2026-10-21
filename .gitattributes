@@ -1,5 +1,11 @@
 # Preserve upstream tool stdout/stderr verbatim, including trailing spaces.
 results/**/*.log -whitespace
+# Frozen startup source snapshots retain the original trailing blank lines.
+results/qa-risk-startup-v1/**/source/** -whitespace
+# New model-graph study snapshots preserve the exact audited source bytes.
+results/qwen-demand-prefill-v1/**/source/** -whitespace linguist-generated=true
+results/qwen-demand-prefill-v1/audit/mechanism.json linguist-generated=true
+results/qwen-demand-prefill-v1/audit/quality.json linguist-generated=true
 
 # Keep raw reproducibility records available while focusing PR review on source and summaries.
 results/**/timings.json linguist-generated=true

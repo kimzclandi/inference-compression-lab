@@ -1,0 +1,23 @@
+         251409 function calls in 0.041 seconds
+
+   Ordered by: cumulative time
+   List reduced from 83 to 15 due to restriction <15>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        8    0.007    0.001    0.029    0.004 qa_risk_pruning.py:16(extract_features)
+        8    0.009    0.001    0.017    0.002 extractive_qa.py:99(decode)
+        1    0.000    0.000    0.012    0.012 qa_risk_pruning.py:60(samples)
+        2    0.000    0.000    0.012    0.006 quantization_diagnostics.py:35(rows)
+      256    0.000    0.000    0.011    0.000 __init__.py:299(loads)
+      256    0.000    0.000    0.011    0.000 decoder.py:333(decode)
+      256    0.011    0.000    0.011    0.000 decoder.py:344(raw_decode)
+   139700    0.006    0.000    0.006    0.000 {method 'isspace' of 'str' objects}
+    34941    0.002    0.000    0.003    0.000 extractive_qa.py:40(_finite_arithmetic)
+        8    0.001    0.000    0.003    0.000 extractive_qa.py:53(_validate_window)
+    37923    0.001    0.000    0.001    0.000 {built-in method math.isfinite}
+        2    0.001    0.000    0.001    0.000 {method 'splitlines' of 'str' objects}
+     2798    0.000    0.000    0.001    0.000 extractive_qa.py:22(_number)
+      121    0.000    0.000    0.001    0.000 qa_metrics.py:9(normalize)
+        2    0.000    0.000    0.001    0.000 pathlib.py:1022(read_text)
+
+

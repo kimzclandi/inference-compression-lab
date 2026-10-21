@@ -1,0 +1,104 @@
+{
+  "full_cache": {
+    "overall": 20.27027027027027,
+    "answerable": 45.45454545454545,
+    "impossible": 0.0
+  },
+  "baseline_invalid": false,
+  "stream_50": {
+    "overall": 17.56756756756757,
+    "answerable": 39.39393939393939,
+    "impossible": 0.0,
+    "lost": 2,
+    "gained": 0,
+    "kv_reduction": 0.4999307498407246,
+    "decode_ratio_by_round": [
+      1.05670127613388,
+      1.0537465179297862,
+      1.0530140368347425,
+      1.0590921726604863,
+      1.0536715338495004
+    ],
+    "decode_ratio_median": 1.0537465179297862,
+    "evict_ms_median": 0.477333499929955,
+    "gate_checks": {
+      "answerable": false,
+      "overall": false,
+      "kv": true,
+      "speed": true
+    },
+    "adopt": false
+  },
+  "snap_50": {
+    "overall": 20.27027027027027,
+    "answerable": 45.45454545454545,
+    "impossible": 0.0,
+    "lost": 0,
+    "gained": 0,
+    "kv_reduction": 0.4999307498407246,
+    "decode_ratio_by_round": [
+      1.0506392401758207,
+      1.0557568982850227,
+      1.0492141931606926,
+      1.0555703665590481,
+      1.0516043914360247
+    ],
+    "decode_ratio_median": 1.0516043914360247,
+    "evict_ms_median": 82.91235400020014,
+    "gate_checks": {
+      "answerable": true,
+      "overall": true,
+      "kv": true,
+      "speed": true
+    },
+    "adopt": true
+  },
+  "stream_25": {
+    "overall": 14.864864864864865,
+    "answerable": 33.333333333333336,
+    "impossible": 0.0,
+    "lost": 4,
+    "gained": 0,
+    "kv_reduction": 0.7499515248885072,
+    "decode_ratio_by_round": [
+      1.0657854223113674,
+      1.0653055886686469,
+      1.0653347258557568,
+      1.0685976504418864,
+      1.0675251964319181
+    ],
+    "decode_ratio_median": 1.0657854223113674,
+    "evict_ms_median": 0.4595205000441638,
+    "gate_checks": {
+      "answerable": false,
+      "overall": false,
+      "kv": true,
+      "speed": true
+    },
+    "adopt": false
+  },
+  "snap_25": {
+    "overall": 16.216216216216218,
+    "answerable": 36.36363636363637,
+    "impossible": 0.0,
+    "lost": 3,
+    "gained": 0,
+    "kv_reduction": 0.7499515248885072,
+    "decode_ratio_by_round": [
+      1.0659911201631185,
+      1.0655989944362627,
+      1.0631146391628257,
+      1.068541412224134,
+      1.0665219366505576
+    ],
+    "decode_ratio_median": 1.0659911201631185,
+    "evict_ms_median": 82.6605209997524,
+    "gate_checks": {
+      "answerable": false,
+      "overall": false,
+      "kv": true,
+      "speed": true
+    },
+    "adopt": false
+  }
+}

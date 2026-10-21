@@ -1,0 +1,15 @@
+digraph {
+{ rank=source; "A"; }
+{ rank=source; "B"; }
+{ rank=source; "C"; }
+{ rank=source; "D"; }
+{ 517923952088 [label ="CustomKernel", shape=rectangle]; }
+"A" -> 517923952088
+"B" -> 517923952088
+"C" -> 517923952088
+"D" -> 517923952088
+{ rank=sink; "E"; }
+517923952088 -> "E"
+{ rank=sink; "F"; }
+517923952088 -> "F"
+}

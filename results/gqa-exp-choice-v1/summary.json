@@ -1,0 +1,54 @@
+{
+  "all_native_disagreements_eliminated": false,
+  "elements": 344064,
+  "fast_float_reference": {
+    "failed_elements": 0,
+    "max_abs": 7.287371269093512e-06,
+    "mean_abs": 6.339820064375524e-08
+  },
+  "fast_half_reference": {
+    "failed_elements": 0,
+    "max_abs": 0.0019517061520968326,
+    "mean_abs": 4.1281715619132996e-05
+  },
+  "fast_native_unequal": 186,
+  "float_changed": 162861,
+  "float_reference_change": {
+    "equal": 181203,
+    "improved": 78866,
+    "worsened": 83995
+  },
+  "half_changed": 85,
+  "half_reference_change": {
+    "equal": 343979,
+    "improved": 47,
+    "worsened": 38
+  },
+  "hypothesis_supported": false,
+  "introduced": 37,
+  "native_reference": {
+    "failed_elements": 0,
+    "max_abs": 0.0019517061520968326,
+    "mean_abs": 4.128169376032068e-05
+  },
+  "operator_tolerance_pass": true,
+  "persistent": 149,
+  "reference_rounding_disagreement": {
+    "fast_half": 780,
+    "native": 723,
+    "standard_half": 788
+  },
+  "resolved": 48,
+  "scope": "Exp-family intervention on instrumented operators only; not native arithmetic identity, unique root cause, model repair, quality or speed.",
+  "standard_float_reference": {
+    "failed_elements": 0,
+    "max_abs": 8.241045585499762e-06,
+    "mean_abs": 6.316642523708049e-08
+  },
+  "standard_half_reference": {
+    "failed_elements": 0,
+    "max_abs": 0.0019517061520968326,
+    "mean_abs": 4.128170931929516e-05
+  },
+  "standard_native_unequal": 197
+}

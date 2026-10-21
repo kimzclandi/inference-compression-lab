@@ -2,6 +2,8 @@
 
 本文件不授予代码或模型权重许可。数据及其再现内容保留原许可。
 
+根目录 [LICENSE](LICENSE) 的 MIT 许可只覆盖项目代码；数据内容与模型权重不在其范围内，归属见本文件与 [THIRD_PARTY.md](THIRD_PARTY.md)。Dataset content and model weights are excluded from the MIT license.
+
 ## SQuAD 2.0
 
 `configs/qwen-prefix/qa-dev.jsonl`、`configs/qwen-quantization/bench-inputs.json`、`configs/qwen-confirmation/dataset/data.jsonl` 以及 results 中这些文本/答案的副本来自 SQuAD 2.0，继续遵循 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en)。归属：Pranav Rajpurkar、Robin Jia、Percy Liang；文章来自 Wikipedia 贡献者。

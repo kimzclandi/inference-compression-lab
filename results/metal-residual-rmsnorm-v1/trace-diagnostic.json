@@ -1,0 +1,79 @@
+{
+  "schema": "metal-residual-rmsnorm-xctrace-diagnostic-v1",
+  "status": "post_hoc_diagnostic_only",
+  "changes_fixed_acceptance": false,
+  "environment": {
+    "device": "Apple M4 Max",
+    "xctrace": "16.0 (17F113)",
+    "template": "Metal System Trace"
+  },
+  "workload": {
+    "rows": 2048,
+    "width": 896,
+    "dtype": "float16",
+    "warmup_calls": 5,
+    "profiled_calls": 5000,
+    "chain": 1,
+    "checksum": 1835008.0,
+    "capture": "xctrace attached by PID after a fixed startup delay"
+  },
+  "native": {
+    "application_command_buffer": {
+      "count": 5008,
+      "median_ns": 194166.0,
+      "p95_ns": 331500
+    },
+    "application_compute_command": {
+      "count": 5007,
+      "median_ns": 13166,
+      "p95_ns": 16084
+    },
+    "gpu_compute_interval": {
+      "count": 5007,
+      "median_ns": 21000,
+      "p95_ns": 81875,
+      "sum_ns": 145450946,
+      "observed_span_ns": 1062370542
+    }
+  },
+  "metal": {
+    "application_command_buffer": {
+      "count": 5008,
+      "median_ns": 193500.0,
+      "p95_ns": 337125
+    },
+    "application_compute_command": {
+      "count": 5007,
+      "median_ns": 11792,
+      "p95_ns": 14375
+    },
+    "gpu_compute_interval": {
+      "count": 5007,
+      "median_ns": 19000,
+      "p95_ns": 82834,
+      "sum_ns": 144906595,
+      "observed_span_ns": 1070007542
+    }
+  },
+  "interpretation": {
+    "matched_command_buffer_counts": true,
+    "matched_compute_interval_counts": true,
+    "gpu_compute_sum_ratio_metal_over_native": 0.9962574942620174,
+    "finding": "At the Instruments interval level, the custom path did not reduce command-buffer or compute-interval count, and aggregate GPU compute duration was nearly unchanged.",
+    "timing_boundary": "Instrumentation perturbs execution and chain=1 differs from the frozen chain=50 benchmark. These timings are not a replacement latency result or a speedup claim.",
+    "counter_boundary": "The exported counter metadata exposed only RT Unit Active, so this capture provides no measured DRAM bandwidth, occupancy, cache-hit or Roofline evidence.",
+    "acceptance_boundary": "The frozen benchmark remains authoritative: the custom Metal arm is slower and accepted=false."
+  },
+  "machine_local_export_sha256": {
+    "native_application_xml": "3a2fbc27e59a99e00bf47b64e73d02dab05f5e26ff5e8ce49453e7836030a208",
+    "native_gpu_xml": "c2ddc91af64f542f01eedd8442a681bf312b0e63a0849c4c168be7779bad6ea7",
+    "metal_application_xml": "cff9bfabce4824bb245bdaf6b00fe863dd839139d830accef052576876d8361c",
+    "metal_gpu_xml": "3cf83cb2498542f24d3ff491099a7953ed977208171e712159002c9ec7209b57",
+    "metal_counter_info_xml": "149a5dfe9dfd9e2f306508babb9bc89964661a4a56e90904126d5b5e4da5b7d5"
+  },
+  "source_sha256": {
+    "experiments/profile_metal_residual_rmsnorm.py": "d5f02b7520906dface082aae27f7e5f3cc8817ea0375879f381e0f414e471a43",
+    "experiments/summarize_metal_trace_export.py": "5a6535e004feb1a4b22b427d698f97bfec086bab66263828614a89d3ee4b9dae",
+    "lab/metal_trace_summary.py": "3c0b62939a20cc7ab2a03a5ec28330e42fef47499f4b20000610ff41bc4440fa"
+  }
+}

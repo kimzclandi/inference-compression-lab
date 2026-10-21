@@ -1,0 +1,27 @@
+{
+  "status": "failed",
+  "git_head": "8b89beac2b87c90dc279e090e1f5e63f0c600d6e",
+  "start_utc": "2026-10-08T09:16:28.753670+00:00",
+  "platform": "macOS-27.0-arm64-arm-64bit",
+  "source_sha256": {
+    "configs/kv-append-mps-v1.json": "a782e0a10cd92a8ce2b241c343e848cd146e230de6afd85ec6ad5f39431a2956",
+    "lab/append_only_kv.py": "d38ce4c24c0f5f1bbf1855675d430c63369840c34a6d4a338c50689266afd421",
+    "experiments/kv_append_mps.py": "0772e24dda0804d77c86657cbe3d9d945292fcc6430a1c479e5fdfcf06fbbe07",
+    "experiments/attention_backend_study.py": "2b8d9b8b66d236e603ae591998ecbeb594a43ce8930667fce1d8b019c9919d71",
+    "experiments/attention_mps_study.py": "5e6a13c3cfe6fffa79e36ec5d246455645e90f02db63a25b079e4635e32ae578",
+    "lab/attention_reference.py": "7f2d8a0b014c2715df2a1c7f9aa784cb8a6b41a905e7678c8eb8df267468ffe6"
+  },
+  "hardware": [
+    "Chip: Apple M4 Max",
+    "Total Number of Cores: 16 (12 Performance and 4 Efficiency)",
+    "Memory: 48 GB",
+    "Chipset Model: Apple M4 Max",
+    "Total Number of Cores: 40"
+  ],
+  "torch": "2.8.0",
+  "numpy": "2.2.6",
+  "fallback": false,
+  "error": "ValueError: K/V or Attention correctness failure",
+  "artifact_sha256": {},
+  "end_utc": "2026-10-08T09:16:29.523013+00:00"
+}

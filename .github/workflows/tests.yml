@@ -17,7 +17,24 @@ jobs:
       - name: Install explicit offline-verification dependency
         run: python -m pip install numpy==2.2.6
       - run: python -m unittest discover -s tests -v
-      - run: python -m experiments.verify_release
+      - run: python -m experiments.verify_metal_trace_rows
+      - run: python -m experiments.verify_release --require-license
+      - name: Exact risk-feature pruning and archived timing arithmetic
+        run: |
+          python -m experiments.qa_risk_pruning audit --output-dir "$RUNNER_TEMP/risk-pruning-replay"
+          python -m experiments.verify_qa_risk_pruning
+      - name: Complete pruned verification and archived startup arithmetic
+        run: |
+          python -m experiments.verify_qa_risk --root results/qa-risk-v2 --feature-mode pruned
+          python -m experiments.verify_qa_risk_startup
+      - name: Last-position prefill evidence (expected strong-control gate failure)
+        run: |
+          python -m experiments.verify_qwen_demand_prefill --audit-root results/qwen-demand-prefill-v1/audit --benchmark-root results/qwen-demand-prefill-v1/benchmark > "$RUNNER_TEMP/qwen-demand-prefill.json"
+          python -c 'import json, os; r=json.load(open(os.path.join(os.environ["RUNNER_TEMP"], "qwen-demand-prefill.json"))); assert r["evidence_valid"] and not r["acceptance"]["accepted"]; assert [k for k,v in r["acceptance"]["gates"].items() if not v] == ["primary_ttft_vs_split_last"]'
+      - name: Metal fusion evidence (expected speed-gate failure; no GPU claim)
+        run: |
+          python -m experiments.verify_metal_residual_rmsnorm --audit-root results/metal-residual-rmsnorm-v1/audit --benchmark-root results/metal-residual-rmsnorm-v1/benchmark > "$RUNNER_TEMP/metal-fusion.json"
+          python -c 'import json, os; r=json.load(open(os.path.join(os.environ["RUNNER_TEMP"], "metal-fusion.json"))); assert r["evidence_valid"] and not r["acceptance"]["accepted"]; assert {k for k,v in r["acceptance"]["gates"].items() if not v} == {"micro_speedup_vs_native", "micro_faster_rounds_vs_native", "micro_speedup_vs_compiled", "micro_faster_rounds_vs_compiled", "same_model_metric_beats_both_controls"}'
       - name: Independent raw-record arithmetic
         run: |
           python results/independent-review-v1/statistics/audit_statistics.py --output "$RUNNER_TEMP/independent-statistics"
@@ -52,3 +69,68 @@ jobs:
           python -m experiments.qa_nonlinear verify --folder results/qa-nonlinear-v2 --output "$RUNNER_TEMP/nonlinear-audit.json"
           python -m experiments.qa_rich verify --folder results/qa-rich-v1 --output "$RUNNER_TEMP/rich-audit.json"
           python -m experiments.verify_qa_rich_inputs --output "$RUNNER_TEMP/rich-input-audit.json"
+
+      - name: Shared GQA decode evidence (model KV gate failure; no speed claim)
+        run: python -m experiments.verify_gqa_shared_decode
+
+      - name: GQA numerical diagnosis (complete array replay; original model gate remains failed)
+        run: |
+          python -m experiments.verify_gqa_shared_diagnostic > "$RUNNER_TEMP/gqa-diagnostic.json"
+          python -c 'import json, os; r=json.load(open(os.path.join(os.environ["RUNNER_TEMP"], "gqa-diagnostic.json"))); assert r["evidence_valid"] and r["diagnostic_complete"]; assert r["shadow_probes_checked"] == 384 and r["final_kv_arrays_replayed"] == 192; assert not r["original_v1_model_gate_pass"] and not r["new_trajectory_model_conditions"]["final_kv_gate"]; assert r["performance_trials"] == 0'
+
+      - name: Exp-family intervention (complete replay; substitution hypothesis rejected)
+        run: |
+          python -m experiments.verify_gqa_exp_choice > "$RUNNER_TEMP/gqa-exp-choice.json"
+          python -c 'import json, os; r=json.load(open(os.path.join(os.environ["RUNNER_TEMP"], "gqa-exp-choice.json"))); assert r["evidence_valid"] and r["diagnostic_complete"]; assert r["probes_replayed"] == 384 and r["full_output_elements"] == 344064; s=r["mechanism_summary"]; assert (s["resolved"], s["persistent"], s["introduced"]) == (48,149,37); assert not s["hypothesis_supported"] and not r["original_model_gate_pass"]; assert r["model_runs"] == r["performance_trials"] == 0'
+
+      - name: Native request admission archived audit (expected staggered TTFT gate failure)
+        run: python -m experiments.verify_qwen_request_scheduling
+
+      - name: Additive mechanism and cache boundary evidence (no GPU execution)
+        run: |
+          python -m experiments.metal_mechanism_diagnostic verify --output results/metal-mechanism-v1
+          python -m experiments.cache_workload_boundaries verify --output results/cache-workload-boundaries-v1
+
+      - name: Equal-work synchronization and process-attributed trace evidence
+        run: |
+          python -m experiments.metal_sync_granularity verify --output results/metal-sync-granularity-v1
+          python -m experiments.metal_sync_trace verify --output results/metal-sync-trace-v1
+
+      - name: Archived attention semantics (no CUDA claim)
+        run: python -m experiments.attention_backend_study verify --output results/attention-cpu-semantics-v1
+
+      - name: Apple GPU archived timing and non-BLAS output-row replay (no GPU execution)
+        run: |
+          python -m experiments.attention_mps_study verify --output results/attention-mps-v1
+          python -m experiments.verify_attention_mps_reference
+
+      - name: KV append failure preservation and repaired-study replay (no GPU execution)
+        run: |
+          python -m experiments.verify_kv_append_failure
+          python -m experiments.kv_append_mps verify --output results/kv-append-mps-v2
+
+      - name: Native MLX cache reservation archived audit (no GPU execution)
+        run: python -m experiments.verify_qwen_cache_reservation
+
+      - name: QKV projection packing receipt (expected performance failure; arrays remain local)
+        run: |
+          python -m experiments.verify_qkv_projection > "$RUNNER_TEMP/qkv-projection.json"
+          python -c 'import json, os; r=json.load(open(os.path.join(os.environ["RUNNER_TEMP"], "qkv-projection.json"))); assert r["public_consistency_valid"]; assert not r["recorded_performance_accepted"] and not r["numerical_replay_complete"] and not r["accepted"]'
+
+  attention-cpu:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install numpy==2.2.6
+      - run: python -m pip install torch==2.8.0 --index-url https://download.pytorch.org/whl/cpu
+      - name: Re-execute semantic study; no CUDA performance acceptance
+        run: |
+          python -m experiments.attention_backend_study cpu-semantics --output "$RUNNER_TEMP/attention-cpu"
+          python -m experiments.attention_backend_study verify --output "$RUNNER_TEMP/attention-cpu"
+      - name: Required cache lifecycle and synchronous failure-injection tests
+        run: python -m unittest discover -s tests -p test_append_only_kv.py -v
+      - name: CUDA harness correctness-failure archival on CPU (no CUDA execution)
+        run: python -m unittest discover -s tests -p test_attention_failure.py -v

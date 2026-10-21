@@ -1,0 +1,1352 @@
+[
+  {
+    "case": "p128",
+    "arm": "compiled_three",
+    "round": 0,
+    "repeat": 0,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 0.874167
+  },
+  {
+    "case": "p128",
+    "arm": "native",
+    "round": 0,
+    "repeat": 0,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 0.933625
+  },
+  {
+    "case": "p128",
+    "arm": "packed",
+    "round": 0,
+    "repeat": 0,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.778
+  },
+  {
+    "case": "p128",
+    "arm": "packed",
+    "round": 0,
+    "repeat": 1,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 1.189417
+  },
+  {
+    "case": "p128",
+    "arm": "native",
+    "round": 0,
+    "repeat": 1,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 0.796583
+  },
+  {
+    "case": "p128",
+    "arm": "compiled_three",
+    "round": 0,
+    "repeat": 1,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.798875
+  },
+  {
+    "case": "p128",
+    "arm": "packed",
+    "round": 0,
+    "repeat": 2,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 0.724459
+  },
+  {
+    "case": "p128",
+    "arm": "native",
+    "round": 0,
+    "repeat": 2,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 0.73825
+  },
+  {
+    "case": "p128",
+    "arm": "compiled_three",
+    "round": 0,
+    "repeat": 2,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.722916
+  },
+  {
+    "case": "p128",
+    "arm": "packed",
+    "round": 0,
+    "repeat": 3,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 1.143167
+  },
+  {
+    "case": "p128",
+    "arm": "compiled_three",
+    "round": 0,
+    "repeat": 3,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 0.841666
+  },
+  {
+    "case": "p128",
+    "arm": "native",
+    "round": 0,
+    "repeat": 3,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.814083
+  },
+  {
+    "case": "p128",
+    "arm": "compiled_three",
+    "round": 0,
+    "repeat": 4,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 0.995667
+  },
+  {
+    "case": "p128",
+    "arm": "packed",
+    "round": 0,
+    "repeat": 4,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 0.774625
+  },
+  {
+    "case": "p128",
+    "arm": "native",
+    "round": 0,
+    "repeat": 4,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.785792
+  },
+  {
+    "case": "p128",
+    "arm": "native",
+    "round": 1,
+    "repeat": 0,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 1.055208
+  },
+  {
+    "case": "p128",
+    "arm": "packed",
+    "round": 1,
+    "repeat": 0,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 2.531125
+  },
+  {
+    "case": "p128",
+    "arm": "compiled_three",
+    "round": 1,
+    "repeat": 0,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.821708
+  },
+  {
+    "case": "p128",
+    "arm": "native",
+    "round": 1,
+    "repeat": 1,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 1.136959
+  },
+  {
+    "case": "p128",
+    "arm": "packed",
+    "round": 1,
+    "repeat": 1,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 0.98325
+  },
+  {
+    "case": "p128",
+    "arm": "compiled_three",
+    "round": 1,
+    "repeat": 1,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.786875
+  },
+  {
+    "case": "p128",
+    "arm": "native",
+    "round": 1,
+    "repeat": 2,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 0.824083
+  },
+  {
+    "case": "p128",
+    "arm": "packed",
+    "round": 1,
+    "repeat": 2,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 0.793541
+  },
+  {
+    "case": "p128",
+    "arm": "compiled_three",
+    "round": 1,
+    "repeat": 2,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.802333
+  },
+  {
+    "case": "p128",
+    "arm": "native",
+    "round": 1,
+    "repeat": 3,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 0.817417
+  },
+  {
+    "case": "p128",
+    "arm": "packed",
+    "round": 1,
+    "repeat": 3,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 0.832167
+  },
+  {
+    "case": "p128",
+    "arm": "compiled_three",
+    "round": 1,
+    "repeat": 3,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.841125
+  },
+  {
+    "case": "p128",
+    "arm": "compiled_three",
+    "round": 1,
+    "repeat": 4,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 1.120083
+  },
+  {
+    "case": "p128",
+    "arm": "native",
+    "round": 1,
+    "repeat": 4,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 0.81425
+  },
+  {
+    "case": "p128",
+    "arm": "packed",
+    "round": 1,
+    "repeat": 4,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.76925
+  },
+  {
+    "case": "p128",
+    "arm": "native",
+    "round": 2,
+    "repeat": 0,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 0.830667
+  },
+  {
+    "case": "p128",
+    "arm": "compiled_three",
+    "round": 2,
+    "repeat": 0,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 0.850625
+  },
+  {
+    "case": "p128",
+    "arm": "packed",
+    "round": 2,
+    "repeat": 0,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.748667
+  },
+  {
+    "case": "p128",
+    "arm": "packed",
+    "round": 2,
+    "repeat": 1,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 1.122375
+  },
+  {
+    "case": "p128",
+    "arm": "native",
+    "round": 2,
+    "repeat": 1,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 0.760875
+  },
+  {
+    "case": "p128",
+    "arm": "compiled_three",
+    "round": 2,
+    "repeat": 1,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.862833
+  },
+  {
+    "case": "p128",
+    "arm": "native",
+    "round": 2,
+    "repeat": 2,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 1.129334
+  },
+  {
+    "case": "p128",
+    "arm": "packed",
+    "round": 2,
+    "repeat": 2,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 0.766542
+  },
+  {
+    "case": "p128",
+    "arm": "compiled_three",
+    "round": 2,
+    "repeat": 2,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.819458
+  },
+  {
+    "case": "p128",
+    "arm": "packed",
+    "round": 2,
+    "repeat": 3,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 1.098916
+  },
+  {
+    "case": "p128",
+    "arm": "compiled_three",
+    "round": 2,
+    "repeat": 3,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 0.8435
+  },
+  {
+    "case": "p128",
+    "arm": "native",
+    "round": 2,
+    "repeat": 3,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.836
+  },
+  {
+    "case": "p128",
+    "arm": "native",
+    "round": 2,
+    "repeat": 4,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 1.174542
+  },
+  {
+    "case": "p128",
+    "arm": "compiled_three",
+    "round": 2,
+    "repeat": 4,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 0.850875
+  },
+  {
+    "case": "p128",
+    "arm": "packed",
+    "round": 2,
+    "repeat": 4,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.814958
+  },
+  {
+    "case": "p128",
+    "arm": "native",
+    "round": 3,
+    "repeat": 0,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 1.120666
+  },
+  {
+    "case": "p128",
+    "arm": "compiled_three",
+    "round": 3,
+    "repeat": 0,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 0.839041
+  },
+  {
+    "case": "p128",
+    "arm": "packed",
+    "round": 3,
+    "repeat": 0,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.763375
+  },
+  {
+    "case": "p128",
+    "arm": "native",
+    "round": 3,
+    "repeat": 1,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 1.111625
+  },
+  {
+    "case": "p128",
+    "arm": "packed",
+    "round": 3,
+    "repeat": 1,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 0.787625
+  },
+  {
+    "case": "p128",
+    "arm": "compiled_three",
+    "round": 3,
+    "repeat": 1,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.820708
+  },
+  {
+    "case": "p128",
+    "arm": "packed",
+    "round": 3,
+    "repeat": 2,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 1.16025
+  },
+  {
+    "case": "p128",
+    "arm": "compiled_three",
+    "round": 3,
+    "repeat": 2,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 0.805083
+  },
+  {
+    "case": "p128",
+    "arm": "native",
+    "round": 3,
+    "repeat": 2,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.795208
+  },
+  {
+    "case": "p128",
+    "arm": "packed",
+    "round": 3,
+    "repeat": 3,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 1.094167
+  },
+  {
+    "case": "p128",
+    "arm": "native",
+    "round": 3,
+    "repeat": 3,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 0.78375
+  },
+  {
+    "case": "p128",
+    "arm": "compiled_three",
+    "round": 3,
+    "repeat": 3,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.844667
+  },
+  {
+    "case": "p128",
+    "arm": "compiled_three",
+    "round": 3,
+    "repeat": 4,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 1.208584
+  },
+  {
+    "case": "p128",
+    "arm": "native",
+    "round": 3,
+    "repeat": 4,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 0.83625
+  },
+  {
+    "case": "p128",
+    "arm": "packed",
+    "round": 3,
+    "repeat": 4,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.76125
+  },
+  {
+    "case": "p128",
+    "arm": "native",
+    "round": 4,
+    "repeat": 0,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 2.798042
+  },
+  {
+    "case": "p128",
+    "arm": "packed",
+    "round": 4,
+    "repeat": 0,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 0.788875
+  },
+  {
+    "case": "p128",
+    "arm": "compiled_three",
+    "round": 4,
+    "repeat": 0,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.783
+  },
+  {
+    "case": "p128",
+    "arm": "native",
+    "round": 4,
+    "repeat": 1,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 1.145583
+  },
+  {
+    "case": "p128",
+    "arm": "packed",
+    "round": 4,
+    "repeat": 1,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 0.8205
+  },
+  {
+    "case": "p128",
+    "arm": "compiled_three",
+    "round": 4,
+    "repeat": 1,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.797417
+  },
+  {
+    "case": "p128",
+    "arm": "compiled_three",
+    "round": 4,
+    "repeat": 2,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 0.856291
+  },
+  {
+    "case": "p128",
+    "arm": "native",
+    "round": 4,
+    "repeat": 2,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 0.840875
+  },
+  {
+    "case": "p128",
+    "arm": "packed",
+    "round": 4,
+    "repeat": 2,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.784667
+  },
+  {
+    "case": "p128",
+    "arm": "packed",
+    "round": 4,
+    "repeat": 3,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 1.163958
+  },
+  {
+    "case": "p128",
+    "arm": "native",
+    "round": 4,
+    "repeat": 3,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 0.898917
+  },
+  {
+    "case": "p128",
+    "arm": "compiled_three",
+    "round": 4,
+    "repeat": 3,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.8655
+  },
+  {
+    "case": "p128",
+    "arm": "packed",
+    "round": 4,
+    "repeat": 4,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 0.832709
+  },
+  {
+    "case": "p128",
+    "arm": "compiled_three",
+    "round": 4,
+    "repeat": 4,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 0.792125
+  },
+  {
+    "case": "p128",
+    "arm": "native",
+    "round": 4,
+    "repeat": 4,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.827083
+  },
+  {
+    "case": "p4096",
+    "arm": "compiled_three",
+    "round": 0,
+    "repeat": 0,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 0.879042
+  },
+  {
+    "case": "p4096",
+    "arm": "native",
+    "round": 0,
+    "repeat": 0,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 0.876583
+  },
+  {
+    "case": "p4096",
+    "arm": "packed",
+    "round": 0,
+    "repeat": 0,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.812958
+  },
+  {
+    "case": "p4096",
+    "arm": "native",
+    "round": 0,
+    "repeat": 1,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 1.100291
+  },
+  {
+    "case": "p4096",
+    "arm": "packed",
+    "round": 0,
+    "repeat": 1,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 0.781208
+  },
+  {
+    "case": "p4096",
+    "arm": "compiled_three",
+    "round": 0,
+    "repeat": 1,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.774875
+  },
+  {
+    "case": "p4096",
+    "arm": "compiled_three",
+    "round": 0,
+    "repeat": 2,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 0.967375
+  },
+  {
+    "case": "p4096",
+    "arm": "native",
+    "round": 0,
+    "repeat": 2,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 0.862291
+  },
+  {
+    "case": "p4096",
+    "arm": "packed",
+    "round": 0,
+    "repeat": 2,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.817208
+  },
+  {
+    "case": "p4096",
+    "arm": "packed",
+    "round": 0,
+    "repeat": 3,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 1.15175
+  },
+  {
+    "case": "p4096",
+    "arm": "compiled_three",
+    "round": 0,
+    "repeat": 3,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 0.790584
+  },
+  {
+    "case": "p4096",
+    "arm": "native",
+    "round": 0,
+    "repeat": 3,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.782792
+  },
+  {
+    "case": "p4096",
+    "arm": "native",
+    "round": 0,
+    "repeat": 4,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 1.068209
+  },
+  {
+    "case": "p4096",
+    "arm": "compiled_three",
+    "round": 0,
+    "repeat": 4,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 0.811042
+  },
+  {
+    "case": "p4096",
+    "arm": "packed",
+    "round": 0,
+    "repeat": 4,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.768292
+  },
+  {
+    "case": "p4096",
+    "arm": "packed",
+    "round": 1,
+    "repeat": 0,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 1.089875
+  },
+  {
+    "case": "p4096",
+    "arm": "compiled_three",
+    "round": 1,
+    "repeat": 0,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 0.761792
+  },
+  {
+    "case": "p4096",
+    "arm": "native",
+    "round": 1,
+    "repeat": 0,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.743792
+  },
+  {
+    "case": "p4096",
+    "arm": "compiled_three",
+    "round": 1,
+    "repeat": 1,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 1.144708
+  },
+  {
+    "case": "p4096",
+    "arm": "native",
+    "round": 1,
+    "repeat": 1,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 0.808333
+  },
+  {
+    "case": "p4096",
+    "arm": "packed",
+    "round": 1,
+    "repeat": 1,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.803333
+  },
+  {
+    "case": "p4096",
+    "arm": "packed",
+    "round": 1,
+    "repeat": 2,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 1.129541
+  },
+  {
+    "case": "p4096",
+    "arm": "native",
+    "round": 1,
+    "repeat": 2,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 0.813125
+  },
+  {
+    "case": "p4096",
+    "arm": "compiled_three",
+    "round": 1,
+    "repeat": 2,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.781292
+  },
+  {
+    "case": "p4096",
+    "arm": "packed",
+    "round": 1,
+    "repeat": 3,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 2.802375
+  },
+  {
+    "case": "p4096",
+    "arm": "compiled_three",
+    "round": 1,
+    "repeat": 3,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 0.841875
+  },
+  {
+    "case": "p4096",
+    "arm": "native",
+    "round": 1,
+    "repeat": 3,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.815042
+  },
+  {
+    "case": "p4096",
+    "arm": "packed",
+    "round": 1,
+    "repeat": 4,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 1.161042
+  },
+  {
+    "case": "p4096",
+    "arm": "native",
+    "round": 1,
+    "repeat": 4,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 0.888417
+  },
+  {
+    "case": "p4096",
+    "arm": "compiled_three",
+    "round": 1,
+    "repeat": 4,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.88075
+  },
+  {
+    "case": "p4096",
+    "arm": "packed",
+    "round": 2,
+    "repeat": 0,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 1.058333
+  },
+  {
+    "case": "p4096",
+    "arm": "compiled_three",
+    "round": 2,
+    "repeat": 0,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 0.798333
+  },
+  {
+    "case": "p4096",
+    "arm": "native",
+    "round": 2,
+    "repeat": 0,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.807625
+  },
+  {
+    "case": "p4096",
+    "arm": "compiled_three",
+    "round": 2,
+    "repeat": 1,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 1.124333
+  },
+  {
+    "case": "p4096",
+    "arm": "native",
+    "round": 2,
+    "repeat": 1,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 0.814875
+  },
+  {
+    "case": "p4096",
+    "arm": "packed",
+    "round": 2,
+    "repeat": 1,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.76925
+  },
+  {
+    "case": "p4096",
+    "arm": "compiled_three",
+    "round": 2,
+    "repeat": 2,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 1.106583
+  },
+  {
+    "case": "p4096",
+    "arm": "packed",
+    "round": 2,
+    "repeat": 2,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 0.79875
+  },
+  {
+    "case": "p4096",
+    "arm": "native",
+    "round": 2,
+    "repeat": 2,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.795958
+  },
+  {
+    "case": "p4096",
+    "arm": "native",
+    "round": 2,
+    "repeat": 3,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 1.052834
+  },
+  {
+    "case": "p4096",
+    "arm": "compiled_three",
+    "round": 2,
+    "repeat": 3,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 0.78775
+  },
+  {
+    "case": "p4096",
+    "arm": "packed",
+    "round": 2,
+    "repeat": 3,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.797417
+  },
+  {
+    "case": "p4096",
+    "arm": "packed",
+    "round": 2,
+    "repeat": 4,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 1.174625
+  },
+  {
+    "case": "p4096",
+    "arm": "compiled_three",
+    "round": 2,
+    "repeat": 4,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 0.84425
+  },
+  {
+    "case": "p4096",
+    "arm": "native",
+    "round": 2,
+    "repeat": 4,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.827
+  },
+  {
+    "case": "p4096",
+    "arm": "compiled_three",
+    "round": 3,
+    "repeat": 0,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 2.622792
+  },
+  {
+    "case": "p4096",
+    "arm": "packed",
+    "round": 3,
+    "repeat": 0,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 0.806708
+  },
+  {
+    "case": "p4096",
+    "arm": "native",
+    "round": 3,
+    "repeat": 0,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.838875
+  },
+  {
+    "case": "p4096",
+    "arm": "native",
+    "round": 3,
+    "repeat": 1,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 1.136625
+  },
+  {
+    "case": "p4096",
+    "arm": "packed",
+    "round": 3,
+    "repeat": 1,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 0.996334
+  },
+  {
+    "case": "p4096",
+    "arm": "compiled_three",
+    "round": 3,
+    "repeat": 1,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.818583
+  },
+  {
+    "case": "p4096",
+    "arm": "packed",
+    "round": 3,
+    "repeat": 2,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 1.166
+  },
+  {
+    "case": "p4096",
+    "arm": "native",
+    "round": 3,
+    "repeat": 2,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 0.801459
+  },
+  {
+    "case": "p4096",
+    "arm": "compiled_three",
+    "round": 3,
+    "repeat": 2,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.808708
+  },
+  {
+    "case": "p4096",
+    "arm": "packed",
+    "round": 3,
+    "repeat": 3,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 1.145583
+  },
+  {
+    "case": "p4096",
+    "arm": "native",
+    "round": 3,
+    "repeat": 3,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 0.851208
+  },
+  {
+    "case": "p4096",
+    "arm": "compiled_three",
+    "round": 3,
+    "repeat": 3,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.791583
+  },
+  {
+    "case": "p4096",
+    "arm": "packed",
+    "round": 3,
+    "repeat": 4,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 1.140333
+  },
+  {
+    "case": "p4096",
+    "arm": "compiled_three",
+    "round": 3,
+    "repeat": 4,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 0.730709
+  },
+  {
+    "case": "p4096",
+    "arm": "native",
+    "round": 3,
+    "repeat": 4,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.795333
+  },
+  {
+    "case": "p4096",
+    "arm": "packed",
+    "round": 4,
+    "repeat": 0,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 1.127458
+  },
+  {
+    "case": "p4096",
+    "arm": "native",
+    "round": 4,
+    "repeat": 0,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 0.771542
+  },
+  {
+    "case": "p4096",
+    "arm": "compiled_three",
+    "round": 4,
+    "repeat": 0,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.843667
+  },
+  {
+    "case": "p4096",
+    "arm": "native",
+    "round": 4,
+    "repeat": 1,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 1.017208
+  },
+  {
+    "case": "p4096",
+    "arm": "packed",
+    "round": 4,
+    "repeat": 1,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 0.811834
+  },
+  {
+    "case": "p4096",
+    "arm": "compiled_three",
+    "round": 4,
+    "repeat": 1,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.8265
+  },
+  {
+    "case": "p4096",
+    "arm": "compiled_three",
+    "round": 4,
+    "repeat": 2,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 2.6295
+  },
+  {
+    "case": "p4096",
+    "arm": "native",
+    "round": 4,
+    "repeat": 2,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 0.840666
+  },
+  {
+    "case": "p4096",
+    "arm": "packed",
+    "round": 4,
+    "repeat": 2,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.787416
+  },
+  {
+    "case": "p4096",
+    "arm": "compiled_three",
+    "round": 4,
+    "repeat": 3,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 0.883417
+  },
+  {
+    "case": "p4096",
+    "arm": "packed",
+    "round": 4,
+    "repeat": 3,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 0.703125
+  },
+  {
+    "case": "p4096",
+    "arm": "native",
+    "round": 4,
+    "repeat": 3,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.787542
+  },
+  {
+    "case": "p4096",
+    "arm": "native",
+    "round": 4,
+    "repeat": 4,
+    "order": 0,
+    "calls": 24,
+    "latency_ms": 1.118541
+  },
+  {
+    "case": "p4096",
+    "arm": "compiled_three",
+    "round": 4,
+    "repeat": 4,
+    "order": 1,
+    "calls": 24,
+    "latency_ms": 0.847791
+  },
+  {
+    "case": "p4096",
+    "arm": "packed",
+    "round": 4,
+    "repeat": 4,
+    "order": 2,
+    "calls": 24,
+    "latency_ms": 0.814875
+  }
+]

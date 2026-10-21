@@ -1,0 +1,248 @@
+[
+  {
+    "length": 64,
+    "miss": {
+      "phases": {
+        "lookup_seconds": 1.533299996481219e-05,
+        "prefix_prefill_seconds": 0.008531000000061795,
+        "snapshot_copy_seconds": 0.0001700000000255386,
+        "request_clone_seconds": 6.166599996504374e-05,
+        "suffix_prefill_sample_seconds": 0.004711833999976989,
+        "full_prefill_sample_seconds": 0.0,
+        "decode_seconds": 0.021543290999943565,
+        "unattributed_seconds": 7.083399998464301e-05
+      },
+      "token_ids": [
+        576,
+        12305,
+        25683,
+        1487,
+        5610,
+        13404,
+        323,
+        12002
+      ],
+      "input_tokens": 69,
+      "prefix_tokens": 64,
+      "suffix_tokens": 5,
+      "status": "miss",
+      "ttft_seconds": 0.013560666999978821,
+      "total_seconds": 0.035103957999922386,
+      "decode_seconds": 0.021543290999943565,
+      "decode_tokens_per_second": 324.92714321216465,
+      "stop_reason": "token_limit",
+      "cache": {
+        "hits": 0,
+        "misses": 1,
+        "evictions": 0,
+        "bypasses": 0,
+        "failures": 0,
+        "entries": 1,
+        "stored_tensor_bytes": 786432
+      }
+    },
+    "hit": {
+      "phases": {
+        "lookup_seconds": 2.5332999939564615e-05,
+        "prefix_prefill_seconds": 0.0,
+        "snapshot_copy_seconds": 0.0,
+        "request_clone_seconds": 7.095800003753538e-05,
+        "suffix_prefill_sample_seconds": 0.004756041999939953,
+        "full_prefill_sample_seconds": 0.0,
+        "decode_seconds": 0.021401500000024498,
+        "unattributed_seconds": 2.2000000058142177e-05
+      },
+      "token_ids": [
+        576,
+        12305,
+        25683,
+        1487,
+        5610,
+        13404,
+        323,
+        12002
+      ],
+      "input_tokens": 69,
+      "prefix_tokens": 64,
+      "suffix_tokens": 5,
+      "status": "hit",
+      "ttft_seconds": 0.004874332999975195,
+      "total_seconds": 0.026275832999999693,
+      "decode_seconds": 0.021401500000024498,
+      "decode_tokens_per_second": 327.0798775783,
+      "stop_reason": "token_limit",
+      "cache": {
+        "hits": 1,
+        "misses": 1,
+        "evictions": 0,
+        "bypasses": 0,
+        "failures": 0,
+        "entries": 1,
+        "stored_tensor_bytes": 786432
+      }
+    },
+    "direct": {
+      "phases": {
+        "lookup_seconds": 0.0,
+        "prefix_prefill_seconds": 0.007906625000032363,
+        "snapshot_copy_seconds": 0.0,
+        "request_clone_seconds": 0.0,
+        "suffix_prefill_sample_seconds": 0.004616707999957725,
+        "full_prefill_sample_seconds": 0.0,
+        "decode_seconds": 0.021478750000028413,
+        "unattributed_seconds": 1.9875000020874722e-05
+      },
+      "token_ids": [
+        576,
+        12305,
+        25683,
+        1487,
+        5610,
+        13404,
+        323,
+        12002
+      ],
+      "input_tokens": 69,
+      "prefix_tokens": 64,
+      "suffix_tokens": 5,
+      "status": "direct",
+      "ttft_seconds": 0.012543208000010964,
+      "total_seconds": 0.034021958000039376,
+      "decode_seconds": 0.021478750000028413,
+      "decode_tokens_per_second": 325.9035092819992,
+      "stop_reason": "token_limit",
+      "cache": {
+        "hits": 1,
+        "misses": 1,
+        "evictions": 0,
+        "bypasses": 0,
+        "failures": 0,
+        "entries": 1,
+        "stored_tensor_bytes": 786432
+      }
+    }
+  },
+  {
+    "length": 1024,
+    "miss": {
+      "phases": {
+        "lookup_seconds": 8.112499995149847e-05,
+        "prefix_prefill_seconds": 0.06275266699992699,
+        "snapshot_copy_seconds": 9.587499994268e-05,
+        "request_clone_seconds": 6.733399993663625e-05,
+        "suffix_prefill_sample_seconds": 0.0055246670000315135,
+        "full_prefill_sample_seconds": 0.0,
+        "decode_seconds": 0.024503041000002668,
+        "unattributed_seconds": 8.05410002158169e-05
+      },
+      "token_ids": [
+        576,
+        12305,
+        25683,
+        1487,
+        5610,
+        13404,
+        323,
+        12002
+      ],
+      "input_tokens": 1029,
+      "prefix_tokens": 1024,
+      "suffix_tokens": 5,
+      "status": "miss",
+      "ttft_seconds": 0.06860220900000513,
+      "total_seconds": 0.0931052500000078,
+      "decode_seconds": 0.024503041000002668,
+      "decode_tokens_per_second": 285.67882655868056,
+      "stop_reason": "token_limit",
+      "cache": {
+        "hits": 0,
+        "misses": 1,
+        "evictions": 0,
+        "bypasses": 0,
+        "failures": 0,
+        "entries": 1,
+        "stored_tensor_bytes": 12582912
+      }
+    },
+    "hit": {
+      "phases": {
+        "lookup_seconds": 8.250000007592462e-05,
+        "prefix_prefill_seconds": 0.0,
+        "snapshot_copy_seconds": 0.0,
+        "request_clone_seconds": 7.329199991090718e-05,
+        "suffix_prefill_sample_seconds": 0.005190375000097447,
+        "full_prefill_sample_seconds": 0.0,
+        "decode_seconds": 0.024130624999997963,
+        "unattributed_seconds": 2.7999999929306796e-05
+      },
+      "token_ids": [
+        576,
+        12305,
+        25683,
+        1487,
+        5610,
+        13404,
+        323,
+        12002
+      ],
+      "input_tokens": 1029,
+      "prefix_tokens": 1024,
+      "suffix_tokens": 5,
+      "status": "hit",
+      "ttft_seconds": 0.0053741670000135855,
+      "total_seconds": 0.029504792000011548,
+      "decode_seconds": 0.024130624999997963,
+      "decode_tokens_per_second": 290.0878033619349,
+      "stop_reason": "token_limit",
+      "cache": {
+        "hits": 1,
+        "misses": 1,
+        "evictions": 0,
+        "bypasses": 0,
+        "failures": 0,
+        "entries": 1,
+        "stored_tensor_bytes": 12582912
+      }
+    },
+    "direct": {
+      "phases": {
+        "lookup_seconds": 0.0,
+        "prefix_prefill_seconds": 0.06251779199999419,
+        "snapshot_copy_seconds": 0.0,
+        "request_clone_seconds": 0.0,
+        "suffix_prefill_sample_seconds": 0.005564958000036313,
+        "full_prefill_sample_seconds": 0.0,
+        "decode_seconds": 0.024352999999905478,
+        "unattributed_seconds": 2.174999997350824e-05
+      },
+      "token_ids": [
+        576,
+        12305,
+        25683,
+        1487,
+        5610,
+        13404,
+        323,
+        12002
+      ],
+      "input_tokens": 1029,
+      "prefix_tokens": 1024,
+      "suffix_tokens": 5,
+      "status": "direct",
+      "ttft_seconds": 0.06810450000000401,
+      "total_seconds": 0.09245749999990949,
+      "decode_seconds": 0.024352999999905478,
+      "decode_tokens_per_second": 287.43891923077933,
+      "stop_reason": "token_limit",
+      "cache": {
+        "hits": 1,
+        "misses": 1,
+        "evictions": 0,
+        "bypasses": 0,
+        "failures": 0,
+        "entries": 1,
+        "stored_tensor_bytes": 12582912
+      }
+    }
+  }
+]

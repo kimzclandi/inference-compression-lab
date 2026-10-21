@@ -83,6 +83,7 @@ class RiskContractTests(unittest.TestCase):
 
 @unittest.skipUnless(HAS_NUMPY,'Complete head reconstruction explicitly requires NumPy 2.2.6')
 class RiskTrainingVerificationTests(unittest.TestCase):
+    feature_extractor = None
     def setUp(self):
         self.tmp=tempfile.TemporaryDirectory();self.addCleanup(self.tmp.cleanup)
         self.folder=Path(self.tmp.name)/'training';self.folder.mkdir()
@@ -131,7 +132,7 @@ class RiskTrainingVerificationTests(unittest.TestCase):
     def verify(self):
         with patch('experiments.verify_qa_risk.load_roles',return_value=self.roles), \
              patch('experiments.verify_qa_risk.verify_parents',return_value=(self.parent,{'fp32':self.raw,'int8':self.raw})):
-            return verify_training(self.folder,self.spec,self.protocol_sha)
+            return verify_training(self.folder,self.spec,self.protocol_sha,feature_extractor=self.feature_extractor)
 
     def mutate_json(self,name,mutation):
         p=self.folder/name;value=json.loads(p.read_text());mutation(value);put(p,value);self.rehash()
@@ -144,8 +145,8 @@ class RiskTrainingVerificationTests(unittest.TestCase):
 
     def test_refit_replays_verified_serialized_training_values(self):
         actual_reconstruct=reconstruct_matrix
-        def rounded_reconstruction(data,raw):
-            result=actual_reconstruct(data,raw)
+        def rounded_reconstruction(data,raw,**kwargs):
+            result=actual_reconstruct(data,raw,**kwargs)
             if data[0]['split']=='train':
                 result[0]['features'][0]+=1e-13
             return result
@@ -180,6 +181,7 @@ class RiskTrainingVerificationTests(unittest.TestCase):
 
 @unittest.skipUnless(HAS_NUMPY,'Complete head reconstruction explicitly requires NumPy 2.2.6')
 class RecordedEvaluationMutationTests(unittest.TestCase):
+    feature_extractor = None
     def test_rehashed_raw_score_and_completion_mutations_fail(self):
         training_dir=ROOT/'results/qa-risk-v2/training'
         original=ROOT/'results/qa-risk-v2/evaluation-int8'
@@ -191,7 +193,8 @@ class RecordedEvaluationMutationTests(unittest.TestCase):
                       roles={'evaluation':[json.loads(x) for x in (original/'data.jsonl').read_text().splitlines()]})
         with tempfile.TemporaryDirectory() as tmp:
             folder=Path(tmp)/'evaluation-int8';shutil.copytree(original,folder)
-            def check():return verify_evaluation(folder,'int8',spec,sha(training_dir/'protocol.json'),training_dir,training)
+            def check():return verify_evaluation(folder,'int8',spec,sha(training_dir/'protocol.json'),training_dir,training,
+                                                feature_extractor=self.feature_extractor)
             run_bytes=(folder/'run.json').read_bytes();raw_bytes=(folder/'predictions.jsonl').read_bytes()
             mutations=[lambda p:p[0].update(confidence=.01),lambda p:p[0].update(base_confidence=.01),
                        lambda p:p[0]['risk_features']['features'].__setitem__(0,999.0),

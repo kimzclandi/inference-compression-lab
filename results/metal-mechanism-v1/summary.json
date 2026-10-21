@@ -1,0 +1,85 @@
+{
+  "scope": "Independent synthetic operator diagnostic; no model quality or deployment claim",
+  "timing_scope": "Per-call host perf_counter including mx.eval and mx.synchronize; input creation and compilation excluded. Not GPU kernel duration, bandwidth or occupancy.",
+  "shapes": {
+    "1": {
+      "median_seconds": {
+        "compiled": 0.00010416700001769641,
+        "original": 0.00010170799998832081,
+        "masked": 0.00010339600001429972
+      },
+      "masked_vs": {
+        "original": {
+          "speedup": 0.9836744165562937,
+          "faster_rounds": 4,
+          "diagnostic_speed_gate": false
+        },
+        "compiled": {
+          "speedup": 1.007456768185327,
+          "faster_rounds": 4,
+          "diagnostic_speed_gate": false
+        }
+      }
+    },
+    "64": {
+      "median_seconds": {
+        "compiled": 0.00010587499997427585,
+        "original": 0.00010362499997995656,
+        "masked": 0.00010370849997798359
+      },
+      "masked_vs": {
+        "original": {
+          "speedup": 0.9991948586852113,
+          "faster_rounds": 3,
+          "diagnostic_speed_gate": false
+        },
+        "compiled": {
+          "speedup": 1.0208902837930565,
+          "faster_rounds": 4,
+          "diagnostic_speed_gate": false
+        }
+      }
+    },
+    "512": {
+      "median_seconds": {
+        "compiled": 0.00010372900001698326,
+        "original": 0.00010277099997324513,
+        "masked": 0.0001027915000122448
+      },
+      "masked_vs": {
+        "original": {
+          "speedup": 0.9998005667881369,
+          "faster_rounds": 3,
+          "diagnostic_speed_gate": false
+        },
+        "compiled": {
+          "speedup": 1.0091204039694603,
+          "faster_rounds": 6,
+          "diagnostic_speed_gate": false
+        }
+      }
+    },
+    "2048": {
+      "median_seconds": {
+        "compiled": 0.00012708349999002166,
+        "original": 0.00012247899999806577,
+        "masked": 0.00012929149997376044
+      },
+      "masked_vs": {
+        "original": {
+          "speedup": 0.9473089880071215,
+          "faster_rounds": 2,
+          "diagnostic_speed_gate": false
+        },
+        "compiled": {
+          "speedup": 0.9829223113337932,
+          "faster_rounds": 3,
+          "diagnostic_speed_gate": false
+        }
+      }
+    }
+  },
+  "primary_rows": 512,
+  "model_integration": false,
+  "causal_limit": "Intervention changes zero-fill, synchronization and compiled code together; does not measure isolated barrier cost."
+}

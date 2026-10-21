@@ -1,0 +1,3 @@
+bench 3 head_only 64
+bench 3 head_only 512
+bench 3 head_only 2048

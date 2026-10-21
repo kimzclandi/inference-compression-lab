@@ -1,0 +1,19 @@
+{
+  "status": "pass",
+  "arm": "pruned",
+  "timing": {
+    "evidence_verification_seconds": 3.5638304590029293,
+    "training_head_rebuild_seconds": 0.0019097909971605986,
+    "local_model_load_seconds": 1.5626715840044199,
+    "total_startup_seconds": 5.12841183400451,
+    "scope": "One-time initialization; excluded from request-only benchmark timings."
+  },
+  "verification_sha256": "e02004ef46010646181e31aa113d5ef4fb279cabf1b052a520d353c4fc0b48b1",
+  "responses_sha256": "9b089faa7ce95dcec1e08304fdaac4ebe61ef49f6e5e6d57abd0599198361923",
+  "packages": {
+    "onnxruntime": "1.22.1",
+    "numpy": "2.2.6",
+    "transformers": "4.56.2",
+    "tokenizers": "0.22.0"
+  }
+}

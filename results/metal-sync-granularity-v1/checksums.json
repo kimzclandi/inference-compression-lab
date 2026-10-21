@@ -1,0 +1,12 @@
+{
+  "correctness.json": "9380fcc64f190eda1f9b58b15618281dcdba468ad4ad8fec24435d1eac75f35e",
+  "protocol.json": "1f2fba4ed3ffe02e9b8485c3b6acb7cd6675a9764b182e0e4f868054365ab88a",
+  "run.json": "c5728f0068ef6262b042c9928633b3bb3d5b7afddaea83291fe28e15663e6284",
+  "source/configs/metal-sync-granularity-v1.json": "4f0685bf8b98fe08b41fd4c8804c731c9892e22ca640c30fafa1fd2b1246e372",
+  "source/experiments/metal_mechanism_diagnostic.py": "7579a828207e553e9743bce6d94d4e895bb37d1046ab9c0a3cd95dfd09105a3b",
+  "source/experiments/metal_sync_granularity.py": "85354f08477a60df7523ea635658aef40e97fd4d89d5c59fff133dafc22fa01b",
+  "source/lab/kernels/residual_rmsnorm.metal": "9fabf83f4257874eb3de315db3d45d419d1a3ba0b57cbc33813823dfa5488c91",
+  "source/lab/kernels/residual_rmsnorm_masked.metal": "edfa6c088f40ee165629166cde1c11d7661054c1ab633aaa4a8c60a8af388fe1",
+  "summary.json": "c57f8ed2cf483a5a1b4495bc56e69b469ed65e8119f2e5204fa56b29610e47f9",
+  "timings.json": "1807983e98f1332730ead71cde0692836c7ce50cb2b4ae388969da3f9a50cd40"
+}

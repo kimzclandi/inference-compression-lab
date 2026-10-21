@@ -1,0 +1,64 @@
+{
+  "schema": 1,
+  "kind": "same-input-exp-family-diagnostic-no-model-no-performance",
+  "input_archive": "results/gqa-shared-diagnostic-v1",
+  "output": "results/gqa-exp-choice-v1",
+  "input_count": 384,
+  "order": "step1..16, layer0..23; all archived inputs, no subset",
+  "arm_order": [
+    "native",
+    "original",
+    "standard",
+    "fast"
+  ],
+  "versions": {
+    "mlx": "0.29.3",
+    "mlx-lm": "0.26.3",
+    "numpy": "2.5.3"
+  },
+  "upstream_sha256": {
+    "mlx_lm/generate.py": "919352048641d4556f63fe6081e688a8e9217a18a57e686dde76565725e04c0d",
+    "mlx_lm/models/cache.py": "f418c059dfa4c9b4ff2c69a795284ecf3e616eb29ac1877f7ee64bee06549b5d",
+    "mlx_lm/models/base.py": "e483d553d845db9b681fb81215c56eb08592b67387fa35f2d5c02d0ce0b7cc2a",
+    "mlx_lm/models/qwen2.py": "dcd8ee9bc15db59b88c7932778489e51f957ec1f895d186ff1e9968f99f6d113",
+    "mlx_lm/models/rope_utils.py": "95a0bd2ba11cf1d9cb71a3e49ea202046f604e0e3fc2db633ad0e6cd4a5182fb",
+    "mlx/include/mlx/backend/metal/kernels/sdpa_vector.h": "ea94f1a12b013c1294e16863e9abaec0edeb247cccfd9544b59bedcd63a4a2ed",
+    "mlx/lib/mlx.metallib": "516d89e779bd310bcf289d5ae6611577fa267e5a953d6aa2845ba3a4136c3913",
+    "mlx/lib/libmlx.dylib": "2ea1232407a42823ff3b562514e07a4c551cedbae195d7d0db3dc07ee1890b32",
+    "mlx/core.cpython-312-darwin.so": "7b823ccb3a6efd497b9a91b5711d998442e81e71b586df49544f37fb8b389c20"
+  },
+  "protected_sha256": {
+    "results/gqa-shared-diagnostic-v1/run.json": "085e8b43c4a9b8522e9492e41755036edf570a0cde48faaeede988f851f22f0a",
+    "lab/gqa_shared_decode.py": "a4ed1752af98ec653ed75e85ea9366d38a591efb0b12041c57a46f5fe10aa679",
+    "lab/kernels/gqa_shared_partial.metal": "ae1ea8f007a0e318df4771434b2a6638d4754a6d7ebde381fabfc226dd559413",
+    "lab/kernels/gqa_shared_merge.metal": "7f51fcd31d3d97607b776e0c48f1d63fdfc1e129c83348622056fa7c0c0d539c",
+    "lab/kernels/gqa_diagnostic_layout.metal": "1871c95c840c56ccb4ef305844801c170b60994dbc4fe49b13a63f93dc50388f",
+    "lab/gqa_diagnostic.py": "e2be0e43cd152512299029f42fbbf644482f44a4061a353ad0a19d21ccdf1a9a",
+    "results/gqa-shared-decode-v1/run.json": "2859c27cf1b654c70f9f505e595eec7d865fc8472baa44e2060b630b2f64aa03",
+    "results/gqa-shared-decode-v1/model-correctness.json": "8f89d9ad0b5000451b88632e3b61d301acc8c72393227613c5ffdab031e00fa8"
+  },
+  "question": "Is changing only the exp function family at all three candidate call sites sufficient to eliminate native/candidate value disagreements on every archived input?",
+  "intervention": "standard tap retains original schedule/types/FP16 stores and additionally records FP32 final division; fast tap differs only by 2 partial + 1 merge metal::exp to metal::fast::exp calls. Kernel names differ to avoid name collision. No tuning.",
+  "fidelity": "Reconstruct Q transpose strides and full capacity256 KV slices N129..144; metadata must match all original shape/stride fields. Fresh native and original candidate must bitwise match archived values; standard tap half output must bitwise match original; both tap float32 arrays cast on CPU to FP16 must bitwise match tap half arrays; input values/layout must remain unchanged. Failure saves arrays and stops.",
+  "measurements": "Full344064 output elements, native agreements resolved/persistent/introduced, full FP16/FP32 changes and abs mean/max to archived independently checked FP64 reference, reference rounding disagreements and exact midpoint distances at every old disagreement. FP64 reference is a numerical reference, not exact real arithmetic. Midpoint tie uses ties-to-even.",
+  "primary_acceptance": "All384 fidelity gates pass; fast tap eliminates every native value disagreement and passes unchanged atol=.003/rtol=.003 against FP64 on all elements. Even acceptance applies only to these instrumented operators; no model/quality/speed gate exists.",
+  "failure_policy": "Nonfinite, fidelity/layout/source/version/immutability violations or budget terminate, retain completed records and current arrays, no retry. Finite operator reference mismatches and unmet primary hypothesis are recorded diagnostic outcomes; finish fixed sweep but draw no correctness/performance claim.",
+  "repetition": {
+    "primary_runs": 1,
+    "warmup": 0,
+    "repeats": 1,
+    "seed": null,
+    "reason": "No RNG, no timing. Fixed archived tensors; one diagnostic sweep only."
+  },
+  "operator_atol": 0.003,
+  "operator_rtol": 0.003,
+  "budget": {
+    "hard_seconds": 600,
+    "peak_mlx_bytes": 2147483648,
+    "disk_bytes": 26214400
+  },
+  "interpretation": "FP16 output reproduction does not prove FP32 tap equals uninstrumented intermediate values. Family substitution spans3sites, not one unique exp site; schedule differs from native. Unchanged outputs cannot distinguish equal compiler lowering from insensitive inputs and cannot exclude interaction with reduction schedule. Improved native agreement need not improve FP64 accuracy. No full model rerun or performance phase.",
+  "protected_conclusion": "Original10/48 finalKV gate remains failed; new arrays cannot override old model failure.",
+  "contribution": "AI-assisted diagnostic tooling around prior experimental custom operator; online softmax and split-K are existing framework/literature methods.",
+  "host_os_build": "26A428"
+}

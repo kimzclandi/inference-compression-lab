@@ -1,0 +1,12 @@
+{
+  "mechanism.json": "e02746e8863d59c42378f68f80aadb9d8bbb6db44651a428e0a43011a0b088d7",
+  "protocol.json": "a087cc0a5ab44e8faa7dc38c56cb2a049f9f4403ccc954596619ac06db89c0f2",
+  "quality.json": "4171f9eebd93f1d10b8b12b4823bf79459dd460eb9f5b28d01c7f9e590b45601",
+  "run.json": "6726830de60a627ef72865217ab657c255d9143bf76be79fe7eed5a189131570",
+  "source/experiments/__init__.py": "7c54e0db53064338fa4534e5e27fadb47c6632b81ba3b249f2d251bc0c0321ba",
+  "source/experiments/qwen_demand_prefill.py": "dfdf70300f8baebaecb971ee60d58ff212f009d4bad6c1ff2d6020e253d9267f",
+  "source/lab/__init__.py": "0925f6ce613cb6c7f7eb3feba5cea6f47b47f653ea5b4de1d358915d43ea9a79",
+  "source/lab/qa_metrics.py": "78c4af7f06ba49b3acddd2610586336ecf585c06d8ad89b46ff9fb6358aaaa1f",
+  "source/lab/qwen_demand_prefill.py": "4ed687317da9ca0008036cc8452963a8a6b67be5efbc2fdfbe8500c58a29f7c2",
+  "workloads.json": "2c5d1188d38799427e708c73e2e525d66c6ed231c1f5e8c2bd0a3036edfdc478"
+}

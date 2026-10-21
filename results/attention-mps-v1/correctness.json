@@ -1,0 +1,194 @@
+[
+  {
+    "index": 2,
+    "arm": "eager_fp16",
+    "passed": true,
+    "max_abs_error": 0.0001593579737589612,
+    "normalized_error": 0.014677669970437658,
+    "output_sha256": "f30ff197446a805e362b96f698f471ac4e5a37512261351a063f5e05e8fe8b17"
+  },
+  {
+    "index": 2,
+    "arm": "eager_fp32",
+    "passed": true,
+    "max_abs_error": 5.798508383275669e-05,
+    "normalized_error": 0.005120076379090498,
+    "output_sha256": "54b2ed8fd662576d8667b05f19f71d364883cae12c3dc785a2fe459c4b363164"
+  },
+  {
+    "index": 2,
+    "arm": "sdpa_auto",
+    "passed": true,
+    "max_abs_error": 7.618779199997094e-05,
+    "normalized_error": 0.006637301334310956,
+    "output_sha256": "bb29bded1bca9e0f1ba725615178b2890d95b0b619f936198de522946a053a5d"
+  },
+  {
+    "index": 6,
+    "arm": "eager_fp16",
+    "passed": true,
+    "max_abs_error": 0.0002678965203092992,
+    "normalized_error": 0.023968563232434324,
+    "output_sha256": "2299956d8e8b3089bc2be463e7a47c37898ebda0ca0e7458fb7c4f0be4c2b928"
+  },
+  {
+    "index": 6,
+    "arm": "eager_fp32",
+    "passed": true,
+    "max_abs_error": 5.9673546862842874e-05,
+    "normalized_error": 0.005170502080140497,
+    "output_sha256": "653080282ea29223d2f0170cb03f9ceec1ed7c329c3ec73a29ec19ea50606b05"
+  },
+  {
+    "index": 6,
+    "arm": "sdpa_auto",
+    "passed": true,
+    "max_abs_error": 6.826621676314648e-05,
+    "normalized_error": 0.005963004531850618,
+    "output_sha256": "ff6854ddfd1d8875f728064bc5e74baf7b89c0b943162096ef8426945b4f47fc"
+  },
+  {
+    "index": 5,
+    "arm": "eager_fp16",
+    "passed": true,
+    "max_abs_error": 0.0014943382200329758,
+    "normalized_error": 0.09422278480278447,
+    "output_sha256": "f948460ba0829903f0bd0fc1e8f740dd361735b052d4e8fba0b59a29e5fd1243"
+  },
+  {
+    "index": 5,
+    "arm": "eager_fp32",
+    "passed": true,
+    "max_abs_error": 0.0008791234716949425,
+    "normalized_error": 0.026831465372066265,
+    "output_sha256": "fbee0084b3ee43cb8a2f4effe1a72c08c86ea32016dd54d1ae27b054a9356512"
+  },
+  {
+    "index": 5,
+    "arm": "sdpa_auto",
+    "passed": true,
+    "max_abs_error": 0.0014943382200329758,
+    "normalized_error": 0.09422278480278447,
+    "output_sha256": "f948460ba0829903f0bd0fc1e8f740dd361735b052d4e8fba0b59a29e5fd1243"
+  },
+  {
+    "index": 7,
+    "arm": "eager_fp16",
+    "passed": true,
+    "max_abs_error": 5.182207182102133e-05,
+    "normalized_error": 0.0050558874352272165,
+    "output_sha256": "f41582aeb02c9daf9951698075f716c191f81d7e7e9663554206f91e865d8047"
+  },
+  {
+    "index": 7,
+    "arm": "eager_fp32",
+    "passed": true,
+    "max_abs_error": 2.9336390628117992e-05,
+    "normalized_error": 0.002697762759040767,
+    "output_sha256": "8c52f26555c284f18ebab98ae440c957950b6019a1757854fa6cc536239638c1"
+  },
+  {
+    "index": 7,
+    "arm": "sdpa_auto",
+    "passed": true,
+    "max_abs_error": 3.9348669669703185e-05,
+    "normalized_error": 0.0036664708893790086,
+    "output_sha256": "b6e500241ac532c85c38865655c4bceb07bb50e30eb0a43a12ed9bf5644e9ac6"
+  },
+  {
+    "index": 1,
+    "arm": "eager_fp16",
+    "passed": true,
+    "max_abs_error": 0.0017897032282219172,
+    "normalized_error": 0.09162870477640746,
+    "output_sha256": "46a867a8c17a5960c153750bcaa0a4e95aaa01304888353af92a7b8229b45aec"
+  },
+  {
+    "index": 1,
+    "arm": "eager_fp32",
+    "passed": true,
+    "max_abs_error": 0.0008761606935410171,
+    "normalized_error": 0.02872936558640036,
+    "output_sha256": "8bbfb58ddb5a5d3a1ecbbfda9fc23bf57721464ef490fd0ad43ec9d9ea6622a8"
+  },
+  {
+    "index": 1,
+    "arm": "sdpa_auto",
+    "passed": true,
+    "max_abs_error": 0.0017897032282219172,
+    "normalized_error": 0.09162870477640746,
+    "output_sha256": "46a867a8c17a5960c153750bcaa0a4e95aaa01304888353af92a7b8229b45aec"
+  },
+  {
+    "index": 3,
+    "arm": "eager_fp16",
+    "passed": true,
+    "max_abs_error": 4.5117728382185196e-05,
+    "normalized_error": 0.004414304438200918,
+    "output_sha256": "0b1148852b9009ceee92be0c26cdc36bbedde44285a450b231520c7b283fe87e"
+  },
+  {
+    "index": 3,
+    "arm": "eager_fp32",
+    "passed": true,
+    "max_abs_error": 2.6010934824918786e-05,
+    "normalized_error": 0.0024046547140223738,
+    "output_sha256": "340d1a7284dadf657f9c8590460a314dbe0492cd562b4ad49001fb0f4611ef26"
+  },
+  {
+    "index": 3,
+    "arm": "sdpa_auto",
+    "passed": true,
+    "max_abs_error": 4.399903459381682e-05,
+    "normalized_error": 0.004130105734167061,
+    "output_sha256": "31e9f7ef0f8d34ee00107907b60858eaf3b4a699318d8ac90408c57e4d3583d1"
+  },
+  {
+    "index": 0,
+    "arm": "eager_fp16",
+    "passed": true,
+    "max_abs_error": 0.0017130232392794653,
+    "normalized_error": 0.06933250729005996,
+    "output_sha256": "72dc7f0d9afc671bda23312daa0ee196b6566a078b008b381066afba0f90b9f8"
+  },
+  {
+    "index": 0,
+    "arm": "eager_fp32",
+    "passed": true,
+    "max_abs_error": 0.0007821228499715893,
+    "normalized_error": 0.025561535390000455,
+    "output_sha256": "db58302869282a24d059fd771099a72ad9457d9c96b7077ec8306c383af07a45"
+  },
+  {
+    "index": 0,
+    "arm": "sdpa_auto",
+    "passed": true,
+    "max_abs_error": 0.0017130232392794653,
+    "normalized_error": 0.06933250729005996,
+    "output_sha256": "72dc7f0d9afc671bda23312daa0ee196b6566a078b008b381066afba0f90b9f8"
+  },
+  {
+    "index": 4,
+    "arm": "eager_fp16",
+    "passed": true,
+    "max_abs_error": 0.0017353942227043007,
+    "normalized_error": 0.08177762281413832,
+    "output_sha256": "39d1022028c813b566ba9f7e63bd6036cd0662298e959b2fc948bf621eaaa82b"
+  },
+  {
+    "index": 4,
+    "arm": "eager_fp32",
+    "passed": true,
+    "max_abs_error": 0.0009450525509797636,
+    "normalized_error": 0.03092757536125698,
+    "output_sha256": "e47b75fc2ea176a5ac4909355b5e4f86274ced8cfda8c9ced601481e02f08a6a"
+  },
+  {
+    "index": 4,
+    "arm": "sdpa_auto",
+    "passed": true,
+    "max_abs_error": 0.0017353942227043007,
+    "normalized_error": 0.08177762281413832,
+    "output_sha256": "39d1022028c813b566ba9f7e63bd6036cd0662298e959b2fc948bf621eaaa82b"
+  }
+]

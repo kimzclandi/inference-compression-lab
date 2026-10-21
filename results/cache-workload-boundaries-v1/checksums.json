@@ -1,0 +1,13 @@
+{
+  "phase-probes.json": "17da1cc6211d2aa8e48d41ebb269a8bc7978249c7fa0ab75ca96feae779d83e8",
+  "protocol.json": "be92242e7b7c00d417db2360d68bd87971647156b9e9ec215bde9e3366f1e661",
+  "run.json": "28e01840337c25f3ac70ea0948b138758b3758e642b5861855e4f7a0d933a0b0",
+  "source/configs/cache-workload-boundaries-v1.json": "be92242e7b7c00d417db2360d68bd87971647156b9e9ec215bde9e3366f1e661",
+  "source/experiments/cache_workload_boundaries.py": "adbd4816d2b23c2148ff6455922a30ecbbe4a8eacf2e87b207f46659907e09ed",
+  "source/experiments/metal_mechanism_diagnostic.py": "7579a828207e553e9743bce6d94d4e895bb37d1046ab9c0a3cd95dfd09105a3b",
+  "source/lab/prefix_cache.py": "9b20d6b50830ac347b7bf322775ffd51d93dc440f140f754e1d315d0d2da8909",
+  "source/lab/qwen_prefix.py": "18b5a77d85766d82d9f4159d9e1fe97a1cff61970ab79f5f0008ec300a6cd6c3",
+  "summary.json": "4418b7bf98584669129561aad1ded611d26e11fd44ffa5efe56ba3ce0475f352",
+  "timings.json": "e11df6d60f674e23cacd4af6c9ff1e3cc0fdf8f6169b4ebe8d05f063c55b1d0d",
+  "workloads.json": "a58b88bf92ae79de75375bbe4b2a713b0ae9ff277c5ee6f18c98f3317bb77e7e"
+}

@@ -1,0 +1,22 @@
+{
+  "scope": "Synchronization-granularity diagnosis, not a replacement kernel benchmark or deployment claim",
+  "seed": 20261008,
+  "mlx_version": "0.29.3",
+  "dtype": "float16",
+  "width": 896,
+  "rows": [1, 512, 2048],
+  "arms": ["compiled", "original", "masked"],
+  "chain_length": 32,
+  "sync_every": [1, 8, 32],
+  "warmups": 3,
+  "rounds": 7,
+  "repeats": 20,
+  "epsilon": 1e-6,
+  "atol": 0.01,
+  "rtol": 0.01,
+  "minimum_ratio": 1.1,
+  "minimum_faster_rounds": 6,
+  "decision": "Report all cells and sync1/sync32 sensitivity separately from original/masked/compiled ranking. Do not promote a kernel or claim host-only causality. No tuning after observation.",
+  "timing_scope": "Host perf_counter includes Python graph construction, eval, GPU work and synchronization. Each sample starts from the same input and performs the same dependent 32 calls; all h/y outputs are forced before their batch is released. Outer chain is not compiled as one function.",
+  "profile": {"rows": 2048, "sync_every": 32, "warmups": 3, "batches": 300, "startup_delay_seconds": 10, "arms": ["compiled", "original", "masked"], "scope": "One process-attributed trace per arm, including initialization and warmups. Interval counts are not kernel launches; profiler times are not uninstrumented latency."}
+}

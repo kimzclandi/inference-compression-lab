@@ -1,0 +1,75 @@
+{
+  "schema": "qa-risk-pruning-v1",
+  "locked": true,
+  "baseline_commit": "65ed839d8f018bacc7fbdd1792782a9367bcb016",
+  "hypothesis": "Normalization dominates fixed risk-feature extraction. Once a finite differently normalized competitor is found, a candidate with finite representable margin <= that best margin cannot replace it. Skip only its text normalization; keep all-window enumeration, first-tie semantics, validation and original arithmetic.",
+  "inputs_sha256": {
+    "lab/qa_risk_calibration.py": "182138f513c311a5e14dece7afc60ca28c1cbf22b1dbbf56a6db0cf3513b3bbd",
+    "lab/extractive_qa.py": "d859b363f2cfcca578f0358595a11bdfdcc9b31d0dda19dcbc9def3e9104de8f",
+    "lab/qa_metrics.py": "78c4af7f06ba49b3acddd2610586336ecf585c06d8ad89b46ff9fb6358aaaa1f",
+    "lab/qa_specialist_runtime.py": "40e8a0482b3ddb7d1aca5424c090571e27182c363f15e6b3da0ea72c537b1e54",
+    "experiments/qa_risk.py": "b384e54e4e396b06ca80394187e6798633eb542acb86edf213a815aff65d7457",
+    "results/qa-risk-performance-v1/protocol.json": "6637305e06299f89251a2f61393804618b94d59f935e8dd278b2d12572103fac",
+    "results/qa-risk-v2/training/selection.json": "b2999477ee82318a98266ef0674c22a526cddea1eec541c591a7bec7e354b74a",
+    "results/qa-specialist-v1/calibration-fp32/predictions.jsonl": "00313625e8b3796664a0094896af923e92ac66c35b3f00d970c51a6cbe723faf",
+    "results/qa-specialist-v1/calibration-int8/predictions.jsonl": "0f77ff48bdc9612876d08f22bab6a661fdc10f730a53f586a2cd43e8c4bef3a2",
+    "results/qa-specialist-v1/evaluation-fp32/predictions.jsonl": "c20b3f817321103a3c51c90b57f1787c6d945bf279dd1a56718ff8313b6f307b",
+    "results/qa-specialist-v1/evaluation-int8/predictions.jsonl": "606ac496c9d0033bae1807c7278d8eb0cd5f2477314a1393b3573bc07bbc0e4d",
+    "results/qa-risk-v2/evaluation-int8/predictions.jsonl": "40aebcfc03a4aaae3fe8742dc93682a392824de3c763945aa06be419aa000397",
+    "configs/qa-risk/dataset/train/data.jsonl": "fdadbc19b5b0d978971ead19e10469d0f92d76187fc923c904d1cf878b81a3a2",
+    "configs/qa-risk/dataset/calibration/data.jsonl": "e98f650dc240ab14e84861e7f7dc3efbeb1da9b49c06079fcaaa1159860ca759",
+    "configs/qa-risk/dataset/evaluation/data.jsonl": "d5d1c2e80291bf203179a2151ae71276c00f966e00aa86bee9a054a707f3afef",
+    "configs/qa-specialist/dataset/calibration/data.jsonl": "0e48a12509048b171c34d801661c8fe94d03fb8f578c399fabf4031a1d1f2eb5",
+    "results/qa-risk-v2/training/fp32-training-features.json": "55b9e2bb55963af2d0a7f5d6e802473519459aa3e4ac00c19f336ef7fb542336",
+    "results/qa-risk-v2/training/int8-training-features.json": "07e9b461c034085fd0a7ca5819906e914890dc71ede75f11513d64b3abfcbb55"
+  },
+  "correctness": {
+    "development_rows": 768,
+    "historical_evaluation_rows": 128,
+    "required": "Exact complete feature/diagnostic records, fixed-head scores and 0.7 decisions; zero differences. Historical evaluation is implementation replay, never new confirmation. Synthetic checks must retain cross-window second-best and duplicate-answer semantics, mask/offset validation, missing alternatives and overflow rejection.",
+    "head": "rebuild once per process from archived training matrix; no new fitting choices",
+    "threshold": 0.7
+  },
+  "performance": {
+    "sample_ids": [
+      "56de1645cffd8e1900b4b5d2",
+      "5a7b3f0f21c2de001afe9e02",
+      "5a7b3b3121c2de001afe9dee",
+      "5a7b054521c2de001afe9cd0",
+      "571094b7a58dae1900cd6a6a",
+      "57107d73b654c5140001f91f",
+      "5ad24d2ad7d075001a428c1e",
+      "5ad24a2ad7d075001a428bbc"
+    ],
+    "variant": "int8",
+    "threads": 4,
+    "process_arms": [
+      "reference",
+      "pruned",
+      "pruned",
+      "reference",
+      "reference",
+      "pruned"
+    ],
+    "warmup_requests": 8,
+    "repetitions": 5,
+    "measurements_per_process": 40,
+    "timing": "Separate feature-only and full warm request including tokenizer, CPU ORT, decode, five features, score, parse and threshold decision. Excludes initialization/verification/JSON I/O; report initialization separately. Same eight historical single-window inputs. No concurrency or tail-latency claim.",
+    "summary": "median of three process medians per arm; paired ratio uses neighboring reference/pruned processes",
+    "feature_speedup_min": 1.25,
+    "full_request_speedup_min": 1.05,
+    "required_pairs_faster": 2,
+    "note": "Feature runtime reduction >=20%; full request speedup >=1.05. Timing observations, not statistical guarantee."
+  },
+  "limits": {
+    "candidate_algorithms": 1,
+    "timed_runs": 1,
+    "compute_budget_seconds": 900,
+    "training": "No base/adapter training; only existing 256x5 head reconstruction.",
+    "downloads": false,
+    "paid_compute": false,
+    "stop": "Any semantic mismatch or gate failure prevents runtime adoption. Fix correctness/harness defects with preserved failures; no threshold/data/precision/thread/search changes to obtain a favorable measurement."
+  },
+  "adoption": "If all gates pass, use the new exact extractor at the local prototype entrypoint only. Keep the historical reference, evidence bytes and pinned reproduction commands unchanged. Push a draft PR, no merge/tag/Release.",
+  "authorship": "AI-assisted implementation and execution; personal mastery unverified."
+}

@@ -1,0 +1,16 @@
+test_rehashed_raw_score_and_completion_mutations_fail (test_qa_risk_startup.PrunedEvaluationMutationTests.test_rehashed_raw_score_and_completion_mutations_fail) ... ok
+test_empty_manifest_and_partial_fit_fail_closed (test_qa_risk_startup.PrunedTrainingVerificationTests.test_empty_manifest_and_partial_fit_fail_closed) ... ok
+test_rebuild_from_train_only_and_keep_private_parameters_internal (test_qa_risk_startup.PrunedTrainingVerificationTests.test_rebuild_from_train_only_and_keep_private_parameters_internal) ... ok
+test_refit_replays_verified_serialized_training_values (test_qa_risk_startup.PrunedTrainingVerificationTests.test_refit_replays_verified_serialized_training_values) ... ok
+test_rehashed_feature_target_score_and_model_identity_mutations (test_qa_risk_startup.PrunedTrainingVerificationTests.test_rehashed_feature_target_score_and_model_identity_mutations) ... ok
+test_imported_verification_dependencies_are_bound (test_qa_risk_startup.VerificationModeTests.test_imported_verification_dependencies_are_bound) ... ok
+test_matrix_extractor_is_applied_to_every_row (test_qa_risk_startup.VerificationModeTests.test_matrix_extractor_is_applied_to_every_row) ... ok
+test_pruned_mode_selects_reviewed_extractor_after_guard (test_qa_risk_startup.VerificationModeTests.test_pruned_mode_selects_reviewed_extractor_after_guard) ... ok
+test_pruned_source_guard_runs_before_any_evidence_is_read (test_qa_risk_startup.VerificationModeTests.test_pruned_source_guard_runs_before_any_evidence_is_read) ... ok
+test_reference_default_remains_independent (test_qa_risk_startup.VerificationModeTests.test_reference_default_remains_independent) ... ok
+test_unknown_mode_is_not_a_silent_fallback (test_qa_risk_startup.VerificationModeTests.test_unknown_mode_is_not_a_silent_fallback) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.376s
+
+OK

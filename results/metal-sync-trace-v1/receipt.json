@@ -1,0 +1,227 @@
+{
+  "schema": "metal-sync-trace-projection-v1",
+  "protocol_sha256": "4f0685bf8b98fe08b41fd4c8804c731c9892e22ca640c30fafa1fd2b1246e372",
+  "profile_source_sha256": "85354f08477a60df7523ea635658aef40e97fd4d89d5c59fff133dafc22fa01b",
+  "source_xml_sha256": {
+    "compiled-gpu.csv": "8c24f752b88ed34b1cd2cc6c55ecd03a85e94d00dc18108dbf2f4f03e208dbf3",
+    "compiled-application.csv": "d7b2a7bcfae53251946dba61a76d498fb81da0187afe10a987fb8b2fcd5a38ae",
+    "original-gpu.csv": "048654fe45fa5915dc93257e38ced53c12df7378a99ccd77f192ac5dda2b5b72",
+    "original-application.csv": "01927a3b7e0c2e43a2450bf83bc16d1a1923fe867ea9ff188b898365a96cb722",
+    "masked-gpu.csv": "7f3b08ac2724b63bcd74a2724f4d85a081ca0e677942c77b5a16a8d2b46b76a7",
+    "masked-application.csv": "c75d7a13d3ad0f52f0ee4722bc69b967a5f432db8d80325150c90b188037955e"
+  },
+  "arms": {
+    "compiled": {
+      "process": "python (3410)",
+      "progress": [
+        {
+          "stage": "started",
+          "pid": 3410,
+          "arm": "compiled"
+        },
+        {
+          "stage": "warm",
+          "pid": 3410,
+          "arm": "compiled"
+        },
+        {
+          "stage": "complete",
+          "pid": 3410,
+          "arm": "compiled",
+          "profiled_calls": 9600,
+          "checksum": 558129.1875,
+          "scope": "One process-attributed trace per arm, including initialization and warmups. Interval counts are not kernel launches; profiler times are not uninstrumented latency."
+        }
+      ],
+      "recording": {
+        "start-date": "2026-10-08T03:30:08.381+08:00",
+        "end-date": "2026-10-08T03:30:19.622+08:00",
+        "duration": "11.240745",
+        "instruments-version": "16.0 (17F113)",
+        "template-name": "Metal System Trace"
+      },
+      "toc_sha256": "e2a9baa3deb5aa383b6c5befc1345ef9b2d6c2908068116d877f28f55fa3cfc0",
+      "progress_sha256": "b2fffcc04657ec42c59442bf266307891a26453a50aedb875658763c07184d79"
+    },
+    "original": {
+      "process": "python (3517)",
+      "progress": [
+        {
+          "stage": "started",
+          "pid": 3517,
+          "arm": "original"
+        },
+        {
+          "stage": "warm",
+          "pid": 3517,
+          "arm": "original"
+        },
+        {
+          "stage": "complete",
+          "pid": 3517,
+          "arm": "original",
+          "profiled_calls": 9600,
+          "checksum": 558129.1875,
+          "scope": "One process-attributed trace per arm, including initialization and warmups. Interval counts are not kernel launches; profiler times are not uninstrumented latency."
+        }
+      ],
+      "recording": {
+        "start-date": "2026-10-08T03:30:54.937+08:00",
+        "end-date": "2026-10-08T03:31:06.091+08:00",
+        "duration": "11.153730",
+        "instruments-version": "16.0 (17F113)",
+        "template-name": "Metal System Trace"
+      },
+      "toc_sha256": "75a555d3ec71d3ca877745d61ff07c608c7c8b80a47100dfc2b53e284777adc3",
+      "progress_sha256": "780977517cd5d7d271635ad8d167706ddae20d0e994e3b4024dd5a36a1a647fc"
+    },
+    "masked": {
+      "process": "python (3551)",
+      "progress": [
+        {
+          "stage": "started",
+          "pid": 3551,
+          "arm": "masked"
+        },
+        {
+          "stage": "warm",
+          "pid": 3551,
+          "arm": "masked"
+        },
+        {
+          "stage": "complete",
+          "pid": 3551,
+          "arm": "masked",
+          "profiled_calls": 9600,
+          "checksum": 558129.1875,
+          "scope": "One process-attributed trace per arm, including initialization and warmups. Interval counts are not kernel launches; profiler times are not uninstrumented latency."
+        }
+      ],
+      "recording": {
+        "start-date": "2026-10-08T03:31:45.541+08:00",
+        "end-date": "2026-10-08T03:31:56.738+08:00",
+        "duration": "11.196606",
+        "instruments-version": "16.0 (17F113)",
+        "template-name": "Metal System Trace"
+      },
+      "toc_sha256": "5f0a5caf6f3266f55770bc0c203caa1288707a5a325eb6aed4be723cf8ac457d",
+      "progress_sha256": "16a50297c12bf2a55663437b688d32a564e323311e8a6340888b12714d0ac8b1"
+    }
+  },
+  "summary": {
+    "compiled": {
+      "gpu": {
+        "interval_count": 914,
+        "summed_duration_ns": 320121007,
+        "union_duration_ns": 320121007,
+        "observed_span_ns": 429517583,
+        "gap_count": 913,
+        "total_gap_ns": 109396576,
+        "maximum_gap_ns": 2425375,
+        "median_gap_ns": 1083,
+        "interval_coverage_fraction": 0.7453036142643781,
+        "interpretation": "Attributed interval coverage inside first-to-last span; not device utilization, launch count or isolated kernel time.",
+        "categories": {
+          "Compute": 914
+        }
+      },
+      "application": {
+        "interval_count": 2124,
+        "summed_duration_ns": 454255744,
+        "union_duration_ns": 410453206,
+        "observed_span_ns": 443016583,
+        "gap_count": 1212,
+        "total_gap_ns": 32563377,
+        "maximum_gap_ns": 1256667,
+        "median_gap_ns": 2625.0,
+        "interval_coverage_fraction": 0.9264962571389794,
+        "interpretation": "Attributed interval coverage inside first-to-last span; not device utilization, launch count or isolated kernel time.",
+        "categories": {
+          "Command Buffer 0": 1213,
+          "Compute Command 0": 911
+        }
+      }
+    },
+    "original": {
+      "gpu": {
+        "interval_count": 912,
+        "summed_duration_ns": 251291040,
+        "union_duration_ns": 251291040,
+        "observed_span_ns": 356493250,
+        "gap_count": 911,
+        "total_gap_ns": 105202210,
+        "maximum_gap_ns": 3400125,
+        "median_gap_ns": 3916,
+        "interval_coverage_fraction": 0.7048970492428679,
+        "interpretation": "Attributed interval coverage inside first-to-last span; not device utilization, launch count or isolated kernel time.",
+        "categories": {
+          "Compute": 912
+        }
+      },
+      "application": {
+        "interval_count": 2122,
+        "summed_duration_ns": 364622906,
+        "union_duration_ns": 332500960,
+        "observed_span_ns": 368069334,
+        "gap_count": 1210,
+        "total_gap_ns": 35568374,
+        "maximum_gap_ns": 1231792,
+        "median_gap_ns": 2333.5,
+        "interval_coverage_fraction": 0.9033650165487571,
+        "interpretation": "Attributed interval coverage inside first-to-last span; not device utilization, launch count or isolated kernel time.",
+        "categories": {
+          "Command Buffer 0": 1211,
+          "Compute Command 0": 911
+        }
+      }
+    },
+    "masked": {
+      "gpu": {
+        "interval_count": 913,
+        "summed_duration_ns": 302531290,
+        "union_duration_ns": 302531290,
+        "observed_span_ns": 413358042,
+        "gap_count": 912,
+        "total_gap_ns": 110826752,
+        "maximum_gap_ns": 3674708,
+        "median_gap_ns": 875.0,
+        "interval_coverage_fraction": 0.7318867888386215,
+        "interpretation": "Attributed interval coverage inside first-to-last span; not device utilization, launch count or isolated kernel time.",
+        "categories": {
+          "Compute": 913
+        }
+      },
+      "application": {
+        "interval_count": 2116,
+        "summed_duration_ns": 414957448,
+        "union_duration_ns": 381443791,
+        "observed_span_ns": 425268625,
+        "gap_count": 1204,
+        "total_gap_ns": 43824834,
+        "maximum_gap_ns": 1331708,
+        "median_gap_ns": 2437.5,
+        "interval_coverage_fraction": 0.896947878532069,
+        "interpretation": "Attributed interval coverage inside first-to-last span; not device utilization, launch count or isolated kernel time.",
+        "categories": {
+          "Command Buffer 0": 1205,
+          "Compute Command 0": 911
+        }
+      }
+    }
+  },
+  "files": {
+    "compiled-gpu.csv": "0d0548c305e1c6c25484ae64aa3efcc289c8bb8086b3b618485c0c3f6dcc0fcb",
+    "compiled-application.csv": "1514825680d24802adcab18fae6d35e532a1cceecd13e1aeab339a188c94a62a",
+    "original-gpu.csv": "c418720d289be29edc8719205bb2f0ca6cff23d59a23697b8e81f607e9b4303c",
+    "original-application.csv": "c060f1954d984c7814613feacd6f33fe9c765ae0fd57f9e17cc89d7df468aee8",
+    "masked-gpu.csv": "7df6b5321b77780a9aa4170303541d747d8c42fd9483c95fe84abc492c183eff",
+    "masked-application.csv": "633caced76ab2d7f987ee7fda2ed46de13cc16bc0fc4d5e1f006a266dd8996fa",
+    "compiled-counter-info.xml": "36586363b51e71ca927e7dbc988f72d63cc0056b67739e314c6a9546688f416a"
+  },
+  "scope": "One process-attributed trace per arm, including initialization and warmups. Interval counts are not kernel launches; profiler times are not uninstrumented latency.",
+  "privacy": "Only exact target Python process intervals are public. Full trace/XML remain local.",
+  "authenticity_limit": "Hashes bind local source exports; public CSV independently supports arithmetic, not recording authenticity.",
+  "available_counter_names_compiled_trace": [
+    "RT Unit Active"
+  ]
+}

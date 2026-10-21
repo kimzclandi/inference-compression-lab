@@ -81,11 +81,12 @@ def verify_parents(spec, repo=REPO):
     return parent_data, by_variant
 
 
-def reconstruct_matrix(data, raw):
+def reconstruct_matrix(data, raw, *, feature_extractor=None):
+    feature_extractor = extract_features if feature_extractor is None else feature_extractor
     matrix=[]
     for row in data:
         pred=raw[row['id']]
-        feature=extract_features(row['context'],pred)
+        feature=feature_extractor(row['context'],pred)
         target=int(any(normalize(pred['prediction']) == normalize(answer) for answer in row['answers']))
         matrix.append(dict(id=row['id'],prediction=pred['prediction'],features=feature['features'],
                            feature_names=feature['feature_names'],diagnostics=feature['diagnostics'],target=target))
@@ -103,7 +104,7 @@ def select(data, matrix, model, spec):
     return dict(eligible=bool(passing),threshold=min(passing) if passing else None,candidates=candidates),predictions
 
 
-def verify_training(folder, spec, protocol_sha256, *, repo=REPO):
+def verify_training(folder, spec, protocol_sha256, *, repo=REPO, feature_extractor=None):
     """Internal return includes in-memory heads; never serialize that return."""
     folder, repo=Path(folder),Path(repo)
     verify_hashes(folder,read(folder/'checksums.json'),exclude=('checksums.json',))
@@ -132,8 +133,8 @@ def verify_training(folder, spec, protocol_sha256, *, repo=REPO):
                     {k:v for k,v in parent_data[row['id']].items() if k!='split'}, 'Development labels/content changed')
     heads={}; selection=dict(protocol_sha256=protocol_sha256,variants={},scope=spec['scope'])
     for variant in VARIANTS:
-        matrix=reconstruct_matrix(roles['train'],parent_raw[variant])
-        cal_matrix=reconstruct_matrix(roles['calibration'],parent_raw[variant])
+        matrix=reconstruct_matrix(roles['train'],parent_raw[variant], feature_extractor=feature_extractor)
+        cal_matrix=reconstruct_matrix(roles['calibration'],parent_raw[variant], feature_extractor=feature_extractor)
         stored_matrix=read(folder/(variant+'-training-features.json'))
         require(aggregates_equal(matrix,stored_matrix), 'Training features/targets do not reproduce')
         require(aggregates_equal(cal_matrix,read(folder/(variant+'-calibration-features.json'))), 'Calibration features/targets do not reproduce')
@@ -156,7 +157,8 @@ def verify_training(folder, spec, protocol_sha256, *, repo=REPO):
     return dict(selection=selection,heads=heads,roles=roles)
 
 
-def verify_evaluation(folder,variant,spec,protocol_sha256,training_dir,training):
+def verify_evaluation(folder,variant,spec,protocol_sha256,training_dir,training, *, feature_extractor=None):
+    feature_extractor = extract_features if feature_extractor is None else feature_extractor
     folder,training_dir=Path(folder),Path(training_dir)
     verify_hashes(folder,read(folder/'checksums.json'),exclude=('checksums.json',))
     expected={'protocol.json','run.json','selection.json','data.jsonl','assets.json','predictions.jsonl','summary.json'}
@@ -182,7 +184,7 @@ def verify_evaluation(folder,variant,spec,protocol_sha256,training_dir,training)
         pred=b[row['id']];decoded=independently_decode(row['context'],pred['raw_windows'],spec['input_limits'])
         saved={k:pred[k] for k in decoded};saved['confidence']=pred['base_confidence']
         require(aggregates_equal(decoded,saved),'Evaluation raw span does not independently decode')
-        feature=extract_features(row['context'],pred)
+        feature=feature_extractor(row['context'],pred)
         require(aggregates_equal(feature,pred['risk_features']),'Evaluation feature extraction changed')
         confidence=predict_probability(training['heads'][variant],feature['features'])
         require(aggregates_equal(confidence,pred['confidence']),'Evaluation score differs from frozen head')
@@ -199,11 +201,26 @@ def verify_evaluation(folder,variant,spec,protocol_sha256,training_dir,training)
                 raw_metrics=raw_metrics,raw_scored=raw_scored,file_size_comparison=file_sizes)
 
 
-def verify(root,study=None):
+def _feature_extractor(mode):
+    if mode == 'reference':
+        return extract_features
+    if mode != 'pruned':
+        raise ValueError('Feature verification mode must be reference or pruned')
+    # Validate the accepted implementation before using it to recompute any
+    # evidence. No cached feature matrix or previously claimed result replaces
+    # the original decoding, reconstruction, fitting or quality checks.
+    from experiments.verify_qa_risk_pruning import verify as verify_pruning
+    verify_pruning(REPO)
+    from lab.qa_risk_pruning import extract_features as pruned
+    return pruned
+
+
+def verify(root,study=None, *, feature_mode='reference'):
+    extractor = _feature_extractor(feature_mode)
     root=Path(root);training_dir=root/'training';protocol=training_dir/'protocol.json'
     spec=read(protocol);protocol_sha256=sha(protocol)
     if study is not None:require(sha(study)==protocol_sha256,'Expected study differs from archived protocol')
-    training=verify_training(training_dir,spec,protocol_sha256)
+    training=verify_training(training_dir,spec,protocol_sha256,feature_extractor=extractor)
     selection=training['selection'];variants={};evaluated={}
     for variant in VARIANTS:
         folder=root/('evaluation-'+variant);selected=selection['variants'][variant]
@@ -215,7 +232,8 @@ def verify(root,study=None):
             variants[variant]=dict(calibration_eligible=True,threshold=selected['threshold'],evaluation_evaluated=False,
                                    task_pass=False,bounded_task_eligible=False,answer_entrypoint='unavailable_quality')
         else:
-            result=verify_evaluation(folder,variant,spec,protocol_sha256,training_dir,training);evaluated[variant]=result
+            result=verify_evaluation(folder,variant,spec,protocol_sha256,training_dir,training,
+                                     feature_extractor=extractor);evaluated[variant]=result
             passed=result['gate']['all_pass']
             variants[variant]=dict(calibration_eligible=True,threshold=selected['threshold'],evaluation_evaluated=True,
                 task_pass=passed,bounded_task_eligible=passed,summary=result['summary'],gate=result['gate'],
@@ -249,7 +267,8 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--root',type=Path,required=True)
     parser.add_argument('--study',type=Path,default=Path('configs/qa-risk/study.json'))
-    args=parser.parse_args();print(json.dumps(verify(args.root,args.study),ensure_ascii=False,indent=2,allow_nan=False))
+    parser.add_argument('--feature-mode',choices=('reference','pruned'),default='reference')
+    args=parser.parse_args();print(json.dumps(verify(args.root,args.study,feature_mode=args.feature_mode),ensure_ascii=False,indent=2,allow_nan=False))
 
 
 if __name__=='__main__':main()

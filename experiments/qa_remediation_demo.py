@@ -1,4 +1,4 @@
-"""Offline interview demonstration: a valid span can still be a wrong answer."""
+"""Offline demonstration: a valid span can still be a wrong answer."""
 import json
 from pathlib import Path
 

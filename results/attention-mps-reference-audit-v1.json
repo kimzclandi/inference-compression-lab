@@ -1,0 +1,130 @@
+{
+  "evidence_valid": true,
+  "full_reference_checked": true,
+  "cases": [
+    {
+      "index": 0,
+      "batch": 1,
+      "query_length": 512,
+      "key_length": 512,
+      "full_reference_max_abs_error": 0.0,
+      "matmul_warnings": [
+        "divide by zero encountered in matmul",
+        "invalid value encountered in matmul",
+        "overflow encountered in matmul"
+      ],
+      "original_reference_sha256": "74c05fa73d8f7560239cc492b1c6a276e4a168d8f8f3850603ba0afc961d7e18",
+      "output_rows_checked": 9,
+      "max_witness_abs_error": 0.00010033216780619414
+    },
+    {
+      "index": 1,
+      "batch": 1,
+      "query_length": 1024,
+      "key_length": 1024,
+      "full_reference_max_abs_error": 0.0,
+      "matmul_warnings": [
+        "divide by zero encountered in matmul",
+        "invalid value encountered in matmul",
+        "overflow encountered in matmul"
+      ],
+      "original_reference_sha256": "672db116048df4fbe41c1d9ff910147275371b4336d2435f2a2cb4bb5955ffb1",
+      "output_rows_checked": 9,
+      "max_witness_abs_error": 8.356937052447777e-05
+    },
+    {
+      "index": 2,
+      "batch": 1,
+      "query_length": 1,
+      "key_length": 1024,
+      "full_reference_max_abs_error": 3.3306690738754696e-16,
+      "matmul_warnings": [
+        "divide by zero encountered in matmul",
+        "invalid value encountered in matmul",
+        "overflow encountered in matmul"
+      ],
+      "original_reference_sha256": "d0fb4c224d7b14e8904d4171877cf59f675228dc0a67972b27281fa89caaf94d",
+      "output_rows_checked": 3,
+      "max_witness_abs_error": 0.00012964988741720473
+    },
+    {
+      "index": 3,
+      "batch": 1,
+      "query_length": 1,
+      "key_length": 4096,
+      "full_reference_max_abs_error": 3.191891195797325e-16,
+      "matmul_warnings": [
+        "divide by zero encountered in matmul",
+        "invalid value encountered in matmul",
+        "overflow encountered in matmul"
+      ],
+      "original_reference_sha256": "eff795ab5620d01be135ef6586e4874d01b02e33ad7c1b2c4daa0fe020283544",
+      "output_rows_checked": 3,
+      "max_witness_abs_error": 4.3999034593789066e-05
+    },
+    {
+      "index": 4,
+      "batch": 4,
+      "query_length": 512,
+      "key_length": 512,
+      "full_reference_max_abs_error": 0.0,
+      "matmul_warnings": [
+        "divide by zero encountered in matmul",
+        "invalid value encountered in matmul",
+        "overflow encountered in matmul"
+      ],
+      "original_reference_sha256": "3f65c079d388bcc84e738806e8390785066b26228bead241288f2b0f7b44817a",
+      "output_rows_checked": 9,
+      "max_witness_abs_error": 0.00015262477924954387
+    },
+    {
+      "index": 5,
+      "batch": 4,
+      "query_length": 1024,
+      "key_length": 1024,
+      "full_reference_max_abs_error": 0.0,
+      "matmul_warnings": [
+        "divide by zero encountered in matmul",
+        "invalid value encountered in matmul",
+        "overflow encountered in matmul"
+      ],
+      "original_reference_sha256": "8064814ad661d229872b65f8ab040a356c70fd3a1cf9e60cfce9bfb2f0780888",
+      "output_rows_checked": 9,
+      "max_witness_abs_error": 0.00017339292549542473
+    },
+    {
+      "index": 6,
+      "batch": 4,
+      "query_length": 1,
+      "key_length": 1024,
+      "full_reference_max_abs_error": 3.191891195797325e-16,
+      "matmul_warnings": [
+        "divide by zero encountered in matmul",
+        "invalid value encountered in matmul",
+        "overflow encountered in matmul"
+      ],
+      "original_reference_sha256": "5e0b3f13afa4a782e423c602ee298be9e758fd37044f10135801e8da2fa36ffa",
+      "output_rows_checked": 3,
+      "max_witness_abs_error": 5.8508681638091975e-05
+    },
+    {
+      "index": 7,
+      "batch": 4,
+      "query_length": 1,
+      "key_length": 4096,
+      "full_reference_max_abs_error": 4.718447854656915e-16,
+      "matmul_warnings": [
+        "divide by zero encountered in matmul",
+        "invalid value encountered in matmul",
+        "overflow encountered in matmul"
+      ],
+      "original_reference_sha256": "9755778f30321e8d2d524962a4ba4cd5be64083fd52d5ad0af7b59cf9cc85916",
+      "output_rows_checked": 3,
+      "max_witness_abs_error": 3.851381384082503e-05
+    }
+  ],
+  "gpu_rerun": false,
+  "performance_rerun": false,
+  "cause": "Floating-point warnings observed with NumPy matmul; underlying library cause not established",
+  "input_receipt_sha256": "a4cc4d0853c60f14c2033c619f24c6bd5ce956124cf8443d08a1b9b8b86b48fc"
+}

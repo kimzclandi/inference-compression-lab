@@ -1,0 +1,372 @@
+{
+  "56e17a7ccd28a01900c679a1": {
+    "n_tokens": 1293,
+    "target_slot": 1,
+    "n_passages": 9
+  },
+  "56e17a7ccd28a01900c679a2": {
+    "n_tokens": 1301,
+    "target_slot": 8,
+    "n_passages": 9
+  },
+  "56e17a7ccd28a01900c679a3": {
+    "n_tokens": 1290,
+    "target_slot": 3,
+    "n_passages": 9
+  },
+  "56e17a7ccd28a01900c679a4": {
+    "n_tokens": 1294,
+    "target_slot": 2,
+    "n_passages": 9
+  },
+  "56e17a7ccd28a01900c679a5": {
+    "n_tokens": 1298,
+    "target_slot": 3,
+    "n_passages": 9
+  },
+  "56e1a0dccd28a01900c67a2e": {
+    "n_tokens": 1288,
+    "target_slot": 3,
+    "n_passages": 9
+  },
+  "56e1a0dccd28a01900c67a2f": {
+    "n_tokens": 1296,
+    "target_slot": 8,
+    "n_passages": 9
+  },
+  "56e1b754cd28a01900c67abc": {
+    "n_tokens": 1291,
+    "target_slot": 7,
+    "n_passages": 9
+  },
+  "56e1b754cd28a01900c67abd": {
+    "n_tokens": 1293,
+    "target_slot": 3,
+    "n_passages": 9
+  },
+  "56e1b754cd28a01900c67abe": {
+    "n_tokens": 1289,
+    "target_slot": 1,
+    "n_passages": 9
+  },
+  "56e1b754cd28a01900c67abf": {
+    "n_tokens": 1290,
+    "target_slot": 4,
+    "n_passages": 9
+  },
+  "56e1b754cd28a01900c67ac0": {
+    "n_tokens": 1290,
+    "target_slot": 8,
+    "n_passages": 9
+  },
+  "56e1c0f6cd28a01900c67b2c": {
+    "n_tokens": 1290,
+    "target_slot": 4,
+    "n_passages": 9
+  },
+  "56e1c0f6cd28a01900c67b2d": {
+    "n_tokens": 1287,
+    "target_slot": 2,
+    "n_passages": 9
+  },
+  "56e1c0f6cd28a01900c67b2e": {
+    "n_tokens": 1294,
+    "target_slot": 6,
+    "n_passages": 9
+  },
+  "56e1cbe2cd28a01900c67bac": {
+    "n_tokens": 1289,
+    "target_slot": 7,
+    "n_passages": 9
+  },
+  "56e1cbe2cd28a01900c67bad": {
+    "n_tokens": 1292,
+    "target_slot": 4,
+    "n_passages": 9
+  },
+  "56e1cbe2cd28a01900c67bae": {
+    "n_tokens": 1290,
+    "target_slot": 4,
+    "n_passages": 9
+  },
+  "56e1cbe2cd28a01900c67baf": {
+    "n_tokens": 1303,
+    "target_slot": 1,
+    "n_passages": 9
+  },
+  "56e1cbe2cd28a01900c67bb0": {
+    "n_tokens": 1294,
+    "target_slot": 8,
+    "n_passages": 9
+  },
+  "56e1ded7cd28a01900c67bd4": {
+    "n_tokens": 1295,
+    "target_slot": 3,
+    "n_passages": 9
+  },
+  "56e1ded7cd28a01900c67bd5": {
+    "n_tokens": 1293,
+    "target_slot": 0,
+    "n_passages": 9
+  },
+  "56e1ded7cd28a01900c67bd6": {
+    "n_tokens": 1300,
+    "target_slot": 2,
+    "n_passages": 9
+  },
+  "56e1ec83cd28a01900c67c0a": {
+    "n_tokens": 1290,
+    "target_slot": 8,
+    "n_passages": 9
+  },
+  "56e1ec83cd28a01900c67c0b": {
+    "n_tokens": 1302,
+    "target_slot": 5,
+    "n_passages": 9
+  },
+  "56e1ec83cd28a01900c67c0c": {
+    "n_tokens": 1296,
+    "target_slot": 0,
+    "n_passages": 9
+  },
+  "56e1ec83cd28a01900c67c0e": {
+    "n_tokens": 1294,
+    "target_slot": 0,
+    "n_passages": 9
+  },
+  "56e1fc57e3433e140042322c": {
+    "n_tokens": 1296,
+    "target_slot": 2,
+    "n_passages": 9
+  },
+  "56e1fc57e3433e140042322f": {
+    "n_tokens": 1298,
+    "target_slot": 6,
+    "n_passages": 9
+  },
+  "56e1fc57e3433e1400423230": {
+    "n_tokens": 1304,
+    "target_slot": 6,
+    "n_passages": 9
+  },
+  "56e2042ecd28a01900c67c1e": {
+    "n_tokens": 1295,
+    "target_slot": 6,
+    "n_passages": 9
+  },
+  "56e2042ecd28a01900c67c1f": {
+    "n_tokens": 1293,
+    "target_slot": 5,
+    "n_passages": 9
+  },
+  "56e2042ecd28a01900c67c20": {
+    "n_tokens": 1304,
+    "target_slot": 5,
+    "n_passages": 9
+  },
+  "5ad5364c5b96ef001a10ab90": {
+    "n_tokens": 1297,
+    "target_slot": 0,
+    "n_passages": 9
+  },
+  "5ad5364c5b96ef001a10ab91": {
+    "n_tokens": 1293,
+    "target_slot": 4,
+    "n_passages": 9
+  },
+  "5ad5364c5b96ef001a10ab92": {
+    "n_tokens": 1290,
+    "target_slot": 7,
+    "n_passages": 9
+  },
+  "5ad5364c5b96ef001a10ab93": {
+    "n_tokens": 1289,
+    "target_slot": 5,
+    "n_passages": 9
+  },
+  "5ad5364c5b96ef001a10ab94": {
+    "n_tokens": 1291,
+    "target_slot": 1,
+    "n_passages": 9
+  },
+  "5ad53f815b96ef001a10abe4": {
+    "n_tokens": 1289,
+    "target_slot": 8,
+    "n_passages": 9
+  },
+  "5ad53f815b96ef001a10abe5": {
+    "n_tokens": 1291,
+    "target_slot": 2,
+    "n_passages": 9
+  },
+  "5ad53f815b96ef001a10abe6": {
+    "n_tokens": 1290,
+    "target_slot": 3,
+    "n_passages": 9
+  },
+  "5ad54b035b96ef001a10ac52": {
+    "n_tokens": 1288,
+    "target_slot": 7,
+    "n_passages": 9
+  },
+  "5ad54b035b96ef001a10ac53": {
+    "n_tokens": 1288,
+    "target_slot": 7,
+    "n_passages": 9
+  },
+  "5ad54b035b96ef001a10ac54": {
+    "n_tokens": 1287,
+    "target_slot": 6,
+    "n_passages": 9
+  },
+  "5ad54b035b96ef001a10ac55": {
+    "n_tokens": 1290,
+    "target_slot": 7,
+    "n_passages": 9
+  },
+  "5ad54b035b96ef001a10ac56": {
+    "n_tokens": 1291,
+    "target_slot": 4,
+    "n_passages": 9
+  },
+  "5ad5501f5b96ef001a10ac90": {
+    "n_tokens": 1287,
+    "target_slot": 6,
+    "n_passages": 9
+  },
+  "5ad5501f5b96ef001a10ac91": {
+    "n_tokens": 1291,
+    "target_slot": 1,
+    "n_passages": 9
+  },
+  "5ad5501f5b96ef001a10ac92": {
+    "n_tokens": 1288,
+    "target_slot": 3,
+    "n_passages": 9
+  },
+  "5ad5501f5b96ef001a10ac93": {
+    "n_tokens": 1292,
+    "target_slot": 4,
+    "n_passages": 9
+  },
+  "5ad5648b5b96ef001a10ad94": {
+    "n_tokens": 1288,
+    "target_slot": 8,
+    "n_passages": 9
+  },
+  "5ad5648b5b96ef001a10ad95": {
+    "n_tokens": 1288,
+    "target_slot": 2,
+    "n_passages": 9
+  },
+  "5ad5648b5b96ef001a10ad96": {
+    "n_tokens": 1291,
+    "target_slot": 0,
+    "n_passages": 9
+  },
+  "5ad5648b5b96ef001a10ad97": {
+    "n_tokens": 1304,
+    "target_slot": 2,
+    "n_passages": 9
+  },
+  "5ad5648b5b96ef001a10ad98": {
+    "n_tokens": 1286,
+    "target_slot": 4,
+    "n_passages": 9
+  },
+  "5ad568d35b96ef001a10ae1a": {
+    "n_tokens": 1302,
+    "target_slot": 7,
+    "n_passages": 9
+  },
+  "5ad568d35b96ef001a10ae1b": {
+    "n_tokens": 1293,
+    "target_slot": 0,
+    "n_passages": 9
+  },
+  "5ad568d35b96ef001a10ae1c": {
+    "n_tokens": 1299,
+    "target_slot": 6,
+    "n_passages": 9
+  },
+  "5ad568d35b96ef001a10ae1d": {
+    "n_tokens": 1293,
+    "target_slot": 3,
+    "n_passages": 9
+  },
+  "5ad56aea5b96ef001a10ae48": {
+    "n_tokens": 1286,
+    "target_slot": 8,
+    "n_passages": 9
+  },
+  "5ad56aea5b96ef001a10ae49": {
+    "n_tokens": 1291,
+    "target_slot": 3,
+    "n_passages": 9
+  },
+  "5ad56aea5b96ef001a10ae4a": {
+    "n_tokens": 1297,
+    "target_slot": 3,
+    "n_passages": 9
+  },
+  "5ad56aea5b96ef001a10ae4b": {
+    "n_tokens": 1294,
+    "target_slot": 2,
+    "n_passages": 9
+  },
+  "5ad56aea5b96ef001a10ae4c": {
+    "n_tokens": 1295,
+    "target_slot": 1,
+    "n_passages": 9
+  },
+  "5ad56e5c5b96ef001a10ae9e": {
+    "n_tokens": 1303,
+    "target_slot": 4,
+    "n_passages": 9
+  },
+  "5ad56e5c5b96ef001a10ae9f": {
+    "n_tokens": 1292,
+    "target_slot": 6,
+    "n_passages": 9
+  },
+  "5ad56e5c5b96ef001a10aea0": {
+    "n_tokens": 1301,
+    "target_slot": 4,
+    "n_passages": 9
+  },
+  "5ad56e5c5b96ef001a10aea1": {
+    "n_tokens": 1308,
+    "target_slot": 6,
+    "n_passages": 9
+  },
+  "5ad56e5c5b96ef001a10aea2": {
+    "n_tokens": 1285,
+    "target_slot": 8,
+    "n_passages": 9
+  },
+  "5ad5719f5b96ef001a10aeec": {
+    "n_tokens": 1291,
+    "target_slot": 4,
+    "n_passages": 9
+  },
+  "5ad5719f5b96ef001a10aeed": {
+    "n_tokens": 1295,
+    "target_slot": 6,
+    "n_passages": 9
+  },
+  "5ad5719f5b96ef001a10aeee": {
+    "n_tokens": 1292,
+    "target_slot": 5,
+    "n_passages": 9
+  },
+  "5ad5719f5b96ef001a10aeef": {
+    "n_tokens": 1294,
+    "target_slot": 4,
+    "n_passages": 9
+  },
+  "5ad5719f5b96ef001a10aef0": {
+    "n_tokens": 1294,
+    "target_slot": 8,
+    "n_passages": 9
+  }
+}

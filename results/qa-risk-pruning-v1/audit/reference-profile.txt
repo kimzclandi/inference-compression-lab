@@ -1,0 +1,23 @@
+         2834045 function calls in 0.279 seconds
+
+   Ordered by: cumulative time
+   List reduced from 83 to 15 due to restriction <15>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        8    0.017    0.002    0.267    0.033 qa_risk_calibration.py:64(extract_features)
+    34933    0.017    0.000    0.215    0.000 qa_metrics.py:9(normalize)
+    69868    0.081    0.000    0.152    0.000 {method 'join' of 'str' objects}
+  2135653    0.071    0.000    0.071    0.000 qa_metrics.py:10(<genexpr>)
+    34933    0.006    0.000    0.036    0.000 __init__.py:179(sub)
+    34933    0.022    0.000    0.022    0.000 {method 'sub' of 're.Pattern' objects}
+        8    0.009    0.001    0.018    0.002 extractive_qa.py:99(decode)
+    34982    0.008    0.000    0.013    0.000 qa_risk_calibration.py:40(_finite)
+        1    0.000    0.000    0.013    0.013 qa_risk_pruning.py:60(samples)
+        2    0.000    0.000    0.013    0.006 quantization_diagnostics.py:35(rows)
+      256    0.000    0.000    0.011    0.000 __init__.py:299(loads)
+      256    0.000    0.000    0.011    0.000 decoder.py:333(decode)
+      256    0.011    0.000    0.011    0.000 decoder.py:344(raw_decode)
+    34933    0.005    0.000    0.007    0.000 __init__.py:280(_compile)
+   139700    0.007    0.000    0.007    0.000 {method 'isspace' of 'str' objects}
+
+

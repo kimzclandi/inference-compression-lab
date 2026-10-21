@@ -12,7 +12,8 @@ from pathlib import Path
 import sys
 import time
 
-from lab.qa_risk_calibration import extract_features, predict_probability
+from lab.qa_risk_calibration import predict_probability
+from lab.qa_risk_pruning import extract_features
 from lab.quantization_diagnostics import read, sha
 
 
@@ -136,9 +137,14 @@ def read_request(path):
         raise InvalidInput(str(error)) from error
 
 
-def _verify_evidence(root, study):
+def _verify_evidence(root, study, *, feature_mode='pruned'):
     from experiments.verify_qa_risk import verify
-    return verify(root, study)
+    return verify(root, study, feature_mode=feature_mode)
+
+
+def _verify_pruning():
+    from experiments.verify_qa_risk_pruning import verify
+    return verify(REPO)
 
 
 def _rebuild_head(training_dir, expected_digest):
@@ -196,8 +202,12 @@ class LocalQAService:
         return result
 
 
-def load_service(policy_path, evidence_root, study_path, asset_root):
-    """Verify once, reconstruct training-only parameters, then load local ORT."""
+def load_service(policy_path, evidence_root, study_path, asset_root, *, verification_mode='pruned'):
+    """Fully verify, reconstruct training-only parameters, then load local ORT.
+
+    Reference mode exists for reproducible startup comparisons. Both modes
+    recompute every evidence row and enforce the same policy and asset gates.
+    """
     started = time.perf_counter()
     policy = load_policy(policy_path)
     try:
@@ -207,8 +217,9 @@ def load_service(policy_path, evidence_root, study_path, asset_root):
         spec = read(study)
         if spec['asset_manifest_sha256'] != ASSET_MANIFEST_SHA256 or spec['dataset_sizes']['train'] != 256:
             raise ValueError('Backbone identity or training-only row count changed.')
-        verification = _verify_evidence(root, study)
+        verification = _verify_evidence(root, study, feature_mode=verification_mode)
         validate_verified_quality(policy, verification)
+        _verify_pruning()
         selection = read(root/'training'/'selection.json')
         chosen = selection['variants']['int8']
         if chosen['eligible'] is not True or chosen['threshold'] != .7:

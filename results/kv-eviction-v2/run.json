@@ -1,0 +1,25 @@
+{
+  "status": "complete",
+  "protocol_commit": "ce27a4bd83a6788d97ddb083ad6945338b6189be",
+  "dirty": false,
+  "source_sha256": {
+    "configs/kv-eviction-v2.json": "5071c4f85d0808cc46ae1edb13bd7444feb238e45de3c81f381c7fdb1eed6394",
+    "lab/kv_eviction.py": "c26c8616bc03df015c2bb812b6b2adf3b70cb152e767f1dff434befdcda35eae",
+    "lab/snapkv.py": "78fafc06c781d35d5a9b432a3baeda2bba5788bb9eb67db3bc2e0810600597dc",
+    "lab/mlx_kv_eviction.py": "9bf2e5d51a5849f21d070d06b73c56a3498aa5b5a9f6e5f49402e4ad1dec200a",
+    "lab/mlx_query_capture.py": "b2eafbd5b8ebfe791aaec4a52136f9d01cd2accc7b8abce31e2ba53b40d934cb",
+    "lab/long_context_qa.py": "57101257dfb3eb24350a8c761eb24ccb6faf1a8b595284c38139a3b19e48916b",
+    "lab/qa_metrics.py": "78c4af7f06ba49b3acddd2610586336ecf585c06d8ad89b46ff9fb6358aaaa1f",
+    "experiments/kv_eviction_v2.py": "9b0b77c048a8cca839859bfd856503feef2b6a8300fd077cd0ef675de7bd080b"
+  },
+  "artifacts": {
+    "prompts.json": "96b1e8d7b99e08869d431dcefdfde5fe18515299752087c6519603214307e17d",
+    "correctness.json": "5724d97899173944340beb07038e5ccfe3c50bef7f874c4ec5494cfe5dae79ff",
+    "quality.json": "dc214963bcb1cdb171578cff6c5f9505582f34745e3af809e105a0bf2a0dc725",
+    "timing.json": "3c9c1a0318af3a16513f5cd845abbfebb6aa7d162c2586167dfee2759f0288ea",
+    "summary.json": "44d4667fa5bba59ab4434874ea9520132d103bc097a2daeb57b97aada66eb54b"
+  },
+  "device": "Device(gpu, 0)",
+  "system": "ProductName:\t\tmacOS\nProductVersion:\t\t27.0\nBuildVersion:\t\t26A428\n",
+  "chip": "Apple M4 Max"
+}

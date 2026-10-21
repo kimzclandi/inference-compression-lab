@@ -1,0 +1,3 @@
+bench 0 native 64
+bench 0 native 512
+bench 0 native 2048

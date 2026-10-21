@@ -1,0 +1,3 @@
+bench 1 split_last 64
+bench 1 split_last 512
+bench 1 split_last 2048
